@@ -67,6 +67,10 @@ Install Process
     npm install --save-dev gulp-sourcemaps              (Allows to find original file in development)
     npm install --save-dev del                          (Delete files and folder)
 
+    // Bootstrap
+    npm install --save-dev bootstrap 
+    npm install --save-dev jquery                   
+
     NOTES
     npm rm gulp-NAME                                    (To remove a package)
 
@@ -75,25 +79,3 @@ To Duplicate Project
     To Duplicate poject, Copy project, rename it and in terminal type:
       npm install
 
-
-
-<!-- 8. Install Ruby
-    https://number42.de/blog/2018/05/22/rbenv-2018-05-22-rbenv.html
-    https://github.com/rbenv/rbenv
-    rbenv install 2.6.2     (installs ruby version globaly)
-    rbenv local 2.6.2       (Installs locally)
-    rbenv version           (Checks version) 
-    rbenv versions          (Checks all versions installed and highlights active) 
-    gem install bundler     Bundler version 2.0.1
-
-    Changed to 2.3.8 by typing: rbenv local 2.3.8
-
-      The `haml' command exists in these Ruby versions:
-        1.9.3-p551
-        2.2.10
-        2.3.8
-      The `nokogiri' command exists in these Ruby versions:
-        1.9.3-p551
-        2.2.10
-        2.2.2
-        2.3.8 -->
