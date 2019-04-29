@@ -7,5 +7,5 @@ console.log('This is file 1');
 console.log('This is file 2');
 
 // Alert
-alert('This is file 2');
+alert('This is file 3');
 //# sourceMappingURL=sardJS.js.map
