@@ -68,8 +68,10 @@ Install Process
     npm install --save-dev del                          (Delete files and folder)
 
     // Bootstrap
+    https://www.youtube.com/watch?v=6Ovw43Dkp44
     npm install --save-dev bootstrap 
-    npm install --save-dev jquery                   
+    npm install --save-dev jquery
+    npm install --save-dev popper.js                    
 
     NOTES
     npm rm gulp-NAME                                    (To remove a package)

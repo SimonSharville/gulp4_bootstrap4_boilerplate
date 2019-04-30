@@ -1,0 +1,31 @@
+// Bootstrap Vaiables override
+// MUST come before Bootstrap Import
+
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1590px // Added
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1560px // Added
+);
+
+/* Small devices (landscape phones, 576px and up) */
+
+
+// Grid columns
+$grid-gutter-width:           16px;

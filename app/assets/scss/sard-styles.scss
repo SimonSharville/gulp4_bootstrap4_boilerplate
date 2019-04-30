@@ -1,5 +1,15 @@
 // Import Order =======================
 
+
+// Bootstrap
+@import 'global/bs-variables-overrides';
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import 'global/bs-component-overrides';
+
+
+// Sard Styles
 @import 'global/global';
 @import 'typography/typography';
 @import 'global/links';
+
+

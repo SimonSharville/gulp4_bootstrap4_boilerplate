@@ -9,19 +9,67 @@
     / <link rel="stylesheet" href="/css/bootstrap.css">
     / <link rel="stylesheet" href="/css/styles.css">
     %link{:href => "assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+ 
   %body
-    %h1 Index page
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      %a.navbar-brand{:href => "#"} Navbar
+      %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.active
+            %a.nav-link{:href => "#"}
+              Home
+              %span.sr-only (current)
+          %li.nav-item
+            %a.nav-link{:href => "#"} Link
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Dropdown
+            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %a.dropdown-item{:href => "#"} Action
+              %a.dropdown-item{:href => "#"} Another action
+              .dropdown-divider
+              %a.dropdown-item{:href => "#"} Something else here
+          %li.nav-item
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
+        %form.form-inline.my-2.my-lg-0
+          %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+          %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
 
 
-    %h2 type into terminal: gulp watch
+    .container
+      %h1 Index page
 
 
-  
-    //=include partials/index/_partialtest.haml
+      %h2 type into terminal: gulp watch
 
-    %a.btn.btn-primary{:href => "#"} button
 
-    / <script src="/js/jquery.min.js"></script>
-    / <script src="/js/popper.min.js"></script>
-    / <script src="/js/bootstrap.min.js"></script>
+    
+      //=include partials/index/_partialtest.haml
+
+      %a.btn.btn-primary{:href => "#"} button
+
+
+    .container
+      .row
+        .col
+          %h1 Bootstrap Grid
+      .row
+        .col-12.col-sm-4.column
+          One of three columns
+        .col-12.col-sm-4.column
+          One of three columns
+        .col-12.col-sm-4.column
+          One of three columns
+
+
+    / <script src="/../app/assets/js/jquery.min.js"></script>
+    / <script src="/../app/assets/js/popper.min.js"></script>
+    / <script src="/../app/assets/js/bootstrap.min.js"></script>
+
+    / %script{:crossorigin => "anonymous", :integrity => "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", :src => "https://code.jquery.com/jquery-3.2.1.slim.min.js"}
+    / %script{:crossorigin => "anonymous", :integrity => "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"}
+    / %script{:crossorigin => "anonymous", :integrity => "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"}
+
     %script{:src => "assets/js/sardJS.min.js"}

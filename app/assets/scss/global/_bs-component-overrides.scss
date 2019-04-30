@@ -1,0 +1,11 @@
+// Boostrap Component Overrides
+// MUST come after Bootstrap Import
+
+
+// Override column width at xs screen size
+@media (max-width: 575px) {  
+ .container{
+  padding-left: 16px;
+  padding-right: 16px;
+ }
+}

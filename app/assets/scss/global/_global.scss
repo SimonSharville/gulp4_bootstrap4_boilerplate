@@ -1,7 +1,16 @@
 // Global
-$bgColor: pink;
+$bgColor: lightgreen;
 
 body{
-  background: $bgColor;
+  // background: $bgColor;
   height: 400vh;
 }
+
+.col-12, .col-sm-4 {
+  background-color: $gray-200;
+}
+
+.column{
+  border:1px dotted $gray-600;
+}
+
