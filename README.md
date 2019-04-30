@@ -26,6 +26,7 @@ Based on the following tutorials:
   https://www.youtube.com/watch?v=QgMQeLymAdU
   https://www.youtube.com/watch?v=4y8Iw85__Xk
   https://www.youtube.com/watch?v=yowgoHo_IZk
+  https://www.youtube.com/watch?time_continue=696&v=hnCmSXCZEpU
 
 
 Install Process
