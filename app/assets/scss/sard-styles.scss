@@ -8,15 +8,17 @@
 
 
 // Font Awesome
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
 
 // Sard Styles
 @import 'global/global';
 @import 'typography/typography';
+@import 'global/icons';
 @import 'global/links';
 
 
