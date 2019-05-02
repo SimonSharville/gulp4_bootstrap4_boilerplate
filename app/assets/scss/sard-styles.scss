@@ -7,8 +7,14 @@
 @import 'global/bs-component-overrides';
 
 
+// Font Awesome
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+
 // Sard Styles
-@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 @import 'global/global';
 @import 'typography/typography';
 @import 'global/links';
