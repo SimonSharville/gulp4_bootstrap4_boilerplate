@@ -1,8 +1,23 @@
+// Roboto =================================================================
+
+$font-thin:    'roboto-thin', Helvetica, Arial, Sans-serif;
+$font-light:   'roboto-light', Helvetica, Arial, Sans-serif;
+$font-regular: 'roboto-regular', Helvetica, Arial, Sans-serif;
+$font-medium:  'roboto-medium', Helvetica, Arial, Sans-serif;
+$font-bold:    'roboto-bold', Helvetica, Arial, Sans-serif;
+$font-heavy:   'roboto-black', Helvetica, Arial, Sans-serif;
+
+$font-thin-italic:    'roboto-thin-italic', Helvetica, Arial, Sans-serif;
+$font-light-italic:   'roboto-light-italic', Helvetica, Arial, Sans-serif;
+$font-regular-italic: 'roboto-italic', Helvetica, Arial, Sans-serif;
+$font-medium-italic:  'roboto-medium-italic', Helvetica, Arial, Sans-serif;
+$font-bold-italic:    'roboto-bold-italic', Helvetica, Arial, Sans-serif;
+$font-heavy-italic:   'roboto-black-italic', Helvetica, Arial, Sans-serif;
 
 
 h1{
   color: $H1;
-  font-family: $font-weight-light;
+  font-family: $font-thin;
 }
 
 h2{
