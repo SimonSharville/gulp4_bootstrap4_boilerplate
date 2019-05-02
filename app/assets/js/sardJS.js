@@ -23,5 +23,5 @@ console.log('This is file 1');
 console.log('This is file 2');
 
 // Alert
-alert('This is file 6');
+// alert('This is file 6');
 //# sourceMappingURL=sardJS.js.map
