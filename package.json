@@ -20,16 +20,16 @@
   },
   "homepage": "https://github.com/SimonSharville/bootstrap4_boilerplate#readme",
   "dependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.5",
     "del": "^4.1.1",
-    "gulp-autoprefixer": "^6.0.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-changed": "^3.2.0",
-    "gulp-clean-css": "^4.0.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-haml": "^1.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -41,7 +41,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.4.0",
+    "jquery": "^3.4.1",
     "popper.js": "^1.15.0"
   }
 }
