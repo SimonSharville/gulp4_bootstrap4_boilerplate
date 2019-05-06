@@ -25782,8 +25782,14 @@ readers do not read off random characters that represent icons */
   font-style: normal;
 }
 
-body {
-  height: 400vh;
+hr.fat {
+  border-width: 4px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+header {
+  height: 100px;
 }
 
 h1 {

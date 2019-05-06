@@ -1,0 +1,37 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Bootstrap 4 Layout
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body
+    //=include partials/global/_navbar.haml
+
+
+    .container.first
+      .row
+        .col-12
+          %h1 Bootstrap Components
+          %h2#alerts Alerts
+          //=include partials/components/_alerts.haml
+
+          %hr.fat
+
+          %h2#badges Badges
+          //=include partials/components/_badges.haml
+
+          %hr.fat
+
+          %h2#breadcrumbs Breadcrumbs
+          //=include partials/components/_breadcrumbs.haml
+
+
+
+
+
+
+
+    / Scripts
+    %script{:src => "assets/js/sardJS.min.js"}

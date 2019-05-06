@@ -3,7 +3,8 @@ $bgColor: blue;
 
 body{
   // background: $bgColor;
-  height: 400vh;
+  // margin-top: 80px; // Allows for Fixed Top Navbar
+  // height: 400vh;
 }
 
 // .col-12, .col-sm-4 {
@@ -14,3 +15,13 @@ body{
 //   border:1px dotted red;
 // }
 
+
+hr.fat{
+  border-width: 4px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+header{
+  height: 100px;
+}
