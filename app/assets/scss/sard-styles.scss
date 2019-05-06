@@ -3,6 +3,8 @@
 
 // Bootstrap
 @import 'global/bs-variables-overrides';
+// @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import 'global/bs-component-overrides';
 
