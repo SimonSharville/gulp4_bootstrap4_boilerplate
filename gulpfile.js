@@ -127,7 +127,7 @@ function imageDelete(){
 }
 
 // Fontawesome
-Only needed if fonts should be local
+// Only needed if fonts should be local
 function faIcons() {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
         .pipe(gulp.dest('docs/assets/webfonts/'));

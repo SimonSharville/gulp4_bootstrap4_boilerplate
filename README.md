@@ -82,3 +82,5 @@ To Duplicate Project
     To Duplicate poject, Copy project, rename it and in terminal type:
       npm install
 
+SARD Styles and Scripts =======
+  This is a Boilerplate for SARD styles, using Bootstrap 4 with Roboto font.
