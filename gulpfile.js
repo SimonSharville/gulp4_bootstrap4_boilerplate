@@ -32,9 +32,11 @@ gulp.watch  - Watch files and folders for changes
 // Order of JS files
 // When you change this stop and restart gulp
 var jsSRC = [
+  // Required
   'app/assets/js/required/jquery.slim.min.js',
   'app/assets/js/required/popper.min.js',
   'app/assets/js/required/bootstrap.min.js',
+  // local
   'app/assets/js/scripts/file1.js',
   'app/assets/js/scripts/file2.js'
 ];
