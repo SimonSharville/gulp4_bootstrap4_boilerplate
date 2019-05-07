@@ -7,7 +7,12 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import 'global/bs-component-overrides';
 
+// Fonts
+@import '../fonts/Roboto/roboto';
+// @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
+
+// Icons
 // Font Awesome
 // @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 // Needed if local
@@ -18,10 +23,8 @@
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
 
-// Fonts
-@import '../fonts/Roboto/roboto';
-// @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-
+// Sard Icons
+@import '../sard-icons/sard-icons';
 
 // Sard Styles
 @import 'global/global';
