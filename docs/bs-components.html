@@ -45,6 +45,8 @@ BS Components
 <a class='dropdown-item' href='bs-components.html#navbar'>Navbar</a>
 <a class='dropdown-item' href='bs-components.html#pagination'>Pagination</a>
 <a class='dropdown-item' href='bs-components.html#popovers'>Popovers</a>
+<a class='dropdown-item' href='bs-components.html#progress'>Progress</a>
+<a class='dropdown-item' href='bs-components.html#tooltips'>Tooltips</a>
 <div class='dropdown-divider'></div>
 <a class='dropdown-item' href='#'>Something else here</a>
 </div>
@@ -1937,6 +1939,114 @@ Dropdown
 <hr class='black'>
 <h2 class='bs-anchor' id='popovers'>Popovers</h2>
 <button class='btn btn-lg btn-danger' data-content='And here&#39;s some amazing content. It&#39;s very engaging. Right?' data-toggle='popover' title='Popover title' type='button'>Click to toggle popover</button>
+<hr>
+<h4>Directional</h4>
+<button class='btn btn-secondary' data-container='body' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' data-placement='top' data-toggle='popover' type='button'>
+Popover on top
+</button>
+<button class='btn btn-secondary' data-container='body' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' data-placement='right' data-toggle='popover' type='button'>
+Popover on right
+</button>
+<button class='btn btn-secondary' data-container='body' data-content='Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.' data-placement='bottom' data-toggle='popover' type='button'>
+Popover on bottom
+</button>
+<button class='btn btn-secondary' data-container='body' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' data-placement='left' data-toggle='popover' type='button'>
+Popover on left
+</button>
+<hr>
+<h4>Dismiss on next click</h4>
+<p>Use the focus trigger to dismiss popovers on the user’s next click of a different element than the toggle element.</p>
+<p>Specific markup required for dismiss-on-next-click.</p>
+<p>For proper cross-browser and cross-platform behavior, you must use the (a) tag, not the (button) tag, and you also must include a tabindex attribute.</p>
+<a class='btn btn-lg btn-danger' data-content='And here&#39;s some amazing content. It&#39;s very engaging. Right?' data-toggle='popover' data-trigger='focus' role='button' tabindex='0' title='Dismissible popover'>Dismissible popover</a>
+<hr class='black'>
+<h2 class='bs-anchor' id='progress'>Progress</h2>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='0' class='progress-bar' role='progressbar'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='25' class='progress-bar' role='progressbar' style='width: 25%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='50' class='progress-bar' role='progressbar' style='width: 50%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='75' class='progress-bar' role='progressbar' style='width: 75%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='100' class='progress-bar' role='progressbar' style='width: 100%'></div>
+</div>
+<hr>
+<h4>Labels</h4>
+<div class='progress'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='25' class='progress-bar' role='progressbar' style='width: 25%;'>25%</div>
+</div>
+<hr>
+<h4>Height</h4>
+<div class='progress mb-3' style='height: 1px;'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='25' class='progress-bar' role='progressbar' style='width: 25%;'></div>
+</div>
+<div class='progress mb-3' style='height: 20px;'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='25' class='progress-bar' role='progressbar' style='width: 25%;'></div>
+</div>
+<hr>
+<h4>Backgrounds</h4>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='25' class='progress-bar bg-success' role='progressbar' style='width: 25%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='50' class='progress-bar bg-info' role='progressbar' style='width: 50%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='75' class='progress-bar bg-warning' role='progressbar' style='width: 75%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='100' class='progress-bar bg-danger' role='progressbar' style='width: 100%'></div>
+</div>
+<hr>
+<h4>Multiple bars</h4>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='15' class='progress-bar' role='progressbar' style='width: 15%'></div>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='30' class='progress-bar bg-success' role='progressbar' style='width: 30%'></div>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='20' class='progress-bar bg-info' role='progressbar' style='width: 20%'></div>
+</div>
+<hr>
+<h4>Striped</h4>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='10' class='progress-bar progress-bar-striped' role='progressbar' style='width: 10%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='25' class='progress-bar progress-bar-striped bg-success' role='progressbar' style='width: 25%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='50' class='progress-bar progress-bar-striped bg-info' role='progressbar' style='width: 50%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='75' class='progress-bar progress-bar-striped bg-warning' role='progressbar' style='width: 75%'></div>
+</div>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='100' class='progress-bar progress-bar-striped bg-danger' role='progressbar' style='width: 100%'></div>
+</div>
+<hr>
+<h4>Animated stripes</h4>
+<div class='progress mb-3'>
+<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='75' class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: 75%'></div>
+</div>
+<hr class='black'>
+<h2 class='bs-anchor' id='tooltips'>Tooltips</h2>
+<button class='btn btn-secondary' data-placement='top' data-toggle='tooltip' title='Tooltip on top' type='button'>
+Tooltip on top
+</button>
+<button class='btn btn-secondary' data-placement='right' data-toggle='tooltip' title='Tooltip on right' type='button'>
+Tooltip on right
+</button>
+<button class='btn btn-secondary' data-placement='bottom' data-toggle='tooltip' title='Tooltip on bottom' type='button'>
+Tooltip on bottom
+</button>
+<button class='btn btn-secondary' data-placement='left' data-toggle='tooltip' title='Tooltip on left' type='button'>
+Tooltip on left
+</button>
 </div>
 </div>
 </div>
