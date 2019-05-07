@@ -30,15 +30,14 @@ gulp.watch  - Watch files and folders for changes
 // Order Files ==================================
 
 // Order of JS files
-// When you change this stop and restart gulp
+// When you change this stop and restart gulp, and save one of the files so it rebuilds.
 var jsSRC = [
   // Required
-  'app/assets/js/required/jquery.slim.min.js',
-  'app/assets/js/required/popper.min.js',
-  'app/assets/js/required/bootstrap.min.js',
-  // local
-  'app/assets/js/scripts/file1.js',
-  'app/assets/js/scripts/file2.js'
+  'node_modules/jquery/dist/jquery.js',
+  'node_modules/popper.js/dist/umd/popper.js',
+  'node_modules/bootstrap/dist/js/bootstrap.js',
+  // Local
+  'app/assets/js/scripts/popovers.js'
 ];
 
 var imgSRC = 'app/assets/images/**/*',
