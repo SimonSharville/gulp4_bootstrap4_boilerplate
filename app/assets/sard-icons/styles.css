@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "sard-icons";
+  src:url("../sard-icons/fonts/sard-icons.eot");
+  src:url("../sard-icons/fonts/sard-icons.eot?#iefix") format("embedded-opentype"),
+    url("../sard-icons/fonts/sard-icons.woff") format("woff"),
+    url("../sard-icons/fonts/sard-icons.ttf") format("truetype"),
+    url("../sard-icons/fonts/sard-icons.svg#sard-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "sard-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="sicon-"]:before,
+[class*=" sicon-"]:before {
+  font-family: "sard-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sicon-360:before {
+  content: "\e000";
+}
+.sicon-360-o:before {
+  content: "\e001";
+}
+.sicon-approve:before {
+  content: "\e002";
+}
+.sicon-approve-circle:before {
+  content: "\e003";
+}
+.sicon-approve-circle-o:before {
+  content: "\e004";
+}
+.sicon-arrow-down:before {
+  content: "\e005";
+}
+.sicon-arrow-down-circle:before {
+  content: "\e006";
+}
+.sicon-arrow-down-circle-o:before {
+  content: "\e007";
+}
+.sicon-arrow-left:before {
+  content: "\e008";
+}
+.sicon-arrow-left-circle:before {
+  content: "\e009";
+}
+.sicon-arrow-left-circle-o:before {
+  content: "\e00a";
+}
+.sicon-arrow-left-right:before {
+  content: "\e00b";
+}
+.sicon-arrow-right:before {
+  content: "\e00c";
+}
+.sicon-arrow-right-circle:before {
+  content: "\e00d";
+}
+.sicon-arrow-right-circle-o:before {
+  content: "\e00e";
+}
+.sicon-arrow-up:before {
+  content: "\e00f";
+}
+.sicon-arrow-up-circle:before {
+  content: "\e010";
+}
+.sicon-arrow-up-circle-o:before {
+  content: "\e011";
+}
+.sicon-arrow-up-down:before {
+  content: "\e012";
+}
+.sicon-cancel:before {
+  content: "\e013";
+}
+.sicon-circle:before {
+  content: "\e014";
+}
+.sicon-circle-dot:before {
+  content: "\e015";
+}
+.sicon-dot:before {
+  content: "\e016";
+}
+.sicon-double-arrow-down:before {
+  content: "\e017";
+}
+.sicon-double-arrow-left:before {
+  content: "\e018";
+}
+.sicon-double-arrow-right:before {
+  content: "\e019";
+}
+.sicon-double-arrow-up:before {
+  content: "\e01a";
+}
+.sicon-flower-circle-lg:before {
+  content: "\e01b";
+}
+.sicon-flower-circle-md:before {
+  content: "\e01c";
+}
+.sicon-flower-circle-o-lg:before {
+  content: "\e01d";
+}
+.sicon-flower-circle-o-md:before {
+  content: "\e01e";
+}
+.sicon-flower-circle-o-sm:before {
+  content: "\e01f";
+}
+.sicon-flower-circle-o-xl:before {
+  content: "\e020";
+}
+.sicon-flower-circle-o-xs:before {
+  content: "\e021";
+}
+.sicon-flower-circle-sm:before {
+  content: "\e022";
+}
+.sicon-flower-circle-xl:before {
+  content: "\e023";
+}
+.sicon-flower-circle-xs:before {
+  content: "\e024";
+}
+.sicon-flower-lg:before {
+  content: "\e025";
+}
+.sicon-flower-md:before {
+  content: "\e026";
+}
+.sicon-flower-sm:before {
+  content: "\e027";
+}
+.sicon-flower-xl:before {
+  content: "\e028";
+}
+.sicon-flower-xs:before {
+  content: "\e029";
+}
+.sicon-nhs-logo:before {
+  content: "\e02a";
+}
+.sicon-nhs-oxleas:before {
+  content: "\e02b";
+}
+.sicon-nhs-oxleas-joint:before {
+  content: "\e02c";
+}
+.sicon-quote-o:before {
+  content: "\e02e";
+}
+.sicon-reject:before {
+  content: "\e02f";
+}
+.sicon-reject-circle:before {
+  content: "\e030";
+}
+.sicon-reject-circle-o:before {
+  content: "\e031";
+}
+.sicon-sard-logo-lg:before {
+  content: "\e032";
+}
+.sicon-sard-logo-md:before {
+  content: "\e033";
+}
+.sicon-sard-logo-sm:before {
+  content: "\e034";
+}
+.sicon-sard-logo-xs:before {
+  content: "\e035";
+}
+.sicon-sard-name:before {
+  content: "\e036";
+}
+.sicon-sol-360:before {
+  content: "\e037";
+}
+.sicon-sol-360-o:before {
+  content: "\e038";
+}
+.sicon-sol-a4a:before {
+  content: "\e039";
+}
+.sicon-sol-a4a-o:before {
+  content: "\e03a";
+}
+.sicon-sol-ele:before {
+  content: "\e03b";
+}
+.sicon-sol-ele-o:before {
+  content: "\e03c";
+}
+.sicon-sol-eros:before {
+  content: "\e03d";
+}
+.sicon-sol-eros-o:before {
+  content: "\e03e";
+}
+.sicon-sol-jp:before {
+  content: "\e03f";
+}
+.sicon-sol-jp-o:before {
+  content: "\e040";
+}
+.sicon-sol-mrv:before {
+  content: "\e041";
+}
+.sicon-sol-mrv-o:before {
+  content: "\e042";
+}
+.sicon-sol-nrv:before {
+  content: "\e043";
+}
+.sicon-sol-nrv-o:before {
+  content: "\e044";
+}
+.sicon-sort-asc:before {
+  content: "\e045";
+}
+.sicon-sort-both:before {
+  content: "\e046";
+}
+.sicon-sort-desc:before {
+  content: "\e047";
+}
+.sicon-status-alert:before {
+  content: "\e048";
+}
+.sicon-status-alert-o:before {
+  content: "\e049";
+}
+.sicon-status-complete:before {
+  content: "\e04a";
+}
+.sicon-status-complete-o:before {
+  content: "\e04b";
+}
+.sicon-status-danger:before {
+  content: "\e04c";
+}
+.sicon-status-danger-o:before {
+  content: "\e04d";
+}
+.sicon-status-na:before {
+  content: "\e04e";
+}
+.sicon-status-na-o:before {
+  content: "\e04f";
+}
+.sicon-status-none:before {
+  content: "\e050";
+}
+.sicon-status-none-o:before {
+  content: "\e051";
+}
+.sicon-status-offline:before {
+  content: "\e052";
+}
+.sicon-status-offline-o:before {
+  content: "\e053";
+}
+.sicon-status-on:before {
+  content: "\e054";
+}
+.sicon-status-on-o:before {
+  content: "\e055";
+}
+.sicon-status-success:before {
+  content: "\e056";
+}
+.sicon-status-success-o:before {
+  content: "\e057";
+}
+.sicon-status-warning:before {
+  content: "\e058";
+}
+.sicon-status-warning-o:before {
+  content: "\e059";
+}
+.sicon-upload:before {
+  content: "\e05a";
+}
+.sicon-upload-o:before {
+  content: "\e05b";
+}
+.sicon-volcano:before {
+  content: "\e05c";
+}
+.sicon-comment-left-o:before {
+  content: "\e05e";
+}
+.sicon-comment-right:before {
+  content: "\e05f";
+}
+.sicon-comment-right-o:before {
+  content: "\e060";
+}
+.sicon-comment-left:before {
+  content: "\e05d";
+}
+.sicon-super-admin:before {
+  content: "\e061";
+}
+.sicon-super-admin-o:before {
+  content: "\e062";
+}
+.sicon-nav-icon-admin:before {
+  content: "\e063";
+}
+.sicon-nav-icon-site:before {
+  content: "\e064";
+}
+.sicon-quote:before {
+  content: "\e02d";
+}

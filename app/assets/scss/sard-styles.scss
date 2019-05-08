@@ -1,5 +1,8 @@
 // Import Order =======================
 
+// Sard Global
+
+
 
 // Bootstrap
 @import 'global/bs-variables-overrides';
@@ -24,7 +27,7 @@
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
 
 // Sard Icons
-@import '../sard-icons/sard-icons';
+@import '../sard-icons/styles';
 
 // Sard Styles
 @import 'global/global';
