@@ -1,3 +1,238 @@
+.sicon {
+  font-family: "sard-icons";
+  position: relative;
+  top: .13rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.sicon-lg {
+  font-size: 1.25rem;
+  line-height: 0.75em;
+  vertical-align: -.0667rem;
+}
+
+.sicon-xs {
+  font-size: .72rem;
+  top: .08rem;
+}
+
+.sicon-sm {
+  font-size: .82em;
+  top: .08rem;
+}
+
+.sicon-1x {
+  font-size: 1em;
+}
+
+.sicon-2x {
+  font-size: 1.9rem;
+  top: .2rem;
+}
+
+.sicon-3x {
+  font-size: 2.9em;
+  top: .3rem;
+}
+
+.sicon-4x {
+  font-size: 3.85rem;
+  top: .42rem;
+}
+
+.sicon-5x {
+  font-size: 4.8rem;
+  top: .52rem;
+}
+
+.sicon-6x {
+  font-size: 5.8rem;
+  top: .62rem;
+}
+
+.sicon-7x {
+  font-size: 6.8rem;
+  top: .75rem;
+}
+
+.sicon-8x {
+  font-size: 7.7rem;
+  top: .87rem;
+}
+
+.sicon-9x {
+  font-size: 8.7rem;
+  top: .97rem;
+}
+
+.sicon-10x {
+  font-size: 9.7rem;
+  top: 1.1rem;
+}
+
+.sicon-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.sicon-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.sicon-ul > li {
+  position: relative;
+}
+
+.sicon-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.sicon-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em;
+}
+
+.sicon-pull-left {
+  float: left;
+}
+
+.sicon-pull-right {
+  float: right;
+}
+
+.sicon.fa-pull-left {
+  margin-right: .3em;
+}
+
+.sicon.fa-pull-right {
+  margin-left: .3em;
+}
+
+.sicon-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+.sicon-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes sicon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sicon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.sicon-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.sicon-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sicon-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.sicon-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.sicon-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.sicon-flip-both, .sicon-flip-horizontal.sicon-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+}
+
+:root .sicon-rotate-90,
+:root .sicon-rotate-180,
+:root .sicon-rotate-270,
+:root .sicon-flip-horizontal,
+:root .sicon-flip-vertical,
+:root .sicon-flip-both {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.sicon-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.sicon-stack-1x,
+.sicon-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.sicon-stack-1x {
+  line-height: inherit;
+}
+
+.sicon-stack-2x {
+  font-size: 2em;
+}
+
+.sicon-inverse {
+  color: #fff;
+}
+
+a {
+  -webkit-transition: all 320ms ease;
+  transition: all 320ms ease;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -26234,13 +26469,13 @@ header {
   padding-top: 100px;
 }
 
-h1 {
-  font-family: "roboto-thin", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.icon-bg {
+  background-color: lightgrey;
+  padding: 0.5rem;
 }
 
-a {
-  -webkit-transition: all 320ms ease;
-  transition: all 320ms ease;
+h1 {
+  font-family: "roboto-thin", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /*# sourceMappingURL=sard-styles.css.map */

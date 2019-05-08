@@ -1,14 +1,15 @@
 // Import Order =======================
 
 // Sard Global
-
+@import 'global/colours';
+@import 'global/icons';
+@import 'global/links';
 
 
 // Bootstrap
-@import 'global/bs-variables-overrides';
-
+@import 'bootstrap/bs-variables-overrides';
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-@import 'global/bs-component-overrides';
+@import 'bootstrap/bs-component-overrides';
 
 // Fonts
 @import '../fonts/Roboto/roboto';
@@ -30,9 +31,9 @@
 @import '../sard-icons/styles';
 
 // Sard Styles
-@import 'global/global';
+@import 'variables/variables';
 @import 'typography/typography';
-@import 'global/icons';
-@import 'global/links';
+
+
 
 
