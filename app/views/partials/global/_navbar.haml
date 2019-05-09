@@ -13,9 +13,14 @@
           %li.nav-item
             %a.nav-link{:href => "bs-components.html"} SARD Styles
           %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            %a#sardUI.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Sard UI
+            .dropdown-menu{"aria-labelledby" => "sardUI"}
+              %a.dropdown-item{:href => "../sard-ui/icons.html"} Icons
+          %li.nav-item.dropdown
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               BS Components
-            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+            .dropdown-menu{"aria-labelledby" => "bsComponents"}
               %a.dropdown-item{:href => "bs-components.html#alerts"} Alerts
               %a.dropdown-item{:href => "bs-components.html#badges"} Badges
               %a.dropdown-item{:href => "bs-components.html#breadcrumbs"} Breadcrumbs
