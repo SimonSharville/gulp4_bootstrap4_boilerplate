@@ -21,23 +21,21 @@
           .sicon.sicon-approve.sicon-2x
           %span.small.small .sicon-approve
         .col-6.col-sm-4.col-md-3
+          .sicon.sicon-reject.sicon-2x
+          %span.small .sicon-reject
+        .col-6.col-sm-4.col-md-3
           .sicon.sicon-approve-circle.sicon-2x
           %span.small .sicon-approve-circle
         .col-6.col-sm-4.col-md-3
           .sicon.sicon-approve-circle-o.sicon-2x
           %span.small .sicon-approve-circle-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-reject.sicon-2x
-          %span.small .sicon-reject
+
         .col-6.col-sm-4.col-md-3
           .sicon.sicon-reject-circle.sicon-2x
           %span.small .sicon-reject-circle
         .col-6.col-sm-4.col-md-3
           .sicon.sicon-reject-circle-o.sicon-2x
           %span.small .sicon-reject-circle-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-cancel.sicon-2x
-          %span.small .sicon-cancel
 
       %hr
       %h4 Arrows
@@ -228,63 +226,69 @@
           .sicon.sicon-sol-nrv-o.sicon-2x
           %span.small .sicon-sol-nrv-o
 
-      %hr
-      %h4 Status
-      .row
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-alert.sicon-2x
-          %span.small .sicon-status-alert
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-alert-o.sicon-2x
-          %span.small .sicon-status-alert-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-complete.sicon-2x
-          %span.small .sicon-status-complete
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-complete-o.sicon-2x
-          %span.small .sicon-status-complete-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-danger.sicon-2x
-          %span.small .sicon-status-danger
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-danger-o.sicon-2x
-          %span.small .sicon-status-danger-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-na.sicon-2x
-          %span.small .sicon-status-na
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-na-o.sicon-2x
-          %span.small .sicon-status-na-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-none.sicon-2x
-          %span.small .sicon-status-none
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-none-o.sicon-2x
-          %span.small .sicon-status-none-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-offline.sicon-2x
-          %span.small .sicon-status-offline
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-offline-o.sicon-2x
-          %span.small .sicon-status-offline-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-on.sicon-2x
-          %span.small .sicon-status-on
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-on-o.sicon-2x
-          %span.small .sicon-status-on-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-success.sicon-2x
-          %span.small .sicon-status-success
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-success-o.sicon-2x
-          %span.small .sicon-status-success-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-warning.sicon-2x
-          %span.small .sicon-status-warning
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-status-warning-o.sicon-2x
-          %span.small .sicon-status-warning-o
+      / %hr
+      / %h4 Status
+      / .row
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-danger.sicon-2x
+      /     %span.small .sicon-status-danger
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-danger-o.sicon-2x
+      /     %span.small .sicon-status-danger-o
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-success.sicon-2x
+      /     %span.small .sicon-status-success
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-success-o.sicon-2x
+      /     %span.small .sicon-status-success-o
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-warning.sicon-2x
+      /     %span.small .sicon-status-warning
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-warning-o.sicon-2x
+      /     %span.small .sicon-status-warning-o
+
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-approved.sicon-2x
+      /     %span.small .sicon-status-approved
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-approved-o.sicon-2x
+      /     %span.small .sicon-status-approved-o
+
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-recommended.sicon-2x
+      /     %span.small .sicon-status-recommended
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-recommended-o.sicon-2x
+      /     %span.small .sicon-status-recommended-o
+
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-submitted.sicon-2x
+      /     %span.small .sicon-status-submitted
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-submitted-o.sicon-2x
+      /     %span.small .sicon-status-submitted-o
+
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-archived.sicon-2x
+      /     %span.small .sicon-status-archived
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-archived-o.sicon-2x
+      /     %span.small .sicon-status-archived-o
+
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-due.sicon-2x
+      /     %span.small .sicon-status-due
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-due-o.sicon-2x
+      /     %span.small .sicon-status-due-o
+
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-draft.sicon-2x
+      /     %span.small .sicon-status-draft
+      /   .col-6.col-sm-4.col-md-3
+      /     .sicon.sicon-status-draft-o.sicon-2x
+      /     %span.small .sicon-status-draft-o
 
       %hr
       %h4 Various
@@ -302,14 +306,15 @@
           .sicon.sicon-comment-left-o.sicon-2x
           %span.small .sicon-comment-left-o
         .col-6.col-sm-4.col-md-3
+          .sicon.sicon-comment-left.sicon-2x
+          %span.small .sicon-comment-left
+        .col-6.col-sm-4.col-md-3
           .sicon.sicon-comment-right.sicon-2x
           %span.small .sicon-comment-right
         .col-6.col-sm-4.col-md-3
           .sicon.sicon-comment-right-o.sicon-2x
           %span.small .sicon-comment-right-o
-        .col-6.col-sm-4.col-md-3
-          .sicon.sicon-comment-left.sicon-2x
-          %span.small .sicon-comment-left
+
         .col-6.col-sm-4.col-md-3
           .sicon.sicon-quote.sicon-2x
           %span.small .sicon-quote
@@ -334,6 +339,9 @@
         .col-6.col-sm-4.col-md-3
           .sicon.sicon-sort-desc.sicon-2x
           %span.small .sicon-sort-desc
+        .col-6.col-sm-4.col-md-3
+          .sicon.sicon-cancel.sicon-2x
+          %span.small .sicon-cancel
 
       %p.mt-3.small
         These icons was created with

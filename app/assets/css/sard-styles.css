@@ -26051,408 +26051,424 @@ readers do not read off random characters that represent icons */
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sicon-360:before {
-  content: "\e000";
-}
-
-.sicon-360-o:before {
-  content: "\e001";
-}
-
 .sicon-approve:before {
-  content: "\e002";
+  content: "\61";
 }
 
 .sicon-approve-circle:before {
-  content: "\e003";
+  content: "\62";
 }
 
 .sicon-approve-circle-o:before {
-  content: "\e004";
+  content: "\63";
 }
 
 .sicon-arrow-down:before {
-  content: "\e005";
+  content: "\64";
 }
 
 .sicon-arrow-down-circle:before {
-  content: "\e006";
+  content: "\65";
 }
 
 .sicon-arrow-down-circle-o:before {
-  content: "\e007";
+  content: "\66";
 }
 
 .sicon-arrow-left:before {
-  content: "\e008";
+  content: "\67";
 }
 
 .sicon-arrow-left-circle:before {
-  content: "\e009";
+  content: "\68";
 }
 
 .sicon-arrow-left-circle-o:before {
-  content: "\e00a";
+  content: "\69";
 }
 
 .sicon-arrow-left-right:before {
-  content: "\e00b";
+  content: "\6a";
 }
 
 .sicon-arrow-right:before {
-  content: "\e00c";
+  content: "\6b";
 }
 
 .sicon-arrow-right-circle:before {
-  content: "\e00d";
+  content: "\6c";
 }
 
 .sicon-arrow-right-circle-o:before {
-  content: "\e00e";
+  content: "\6d";
 }
 
 .sicon-arrow-up:before {
-  content: "\e00f";
+  content: "\6e";
 }
 
 .sicon-arrow-up-circle:before {
-  content: "\e010";
+  content: "\6f";
 }
 
 .sicon-arrow-up-circle-o:before {
-  content: "\e011";
+  content: "\70";
 }
 
 .sicon-arrow-up-down:before {
-  content: "\e012";
+  content: "\71";
 }
 
 .sicon-cancel:before {
-  content: "\e013";
+  content: "\72";
 }
 
 .sicon-circle:before {
-  content: "\e014";
+  content: "\73";
 }
 
 .sicon-circle-dot:before {
-  content: "\e015";
-}
-
-.sicon-dot:before {
-  content: "\e016";
-}
-
-.sicon-double-arrow-down:before {
-  content: "\e017";
-}
-
-.sicon-double-arrow-left:before {
-  content: "\e018";
-}
-
-.sicon-double-arrow-right:before {
-  content: "\e019";
-}
-
-.sicon-double-arrow-up:before {
-  content: "\e01a";
-}
-
-.sicon-flower-circle-lg:before {
-  content: "\e01b";
-}
-
-.sicon-flower-circle-md:before {
-  content: "\e01c";
-}
-
-.sicon-flower-circle-o-lg:before {
-  content: "\e01d";
-}
-
-.sicon-flower-circle-o-md:before {
-  content: "\e01e";
-}
-
-.sicon-flower-circle-o-sm:before {
-  content: "\e01f";
-}
-
-.sicon-flower-circle-o-xl:before {
-  content: "\e020";
-}
-
-.sicon-flower-circle-o-xs:before {
-  content: "\e021";
-}
-
-.sicon-flower-circle-sm:before {
-  content: "\e022";
-}
-
-.sicon-flower-circle-xl:before {
-  content: "\e023";
-}
-
-.sicon-flower-circle-xs:before {
-  content: "\e024";
-}
-
-.sicon-flower-lg:before {
-  content: "\e025";
-}
-
-.sicon-flower-md:before {
-  content: "\e026";
-}
-
-.sicon-flower-sm:before {
-  content: "\e027";
-}
-
-.sicon-flower-xl:before {
-  content: "\e028";
-}
-
-.sicon-flower-xs:before {
-  content: "\e029";
-}
-
-.sicon-nhs-logo:before {
-  content: "\e02a";
-}
-
-.sicon-nhs-oxleas:before {
-  content: "\e02b";
-}
-
-.sicon-nhs-oxleas-joint:before {
-  content: "\e02c";
-}
-
-.sicon-quote-o:before {
-  content: "\e02e";
-}
-
-.sicon-reject:before {
-  content: "\e02f";
-}
-
-.sicon-reject-circle:before {
-  content: "\e030";
-}
-
-.sicon-reject-circle-o:before {
-  content: "\e031";
-}
-
-.sicon-sard-logo-lg:before {
-  content: "\e032";
-}
-
-.sicon-sard-logo-md:before {
-  content: "\e033";
-}
-
-.sicon-sard-logo-sm:before {
-  content: "\e034";
-}
-
-.sicon-sard-logo-xs:before {
-  content: "\e035";
-}
-
-.sicon-sard-name:before {
-  content: "\e036";
-}
-
-.sicon-sol-360:before {
-  content: "\e037";
-}
-
-.sicon-sol-360-o:before {
-  content: "\e038";
-}
-
-.sicon-sol-a4a:before {
-  content: "\e039";
-}
-
-.sicon-sol-a4a-o:before {
-  content: "\e03a";
-}
-
-.sicon-sol-ele:before {
-  content: "\e03b";
-}
-
-.sicon-sol-ele-o:before {
-  content: "\e03c";
-}
-
-.sicon-sol-eros:before {
-  content: "\e03d";
-}
-
-.sicon-sol-eros-o:before {
-  content: "\e03e";
-}
-
-.sicon-sol-jp:before {
-  content: "\e03f";
-}
-
-.sicon-sol-jp-o:before {
-  content: "\e040";
-}
-
-.sicon-sol-mrv:before {
-  content: "\e041";
-}
-
-.sicon-sol-mrv-o:before {
-  content: "\e042";
-}
-
-.sicon-sol-nrv:before {
-  content: "\e043";
-}
-
-.sicon-sol-nrv-o:before {
-  content: "\e044";
-}
-
-.sicon-sort-asc:before {
-  content: "\e045";
-}
-
-.sicon-sort-both:before {
-  content: "\e046";
-}
-
-.sicon-sort-desc:before {
-  content: "\e047";
-}
-
-.sicon-status-alert:before {
-  content: "\e048";
-}
-
-.sicon-status-alert-o:before {
-  content: "\e049";
-}
-
-.sicon-status-complete:before {
-  content: "\e04a";
-}
-
-.sicon-status-complete-o:before {
-  content: "\e04b";
-}
-
-.sicon-status-danger:before {
-  content: "\e04c";
-}
-
-.sicon-status-danger-o:before {
-  content: "\e04d";
-}
-
-.sicon-status-na:before {
-  content: "\e04e";
-}
-
-.sicon-status-na-o:before {
-  content: "\e04f";
-}
-
-.sicon-status-none:before {
-  content: "\e050";
-}
-
-.sicon-status-none-o:before {
-  content: "\e051";
-}
-
-.sicon-status-offline:before {
-  content: "\e052";
-}
-
-.sicon-status-offline-o:before {
-  content: "\e053";
-}
-
-.sicon-status-on:before {
-  content: "\e054";
-}
-
-.sicon-status-on-o:before {
-  content: "\e055";
-}
-
-.sicon-status-success:before {
-  content: "\e056";
-}
-
-.sicon-status-success-o:before {
-  content: "\e057";
-}
-
-.sicon-status-warning:before {
-  content: "\e058";
-}
-
-.sicon-status-warning-o:before {
-  content: "\e059";
-}
-
-.sicon-upload:before {
-  content: "\e05a";
-}
-
-.sicon-upload-o:before {
-  content: "\e05b";
-}
-
-.sicon-volcano:before {
-  content: "\e05c";
-}
-
-.sicon-comment-left-o:before {
-  content: "\e05e";
-}
-
-.sicon-comment-right:before {
-  content: "\e05f";
-}
-
-.sicon-comment-right-o:before {
-  content: "\e060";
+  content: "\74";
 }
 
 .sicon-comment-left:before {
-  content: "\e05d";
+  content: "\75";
 }
 
-.sicon-super-admin:before {
-  content: "\e061";
+.sicon-comment-left-o:before {
+  content: "\76";
 }
 
-.sicon-super-admin-o:before {
-  content: "\e062";
+.sicon-comment-right:before {
+  content: "\77";
+}
+
+.sicon-comment-right-o:before {
+  content: "\78";
+}
+
+.sicon-dot:before {
+  content: "\79";
+}
+
+.sicon-double-arrow-down:before {
+  content: "\7a";
+}
+
+.sicon-double-arrow-left:before {
+  content: "\41";
+}
+
+.sicon-double-arrow-right:before {
+  content: "\42";
+}
+
+.sicon-double-arrow-up:before {
+  content: "\43";
+}
+
+.sicon-flower-circle-lg:before {
+  content: "\44";
+}
+
+.sicon-flower-circle-md:before {
+  content: "\45";
+}
+
+.sicon-flower-circle-o-lg:before {
+  content: "\46";
+}
+
+.sicon-flower-circle-o-md:before {
+  content: "\47";
+}
+
+.sicon-flower-circle-o-sm:before {
+  content: "\48";
+}
+
+.sicon-flower-circle-o-xl:before {
+  content: "\49";
+}
+
+.sicon-flower-circle-o-xs:before {
+  content: "\4a";
+}
+
+.sicon-flower-circle-sm:before {
+  content: "\4b";
+}
+
+.sicon-flower-circle-xl:before {
+  content: "\4c";
+}
+
+.sicon-flower-circle-xs:before {
+  content: "\4d";
+}
+
+.sicon-flower-lg:before {
+  content: "\4e";
+}
+
+.sicon-flower-md:before {
+  content: "\4f";
+}
+
+.sicon-flower-sm:before {
+  content: "\50";
+}
+
+.sicon-flower-xl:before {
+  content: "\51";
+}
+
+.sicon-flower-xs:before {
+  content: "\52";
 }
 
 .sicon-nav-icon-admin:before {
-  content: "\e063";
+  content: "\53";
 }
 
 .sicon-nav-icon-site:before {
-  content: "\e064";
+  content: "\54";
+}
+
+.sicon-nhs-logo:before {
+  content: "\55";
+}
+
+.sicon-nhs-oxleas:before {
+  content: "\56";
+}
+
+.sicon-nhs-oxleas-joint:before {
+  content: "\57";
+}
+
+.sicon-page-approved:before {
+  content: "\58";
+}
+
+.sicon-page-archived:before {
+  content: "\59";
+}
+
+.sicon-page-complete:before {
+  content: "\5a";
+}
+
+.sicon-page-draft:before {
+  content: "\30";
+}
+
+.sicon-page-due:before {
+  content: "\31";
+}
+
+.sicon-page-recommended:before {
+  content: "\32";
+}
+
+.sicon-page-submitted:before {
+  content: "\33";
 }
 
 .sicon-quote:before {
-  content: "\e02d";
+  content: "\34";
+}
+
+.sicon-quote-o:before {
+  content: "\35";
+}
+
+.sicon-reject:before {
+  content: "\36";
+}
+
+.sicon-reject-circle:before {
+  content: "\37";
+}
+
+.sicon-reject-circle-o:before {
+  content: "\38";
+}
+
+.sicon-sard-logo-lg:before {
+  content: "\39";
+}
+
+.sicon-sard-logo-md:before {
+  content: "\21";
+}
+
+.sicon-sard-logo-sm:before {
+  content: "\22";
+}
+
+.sicon-sard-logo-xs:before {
+  content: "\23";
+}
+
+.sicon-sard-name:before {
+  content: "\24";
+}
+
+.sicon-sol-360:before {
+  content: "\25";
+}
+
+.sicon-sol-360-o:before {
+  content: "\26";
+}
+
+.sicon-sol-a4a:before {
+  content: "\27";
+}
+
+.sicon-sol-a4a-o:before {
+  content: "\28";
+}
+
+.sicon-sol-ele:before {
+  content: "\29";
+}
+
+.sicon-sol-ele-o:before {
+  content: "\2a";
+}
+
+.sicon-sol-eros:before {
+  content: "\2b";
+}
+
+.sicon-sol-eros-o:before {
+  content: "\2c";
+}
+
+.sicon-sol-jp:before {
+  content: "\2d";
+}
+
+.sicon-sol-jp-o:before {
+  content: "\2e";
+}
+
+.sicon-sol-mrv:before {
+  content: "\2f";
+}
+
+.sicon-sol-mrv-o:before {
+  content: "\3a";
+}
+
+.sicon-sol-nrv:before {
+  content: "\3b";
+}
+
+.sicon-sol-nrv-o:before {
+  content: "\3c";
+}
+
+.sicon-sort-asc:before {
+  content: "\3d";
+}
+
+.sicon-sort-both:before {
+  content: "\3e";
+}
+
+.sicon-sort-desc:before {
+  content: "\3f";
+}
+
+.sicon-status-approved:before {
+  content: "\40";
+}
+
+.sicon-status-archived:before {
+  content: "\5b";
+}
+
+.sicon-status-archived-o:before {
+  content: "\5d";
+}
+
+.sicon-status-danger:before {
+  content: "\5e";
+}
+
+.sicon-status-danger-o:before {
+  content: "\5f";
+}
+
+.sicon-status-draft:before {
+  content: "\60";
+}
+
+.sicon-status-draft-o:before {
+  content: "\7b";
+}
+
+.sicon-status-due:before {
+  content: "\7c";
+}
+
+.sicon-status-due-o:before {
+  content: "\7d";
+}
+
+.sicon-status-recommended:before {
+  content: "\7e";
+}
+
+.sicon-status-recommended-o:before {
+  content: "\5c";
+}
+
+.sicon-status-submitted:before {
+  content: "\e000";
+}
+
+.sicon-status-submitted-o:before {
+  content: "\e001";
+}
+
+.sicon-status-success:before {
+  content: "\e002";
+}
+
+.sicon-status-success-o:before {
+  content: "\e003";
+}
+
+.sicon-status-warning:before {
+  content: "\e004";
+}
+
+.sicon-status-warning-o:before {
+  content: "\e005";
+}
+
+.sicon-super-admin:before {
+  content: "\e006";
+}
+
+.sicon-super-admin-o:before {
+  content: "\e007";
+}
+
+.sicon-upload:before {
+  content: "\e008";
+}
+
+.sicon-upload-o:before {
+  content: "\e009";
+}
+
+.sicon-volcano:before {
+  content: "\e00a";
 }
 
 hr.black {
