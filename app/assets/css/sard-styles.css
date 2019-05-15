@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 .sicon {
   font-family: "sard-icons";
   position: relative;
@@ -559,12 +560,6 @@ legend {
   white-space: normal;
 }
 
-@media (max-width: 1200px) {
-  legend {
-    font-size: calc(1.275rem + 0.3vw) ;
-  }
-}
-
 progress {
   vertical-align: baseline;
 }
@@ -616,40 +611,16 @@ h1, .h1 {
   font-size: 2.5rem;
 }
 
-@media (max-width: 1200px) {
-  h1, .h1 {
-    font-size: calc(1.375rem + 1.5vw) ;
-  }
-}
-
 h2, .h2 {
   font-size: 2rem;
-}
-
-@media (max-width: 1200px) {
-  h2, .h2 {
-    font-size: calc(1.325rem + 0.9vw) ;
-  }
 }
 
 h3, .h3 {
   font-size: 1.75rem;
 }
 
-@media (max-width: 1200px) {
-  h3, .h3 {
-    font-size: calc(1.3rem + 0.6vw) ;
-  }
-}
-
 h4, .h4 {
   font-size: 1.5rem;
-}
-
-@media (max-width: 1200px) {
-  h4, .h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
-  }
 }
 
 h5, .h5 {
@@ -671,22 +642,10 @@ h6, .h6 {
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
-  .display-1 {
-    font-size: calc(1.725rem + 5.7vw) ;
-  }
-}
-
 .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
   line-height: 1.2;
-}
-
-@media (max-width: 1200px) {
-  .display-2 {
-    font-size: calc(1.675rem + 5.1vw) ;
-  }
 }
 
 .display-3 {
@@ -695,22 +654,10 @@ h6, .h6 {
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
-  .display-3 {
-    font-size: calc(1.575rem + 3.9vw) ;
-  }
-}
-
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
-}
-
-@media (max-width: 1200px) {
-  .display-4 {
-    font-size: calc(1.475rem + 2.7vw) ;
-  }
 }
 
 hr {
@@ -6605,12 +6552,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   opacity: .5;
 }
 
-@media (max-width: 1200px) {
-  .close {
-    font-size: calc(1.275rem + 0.3vw) ;
-  }
-}
-
 .close:hover {
   color: #000;
   text-decoration: none;
@@ -11721,104 +11662,6 @@ a.text-dark:hover, a.text-dark:focus {
     padding-left: 16px;
     padding-right: 16px;
   }
-}
-
-/* ===================================================================================================== */
-/* Font Roboto ========================================================================================= */
-@font-face {
-  font-family: 'roboto-thin';
-  src: font-url("roboto/fonts/roboto-thin-webfont.eot");
-  src: font-url("roboto/fonts/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-thin-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-thin-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-thin-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-thin-webfont.svg#roboto-thin") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-thin-italic';
-  src: font-url("roboto/fonts/roboto-thinitalic-webfont.eot");
-  src: font-url("roboto/fonts/roboto-thinitalic-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-thinitalic-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-thinitalic-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-thinitalic-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-thinitalic-webfont.svg#roboto-thin-italic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-light';
-  src: font-url("roboto/fonts/roboto-light-webfont.eot");
-  src: font-url("roboto/fonts/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-light-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-light-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-light-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-light-webfont.svg#roboto-light") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-light-italic';
-  src: font-url("roboto/fonts/roboto-lightitalic-webfont.eot");
-  src: font-url("roboto/fonts/roboto-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-lightitalic-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-lightitalic-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-lightitalic-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-lightitalic-webfont.svg#roboto-light-italic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-regular';
-  src: font-url("roboto/fonts/roboto-regular-webfont.eot");
-  src: font-url("roboto/fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-regular-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-regular-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-regular-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-regular-webfont.svg#roboto-regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-italic';
-  src: font-url("roboto/fonts/roboto-italic-webfont.eot");
-  src: font-url("roboto/fonts/roboto-italic-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-italic-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-italic-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-italic-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-italic-webfont.svg#roboto-italic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-medium';
-  src: font-url("roboto/fonts/roboto-medium-webfont.eot");
-  src: font-url("roboto/fonts/roboto-medium-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-medium-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-medium-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-medium-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-medium-webfont.svg#roboto-medium") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-medium-italic';
-  src: font-url("roboto/fonts/roboto-mediumitalic-webfont.eot");
-  src: font-url("roboto/fonts/roboto-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-mediumitalic-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-mediumitalic-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-mediumitalic-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-mediumitalic-webfont.svg#roboto-medium-italic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-bold';
-  src: font-url("roboto/fonts/roboto-bold-webfont.eot");
-  src: font-url("roboto/fonts/roboto-bold-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-bold-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-bold-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-bold-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-bold-webfont.svg#roboto-bold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-bold-italic';
-  src: font-url("roboto/fonts/roboto-bolditalic-webfont.eot");
-  src: font-url("roboto/fonts/roboto-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-bolditalic-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-bolditalic-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-bolditalic-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-bolditalic-webfont.svg#roboto-bold-italic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-black';
-  src: font-url("roboto/fonts/roboto-black-webfont.eot");
-  src: font-url("roboto/fonts/roboto-black-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-black-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-black-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-black-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-black-webfont.svg#roboto-black") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto-black-italic';
-  src: font-url("roboto/fonts/roboto-blackitalic-webfont.eot");
-  src: font-url("roboto/fonts/roboto-blackitalic-webfont.eot?#iefix") format("embedded-opentype"), font-url("roboto/fonts/roboto-blackitalic-webfont.woff2") format("woff2"), font-url("roboto/fonts/roboto-blackitalic-webfont.woff") format("woff"), font-url("roboto/fonts/roboto-blackitalic-webfont.ttf") format("truetype"), font-url("roboto/fonts/roboto-blackitalic-webfont.svg#roboto-black-italic") format("svg");
-  font-weight: normal;
-  font-style: normal;
 }
 
 /*!
