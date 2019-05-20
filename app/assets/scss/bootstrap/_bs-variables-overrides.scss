@@ -25,6 +25,8 @@ $container-max-widths: (
 );
 
 /* Small devices (landscape phones, 576px and up) */
+$font-size-base:              0.9375rem; //  `15px`
+// Reduced from 1rem - Assumes the browser default, typically `16px`
 
 
 // Grid columns
