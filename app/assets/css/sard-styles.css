@@ -26453,6 +26453,318 @@ header {
   padding: 0.5rem;
 }
 
+.client {
+  color: #00B2B2;
+}
+
+.admin {
+  color: #E50073;
+}
+
+.admin-2 {
+  color: #990099;
+}
+
+.text-colour {
+  color: #211F0F !important;
+}
+
+.turq {
+  color: #00B2B2;
+}
+
+.pink {
+  color: #E50073;
+}
+
+.orange {
+  color: #FF6A00;
+}
+
+.yellow {
+  color: #FFB200;
+}
+
+.lime {
+  color: #A7BF30;
+}
+
+.green {
+  color: #359E00;
+}
+
+.teal {
+  color: #004D4D;
+}
+
+.blue {
+  color: #003CB8;
+}
+
+.ink {
+  color: #000078;
+}
+
+.purple {
+  color: #52008C;
+}
+
+.plum {
+  color: #990099;
+}
+
+.red {
+  color: #BF0000;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.MRv {
+  color: #00B2B2;
+}
+
+.NRv {
+  color: #FF6A00;
+}
+
+.sa-360 {
+  color: #FFB200;
+}
+
+.eLeave {
+  color: #A7BF30;
+}
+
+.A4A {
+  color: #990099;
+}
+
+.JPL {
+  color: #E50073;
+}
+
+.eRo {
+  color: #004D4D;
+}
+
+.CPL {
+  color: #BF0000;
+}
+
+.grey02 {
+  color: #EDEBEB;
+}
+
+.grey03 {
+  color: #E3E1E1;
+}
+
+.grey04 {
+  color: #D9D6D6;
+}
+
+.grey06 {
+  color: #C7C4C2;
+}
+
+.grey08 {
+  color: #B5B0B0;
+}
+
+.grey10 {
+  color: #A39E9C;
+}
+
+.grey10 {
+  color: #A39E9C;
+}
+
+.grey12 {
+  color: #827D7D;
+}
+
+.grey14 {
+  color: #615E5C;
+}
+
+.grey16 {
+  color: #403D3D;
+}
+
+.grey18 {
+  color: #211F0F;
+}
+
+.success {
+  color: #359E00;
+}
+
+.info {
+  color: #00a0e0;
+}
+
+.warning {
+  color: #FFB200;
+}
+
+.danger {
+  color: #BF0000;
+}
+
+.alarm {
+  color: #E50073;
+}
+
+.turq-bg {
+  background-color: #00B2B2;
+}
+
+.pink-bg {
+  background-color: #E50073;
+}
+
+.orange-bg {
+  background-color: #FF6A00;
+}
+
+.yellow-bg {
+  background-color: #FFB200;
+}
+
+.lime-bg {
+  background-color: #A7BF30;
+}
+
+.green-bg {
+  background-color: #359E00;
+}
+
+.teal-bg {
+  background-color: #004D4D;
+}
+
+.blue-bg {
+  background-color: #003CB8;
+}
+
+.ink-bg {
+  background-color: #000078;
+}
+
+.purple-bg {
+  background-color: #52008C;
+}
+
+.plum-bg {
+  background-color: #990099;
+}
+
+.red-bg {
+  background-color: #BF0000;
+}
+
+.white-bg {
+  background-color: #FFFFFF;
+}
+
+.MRv-bg {
+  background-color: #00B2B2;
+}
+
+.NRv-bg {
+  background-color: #FF6A00;
+}
+
+.sa-360-bg {
+  background-color: #FFB200;
+}
+
+.eLeave-bg {
+  background-color: #A7BF30;
+}
+
+.A4A-bg {
+  background-color: #990099;
+}
+
+.JPL-bg {
+  background-color: #E50073;
+}
+
+.eRo-bg {
+  background-color: #004D4D;
+}
+
+.CPL-bg {
+  background-color: #BF0000;
+}
+
+.grey02-bg {
+  background-color: #EDEBEB;
+}
+
+.grey03-bg {
+  background-color: #E3E1E1;
+}
+
+.grey04-bg {
+  background-color: #D9D6D6;
+}
+
+.grey06-bg {
+  background-color: #C7C4C2;
+}
+
+.grey08-bg {
+  background-color: #B5B0B0;
+}
+
+.grey10-bg {
+  background-color: #A39E9C;
+}
+
+.grey10-bg {
+  background-color: #A39E9C;
+}
+
+.grey12-bg {
+  background-color: #827D7D;
+}
+
+.grey14-bg {
+  background-color: #615E5C;
+}
+
+.grey16-bg {
+  background-color: #403D3D;
+}
+
+.grey18-bg {
+  background-color: #211F0F;
+}
+
+.success-bg {
+  background-color: #359E00;
+}
+
+.info-bg {
+  background-color: #00a0e0;
+}
+
+.warning-bg {
+  background-color: #FFB200;
+}
+
+.danger-bg {
+  background-color: #BF0000;
+}
+
+.alarm-bg {
+  background-color: #E50073;
+}
+
 /* 16 * 0.0312 = 1/2px */
 /* 16 * 0.0312 = 1/2px */
 /* 16 * 0.0312 = 1/2px */
@@ -26461,6 +26773,7 @@ header {
 h1, h2, h3, h4, h5, h6, p, em {
   font-weight: normal;
   font-style: normal;
+  color: #211F0F;
 }
 
 h1, .h1 {
@@ -26554,7 +26867,7 @@ strong {
 }
 
 .panel {
-  background-color: lightgrey;
+  background-color: #EDEBEB;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
@@ -26572,7 +26885,7 @@ strong {
 .panel-heading {
   padding: 0.25rem 0.625rem;
   border-bottom: 1px solid transparent;
-  background-color: grey;
+  background-color: #403D3D;
   margin: -1px;
   overflow: hidden;
   font-size: 1.25rem;
@@ -26594,11 +26907,12 @@ strong {
   font-size: 1.25rem;
   line-height: 1.575rem;
   font-weight: 300;
+  color: white;
 }
 
 .panel-footer {
   padding: 0.25rem 0.625rem;
-  background-color: grey;
+  background-color: #403D3D;
   color: white;
   font-weight: 300;
   border-top: 1px solid #ddd;

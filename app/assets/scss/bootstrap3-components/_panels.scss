@@ -2,10 +2,10 @@
 $panel-spacer-y:              .25rem !default;
 $panel-spacer-x:              0.625rem !default;
 
-$panel-bg:                    lightgrey;
+$panel-bg:                    $grey02;
 $panel-body-padding:          $panel-spacer-x !default;
 $panel-heading-padding:       $panel-spacer-y $panel-spacer-x !default;
-$panel-heading-bg:            grey;
+$panel-heading-bg:            $grey16;
 $panel-heading-font-size:     1.25rem;
 $panel-heading-font-weight:   300;
 $panel-heading-line-height:   1.575rem;
@@ -94,6 +94,7 @@ $panel-footer-bg:             $panel-heading-bg !default;
   font-size: $panel-heading-font-size;
   line-height: $panel-heading-line-height;
   font-weight: $panel-heading-font-weight;
+  color: $panel-heading-text-color;
 }
 
 // // Within heading, strip any `h*` tag of its default margins for spacing.

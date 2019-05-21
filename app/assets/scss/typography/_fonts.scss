@@ -67,6 +67,7 @@ $double: 0.125rem; /* 16 * 0.125 = 2px */
 h1, h2, h3, h4, h5, h6, p, em{
   font-weight:normal;
   font-style:normal;
+  color: $bodytext;
 }
 // http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
 h1,.h1 {
