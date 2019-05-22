@@ -25,10 +25,44 @@
   %p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
 
 %hr
-
-%h4 Dismissing
+%h4 Dismissible Alerts
+.alert.alert-primary.alert-dismissible.fade.show{:role => "alert"}
+  %strong Holy guacamole!
+  You should check in on some of those fields below.
+  %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+    %i.alert-close
+.alert.alert-secondary.alert-dismissible.fade.show{:role => "alert"}
+  %strong Holy guacamole!
+  You should check in on some of those fields below.
+  %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+    %i.alert-close 
+.alert.alert-success.alert-dismissible.fade.show{:role => "alert"}
+  %strong Holy guacamole!
+  You should check in on some of those fields below.
+  %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+    %i.alert-close 
+.alert.alert-danger.alert-dismissible.fade.show{:role => "alert"}
+  %strong Holy guacamole!
+  You should check in on some of those fields below.
+  %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+    %i.alert-close 
 .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
   %strong Holy guacamole!
   You should check in on some of those fields below.
   %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-    %span{"aria-hidden" => "true"} ×
+    %i.alert-close 
+.alert.alert-info.alert-dismissible.fade.show{:role => "alert"}
+  %strong Holy guacamole!
+  You should check in on some of those fields below.
+  %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+    %i.alert-close 
+.alert.alert-light.alert-dismissible.fade.show{:role => "alert"}
+  %strong Holy guacamole!
+  You should check in on some of those fields below.
+  %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+    %i.alert-close 
+.alert.alert-dark.alert-dismissible.fade.show{:role => "alert"}
+  %strong Holy guacamole!
+  You should check in on some of those fields below.
+  %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+    %i.alert-close 

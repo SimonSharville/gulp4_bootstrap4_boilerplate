@@ -12036,7 +12036,7 @@ a.text-dark:hover, a.text-dark:focus {
  * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa, .fab, .fal, .far, .fas {
+.fa, .fab, .fal, .far, .alert-close, .fas {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -12137,11 +12137,11 @@ a.text-dark:hover, a.text-dark:focus {
   float: right;
 }
 
-.fa.fa-pull-left, .fab.fa-pull-left, .fal.fa-pull-left, .far.fa-pull-left, .fas.fa-pull-left {
+.fa.fa-pull-left, .fab.fa-pull-left, .fal.fa-pull-left, .far.fa-pull-left, .fa-pull-left.alert-close, .fas.fa-pull-left {
   margin-right: .3em;
 }
 
-.fa.fa-pull-right, .fab.fa-pull-right, .fal.fa-pull-right, .far.fa-pull-right, .fas.fa-pull-right {
+.fa.fa-pull-right, .fab.fa-pull-right, .fal.fa-pull-right, .far.fa-pull-right, .fa-pull-right.alert-close, .fas.fa-pull-right {
   margin-left: .3em;
 }
 
@@ -17742,7 +17742,7 @@ a.text-dark:hover, a.text-dark:focus {
   src: url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-regular-400.woff2) format("woff2"), url(../webfonts/fa-regular-400.woff) format("woff"), url(../webfonts/fa-regular-400.ttf) format("truetype"), url(../webfonts/fa-regular-400.svg#fontawesome) format("svg");
 }
 
-.far {
+.far, .alert-close {
   font-weight: 400;
 }
 
@@ -17755,7 +17755,7 @@ a.text-dark:hover, a.text-dark:focus {
   src: url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-solid-900.woff2) format("woff2"), url(../webfonts/fa-solid-900.woff) format("woff"), url(../webfonts/fa-solid-900.ttf) format("truetype"), url(../webfonts/fa-solid-900.svg#fontawesome) format("svg");
 }
 
-.fa, .far, .fas {
+.fa, .far, .alert-close, .fas {
   font-family: "Font Awesome 5 Free";
 }
 
@@ -17768,8 +17768,7 @@ a.text-dark:hover, a.text-dark:focus {
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
-.fas,
-.far,
+.fas, .far, .alert-close,
 .fal,
 .fab {
   -moz-osx-font-smoothing: grayscale;
@@ -17873,16 +17872,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .fa.fa-pull-left,
-.fas.fa-pull-left,
-.far.fa-pull-left,
+.fas.fa-pull-left, .far.fa-pull-left, .fa-pull-left.alert-close,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
   margin-right: .3em;
 }
 
 .fa.fa-pull-right,
-.fas.fa-pull-right,
-.far.fa-pull-right,
+.fas.fa-pull-right, .far.fa-pull-right, .fa-pull-right.alert-close,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
   margin-left: .3em;
@@ -23487,7 +23484,7 @@ readers do not read off random characters that represent icons */
   src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
-.far {
+.far, .alert-close {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
@@ -26870,6 +26867,25 @@ strong {
   border-radius: 0.25rem;
 }
 
+.alert-dismissible {
+  padding-right: 2.65625rem;
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem 0.625rem;
+  color: white;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.alert-dismissible .close:not(:disabled):not(.disabled):focus, .alert-dismissible .close:not(:disabled):not(.disabled):hover {
+  color: #211F0F;
+  opacity: 1;
+}
+
 .alert-primary {
   color: #00a4a4;
   background-color: #00a4a4;
@@ -27008,6 +27024,15 @@ strong {
 .alert.alert-warning hr,
 .alert.alert-light hr {
   border-top-color: #211F0F;
+}
+
+.alert.alert-danger p,
+.alert.alert-dark p {
+  color: white;
+}
+
+.alert-close:before {
+  content: "\f057";
 }
 
 .panel {

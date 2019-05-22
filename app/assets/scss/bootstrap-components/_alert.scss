@@ -37,18 +37,24 @@ $alert-color-level:                 1 ;
 // //
 // // Expand the right padding and account for the close button's positioning.
 
-// .alert-dismissible {
-//   padding-right: $close-font-size + $alert-padding-x * 2;
+.alert-dismissible {
+  padding-right: $close-font-size + $alert-padding-x * 2;
 
-//   // Adjust close link position
-//   .close {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     padding: $alert-padding-y $alert-padding-x;
-//     color: inherit;
-//   }
-// }
+  // Adjust close link position
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $alert-padding-y $alert-padding-x;
+    color: white;
+    opacity: 1;
+    text-shadow:none;
+  }
+  .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover{
+    color: $text;
+    opacity: 1;
+  }
+}
 
 
 // Alternate styles
@@ -81,5 +87,20 @@ $alert-color-level:                 1 ;
   color: $text;
   & hr{
     border-top-color: $text;
+  }
+}
+
+.alert.alert-danger,
+.alert.alert-dark{
+  p{ color: white;}
+}
+
+// Example of how to include Font Awesome in SCSS
+.alert-close {
+  // @include fa-icon;
+  @extend .far;
+
+  &:before {
+    content:fa-content($fa-var-times-circle);
   }
 }

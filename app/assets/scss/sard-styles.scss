@@ -11,14 +11,18 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import 'bootstrap/bs-component-overrides';
 
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
 // Icons
 // Font Awesome
-// @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
-// Needed if local
+
+// Remote - Not working properly with scss styles
+// @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+// Local
 @import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
@@ -26,14 +30,17 @@
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
 
+
 // Sard Icons
 @import '../sard-icons/styles';
+
 
 // Sard Styles
 @import 'variables/sa-variables';
 @import 'typography/typography';
 
-// Bootstrap 3 Components
+
+// Bootstrap Components
 @import 'bootstrap-components/alert';
 @import 'bootstrap-components/panels';
 
