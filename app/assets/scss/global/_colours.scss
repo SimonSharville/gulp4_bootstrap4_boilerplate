@@ -1,1 +1,203 @@
 // Colours
+
+
+//  SARD Colours ===============
+$sa-turq:                  #00B2B2;
+$sa-pink:                  #E50073;
+$sa-orange:                #FF6A00;
+$sa-yellow:                #FFB200;
+$sa-lime:                  #A7BF30;
+$sa-green:                 #359E00;
+$sa-teal:                  #004D4D;
+$sa-blue:                  #003CB8;
+$sa-ink:                   #000078;
+$sa-purple:                #52008C;
+$sa-plum:                  #990099;
+$sa-red:                   #BF0000;
+$sa-white:                 #FFFFFF;
+
+$MRv:                   $sa-turq;
+$NRv:                   $sa-orange;
+$sa-360:                $sa-yellow;
+$eLeave:                $sa-lime;
+$A4A:                   $sa-plum;
+$JPL:                   $sa-pink;
+$eRo:                   $sa-teal;
+$CPL:                   $sa-red;
+
+//  Greys ======================
+$sa-grey-00:                #f6f5f5;
+$sa-grey-01:                #F0F0F0;
+$sa-grey-02:                #EDEBEB;
+$sa-grey-03:                #E3E1E1;
+$sa-grey-04:                #D9D6D6;
+$sa-grey-05:                #d0cecd;
+$sa-grey-06:                #C7C4C2;
+$sa-grey-07:                #bdbab9;
+$sa-grey-08:                #B5B0B0;
+$sa-grey-09:                #aba6a5;
+$sa-grey-10:                #A39E9C;
+$sa-grey-11:                #918d8b;
+$sa-grey-12:                #827D7D;
+$sa-grey-13:                #716d6c;
+$sa-grey-14:                #615E5C;
+$sa-grey-15:                #514e4d;
+$sa-grey-16:                #403D3D;
+$sa-grey-17:                #302f2e;
+$sa-grey-18:                #211F0F;
+$sa-grey-19:                #0e0e0e;
+
+//  Other Colours ==============
+$active:                $sa-grey-04; // Used in Bootstrap Overrides Table Hover line 1030.
+$success:               $sa-green;
+$info:                  #00a0e0;
+$warning:               $sa-yellow;
+$danger:                $sa-red;
+$alert:                 $sa-pink;
+
+//colours used for admin Options Menu buttons
+$index_colour: #BF14AE;
+$view_colour: #83C8EE;
+$edit_colour: #E81E6F;
+$export_colour: #1ba7dc;
+
+// Job Plan Colours ====================
+$jp_trav:               #ED4D9D;
+$jp_fps:                #D24D4D;
+$jp_ms:                 #FF974D;
+$jp_ed:                 #FFC94D;
+$jp_spa:                #72BB4D;
+$jp_dcc:                #4DC9C9;
+$jp_priv:               #4D77C9;
+$jp_ar:                 #B84DB8;
+$jp_uni:                #C2D26F;
+
+// Global Mixins ===================
+
+$text:                  $sa-grey-18;
+$bodytext:              $sa-grey-18;
+
+$client:                $sa-turq;
+$client-light:          lighten($client, 5%);
+$client-very-light:     lighten($client, 10%);
+$client-dark:           darken($client, 10%);
+$client-very-dark:      darken($client, 20%);
+
+$medic:                 $sa-turq;
+$non-medic:             $sa-ink;
+
+$link-color:            lighten($sa-ink, 20%);
+
+
+// Admin Mixins =================================
+
+$admin:               $sa-pink;
+$admin-2:             $sa-plum;
+$admin-light:         lighten($admin, 5%);
+$admin-very-light:    lighten($admin, 10%);
+$admin-dark:          darken($admin, 10%);
+$admin-very-dark:     darken($admin, 20%);
+
+// Navbar Admin =================================
+
+$navAdminBase        : $admin-2;
+$navAdminHover       : darken($navAdminBase, 10%);
+$navAdminFocus       : darken($navAdminBase, 15%);
+$navAdminActive      : darken($navAdminBase, 15%);
+$navAdminText        : white;
+$navAdminActiveFocus : darken($navAdminBase, 15%);
+$navAdminDropdown    : darken($navAdminBase, 15%);
+$navAdminDropdownBG  : darken($navAdminBase, 15%);
+
+
+// Text Colours =================================
+
+.text-default {color: $text!important;}
+
+.text-client {color: $client;}
+.text-admin {color: $admin;}
+.text-admin-2 {color: $admin-2;}
+
+.text-turq{ color: $sa-turq;}
+.text-pink{ color: $sa-pink;}
+.text-orange{ color: $sa-orange;}
+.text-yellow{ color: $sa-yellow;}
+.text-lime{ color: $sa-lime;}
+.text-green{ color: $sa-green;}
+.text-teal{ color: $sa-teal;}
+.text-blue{ color: $sa-blue;}
+.text-ink{ color: $sa-ink;}
+.text-purple{ color: $sa-purple;}
+.text-plum{ color: $sa-plum;}
+.text-red{ color: $sa-red;}
+.text-white{ color: $sa-white;}
+
+.text-MRv{ color: $MRv;}
+.text-NRv{ color: $NRv;}
+.text-sa-360{ color: $sa-360;}
+.text-eLeave{ color: $eLeave;}
+.text-A4A{ color: $A4A;}
+.text-JPL{ color: $JPL;}
+.text-eRo{ color: $eRo;}
+.text-CPL{ color: $CPL;}
+
+.text-grey-02{ color: $sa-grey-02;}
+.text-grey-03{ color: $sa-grey-03;}
+.text-grey-04{ color: $sa-grey-04;}
+.text-grey-06{ color: $sa-grey-06;}
+.text-grey-08{ color: $sa-grey-08;}
+.text-grey-10{ color: $sa-grey-10;}
+.text-grey-10{ color: $sa-grey-10;}
+.text-grey-12{ color: $sa-grey-12;}
+.text-grey-14{ color: $sa-grey-14;}
+.text-grey-16{ color: $sa-grey-16;}
+.text-grey-18{ color: $sa-grey-18;}
+
+.text-success{ color: $success;}
+.text-info{ color: $info;}
+.text-warning{ color: $warning;}
+.text-danger{ color: $danger;}
+.text-alarm{ color: $alert;}
+
+// Background Colours ====================
+
+.bg-sa-turq{ background-color: $sa-turq;}
+.bg-sa-pink{ background-color: $sa-pink;}
+.bg-sa-orange{ background-color: $sa-orange;}
+.bg-sa-yellow{ background-color: $sa-yellow;}
+.bg-sa-lime{ background-color: $sa-lime;}
+.bg-sa-green{ background-color: $sa-green;}
+.bg-sa-teal{ background-color: $sa-teal;}
+.bg-sa-blue{ background-color: $sa-blue;}
+.bg-sa-ink{ background-color: $sa-ink;}
+.bg-sa-purple{ background-color: $sa-purple;}
+.bg-sa-plum{ background-color: $sa-plum;}
+.bg-sa-red{ background-color: $sa-red;}
+.bg-sa-white{ background-color: $sa-white;}
+
+.bg-sa-MRv{ background-color: $MRv;}
+.bg-sa-NRv{ background-color: $NRv;}
+.bg-sa-sa-360{ background-color: $sa-360;}
+.bg-sa-eLeave{ background-color: $eLeave;}
+.bg-sa-A4A{ background-color: $A4A;}
+.bg-sa-JPL{ background-color: $JPL;}
+.bg-sa-eRo{ background-color: $eRo;}
+.bg-sa-CPL{ background-color: $CPL;}
+
+.bg-sa-grey-02{ background-color: $sa-grey-02;}
+.bg-sa-grey-03{ background-color: $sa-grey-03;}
+.bg-sa-grey-04{ background-color: $sa-grey-04;}
+.bg-sa-grey-06{ background-color: $sa-grey-06;}
+.bg-sa-grey-08{ background-color: $sa-grey-08;}
+.bg-sa-grey-10{ background-color: $sa-grey-10;}
+.bg-sa-grey-12{ background-color: $sa-grey-12;}
+.bg-sa-grey-14{ background-color: $sa-grey-14;}
+.bg-sa-grey-16{ background-color: $sa-grey-16;}
+.bg-sa-grey-18{ background-color: $sa-grey-18;}
+
+.bg-sa-success{ background-color: $success;}
+.bg-sa-info{ background-color: $info;}
+.bg-sa-warning{ background-color: $warning;}
+.bg-sa-danger{ background-color: $danger;}
+.bg-sa-alarm{ background-color: $alert;}
+
