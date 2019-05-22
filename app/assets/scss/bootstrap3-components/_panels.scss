@@ -1,10 +1,10 @@
 
-$panel-spacer-y:              .25rem !default;
-$panel-spacer-x:              0.625rem !default;
+$sard-spacer-y:              .25rem !default; // Top to Bottom
+$sard-spacer-x:              0.625rem !default; // Left to Right
 
 $panel-bg:                    $sa-grey-02;
-$panel-body-padding:          $panel-spacer-x !default;
-$panel-heading-padding:       $panel-spacer-y $panel-spacer-x !default;
+$panel-body-padding:          $sard-spacer-x !default;
+$panel-heading-padding:       $sard-spacer-y $sard-spacer-x !default;
 $panel-heading-bg:            $sa-grey-16;
 $panel-heading-font-size:     1.25rem;
 $panel-heading-font-weight:   300;

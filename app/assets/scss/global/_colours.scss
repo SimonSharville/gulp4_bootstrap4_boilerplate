@@ -48,12 +48,12 @@ $sa-grey-18:                #211F0F;
 $sa-grey-19:                #0e0e0e;
 
 //  Other Colours ==============
-$active:                $sa-grey-04; // Used in Bootstrap Overrides Table Hover line 1030.
-$success:               $sa-green;
-$info:                  #00a0e0;
-$warning:               $sa-yellow;
-$danger:                $sa-red;
-$alert:                 $sa-pink;
+$sa-active:                $sa-grey-04; // Used in Bootstrap Overrides Table Hover line 1030.
+$sa-success:               $sa-green;
+$sa-info:                  #00a0e0;
+$sa-warning:               $sa-yellow;
+$sa-danger:                $sa-red;
+$sa-alert:                 $sa-pink;
 
 //colours used for admin Options Menu buttons
 $index_colour: #BF14AE;
@@ -153,11 +153,11 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 .text-grey-16{ color: $sa-grey-16;}
 .text-grey-18{ color: $sa-grey-18;}
 
-.text-success{ color: $success;}
-.text-info{ color: $info;}
-.text-warning{ color: $warning;}
-.text-danger{ color: $danger;}
-.text-alarm{ color: $alert;}
+.text-success{ color: $sa-success;}
+.text-info{ color: $sa-info;}
+.text-warning{ color: $sa-warning;}
+.text-danger{ color: $sa-danger;}
+.text-alarm{ color: $sa-alert;}
 
 // Background Colours ====================
 
@@ -195,9 +195,9 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 .bg-sa-grey-16{ background-color: $sa-grey-16;}
 .bg-sa-grey-18{ background-color: $sa-grey-18;}
 
-.bg-sa-success{ background-color: $success;}
-.bg-sa-info{ background-color: $info;}
-.bg-sa-warning{ background-color: $warning;}
-.bg-sa-danger{ background-color: $danger;}
-.bg-sa-alarm{ background-color: $alert;}
+.bg-sa-success{ background-color: $sa-success;}
+.bg-sa-info{ background-color: $sa-info;}
+.bg-sa-warning{ background-color: $sa-warning;}
+.bg-sa-danger{ background-color: $sa-danger;}
+.bg-sa-alarm{ background-color: $sa-alert;}
 
