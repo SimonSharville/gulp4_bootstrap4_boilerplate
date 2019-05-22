@@ -125,8 +125,17 @@ $grid-gutter-width:           16px;
 
 // Spacing
 
-$sard-spacer-y:              .25rem !default; // Top to Bottom
-$sard-spacer-x:              0.625rem !default; // Left to Right
+$sard-spacer-y:              .25rem; // Top to Bottom
+$sard-spacer-x:              0.625rem; // Left to Right
+
+$sard-spacer-y-2x:           .5rem; // Top to Bottom
+$sard-spacer-x-2x:           1.25rem; // Left to Right
+
+$sard-spacer-y-3x:           .75rem; // Top to Bottom
+$sard-spacer-x-3x:           3rem; // Left to Right
+
+$sard-spacer-y-4x:           1rem; // Top to Bottom
+$sard-spacer-x-4x:           1.5625rem; // Left to Right
 
 
 // ==================================================================
@@ -140,14 +149,5 @@ $enable-responsive-font-sizes:                true;
 
 
 
-// ==================================================================
 
-// Alerts
-
-// $alert-padding-y:                   .75rem !default;
-$alert-padding-x:                   $sard-spacer-x;
-
-$alert-bg-level:                    1 ;
-$alert-border-level:                1 ;
-$alert-color-level:                 -5 ;
 
