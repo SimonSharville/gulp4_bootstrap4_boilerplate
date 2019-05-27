@@ -67,7 +67,7 @@ function compileCSS(){
 function concatCSS() {
   return gulp.src('app/assets/css/*css')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
-  .pipe(concat('sard-styles.min.css'))
+  .pipe(concat('remote-sard-styles.min.css'))
   .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
   .pipe(sourcemaps.write('./'))
   .pipe(lineec())
