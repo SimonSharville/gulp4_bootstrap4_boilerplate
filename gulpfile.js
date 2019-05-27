@@ -130,10 +130,10 @@ function imageDelete(){
 
 // Fontawesome
 // Only needed if fonts should be local
-function faIcons() {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-        .pipe(gulp.dest('docs/assets/webfonts/'));
-};
+// function faIcons() {
+//     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+//         .pipe(gulp.dest('docs/assets/webfonts/'));
+// };
 
 
 // /////////////////////////////
@@ -155,7 +155,7 @@ function watch(done) {
   gulp.watch('app/assets/js/sardJS.js', minifyJS).on('change', browserSync.reload);
   gulp.watch(imgSRC, imageDelete).on('change', browserSync.reload);
   gulp.watch(imgSRC, minifyImages).on('change', browserSync.reload);
-  gulp.watch('node_modules/@fortawesome/fontawesome-free/webfonts/*', faIcons).on('change', browserSync.reload);
+  // gulp.watch('node_modules/@fortawesome/fontawesome-free/webfonts/*', faIcons).on('change', browserSync.reload);
 }
 
 
