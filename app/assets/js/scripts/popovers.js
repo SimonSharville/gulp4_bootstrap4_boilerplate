@@ -1,6 +1,6 @@
 // Add Local Scripts here
 
-$(function () {   
+$(function() {   
   $('[data-toggle="popover"]').popover() 
 });
 
