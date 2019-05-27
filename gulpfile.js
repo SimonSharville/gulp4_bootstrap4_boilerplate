@@ -93,13 +93,13 @@ function hamlHTML (done) {
 function js(){
   return gulp.src(jsSRC)
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
-    .pipe(concat('sardJS.js'))
+    .pipe(concat('remote-sard-scripts.js'))
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('app/assets/js'));
 };
 
 function minifyJS(done){
-  gulp.src('app/assets/js/sardJS.js')
+  gulp.src('app/assets/js/remote-sard-scripts.js')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
   .pipe(uglify().on('error', function(f) { console.log(f.message); })) // minifies the js
   .pipe(rename({extname : '.min.js' }))  // Add extension to the file
@@ -152,10 +152,9 @@ function watch(done) {
   gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
   gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
   gulp.watch(jsSRC, js).on('change', browserSync.reload);
-  gulp.watch('app/assets/js/sardJS.js', minifyJS).on('change', browserSync.reload);
+  gulp.watch('app/assets/js/remote-sard-scripts.js', minifyJS).on('change', browserSync.reload);
   gulp.watch(imgSRC, imageDelete).on('change', browserSync.reload);
   gulp.watch(imgSRC, minifyImages).on('change', browserSync.reload);
-  // gulp.watch('node_modules/@fortawesome/fontawesome-free/webfonts/*', faIcons).on('change', browserSync.reload);
 }
 
 
@@ -165,7 +164,6 @@ exports.concatCSS = concatCSS;
 exports.js = js;
 exports.minifyImages = minifyImages;
 exports.minifyJS = minifyJS;
-// exports.faIcons = faIcons;
 exports.watch = watch;
 
 // Sets the default to gulp watch

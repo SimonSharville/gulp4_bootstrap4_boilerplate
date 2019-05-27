@@ -17652,9 +17652,9 @@ $(function () {
   $('[data-toggle="popover"]').popover() 
 });
 
-$(function({ 
+$(function() { 
     $('[data-toggle="tooltip"]').tooltip(); 
 });
 
 
-//# sourceMappingURL=sardJS.js.map
+//# sourceMappingURL=remote-sard-scripts.js.map

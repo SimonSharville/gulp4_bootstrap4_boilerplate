@@ -4,7 +4,7 @@ $(function () {
   $('[data-toggle="popover"]').popover() 
 });
 
-$(function({ 
+$(function() { 
     $('[data-toggle="tooltip"]').tooltip(); 
 });
 
