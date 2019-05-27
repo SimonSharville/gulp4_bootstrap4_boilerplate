@@ -550,7 +550,7 @@
 .alert-close::before {
   font-family: "Font Awesome 5 Free";
   content: "\f057";
-  font-weight: 900;
+  font-weight: 400;
 }
 
 a {
