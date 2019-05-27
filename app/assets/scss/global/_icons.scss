@@ -199,3 +199,39 @@
 
 .sicon-inverse {
   color: #fff; }
+
+
+
+
+
+// ==================================================================
+// Font Awesome Icons ===============================================
+
+//https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+// Example of how to include Font Awesome in SCSS when linked from local
+// .alert-close {
+//   // @include fa-icon;
+//   @extend .far;
+
+//   &:before {
+//     content:fa-content($fa-var-times-circle);
+//   }
+// }
+
+
+// https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
+// Example of how to include Font Awesome in SCSS when linked from remote cdn
+.fa-icon{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alert-close::before {
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f057";  // <i class="fas fa-times-circle"></i>
+  font-weight: 900;  // Set the font-weight: 900 (Solid), 400 (Regular or Brands), 300 (Light(pro))
+}

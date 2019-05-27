@@ -95,12 +95,5 @@ $alert-color-level:                 1 ;
   p{ color: white;}
 }
 
-// Example of how to include Font Awesome in SCSS
-.alert-close {
-  // @include fa-icon;
-  @extend .far;
 
-  &:before {
-    content:fa-content($fa-var-times-circle);
-  }
-}
+
