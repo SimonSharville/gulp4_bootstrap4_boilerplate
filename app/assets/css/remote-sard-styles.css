@@ -12538,7 +12538,6 @@ h1, .h1 {
   font-size: 2.25rem;
   letter-spacing: -0.025rem;
   margin-left: -0.05rem;
-  margin-bottom: 0.05rem;
 }
 
 @media (max-width: 767px) {
@@ -12552,7 +12551,6 @@ h2, .h2 {
   font-weight: 300;
   font-size: 2rem;
   margin-left: -0.05rem;
-  margin-bottom: 0.05rem;
 }
 
 @media (max-width: 767px) {
@@ -12568,7 +12566,6 @@ h3, .h3 {
   font-size: 1.5rem;
   margin-left: -0.05em;
   margin-top: 15px;
-  margin-bottom: 0.05em;
 }
 
 @media (max-width: 767px) {
@@ -12582,7 +12579,6 @@ h4, .h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  margin-bottom: -0.05em;
 }
 
 @media (max-width: 767px) {
@@ -12595,7 +12591,6 @@ h5, .h5 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
-  margin-bottom: 0em;
 }
 
 h6, .h6 {
@@ -12603,7 +12598,15 @@ h6, .h6 {
   font-weight: 900;
   letter-spacing: 0.025rem;
   font-size: 1rem;
-  margin-bottom: 0em;
+}
+
+h1.tight, .h1.tight,
+h2.tight, .h2.tight,
+h3.tight, .h3.tight,
+h4.tight, .h4.tight,
+h5.tight, .h5.tight,
+h6.tight, .h6.tight {
+  margin-bottom: 0;
 }
 
 .display-1, .display-2, .display-3, .display-4 {
