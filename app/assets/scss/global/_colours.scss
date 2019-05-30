@@ -25,6 +25,36 @@ $JPL:                   $sa-pink;
 $eRo:                   $sa-teal;
 $CPL:                   $sa-red;
 
+// Dark Colours ================
+$sa-turq-dark:              #007C7C;
+$sa-pink-dark:              #A00050;
+$sa-orange-dark:            #B24A00;
+$sa-yellow-dark:            #B27C00;
+$sa-lime-dark:              #758522;
+$sa-green-dark:             #256E00;
+$sa-teal-dark:              #003636;
+$sa-blue-dark:              #002A7C;
+$sa-ink-dark:               #000050;
+$sa-purple-dark:            #390062;
+$sa-plum-dark:              #6B006B;
+$sa-red-dark:               #850000;
+
+
+// Light Colours ===============
+$sa-turq-light:             #4DC9C9;
+$sa-pink-light:             #ED4D9D;
+$sa-orange-light:           #FF974D;
+$sa-yellow-light:           #FFC94D;
+$sa-lime-light:             #C2D26F;
+$sa-green-light:            #72BB4D;
+$sa-teal-light:             #4D8383;
+$sa-blue-light:             #4D77C9;
+$sa-ink-light:              #4D5DAB;
+$sa-purple-light:           #864DAF;
+$sa-plum-light:             #B84DB8;
+$sa-red-light:              #D24D4D;
+
+
 //  Greys ======================
 $sa-grey-00:                #f6f5f5;
 $sa-grey-01:                #F0F0F0;
@@ -161,43 +191,82 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 
 // Background Colours ====================
 
-.bg-sa-turq{ background-color: $sa-turq;}
-.bg-sa-pink{ background-color: $sa-pink;}
-.bg-sa-orange{ background-color: $sa-orange;}
-.bg-sa-yellow{ background-color: $sa-yellow;}
-.bg-sa-lime{ background-color: $sa-lime;}
-.bg-sa-green{ background-color: $sa-green;}
-.bg-sa-teal{ background-color: $sa-teal;}
-.bg-sa-blue{ background-color: $sa-blue;}
-.bg-sa-ink{ background-color: $sa-ink;}
-.bg-sa-purple{ background-color: $sa-purple;}
-.bg-sa-plum{ background-color: $sa-plum;}
-.bg-sa-red{ background-color: $sa-red;}
-.bg-sa-white{ background-color: $sa-white;}
+.bg-sa-turq{ background-color: $sa-turq !important;}
+.bg-sa-pink{ background-color: $sa-pink !important;}
+.bg-sa-orange{ background-color: $sa-orange !important;}
+.bg-sa-yellow{ background-color: $sa-yellow !important;}
+.bg-sa-lime{ background-color: $sa-lime !important;}
+.bg-sa-green{ background-color: $sa-green !important;}
+.bg-sa-teal{ background-color: $sa-teal !important;}
+.bg-sa-blue{ background-color: $sa-blue !important;}
+.bg-sa-ink{ background-color: $sa-ink !important;}
+.bg-sa-purple{ background-color: $sa-purple !important;}
+.bg-sa-plum{ background-color: $sa-plum !important;}
+.bg-sa-red{ background-color: $sa-red !important;}
+.bg-sa-white{ background-color: $sa-white !important;}
 
-.bg-sa-MRv{ background-color: $MRv;}
-.bg-sa-NRv{ background-color: $NRv;}
-.bg-sa-sa-360{ background-color: $sa-360;}
-.bg-sa-eLeave{ background-color: $eLeave;}
-.bg-sa-A4A{ background-color: $A4A;}
-.bg-sa-JPL{ background-color: $JPL;}
-.bg-sa-eRo{ background-color: $eRo;}
-.bg-sa-CPL{ background-color: $CPL;}
+.bg-sa-MRv{ background-color: $MRv !important;}
+.bg-sa-NRv{ background-color: $NRv !important;}
+.bg-sa-sa-360{ background-color: $sa-360 !important;}
+.bg-sa-eLeave{ background-color: $eLeave !important;}
+.bg-sa-A4A{ background-color: $A4A !important;}
+.bg-sa-JPL{ background-color: $JPL !important;}
+.bg-sa-eRo{ background-color: $eRo !important;}
+.bg-sa-CPL{ background-color: $CPL !important;}
 
-.bg-sa-grey-02{ background-color: $sa-grey-02;}
-.bg-sa-grey-03{ background-color: $sa-grey-03;}
-.bg-sa-grey-04{ background-color: $sa-grey-04;}
-.bg-sa-grey-06{ background-color: $sa-grey-06;}
-.bg-sa-grey-08{ background-color: $sa-grey-08;}
-.bg-sa-grey-10{ background-color: $sa-grey-10;}
-.bg-sa-grey-12{ background-color: $sa-grey-12;}
-.bg-sa-grey-14{ background-color: $sa-grey-14;}
-.bg-sa-grey-16{ background-color: $sa-grey-16;}
-.bg-sa-grey-18{ background-color: $sa-grey-18;}
+// Background Colours Dark ===============
 
-.bg-sa-success{ background-color: $sa-success;}
-.bg-sa-info{ background-color: $sa-info;}
-.bg-sa-warning{ background-color: $sa-warning;}
-.bg-sa-danger{ background-color: $sa-danger;}
-.bg-sa-alarm{ background-color: $sa-alert;}
+.bg-sa-turq-dark{ background-color: $sa-turq-dark !important;}
+.bg-sa-pink-dark{ background-color: $sa-pink-dark !important;}
+.bg-sa-orange-dark{ background-color: $sa-orange-dark !important;}
+.bg-sa-yellow-dark{ background-color: $sa-yellow-dark !important;}
+.bg-sa-lime-dark{ background-color: $sa-lime-dark !important;}
+.bg-sa-green-dark{ background-color: $sa-green-dark !important;}
+.bg-sa-teal-dark{ background-color: $sa-teal-dark !important;}
+.bg-sa-blue-dark{ background-color: $sa-blue-dark !important;}
+.bg-sa-ink-dark{ background-color: $sa-ink-dark !important;}
+.bg-sa-purple-dark{ background-color: $sa-purple-dark !important;}
+.bg-sa-plum-dark{ background-color: $sa-plum-dark !important;}
+.bg-sa-red-dark{ background-color: $sa-red-dark !important;}
+// Background Colours Light ==============
+.bg-sa-turq-light{ background-color: $sa-turq-light !important;}
+.bg-sa-pink-light{ background-color: $sa-pink-light !important;}
+.bg-sa-orange-light{ background-color: $sa-orange-light !important;}
+.bg-sa-yellow-light{ background-color: $sa-yellow-light !important;}
+.bg-sa-lime-light{ background-color: $sa-lime-light !important;}
+.bg-sa-green-light{ background-color: $sa-green-light !important;}
+.bg-sa-teal-light{ background-color: $sa-teal-light !important;}
+.bg-sa-blue-light{ background-color: $sa-blue-light !important;}
+.bg-sa-ink-light{ background-color: $sa-ink-light !important;}
+.bg-sa-purple-light{ background-color: $sa-purple-light !important;}
+.bg-sa-plum-light{ background-color: $sa-plum-light !important;}
+.bg-sa-red-light{ background-color: $sa-red-light !important;}
+
+// Background Greys ======================
+.bg-sa-grey-00{ background-color: $sa-grey-00 !important;}
+.bg-sa-grey-01{ background-color: $sa-grey-01 !important;}
+.bg-sa-grey-02{ background-color: $sa-grey-02 !important;}
+.bg-sa-grey-03{ background-color: $sa-grey-03 !important;}
+.bg-sa-grey-04{ background-color: $sa-grey-04 !important;}
+.bg-sa-grey-05{ background-color: $sa-grey-05 !important;}
+.bg-sa-grey-06{ background-color: $sa-grey-06 !important;}
+.bg-sa-grey-07{ background-color: $sa-grey-07 !important;}
+.bg-sa-grey-08{ background-color: $sa-grey-08 !important;}
+.bg-sa-grey-09{ background-color: $sa-grey-09 !important;}
+.bg-sa-grey-10{ background-color: $sa-grey-10 !important;}
+.bg-sa-grey-11{ background-color: $sa-grey-11 !important;}
+.bg-sa-grey-12{ background-color: $sa-grey-12 !important;}
+.bg-sa-grey-13{ background-color: $sa-grey-13 !important;}
+.bg-sa-grey-14{ background-color: $sa-grey-14 !important;}
+.bg-sa-grey-15{ background-color: $sa-grey-15 !important;}
+.bg-sa-grey-16{ background-color: $sa-grey-16 !important;}
+.bg-sa-grey-17{ background-color: $sa-grey-17 !important;}
+.bg-sa-grey-18{ background-color: $sa-grey-18 !important;}
+.bg-sa-grey-19{ background-color: $sa-grey-19 !important;}
+
+.bg-sa-success{ background-color: $sa-success !important;}
+.bg-sa-info{ background-color: $sa-info !important;}
+.bg-sa-warning{ background-color: $sa-warning !important;}
+.bg-sa-danger{ background-color: $sa-danger !important;}
+.bg-sa-alarm{ background-color: $sa-alert !important;}
 

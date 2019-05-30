@@ -126,7 +126,8 @@ h2.tight, .h2.tight,
 h3.tight, .h3.tight,
 h4.tight, .h4.tight,
 h5.tight, .h5.tight,
-h6.tight, .h6.tight {
+h6.tight, .h6.tight,
+p.tight {
   margin-bottom:0;
 }
 
@@ -141,6 +142,6 @@ p{
   @include roboto-regular;
   line-height: 1.25rem;
 }
-b, strong {
+b, strong, .bold, .strong {
   font-weight: 900;
 }
