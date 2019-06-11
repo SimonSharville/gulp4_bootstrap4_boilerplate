@@ -120,18 +120,25 @@ h6,.h6 {
   font-size: 1rem; // 16px
 }
 
-// Tight headings (this have sit right on the item below)
-h1.tight, .h1.tight,
-h2.tight, .h2.tight,
-h3.tight, .h3.tight,
-h4.tight, .h4.tight,
-h5.tight, .h5.tight,
-h6.tight, .h6.tight,
-p.tight {
-  margin-bottom:0;
+// base headings (this have sit right on the item below)
+h1.base, .h1.base {
+  margin-bottom:-0.2rem;
 }
 
+h2.base, .h2.base {
+  margin-bottom:-0.05rem;
+}
 
+h3.base, .h3.base {
+  margin-bottom:-0.05rem;
+}
+
+h4.base, .h4.base,
+h5.base, .h5.base,
+h6.base, .h6.base,
+p.base {
+  margin-bottom:0;
+}
 
 
 .display-1, .display-2, .display-3, .display-4{
