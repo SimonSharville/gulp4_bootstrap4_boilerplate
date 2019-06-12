@@ -152,3 +152,7 @@ p{
 b, strong, .bold, .strong {
   font-weight: 900;
 }
+
+.text-muted { 
+  color: $sa-grey-06 !important;
+}

@@ -1,12 +1,340 @@
+.card{
+  border:1px solid transparent;
+  & .card-header,.card-footer{
+    border:none;
+    color: white;
+  }
+}
+.card-body {
+  // background-color: $panel-bg;
+  padding: $panel-body-padding;
+  margin: -1px;
+  @include clearfix;
+}
+.card-body.border-top{
+  border-color: white!important;
+  margin-top: -0.5px!important;
+}
+.card-body.border-bottom{
+  border-color: white!important;
+  margin-bottom: -0.5px!important;
+}
+.card-body hr{
+  border-color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p:last-child {
+    margin-bottom: 0;
+}
+
+.card-body p + hr{
+  margin-top: -0.5rem;
+}
+.card-title{
+  margin-bottom: initial;
+}
+
+
+
+// Optional heading
+.card-header {
+  padding: $panel-heading-padding;
+  border-bottom: 1px solid transparent;
+  background-color: $panel-heading-bg;
+  margin: -1px;
+  overflow: hidden;
+
+  font-size: $panel-heading-font-size;
+  font-weight: 300;
+  line-height: $panel-heading-line-height;
+  color: $panel-heading-text-color;
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+  &:first-child {
+    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+  }
+}
+
+.card-header h3{
+  margin: 0;
+  font-size: $panel-heading-font-size;
+  line-height: $panel-heading-line-height;
+  font-weight: $panel-heading-font-weight;
+  color: $panel-heading-text-color;
+}
+
+
+// Optional footer (stays gray in every modifier class)
+.card-footer {
+  padding: $panel-footer-padding;
+  background-color: $panel-footer-bg;
+  color: $panel-heading-text-color;
+  font-weight: $panel-heading-font-weight;
+  border-top: 1px solid $panel-inner-border;
+  @include border-bottom-radius(($panel-border-radius - 1));
+  margin: -1px;
+
+  &:last-child {
+    @include border-radius( 0 0 $card-inner-border-radius $card-inner-border-radius);
+  }
+}
+
+
 // SARD Cards ===================================
+
+.card.card-sard, .card.card-default{
+  background-color: $panel-bg;
+  & .card-header,.card-footer{
+    background-color: $panel-heading-bg;
+    & .text-muted { 
+      color: lighten($panel-heading-bg, 30%) !important;
+    }
+  }
+}
+.card.card-sard.outline, .card.card-default.outline{
+  background-color: white;
+  border-color: $panel-heading-bg;
+  & .card-body.border-bottom{
+    border-color: $panel-heading-bg!important;
+  }
+  & .card-body.border-top{
+    border-color: $panel-heading-bg!important;
+  }
+  & .card-body hr{
+    border-color: $panel-heading-bg!important;
+  }
+}
+
+
+.card.card-primary{
+  background-color: $client;
+  & .card-header,.card-footer{
+    background-color: darken($client, 15%);
+    & .text-muted { 
+      color: darken($client, 25%) !important;
+    }
+  }
+}
+.card.card-primary.outline{
+  background-color: white;
+  border-color: $client;
+  & .card-body.border-bottom{
+    border-color: $client!important;
+  }
+  & .card-body.border-top{
+    border-color: $client!important;
+  }
+  & .card-body hr{
+    border-color: $client;
+  }
+}
+
+.card.card-success{
+  background-color: $success;
+  & .card-header,.card-footer{
+    background-color: darken($success, 10%);
+    & .text-muted { 
+      color: darken($success, 25%) !important;
+    }
+  }
+}
+.card.card-success.outline{
+  background-color: white;
+  border-color: $success;
+  & .card-body.border-bottom{
+    border-color: $success!important;
+  }
+  & .card-body.border-top{
+    border-color: $success!important;
+  }
+  & .card-body hr{
+    border-color: $success;
+  }
+}
+
+.card.card-danger{
+  background-color: $danger;
+  & .card-header,.card-footer{
+    background-color: darken($danger, 15%);
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+  & .card-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: white;
+    }
+  }
+}
+.card.card-danger.outline{
+  background-color: white;
+  border-color: $danger;
+  & .card-body.border-bottom{
+    border-color: $danger!important;
+  }
+  & .card-body.border-top{
+    border-color: $danger!important;
+  }
+  & .card-body hr{
+    border-color: $danger;
+  }
+  & .card-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: $text;
+    }
+  }
+}
+
+.card.card-warning{
+  background-color: $warning;
+  & .card-header,.card-footer{
+    background-color: $text;
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+}
+.card.card-warning.outline{
+  background-color: white;
+  border-color: $warning;
+  & .card-body.border-bottom{
+    border-color: $warning!important;
+  }
+  & .card-body.border-top{
+    border-color: $warning!important;
+  }
+  & .card-body hr{
+    border-color: $warning;
+  }
+}
+
+
+.card.card-info{
+  background-color: $info;
+  & .card-header,.card-footer{
+    background-color: darken($info, 20%);
+    & .text-muted { 
+      color: darken($info, 50%) !important;
+    }
+  }
+}
+.card.card-info.outline{
+  background-color: white;
+  border-color: $info;
+  & .card-body.border-bottom{
+    border-color: $info!important;
+  }
+  & .card-body.border-top{
+    border-color: $info!important;
+  }
+  & .card-body hr{
+    border-color: $info;
+  }
+}
+
+
+.card.card-dark{
+  background-color: $sa-grey-14;
+  & .card-header,.card-footer{
+    background-color: $panel-heading-bg;
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+  & .card-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: white;
+    }
+  }
+}
+.card.card-dark.outline{
+  background-color: white;
+  border-color: $panel-heading-bg;
+  & .card-body.border-bottom{
+    border-color: $panel-heading-bg!important;
+  }
+  & .card-body.border-top{
+    border-color: $panel-heading-bg!important;
+  }
+  & .card-body hr{
+    border-color: $panel-heading-bg;
+  }
+  & .card-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: $text;
+    }
+  }
+}
+
+.card.card-white{
+  background-color: white;
+  & .card-header,.card-footer{
+    background-color: white;
+    color: $text;
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+  & .card-header{
+    border-bottom: 1px solid $sa-grey-04;
+    margin-bottom: -2px;
+  }
+  & .card-footer{
+    border-top: 1px solid $sa-grey-04;
+    margin-top: -2px;
+  }
+  & .card-body.border-bottom{
+    border-color: $sa-grey-04!important;
+  }
+  & .card-body.border-top{
+    border-color: $sa-grey-04!important;
+  }
+  & .card-body hr{
+    border-color: $sa-grey-04;
+  }
+
+}
+.card.card-white.outline{
+  background-color: transparent;
+  border-color: white;
+  & .card-header,.card-footer{
+    background-color: transparent;
+    color: $text;
+  }
+  & .card-header{
+    border-bottom: 1px solid white;
+    margin-bottom: -2px;
+  }
+  & .card-footer{
+    border-top: 1px solid white;
+    margin-top: -2px;
+  }
+
+  & .card-body.border-bottom{
+    border-color: white!important;
+  }
+  & .card-body.border-top{
+    border-color: white!important;
+  }
+  & .card-body hr{
+    border-color: white;
+  }
+
+}
+
+
 
 .card.sa-card-turq{
   background-color: $sa-turq;
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-turq-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-pink{
@@ -14,8 +342,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-pink-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-orange{
@@ -23,8 +351,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-orange-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-yellow{
@@ -32,8 +360,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-yellow-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-lime{
@@ -41,8 +369,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-lime-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-green{
@@ -50,8 +378,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-green-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-teal{
@@ -59,8 +387,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-teal-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-blue{
@@ -68,8 +396,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-blue-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-ink{
@@ -77,8 +405,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-ink-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-purple{
@@ -95,8 +423,8 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-plum-dark;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }
 .card.sa-card-red{
@@ -104,16 +432,7 @@
   border:none;
   & .card-header,.card-footer{
     background-color: $sa-red-dark;
-    border:none;
-    color: white;
-  }
-}
-.card.sa-card{
-  background-color: $panel-bg;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $panel-heading-bg;
-    border:none;
-    color: white;
+    // border:none;
+    // color: white;
   }
 }

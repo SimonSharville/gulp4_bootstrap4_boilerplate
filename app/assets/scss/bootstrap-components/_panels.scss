@@ -55,7 +55,7 @@ $panel-footer-bg:             $panel-heading-bg !default;
 // Base class
 .panel {
   background-color: $panel-bg;
-  border: 1px solid transparent;
+  border: none;
   border-radius: $panel-border-radius;
   @include box-shadow(0 1px 1px rgba(0, 0, 0, .05));
   // margin-bottom: 1rem;
@@ -66,13 +66,29 @@ $panel-footer-bg:             $panel-heading-bg !default;
   padding: $panel-body-padding;
   @include clearfix;
 }
+.panel-body p:last-child {
+    margin-bottom: 0;
+}
+
+.panel-body.border-bottom{
+  border-color: white!important;
+}
+.panel-body.border-top{
+  border-color: white!important;
+}
+.panel-body hr{
+  border-color: white!important;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 
 // Optional heading
 .panel-heading {
   padding: $panel-heading-padding;
   border-bottom: 1px solid transparent;
   background-color: $panel-heading-bg;
-  margin: -1px;
+  // margin: -1px;
   overflow: hidden;
 
   font-size: $panel-heading-font-size;
@@ -96,21 +112,6 @@ $panel-footer-bg:             $panel-heading-bg !default;
   color: $panel-heading-text-color;
 }
 
-// // Within heading, strip any `h*` tag of its default margins for spacing.
-// .panel-title {
-//   margin-top: 0;
-//   margin-bottom: 0;
-//   font-size: ceil(($font-size-base * 1.125));
-//   color: inherit;
-
-//   > a,
-//   > small,
-//   > .small,
-//   > small > a,
-//   > .small > a {
-//     color: inherit;
-//   }
-// }
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
@@ -119,8 +120,8 @@ $panel-footer-bg:             $panel-heading-bg !default;
   color: $panel-heading-text-color;
   font-weight: $panel-heading-font-weight;
   border-top: 1px solid $panel-inner-border;
-  @include border-bottom-radius(($panel-border-radius - 1));
-  margin: -1px;
+  @include border-bottom-radius(($panel-border-radius));
+  // margin: -1px;
 
   &:last-child {
     @include border-radius( 0 0 $card-inner-border-radius $card-inner-border-radius);
