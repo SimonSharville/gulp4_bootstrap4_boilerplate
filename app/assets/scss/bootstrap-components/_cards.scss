@@ -1,13 +1,15 @@
+// Cards ========================================
+
+// Base class
 .card{
   border:1px solid transparent;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     border:none;
     color: white;
   }
 }
 .card-body {
-  // background-color: $panel-bg;
-  padding: $panel-body-padding;
+  padding: $sard-body-padding;
   margin: -1px;
   @include clearfix;
 }
@@ -40,16 +42,16 @@
 
 // Optional heading
 .card-header {
-  padding: $panel-heading-padding;
+  padding: $sard-heading-padding;
   border-bottom: 1px solid transparent;
-  background-color: $panel-heading-bg;
+  background-color: $sard-heading-bg;
   margin: -1px;
   overflow: hidden;
 
-  font-size: $panel-heading-font-size;
+  font-size: $sard-heading-font-size;
   font-weight: 300;
-  line-height: $panel-heading-line-height;
-  color: $panel-heading-text-color;
+  line-height: $sard-heading-line-height;
+  color: $sard-heading-text-color;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -61,21 +63,21 @@
 
 .card-header h3{
   margin: 0;
-  font-size: $panel-heading-font-size;
-  line-height: $panel-heading-line-height;
-  font-weight: $panel-heading-font-weight;
-  color: $panel-heading-text-color;
+  font-size: $sard-heading-font-size;
+  line-height: $sard-heading-line-height;
+  font-weight: $sard-heading-font-weight;
+  color: $sard-heading-text-color;
 }
 
 
 // Optional footer (stays gray in every modifier class)
 .card-footer {
-  padding: $panel-footer-padding;
-  background-color: $panel-footer-bg;
-  color: $panel-heading-text-color;
-  font-weight: $panel-heading-font-weight;
-  border-top: 1px solid $panel-inner-border;
-  @include border-bottom-radius(($panel-border-radius - 1));
+  padding: $sard-footer-padding;
+  background-color: $sard-footer-bg;
+  color: $sard-heading-text-color;
+  font-weight: $sard-heading-font-weight;
+  border-top: 1px solid $sard-inner-border;
+  @include border-bottom-radius(($sard-border-radius - 1));
   margin: -1px;
 
   &:last-child {
@@ -87,32 +89,32 @@
 // SARD Cards ===================================
 
 .card.card-sard, .card.card-default{
-  background-color: $panel-bg;
-  & .card-header,.card-footer{
-    background-color: $panel-heading-bg;
+  background-color: $sard-bg;
+  & .card-header, .card-footer{
+    background-color: $sard-heading-bg;
     & .text-muted { 
-      color: lighten($panel-heading-bg, 30%) !important;
+      color: lighten($sard-heading-bg, 30%) !important;
     }
   }
 }
 .card.card-sard.outline, .card.card-default.outline{
   background-color: white;
-  border-color: $panel-heading-bg;
+  border-color: $sard-heading-bg;
   & .card-body.border-bottom{
-    border-color: $panel-heading-bg!important;
+    border-color: $sard-heading-bg!important;
   }
   & .card-body.border-top{
-    border-color: $panel-heading-bg!important;
+    border-color: $sard-heading-bg!important;
   }
   & .card-body hr{
-    border-color: $panel-heading-bg!important;
+    border-color: $sard-heading-bg!important;
   }
 }
 
 
 .card.card-primary{
   background-color: $client;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     background-color: darken($client, 15%);
     & .text-muted { 
       color: darken($client, 25%) !important;
@@ -135,7 +137,7 @@
 
 .card.card-success{
   background-color: $success;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     background-color: darken($success, 10%);
     & .text-muted { 
       color: darken($success, 25%) !important;
@@ -158,7 +160,7 @@
 
 .card.card-danger{
   background-color: $danger;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     background-color: darken($danger, 15%);
     & .text-muted { 
       color: lighten($text, 25%) !important;
@@ -191,7 +193,7 @@
 
 .card.card-warning{
   background-color: $warning;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     background-color: $text;
     & .text-muted { 
       color: lighten($text, 25%) !important;
@@ -215,7 +217,7 @@
 
 .card.card-info{
   background-color: $info;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     background-color: darken($info, 20%);
     & .text-muted { 
       color: darken($info, 50%) !important;
@@ -239,8 +241,8 @@
 
 .card.card-dark{
   background-color: $sa-grey-14;
-  & .card-header,.card-footer{
-    background-color: $panel-heading-bg;
+  & .card-header, .card-footer{
+    background-color: $sard-heading-bg;
     & .text-muted { 
       color: lighten($text, 25%) !important;
     }
@@ -253,15 +255,15 @@
 }
 .card.card-dark.outline{
   background-color: white;
-  border-color: $panel-heading-bg;
+  border-color: $sard-heading-bg;
   & .card-body.border-bottom{
-    border-color: $panel-heading-bg!important;
+    border-color: $sard-heading-bg!important;
   }
   & .card-body.border-top{
-    border-color: $panel-heading-bg!important;
+    border-color: $sard-heading-bg!important;
   }
   & .card-body hr{
-    border-color: $panel-heading-bg;
+    border-color: $sard-heading-bg;
   }
   & .card-body{
     & h1, h2, h3, h4, h5, h6, p{
@@ -272,7 +274,7 @@
 
 .card.card-white{
   background-color: white;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     background-color: white;
     color: $text;
     & .text-muted { 
@@ -296,12 +298,11 @@
   & .card-body hr{
     border-color: $sa-grey-04;
   }
-
 }
 .card.card-white.outline{
   background-color: transparent;
   border-color: white;
-  & .card-header,.card-footer{
+  & .card-header, .card-footer{
     background-color: transparent;
     color: $text;
   }
@@ -313,7 +314,6 @@
     border-top: 1px solid white;
     margin-top: -2px;
   }
-
   & .card-body.border-bottom{
     border-color: white!important;
   }
@@ -323,116 +323,5 @@
   & .card-body hr{
     border-color: white;
   }
-
 }
 
-
-
-.card.sa-card-turq{
-  background-color: $sa-turq;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-turq-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-pink{
-  background-color: $sa-pink;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-pink-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-orange{
-  background-color: $sa-orange;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-orange-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-yellow{
-  background-color: $sa-yellow;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-yellow-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-lime{
-  background-color: $sa-lime;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-lime-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-green{
-  background-color: $sa-green;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-green-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-teal{
-  background-color: $sa-teal;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-teal-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-blue{
-  background-color: $sa-blue;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-blue-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-ink{
-  background-color: $sa-ink;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-ink-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-purple{
-  background-color: $sa-purple;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-purple-dark;
-    border:none;
-    color: white;
-  }
-}
-.card.sa-card-plum{
-  background-color: $sa-plum;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-plum-dark;
-    // border:none;
-    // color: white;
-  }
-}
-.card.sa-card-red{
-  background-color: $sa-red;
-  border:none;
-  & .card-header,.card-footer{
-    background-color: $sa-red-dark;
-    // border:none;
-    // color: white;
-  }
-}

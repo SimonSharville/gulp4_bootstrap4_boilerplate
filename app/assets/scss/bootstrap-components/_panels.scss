@@ -1,346 +1,337 @@
 // Panels =======================================
 
-$panel-bg:                    $sa-grey-02;
-$panel-heading-bg:            $sa-grey-16;
-
-$panel-body-padding:          $sard-spacer-x;
-$panel-heading-padding:       $sard-spacer-y $sard-spacer-x;
-$panel-heading-font-size:     1.25rem;
-$panel-heading-font-weight:   300;
-$panel-heading-line-height:   1.575rem;
-$panel-heading-text-color:    white;
-
-$panel-footer-padding:        $panel-heading-padding !default;
-$panel-border-width:          $border-width !default;
-
-$panel-border-radius:         $border-radius;
-$panel-inner-border-radius:   calc(#{$panel-border-radius} - #{$panel-border-width}) !default;
-
-
-
-// //** Border color for elements within panels
-$panel-inner-border:          #ddd !default;
-$panel-footer-bg:             $panel-heading-bg !default;
-
-// $panel-default-text:          $gray-dark !default;
-// $panel-default-border:        #ddd !default;
-// $panel-default-heading-bg:    #f5f5f5 !default;
-
-// $panel-primary-text:          #fff !default;
-// $panel-primary-border:        $brand-primary !default;
-// $panel-primary-heading-bg:    $brand-primary !default;
-
-// $panel-success-text:          $state-success-text !default;
-// $panel-success-border:        $state-success-border !default;
-// $panel-success-heading-bg:    $state-success-bg !default;
-
-// $panel-info-text:             $state-info-text !default;
-// $panel-info-border:           $state-info-border !default;
-// $panel-info-heading-bg:       $state-info-bg !default;
-
-// $panel-warning-text:          $state-warning-text !default;
-// $panel-warning-border:        $state-warning-border !default;
-// $panel-warning-heading-bg:    $state-warning-bg !default;
-
-// $panel-danger-text:           $state-danger-text !default;
-// $panel-danger-border:         $state-danger-border !default;
-// $panel-danger-heading-bg:     $state-danger-bg !default;
-
-
-
-// Panels
-// --------------------------------------------------
-
-
 // Base class
-.panel {
-  background-color: $panel-bg;
-  border: none;
-  border-radius: $panel-border-radius;
-  @include box-shadow(0 1px 1px rgba(0, 0, 0, .05));
-  // margin-bottom: 1rem;
-}
+.panel{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  word-wrap: break-word;
+  background-color: $sard-bg;
+  background-clip: border-box;
+  border:1px solid transparent;
+  @include border-radius($sard-border-radius);
 
-// Panel contents
+  & .panel-heading, .panel-footer{
+    border:none;
+    color: white;
+  }
+}
 .panel-body {
-  padding: $panel-body-padding;
+  padding: $sard-body-padding;
+  margin: -1px;
   @include clearfix;
-}
-.panel-body p:last-child {
-    margin-bottom: 0;
-}
-
-.panel-body.border-bottom{
-  border-color: white!important;
 }
 .panel-body.border-top{
   border-color: white!important;
+  margin-top: -0.5px!important;
+}
+.panel-body.border-bottom{
+  border-color: white!important;
+  margin-bottom: -0.5px!important;
 }
 .panel-body hr{
-  border-color: white!important;
+  border-color: white;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
+.panel-body p:last-child {
+  margin-bottom: 0;
+}
+
+.panel-body p + hr{
+  margin-top: -0.5rem;
+}
+.panel-title{
+  margin-bottom: initial;
+}
+
+
 
 // Optional heading
-.panel-heading {
-  padding: $panel-heading-padding;
+.panel-heading  {
+  padding: $sard-heading-padding;
   border-bottom: 1px solid transparent;
-  background-color: $panel-heading-bg;
-  // margin: -1px;
+  background-color: $sard-heading-bg;
+  margin: -1px;
   overflow: hidden;
 
-  font-size: $panel-heading-font-size;
+  font-size: $sard-heading-font-size;
   font-weight: 300;
-  line-height: $panel-heading-line-height;
-  color: $panel-heading-text-color;
+  line-height: $sard-heading-line-height;
+  color: $sard-heading-text-color;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
   }
   &:first-child {
-    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+    @include border-radius($sard-inner-border-radius $sard-inner-border-radius 0 0);
   }
 }
 
-.panel-heading h3{
+.panel-heading  h3{
   margin: 0;
-  font-size: $panel-heading-font-size;
-  line-height: $panel-heading-line-height;
-  font-weight: $panel-heading-font-weight;
-  color: $panel-heading-text-color;
+  font-size: $sard-heading-font-size;
+  line-height: $sard-heading-line-height;
+  font-weight: $sard-heading-font-weight;
+  color: $sard-heading-text-color;
 }
 
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
-  padding: $panel-footer-padding;
-  background-color: $panel-footer-bg;
-  color: $panel-heading-text-color;
-  font-weight: $panel-heading-font-weight;
-  border-top: 1px solid $panel-inner-border;
-  @include border-bottom-radius(($panel-border-radius));
-  // margin: -1px;
+  padding: $sard-footer-padding;
+  background-color: $sard-footer-bg;
+  color: $sard-heading-text-color;
+  font-weight: $sard-heading-font-weight;
+  border-top: 1px solid $sard-inner-border;
+  @include border-bottom-radius(($sard-border-radius - 1));
+  margin: -1px;
 
   &:last-child {
-    @include border-radius( 0 0 $card-inner-border-radius $card-inner-border-radius);
+    @include border-radius( 0 0 $sard-inner-border-radius $sard-inner-border-radius);
   }
 }
 
 
-// // List groups in panels
-// //
-// // By default, space out list group content from panel headings to account for
-// // any kind of custom content between the two.
+// SARD panels ===================================
 
-// .panel {
-//   > .list-group,
-//   > .panel-collapse > .list-group {
-//     margin-bottom: 0;
-
-//     .list-group-item {
-//       border-width: 1px 0;
-//       border-radius: 0;
-//     }
-
-//     // Add border top radius for first one
-//     &:first-child {
-//       .list-group-item:first-child {
-//         border-top: 0;
-//         @include border-top-radius(($panel-border-radius - 1));
-//       }
-//     }
-
-//     // Add border bottom radius for last one
-//     &:last-child {
-//       .list-group-item:last-child {
-//         border-bottom: 0;
-//         @include border-bottom-radius(($panel-border-radius - 1));
-//       }
-//     }
-//   }
-//   > .panel-heading + .panel-collapse > .list-group {
-//     .list-group-item:first-child {
-//       @include border-top-radius(0);
-//     }
-//   }
-// }
-// // Collapse space between when there's no additional content.
-// .panel-heading + .list-group {
-//   .list-group-item:first-child {
-//     border-top-width: 0;
-//   }
-// }
-// .list-group + .panel-footer {
-//   border-top-width: 0;
-// }
-
-// // Tables in panels
-// //
-// // Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
-// // watch it go full width.
-
-// .panel {
-//   > .table,
-//   > .table-responsive > .table,
-//   > .panel-collapse > .table {
-//     margin-bottom: 0;
-
-//     caption {
-//       padding-right: $panel-body-padding;
-//       padding-left: $panel-body-padding;
-//     }
-//   }
-//   // Add border top radius for first one
-//   > .table:first-child,
-//   > .table-responsive:first-child > .table:first-child {
-//     @include border-top-radius(($panel-border-radius - 1));
-
-//     > thead:first-child,
-//     > tbody:first-child {
-//       > tr:first-child {
-//         border-top-left-radius: ($panel-border-radius - 1);
-//         border-top-right-radius: ($panel-border-radius - 1);
-
-//         td:first-child,
-//         th:first-child {
-//           border-top-left-radius: ($panel-border-radius - 1);
-//         }
-//         td:last-child,
-//         th:last-child {
-//           border-top-right-radius: ($panel-border-radius - 1);
-//         }
-//       }
-//     }
-//   }
-//   // Add border bottom radius for last one
-//   > .table:last-child,
-//   > .table-responsive:last-child > .table:last-child {
-//     @include border-bottom-radius(($panel-border-radius - 1));
-
-//     > tbody:last-child,
-//     > tfoot:last-child {
-//       > tr:last-child {
-//         border-bottom-right-radius: ($panel-border-radius - 1);
-//         border-bottom-left-radius: ($panel-border-radius - 1);
-
-//         td:first-child,
-//         th:first-child {
-//           border-bottom-left-radius: ($panel-border-radius - 1);
-//         }
-//         td:last-child,
-//         th:last-child {
-//           border-bottom-right-radius: ($panel-border-radius - 1);
-//         }
-//       }
-//     }
-//   }
-//   > .panel-body + .table,
-//   > .panel-body + .table-responsive,
-//   > .table + .panel-body,
-//   > .table-responsive + .panel-body {
-//     border-top: 1px solid $table-border-color;
-//   }
-//   > .table > tbody:first-child > tr:first-child th,
-//   > .table > tbody:first-child > tr:first-child td {
-//     border-top: 0;
-//   }
-//   > .table-bordered,
-//   > .table-responsive > .table-bordered {
-//     border: 0;
-//     > thead,
-//     > tbody,
-//     > tfoot {
-//       > tr {
-//         > th:first-child,
-//         > td:first-child {
-//           border-left: 0;
-//         }
-//         > th:last-child,
-//         > td:last-child {
-//           border-right: 0;
-//         }
-//       }
-//     }
-//     > thead,
-//     > tbody {
-//       > tr:first-child {
-//         > td,
-//         > th {
-//           border-bottom: 0;
-//         }
-//       }
-//     }
-//     > tbody,
-//     > tfoot {
-//       > tr:last-child {
-//         > td,
-//         > th {
-//           border-bottom: 0;
-//         }
-//       }
-//     }
-//   }
-//   > .table-responsive {
-//     margin-bottom: 0;
-//     border: 0;
-//   }
-// }
+.panel.panel-sard, .panel.panel-default{
+  background-color: $sard-bg;
+  & .panel-heading, .panel-footer{
+    background-color: $sard-heading-bg;
+    & .text-muted { 
+      color: lighten($sard-heading-bg, 30%) !important;
+    }
+  }
+}
+.panel.panel-sard.outline, .panel.panel-default.outline{
+  background-color: white;
+  border-color: $sard-heading-bg;
+  & .panel-body.border-bottom{
+    border-color: $sard-heading-bg!important;
+  }
+  & .panel-body.border-top{
+    border-color: $sard-heading-bg!important;
+  }
+  & .panel-body hr{
+    border-color: $sard-heading-bg!important;
+  }
+}
 
 
-// // Collapsible panels (aka, accordion)
-// //
-// // Wrap a series of panels in `.panel-group` to turn them into an accordion with
-// // the help of our collapse JavaScript plugin.
+.panel.panel-primary{
+  background-color: $client;
+  & .panel-heading, .panel-footer{
+    background-color: darken($client, 15%);
+    & .text-muted { 
+      color: darken($client, 25%) !important;
+    }
+  }
+}
+.panel.panel-primary.outline{
+  background-color: white;
+  border-color: $client;
+  & .panel-body.border-bottom{
+    border-color: $client!important;
+  }
+  & .panel-body.border-top{
+    border-color: $client!important;
+  }
+  & .panel-body hr{
+    border-color: $client;
+  }
+}
 
-// .panel-group {
-//   margin-bottom: $line-height-computed;
+.panel.panel-success{
+  background-color: $success;
+  & .panel-heading, .panel-footer{
+    background-color: darken($success, 10%);
+    & .text-muted { 
+      color: darken($success, 25%) !important;
+    }
+  }
+}
+.panel.panel-success.outline{
+  background-color: white;
+  border-color: $success;
+  & .panel-body.border-bottom{
+    border-color: $success!important;
+  }
+  & .panel-body.border-top{
+    border-color: $success!important;
+  }
+  & .panel-body hr{
+    border-color: $success;
+  }
+}
 
-//   // Tighten up margin so it's only between panels
-//   .panel {
-//     margin-bottom: 0;
-//     border-radius: $panel-border-radius;
+.panel.panel-danger{
+  background-color: $danger;
+  & .panel-heading, .panel-footer{
+    background-color: darken($danger, 15%);
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+  & .panel-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: white;
+    }
+  }
+}
+.panel.panel-danger.outline{
+  background-color: white;
+  border-color: $danger;
+  & .panel-body.border-bottom{
+    border-color: $danger!important;
+  }
+  & .panel-body.border-top{
+    border-color: $danger!important;
+  }
+  & .panel-body hr{
+    border-color: $danger;
+  }
+  & .panel-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: $text;
+    }
+  }
+}
 
-//     + .panel {
-//       margin-top: 5px;
-//     }
-//   }
+.panel.panel-warning{
+  background-color: $warning;
+  & .panel-heading, .panel-footer{
+    background-color: $text;
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+}
+.panel.panel-warning.outline{
+  background-color: white;
+  border-color: $warning;
+  & .panel-body.border-bottom{
+    border-color: $warning!important;
+  }
+  & .panel-body.border-top{
+    border-color: $warning!important;
+  }
+  & .panel-body hr{
+    border-color: $warning;
+  }
+}
 
-//   .panel-heading {
-//     border-bottom: 0;
 
-//     + .panel-collapse > .panel-body,
-//     + .panel-collapse > .list-group {
-//       border-top: 1px solid $panel-inner-border;
-//     }
-//   }
+.panel.panel-info{
+  background-color: $info;
+  & .panel-heading, .panel-footer{
+    background-color: darken($info, 20%);
+    & .text-muted { 
+      color: darken($info, 50%) !important;
+    }
+  }
+}
+.panel.panel-info.outline{
+  background-color: white;
+  border-color: $info;
+  & .panel-body.border-bottom{
+    border-color: $info!important;
+  }
+  & .panel-body.border-top{
+    border-color: $info!important;
+  }
+  & .panel-body hr{
+    border-color: $info;
+  }
+}
 
-//   .panel-footer {
-//     border-top: 0;
-//     + .panel-collapse .panel-body {
-//       border-bottom: 1px solid $panel-inner-border;
-//     }
-//   }
-// }
+
+.panel.panel-dark{
+  background-color: $sa-grey-14;
+  & .panel-heading, .panel-footer{
+    background-color: $sard-heading-bg;
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+  & .panel-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: white;
+    }
+  }
+}
+.panel.panel-dark.outline{
+  background-color: white;
+  border-color: $sard-heading-bg;
+  & .panel-body.border-bottom{
+    border-color: $sard-heading-bg!important;
+  }
+  & .panel-body.border-top{
+    border-color: $sard-heading-bg!important;
+  }
+  & .panel-body hr{
+    border-color: $sard-heading-bg;
+  }
+  & .panel-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: $text;
+    }
+  }
+}
+
+.panel.panel-white{
+  background-color: white;
+  & .panel-heading, .panel-footer{
+    background-color: white;
+    color: $text;
+    & .text-muted { 
+      color: lighten($text, 25%) !important;
+    }
+  }
+  & .panel-heading{ 
+    border-bottom: 1px solid $sa-grey-04;
+    margin-bottom: -2px;
+  }
+  & .panel-footer{
+    border-top: 1px solid $sa-grey-04;
+    margin-top: -2px;
+  }
+  & .panel-body.border-bottom{
+    border-color: $sa-grey-04!important;
+  }
+  & .panel-body.border-top{
+    border-color: $sa-grey-04!important;
+  }
+  & .panel-body hr{
+    border-color: $sa-grey-04;
+  }
+}
+.panel.panel-white.outline{
+  background-color: transparent;
+  border-color: white;
+  & .panel-heading, .panel-footer{
+    background-color: transparent;
+    color: $text;
+  }
+  & .panel-heading{ 
+    border-bottom: 1px solid white;
+    margin-bottom: -2px;
+  }
+  & .panel-footer{
+    border-top: 1px solid white;
+    margin-top: -2px;
+  }
+  & .panel-body.border-bottom{
+    border-color: white!important;
+  }
+  & .panel-body.border-top{
+    border-color: white!important;
+  }
+  & .panel-body hr{
+    border-color: white;
+  }
+}
 
 
-// // Contextual variations
-// .panel-default {
-//   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
-// }
-// .panel-primary {
-//   @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
-// }
-// .panel-success {
-//   @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
-// }
-// .panel-info {
-//   @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
-// }
-// .panel-warning {
-//   @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
-// }
-// .panel-danger {
-//   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
-// }

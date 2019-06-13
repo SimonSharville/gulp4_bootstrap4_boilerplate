@@ -1,5 +1,37 @@
+// SARD Variables
+
+$sard-bg:                    $sa-grey-02;
+$sard-heading-bg:            $sa-grey-16;
+
+$sard-body-padding:          $sard-spacer-x;
+$sard-heading-padding:       $sard-spacer-y $sard-spacer-x;
+$sard-heading-font-size:     1.25rem;
+$sard-heading-font-weight:   300;
+$sard-heading-line-height:   1.575rem;
+$sard-heading-text-color:    white;
+
+$sard-footer-padding:        $sard-heading-padding !default;
+$sard-border-width:          $border-width !default;
+$sard-border-color:          red !default;
+
+
+$sard-border-radius:         $border-radius;
+$sard-inner-border-radius:   calc(#{$sard-border-radius} - #{$sard-border-width}) !default;
+
+
+
+// //** Border color for elements within panels and cards
+$sard-inner-border:          #ddd !default;
+$sard-footer-bg:             $sard-heading-bg !default;
+
+
+
+
+// ==================================================================
+
 // Global UI Variables
 
+// body{ background-color: $sa-grey-02;}
 
 hr.black{
   border-width: 1px;
