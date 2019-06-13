@@ -1,24 +1,28 @@
 // Import Order =======================
 
 // Sard Global
-@import 'global/colours';
-@import 'global/icons';
-@import 'global/links';
+@import 'global-styles/colours';
+@import 'global-styles/icons';
+@import 'global-styles/links';
+@import 'global-styles/scrollbars';
 
 
 // Bootstrap
-@import 'bootstrap/bs-variables-overrides';
+@import 'bootstrap-overrides/bs-variables-overrides';
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-@import 'bootstrap/bs-component-overrides';
+@import 'bootstrap-overrides/bs-component-overrides';
+
+
+// Sard Styles
+@import 'sard-styles/sa-variables';
+@import 'sard-styles/typography/typography';
 
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
-// Icons
-// Font Awesome
-
+// Font Awesome Icons
 // Remote
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
@@ -35,14 +39,9 @@
 @import '../sard-icons/styles';
 
 
-// Sard Styles
-@import 'variables/sa-variables';
-@import 'typography/typography';
-
-
-// Bootstrap Components
-@import 'bootstrap-components/alert';
-@import 'bootstrap-components/panels';
-@import 'bootstrap-components/cards';
+// Components
+@import 'components/alert';
+@import 'components/panels';
+@import 'components/cards';
 
 
