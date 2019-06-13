@@ -709,6 +709,13 @@ a {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
+body, html {
+  scrollbar-face-color: #00B2B2 !important;
+  scrollbar-shadow-color: #007f7f !important;
+  scrollbar-track-color: #D9D6D6 !important;
+  scrollbar-arrow-color: #00B2B2 !important;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
