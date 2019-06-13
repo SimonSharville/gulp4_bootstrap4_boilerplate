@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+<head>
+<title>Bootstrap 4 Layout - Typography</title>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='../assets/css/remote-sard-styles.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+<nav class='navbar fixed-top navbar-expand-lg navbar-dark bg-dark'>
+<div class='container'>
+<a class='navbar-brand' href='../index.html'>Navbar</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'>
+<a class='nav-link' href='../index.html'>
+Home
+<span class='sr-only'>(current)</span>
+</a>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='sardUI' role='button'>
+Sard UI
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='../sa-pages/sa-typography.html'>Typography</a>
+<a class='dropdown-item' href='../sa-pages/sa-icons.html'>Icons</a>
+<a class='dropdown-item' href='../sa-pages/sa-colours.html'>Colours</a>
+</div>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='bsComponents' role='button'>
+BS Components
+</a>
+<div aria-labelledby='bsComponents' class='dropdown-menu'>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#alerts'>Alerts</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#badges'>Badges</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#breadcrumbs'>Breadcrumbs</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#buttons'>Buttons</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#cards'>Cards</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#collapse'>Collapse</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#dropdowns'>Dropdowns</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#forms'>Forms</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#input-group'>Input Group</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#list-group'>List Group</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#modal'>Modal</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#navs'>Navs</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#navbar'>Navbar</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#pagination'>Pagination</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#popovers'>Popovers</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#progress'>Progress</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#tables'>Tables</a>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#tooltips'>Tooltips</a>
+<div class='dropdown-divider'></div>
+<a class='dropdown-item' href='../bs-pages/bs-components.html#panels'>BS3 Panels</a>
+</div>
+</li>
+<li class='nav-item'>
+<a aria-disabled='true' class='nav-link disabled' href='#' tabindex='-1'>Disabled</a>
+</li>
+</ul>
+<form class='form-inline my-2 my-lg-0'>
+<input aria-label='Search' class='form-control mr-sm-2' placeholder='Search' type='search'>
+<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Search</button>
+</form>
+</div>
+</div>
+</nav>
+</header>
+<div class='container'>
+<div class='row'>
+<div class='col-12'>
+<h1>Test Page</h1>
+<h2>Patient Feedback Questionnaire</h2>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='patient-questionnaire' id='questionnaire'>
+<form accept-charset='UTF-8' action='/admin/online_msfs/583c4063f2a39f345e00001a/gmc_patient_questionnaires' class='form-horizontal' id='new_gmc_patient_questionnaire' method='post'>
+<div style='margin:0;padding:0;display:inline'>
+<input name='utf8' type='hidden' value='✓'>
+<input name='authenticity_token' type='hidden' value='1b1qqZAtWJxpmpy5EYcwmrfnckp9LxBVd5FJ0Jv1TUM='>
+</div>
+<input id='new_at' name='new_at' type='hidden' value='2019-06-13 10:37:27 +0100'>
+<div class='row'>
+<div class='col-xs-12'>
+<h3>Patient Questionnaire</h3>
+<p>Licensed doctors are expected to seek feedback from colleagues and patients and review and act upon that feedback where appropriate.</p>
+<p>The purpose of this exercise is to provide doctors with information about their work through the eyes of those they work with and treat, and is intended to help inform their further development.</p>
+<p class='bold'>Please do not write your name on this questionnaire.</p>
+<p class='bold'>Please base your answers only on the consultation you have had today.</p>
+<p>Please mark the box like this [✓] with a ball point pen. If you change your mind just cross out your old response and make your new choice.</p>
+<ul>
+<li class='no-bullet bold'>KEYBOARD SHORTCUTS FOR FILLING IN THIS FORM:</li>
+<li>Press Alt or the Option key to switch on the keyboard shortcuts which should appear in red.</li>
+<li>Press Tab to scroll through each question. Hold Shift and Tab to go back a question.</li>
+<li>Type a number to toggle the checkboxes or radio buttons on and off.</li>
+<li>Use the arrow keys to scroll through select boxes, and hit enter to choose an option.</li>
+<li>You can click the mouse at any time.</li>
+<li>Give it a try! We hope it speeds up your day!</li>
+</ul>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-12'>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<h3>About the Patient...</h3>
+</div>
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr>
+<td>
+<label class='control-label'>
+<label for='gmc_patient_questionnaire_patient_completed_date'>Please write today's date here:</label>
+</label>
+</td>
+<td class='textfield date'>
+<input class='datepicker form-control hasDatepicker' id='datepicker' name='gmc_patient_questionnaire[patient_completed_date]' type='text'>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q1 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>1</div>
+</th>
+<th class='qq' colspan='9'>
+<label for='gmc_patient_questionnaire_are_you_filling_this_question_in_for'>Are you filling in this questionnaire for:</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn hidden-xs'> </th>
+<th class='rating'>Yourself</th>
+<th class='rating'>Your child</th>
+<th class='rating'>Your spouse or partner</th>
+<th class='rating'>Another relative or friend</th>
+<th class='dk rating'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn hidden-xs'></td>
+<td class='rating-label mobile-only'>Yourself</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q1' id='q1a1' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' type='radio' value='yourself'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Your child</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q1' id='q1a2' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='your child'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Your spouse or partner</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q1' id='q1a3' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='your spouse or partner'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Another relative or friend</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q1' id='q1a4' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='another relative or friend'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='dk rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q1' id='q1a5' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='q-comment border-top'>
+If you are filling this in for someone else, please answer the following questions from the
+<span class='bold'>
+patient’s
+</span>
+point of view.
+</div>
+<div class='panel-body'>
+<!-- Q2 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>2</div>
+</th>
+<th class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_the_reason_you_saw_the_doctor_today'>Which of the following best describes the reason you saw the doctor today? (Please tick all the boxes that apply):</label>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn hidden-xs'></td>
+<td class='rating-label mobile-only'>To ask for advice</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>1</span>
+<label class='q-checkbox' for='q2a1'>
+<span class='hidden-xs'>To ask for advice</span>
+<input class='q2' id='q2a1' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' type='checkbox' value='to ask for advice'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>Because of an ongoing problem</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>2</span>
+<label class='q-checkbox' for='q2a2'>
+<span class='hidden-xs'>Because of an ongoing problem</span>
+<input class='q2' id='q2a2' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='because of an ongoing problem'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>For treatment (including prescriptions)</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>3</span>
+<label class='q-checkbox' for='q2a3'>
+<span class='hidden-xs'>For treatment (including prescriptions)</span>
+<input class='q2' id='q2a3' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='for treatment'>
+<div class='checkmark'></div>
+</label>
+</td>
+</tr>
+<tr>
+<td class='qn hidden-xs'></td>
+<td class='rating-label mobile-only'>Because of a one-off problem</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>4</span>
+<label class='q-checkbox' for='q2a4'>
+<span class='hidden-xs'>Because of a one-off problem</span>
+<input class='q2' id='q2a4' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='because of a one-off problem'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>For a routine check</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>5</span>
+<label class='q-checkbox' for='q2a5'>
+<span class='hidden-xs'>For a routine check</span>
+<input class='q2' id='q2a5' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='for a routine check'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>Other (please give details)</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>6</span>
+<label class='q-checkbox' for='q2a6'>
+<span class='hidden-xs'>Other (please give details)</span>
+<input class='q2' id='q2a6' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='other'>
+<div class='checkmark'></div>
+</label>
+</td>
+</tr>
+<tr class='textfield'>
+<td class='qn hidden-xs'></td>
+<td class='textfield' colspan='3'>
+<span class='accesskey' style='display: none;'>7</span>
+<textarea class='q2 form-control' cols='40' id='q2a7' name='gmc_patient_questionnaire[other_reason]' placeholder='please give details' rows='20' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 200px;' tabindex='-1'></textarea>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q3 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>3</div>
+</th>
+<th class='qq' colspan='6'>
+<label for='gmc_patient_questionnaire_how_important_was_your_reason_for_visiting'>On a scale of 1 to 5, how important to your health and wellbeing was your reason for visiting the doctor today?</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn'> </th>
+<th class='rating'>Not Very Important (1)</th>
+<th class='rating'>Not Important</th>
+<th class='rating'>Average</th>
+<th class='rating'>Important</th>
+<th class='rating'>Very Important (5)</th>
+<th class='dk rating'>spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn hidden-xs'> </td>
+<td class='rating-label mobile-only'>Not very important (1)</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q3' id='q3a1' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' type='radio' value='not very important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Not important</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q3' id='q3a2' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='not important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Average</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q3' id='q3a3' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='average'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Important</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q3' id='q3a4' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very Important (5)</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q3' id='q3a5' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='very important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q3' id='q3a6' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<h3>About the doctor...</h3>
+</div>
+<div class='panel-body'>
+<!-- Q4 -->
+<table class='table table-pq-questionnaire'>
+<thead class='first'>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>4</div>
+</th>
+<th class='qq' colspan='9'>
+<label>How good was your doctor today at each of the following? (Please tick one box in each line)</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn'> </th>
+<th> </th>
+<th class='rating'>Poor</th>
+<th class='rating'>Less than satisfactory</th>
+<th class='rating'>Satisfactory</th>
+<th class='rating'>Good</th>
+<th class='rating'>Very good</th>
+<th class='rating'>Does not apply</th>
+<th class='dk rating'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>a</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_being_polite'>Being polite</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4a' id='q4aa1' name='gmc_patient_questionnaire[being_polite]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4a' id='q4aa2' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4a' id='q4aa3' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4a' id='q4aa4' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4a' id='q4aa5' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4a' id='q4aa6' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4a' id='q4aa7' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>b</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_making_you_feel_at_ease'>Making you feel at ease</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4b' id='q4ba1' name='gmc_patient_questionnaire[making_you_feel_at_ease]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4b' id='q4ba2' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4b' id='q4ba3' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4b' id='q4ba4' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4b' id='q4ba5' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4b' id='q4ba6' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4b' id='q4ba7' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>c</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_listening_to_you'>Listening to you</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4c' id='q4ca1' name='gmc_patient_questionnaire[listening_to_you]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4c' id='q4ca2' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4c' id='q4ca3' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4c' id='q4ca4' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4c' id='q4ca5' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4c' id='q4ca6' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4c' id='q4ca7' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>d</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_assessing_your_medical_condition'>Assessing your medical condition</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4d' id='q4da1' name='gmc_patient_questionnaire[assessing_your_medical_condition]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4d' id='q4da2' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4d' id='q4da3' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4d' id='q4da4' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4d' id='q4da5' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4d' id='q4da6' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4d' id='q4da7' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>e</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_explaining_your_condition_and_treatment'>Explaining your condition and treatment</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4e' id='q4ea1' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4e' id='q4ea2' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4e' id='q4ea3' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4e' id='q4ea4' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4e' id='q4ea5' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4e' id='q4ea6' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4e' id='q4ea7' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>f</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_involving_you_in_decisions_about_your_treatment'>Involving you in decisions about your treatment</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4f' id='q4fa1' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4f' id='q4fa2' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4f' id='q4fa3' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4f' id='q4fa4' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4f' id='q4fa5' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4f' id='q4fa6' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4f' id='q4fa7' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>g</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_providing_or_arranging_treatment_for_you'>Providing or arranging treatment for you</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4g' id='q4ga1' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4g' id='q4ga2' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4g' id='q4ga3' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4g' id='q4ga4' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4g' id='q4ga5' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4g' id='q4ga6' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4g' id='q4ga7' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q5 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>5</div>
+</th>
+<th class='qq' colspan='9'>
+<label>Please decide how strongly you agree or disagree with the following statements by ticking one box in each line.</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr>
+<th class='qn'> </th>
+<th> </th>
+<th class='rating'>Strongly disagree</th>
+<th class='rating'>Disagree</th>
+<th class='rating'>Neutral</th>
+<th class='rating'>Agree</th>
+<th class='rating'>Strongly agree</th>
+<th class='rating'>Does not apply</th>
+<th class='dk rating'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>a</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_this_doctor_will_keep_information_about_me_confidential'>This doctor will keep information about me confidential</label>
+</td>
+<td class='rating-label mobile-only'>Strongly disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q5a' id='q5aa1' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' type='radio' value='strongly disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q5a' id='q5aa2' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Neutral</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q5a' id='q5aa3' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='neutral'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q5a' id='q5aa4' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Strongly agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q5a' id='q5aa5' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='strongly agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q5a' id='q5aa6' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q5a' id='q5aa7' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>b</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_this_doctor_is_honest_and_trustworthy'>This doctor is honest and trustworthy</label>
+</td>
+<td class='rating-label mobile-only'>Strongly disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q5b' id='q5ba1' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' type='radio' value='strongly disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q5b' id='q5ba2' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Neutral</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q5b' id='q5ba3' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='neutral'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q5b' id='q5ba4' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Strongly agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q5b' id='q5ba5' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='strongly agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q5b' id='q5ba6' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q5b' id='q5ba7' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q6 -->
+<table class='table table-pq-questionnaire'>
+<thead></thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn'></th>
+<th colspan='3'></th>
+<th>Yes</th>
+<th>No</th>
+<th class='dk'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>6</div>
+</td>
+<td class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_i_am_confident_about_this_doctors_ability_to_provide_care'>I am confident about this doctor’s ability to provide care</label>
+</td>
+<td class='rating-label mobile-only'>Yes</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q6' id='q6a1' name='gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]' type='radio' value='yes'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>No</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q6' id='q6a2' name='gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]' tabindex='-1' type='radio' value='no'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q6' id='q6a3' name='gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<!-- Q7 -->
+<tr class='q-answers border-top-xs'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>7</div>
+</td>
+<td class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_i_would_be_completely_happy_to_see_this_doctor_again'>I would be completely happy to see this doctor again</label>
+</td>
+<td class='rating-label mobile-only'>Yes</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q7' id='q7a1' name='gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]' type='radio' value='yes'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>No</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q7' id='q7a2' name='gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]' tabindex='-1' type='radio' value='no'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q7' id='q7a3' name='gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<!-- Q8 -->
+<tr class='q-answers border-top-xs'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>8</div>
+</td>
+<td class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_was_this_visit_with_your_usual_doctor'>Was this visit with your usual doctor?</label>
+</td>
+<td class='rating-label mobile-only'>Yes</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q8' id='q8a1' name='gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]' type='radio' value='yes'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>No</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q8' id='q8a2' name='gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]' tabindex='-1' type='radio' value='no'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q8' id='q8a3' name='gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Q9 -->
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>9</div>
+</td>
+<td class='qq' colspan='6'>
+<label class='left-align' for='gmc_patient_questionnaire_comments' id='q9a1'>Please add any other comments you want to make about this doctor. Please note: No patients will be identified when this information is given to the doctor.</label>
+</td>
+</tr>
+<tr class='textfield'>
+<td class='qn hidden-xs'></td>
+<td class='textfield' colspan='6'>
+<textarea cols='40' id='gmc_patient_questionnaire_comments' name='gmc_patient_questionnaire[comments]' placeholder='Add comments' rows='20' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 344px;'></textarea>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Q10 -->
+<div class='panel panel-default'>
+<div class='panel-heading'>
+About you...
+</div>
+<div class='q-comment'>
+<strong>The next questions will give us some basic information about who took part in the survey.</strong>
+</div>
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>10</div>
+</td>
+<td class='qq'>
+<label for='gmc_patient_questionnaire_male_or_female'>Gender:</label>
+</td>
+<td class='rating-label mobile-only'>Female</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q10' id='q10a1' name='gmc_patient_questionnaire[male_or_female]' type='radio' value='female'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>Female</span>
+</td>
+<td class='rating-label mobile-only'>Male</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q10' id='q10a2' name='gmc_patient_questionnaire[male_or_female]' tabindex='-1' type='radio' value='male'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>Male</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Q11 -->
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>11</div>
+</td>
+<td class='qq'>
+<label for='gmc_patient_questionnaire_age'>Age:</label>
+</td>
+<td class='rating-label mobile-only'>Under 15</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q11' id='q11a1' name='gmc_patient_questionnaire[age]' type='radio' value='under 15'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>Under 15</span>
+</td>
+<td class='rating-label mobile-only'>15 to 20</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q11' id='q11a2' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='15 to 20'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>15 to 20</span>
+</td>
+<td class='rating-label mobile-only'>21 to 40</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q11' id='q11a3' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='21 to 40'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>21 to 40</span>
+</td>
+<td class='rating-label mobile-only'>40 to 60</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q11' id='q11a4' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='40 to 60'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>40 to 60</span>
+</td>
+<td class='rating-label mobile-only'>60 or over</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q11' id='q11a5' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='60 or over'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>60 or over</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Q12 -->
+<div class='panel-body'>
+<div class='q-column-table'>
+<div class='question-head'>
+<div class='cell qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>12</div>
+</div>
+<div class='cell qq question'>
+<label for='gmc_patient_questionnaire_ethnic_group'>What is your ethnic group? Please choose one section from A to E, and then select the appropriate box to indicate your cultural background.</label>
+</div>
+</div>
+<div class='body'>
+<div class='column qn hidden-xs'>
+<div class='cell ethnic-q'> </div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>A. White</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>British</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>01</span>
+<input class='q12a' id='q12aa1' name='gmc_patient_questionnaire[ethnic_group]' type='radio' value='british'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>British</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Irish</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>02</span>
+<input class='q12a' id='q12aa2' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='irish'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Irish</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other White background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>03</span>
+<input class='q12a' id='q12aa3' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other white background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other White background</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>04</span>
+<input class='q12a form-control' id='q12aa4' name='gmc_patient_questionnaire[ethnic_group_a_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>B. Mixed</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>White and Black Caribbean</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>05</span>
+<input class='q12a' id='q12aa5' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='white and black caribbean'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>White and Black Caribbean</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>White and Black African</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>06</span>
+<input class='q12a' id='q12aa6' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='white and black african'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>White and Black African</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>White and Asian</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>07</span>
+<input class='q12a' id='q12aa7' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='white and asian'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>White and Asian</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other Mixed background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>08</span>
+<input class='q12a' id='q12aa8' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other mixed background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other Mixed background</span>
+</div>
+</div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>09</span>
+<input class='q12b form-control' id='q12aa9' name='gmc_patient_questionnaire[ethnic_group_b_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>C. Asian or Asian British</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Indian</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-1</span>
+<input class='q12c' id='q12ca1' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='indian'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Indian</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Pakistani</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-2</span>
+<input class='q12c' id='q12ca2' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='pakistani'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Pakistani</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Bangladeshi</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-3</span>
+<input class='q12c' id='q12ca3' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='bangladeshi'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Bangladeshi</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other Asian background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-4</span>
+<input class='q12c' id='q12ca4' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other asian background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other Asian background</span>
+</div>
+</div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>-5</span>
+<input class='q12c form-control' id='q12ca5' name='gmc_patient_questionnaire[ethnic_group_c_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>D. Black or Black British</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Caribbean</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-6</span>
+<input class='q12c' id='q12ca6' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='caribbean'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Caribbean</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>African</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-7</span>
+<input class='q12c' id='q12ca7' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='african'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>African</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other Black background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-8</span>
+<input class='q12c' id='q12ca8' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other black background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other Black background</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>-9</span>
+<input class='q12d form-control' id='q12ca9' name='gmc_patient_questionnaire[ethnic_group_d_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>
+<label>E. Chinese or other ethnic group</label>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Chinese</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>+1</span>
+<input class='q12e' id='q12ea1' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='chinese'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Chinese</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>+2</span>
+<input class='q12e' id='q12ea2' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>+3</span>
+<input class='q12e form-control' id='q12ea3' name='gmc_patient_questionnaire[ethnic_group_e_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>Spoiled</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Spoiled</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>+4</span>
+<input class='q12e' id='q12ea4' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Spoiled</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Administrators Only -->
+<div class='panel panel-default'>
+<div class='panel-heading'>
+ADMINISTRATORS ONLY
+</div>
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr>
+<td class='block'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<label class='left-align' for='gmc_patient_questionnaire_admin_comments'>Comments e.g. reason if marked as spoiled</label>
+</td>
+</tr>
+<tr>
+<td class='textfield'>
+<textarea cols='40' id='gmc_patient_questionnaire_admin_comments' name='gmc_patient_questionnaire[admin_comments]' placeholder='Add comments' rows='20' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 344px;'></textarea>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='save right'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<input class='btn btn-success' data-disable-with='Submitting...' name='commit' type='submit' value='Submit response'>
+<span class='accesskey' style='display: none;'>(on the next page, press enter to create a new questionnaire)</span>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts ================================ -->
+<script src='../assets/js/remote-sard-scripts.min.js'></script>
+</body>
+</html>
