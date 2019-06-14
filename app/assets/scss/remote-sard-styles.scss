@@ -41,8 +41,10 @@
 
 // Components
 @import 'components/alert';
-@import 'components/panels';
+@import 'components/panels'; //BS3 specific
 @import 'components/cards';
+@import 'components/forms';
+@import 'components/fieldsets'; //BS3 specific
 
 
 // Theme Colours 

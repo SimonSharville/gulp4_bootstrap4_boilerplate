@@ -11,6 +11,7 @@
   background-clip: border-box;
   border:1px solid transparent;
   @include border-radius($sard-border-radius);
+  margin-bottom: $sard-margin;
 
   & .panel-heading, .panel-footer{
     border:none;

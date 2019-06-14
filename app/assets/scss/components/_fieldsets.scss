@@ -1,0 +1,74 @@
+// Fieldsets ====================================
+
+// Base class
+
+fieldset{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  word-wrap: break-word;
+  background-color: $sard-bg;
+  background-clip: border-box;
+  border:1px solid transparent;
+  @include border-radius($sard-border-radius);
+
+  // padding: $sard-body-padding;
+  margin-bottom: $sard-margin;
+
+  & legend{
+    // min-width: calc(100% + #{$sard-spacer-x-2x} + 2px ); // Kept for Reference
+    min-width: calc(100% + 2px );
+
+    margin: 0 -1px;
+    overflow: hidden;
+
+    padding: $sard-heading-padding;
+
+    background-color: $sard-heading-bg;
+    font-size: $sard-heading-font-size;
+    font-weight: 300;
+    line-height: $sard-heading-line-height;
+    color: $sard-heading-text-color;
+
+    border-top-left-radius: $sard-border-radius;
+    border-top-right-radius: $sard-border-radius;
+  }
+
+  & .form-group{
+    padding: $sard-body-padding;
+    margin: -1px;
+  }
+
+  & hr{
+    border-color: white;
+    margin: 0 ;
+  }
+  & .border-bottom, .border-top{
+    border-color: white!important;
+  }
+}
+
+.card fieldset, .panel fieldset{
+  border-color: $sard-border-color;
+  @include border-radius($border-radius-sm);
+  margin-bottom: $sard-margin-sm;
+  & legend{
+    border-top-left-radius: $border-radius-sm;
+    border-top-right-radius: $border-radius-sm;
+  }
+  & hr{
+    border-color: $sard-border-color;
+    margin: 0 ;
+  }
+  & .border-bottom, .border-top{
+    border-color: $sard-border-color!important;
+  }
+}
+.card fieldset:first-child, .panel fieldset:first-child{
+  margin-top: 2px;
+}
+.card fieldset:last-child, .panel fieldset:last-child{
+  margin-bottom: 0;
+}
+

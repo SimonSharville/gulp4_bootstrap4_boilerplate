@@ -118,7 +118,7 @@
 
 %hr
 %h4 Form Groups
-%p The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with <fieldset>s, <div>s, or nearly any other element.
+%p The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.
 %form
   .form-group
     %label{:for => "formGroupExampleInput"} Example label
@@ -198,9 +198,9 @@ At times, you maybe need to use margin or padding utilities to create that perfe
     %label.col-sm-2.col-form-label{:for => "inputPassword3"} Password
     .col-sm-10
       %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
-  %fieldset.form-group
+  .form-group
     .row
-      %legend.col-form-label.col-sm-2.pt-0 Radios
+      .col-form-label.col-sm-2.pt-0 Radios
       .col-sm-10
         .form-check
           %input#gridRadios1.form-check-input{:checked => "checked", :name => "gridRadios", :type => "radio", :value => "option1"}/

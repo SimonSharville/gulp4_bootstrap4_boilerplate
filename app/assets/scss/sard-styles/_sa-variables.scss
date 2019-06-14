@@ -1,8 +1,31 @@
 // SARD Variables
 
+// ==================================================================
+
+// Spacing
+
+$sard-spacer-y:              .25rem; // Top to Bottom
+$sard-spacer-x:              0.625rem; // Left to Right
+
+$sard-spacer-y-2x:           .5rem; // Top to Bottom
+$sard-spacer-x-2x:           1.25rem; // Left to Right
+
+$sard-spacer-y-3x:           .75rem; // Top to Bottom
+$sard-spacer-x-3x:           3rem; // Left to Right
+
+$sard-spacer-y-4x:           1rem; // Top to Bottom
+$sard-spacer-x-4x:           1.5625rem; // Left to Right
+
+$sard-margin:                1rem;
+$sard-margin-sm:             .75rem;
+
+// ==================================================================
+
+
 $sard-bg:                    $sa-grey-02;
 $sard-heading-bg:            $sa-grey-16;
 
+$sard-padding:               $sard-spacer-y;
 $sard-body-padding:          $sard-spacer-x;
 $sard-heading-padding:       $sard-spacer-y $sard-spacer-x;
 $sard-heading-font-size:     1.25rem;
@@ -12,7 +35,7 @@ $sard-heading-text-color:    white;
 
 $sard-footer-padding:        $sard-heading-padding !default;
 $sard-border-width:          $border-width !default;
-$sard-border-color:          red !default;
+$sard-border-color:          $sard-heading-bg !default;
 
 
 $sard-border-radius:         $border-radius;

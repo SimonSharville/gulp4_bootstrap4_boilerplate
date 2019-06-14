@@ -3,6 +3,8 @@
 // Base class
 .card{
   border:1px solid transparent;
+  margin-bottom: $sard-margin;
+  
   & .card-header, .card-footer{
     border:none;
     color: white;
