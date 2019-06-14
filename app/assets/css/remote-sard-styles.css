@@ -12986,7 +12986,7 @@ b, strong, .bold, .strong {
   margin-bottom: 1rem;
 }
 
-.panel .panel-heading, .panel .panel-footer {
+.panel .panel-heading, .panel .panel-header, .panel .panel-footer {
   border: none;
   color: white;
 }
@@ -13030,7 +13030,7 @@ b, strong, .bold, .strong {
   margin-bottom: initial;
 }
 
-.panel-heading {
+.panel-heading, .panel-header {
   padding: 0.25rem 0.625rem;
   border-bottom: 1px solid transparent;
   background-color: #403D3D;
@@ -13042,15 +13042,15 @@ b, strong, .bold, .strong {
   color: white;
 }
 
-.panel-heading > .dropdown .dropdown-toggle {
+.panel-heading > .dropdown .dropdown-toggle, .panel-header > .dropdown .dropdown-toggle {
   color: inherit;
 }
 
-.panel-heading:first-child {
+.panel-heading:first-child, .panel-header:first-child {
   border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0;
 }
 
-.panel-heading h3 {
+.panel-heading h3, .panel-header h3 {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.575rem;
@@ -13073,11 +13073,11 @@ b, strong, .bold, .strong {
   border-radius: 0 0 calc(0.375rem - 1px) calc(0.375rem - 1px);
 }
 
-.panel.panel-sard .panel-heading, .panel.panel-sard .panel-footer, .panel.panel-default .panel-heading, .panel.panel-default .panel-footer {
+.panel.panel-sard .panel-heading, .panel.panel-sard .panel-header, .panel.panel-sard .panel-footer, .panel.panel-default .panel-heading, .panel.panel-default .panel-header, .panel.panel-default .panel-footer {
   background-color: #403D3D;
 }
 
-.panel.panel-sard .panel-heading .text-muted, .panel.panel-sard .panel-footer .text-muted, .panel.panel-default .panel-heading .text-muted, .panel.panel-default .panel-footer .text-muted {
+.panel.panel-sard .panel-heading .text-muted, .panel.panel-sard .panel-header .text-muted, .panel.panel-sard .panel-footer .text-muted, .panel.panel-default .panel-heading .text-muted, .panel.panel-default .panel-header .text-muted, .panel.panel-default .panel-footer .text-muted {
   color: #8e8888 !important;
 }
 
@@ -13102,11 +13102,11 @@ b, strong, .bold, .strong {
   background-color: #00B2B2;
 }
 
-.panel.panel-primary .panel-heading, .panel.panel-primary .panel-footer {
+.panel.panel-primary .panel-heading, .panel.panel-primary .panel-header, .panel.panel-primary .panel-footer {
   background-color: #006666;
 }
 
-.panel.panel-primary .panel-heading .text-muted, .panel.panel-primary .panel-footer .text-muted {
+.panel.panel-primary .panel-heading .text-muted, .panel.panel-primary .panel-header .text-muted, .panel.panel-primary .panel-footer .text-muted {
   color: #003333 !important;
 }
 
@@ -13131,11 +13131,11 @@ b, strong, .bold, .strong {
   background-color: #359E00;
 }
 
-.panel.panel-success .panel-heading, .panel.panel-success .panel-footer {
+.panel.panel-success .panel-heading, .panel.panel-success .panel-header, .panel.panel-success .panel-footer {
   background-color: #246b00;
 }
 
-.panel.panel-success .panel-heading .text-muted, .panel.panel-success .panel-footer .text-muted {
+.panel.panel-success .panel-heading .text-muted, .panel.panel-success .panel-header .text-muted, .panel.panel-success .panel-footer .text-muted {
   color: #0a1f00 !important;
 }
 
@@ -13160,11 +13160,11 @@ b, strong, .bold, .strong {
   background-color: #BF0000;
 }
 
-.panel.panel-danger .panel-heading, .panel.panel-danger .panel-footer {
+.panel.panel-danger .panel-heading, .panel.panel-danger .panel-header, .panel.panel-danger .panel-footer {
   background-color: #730000;
 }
 
-.panel.panel-danger .panel-heading .text-muted, .panel.panel-danger .panel-footer .text-muted {
+.panel.panel-danger .panel-heading .text-muted, .panel.panel-danger .panel-header .text-muted, .panel.panel-danger .panel-footer .text-muted {
   color: #797137 !important;
 }
 
@@ -13197,11 +13197,11 @@ b, strong, .bold, .strong {
   background-color: #FFB200;
 }
 
-.panel.panel-warning .panel-heading, .panel.panel-warning .panel-footer {
+.panel.panel-warning .panel-heading, .panel.panel-warning .panel-header, .panel.panel-warning .panel-footer {
   background-color: #211F0F;
 }
 
-.panel.panel-warning .panel-heading .text-muted, .panel.panel-warning .panel-footer .text-muted {
+.panel.panel-warning .panel-heading .text-muted, .panel.panel-warning .panel-header .text-muted, .panel.panel-warning .panel-footer .text-muted {
   color: #797137 !important;
 }
 
@@ -13226,11 +13226,11 @@ b, strong, .bold, .strong {
   background-color: #00a0e0;
 }
 
-.panel.panel-info .panel-heading, .panel.panel-info .panel-footer {
+.panel.panel-info .panel-heading, .panel.panel-info .panel-header, .panel.panel-info .panel-footer {
   background-color: #00577a;
 }
 
-.panel.panel-info .panel-heading .text-muted, .panel.panel-info .panel-footer .text-muted {
+.panel.panel-info .panel-heading .text-muted, .panel.panel-info .panel-header .text-muted, .panel.panel-info .panel-footer .text-muted {
   color: black !important;
 }
 
@@ -13255,11 +13255,11 @@ b, strong, .bold, .strong {
   background-color: #615E5C;
 }
 
-.panel.panel-dark .panel-heading, .panel.panel-dark .panel-footer {
+.panel.panel-dark .panel-heading, .panel.panel-dark .panel-header, .panel.panel-dark .panel-footer {
   background-color: #403D3D;
 }
 
-.panel.panel-dark .panel-heading .text-muted, .panel.panel-dark .panel-footer .text-muted {
+.panel.panel-dark .panel-heading .text-muted, .panel.panel-dark .panel-header .text-muted, .panel.panel-dark .panel-footer .text-muted {
   color: #797137 !important;
 }
 
@@ -13292,16 +13292,16 @@ b, strong, .bold, .strong {
   background-color: white;
 }
 
-.panel.panel-white .panel-heading, .panel.panel-white .panel-footer {
+.panel.panel-white .panel-heading, .panel.panel-white .panel-header, .panel.panel-white .panel-footer {
   background-color: white;
   color: #211F0F;
 }
 
-.panel.panel-white .panel-heading .text-muted, .panel.panel-white .panel-footer .text-muted {
+.panel.panel-white .panel-heading .text-muted, .panel.panel-white .panel-header .text-muted, .panel.panel-white .panel-footer .text-muted {
   color: #797137 !important;
 }
 
-.panel.panel-white .panel-heading {
+.panel.panel-white .panel-heading, .panel.panel-white .panel-header {
   border-bottom: 1px solid #D9D6D6;
   margin-bottom: -2px;
 }
@@ -13328,12 +13328,12 @@ b, strong, .bold, .strong {
   border-color: white;
 }
 
-.panel.panel-white.outline .panel-heading, .panel.panel-white.outline .panel-footer {
+.panel.panel-white.outline .panel-heading, .panel.panel-white.outline .panel-header, .panel.panel-white.outline .panel-footer {
   background-color: transparent;
   color: #211F0F;
 }
 
-.panel.panel-white.outline .panel-heading {
+.panel.panel-white.outline .panel-heading, .panel.panel-white.outline .panel-header {
   border-bottom: 1px solid white;
   margin-bottom: -2px;
 }
@@ -13731,6 +13731,12 @@ b, strong, .bold, .strong {
 
 .card.card-white.outline .card-body hr {
   border-color: white;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.575rem;
 }
 
 label {

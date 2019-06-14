@@ -13,7 +13,7 @@
   @include border-radius($sard-border-radius);
   margin-bottom: $sard-margin;
 
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     border:none;
     color: white;
   }
@@ -51,7 +51,7 @@
 
 
 // Optional heading
-.panel-heading  {
+.panel-heading, .panel-header  {
   padding: $sard-heading-padding;
   border-bottom: 1px solid transparent;
   background-color: $sard-heading-bg;
@@ -71,7 +71,7 @@
   }
 }
 
-.panel-heading  h3{
+.panel-heading h3, .panel-header h3{
   margin: 0;
   font-size: $sard-heading-font-size;
   line-height: $sard-heading-line-height;
@@ -100,7 +100,7 @@
 
 .panel.panel-sard, .panel.panel-default{
   // background-color: $sard-bg;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: $sard-heading-bg;
     & .text-muted { 
       color: lighten($sard-heading-bg, 30%) !important;
@@ -124,7 +124,7 @@
 
 .panel.panel-primary{
   background-color: $client;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: darken($client, 15%);
     & .text-muted { 
       color: darken($client, 25%) !important;
@@ -147,7 +147,7 @@
 
 .panel.panel-success{
   background-color: $success;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: darken($success, 10%);
     & .text-muted { 
       color: darken($success, 25%) !important;
@@ -170,7 +170,7 @@
 
 .panel.panel-danger{
   background-color: $danger;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: darken($danger, 15%);
     & .text-muted { 
       color: lighten($text, 25%) !important;
@@ -203,7 +203,7 @@
 
 .panel.panel-warning{
   background-color: $warning;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: $text;
     & .text-muted { 
       color: lighten($text, 25%) !important;
@@ -227,7 +227,7 @@
 
 .panel.panel-info{
   background-color: $info;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: darken($info, 20%);
     & .text-muted { 
       color: darken($info, 50%) !important;
@@ -251,7 +251,7 @@
 
 .panel.panel-dark{
   background-color: $sa-grey-14;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: $sard-heading-bg;
     & .text-muted { 
       color: lighten($text, 25%) !important;
@@ -284,14 +284,14 @@
 
 .panel.panel-white{
   background-color: white;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: white;
     color: $text;
     & .text-muted { 
       color: lighten($text, 25%) !important;
     }
   }
-  & .panel-heading{ 
+  & .panel-heading, .panel-header{ 
     border-bottom: 1px solid $sa-grey-04;
     margin-bottom: -2px;
   }
@@ -312,11 +312,11 @@
 .panel.panel-white.outline{
   background-color: transparent;
   border-color: white;
-  & .panel-heading, .panel-footer{
+  & .panel-heading, .panel-header, .panel-footer{
     background-color: transparent;
     color: $text;
   }
-  & .panel-heading{ 
+  & .panel-heading, .panel-header{ 
     border-bottom: 1px solid white;
     margin-bottom: -2px;
   }

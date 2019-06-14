@@ -1,6 +1,10 @@
 // Forms ========================================
 
-
+legend{
+  font-size: $sard-heading-font-size;
+  font-weight: 400;
+  line-height: $sard-heading-line-height;
+}
 label {
     margin-bottom: .25rem;
 }
