@@ -1,29 +1,28 @@
 // Scrollbars
 
 //  Works in Chrome, Safari
-::-webkit-scrollbar {
-    width: 12px;
-}
- 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
- 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: $client;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-
+  ::-webkit-scrollbar {
+      width: 12px;
+  }
+   
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+      border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $sa-grey-12;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
 
 // IE 11
 body, html {
-  scrollbar-face-color: $client !important;
-  scrollbar-shadow-color: darken($client, 10%) !important;
+  scrollbar-face-color: $sa-grey-12 !important;
+  scrollbar-shadow-color: darken($sa-grey-12, 10%) !important;
   // scrollbar-highlight-color: red !important;
   // scrollbar-3dlight-color: red !important;
   // scrollbar-darkshadow-color: red !important;
   scrollbar-track-color: $sa-grey-04 !important;
-  scrollbar-arrow-color: $client !important;
+  scrollbar-arrow-color: $sa-grey-12 !important;
 }

@@ -113,6 +113,13 @@ $client-very-light:     lighten($client, 10%);
 $client-dark:           darken($client, 10%);
 $client-very-dark:      darken($client, 20%);
 
+$client-2:                $sa-blue;
+$client-2-light:          lighten($client-2, 5%);
+$client-2-very-light:     lighten($client-2, 10%);
+$client-2-dark:           darken($client-2, 10%);
+$client-2-very-dark:      darken($client-2, 20%);
+
+
 $medic:                 $sa-turq;
 $non-medic:             $sa-ink;
 
@@ -122,11 +129,16 @@ $link-color:            lighten($sa-ink, 20%);
 // Admin Mixins =================================
 
 $admin:               $sa-pink;
-$admin-2:             $sa-plum;
 $admin-light:         lighten($admin, 5%);
 $admin-very-light:    lighten($admin, 10%);
 $admin-dark:          darken($admin, 10%);
 $admin-very-dark:     darken($admin, 20%);
+
+$admin-2:             $sa-plum;
+$admin-2-light:       lighten($admin-2, 5%);
+$admin-2-very-light:  lighten($admin-2, 10%);
+$admin-2-dark:        darken($admin-2, 10%);
+$admin-2-very-dark:   darken($admin-2, 20%);
 
 // Navbar Admin =================================
 
