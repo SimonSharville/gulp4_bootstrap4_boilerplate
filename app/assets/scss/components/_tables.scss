@@ -1,0 +1,80 @@
+// Tables =======================================
+
+// Base styles
+
+.panel-body .table, .card-body .table{
+  margin: -$sard-spacer-x;
+  min-width: calc(100% + #{$sard-spacer-x-2x});
+  font-size: 0.875rem; // 14px
+}
+
+.panel-body .table-responsive, .card-body .table-responsive{
+  margin: -$sard-spacer-x;
+  min-width: calc(100% + #{$sard-spacer-x-2x});
+}
+.panel-body .table-responsive table, .card-body .table-responsive table{
+  margin: 0 ;
+}
+
+// ==========================
+// Table Sard styles
+
+
+.table.table-sard > thead > tr > th,
+.table.table-sard > tbody > tr > th,
+.table.table-sard > tfoot > tr > th,
+.table.table-sard > thead > tr > td,
+.table.table-sard > tbody > tr > td,
+.table.table-sard > tfoot > tr > td {
+  padding: $sard-spacer-6 $sard-spacer-10;
+}
+
+.table-sard td, .table-sard th{
+  border-color: white;
+}
+
+.table-sard thead th{
+  background-color: $sa-grey-14;
+  color: white;
+  border-bottom: none;
+  border-top: none;
+}
+
+.table-sard tbody tr:first-child td,
+.table-sard tbody tr:first-child th{
+  border-top: none;
+}
+
+.table-sard caption{
+  caption-side: inherit;
+  color: $text;
+  padding: $sard-spacer-6 $sard-spacer-10
+}
+
+// Hover, Striped and Bordered Tables
+.table-sard.table-hover tbody tr:hover{
+  background-color: $sa-grey-04;
+}
+.table-sard.table-striped tbody tr:nth-of-type(odd){
+  background-color: $sa-grey-03;
+}
+.table-sard.table-striped.table-hover tbody tr:nth-of-type(odd):hover{
+  background-color: $sa-grey-04;
+}
+
+.table-sard.table-bordered{
+  border: none;
+}
+.table-sard.table-bordered td, .table-sard.table-bordered th{
+  border-color: white;
+}
+
+.table-sard.table-bordered td:first-child, .table-sard.table-bordered th:first-child{
+  border-left: none;
+}
+.table-sard.table-bordered td:last-child, .table-sard.table-bordered th:last-child{
+  border-right: none;
+}
+.table-sard.table-bordered tr:last-child td, .table-sard.table-bordered tr:last-child th{
+  border-bottom: none;
+}

@@ -3,9 +3,29 @@
 // ==================================================================
 
 // Spacing
+// Based on 16px to 1 rem
+// .25rem = 4px
+// .375 = 6px 
+// .5rem = 8px
+// 0.625rem = 10px
+// .75rem = 12px
+// 0.875rem = 14px
+// 1rem = 16px
+// 1.25rem = 20px
+// 1.5 = 24px
+// 1.75 = 28px
+// 2rem = 32px
+// 3rem = 48px
 
-$sard-spacer-y:              .25rem; // Top to Bottom
-$sard-spacer-x:              0.625rem; // Left to Right
+$sard-spacer-4:              .25rem;
+$sard-spacer-6:              .375rem;
+$sard-spacer-8:              .5rem;
+$sard-spacer-10:             .625rem;
+$sard-spacer-12:             .75rem;
+$sard-spacer-16:             1rem;
+
+$sard-spacer-y:              .25rem; // Top to Bottom // 4px
+$sard-spacer-x:              0.625rem; // Left to Right // 10px
 
 $sard-spacer-y-2x:           .5rem; // Top to Bottom
 $sard-spacer-x-2x:           1.25rem; // Left to Right
@@ -14,7 +34,7 @@ $sard-spacer-y-3x:           .75rem; // Top to Bottom
 $sard-spacer-x-3x:           3rem; // Left to Right
 
 $sard-spacer-y-4x:           1rem; // Top to Bottom
-$sard-spacer-x-4x:           1.5625rem; // Left to Right
+$sard-spacer-x-4x:           1.5rem; // Left to Right
 
 $sard-margin:                1rem;
 $sard-margin-sm:             .75rem;
