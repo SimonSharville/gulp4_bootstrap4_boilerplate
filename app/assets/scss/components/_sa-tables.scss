@@ -55,6 +55,12 @@
 .table-sard.table-hover tbody tr:hover{
   background-color: $sa-grey-04;
 }
+.table-sard.table-striped{
+  margin-bottom: 0;
+}
+.table-sard.table-striped tbody tr:last-child td, .table-sard.table-striped tbody tr:last-child th{
+  border-bottom: 1px solid white;
+}
 .table-sard.table-striped tbody tr:nth-of-type(odd){
   background-color: $sa-grey-03;
 }
