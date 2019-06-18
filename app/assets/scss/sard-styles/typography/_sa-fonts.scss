@@ -63,6 +63,8 @@ $single: 0.0625rem; /* 16 * 0.0625 = 1px */
 $double: 0.125rem; /* 16 * 0.125 = 2px */
 
 
+
+
 // Sizes
 h1, h2, h3, h4, h5, h6, p, em{
   font-weight:normal;
@@ -120,6 +122,18 @@ h6,.h6 {
   font-size: 0.875rem; // 14px
 }
 
+
+
+.display-1, .display-2, .display-3, .display-4{
+  @include roboto-thin;
+}
+
+p{
+  @include roboto-regular;
+  // font-size: 0.875rem; // 14px
+  line-height: 1.25rem;
+}
+
 // base headings (this have sit right on the item below)
 h1.base, .h1.base {
   margin-bottom:-0.2rem;
@@ -140,16 +154,7 @@ p.base {
   margin-bottom:0;
 }
 
-
-.display-1, .display-2, .display-3, .display-4{
-  @include roboto-thin;
-}
-
-p{
-  @include roboto-regular;
-  font-size: 0.875rem; // 14px
-  line-height: 1.25rem;
-}
+// Various =============================
 b, strong, .bold, .strong {
   font-weight: 900;
 }

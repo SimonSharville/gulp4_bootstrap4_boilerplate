@@ -1,5 +1,7 @@
 // Tables =======================================
 
+$sard-table-head-bg:          $sa-grey-14;
+$sard-table-dark-head-bg:     $sa-grey-18;
 // Base styles
 
 .panel-body .table, .card-body .table{
@@ -8,17 +10,73 @@
   font-size: 0.875rem; // 14px
 }
 
-.panel-body .table-responsive, .card-body .table-responsive{
+
+
+.panel-body .table-responsive, .card-body .table-responsive,
+.panel-body .table-responsive-sm, .card-body .table-responsive-sm,
+.panel-body .table-responsive-md, .card-body .table-responsive-md,
+.panel-body .table-responsive-lg, .card-body .table-responsive-lg,
+.panel-body .table-responsive-xl, .card-body .table-responsive-xl{
   margin: -$sard-spacer-x;
   min-width: calc(100% + #{$sard-spacer-x-2x});
 }
-.panel-body .table-responsive table, .card-body .table-responsive table{
+.panel-body .table-responsive table, .card-body .table-responsive table,
+.panel-body .table-responsive-sm table, .card-body .table-responsive-sm table,
+.panel-body .table-responsive-md table, .card-body .table-responsive-md table,
+.panel-body .table-responsive-lg table, .card-body .table-responsive-lg table,
+.panel-body .table-responsive-xl table, .card-body .table-responsive-xl table{
   margin: 0 ;
 }
 
+
+
+
+
+
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    min-width: calc(100% + #{$sard-spacer-x-2x});
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    min-width: calc(100% + #{$sard-spacer-x-2x});
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    display: block;
+    width: 100%;
+    min-width: calc(100% + #{$sard-spacer-x-2x});
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    display: block;
+    width: 100%;
+    min-width: calc(100% + #{$sard-spacer-x-2x});
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
 // ==========================
 // Table Sard styles
-
 
 .table.table-sard > thead > tr > th,
 .table.table-sard > tbody > tr > th,
@@ -34,7 +92,7 @@
 }
 
 .table-sard thead th{
-  background-color: $sa-grey-14;
+  background-color: $sard-table-head-bg;
   color: white;
   border-bottom: none;
   border-top: none;
@@ -45,16 +103,22 @@
   border-top: none;
 }
 
-.table-sard caption{
-  caption-side: inherit;
-  color: $text;
-  padding: $sard-spacer-6 $sard-spacer-10
+// ==========================
+// Inverted(dark) table
+.table-sard.table-dark{
+  background-color: $sard-heading-bg;
+  margin-bottom: 0;
+}
+.table-sard.table-dark thead th{
+  background-color: $sard-table-dark-head-bg;
 }
 
-// Hover, Striped and Bordered Tables
+// Hoverable table
 .table-sard.table-hover tbody tr:hover{
   background-color: $sa-grey-04;
 }
+
+// Striped table
 .table-sard.table-striped{
   margin-bottom: 0;
 }
@@ -68,6 +132,7 @@
   background-color: $sa-grey-04;
 }
 
+// Bordered table
 .table-sard.table-bordered{
   border: none;
 }
@@ -83,4 +148,76 @@
 }
 .table-sard.table-bordered tr:last-child td, .table-sard.table-bordered tr:last-child th{
   border-bottom: none;
+}
+
+// Small table 
+.table.table-sard.table-sm>tbody>tr>td, 
+.table.table-sard.table-sm>tbody>tr>th, 
+.table.table-sard.table-sm>tfoot>tr>td, 
+.table.table-sard.table-sm>tfoot>tr>th, 
+.table.table-sard.table-sm>thead>tr>td, 
+.table.table-sard.table-sm>thead>tr>th{
+  padding: $sard-spacer-3;
+}
+.table.table-sard.table-sm>tbody>tr>td:first-child, 
+.table.table-sard.table-sm>tbody>tr>th:first-child, 
+.table.table-sard.table-sm>tfoot>tr>td:first-child, 
+.table.table-sard.table-sm>tfoot>tr>th:first-child, 
+.table.table-sard.table-sm>thead>tr>td:first-child, 
+.table.table-sard.table-sm>thead>tr>th:first-child{
+  padding-left: $sard-spacer-10;
+}
+.table.table-sard.table-sm>tbody>tr>td:last-child, 
+.table.table-sard.table-sm>tbody>tr>th:last-child, 
+.table.table-sard.table-sm>tfoot>tr>td:last-child, 
+.table.table-sard.table-sm>tfoot>tr>th:last-child, 
+.table.table-sard.table-sm>thead>tr>td:last-child, 
+.table.table-sard.table-sm>thead>tr>th:last-child{
+  padding-right: $sard-spacer-10;
+}
+
+// Table head options
+.table.table-sard .thead-dark th{
+  background-color: $sa-grey-18;
+  color: white;
+}
+
+.table.table-sard .thead-light th{
+  background-color: $sa-grey-12;
+  color: white;
+}
+
+.table.table-sard .thead-white th{
+  background-color: white;
+  color: $text;
+}
+.table.table-sard .thead-white th:first-child{
+  border-left: 1px solid $sa-grey-04;
+  padding-left: 9px;
+}
+.table.table-sard .thead-white th:last-child{
+  border-right: 1px solid $sa-grey-04;
+  padding-right: 9px;
+}
+
+.table.table-sard .thead-info th{
+  background-color: $sa-info;
+  color: white;
+}
+
+// ==========================
+// Captions
+.table-sard caption{
+  caption-side: top;
+  color: $text;
+  padding: $sard-spacer-6 $sard-spacer-10
+}
+.table-sard caption.caption-bottom{
+  caption-side: bottom;
+  border-top: 1px solid white;
+}
+.table-sard.table-dark caption{
+  background-color: $sard-heading-bg;
+  color: white;
+  padding: $sard-spacer-6 $sard-spacer-10
 }
