@@ -8,3 +8,17 @@ legend{
 label {
     margin-bottom: .25rem;
 }
+
+// Form Control =============
+.form-control {
+  color: $text;
+  border: 1px solid $sa-grey-08;
+  border-radius: .375rem;
+}
+
+.form-control:focus {
+  color: $text;
+  border-color: $client;
+  -webkit-box-shadow: 0 0 0 0.2rem $client;
+  box-shadow: 0 0 0 0.2rem $client;
+}
