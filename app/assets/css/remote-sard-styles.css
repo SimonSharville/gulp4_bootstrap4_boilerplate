@@ -13756,6 +13756,13 @@ label {
   box-shadow: 0 0 0 0.2rem #00B2B2;
 }
 
+.custom-select:focus {
+  border-color: #00B2B2;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem #00B2B2;
+  box-shadow: 0 0 0 0.2rem #00B2B2;
+}
+
 fieldset {
   position: relative;
   display: -webkit-box;

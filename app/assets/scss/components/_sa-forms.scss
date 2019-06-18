@@ -22,3 +22,10 @@ label {
   -webkit-box-shadow: 0 0 0 0.2rem $client;
   box-shadow: 0 0 0 0.2rem $client;
 }
+
+.custom-select:focus {
+  border-color: $client;
+    outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem $client;
+  box-shadow: 0 0 0 0.2rem $client;
+}
