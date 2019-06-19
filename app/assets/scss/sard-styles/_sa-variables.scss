@@ -28,6 +28,7 @@ $sard-spacer-6:              .375rem;
 $sard-spacer-8:              .5rem;
 $sard-spacer-10:             .625rem;
 $sard-spacer-12:             .75rem;
+$sard-spacer-14:             .875rem;
 $sard-spacer-16:             1rem;
 
 $sard-spacer-y:              .25rem; // Top to Bottom // 4px
@@ -75,7 +76,24 @@ $sard-footer-bg:             $sard-heading-bg !default;
 
 
 
+// Remove outer glow from Focus =====================================
 
+textarea:focus, 
+select:focus, 
+input:focus, 
+button:focus, 
+.navbar-brand:focus,
+.nav-link:focus,
+.nav-item:focus, 
+.dropdown-item:focus, 
+.dropdown:focus, 
+.dropdown-menu:focus {
+  outline: none!important;  
+  outline: -webkit-focus-ring-color none!important;
+  outline-color: -webkit-focus-ring-color!important;
+  outline-style: none!important;
+  outline-width: none!important;
+}
 // ==================================================================
 
 // Global UI Variables
