@@ -55,9 +55,14 @@ BS Components
 <a aria-disabled='true' class='nav-link disabled' href='#' tabindex='-1'>Disabled</a>
 </li>
 </ul>
-<form class='form-inline my-2 my-lg-0'>
-<input aria-label='Search' class='form-control mr-sm-2' placeholder='Search' type='search'>
-<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Search</button>
+<!-- %form.form-inline -->
+<!-- %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/ -->
+<!-- %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search -->
+<form class='form-inline input-group searchbar-sard'>
+<input aria-label='Search' class='form-control' placeholder='Search' type='search'>
+<div class='input-group-append'>
+<button class='btn btn-navbar' type='submit'>Search</button>
+</div>
 </form>
 </div>
 </div>

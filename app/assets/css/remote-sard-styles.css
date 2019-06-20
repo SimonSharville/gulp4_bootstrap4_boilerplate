@@ -12915,6 +12915,42 @@ b, strong, .bold, .strong {
   border-radius: 2rem;
 }
 
+.navbar-sard .searchbar-sard.input-group {
+  width: initial;
+}
+
+.navbar-sard .searchbar-sard input {
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  border-color: transparent;
+}
+
+.navbar-sard .searchbar-sard .form-control:focus {
+  color: #211f0f;
+  border-color: #001919;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-sard .searchbar-sard .btn-navbar {
+  background-color: #006666;
+  color: white !important;
+}
+
+.navbar-sard .searchbar-sard .btn-navbar:focus {
+  background-color: #004c4c;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-sard .searchbar-sard .btn-navbar:hover {
+  background-color: #004c4c;
+}
+
+.navbar-sard .searchbar-sard .btn-navbar:active {
+  background-color: #003333;
+}
+
 .alert {
   position: relative;
   padding: 0.75rem 0.625rem;

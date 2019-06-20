@@ -2,3 +2,35 @@
 
 // Base styles
 
+.navbar-sard .searchbar-sard.input-group{
+  width: initial;
+}
+.navbar-sard .searchbar-sard input{
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  border-color: transparent;
+}
+
+.navbar-sard .searchbar-sard .form-control:focus {
+    color: #211f0f;
+    border-color: darken($sa-navbar-bg, 30%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-sard .searchbar-sard .btn-navbar{
+  background-color: darken($sa-navbar-bg, 15%);
+  color: white!important;
+  &:focus{
+    background-color: darken($sa-navbar-bg, 20%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  &:hover{
+    background-color: darken($sa-navbar-bg, 20%);
+  }
+  &:active{
+    background-color: darken($sa-navbar-bg, 25%);
+  }
+}
+
