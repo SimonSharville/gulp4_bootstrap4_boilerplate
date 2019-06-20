@@ -12915,6 +12915,11 @@ b, strong, .bold, .strong {
   border-radius: 2rem;
 }
 
+.btn-xs {
+  padding: 0 0.375rem;
+  font-size: .75rem;
+}
+
 .navbar-sard .searchbar-sard.input-group {
   width: initial;
 }
