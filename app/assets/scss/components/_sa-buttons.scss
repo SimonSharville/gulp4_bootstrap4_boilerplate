@@ -4,9 +4,160 @@
 
 .btn{
   border-radius: 2rem;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow:    0px 1px 1px 0px rgba(0,0,0,0.2);
+  box-shadow:         0px 1px 1px 0px rgba(0,0,0,0.2);
 }
 
 .btn-xs{
   padding: 0 $sard-spacer-6;
   font-size: .75rem;
+}
+
+.btn-client{
+  background-color: $client;
+  color: white!important;
+  &:hover { 
+    background-color: darken($client, 5%); 
+  }
+  &:active {
+    background-color: darken($client, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($client, .25);
+  }
+}
+
+.btn-client-dark{
+  background-color: $client-dark;
+  color: white!important;
+  &:hover { 
+    background-color: darken($client-dark, 5%); 
+  }
+  &:active {
+    background-color: darken($client-dark, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($client-dark, .25);
+  }
+}
+
+.btn-client-2{
+  background-color: $client-2;
+  color: white!important;
+  &:hover { 
+    background-color: darken($client-2, 5%); 
+  }
+  &:active {
+    background-color: darken($client-2, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($client-2, .25);
+  }
+}
+
+.btn-client-2-dark{
+  background-color: $client-2-dark;
+  color: white!important;
+  &:hover { 
+    background-color: darken($client-2-dark, 5%); 
+  }
+  &:active {
+    background-color: darken($client-2-dark, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($client-2-dark, .25);
+  }
+}
+
+
+.btn-admin{
+  background-color: $admin;
+  color: white!important;
+  &:hover { 
+    background-color: darken($admin, 5%); 
+  }
+  &:active {
+    background-color: darken($admin, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($admin, .25);
+  }
+}
+
+.btn-admin-dark{
+  background-color: $admin-dark;
+  color: white!important;
+  &:hover { 
+    background-color: darken($admin-dark, 5%); 
+  }
+  &:active {
+    background-color: darken($admin-dark, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($admin-dark, .25);
+  }
+}
+
+.btn-admin-2{
+  background-color: $admin-2;
+  color: white!important;
+  &:hover { 
+    background-color: darken($admin-2, 5%); 
+  }
+  &:active {
+    background-color: darken($admin-2, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($admin-2, .25);
+  }
+}
+
+.btn-admin-2-dark{
+  background-color: $admin-2-dark;
+  color: white!important;
+  &:hover { 
+    background-color: darken($admin-2-dark, 5%); 
+  }
+  &:active {
+    background-color: darken($admin-2-dark, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($admin-2-dark, .25);
+  }
+}
+
+$btn-default: $sa-grey-14;
+.btn-default{
+  background-color: $btn-default;
+  color: white!important;
+  &:hover { 
+    background-color: darken($btn-default, 5%); 
+  }
+  &:active {
+    background-color: darken($btn-default, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($btn-default, .25);
+  }
+}
+
+// Button Groups ================================
+.btn-group .btn{
+  box-shadow: none;
+}
+.btn-group{
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow:    0px 1px 1px 0px rgba(0,0,0,0.2);
+  box-shadow:         0px 1px 1px 0px rgba(0,0,0,0.2);
 }

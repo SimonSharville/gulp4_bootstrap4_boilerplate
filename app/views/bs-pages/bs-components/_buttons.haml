@@ -37,13 +37,32 @@
 
 %hr
 
+%h4 SARD button colours
+%button.btn.btn-client{:type => "button"} .btn-client
+%button.btn.btn-client-dark{:type => "button"} .btn-client-dark
+%button.btn.btn-client-2{:type => "button"} .btn-client-2
+%button.btn.btn-client-2-dark{:type => "button"} .btn-client-2-dark
+%br
+%br
+%button.btn.btn-admin{:type => "button"} .btn-admin
+%button.btn.btn-admin-dark{:type => "button"} .btn-admin-dark
+%button.btn.btn-admin-2{:type => "button"} .btn-admin-2
+%button.btn.btn-admin-2-dark{:type => "button"} .btn-admin-2-dark
+%br
+%br
+%button.btn.btn-default{:type => "button"} .btn-default
+
+
+%hr
+
 %h4 Checkbox and radio buttons
 
 .btn-group-toggle{"data-toggle" => "buttons"}
   %label.btn.btn-secondary.active
     %input{:autocomplete => "off", :checked => "checked", :type => "checkbox"}/
     Checked
-
+%br
+%br
 .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
   %label.btn.btn-secondary.active
     %input#option1{:autocomplete => "off", :checked => "checked", :name => "options", :type => "radio"}/
