@@ -36,6 +36,7 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 }
 
 
+
 // Dropdown Menu
 .navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
   background-color: darken($sa-navbar-bg, 25%);
@@ -75,8 +76,17 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
     margin: 0;
     margin-top: -1px;
     overflow: hidden;
-    border-top: 2px solid darken($sa-navbar-bg, 30%);;
+    border-top: 1px solid white;
 }
+
+// Dropdown header
+.dropdown-header{
+  padding: $sard-spacer-4 $sard-spacer-8 0 $sard-spacer-8;
+  color: $sa-navbar-bg;
+  font-size: 1rem;
+}
+
+
 
 // Navbar Toggler
 .navbar-sard .navbar-toggler{
@@ -98,4 +108,18 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
   background-image: $navbar-sard-toggler-icon-bg;
   font-size: 1rem;
 }
+
+// Disabled
+.navbar-sard .nav-item a.disabled{
+  color:         rgba(225, 225, 225, 0.5);
+  text-decoration: line-through;
+  /*noinspection CssOverwrittenProperties*/
+  text-decoration: white line-through; /* Ignored in CSS1/CSS2 UAs */
+}
+.navbar-sard .nav-item:focus .nav-link.disabled,
+.navbar-sard .nav-item:hover .nav-link.disabled {
+  color:         rgba(225, 225, 225, 0.5);
+  background-color: $sa-navbar-bg; 
+}
+
 

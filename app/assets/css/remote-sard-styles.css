@@ -12885,7 +12885,13 @@ b, strong, .bold, .strong {
   margin: 0;
   margin-top: -1px;
   overflow: hidden;
-  border-top: 2px solid #001919;
+  border-top: 1px solid white;
+}
+
+.dropdown-header {
+  padding: 0.25rem 0.5rem 0 0.5rem;
+  color: #00B2B2;
+  font-size: 1rem;
 }
 
 .navbar-sard .navbar-toggler {
@@ -12909,6 +12915,21 @@ b, strong, .bold, .strong {
 .navbar-sard .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   font-size: 1rem;
+}
+
+.navbar-sard .nav-item a.disabled {
+  color: rgba(225, 225, 225, 0.5);
+  text-decoration: line-through;
+  /*noinspection CssOverwrittenProperties*/
+  -webkit-text-decoration: white line-through;
+  text-decoration: white line-through;
+  /* Ignored in CSS1/CSS2 UAs */
+}
+
+.navbar-sard .nav-item:focus .nav-link.disabled,
+.navbar-sard .nav-item:hover .nav-link.disabled {
+  color: rgba(225, 225, 225, 0.5);
+  background-color: #00B2B2;
 }
 
 .btn {
