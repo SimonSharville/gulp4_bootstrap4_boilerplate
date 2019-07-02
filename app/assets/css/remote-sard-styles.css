@@ -689,11 +689,6 @@
   font-weight: 400;
 }
 
-a {
-  -webkit-transition: all 320ms ease;
-  transition: all 320ms ease;
-}
-
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -12204,6 +12199,49 @@ a.text-dark:hover, a.text-dark:focus {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+a {
+  -webkit-transition: all 320ms ease;
+  transition: all 320ms ease;
+  color: #00B2B2;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #007f7f;
+  text-decoration: none;
+}
+
+a:active {
+  color: #004c4c;
+  text-decoration: none;
+}
+
+.card-header a:focus, .card-header a:hover,
+.card-footer a:focus,
+.card-footer a:hover,
+.panel-heading a:focus,
+.panel-heading a:hover,
+.panel-header a:focus,
+.panel-header a:hover,
+.panel-footer a:focus,
+.panel-footer a:hover,
+legend a:focus,
+legend a:hover,
+.form-footer a:focus,
+.form-footer a:hover {
+  color: #00cccc;
+}
+
+.card-header a:active,
+.card-footer a:active,
+.panel-heading a:active,
+.panel-header a:active,
+.panel-footer a:active,
+legend a:active,
+.form-footer a:active {
+  color: #00e5e5;
 }
 
 textarea:focus,

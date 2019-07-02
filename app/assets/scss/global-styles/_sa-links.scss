@@ -2,4 +2,34 @@
 
 a{
   transition: all 320ms ease;
+  color: $client;
+  text-decoration: none;
+  &:focus,
+  &:hover{
+    color: darken($client, 10%);
+    text-decoration: none;
+  } 
+  &:active{
+    color: darken($client, 20%);
+    text-decoration: none;
+  }
 }
+
+// Cards / Panels / Fieldsets
+.card-header,
+.card-footer,
+.panel-heading,
+.panel-header,
+.panel-footer,
+legend,
+.form-footer{
+  a{
+    &:focus,
+    &:hover{
+      color: lighten($client, 5%);
+    } 
+    &:active{
+      color: lighten($client, 10%);
+    }
+  }
+} 

@@ -3,7 +3,6 @@
 // Sard Global
 @import 'global-styles/sa-colours';
 @import 'global-styles/sa-icons';
-@import 'global-styles/sa-links';
 @import 'global-styles/sa-scrollbars';
 
 
@@ -14,6 +13,7 @@
 
 
 // Sard Styles
+@import 'global-styles/sa-links';
 @import 'sard-styles/sa-variables';
 @import 'sard-styles/typography/sa-typography';
 
