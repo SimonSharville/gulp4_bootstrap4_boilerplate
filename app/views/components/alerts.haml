@@ -1,77 +1,93 @@
-//=include /../includes/_head.haml
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Gulp 4, Bootstrap 4
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/remote-sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body
+    //=include ../includes/_navbar.haml
 
-.container
-  .row
-    .col
-      %h1 Alerts
+    .container
+      .row
+        .col
+          %h1 Alerts 2
 
-      .alert.alert-primary{:role => "alert"}
-        A simple primary alert—check it out! 
-      .alert.alert-secondary{:role => "alert"}
-        A simple secondary alert—check it out!
-      .alert.alert-success{:role => "alert"}
-        A simple success alert—check it out!
-      .alert.alert-danger{:role => "alert"}
-        A simple danger alert—check it out!
-      .alert.alert-warning{:role => "alert"}
-        A simple warning alert—check it out!
-      .alert.alert-info{:role => "alert"}
-        A simple info alert—check it out!
-      .alert.alert-light{:role => "alert"}
-        A simple light alert—check it out!
-      .alert.alert-dark{:role => "alert"}
-        A simple dark alert—check it out!
+          .alert.alert-primary{:role => "alert"}
+            A simple primary alert—check it out! 
+          .alert.alert-secondary{:role => "alert"}
+            A simple secondary alert—check it out!
+          .alert.alert-success{:role => "alert"}
+            A simple success alert—check it out!
+          .alert.alert-danger{:role => "alert"}
+            A simple danger alert—check it out!
+          .alert.alert-warning{:role => "alert"}
+            A simple warning alert—check it out!
+          .alert.alert-info{:role => "alert"}
+            A simple info alert—check it out!
+          .alert.alert-light{:role => "alert"}
+            A simple light alert—check it out!
+          .alert.alert-dark{:role => "alert"}
+            A simple dark alert—check it out!
 
-      %hr
+          %hr
 
-      %h4 Additional content
-      .alert.alert-success{:role => "alert"}
-        %h4.alert-heading Well done!
-        %p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-        %hr/
-        %p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+          %h4 Additional content
+          .alert.alert-success{:role => "alert"}
+            %h4.alert-heading Well done!
+            %p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+            %hr/
+            %p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
 
-      %hr
-      %h4 Dismissible Alerts
-      .alert.alert-primary.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close
-      .alert.alert-secondary.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close 
-      .alert.alert-success.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close 
-      .alert.alert-danger.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close 
-      .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close 
-      .alert.alert-info.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close 
-      .alert.alert-light.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close 
-      .alert.alert-dark.alert-dismissible.fade.show{:role => "alert"}
-        %strong Holy guacamole!
-        You should check in on some of those fields below.
-        %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          .fa-icon.alert-close 
+          %hr
+          %h4 Dismissible Alerts
+          .alert.alert-primary.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close
+          .alert.alert-secondary.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close 
+          .alert.alert-success.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close 
+          .alert.alert-danger.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close 
+          .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close 
+          .alert.alert-info.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close 
+          .alert.alert-light.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close 
+          .alert.alert-dark.alert-dismissible.fade.show{:role => "alert"}
+            %strong Holy guacamole!
+            You should check in on some of those fields below.
+            %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+              .fa-icon.alert-close 
 
-//=include /../includes/_base.haml
+    .container
+      .row
+        .col
+          %h2 Footer
+
+    / Scripts ================================
+
+    %script{:src => "../assets/js/remote-sard-scripts.min.js"}
