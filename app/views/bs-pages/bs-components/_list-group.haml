@@ -1,4 +1,7 @@
 .row
+  .col-sm-12
+    %h1#list-group.bs-anchor List Groups
+.row
   .col-sm-6
     %h4 Basic example
     %ul.list-group
@@ -66,29 +69,34 @@
         %span.badge.badge-primary.badge-pill 1
 
 %hr
-%h4 Custom content
-.list-group
-  %a.list-group-item.list-group-item-action.active{:href => ""}
-    .d-flex.w-100.justify-content-between
-      %h5.mb-1 List group item heading
-      %small 3 days ago
-    %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-    %small Donec id elit non mi porta.
-  %a.list-group-item.list-group-item-action{:href => ""}
-    .d-flex.w-100.justify-content-between
-      %h5.mb-1 List group item heading
-      %small.text-muted 3 days ago
-    %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-    %small.text-muted Donec id elit non mi porta.
-  %a.list-group-item.list-group-item-action{:href => ""}
-    .d-flex.w-100.justify-content-between
-      %h5.mb-1 List group item heading
-      %small.text-muted 3 days ago
-    %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-    %small.text-muted Donec id elit non mi porta.
+
+.row
+  .col-sm-12
+    %h4 Custom content
+    .list-group
+      %a.list-group-item.list-group-item-action.active{:href => ""}
+        .d-flex.w-100.justify-content-between
+          %h5.mb-1 List group item heading
+          %small 3 days ago
+        %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        %small Donec id elit non mi porta.
+      %a.list-group-item.list-group-item-action{:href => ""}
+        .d-flex.w-100.justify-content-between
+          %h5.mb-1 List group item heading
+          %small.text-muted 3 days ago
+        %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        %small.text-muted Donec id elit non mi porta.
+      %a.list-group-item.list-group-item-action{:href => ""}
+        .d-flex.w-100.justify-content-between
+          %h5.mb-1 List group item heading
+          %small.text-muted 3 days ago
+        %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        %small.text-muted Donec id elit non mi porta.
 
 %hr
-%h4 JavaScript behavior
+.row
+  .col-sm-12
+    %h4 JavaScript behavior
 .row
   .col-4
     #list-tab.list-group{:role => "tablist"}

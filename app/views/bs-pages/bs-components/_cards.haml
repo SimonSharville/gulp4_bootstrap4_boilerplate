@@ -1,78 +1,87 @@
-.card.card-sard{:style => "width: 18rem;"}
-  %img.card-img-top{:alt => "...", :src => "..."}/
-  .card-body
-    %h5.card-title Card title
-    %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-  %ul.list-group.list-group-flush
-    %li.list-group-item Cras justo odio
-    %li.list-group-item Dapibus ac facilisis in
-    %li.list-group-item Vestibulum at eros
-  .card-body
-    %a.card-link{:href => "#"} Card link
-    %a.card-link{:href => "#"} Another link
-
-%hr
-.card.card-sard.text-center
-  .card-header
-    Featured
-  .card-body
-    %h5.card-title Special title treatment
-    %p.card-text With supporting text below as a natural lead-in to additional content.
-    %a.btn.btn-primary{:href => "#"} Go somewhere
-  .card-footer.text-muted
-    2 days ago
-
-%hr
-
 .row
-  .col-sm-6
-    .card.card-sard
-      .card-body
-        %h5.card-title Special title treatment
-        %p.card-text With supporting text below as a natural lead-in to additional content.
-        %a.btn.btn-primary{:href => "#"} Go somewhere
-  .col-sm-6
-    .card.card-sard
-      .card-body
-        %h5.card-title Special title treatment
-        %p.card-text With supporting text below as a natural lead-in to additional content.
-        %a.btn.btn-primary{:href => "#"} Go somewhere
+  .col-sm-12
+    %h1#cards.bs-anchor Cards
 
-%hr
-
-%h4 Navigation
-.card.card-sard.text-center
-  .card-header
-    %ul.nav.nav-tabs.card-header-tabs
-      %li.nav-item
-        %a.nav-link.active{:href => "#"} Active
-      %li.nav-item
-        %a.nav-link{:href => "#"} Link
-      %li.nav-item
-        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-  .card-body
-    %h5.card-title Special title treatment
-    %p.card-text With supporting text below as a natural lead-in to additional content.
-    %a.btn.btn-primary{:href => "#"} Go somewhere
-
-%hr
-
-%h4 Horizontal
-.card.card-sard{:style => "max-width: 540px;"}
-  .row.no-gutters
-    .col-md-4
-      %img.card-img{:alt => "...", :src => "..."}/
-    .col-md-8
+    .card.card-sard{:style => "width: 18rem;"}
+      %img.card-img-top{:alt => "...", :src => "..."}/
       .card-body
         %h5.card-title Card title
-        %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-        %p.card-text
-          %small.text-muted Last updated 3 mins ago
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+      %ul.list-group.list-group-flush
+        %li.list-group-item Cras justo odio
+        %li.list-group-item Dapibus ac facilisis in
+        %li.list-group-item Vestibulum at eros
+      .card-body
+        %a.card-link{:href => "#"} Card link
+        %a.card-link{:href => "#"} Another link
+
+    %hr
+    .card.card-sard.text-center
+      .card-header
+        Featured
+      .card-body
+        %h5.card-title Special title treatment
+        %p.card-text With supporting text below as a natural lead-in to additional content.
+        %a.btn.btn-primary{:href => "#"} Go somewhere
+      .card-footer.text-muted
+        2 days ago
+
+    %hr
+
+.row
+  .col-sm-6
+    .card.card-sard
+      .card-body
+        %h5.card-title Special title treatment
+        %p.card-text With supporting text below as a natural lead-in to additional content.
+        %a.btn.btn-primary{:href => "#"} Go somewhere
+  .col-sm-6
+    .card.card-sard
+      .card-body
+        %h5.card-title Special title treatment
+        %p.card-text With supporting text below as a natural lead-in to additional content.
+        %a.btn.btn-primary{:href => "#"} Go somewhere
 
 %hr
 
-%h4 Card Styles
 .row
+  .col-12
+    %h4 Navigation
+    .card.card-sard.text-center
+      .card-header
+        %ul.nav.nav-tabs.card-header-tabs
+          %li.nav-item
+            %a.nav-link.active{:href => "#"} Active
+          %li.nav-item
+            %a.nav-link{:href => "#"} Link
+          %li.nav-item
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
+      .card-body
+        %h5.card-title Special title treatment
+        %p.card-text With supporting text below as a natural lead-in to additional content.
+        %a.btn.btn-primary{:href => "#"} Go somewhere
+
+%hr
+
+.row
+  .col-12
+    %h4 Horizontal
+    .card.card-sard{:style => "max-width: 540px;"}
+      .row.no-gutters
+        .col-md-4
+          %img.card-img{:alt => "...", :src => "..."}/
+        .col-md-8
+          .card-body
+            %h5.card-title Card title
+            %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            %p.card-text
+              %small.text-muted Last updated 3 mins ago
+
+%hr
+
+.row
+  .col-sm-12
+    %h4 Card Styles
   .col-sm-6
     .card.card-sard
       .card-header Card Sard / Default
@@ -343,109 +352,114 @@
 
 %hr
 
+.row
+  .col-12
+    %h4 Card Groups
+    .card-group
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        .card-footer
+          %small.text-muted Last updated 3 mins ago
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This card has supporting text below as a natural lead-in to additional content.
+        .card-footer
+          %small.text-muted Last updated 3 mins ago
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+        .card-footer
+          %small.text-muted Last updated 3 mins ago
 
-%h4 Card Groups
-.card-group
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-    .card-footer
-      %small.text-muted Last updated 3 mins ago
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This card has supporting text below as a natural lead-in to additional content.
-    .card-footer
-      %small.text-muted Last updated 3 mins ago
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-    .card-footer
-      %small.text-muted Last updated 3 mins ago
-
-
-%hr
-
-%h4 Card Decks
-.card-deck
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-    .card-footer
-      %small Last updated 3 mins ago
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This card has supporting text below as a natural lead-in to additional content.
-    .card-footer
-      %small Last updated 3 mins ago
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-    .card-footer
-      %small.text-muted .text-muted
 
 %hr
 
-%h4 Card Columns
-.card-columns
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title that wraps to a new line
-      %p.card-text This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-  .card.card-sard.p-3
-    %blockquote.blockquote.mb-0.card-body
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-      %footer.blockquote-footer
-        %small.text-muted
-          Someone famous in
-          %cite{:title => "Source Title"} Source Title
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This card has supporting text below as a natural lead-in to additional content.
-      %p.card-text
-        %small.text-muted Last updated 3 mins ago
-  .card.card-sard.text-center.p-3
-    %blockquote.blockquote.mb-0
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
-      %footer.blockquote-footer
-        %small
-          Someone famous in
-          %cite{:title => "Source Title"} Source Title
-  .card.card-sard.text-center
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This card has a regular title and short paragraphy of text below it.
-      %p.card-text
-        %small.text-muted Last updated 3 mins ago
-  .card.card-sard
-    %img.card-img-top{:alt => "...", :src => "..."}/
-  .card.card-sard.p-3.text-right
-    %blockquote.blockquote.mb-0
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-      %footer.blockquote-footer
-        %small.text-muted
-          Someone famous in
-          %cite{:title => "Source Title"} Source Title
-  .card.card-sard
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.
-      %p.card-text
-        %small.text-muted Last updated 3 mins ago
+.row
+  .col-12
+    %h4 Card Decks
+    .card-deck
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        .card-footer
+          %small Last updated 3 mins ago
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This card has supporting text below as a natural lead-in to additional content.
+        .card-footer
+          %small Last updated 3 mins ago
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+        .card-footer
+          %small.text-muted .text-muted
+
+%hr
+
+.row
+  .col-12
+    %h4 Card Columns
+    .card-columns
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title that wraps to a new line
+          %p.card-text This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      .card.card-sard.p-3
+        %blockquote.blockquote.mb-0.card-body
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          %footer.blockquote-footer
+            %small.text-muted
+              Someone famous in
+              %cite{:title => "Source Title"} Source Title
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This card has supporting text below as a natural lead-in to additional content.
+          %p.card-text
+            %small.text-muted Last updated 3 mins ago
+      .card.card-sard.text-center.p-3
+        %blockquote.blockquote.mb-0
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+          %footer.blockquote-footer
+            %small
+              Someone famous in
+              %cite{:title => "Source Title"} Source Title
+      .card.card-sard.text-center
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This card has a regular title and short paragraphy of text below it.
+          %p.card-text
+            %small.text-muted Last updated 3 mins ago
+      .card.card-sard
+        %img.card-img-top{:alt => "...", :src => "..."}/
+      .card.card-sard.p-3.text-right
+        %blockquote.blockquote.mb-0
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          %footer.blockquote-footer
+            %small.text-muted
+              Someone famous in
+              %cite{:title => "Source Title"} Source Title
+      .card.card-sard
+        .card-body
+          %h5.card-title Card title
+          %p.card-text This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.
+          %p.card-text
+            %small.text-muted Last updated 3 mins ago
 
 
 
