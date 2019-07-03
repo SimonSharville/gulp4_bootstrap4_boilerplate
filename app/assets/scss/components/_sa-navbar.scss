@@ -110,6 +110,7 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 }
 
 // Disabled
+// https://stackoverflow.com/questions/1107551/css-strikethrough-different-color-from-text
 .navbar-sard .nav-item a.disabled{
   color:         rgba(225, 225, 225, 0.5);
   text-decoration: line-through;
