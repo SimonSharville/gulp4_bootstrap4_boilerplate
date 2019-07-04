@@ -19,21 +19,13 @@
 
 
 // Fonts
+// Roboto
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
 // Font Awesome Icons
-// Remote
-@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
-
-// Local - Kept as reference
-// @import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min";
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
-
+// Remote link
+@import url("https://use.fontawesome.com/releases/v5.9.0/css/all.css");
 
 // Sard Icons
 @import '../sard-icons/styles';

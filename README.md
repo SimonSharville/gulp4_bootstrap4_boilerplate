@@ -12,7 +12,34 @@ TO USE
   and type:
   gulp
 
-  Always work within the 'app' folder, this will render into the 'div' and the the 'docs' folder. The 'docs' folder will be the live stuff.
+  
+HOW TO ==============================================================
+Always work within the 'app' folder, this will render into the 'docs' folder. 
+The 'docs' folder will be the live stuff.
+
+
+TO DUPLICATE PROJECT ================================================
+    To Duplicate poject, Copy project, rename it and in terminal type:
+      npm install
+
+
+
+BUILD NOTES =========================================================
+This was created using Gulp 4. 
+Bootstrap is installed in the node_modules through gulp.
+Bootstrap Variables Overrides and other Overrides are creates in the SCSS folder.
+Roboto is installed by linking to their googleapis.com.
+FontAwesome is installed by linking to their cdn.
+SARD Icons are self built and linked to the 'assets/sard-icons' folder in docs.
+
+Gulp compiles:
+- All SCSS files into 'remote-sard-styles.min.css' in the 'docs/assets/css' folder.
+- All JS files into 'remote-sard-scripts' in the 'docs/assets/js' folder.
+-All .haml files into .html files in the 'docs' folder.
+
+The 'docs' folder is the public folder (GitHub Pages) on github.
+
+HISTORY =============================================================
 
 
 Based on the following tutorials: 
@@ -80,9 +107,7 @@ Install Process
     npm rm gulp-NAME                                    (To remove a package)
 
 
-To Duplicate Project
-    To Duplicate poject, Copy project, rename it and in terminal type:
-      npm install
+
 
 SARD Styles and Scripts =======
   This is a Boilerplate for SARD styles, using Bootstrap 4 with Roboto font.
