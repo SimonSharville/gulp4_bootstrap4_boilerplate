@@ -13,7 +13,7 @@ TO USE
   gulp
 
   
-HOW TO ==============================================================
+HOW TO USE ==========================================================
 Always work within the 'app' folder, this will render into the 'docs' folder. 
 The 'docs' folder will be the live stuff.
 
@@ -39,8 +39,9 @@ Gulp compiles:
 
 The 'docs' folder is the public folder (GitHub Pages) on github.
 
-HISTORY =============================================================
 
+
+HISTORY =============================================================
 
 Based on the following tutorials: 
   https://www.youtube.com/watch?v=1rw9MfIleEg
@@ -106,8 +107,11 @@ Install Process
     NOTES
     npm rm gulp-NAME                                    (To remove a package)
 
+    UPDATING PACKAGES
+    https://bytearcher.com/articles/using-npm-update-and-npm-outdated-to-update-dependencies/
+    https://60devs.com/npm-install-specific-version.html
+    npm update                                          (Updates any out of date packages)
+    npm outdated                                        (Checks for outdated packages)
+    npm install PACKAGENAME@latest --save               (Updates specific page to latest) 
 
 
-
-SARD Styles and Scripts =======
-  This is a Boilerplate for SARD styles, using Bootstrap 4 with Roboto font.
