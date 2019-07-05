@@ -12853,7 +12853,7 @@ b, strong, .bold, .strong {
 
 /* change the background color */
 .navbar-sard {
-  background-color: #BF0000;
+  background-color: #00B2B2;
   padding: 0rem 1rem;
 }
 
@@ -12873,22 +12873,22 @@ b, strong, .bold, .strong {
 .navbar-sard .nav-item:focus .nav-link,
 .navbar-sard .nav-item:hover .nav-link {
   color: #ffffff;
-  background-color: #8c0000;
+  background-color: #007f7f;
 }
 
 .navbar-sard .nav-item.active .nav-link {
-  background-color: #590000;
+  background-color: #004c4c;
   /* add background-color to active links */
 }
 
 .navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle {
-  background-color: #400000;
+  background-color: #003333;
 }
 
 .navbar-sard .dropdown-menu {
   margin: 0;
   padding: 0;
-  background-color: #590000;
+  background-color: #004c4c;
   color: white;
   border: none;
   border-top-left-radius: 0;
@@ -12899,19 +12899,19 @@ b, strong, .bold, .strong {
 .navbar-sard .dropdown-menu .dropdown-item {
   padding: 0.25rem 0.5rem;
   color: white;
-  border-bottom: 1px solid #BF0000;
+  border-bottom: 1px solid #00B2B2;
 }
 
 .navbar-sard .dropdown-menu .dropdown-item:focus {
-  background-color: #400000;
+  background-color: #003333;
 }
 
 .navbar-sard .dropdown-menu .dropdown-item:hover {
-  background-color: #400000;
+  background-color: #003333;
 }
 
 .navbar-sard .dropdown-menu .dropdown-item:active {
-  background-color: #260000;
+  background-color: #001919;
 }
 
 .navbar-sard .dropdown-menu .dropdown-item:last-child {
@@ -12928,26 +12928,26 @@ b, strong, .bold, .strong {
 
 .dropdown-header {
   padding: 0.25rem 0.5rem 0 0.5rem;
-  color: #BF0000;
+  color: #00B2B2;
   font-size: 1rem;
 }
 
 .navbar-sard .navbar-toggler {
-  background-color: #590000;
+  background-color: #004c4c;
   border: none;
   padding: 0 0.25rem;
 }
 
 .navbar-sard .navbar-toggler:focus {
-  background-color: #400000;
+  background-color: #003333;
 }
 
 .navbar-sard .navbar-toggler:hover {
-  background-color: #400000;
+  background-color: #003333;
 }
 
 .navbar-sard .navbar-toggler:active {
-  background-color: #260000;
+  background-color: #001919;
 }
 
 .navbar-sard .navbar-toggler .navbar-toggler-icon {
@@ -12967,7 +12967,7 @@ b, strong, .bold, .strong {
 .navbar-sard .nav-item:focus .nav-link.disabled,
 .navbar-sard .nav-item:hover .nav-link.disabled {
   color: rgba(225, 225, 225, 0.5);
-  background-color: #BF0000;
+  background-color: #00B2B2;
 }
 
 .btn {
@@ -13166,28 +13166,28 @@ b, strong, .bold, .strong {
 
 .navbar-sard .searchbar-sard .form-control:focus {
   color: #211f0f;
-  border-color: #260000;
+  border-color: #001919;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .navbar-sard .searchbar-sard .btn-navbar {
-  background-color: #730000;
+  background-color: #006666;
   color: white !important;
 }
 
 .navbar-sard .searchbar-sard .btn-navbar:focus {
-  background-color: #590000;
+  background-color: #004c4c;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .navbar-sard .searchbar-sard .btn-navbar:hover {
-  background-color: #590000;
+  background-color: #004c4c;
 }
 
 .navbar-sard .searchbar-sard .btn-navbar:active {
-  background-color: #400000;
+  background-color: #003333;
 }
 
 .alert {
