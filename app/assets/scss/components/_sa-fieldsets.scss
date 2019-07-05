@@ -47,6 +47,20 @@ fieldset{
   & .border-bottom, .border-top{
     border-color: white!important;
   }
+  & .form-footer{
+    min-width: calc(100% + 2px );
+
+    margin: 0 -1px;
+    overflow: hidden;
+
+    padding: $sard-heading-padding;
+
+    background-color: $sard-heading-bg;
+    color: $sard-heading-text-color;
+
+    border-bottom-left-radius: $sard-border-radius;
+    border-bottom-right-radius: $sard-border-radius;
+  }
 }
 
 .card fieldset, .panel fieldset{
