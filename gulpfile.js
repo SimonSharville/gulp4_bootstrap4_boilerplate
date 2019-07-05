@@ -62,17 +62,19 @@ function compileCSS(){
     }))
   .pipe(sourcemaps.write('./'))
   .pipe(lineec())
-  .pipe(gulp.dest('app/assets/css'))
+  .pipe(gulp.dest('docs/assets/css'))
 }
 
 function concatCSS() {
-  return gulp.src('app/assets/css/*css')
+  return gulp.src('docs/assets/css/remote-sard-styles.css')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
   .pipe(concat('remote-sard-styles.min.css'))
   .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
   .pipe(sourcemaps.write('./'))
   .pipe(lineec())
-  .pipe(gulp.dest('docs/assets/css'))
+  .pipe(gulp.dest(function (file) {
+        return file.base;
+    }))
   .pipe(browserSync.stream());
 }
 
@@ -151,7 +153,7 @@ function watch(done) {
   
   gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
-  gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
+  gulp.watch('docs/assets/css/remote-sard-styles.css', concatCSS).on('change', browserSync.reload);
   gulp.watch(jsSRC, js).on('change', browserSync.reload);
   gulp.watch('docs/assets/js/remote-sard-scripts.js', minifyJS).on('change', browserSync.reload);
   gulp.watch(imgSRC, imageDelete).on('change', browserSync.reload);
