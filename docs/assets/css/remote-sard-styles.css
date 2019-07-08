@@ -12244,6 +12244,25 @@ legend a:active,
   color: #00e5e5;
 }
 
+p.pdf a,
+a.pdf,
+p.link-pdf a,
+a.link-pdf {
+  padding-left: 18px;
+  text-indent: -1.125rem;
+  display: inline-block;
+}
+
+a.link-pdf:before,
+p.link-pdf a:before,
+a.pdf:before,
+p.pdf a:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1c1";
+  padding-right: 0.375rem;
+  color: #211F0F;
+}
+
 textarea:focus,
 select:focus,
 input:focus,
