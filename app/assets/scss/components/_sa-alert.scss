@@ -82,8 +82,7 @@ $alert-color-level:                 1 ;
 }
 
 .alert.alert-warning,
-.alert.alert-light,
-{
+.alert.alert-light {
   color: $text;
   & hr{
     border-top-color: $text;
