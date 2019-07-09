@@ -1,0 +1,177 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Bootstrap 4 Layout - Typography
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/remote-sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body
+    //=include ../navbars/_navbar-x1.haml
+
+    .container
+      .row
+        .col-sm-12
+          %h1#links.bs-anchor Links
+
+      .row
+        .col-sm-12
+          %p
+            This is an example of a standard
+            %a{href: "#/"} Text Link
+
+      %hr
+
+      .row
+        .col-sm-12
+          %h4 Links in Cards, Panels and Fieldsets
+
+        .col-sm-4
+          %h5 Links in Cards
+          .card.card-sard
+            .card-header 
+              %a{href: "#/"} Link in Card Header
+            .card-body
+              %h5.card-title 
+                %a{href: "#/"} Link in Card Title
+              %p.card-text 
+                Standard
+                %a{href: "#/"} Link in Card Text
+              %p 
+                %a{href: "#/"} Link in Card Body
+            .card-body.border-top
+              %h5.card-title
+                Link icons
+              %a.link-icon.link-pdf{href: "#/"}Direct (a.link-pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
+              %p.link-icon.link-pdf
+                %a{href: "#/"} Link within a paragraph (p.link-pdf), Some long title
+              %a.link-icon.pdf{href: "#/"}Direct (a.pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
+              %p.link-icon.pdf
+                %a{href: "#/"} Link within a paragraph (p.pdf), Some long title, so it wraps around to show the indent.
+
+            .card-footer
+              %a{href: "#/"} Link in Card Footer
+
+
+        .col-sm-4
+          %h5 Links in Panels
+          .panel.card-sard
+            .panel-header 
+              %a{href: "#/"} Link in Panel Header
+            .panel-body
+              %h5.panel-title 
+                %a{href: "#/"} Link in Panel Title
+              %p.panel-text 
+                Standard
+                %a{href: "#/"} Link in Panel Text
+              %p 
+                %a{href: "#/"} Link in Panel Body
+            .panel-footer
+              %a{href: "#/"} Link in Panel Footer
+
+
+        .col-sm-4 
+          %h5 Links in Fieldsets 
+          %fieldset.sa-fieldset
+            %legend 
+              Standard
+              %a{href: "#/"} Link in Legend
+            .form-group
+              %label
+                %a{href: "#/"} Link in Label
+              %br/
+              %p
+                Standard
+                %a{href: "#/"} Link in Form Group
+            .form-footer
+              Standard
+              %a{href: "#/"} Link in Footer
+
+        .col-sm-12
+          .card.card-sard
+            .card-header 
+              %a{href: "#/"} Links with specific icons
+            .card-body.border-bottom
+              %p
+                Link icons can be place directly onto the link, or on the containing paragraph or span. They should have the class of .link-icon
+                and either .link-NAME or .NAME . i.e 
+                %code .link-icon.link-pdf
+                or
+                %code .link-icon.pdf
+                \. They are designed so that the text of the link hangs from the icon.
+              
+            -# PDF
+            .card-body.pb-0
+              %h6.base PDFs
+            .card-body.multi-column-3-white
+              %a.link-icon.link-pdf{href: "#/"} 
+                Direct 
+                %code (a.link-icon.link-pdf) 
+                Link to pdf, this a really, really long title so it wraps onto the next line.
+              
+              %a.link-icon.pdf{href: "#/"}
+                Direct 
+                %code (a.link-icon.pdf) 
+                Link to pdf, this a really, really long title so it wraps onto the next line.
+              
+              %p.link-icon.link-pdf
+                %a{href: "#/"} 
+                  Link within a paragraph 
+                  %code (p.link-icon.link-pdf)
+                  ,  Some long title
+              
+              %p.link-icon.pdf
+                %a{href: "#/"} 
+                  Link within a paragraph 
+                  %code (p.link-icon.pdf)
+                  , Some long title, so it wraps around to show the indent.
+
+              %span.link-icon.link-pdf
+                %a{href: "#/"} 
+                  Link within a span 
+                  %code (span.link-icon.link-pdf)
+                  , Some long title, so it wraps around to show the indent.
+
+              %span.link-icon.pdf
+                %a{href: "#/"} 
+                  Link within a span 
+                  %code (span.link-icon.pdf)
+                  , Some long title, so it wraps around to show the indent.
+
+            -# DOCS
+            .card-body.pb-0.border-top
+              %h6.base DOCs, DOCMs and DOCXs
+            .card-body.multi-column-3-white
+              %a.link-icon.link-doc{href: "#/"} 
+                Direct 
+                %code (a.link-icon.link-doc) 
+              
+              %a.link-icon.doc{href: "#/"}
+                Direct 
+                %code (a.link-icon.doc) 
+              
+              %p.link-icon.link-doc
+                %a{href: "#/"} 
+                  Link within a paragraph 
+                  %code (p.link-icon.link-doc)
+              
+              %p.link-icon.doc
+                %a{href: "#/"} 
+                  Link within a paragraph 
+                  %code (p.link-icon.doc)
+
+              %span.link-icon.link-doc
+                %a{href: "#/"} 
+                  Link within a span 
+                  %code (span.link-icon.link-doc)
+
+              %span.link-icon.doc
+                %a{href: "#/"} 
+                  Link within a span 
+                  %code (span.link-icon.doc)
+
+
+
+    / Scripts ================================
+
+    %script{:src => "../assets/js/remote-sard-scripts.min.js"}

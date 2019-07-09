@@ -12254,17 +12254,39 @@ legend a:active,
   display: inline-block;
 }
 
-.link-icon > span {
-  display: inline-block;
-}
-
-a.link-pdf:before,
 p.link-pdf a:before,
+p.pdf a:before,
+a.link-pdf:before,
 a.pdf:before,
-p.pdf a:before {
+span.link-pdf a:before,
+span.pdf a:before {
   font-family: "Font Awesome 5 Free";
   content: "\f1c1";
-  padding-right: 0.375rem;
+  padding-right: 0.25rem;
+  color: #211F0F;
+}
+
+p.link-doc a:before,
+p.doc a:before,
+a.link-doc:before,
+a.doc:before,
+span.link-doc a:before,
+span.doc a:before,
+p.link-docm a:before,
+p.docm a:before,
+a.link-docm,
+a.docm,
+span.link-docm a:before,
+span.docm a:before,
+p.link-docx a:before,
+p.docx a:before,
+a.link-docx,
+a.docx,
+span.link-docx a:before,
+span.docx a:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1c2";
+  padding-right: 0.25rem;
   color: #211F0F;
 }
 

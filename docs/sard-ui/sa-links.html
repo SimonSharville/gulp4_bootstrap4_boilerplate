@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+<head>
+<title>Bootstrap 4 Layout - Typography</title>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='../assets/css/remote-sard-styles.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+<nav class='navbar fixed-top navbar-expand-lg navbar-sard'>
+<div class='container'>
+<a class='navbar-brand' href='../index.html'>Navbar</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'>
+<a class='nav-link' href='../index.html'>
+Home
+<span class='sr-only'>(current)</span>
+</a>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='sardUI' role='button'>
+Sard UI
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='../sard-ui/sa-typography.html'>Typography</a>
+<a class='dropdown-item' href='../sard-ui/sa-icons.html'>Icons</a>
+<a class='dropdown-item' href='../sard-ui/sa-colours.html'>Colours</a>
+<a class='dropdown-item' href='../sard-ui/sa-links.html'>Links</a>
+</div>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='bsComponents' role='button'>
+Components
+</a>
+<div aria-labelledby='bsComponents' class='dropdown-menu'>
+<a class='dropdown-item' href='../components/components.html#alerts'>Alerts</a>
+<a class='dropdown-item' href='../components/components.html#badges'>Badges</a>
+<a class='dropdown-item' href='../components/components.html#breadcrumbs'>Breadcrumbs</a>
+<a class='dropdown-item' href='../components/components.html#buttons'>Buttons</a>
+<a class='dropdown-item' href='../components/components.html#cards'>Cards</a>
+<a class='dropdown-item' href='../components/components.html#collapse'>Collapse</a>
+<a class='dropdown-item' href='../components/components.html#dropdowns'>Dropdowns</a>
+<a class='dropdown-item' href='../components/components.html#forms'>Forms</a>
+<a class='dropdown-item' href='../components/components.html#input-group'>Input Groups</a>
+<a class='dropdown-item' href='../components/components.html#list-group'>List Groups</a>
+<a class='dropdown-item' href='../components/components.html#modal'>Modal</a>
+<a class='dropdown-item' href='../components/components.html#navbar'>Navbar</a>
+<a class='dropdown-item' href='../components/components.html#navs'>Navs</a>
+<a class='dropdown-item' href='../components/components.html#pagination'>Pagination</a>
+<a class='dropdown-item' href='../components/components.html#popovers'>Popovers</a>
+<a class='dropdown-item' href='../components/components.html#progress'>Progress Bars</a>
+<a class='dropdown-item' href='../components/components.html#searchbars'>Searchbars</a>
+<a class='dropdown-item' href='../components/components.html#tables'>Tables</a>
+<a class='dropdown-item' href='../components/components.html#tooltips'>Tooltips</a>
+<div class='dropdown-divider'></div>
+<div class='dropdown-header'>BS3 Components</div>
+<a class='dropdown-item' href='../components/components.html#panels'>Panels</a>
+</div>
+</li>
+<li class='nav-item'>
+<a aria-disabled='true' class='nav-link disabled' href='#' tabindex='-1'>Disabled</a>
+</li>
+</ul>
+<form class='form-inline input-group searchbar-sard'>
+<input aria-label='Search' class='form-control' placeholder='Search' type='search'>
+<div class='input-group-append'>
+<button class='btn btn-navbar' type='submit'>Search</button>
+</div>
+</form>
+</div>
+</div>
+</nav>
+</header>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-12'>
+<h1 class='bs-anchor' id='links'>Links</h1>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<p>
+This is an example of a standard
+<a href='#/'>Text Link</a>
+</p>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-12'>
+<h4>Links in Cards, Panels and Fieldsets</h4>
+</div>
+<div class='col-sm-4'>
+<h5>Links in Cards</h5>
+<div class='card card-sard'>
+<div class='card-header'>
+<a href='#/'>Link in Card Header</a>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>
+<a href='#/'>Link in Card Title</a>
+</h5>
+<p class='card-text'>
+Standard
+<a href='#/'>Link in Card Text</a>
+</p>
+<p>
+<a href='#/'>Link in Card Body</a>
+</p>
+</div>
+<div class='card-body border-top'>
+<h5 class='card-title'>
+Link icons
+</h5>
+<a class='link-icon link-pdf' href='#/'>Direct (a.link-pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.</a>
+<p class='link-icon link-pdf'>
+<a href='#/'>Link within a paragraph (p.link-pdf), Some long title</a>
+</p>
+<a class='link-icon pdf' href='#/'>Direct (a.pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.</a>
+<p class='link-icon pdf'>
+<a href='#/'>Link within a paragraph (p.pdf), Some long title, so it wraps around to show the indent.</a>
+</p>
+</div>
+<div class='card-footer'>
+<a href='#/'>Link in Card Footer</a>
+</div>
+</div>
+</div>
+<div class='col-sm-4'>
+<h5>Links in Panels</h5>
+<div class='panel card-sard'>
+<div class='panel-header'>
+<a href='#/'>Link in Panel Header</a>
+</div>
+<div class='panel-body'>
+<h5 class='panel-title'>
+<a href='#/'>Link in Panel Title</a>
+</h5>
+<p class='panel-text'>
+Standard
+<a href='#/'>Link in Panel Text</a>
+</p>
+<p>
+<a href='#/'>Link in Panel Body</a>
+</p>
+</div>
+<div class='panel-footer'>
+<a href='#/'>Link in Panel Footer</a>
+</div>
+</div>
+</div>
+<div class='col-sm-4'>
+<h5>Links in Fieldsets</h5>
+<fieldset class='sa-fieldset'>
+<legend>
+Standard
+<a href='#/'>Link in Legend</a>
+</legend>
+<div class='form-group'>
+<label>
+<a href='#/'>Link in Label</a>
+</label>
+<br>
+<p>
+Standard
+<a href='#/'>Link in Form Group</a>
+</p>
+</div>
+<div class='form-footer'>
+Standard
+<a href='#/'>Link in Footer</a>
+</div>
+</fieldset>
+</div>
+<div class='col-sm-12'>
+<div class='card card-sard'>
+<div class='card-header'>
+<a href='#/'>Links with specific icons</a>
+</div>
+<div class='card-body border-bottom'>
+<p>
+Link icons can be place directly onto the link, or on the containing paragraph or span. They should have the class of .link-icon
+and either .link-NAME or .NAME . i.e
+<code>.link-icon.link-pdf</code>
+or
+<code>.link-icon.pdf</code>
+. They are designed so that the text of the link hangs from the icon.
+</p>
+</div>
+<div class='card-body pb-0'>
+<h6 class='base'>PDFs</h6>
+</div>
+<div class='card-body multi-column-3-white'>
+<a class='link-icon link-pdf' href='#/'>
+Direct
+<code>(a.link-icon.link-pdf)</code>
+Link to pdf, this a really, really long title so it wraps onto the next line.
+</a>
+<a class='link-icon pdf' href='#/'>
+Direct
+<code>(a.link-icon.pdf)</code>
+Link to pdf, this a really, really long title so it wraps onto the next line.
+</a>
+<p class='link-icon link-pdf'>
+<a href='#/'>
+Link within a paragraph
+<code>(p.link-icon.link-pdf)</code>
+,  Some long title
+</a>
+</p>
+<p class='link-icon pdf'>
+<a href='#/'>
+Link within a paragraph
+<code>(p.link-icon.pdf)</code>
+, Some long title, so it wraps around to show the indent.
+</a>
+</p>
+<span class='link-icon link-pdf'>
+<a href='#/'>
+Link within a span
+<code>(span.link-icon.link-pdf)</code>
+, Some long title, so it wraps around to show the indent.
+</a>
+</span>
+<span class='link-icon pdf'>
+<a href='#/'>
+Link within a span
+<code>(span.link-icon.pdf)</code>
+, Some long title, so it wraps around to show the indent.
+</a>
+</span>
+</div>
+<div class='card-body pb-0 border-top'>
+<h6 class='base'>DOCs, DOCMs and DOCXs</h6>
+</div>
+<div class='card-body multi-column-3-white'>
+<a class='link-icon link-doc' href='#/'>
+Direct
+<code>(a.link-icon.link-doc)</code>
+</a>
+<a class='link-icon doc' href='#/'>
+Direct
+<code>(a.link-icon.doc)</code>
+</a>
+<p class='link-icon link-doc'>
+<a href='#/'>
+Link within a paragraph
+<code>(p.link-icon.link-doc)</code>
+</a>
+</p>
+<p class='link-icon doc'>
+<a href='#/'>
+Link within a paragraph
+<code>(p.link-icon.doc)</code>
+</a>
+</p>
+<span class='link-icon link-doc'>
+<a href='#/'>
+Link within a span
+<code>(span.link-icon.link-doc)</code>
+</a>
+</span>
+<span class='link-icon doc'>
+<a href='#/'>
+Link within a span
+<code>(span.link-icon.doc)</code>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts ================================ -->
+<script src='../assets/js/remote-sard-scripts.min.js'></script>
+</body>
+</html>
