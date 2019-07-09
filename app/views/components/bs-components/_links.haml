@@ -30,11 +30,11 @@
       .card-body.border-top
         %h5.card-title
           Link icons
-        %a.link-pdf{href: "#/"}Direct (a.link-pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
-        %p.link-pdf
+        %a.link-icon.link-pdf{href: "#/"}Direct (a.link-pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
+        %p.link-icon.link-pdf
           %a{href: "#/"} Link within a paragraph (p.link-pdf), Some long title
-        %a.pdf{href: "#/"}Direct (a.pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
-        %p.pdf
+        %a.link-icon.pdf{href: "#/"}Direct (a.pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
+        %p.link-icon.pdf
           %a{href: "#/"} Link within a paragraph (p.pdf), Some long title, so it wraps around to show the indent.
 
       .card-footer
@@ -74,3 +74,18 @@
       .form-footer
         Standard
         %a{href: "#/"} Link in Footer
+
+  .col-sm-12
+    .card.card-sard
+      .card-header 
+        %a{href: "#/"} Links with specific icons
+      .card-body.multi-column-4-white
+        %a.link-icon.link-pdf{href: "#/"} Direct (a.link-icon.link-pdf) Link to pdf, this a really, really long title so it wraps onto the next line.
+        
+        %p.link-icon.link-pdf
+          %a{href: "#/"} Link within a paragraph (p.link-icon.link-pdf),  Some long title
+        
+        %a.link-icon.pdf{href: "#/"}Direct (a.link-icon.pdf) Link to pdf, this a really, really long title so it wraps onto the next line.
+        
+        %p.link-icon.pdf
+          %a{href: "#/"} Link within a paragraph (p.link-icon.pdf),  Some long title, so it wraps around to show the indent.

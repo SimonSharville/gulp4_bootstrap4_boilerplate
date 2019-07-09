@@ -1,16 +1,24 @@
 // Links
 
+$text_link:             darken($client, 5%);
+$text_link_visited:     darken($client, 5%);
+$text_link_hover:       darken($client, 15%);
+$text_link_active:      darken($client, 20%);
+
 a{
   transition: all 320ms ease;
-  color: $client;
+  color: $text_link;
   text-decoration: none;
+  &:visited{
+    color: $text_link_visited;
+  }
   &:focus,
   &:hover{
-    color: darken($client, 10%);
+    color: $text_link_hover;
     text-decoration: none;
   } 
   &:active{
-    color: darken($client, 20%);
+    color: $text_link_active;
     text-decoration: none;
   }
 }
@@ -37,16 +45,17 @@ legend,
 // Link Icons ===============
 
 // PDF
-p.pdf a,
-a.pdf,
-p.link-pdf a,
-a.link-pdf{
+.link-icon{
   // color: $client;
   // padding-left: 0.375rem; // 6px
   // text-indent: -0.375rem; // 6px
   // margin-left: -22px ;
   padding-left: 18px ; // 18px
   text-indent: -1.125rem ; // 18px
+  display: inline-block;
+}
+
+.link-icon > span{
   display: inline-block;
 }
 // p.pdf,
