@@ -46,15 +46,52 @@ legend,
 
 // PDF
 .link-icon{
-  padding-left: 18px ; // 18px
-  text-indent: -1.125rem ; // 18px
+  padding-left: 1.375rem ; // 22px
+  text-indent: -1.375rem ; // 22px
   display: inline-block;
+  line-height: 1.25rem;
 }
+
+p.link-icon,
+p.link-icon a,
+span.link-icon,
+span.link-icon a, 
+a.link-icon{
+  margin-bottom: 0.25rem!important;
+}
+
+
 
 $link-icon-padding: 0.25rem; // 4px
 
+// Audio Files
+p.link-audio a:before,
+p.audio a:before,
+a.link-audio:before,
+a.audio:before,
+span.link-audio a:before,
+span.audio a:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f1c7" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+p.link-audio a:hover:before,
+p.audio a:hover:before,
+a.link-audio:hover:before,
+a.audio:hover:before,
+span.link-audio a:hover:before,
+span.audio a:hover:before
+{
+  font-weight: 900;
+}
 
 
+// PDF Files
 p.link-pdf a:before,
 p.pdf a:before,
 a.link-pdf:before,
@@ -66,8 +103,23 @@ span.pdf a:before
   content: "\f1c1" ;
   padding-right: $link-icon-padding ;
   color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
 }
 
+p.link-pdf a:hover:before,
+p.pdf a:hover:before,
+a.link-pdf:hover:before,
+a.pdf:hover:before,
+span.link-pdf a:hover:before,
+span.pdf a:hover:before
+{
+  font-weight: 900;
+}
+
+
+// DOC Files
 p.link-doc a:before,
 p.doc a:before,
 a.link-doc:before,
@@ -93,5 +145,349 @@ span.docx a:before
   content: "\f1c2" ;
   padding-right: $link-icon-padding ;
   color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
 }
 
+p.link-doc a:hover:before,
+p.doc a:hover:before,
+a.link-doc:before,
+a.doc:before,
+span.link-doc a:hover:before,
+span.doc a:hover:before,
+
+p.link-docm a:hover:before,
+p.docm a:hover:before,
+a.link-docm,
+a.docm,
+span.link-docm a:hover:before,
+span.docm a:hover:before,
+
+p.link-docx a:hover:before,
+p.docx a:hover:before,
+a.link-docx,
+a.docx,
+span.link-docx a:hover:before,
+span.docx a:hover:before
+{
+  font-weight: 900;
+}
+
+
+// TEXT Files
+p.link-txt a:before,
+p.txt a:before,
+a.link-txt:before,
+a.txt:before,
+span.link-txt a:before,
+span.txt a:before,
+
+p.link-odt a:before,
+p.odt a:before,
+a.link-odt,
+a.odt,
+span.link-odt a:before,
+span.odt a:before,
+
+p.link-rtf a:before,
+p.rtf a:before,
+a.link-rtf,
+a.rtf,
+span.link-rtf a:before,
+span.rtf a:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f15c" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+p.link-txt a:hover:before,
+p.txt a:hover:before,
+a.link-txt:before,
+a.txt:before,
+span.link-txt a:hover:before,
+span.txt a:hover:before,
+
+p.link-odt a:hover:before,
+p.odt a:hover:before,
+a.link-odt,
+a.odt,
+span.link-odt a:hover:before,
+span.odt a:hover:before,
+
+p.link-rtf a:hover:before,
+p.rtf a:hover:before,
+a.link-rtf,
+a.rtf,
+span.link-rtf a:hover:before,
+span.rtf a:hover:before
+{
+  font-weight: 900;
+}
+
+// XLS Files
+p.link-xls a:before,
+p.xls a:before,
+a.link-xls,
+a.xls,
+span.link-xls a:before,
+span.xls a:before,
+
+p.link-xlsx a:before,
+p.xlsx a:before,
+a.link-xlsx,
+a.xlsx,
+span.link-xlsx a:before,
+span.xlsx a:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f1c3" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+
+p.link-xls a:hover:before,
+p.xls a:hover:before,
+a.link-xls,
+a.xls,
+span.link-xls a:hover:before,
+span.xls a:hover:before,
+
+p.link-xlsx a:hover:before,
+p.xlsx a:hover:before,
+a.link-xlsx,
+a.xlsx,
+span.link-xlsx a:hover:before,
+span.xlsx a:hover:before
+{
+  font-weight: 900;
+}
+
+// Image Files
+p.link-jpg a:before,
+p.jpg a:before,
+a.link-jpg,
+a.jpg,
+span.link-jpg a:before,
+span.jpg a:before,
+
+p.link-png a:before,
+p.png a:before,
+a.link-png,
+a.png,
+span.link-png a:before,
+span.png a:before,
+
+p.link-gif a:before,
+p.gif a:before,
+a.link-gif,
+a.gif,
+span.link-gif a:before,
+span.gif a:before,
+
+p.link-photo a:before,
+p.photo a:before,
+a.link-photo,
+a.photo,
+span.link-photo a:before,
+span.photo a:before,
+
+p.link-image a:before,
+p.image a:before,
+a.link-image,
+a.image,
+span.link-image a:before,
+span.image a:before,
+
+p.link-ico a:before,
+p.ico a:before,
+a.link-ico,
+a.ico,
+span.link-ico a:before,
+span.ico a:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f1c5" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+
+p.link-jpg a:hover:before,
+p.jpg a:hover:before,
+a.link-jpg,
+a.jpg,
+span.link-jpg a:hover:before,
+span.jpg a:hover:before,
+
+p.link-png a:hover:before,
+p.png a:hover:before,
+a.link-png,
+a.png,
+span.link-png a:hover:before,
+span.png a:hover:before,
+
+p.link-gif a:hover:before,
+p.gif a:hover:before,
+a.link-gif,
+a.gif,
+span.link-gif a:hover:before,
+span.gif a:hover:before,
+
+p.link-photo a:hover:before,
+p.photo a:hover:before,
+a.link-photo,
+a.photo,
+span.link-photo a:hover:before,
+span.photo a:hover:before,
+
+p.link-image a:hover:before,
+p.image a:hover:before,
+a.link-image,
+a.image,
+span.link-image a:hover:before,
+span.image a:hover:before,
+
+p.link-ico a:hover:before,
+p.ico a:hover:before,
+a.link-ico,
+a.ico,
+span.link-ico a:hover:before,
+span.ico a:hover:before
+{
+  font-weight: 900;
+}
+
+// Zip Files
+p.link-zip a:before,
+p.zip a:before,
+a.link-zip,
+a.zip,
+span.link-zip a:before,
+span.zip a:before,
+
+p.link-archive a:before,
+p.archive a:before,
+a.link-archive,
+a.archive,
+span.link-archive a:before,
+span.archive a:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f1c6" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+
+p.link-zip a:hover:before,
+p.zip a:hover:before,
+a.link-zip,
+a.zip,
+span.link-zip a:hover:before,
+span.zip a:hover:before,
+
+p.link-archive a:hover:before,
+p.archive a:hover:before,
+a.link-archive,
+a.archive,
+span.link-archive a:hover:before,
+span.archive a:hover:before
+{
+  font-weight: 900;
+}
+
+// Powerpoint Files
+p.link-ppt a:before,
+p.ppt a:before,
+a.link-ppt,
+a.ppt,
+span.link-ppt a:before,
+span.ppt a:before,
+p.link-pptx a:before,
+p.pptx a:before,
+a.link-pptx,
+a.pptx,
+span.link-pptx a:before,
+span.pptx a:before,
+p.link-pptm a:before,
+p.pptm a:before,
+a.link-pptm,
+a.pptm,
+span.link-pptm a:before,
+span.pptm a:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f1c4" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+p.link-ppt a:hover:before,
+p.ppt a:hover:before,
+a.link-ppt,
+a.ppt,
+span.link-ppt a:hover:before,
+span.ppt a:hover:before,
+p.link-pptx a:hover:before,
+p.pptx a:hover:before,
+a.link-pptx,
+a.pptx,
+span.link-pptx a:hover:before,
+span.pptx a:hover:before,
+p.link-pptm a:hover:before,
+p.pptm a:hover:before,
+a.link-pptm,
+a.pptm,
+span.link-pptm a:hover:before,
+span.pptm a:hover:before
+{
+  font-weight: 900;
+}
+
+// Video Files
+p.link-video a:before,
+p.video a:before,
+a.link-video,
+a.video,
+span.link-video a:before,
+span.video a:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f1c8" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+p.link-video a:hover:before,
+p.video a:hover:before,
+a.link-video,
+a.video,
+span.link-video a:hover:before,
+span.video a:hover:before
+{
+  font-weight: 900;
+}
+
+// Link Icons in tables
+
+td.link-icon a{
+  display: block;
+  padding-left: 1.375rem ; // 22px
+  margin-bottom: 0.25rem;
+}

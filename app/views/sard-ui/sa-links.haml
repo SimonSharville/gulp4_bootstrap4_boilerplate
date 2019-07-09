@@ -39,16 +39,6 @@
                 %a{href: "#/"} Link in Card Text
               %p 
                 %a{href: "#/"} Link in Card Body
-            .card-body.border-top
-              %h5.card-title
-                Link icons
-              %a.link-icon.link-pdf{href: "#/"}Direct (a.link-pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
-              %p.link-icon.link-pdf
-                %a{href: "#/"} Link within a paragraph (p.link-pdf), Some long title
-              %a.link-icon.pdf{href: "#/"}Direct (a.pdf) Link to pdf, this a really, really long title so it it wrap onto the next line.
-              %p.link-icon.pdf
-                %a{href: "#/"} Link within a paragraph (p.pdf), Some long title, so it wraps around to show the indent.
-
             .card-footer
               %a{href: "#/"} Link in Card Footer
 
@@ -90,7 +80,7 @@
         .col-sm-12
           .card.card-sard
             .card-header 
-              %a{href: "#/"} Links with specific icons
+              Links with specific icons
             .card-body.border-bottom
               %p
                 Link icons can be place directly onto the link, or on the containing paragraph or span. They should have the class of .link-icon
@@ -100,76 +90,161 @@
                 %code .link-icon.pdf
                 \. They are designed so that the text of the link hangs from the icon.
               
-            -# PDF
+            -# Examples
             .card-body.pb-0
-              %h6.base PDFs
+              %h6.base Examples
             .card-body.multi-column-3-white
               %a.link-icon.link-pdf{href: "#/"} 
-                Direct 
+                %span.text-default Direct 
                 %code (a.link-icon.link-pdf) 
-                Link to pdf, this a really, really long title so it wraps onto the next line.
+                %span.text-default Link to pdf, this a really, really long title so it wraps onto the next line.
               
               %a.link-icon.pdf{href: "#/"}
-                Direct 
+                %span.text-default Direct 
                 %code (a.link-icon.pdf) 
-                Link to pdf, this a really, really long title so it wraps onto the next line.
+                %span.text-default Link to pdf, this a really, really long title so it wraps onto the next line.
               
               %p.link-icon.link-pdf
                 %a{href: "#/"} 
-                  Link within a paragraph 
+                  %span.text-default Link within a paragraph 
                   %code (p.link-icon.link-pdf)
-                  ,  Some long title
+                  %span.text-default ,  Some long title
               
               %p.link-icon.pdf
                 %a{href: "#/"} 
-                  Link within a paragraph 
+                  %span.text-default Link within a paragraph 
                   %code (p.link-icon.pdf)
-                  , Some long title, so it wraps around to show the indent.
+                  %span.text-default , Some long title, so it wraps around to show the indent.
 
               %span.link-icon.link-pdf
                 %a{href: "#/"} 
-                  Link within a span 
+                  %span.text-default Link within a span 
                   %code (span.link-icon.link-pdf)
-                  , Some long title, so it wraps around to show the indent.
+                  %span.text-default , Some long title, so it wraps around to show the indent.
 
               %span.link-icon.pdf
                 %a{href: "#/"} 
-                  Link within a span 
+                  %span.text-default Link within a span 
                   %code (span.link-icon.pdf)
-                  , Some long title, so it wraps around to show the indent.
+                  %span.text-default , Some long title, so it wraps around to show the indent.
 
-            -# DOCS
+            -# File Types
             .card-body.pb-0.border-top
-              %h6.base DOCs, DOCMs and DOCXs
+              %h6.base File Types
+              %p You can use any of the file extensions within the brackets ( ).
             .card-body.multi-column-3-white
-              %a.link-icon.link-doc{href: "#/"} 
-                Direct 
-                %code (a.link-icon.link-doc) 
-              
-              %a.link-icon.doc{href: "#/"}
-                Direct 
-                %code (a.link-icon.doc) 
-              
-              %p.link-icon.link-doc
+              %p.link-icon.audio
                 %a{href: "#/"} 
-                  Link within a paragraph 
-                  %code (p.link-icon.link-doc)
-              
+                  AUDIO 
+                  %br
+                %code .link-icon.link-audio
+                or
+                %code .link-icon.audio
+             
+              %p.link-icon.xls
+                %a{href: "#/"} 
+                  EXCEL (xls, xlsx)
+                  %br
+                %code .link-icon.link-xls
+                or
+                %code .link-icon.xls
+
+              %p.link-icon.image
+                %a{href: "#/"} 
+                  IMAGES (gif, ico, image, jpg, photo, png )
+                  %br
+                %code .link-icon.link-image
+                or
+                %code .link-icon.image
+
+              %p.link-icon.pdf
+                %a{href: "#/"} 
+                  PDF
+                  %br
+                %code .link-icon.link-pdf
+                or
+                %code .link-icon.pdf
+
+              %p.link-icon.ppt
+                %a{href: "#/"} 
+                  POWERPOINT (ppt, pptm, pptx)
+                  %br
+                %code .link-icon.link-ppt
+                or
+                %code .link-icon.ppt
+
+              %p.link-icon.txt
+                %a{href: "#/"} 
+                  TEXT (txt, odt, rtf)
+                  %br
+                %code .link-icon.link-txt
+                or
+                %code .link-icon.txt
+
+              %p.link-icon.video
+                %a{href: "#/"} 
+                  VIDEO
+                  %br
+                %code .link-icon.link-video
+                or
+                %code .link-icon.video
+
               %p.link-icon.doc
                 %a{href: "#/"} 
-                  Link within a paragraph 
-                  %code (p.link-icon.doc)
+                  WORD (doc, docm, docx)
+                  %br
+                %code .link-icon.link-doc
+                or
+                %code .link-icon.doc
 
-              %span.link-icon.link-doc
+              %p.link-icon.zip
                 %a{href: "#/"} 
-                  Link within a span 
-                  %code (span.link-icon.link-doc)
+                  ZIP (zip, archive)
+                  %br
+                %code .link-icon.link-zip
+                or
+                %code .link-icon.zip
 
-              %span.link-icon.doc
-                %a{href: "#/"} 
-                  Link within a span 
-                  %code (span.link-icon.doc)
+        .col-sm-12
+          .card.card-sard
+            .card-header 
+              Links icons within a table
+            .card-body
+              %table.table.table-sard.table-bordered
+                %thead
+                  %tr
+                    %th th
+                    %th th
+                %tbody
+                  %tr
+                    %td 
+                      %a.link-icon.link-pdf{href: "#/"} 
+                        %code a.link-icon.link-pdf 
+                        %span.text-default within a td with no class added. 
+                        %br
+                        %span.text-default Really, long, long title to exdent it to a new line.
 
+                    %td.link-icon
+                      %a.link-pdf{href: "#/"} 
+                        %span.text-default Link 
+                        %code (a.link-pdf)
+                        %span.text-default within a td with the class of 
+                        %code (td.link-icon)
+                        %br
+                        %span.text-default Some long title, so it wraps around to show the indent.
+                      
+                      %a.link-pdf{href: "#/"} 
+                        %span.text-default Another Link 
+                        %code (a.link-pdf)
+                        %span.text-default within the same td with the class of 
+                        %code (td.link-icon)
+                        %br
+                        %span.text-default Some long title, so it wraps around to show the indent.
+
+
+
+              
+              
 
 
     / Scripts ================================
