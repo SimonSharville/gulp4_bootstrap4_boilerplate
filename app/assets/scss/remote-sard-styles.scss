@@ -32,16 +32,17 @@
 
 
 // Components
-@import 'components/sa-navbar';
-@import 'components/sa-buttons';
+@import 'components/sa-alert';
 @import 'components/sa-badges';
 @import 'components/sa-breadcrumbs';
-@import 'components/sa-searchbars';
-@import 'components/sa-alert';
-@import 'components/sa-panels'; //BS3 specific
+@import 'components/sa-buttons';
 @import 'components/sa-cards';
-@import 'components/sa-forms';
+@import 'components/sa-collapse';
 @import 'components/sa-fieldsets'; //BS3 specific
+@import 'components/sa-forms';
+@import 'components/sa-navbar';
+@import 'components/sa-panels'; //BS3 specific
+@import 'components/sa-searchbars';
 @import 'components/sa-tables';
 
 
