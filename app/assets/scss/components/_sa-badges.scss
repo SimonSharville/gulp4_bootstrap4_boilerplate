@@ -1,0 +1,12 @@
+// Badges =======================================
+
+
+a.badge{
+  color: white;
+}
+
+a.badge.badge-warning,
+a.badge.badge-light
+{
+  color: $text;
+}

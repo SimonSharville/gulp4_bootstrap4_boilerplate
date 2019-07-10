@@ -13754,6 +13754,15 @@ b, strong, .bold, .strong {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
+a.badge {
+  color: white;
+}
+
+a.badge.badge-warning,
+a.badge.badge-light {
+  color: #211F0F;
+}
+
 .navbar-sard .searchbar-sard.input-group {
   width: initial;
 }
