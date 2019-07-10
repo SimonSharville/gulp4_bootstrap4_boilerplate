@@ -14222,6 +14222,159 @@ a.badge.badge-light {
   border-color: white;
 }
 
+.accordion .card,
+.accordion .panel {
+  margin-bottom: 0;
+}
+
+.accordion .card:last-of-type,
+.accordion .panel:last-of-type {
+  margin-bottom: 1rem;
+}
+
+/* set panel-heading paddings to <a> instead of h3 */
+.accordion .card-header,
+.accordion .panel-heading,
+.accordion .panel-header {
+  display: block;
+  padding: 0px;
+  color: white !important;
+}
+
+.accordion .card-header .btn,
+.accordion .card-header a,
+.accordion .panel-heading .btn,
+.accordion .panel-heading a,
+.accordion .panel-header .btn,
+.accordion .panel-header a {
+  padding: 0.25rem 0.625rem;
+  color: white !important;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  border: 1px solid transparent;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.575rem;
+  color: white;
+}
+
+.accordion .card-header h3,
+.accordion .panel-heading h3,
+.accordion .panel-header h3 {
+  margin: 0;
+}
+
+/* set heading paddings to <a> instead of h3 */
+.card.collapsable .card-header,
+.card.collapsable .panel-heading,
+.card.collapsable .panel-header {
+  display: block;
+  padding: 0px;
+  color: white !important;
+  border-radius: 0.375rem;
+  overflow: visible;
+}
+
+.card.collapsable .card-header .btn,
+.card.collapsable .card-header a,
+.card.collapsable .panel-heading .btn,
+.card.collapsable .panel-heading a,
+.card.collapsable .panel-header .btn,
+.card.collapsable .panel-header a {
+  padding: 0.25rem 0.625rem;
+  color: white !important;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-radius: 0.375rem 0.375rem 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.575rem;
+  color: white;
+}
+
+.card.collapsable .card-header .btn.collapsed,
+.card.collapsable .card-header a.collapsed,
+.card.collapsable .panel-heading .btn.collapsed,
+.card.collapsable .panel-heading a.collapsed,
+.card.collapsable .panel-header .btn.collapsed,
+.card.collapsable .panel-header a.collapsed {
+  border-radius: 0.375rem;
+}
+
+.card.collapsable .card-header h3,
+.card.collapsable .panel-heading h3,
+.card.collapsable .panel-header h3 {
+  margin: 0;
+}
+
+.accordion .card-sard .card-header .btn,
+.accordion .card-sard .card-header a,
+.accordion .card-sard .panel-heading .btn,
+.accordion .card-sard .panel-heading a,
+.accordion .card-sard .panel-header .btn,
+.accordion .card-sard .panel-header a,
+.card.card-sard.collapsable .card-header .btn,
+.card.card-sard.collapsable .card-header a,
+.card.card-sard.collapsable .panel-heading .btn,
+.card.card-sard.collapsable .panel-heading a,
+.card.card-sard.collapsable .panel-header .btn,
+.card.card-sard.collapsable .panel-header a {
+  background-color: #211F0F;
+}
+
+.accordion .card-sard .card-header .btn:hover.collapsed,
+.accordion .card-sard .card-header a:hover.collapsed,
+.accordion .card-sard .panel-heading .btn:hover.collapsed,
+.accordion .card-sard .panel-heading a:hover.collapsed,
+.accordion .card-sard .panel-header .btn:hover.collapsed,
+.accordion .card-sard .panel-header a:hover.collapsed,
+.card.card-sard.collapsable .card-header .btn:hover.collapsed,
+.card.card-sard.collapsable .card-header a:hover.collapsed,
+.card.card-sard.collapsable .panel-heading .btn:hover.collapsed,
+.card.card-sard.collapsable .panel-heading a:hover.collapsed,
+.card.card-sard.collapsable .panel-header .btn:hover.collapsed,
+.card.card-sard.collapsable .panel-header a:hover.collapsed {
+  background-color: #211F0F;
+}
+
+.accordion .card-sard .card-header .btn.collapsed,
+.accordion .card-sard .card-header a.collapsed,
+.accordion .card-sard .panel-heading .btn.collapsed,
+.accordion .card-sard .panel-heading a.collapsed,
+.accordion .card-sard .panel-header .btn.collapsed,
+.accordion .card-sard .panel-header a.collapsed,
+.card.card-sard.collapsable .card-header .btn.collapsed,
+.card.card-sard.collapsable .card-header a.collapsed,
+.card.card-sard.collapsable .panel-heading .btn.collapsed,
+.card.card-sard.collapsable .panel-heading a.collapsed,
+.card.card-sard.collapsable .panel-header .btn.collapsed,
+.card.card-sard.collapsable .panel-header a.collapsed {
+  background-color: #403D3D;
+}
+
+.accordion .card-sard .card-header .btn:hover,
+.accordion .card-sard .card-header a:hover,
+.accordion .card-sard .panel-heading .btn:hover,
+.accordion .card-sard .panel-heading a:hover,
+.accordion .card-sard .panel-header .btn:hover,
+.accordion .card-sard .panel-header a:hover,
+.card.card-sard.collapsable .card-header .btn:hover,
+.card.card-sard.collapsable .card-header a:hover,
+.card.card-sard.collapsable .panel-heading .btn:hover,
+.card.card-sard.collapsable .panel-heading a:hover,
+.card.card-sard.collapsable .panel-header .btn:hover,
+.card.card-sard.collapsable .panel-header a:hover {
+  background-color: black;
+}
+
 fieldset {
   position: relative;
   display: -webkit-box;

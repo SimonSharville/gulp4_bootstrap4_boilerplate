@@ -1,3 +1,134 @@
 // Collapse =====================================
 
+$accordian-bg: $sa-grey-16;
+$accordian-bg-hover: $sa-grey-18;
+$accordian-bg-open: $sa-grey-18;
+$accordian-bg-open-hover: black;
 
+
+// Accordions =======================================================
+
+// Vertical alignment
+.accordion .card,
+.accordion .panel {
+  margin-bottom: 0;
+}
+.accordion .card:last-of-type,
+.accordion .panel:last-of-type {
+  margin-bottom: $sard-spacer-16;
+}
+
+// Make Accordion Headings as a link ============
+
+/* set panel-heading paddings to <a> instead of h3 */    
+.accordion .card-header,
+.accordion .panel-heading,
+.accordion .panel-header { 
+  display: block;
+  padding:0px;
+  color:white!important;
+}
+
+// This makes the entire heading a link
+.accordion .card-header,
+.accordion .panel-heading,
+.accordion .panel-header { 
+  & .btn,
+  & a{
+    padding: $sard-heading-padding;
+    color:white!important;
+    text-decoration:none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    border: 1px solid transparent;
+  
+    font-size: $sard-heading-font-size;
+    font-weight: 300;
+    line-height: $sard-heading-line-height;
+    color: $sard-heading-text-color;
+  }
+}
+
+.accordion .card-header h3,
+.accordion .panel-heading h3,
+.accordion .panel-header h3 { 
+  margin:0; // Adjusts some strange overlap of the panel-heading
+}
+
+
+// Collapsable Cards & Panels =======================================
+
+// Make Headings as a link ======================
+
+/* set heading paddings to <a> instead of h3 */    
+.card.collapsable .card-header,
+.card.collapsable .panel-heading,
+.card.collapsable .panel-header { 
+  display: block;
+  padding:0px;
+  color:white!important;
+  border-radius: $sard-border-radius;
+  overflow: visible;
+}
+// This makes the entire heading a link
+.card.collapsable .card-header,
+.card.collapsable .panel-heading,
+.card.collapsable .panel-header { 
+  & .btn,
+  & a {
+    padding: $sard-heading-padding;
+    color:white!important;
+    text-decoration:none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-radius: $sard-border-radius $sard-border-radius 0 0;
+    box-shadow: none;
+    border: 1px solid transparent;
+  
+    font-size: $sard-heading-font-size;
+    font-weight: 300;
+    line-height: $sard-heading-line-height;
+    color: $sard-heading-text-color;
+  }
+}
+.card.collapsable .card-header,
+.card.collapsable .panel-heading,
+.card.collapsable .panel-header{
+  & .btn.collapsed,
+  & a.collapsed{
+    border-radius: $sard-border-radius;
+  }
+}
+
+.card.collapsable .card-header h3,
+.card.collapsable .panel-heading h3,
+.card.collapsable .panel-header h3 { 
+  margin:0; // Adjusts some strange overlap of the panel-heading
+}
+
+
+// Colouring ========================================================
+
+.accordion .card-sard .card-header,
+.accordion .card-sard .panel-heading,
+.accordion .card-sard .panel-header,
+.card.card-sard.collapsable .card-header,
+.card.card-sard.collapsable .panel-heading,
+.card.card-sard.collapsable .panel-header {
+  & .btn,
+  & a{
+    background-color: $accordian-bg-open;
+    &:hover.collapsed{
+      background-color: $accordian-bg-hover;
+    }
+    &.collapsed{
+      background-color: $accordian-bg;
+    }
+    &:hover{
+      background-color: $accordian-bg-open-hover;
+    }
+  }
+}
