@@ -13,9 +13,9 @@
 
 
 // Sard Styles
-@import 'global-styles/sa-links';
 @import 'sard-styles/sa-variables';
 @import 'sard-styles/typography/sa-typography';
+@import 'global-styles/sa-links';
 
 
 // Fonts
@@ -35,6 +35,7 @@
 @import 'components/sa-navbar';
 @import 'components/sa-buttons';
 @import 'components/sa-badges';
+@import 'components/sa-breadcrumbs';
 @import 'components/sa-searchbars';
 @import 'components/sa-alert';
 @import 'components/sa-panels'; //BS3 specific

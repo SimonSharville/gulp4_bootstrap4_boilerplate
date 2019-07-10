@@ -1,0 +1,22 @@
+// Breadcrumbs ==================================
+
+
+.breadcrumb{
+  border-radius: 0%;
+  padding: $sard-spacer-4 $sard-spacer-16;
+  background-color: white;
+  border-bottom: 1px solid $sa-grey-04;
+}
+
+// Fixed Top Navbar =========
+#breadcrumb-top.fixed-top{
+  top: 50px;
+  border-bottom: 1px solid $sa-grey-04;
+  background-color: white;
+
+  & .breadcrumb{
+    padding: $sard-spacer-4 0;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
