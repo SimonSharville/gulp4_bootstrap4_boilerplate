@@ -4,8 +4,6 @@
 
 .btn{
   border-radius: 2rem;
-  -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow:    0px 1px 1px 0px rgba(0,0,0,0.2);
   box-shadow:         0px 1px 1px 0px rgba(0,0,0,0.2);
 }
 
@@ -150,6 +148,15 @@ $btn-default: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($btn-default, .25);
   }
 }
+
+.btn.btn-outline-light{
+  color: $sa-grey-06;
+  border-color: $sa-grey-06;
+  &:hover{
+    color: $sa-grey-10;
+  }
+}
+
 
 // Button Groups ================================
 .btn-group .btn{

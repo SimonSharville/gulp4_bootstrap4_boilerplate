@@ -13743,6 +13743,15 @@ td.link-icon a {
   box-shadow: 0 0 0 0.2rem rgba(97, 94, 92, 0.25);
 }
 
+.btn.btn-outline-light {
+  color: #C7C4C2;
+  border-color: #C7C4C2;
+}
+
+.btn.btn-outline-light:hover {
+  color: #A39E9C;
+}
+
 .btn-group .btn {
   -webkit-box-shadow: none;
   box-shadow: none;
