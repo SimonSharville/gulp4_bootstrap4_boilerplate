@@ -14223,19 +14223,20 @@ a.badge.badge-light {
 }
 
 .accordion .card,
-.accordion .panel {
+.accordion .panel,
+.accordion fieldset {
   margin-bottom: 0;
 }
 
-.accordion .card:last-of-type,
-.accordion .panel:last-of-type {
+.accordion {
   margin-bottom: 1rem;
 }
 
 /* set panel-heading paddings to <a> instead of h3 */
 .accordion .card-header,
 .accordion .panel-heading,
-.accordion .panel-header {
+.accordion .panel-header,
+.accordion legend {
   display: block;
   padding: 0px;
   color: white !important;
@@ -14246,7 +14247,9 @@ a.badge.badge-light {
 .accordion .panel-heading .btn,
 .accordion .panel-heading a,
 .accordion .panel-header .btn,
-.accordion .panel-header a {
+.accordion .panel-header a,
+.accordion legend .btn,
+.accordion legend a {
   padding: 0.25rem 0.625rem;
   color: white !important;
   text-decoration: none;
@@ -14263,26 +14266,35 @@ a.badge.badge-light {
 
 .accordion .card-header h3,
 .accordion .panel-heading h3,
-.accordion .panel-header h3 {
+.accordion .panel-header h3,
+.accordion legend h3 {
   margin: 0;
 }
 
-.accordion > .panel {
+.accordion > .card,
+.accordion > .panel,
+.accordion > fieldset {
   overflow: hidden;
 }
 
-.accordion > .panel:not(:first-of-type):not(:last-of-type) {
+.accordion > .card:not(:first-of-type):not(:last-of-type),
+.accordion > .panel:not(:first-of-type):not(:last-of-type),
+.accordion > fieldset:not(:first-of-type):not(:last-of-type) {
   border-bottom: 0;
   border-radius: 0;
 }
 
-.accordion > .panel:first-of-type {
+.accordion > .card:first-of-type,
+.accordion > .panel:first-of-type,
+.accordion > fieldset:first-of-type {
   border-bottom: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.accordion > .panel:last-of-type {
+.accordion > .card:last-of-type,
+.accordion > .panel:last-of-type,
+.accordion > fieldset:last-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -14290,10 +14302,11 @@ a.badge.badge-light {
 /* set heading paddings to <a> instead of h3 */
 .card.collapsable .card-header,
 .panel.collapsable .panel-heading,
-.panel.collapsable .panel-header {
+.panel.collapsable .panel-header,
+fieldset.collapsable legend {
   display: block;
   padding: 0px;
-  color: white !important;
+  color: white;
   border-radius: 0.375rem;
   overflow: visible;
 }
@@ -14303,7 +14316,9 @@ a.badge.badge-light {
 .panel.collapsable .panel-heading .btn,
 .panel.collapsable .panel-heading a,
 .panel.collapsable .panel-header .btn,
-.panel.collapsable .panel-header a {
+.panel.collapsable .panel-header a,
+fieldset.collapsable legend .btn,
+fieldset.collapsable legend a {
   padding: 0.25rem 0.625rem;
   color: white !important;
   text-decoration: none;
@@ -14325,13 +14340,16 @@ a.badge.badge-light {
 .panel.collapsable .panel-heading .btn.collapsed,
 .panel.collapsable .panel-heading a.collapsed,
 .panel.collapsable .panel-header .btn.collapsed,
-.panel.collapsable .panel-header a.collapsed {
+.panel.collapsable .panel-header a.collapsed,
+fieldset.collapsable legend .btn.collapsed,
+fieldset.collapsable legend a.collapsed {
   border-radius: 0.375rem;
 }
 
 .card.collapsable .card-header h3,
 .panel.collapsable .panel-heading h3,
-.panel.collapsable .panel-header h3 {
+.panel.collapsable .panel-header h3,
+fieldset.collapsable legend h3 {
   margin: 0;
 }
 
@@ -14341,12 +14359,16 @@ a.badge.badge-light {
 .accordion .panel-heading a::after,
 .accordion .panel-header .btn::after,
 .accordion .panel-header a::after,
+.accordion fieldset legend .btn::after,
+.accordion fieldset legend a::after,
 .card.collapsable .card-header .btn::after,
 .card.collapsable .card-header a::after,
 .panel.collapsable .panel-heading .btn::after,
 .panel.collapsable .panel-heading a::after,
 .panel.collapsable .panel-header .btn::after,
-.panel.collapsable .panel-header a::after {
+.panel.collapsable .panel-header a::after,
+fieldset.collapsable legend .btn::after,
+fieldset.collapsable legend a::after {
   font-family: "Font Awesome 5 Free";
   content: "\f106";
   font-weight: 900;
@@ -14363,12 +14385,16 @@ a.badge.badge-light {
 .accordion .panel-heading a.collapsed::after,
 .accordion .panel-header .btn.collapsed::after,
 .accordion .panel-header a.collapsed::after,
+.accordion fieldset legend .btn.collapsed::after,
+.accordion fieldset legend a.collapsed::after,
 .card.collapsable .card-header .btn.collapsed::after,
 .card.collapsable .card-header a.collapsed::after,
 .panel.collapsable .panel-heading .btn.collapsed::after,
 .panel.collapsable .panel-heading a.collapsed::after,
 .panel.collapsable .panel-header .btn.collapsed::after,
-.panel.collapsable .panel-header a.collapsed::after {
+.panel.collapsable .panel-header a.collapsed::after,
+fieldset.collapsable legend .btn.collapsed::after,
+fieldset.collapsable legend a.collapsed::after {
   font-family: "Font Awesome 5 Free";
   content: "\f107";
   font-weight: 900;
@@ -14379,63 +14405,142 @@ a.badge.badge-light {
   right: 2px;
 }
 
+.accordion-mixed > .card,
+.accordion-mixed > .panel,
+.accordion-mixed > fieldset {
+  overflow: hidden;
+}
+
+.accordion-mixed > .accordion-mixed-item .card-header,
+.accordion-mixed > .accordion-mixed-item .panel-header,
+.accordion-mixed > .accordion-mixed-item .panel-heading,
+.accordion-mixed > .accordion-mixed-item legend {
+  overflow: hidden;
+}
+
+.accordion-mixed > .accordion-mixed-item:not(:first-child):not(:last-child) {
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+.accordion-mixed > .accordion-mixed-item:first-child {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.accordion-mixed > .accordion-mixed-item:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.accordion .card-sard .card-header button,
 .accordion .card-sard .card-header .btn,
 .accordion .card-sard .card-header a,
+.accordion .panel-sard .panel-heading button,
 .accordion .panel-sard .panel-heading .btn,
 .accordion .panel-sard .panel-heading a,
+.accordion .panel-sard .panel-header button,
 .accordion .panel-sard .panel-header .btn,
 .accordion .panel-sard .panel-header a,
+.accordion fieldset legend button,
+.accordion fieldset legend .btn,
+.accordion fieldset legend a,
+.card.card-sard.collapsable .card-header button,
 .card.card-sard.collapsable .card-header .btn,
 .card.card-sard.collapsable .card-header a,
-.panel.panel-sard.collapsable .panel-heading .btn,
-.panel.panel-sard.collapsable .panel-heading a,
-.panel.panel-sard.collapsable .panel-header .btn,
-.panel.panel-sard.collapsable .panel-header a {
+.panel.collapsable .panel-heading button,
+.panel.collapsable .panel-heading .btn,
+.panel.collapsable .panel-heading a,
+.panel.collapsable .panel-header button,
+.panel.collapsable .panel-header .btn,
+.panel.collapsable .panel-header a,
+fieldset.collapsable legend button,
+fieldset.collapsable legend .btn,
+fieldset.collapsable legend a {
   background-color: #211F0F;
 }
 
+.accordion .card-sard .card-header button:hover.collapsed,
 .accordion .card-sard .card-header .btn:hover.collapsed,
 .accordion .card-sard .card-header a:hover.collapsed,
+.accordion .panel-sard .panel-heading button:hover.collapsed,
 .accordion .panel-sard .panel-heading .btn:hover.collapsed,
 .accordion .panel-sard .panel-heading a:hover.collapsed,
+.accordion .panel-sard .panel-header button:hover.collapsed,
 .accordion .panel-sard .panel-header .btn:hover.collapsed,
 .accordion .panel-sard .panel-header a:hover.collapsed,
+.accordion fieldset legend button:hover.collapsed,
+.accordion fieldset legend .btn:hover.collapsed,
+.accordion fieldset legend a:hover.collapsed,
+.card.card-sard.collapsable .card-header button:hover.collapsed,
 .card.card-sard.collapsable .card-header .btn:hover.collapsed,
 .card.card-sard.collapsable .card-header a:hover.collapsed,
-.panel.panel-sard.collapsable .panel-heading .btn:hover.collapsed,
-.panel.panel-sard.collapsable .panel-heading a:hover.collapsed,
-.panel.panel-sard.collapsable .panel-header .btn:hover.collapsed,
-.panel.panel-sard.collapsable .panel-header a:hover.collapsed {
+.panel.collapsable .panel-heading button:hover.collapsed,
+.panel.collapsable .panel-heading .btn:hover.collapsed,
+.panel.collapsable .panel-heading a:hover.collapsed,
+.panel.collapsable .panel-header button:hover.collapsed,
+.panel.collapsable .panel-header .btn:hover.collapsed,
+.panel.collapsable .panel-header a:hover.collapsed,
+fieldset.collapsable legend button:hover.collapsed,
+fieldset.collapsable legend .btn:hover.collapsed,
+fieldset.collapsable legend a:hover.collapsed {
   background-color: #211F0F;
 }
 
+.accordion .card-sard .card-header button.collapsed,
 .accordion .card-sard .card-header .btn.collapsed,
 .accordion .card-sard .card-header a.collapsed,
+.accordion .panel-sard .panel-heading button.collapsed,
 .accordion .panel-sard .panel-heading .btn.collapsed,
 .accordion .panel-sard .panel-heading a.collapsed,
+.accordion .panel-sard .panel-header button.collapsed,
 .accordion .panel-sard .panel-header .btn.collapsed,
 .accordion .panel-sard .panel-header a.collapsed,
+.accordion fieldset legend button.collapsed,
+.accordion fieldset legend .btn.collapsed,
+.accordion fieldset legend a.collapsed,
+.card.card-sard.collapsable .card-header button.collapsed,
 .card.card-sard.collapsable .card-header .btn.collapsed,
 .card.card-sard.collapsable .card-header a.collapsed,
-.panel.panel-sard.collapsable .panel-heading .btn.collapsed,
-.panel.panel-sard.collapsable .panel-heading a.collapsed,
-.panel.panel-sard.collapsable .panel-header .btn.collapsed,
-.panel.panel-sard.collapsable .panel-header a.collapsed {
+.panel.collapsable .panel-heading button.collapsed,
+.panel.collapsable .panel-heading .btn.collapsed,
+.panel.collapsable .panel-heading a.collapsed,
+.panel.collapsable .panel-header button.collapsed,
+.panel.collapsable .panel-header .btn.collapsed,
+.panel.collapsable .panel-header a.collapsed,
+fieldset.collapsable legend button.collapsed,
+fieldset.collapsable legend .btn.collapsed,
+fieldset.collapsable legend a.collapsed {
   background-color: #403D3D;
 }
 
+.accordion .card-sard .card-header button:hover,
 .accordion .card-sard .card-header .btn:hover,
 .accordion .card-sard .card-header a:hover,
+.accordion .panel-sard .panel-heading button:hover,
 .accordion .panel-sard .panel-heading .btn:hover,
 .accordion .panel-sard .panel-heading a:hover,
+.accordion .panel-sard .panel-header button:hover,
 .accordion .panel-sard .panel-header .btn:hover,
 .accordion .panel-sard .panel-header a:hover,
+.accordion fieldset legend button:hover,
+.accordion fieldset legend .btn:hover,
+.accordion fieldset legend a:hover,
+.card.card-sard.collapsable .card-header button:hover,
 .card.card-sard.collapsable .card-header .btn:hover,
 .card.card-sard.collapsable .card-header a:hover,
-.panel.panel-sard.collapsable .panel-heading .btn:hover,
-.panel.panel-sard.collapsable .panel-heading a:hover,
-.panel.panel-sard.collapsable .panel-header .btn:hover,
-.panel.panel-sard.collapsable .panel-header a:hover {
+.panel.collapsable .panel-heading button:hover,
+.panel.collapsable .panel-heading .btn:hover,
+.panel.collapsable .panel-heading a:hover,
+.panel.collapsable .panel-header button:hover,
+.panel.collapsable .panel-header .btn:hover,
+.panel.collapsable .panel-header a:hover,
+fieldset.collapsable legend button:hover,
+fieldset.collapsable legend .btn:hover,
+fieldset.collapsable legend a:hover {
   background-color: black;
 }
 
