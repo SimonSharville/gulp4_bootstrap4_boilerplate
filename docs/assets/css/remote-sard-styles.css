@@ -14886,6 +14886,8 @@ label {
 
 .navbar.fixed-top {
   z-index: 2000;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* change the background color */
@@ -15005,6 +15007,15 @@ label {
 .navbar-sard .nav-item:hover .nav-link.disabled {
   color: rgba(225, 225, 225, 0.5);
   background-color: #00B2B2;
+}
+
+@media (max-width: 991px) {
+  .navbar-sard .navbar-nav .nav-link {
+    padding: 0.25rem 0.5rem;
+  }
+  .navbar-sard .searchbar-sard {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .panel {
