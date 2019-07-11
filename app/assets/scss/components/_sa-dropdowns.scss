@@ -1,0 +1,203 @@
+// Dropdowns ====================================
+
+$default_dropdown_visited:      darken($client, 5%);
+$default_dropdown_hover:        $sa-grey-04;
+$default_dropdown_active:       $client;
+$default_dropdown_hover_click:  darken($client, 10%);
+
+.dropdown-menu{
+  border-color: $client;
+  box-shadow:$sa-box-shadow;
+  .dropdown-header{
+    @include roboto-bold;
+    font-size: 1rem; 
+    color: $text;
+    padding: $sard-spacer-4 $sard-spacer-8;
+  }
+}
+.dropdown-item{
+  color: $text;
+  padding: $sard-spacer-4 $sard-spacer-8;
+  &:visited { 
+    color: $text;
+  }
+  &:focus{
+    background-color: $default_dropdown_active;
+  }
+  &:hover{
+    background-color: $default_dropdown_hover;
+  }
+  &:active{
+    background-color: $default_dropdown_hover_click;
+    color: white;
+  }
+  &.active{
+    background-color: $default_dropdown_active;
+    color: white;
+  }
+  &.active:hover{
+    background-color: $default_dropdown_active;
+  }
+}
+
+
+$admin_dropdown_visited:      darken($admin, 5%);
+$admin_dropdown_hover:        $sa-grey-04;
+$admin_dropdown_active:       $admin;
+$admin_dropdown_hover_click:  darken($admin, 10%);
+
+.btn-admin + .dropdown-menu{
+  border-color: $admin;
+}
+.btn-admin + .dropdown-menu .dropdown-item{
+  &:focus{
+    background-color: $admin_dropdown_active;
+  }
+  &:hover{
+    background-color: $admin_dropdown_hover;
+  }
+  &:active{
+    background-color: $admin_dropdown_hover_click;
+  }
+  &.active{
+    background-color: $admin_dropdown_active;
+  }
+  &.active:hover{
+    background-color: $admin_dropdown_active;
+  }
+}
+
+
+$success_dropdown_visited:      darken($success, 5%);
+$success_dropdown_hover:        $sa-grey-04;
+$success_dropdown_active:       $success;
+$success_dropdown_hover_click:  darken($success, 10%);
+
+.btn-success + .dropdown-menu{
+  border-color: $success;
+}
+.btn-success + .dropdown-menu .dropdown-item{
+  &:focus{
+    background-color: $success_dropdown_active;
+  }
+  &:hover{
+    background-color: $success_dropdown_hover;
+  }
+  &:active{
+    background-color: $success_dropdown_hover_click;
+  }
+  &.active{
+    background-color: $success_dropdown_active;
+  }
+  &.active:hover{
+    background-color: $success_dropdown_active;
+  }
+}
+
+$info_dropdown_visited:      darken($info, 5%);
+$info_dropdown_hover:        $sa-grey-04;
+$info_dropdown_active:       $info;
+$info_dropdown_hover_click:  darken($info, 10%);
+
+.btn-info + .dropdown-menu{
+  border-color: $info;
+}
+.btn-info + .dropdown-menu .dropdown-item{
+  &:focus{
+    background-color: $info_dropdown_active;
+  }
+  &:hover{
+    background-color: $info_dropdown_hover;
+  }
+  &:active{
+    background-color: $info_dropdown_hover_click;
+  }
+  &.active{
+    background-color: $info_dropdown_active;
+  }
+  &.active:hover{
+    background-color: $info_dropdown_active;
+  }
+}
+
+$warning_dropdown_visited:      darken($warning, 5%);
+$warning_dropdown_hover:        $sa-grey-04;
+$warning_dropdown_active:       $warning;
+$warning_dropdown_hover_click:  darken($warning, 10%);
+
+.btn-warning + .dropdown-menu{
+  border-color: $warning;
+}
+.btn-warning + .dropdown-menu .dropdown-item{
+  &:focus{
+    background-color: $warning_dropdown_active;
+  }
+  &:hover{
+    background-color: $warning_dropdown_hover;
+  }
+  &:active{
+    background-color: $warning_dropdown_hover_click;
+  }
+  &.active{
+    background-color: $warning_dropdown_active;
+  }
+  &.active:hover{
+    background-color: $warning_dropdown_active;
+  }
+}
+
+$danger_dropdown_visited:      darken($danger, 5%);
+$danger_dropdown_hover:        $sa-grey-04;
+$danger_dropdown_active:       $danger;
+$danger_dropdown_hover_click:  darken($danger, 10%);
+
+.btn-danger + .dropdown-menu{
+  border-color: $danger;
+}
+.btn-danger + .dropdown-menu .dropdown-item{
+  &:focus{
+    background-color: $danger_dropdown_active;
+  }
+  &:hover{
+    background-color: $danger_dropdown_hover;
+  }
+  &:active{
+    background-color: $danger_dropdown_hover_click;
+  }
+  &.active{
+    background-color: $danger_dropdown_active;
+  }
+  &.active:hover{
+    background-color: $danger_dropdown_active;
+  }
+}
+
+$secondary_dropdown_visited:      darken($secondary, 5%);
+$secondary_dropdown_hover:        $sa-grey-04;
+$secondary_dropdown_active:       $secondary;
+$secondary_dropdown_hover_click:  darken($secondary, 10%);
+
+.btn-secondary + .dropdown-menu{
+  border-color: $secondary;
+}
+.btn-secondary + .dropdown-menu .dropdown-item{
+  &:focus{
+    background-color: $secondary_dropdown_active;
+  }
+  &:hover{
+    background-color: $secondary_dropdown_hover;
+  }
+  &:active{
+    background-color: $secondary_dropdown_hover_click;
+  }
+  &.active{
+    background-color: $secondary_dropdown_active;
+  }
+  &.active:hover{
+    background-color: $secondary_dropdown_active;
+  }
+}
+
+.dropwown-menu-item{
+  padding: 0 $sard-spacer-8;
+}

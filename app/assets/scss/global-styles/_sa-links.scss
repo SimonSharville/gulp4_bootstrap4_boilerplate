@@ -23,6 +23,24 @@ a{
   }
 }
 
+a:not([href]):not([tabindex]) {
+  transition: all 320ms ease;
+  color: $text_link;
+  text-decoration: none;
+  &:visited{
+    color: $text_link_visited;
+  }
+  &:focus,
+  &:hover{
+    color: $text_link_hover;
+    text-decoration: none;
+  } 
+  &:active{
+    color: $text_link_active;
+    text-decoration: none;
+  }
+}
+
 // Cards / Panels / Fieldsets
 .card-header,
 .card-footer,

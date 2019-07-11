@@ -80,9 +80,9 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 }
 
 // Dropdown header
-.dropdown-header{
+.navbar-sard .dropdown-menu .dropdown-header{
   padding: $sard-spacer-4 $sard-spacer-8 0 $sard-spacer-8;
-  color: $sa-navbar-bg;
+  color: white;
   font-size: 1rem;
 }
 
