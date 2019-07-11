@@ -57,6 +57,23 @@ $accordian-bg-open-hover: black;
   margin:0; // Adjusts some strange overlap of the panel-heading
 }
 
+// Adjustments for panels
+.accordion>.panel {
+  overflow: hidden;
+}
+.accordion>.panel:not(:first-of-type):not(:last-of-type) {
+  border-bottom: 0;
+  border-radius: 0;
+}
+.accordion>.panel:first-of-type {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.accordion>.panel:last-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 
 // Collapsable Cards & Panels =======================================
 
@@ -64,8 +81,8 @@ $accordian-bg-open-hover: black;
 
 /* set heading paddings to <a> instead of h3 */    
 .card.collapsable .card-header,
-.card.collapsable .panel-heading,
-.card.collapsable .panel-header { 
+.panel.collapsable .panel-heading,
+.panel.collapsable .panel-header { 
   display: block;
   padding:0px;
   color:white!important;
@@ -74,8 +91,8 @@ $accordian-bg-open-hover: black;
 }
 // This makes the entire heading a link
 .card.collapsable .card-header,
-.card.collapsable .panel-heading,
-.card.collapsable .panel-header { 
+.panel.collapsable .panel-heading,
+.panel.collapsable .panel-header { 
   & .btn,
   & a {
     padding: $sard-heading-padding;
@@ -95,8 +112,8 @@ $accordian-bg-open-hover: black;
   }
 }
 .card.collapsable .card-header,
-.card.collapsable .panel-heading,
-.card.collapsable .panel-header{
+.panel.collapsable .panel-heading,
+.panel.collapsable .panel-header{
   & .btn.collapsed,
   & a.collapsed{
     border-radius: $sard-border-radius;
@@ -104,20 +121,57 @@ $accordian-bg-open-hover: black;
 }
 
 .card.collapsable .card-header h3,
-.card.collapsable .panel-heading h3,
-.card.collapsable .panel-header h3 { 
+.panel.collapsable .panel-heading h3,
+.panel.collapsable .panel-header h3 { 
   margin:0; // Adjusts some strange overlap of the panel-heading
 }
 
+// Toggle Icon ==================================
+.accordion .card-header,
+.accordion .panel-heading,
+.accordion .panel-header,
+.card.collapsable .card-header,
+.panel.collapsable .panel-heading,
+.panel.collapsable .panel-header{
+  & .btn::after,
+  & a::after{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f106" ;
+    font-weight: 900;
+    padding-right: $sard-spacer-8 ;
+    color:$client;
+    font-size: 1.75rem;
+    position: absolute;
+    right: 2px;
+  }
+}
+.accordion .card-header,
+.accordion .panel-heading,
+.accordion .panel-header,
+.card.collapsable .card-header,
+.panel.collapsable .panel-heading,
+.panel.collapsable .panel-header{
+  & .btn.collapsed::after,
+  & a.collapsed::after{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f107" ;
+    font-weight: 900;
+    padding-right: $sard-spacer-8;
+    color:$client;
+    font-size: 1.75rem;
+    position: absolute;
+    right: 2px;
+  }
+}
 
-// Colouring ========================================================
+// Colouring ====================================
 
 .accordion .card-sard .card-header,
-.accordion .card-sard .panel-heading,
-.accordion .card-sard .panel-header,
+.accordion .panel-sard .panel-heading,
+.accordion .panel-sard .panel-header,
 .card.card-sard.collapsable .card-header,
-.card.card-sard.collapsable .panel-heading,
-.card.card-sard.collapsable .panel-header {
+.panel.panel-sard.collapsable .panel-heading,
+.panel.panel-sard.collapsable .panel-header {
   & .btn,
   & a{
     background-color: $accordian-bg-open;
