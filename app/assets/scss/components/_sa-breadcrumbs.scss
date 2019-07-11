@@ -13,6 +13,9 @@
   top: 50px;
   border-bottom: 1px solid $sa-grey-04;
   background-color: white;
+  @media (max-width: 991px) {
+    top: 38px;
+  } 
 
   & .breadcrumb{
     padding: $sard-spacer-4 0;

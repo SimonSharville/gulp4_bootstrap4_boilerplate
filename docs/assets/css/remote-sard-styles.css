@@ -13666,6 +13666,12 @@ a.badge.badge-light {
   background-color: white;
 }
 
+@media (max-width: 991px) {
+  #breadcrumb-top.fixed-top {
+    top: 38px;
+  }
+}
+
 #breadcrumb-top.fixed-top .breadcrumb {
   padding: 0.25rem 0;
   border-bottom: none;
@@ -14876,6 +14882,10 @@ label {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem #00B2B2;
   box-shadow: 0 0 0 0.2rem #00B2B2;
+}
+
+.navbar.fixed-top {
+  z-index: 2000;
 }
 
 /* change the background color */
