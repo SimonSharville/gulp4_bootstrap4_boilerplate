@@ -30,12 +30,13 @@
   position: relative;
   padding-left: 28px;
   padding-right: 30px;
-  // @include roboto-bold;
   line-height: 1.2em;
+  cursor: pointer;
 }
 
 .sa-checkbox span.checkbox{
   padding-left: 0px;
+  cursor: pointer;
 }
 
 .sa-checkbox span.checkbox::before,
@@ -64,7 +65,9 @@
   border: 2px solid $sa-grey-06;
   background-color: $white;
 }
-
+.sa-checkbox input[type="checkbox"][disabled] + label{
+  cursor: not-allowed;
+}
 .sa-checkbox input[type="checkbox"][disabled] + label span.checkbox::before{
   background-color: $sa-grey-02;
   cursor: not-allowed;
@@ -89,12 +92,13 @@
   position: relative;
   padding-left: 0px;
   padding-right: 28px;
-  // @include roboto-bold;
   line-height: 1.2em;
+  cursor: pointer;
 }
 
 .sa-checkbox-after span.checkbox{
   padding-left: 0px;
+  cursor: pointer;
 }
 
 .sa-checkbox-after span.checkbox::after {
@@ -126,6 +130,9 @@
   right:0;
 }
 
+.sa-checkbox-after input[type="checkbox"][disabled] + label{
+  cursor: not-allowed;
+}
 .sa-checkbox-after input[type="checkbox"][disabled] + label span.checkbox::after{
   background-color: $sa-grey-02;
   cursor: not-allowed;
@@ -280,7 +287,6 @@
 
 
 .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
-  // color:red;
   background-color: $client;
   border-color: $client;
 }
@@ -293,9 +299,6 @@
   left:5px;
   top:4px;
   border-radius:100%;
-  -ms-border-radius:100%;
-  -moz-border-radius:100%;
-  -webkit-border-radius:100%;
   z-index: 2;
 }
 .form-check-inline.sa-radio-buttons input[type="radio"]:checked + .radio-button:before{
@@ -303,18 +306,24 @@
 }
 
 .sa-radio-buttons input[type="radio"]:disabled{
-  cursor: default;
+  cursor: not-allowed;
+}
+.sa-radio-buttons input[type="radio"]:disabled + .radio-button{
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons input[type="radio"]:disabled + .radio-button:after{
   background-color: $sa-grey-02;
+  cursor: not-allowed;
 }
 .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:after{
   border-color: mix($sa-grey-02, $client, 50%);
   background-color: mix($sa-grey-02, $client, 50%);
+  cursor: not-allowed;
 }
 .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:before{
   background-color: $sa-grey-02;
+  cursor: not-allowed;
 }
 
 
@@ -331,9 +340,8 @@
 .sa-radio-buttons-after .radio-button{
   display: inline;
   position:relative;
-          // padding-left:10px;
-          padding-right:25px;
-          cursor: pointer;
+  padding-right:25px;
+  cursor: pointer;
 }
 
 .sa-radio-buttons-after .radio-button:after{
@@ -379,21 +387,27 @@
 
 .form-check-inline.sa-radio-buttons-after input[type="radio"]:checked + .radio-button:before{
   top:6px;
+  
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled{
-  cursor: default;
+  cursor: not-allowed;
 }
-
+.sa-radio-buttons-after input[type="radio"]:disabled + .radio-button{
+  cursor: not-allowed;
+}
 .sa-radio-buttons-after input[type="radio"]:disabled + .radio-button:after{
   background-color: $sa-grey-02;
+  cursor: not-allowed;
 }
 .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:after{
   border-color: mix($sa-grey-02, $client, 50%);
   background-color: mix($sa-grey-02, $client, 50%);
+  cursor: not-allowed;
 }
 .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:before{
   background-color: $sa-grey-02;
+  cursor: not-allowed;
 }
 
 // Hover effect

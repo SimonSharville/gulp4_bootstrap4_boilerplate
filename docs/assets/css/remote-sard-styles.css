@@ -14282,10 +14282,12 @@ a.badge.badge-light {
   padding-left: 28px;
   padding-right: 30px;
   line-height: 1.2em;
+  cursor: pointer;
 }
 
 .sa-checkbox span.checkbox {
   padding-left: 0px;
+  cursor: pointer;
 }
 
 .sa-checkbox span.checkbox::before,
@@ -14316,6 +14318,10 @@ a.badge.badge-light {
   background-color: #fff;
 }
 
+.sa-checkbox input[type="checkbox"][disabled] + label {
+  cursor: not-allowed;
+}
+
 .sa-checkbox input[type="checkbox"][disabled] + label span.checkbox::before {
   background-color: #EDEBEB;
   cursor: not-allowed;
@@ -14341,10 +14347,12 @@ a.badge.badge-light {
   padding-left: 0px;
   padding-right: 28px;
   line-height: 1.2em;
+  cursor: pointer;
 }
 
 .sa-checkbox-after span.checkbox {
   padding-left: 0px;
+  cursor: pointer;
 }
 
 .sa-checkbox-after span.checkbox::after {
@@ -14376,6 +14384,10 @@ a.badge.badge-light {
 
 .sa-checkbox-after span.checkbox.right::after {
   right: 0;
+}
+
+.sa-checkbox-after input[type="checkbox"][disabled] + label {
+  cursor: not-allowed;
 }
 
 .sa-checkbox-after input[type="checkbox"][disabled] + label span.checkbox::after {
@@ -14538,9 +14550,6 @@ a.badge.badge-light {
   left: 5px;
   top: 4px;
   border-radius: 100%;
-  -ms-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
   z-index: 2;
 }
 
@@ -14549,20 +14558,27 @@ a.badge.badge-light {
 }
 
 .sa-radio-buttons input[type="radio"]:disabled {
-  cursor: default;
+  cursor: not-allowed;
+}
+
+.sa-radio-buttons input[type="radio"]:disabled + .radio-button {
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons input[type="radio"]:disabled + .radio-button:after {
   background-color: #EDEBEB;
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:after {
   border-color: #77cfcf;
   background-color: #77cfcf;
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:before {
   background-color: #EDEBEB;
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons-after {
@@ -14629,20 +14645,27 @@ a.badge.badge-light {
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled {
-  cursor: default;
+  cursor: not-allowed;
+}
+
+.sa-radio-buttons-after input[type="radio"]:disabled + .radio-button {
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled + .radio-button:after {
   background-color: #EDEBEB;
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:after {
   border-color: #77cfcf;
   background-color: #77cfcf;
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:before {
   background-color: #EDEBEB;
+  cursor: not-allowed;
 }
 
 .sa-radio-buttons:hover .radio-button:after,
