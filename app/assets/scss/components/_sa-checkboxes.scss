@@ -460,3 +460,269 @@ sa-radio-buttons-after .position-static{
     padding-top: 2px;
   }
 }
+
+
+
+
+// SARD Toggle Switch ==================================
+// https://codepen.io/morganfeeney/pen/KiBty
+// http://codersblock.com/blog/checkbox-trickery-with-css/
+// https://www.w3schools.com/howto/howto_css_switch.asp
+.sa-toggle-switch {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+}
+
+/* Hide default HTML checkbox */
+.sa-toggle-switch input {display:none;}
+
+/* The slider */
+.sa-toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  width: 45px;
+  height: 25px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 25px;
+}
+
+.sa-toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $client;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.sa-toggle-switch input:checked + .slider {
+  background-color: $client;
+}
+
+.sa-toggle-switch input:focus + .slider {
+  box-shadow: 0 0 1px $client;
+}
+
+.sa-toggle-switch input:checked + .slider:before {
+  background-color: white;
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.sa-toggle-switch label{
+  padding-top: 2px!important;
+  padding-left: 50px;
+}
+.sa-toggle-switch input:checked + label{
+  @include roboto-bold;
+}
+
+// right variation
+
+.sa-toggle-switch.right .slider{
+  right: 0;
+}
+.sa-toggle-switch.right label{
+  padding-top: 2px;
+  padding-left: 0px;
+  padding-right: 50px;
+}
+
+
+// SARD Radio Toggles =========================
+// https://www.templatemonster.com/blog/style-checkboxes-radio-buttons-css/
+
+.sa-radio-toggle input[type="radio"]{
+  display: none;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.sa-radio-toggle label {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 8px;
+}
+
+.sa-radio-toggle span::before,
+.sa-radio-toggle span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sa-radio-toggle span.radio{
+  padding-top: 4px;
+}
+.sa-radio-toggle span.radio:hover {
+  cursor: pointer;
+}
+.sa-radio-toggle span.radio::before {
+  left: 0px;
+  width: 45px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.2);
+}
+.sa-radio-toggle span.radio::after {
+  left: 4px;
+  top:1px;
+  width: 17px;
+  height: 17px;
+  border-radius: 10px;
+  background-color: $sa-grey-06;
+  transition: .25s, background-color .25s;
+}
+.sa-radio-toggle input[type="radio"]:checked + label{
+  @include roboto-bold;
+}
+.sa-radio-toggle input[type="radio"]:checked + label span.radio::after {
+  left: 24px;
+  background-color: $client;
+}
+
+// sa-radio-toggle Right ==============
+
+.sa-radio-toggle-right input[type="radio"]{
+  display: none;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+
+.sa-radio-toggle-right{
+  text-align: right;
+}
+.sa-radio-toggle-right label {
+  position: relative;
+  padding-right: 50px;
+  margin-bottom: 8px;
+}
+
+.sa-radio-toggle-right span::before,
+.sa-radio-toggle-right span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sa-radio-toggle-right span.radio{
+  padding-top: 4px;
+}
+.sa-radio-toggle-right span.radio:hover {
+  cursor: pointer;
+}
+.sa-radio-toggle-right span.radio::before {
+  right: 0px;
+  width: 45px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.2);
+}
+.sa-radio-toggle-right span.radio::after {
+  right: 24px;
+  top:1px;
+  width: 17px;
+  height: 17px;
+  border-radius: 10px;
+  background-color: $sa-grey-06;
+  transition: .25s, background-color .25s;
+}
+.sa-radio-toggle-right input[type="radio"]:checked + label{
+  @include roboto-bold;
+}
+.sa-radio-toggle-right input[type="radio"]:checked + label span.radio::after {
+  right: 4px;
+  background-color: $client;
+}
+
+// SARD Toggle Check ===============================================================
+// This is the Yes/No Switch used in Appraisals
+// https://codepen.io/anon/pen/GgpdwY
+
+.sa-toggle-check{
+  input[type="checkbox"]{
+    display: none;
+  }
+}
+
+.sa-toggle-check{
+
+  .toggle-check-input {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+  }
+
+  .toggle-check-text {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    background: white;
+    padding: 0.15em 0.5em 0.15em 2em;
+    border-radius: 1em;
+    min-width: 4.5em;
+    width: 4.5em;
+    color: $text;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    border: 2px solid $sa-grey-06;
+  }
+  .toggle-check-text:hover{
+    border-color: $client;
+  }
+
+  .toggle-check-text:after {
+    content: ' ';
+    display: block;
+    background: $client;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    position: absolute;
+    left: 0.3em;
+    top: 0.3em;
+    transition: left 0.15s, margin-left 0.15s;
+  }
+
+  .toggle-check-text:before {
+    content: 'No';
+    color: $sa-grey-06;
+  }
+
+  .toggle-check-input:checked ~ .toggle-check-text {
+    background: $client;
+    border-color: $client;
+    padding-left: 0.5em;
+    // padding-right: 2em;
+  }
+
+  .toggle-check-input:checked ~ .toggle-check-text:before {
+    content: 'Yes';
+    color: white;
+    @include roboto-bold;
+  }
+
+  .toggle-check-input:checked ~ .toggle-check-text:after {
+    left: 100%;
+    margin-left: -1.4em;
+    background: white;
+  }
+}
