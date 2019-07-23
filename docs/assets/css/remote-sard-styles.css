@@ -12226,6 +12226,12 @@ button:focus,
   outline-width: none !important;
 }
 
+.right,
+.align-right,
+.right-align {
+  text-align: right;
+}
+
 hr.black {
   border-width: 1px;
   border-color: black;
@@ -14254,7 +14260,8 @@ a.badge.badge-light {
   border-color: white;
 }
 
-span.checkbox {
+.sa-checkbox span.checkbox,
+.sa-checkbox-after span.checkbox {
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -14272,10 +14279,8 @@ span.checkbox {
 
 .sa-checkbox label {
   position: relative;
-  padding-left: 30px;
+  padding-left: 28px;
   padding-right: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
   line-height: 1.2em;
 }
 
@@ -14302,6 +14307,7 @@ span.checkbox {
   border-radius: 5px;
   font-family: "Font Awesome 5 Free";
   content: "\f00c";
+  font-weight: 900;
   color: transparent;
   text-align: center;
   font-size: 100%;
@@ -14333,9 +14339,7 @@ span.checkbox {
 .sa-checkbox-after label {
   position: relative;
   padding-left: 0px;
-  padding-right: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  padding-right: 28px;
   line-height: 1.2em;
 }
 
@@ -14363,10 +14367,11 @@ span.checkbox {
   color: transparent;
   text-align: center;
   font-size: 100%;
+  font-weight: 900;
   line-height: 1.15em;
   border: 2px solid #C7C4C2;
   background-color: #fff;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .sa-checkbox-after span.checkbox.right::after {
@@ -14459,9 +14464,18 @@ span.checkbox {
   color: #B5B0B0;
 }
 
+.sa-checkbox-after.right {
+  text-align: right;
+}
+
+.sa-checkbox-after.right .sa-radio-buttons .radio-button {
+  padding-right: 0;
+  margin-left: 10px;
+}
+
 .sa-radio-buttons {
-  position: relative;
-  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .sa-radio-buttons.form-check,
@@ -14469,7 +14483,11 @@ span.checkbox {
   padding-left: 0;
 }
 
-.sa-radio-buttons .control-label {
+.sa-radio-buttons.form-check-inline {
+  margin-right: 0;
+}
+
+.sa-radio-buttons label {
   padding-top: 0;
 }
 
@@ -14489,15 +14507,10 @@ span.checkbox {
   background-color: white;
   position: absolute;
   left: 0;
-  top: 1px;
+  margin-top: 1px;
   border-radius: 100%;
-  -ms-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .sa-radio-buttons input[type="radio"] {
@@ -14512,7 +14525,6 @@ span.checkbox {
 }
 
 .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
-  color: #0B8;
   background-color: #00B2B2;
   border-color: #00B2B2;
 }
@@ -14524,12 +14536,16 @@ span.checkbox {
   position: absolute;
   background: white;
   left: 5px;
-  top: 6px;
+  top: 4px;
   border-radius: 100%;
   -ms-border-radius: 100%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   z-index: 2;
+}
+
+.form-check-inline.sa-radio-buttons input[type="radio"]:checked + .radio-button:before {
+  margin-top: 2px;
 }
 
 .sa-radio-buttons input[type="radio"]:disabled {
@@ -14550,8 +14566,8 @@ span.checkbox {
 }
 
 .sa-radio-buttons-after {
-  position: relative;
-  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .sa-radio-buttons-after .control-label {
@@ -14561,7 +14577,6 @@ span.checkbox {
 .sa-radio-buttons-after .radio-button {
   display: inline;
   position: relative;
-  padding-left: 10px;
   padding-right: 25px;
   cursor: pointer;
 }
@@ -14574,15 +14589,10 @@ span.checkbox {
   background-color: white;
   position: absolute;
   right: 0;
-  top: 1px;
+  margin-top: 1px;
   border-radius: 100%;
-  -ms-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .sa-radio-buttons-after input[type="radio"] {
@@ -14609,12 +14619,13 @@ span.checkbox {
   position: absolute;
   background: white;
   right: 5px;
-  top: 6px;
+  top: 4px;
   border-radius: 100%;
-  -ms-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
   z-index: 2;
+}
+
+.form-check-inline.sa-radio-buttons-after input[type="radio"]:checked + .radio-button:before {
+  top: 6px;
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled {
@@ -14634,17 +14645,32 @@ span.checkbox {
   background-color: #EDEBEB;
 }
 
-.sa-radio-buttons:hover .radio-button:after {
+.sa-radio-buttons:hover .radio-button:after,
+.sa-radio-buttons-after:hover .radio-button:after {
   border-color: #00B2B2;
 }
 
-.sa-radio-buttons:hover input[type="radio"]:disabled + .radio-button:after {
+.sa-radio-buttons:hover input[type="radio"]:disabled + .radio-button:after,
+.sa-radio-buttons-after:hover input[type="radio"]:disabled + .radio-button:after {
   border-color: #C7C4C2;
 }
 
-.right .sa-radio-buttons .radio-button {
+.sa-radio-buttons-after.right {
+  text-align: right;
+}
+
+.sa-radio-buttons-after.right .sa-radio-buttons .radio-button {
   padding-right: 0;
   margin-left: 10px;
+}
+
+.form-check-inline.sa-radio-buttons-after:last-of-type {
+  margin-right: 0;
+}
+
+.sa-radio-buttons .position-static,
+sa-radio-buttons-after .position-static {
+  position: absolute !important;
 }
 
 .form-group-row .sa-radio-buttons {

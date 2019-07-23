@@ -5,16 +5,15 @@
 // SARD Checkboxes ===========================
 // https://www.templatemonster.com/blog/style-checkboxes-radio-buttons-css/
 
-span.checkbox{ // This overrides the default Bootstrap settings
-  display: inline-block; // Original: block
-  margin-top:5px; // Original: 10px
-  margin-bottom:5px; // Original: 10px
-}
+
 
 .sa-checkbox,
 .sa-checkbox-after{
-  // padding-top: 3px;
-  // padding-bottom: 3px;
+  span.checkbox{ // This overrides the default Bootstrap settings
+    display: inline-block; // Original: block
+    margin-top:5px; // Original: 10px
+    margin-bottom:5px; // Original: 10px
+  }
 }
 
 .sa-checkbox.form-check,
@@ -29,9 +28,9 @@ span.checkbox{ // This overrides the default Bootstrap settings
 
 .sa-checkbox label {
   position: relative;
-  padding-left: 30px;
+  padding-left: 28px;
   padding-right: 30px;
-  @include roboto-bold;
+  // @include roboto-bold;
   line-height: 1.2em;
 }
 
@@ -57,6 +56,7 @@ span.checkbox{ // This overrides the default Bootstrap settings
   border-radius: 5px;
   font-family: "Font Awesome 5 Free"; 
   content: "\f00c" ;
+  font-weight: 900;
   color: transparent;
   text-align: center;
   font-size: 100%;
@@ -88,8 +88,8 @@ span.checkbox{ // This overrides the default Bootstrap settings
 .sa-checkbox-after label {
   position: relative;
   padding-left: 0px;
-  padding-right: 30px;
-  @include roboto-bold;
+  padding-right: 28px;
+  // @include roboto-bold;
   line-height: 1.2em;
 }
 
@@ -116,10 +116,11 @@ span.checkbox{ // This overrides the default Bootstrap settings
   color: transparent;
   text-align: center;
   font-size: 100%;
+  font-weight: 900;
   line-height: 1.15em;
   border: 2px solid $sa-grey-06;
   background-color: $white;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 .sa-checkbox-after span.checkbox.right::after{
   right:0;
@@ -214,7 +215,14 @@ span.checkbox{ // This overrides the default Bootstrap settings
 }
 
 
-
+// Adjustments
+.sa-checkbox-after.right { // When in a range right column
+  text-align: right;
+  .sa-radio-buttons .radio-button{
+    padding-right:0;
+    margin-left:10px;
+  }
+}
 
 
 
@@ -224,16 +232,18 @@ span.checkbox{ // This overrides the default Bootstrap settings
 // http://cssdeck.com/labs/radio-button-styling-in-css
 
 .sa-radio-buttons{
-  position:relative;
-  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .sa-radio-buttons.form-check,
 .sa-radio-buttons-after.form-check{
   padding-left: 0;
 }
-
-.sa-radio-buttons .control-label{
+.sa-radio-buttons.form-check-inline{
+  margin-right: 0;
+}
+.sa-radio-buttons label{
   padding-top: 0;
 }
 
@@ -253,15 +263,9 @@ span.checkbox{ // This overrides the default Bootstrap settings
   background-color: white;
   position:absolute;
   left:0;
-  top:1px;
+  margin-top:1px;
   border-radius:100%;
-  -ms-border-radius:100%;
-  -moz-border-radius:100%;
-  -webkit-border-radius:100%;
   box-sizing:border-box;
-  -ms-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
 }
 .sa-radio-buttons input[type="radio"]{
   cursor: pointer;
@@ -276,7 +280,7 @@ span.checkbox{ // This overrides the default Bootstrap settings
 
 
 .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
-  color:#0B8;
+  // color:red;
   background-color: $client;
   border-color: $client;
 }
@@ -287,12 +291,15 @@ span.checkbox{ // This overrides the default Bootstrap settings
   position:absolute;
   background:white;
   left:5px;
-  top:6px;
+  top:4px;
   border-radius:100%;
   -ms-border-radius:100%;
   -moz-border-radius:100%;
   -webkit-border-radius:100%;
   z-index: 2;
+}
+.form-check-inline.sa-radio-buttons input[type="radio"]:checked + .radio-button:before{
+  margin-top:2px;
 }
 
 .sa-radio-buttons input[type="radio"]:disabled{
@@ -313,8 +320,8 @@ span.checkbox{ // This overrides the default Bootstrap settings
 
 // Radio Buttons After = when button is to the right of the label =============
 .sa-radio-buttons-after{
-  position:relative;
-  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .sa-radio-buttons-after .control-label{
@@ -324,7 +331,7 @@ span.checkbox{ // This overrides the default Bootstrap settings
 .sa-radio-buttons-after .radio-button{
   display: inline;
   position:relative;
-          padding-left:10px;
+          // padding-left:10px;
           padding-right:25px;
           cursor: pointer;
 }
@@ -337,15 +344,9 @@ span.checkbox{ // This overrides the default Bootstrap settings
   background-color: white;
   position:absolute;
   right:0;
-  top:1px;
+  margin-top:1px;
   border-radius:100%;
-  -ms-border-radius:100%;
-  -moz-border-radius:100%;
-  -webkit-border-radius:100%;
   box-sizing:border-box;
-  -ms-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
 }
 .sa-radio-buttons-after input[type="radio"]{
   cursor: pointer;
@@ -370,13 +371,14 @@ span.checkbox{ // This overrides the default Bootstrap settings
   height:10px;
   position:absolute;
   background:white;
-          right:5px;
-  top:6px;
+  right:5px;
+  top:4px;
   border-radius:100%;
-  -ms-border-radius:100%;
-  -moz-border-radius:100%;
-  -webkit-border-radius:100%;
   z-index: 2;
+}
+
+.form-check-inline.sa-radio-buttons-after input[type="radio"]:checked + .radio-button:before{
+  top:6px;
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled{
@@ -395,23 +397,37 @@ span.checkbox{ // This overrides the default Bootstrap settings
 }
 
 // Hover effect
-.sa-radio-buttons:hover .radio-button:after{
+.sa-radio-buttons:hover .radio-button:after,
+.sa-radio-buttons-after:hover .radio-button:after{
   border-color: $client;
 }
 
-.sa-radio-buttons:hover input[type="radio"]:disabled + .radio-button:after{
+.sa-radio-buttons:hover input[type="radio"]:disabled + .radio-button:after,
+.sa-radio-buttons-after:hover input[type="radio"]:disabled + .radio-button:after{
   border-color: $sa-grey-06;
 }
 
 
 // Adjustments
-.right { // When in a range right column
+.sa-radio-buttons-after.right { // When in a range right column
+  text-align: right;
   .sa-radio-buttons .radio-button{
     padding-right:0;
     margin-left:10px;
   }
 }
+.form-check-inline.sa-radio-buttons-after:last-of-type{
+  margin-right: 0;
+}
 
+.sa-radio-buttons .position-static,
+sa-radio-buttons-after .position-static{
+  position: absolute!important;
+}
+
+// .sa-radio-buttons-after .position-static{
+//   margin-left: -35px!important;
+// }
 .form-group-row .sa-radio-buttons{
   margin-top: 7px;
   margin-bottom: 7px;

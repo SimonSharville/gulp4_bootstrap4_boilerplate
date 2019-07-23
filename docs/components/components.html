@@ -1003,7 +1003,7 @@ Someone famous in
 <div class='row'>
 <div class='col-sm-12'>
 <h1 class='bs-anchor' id='checkboxes-anchor'>Checkboxes and Radios</h1>
-<p>Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand are out better.</p>
+<p>Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand out better.</p>
 <p>Below you will see the Default and SARD styles next to each other.</p>
 </div>
 <div class='col-sm-6'>
@@ -1060,7 +1060,7 @@ Disabled radio
 <label class='form-check-label' for='inlineRadio3'>3 (disabled)</label>
 </div>
 </div>
-<div class='card-body border-bottom'>
+<div class='card-body'>
 <h5 class='card-title'>Without labels</h5>
 <p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
 <div class='form-check'>
@@ -1092,6 +1092,7 @@ Disabled radio
 </div>
 <div class='card-body border-bottom'>
 <h5 class='card-title'>.sa-checkbox-after</h5>
+<div class='right'>
 <div class='form-check sa-checkbox-after'>
 <input class='form-check-input' id='defaultCheck2-1-1' type='checkbox' value=''>
 <label class='form-check-label' for='defaultCheck2-1-1'>
@@ -1105,16 +1106,17 @@ Disabled radio
 </label>
 </div>
 </div>
+</div>
 <div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-radios</h5>
+<h5 class='card-title'>.sa-radio-buttons</h5>
 <div class='form-check sa-radio-buttons'>
-<input checked='checked' class='form-check-input' id='exampleRadios2-1' name='exampleRadios' type='radio' value='option1'>
+<input checked='checked' class='form-check-input' id='exampleRadios2-1' name='exampleRadios-sa' type='radio' value='option1'>
 <label class='radio-button form-check-label' for='exampleRadios2-1'>
 <span>Default radio</span>
 </label>
 </div>
 <div class='form-check sa-radio-buttons'>
-<input class='form-check-input' id='exampleRadios2-2' name='exampleRadios' type='radio' value='option2'>
+<input class='form-check-input' id='exampleRadios2-2' name='exampleRadios-sa' type='radio' value='option2'>
 <label class='radio-button form-check-label' for='exampleRadios2-2'>
 Second default radio
 </label>
@@ -1127,28 +1129,74 @@ Disabled radio
 </div>
 </div>
 <div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-radios (inline)</h5>
-<div class='form-check form-check-inline mb-3'>
-<input class='form-check-input' id='inlineRadio2-1' name='inlineRadioOptions' type='radio' value='option1'>
-<label class='form-check-label' for='inlineRadio2-1'>1</label>
+<h5 class='card-title'>.sa-radio-buttons-after</h5>
+<div class='right'>
+<div class='form-check sa-radio-buttons-after'>
+<input checked='checked' class='form-check-input' id='exampleRadios2-1-1' name='exampleRadios-right' type='radio' value='option1'>
+<label class='radio-button form-check-label' for='exampleRadios2-1-1'>
+<span>Default radio</span>
+</label>
 </div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' id='inlineRadio2-2' name='inlineRadioOptions' type='radio' value='option2'>
-<label class='form-check-label' for='inlineRadio2-2'>2</label>
+<div class='form-check sa-radio-buttons-after'>
+<input class='form-check-input' id='exampleRadios2-2-2' name='exampleRadios-right' type='radio' value='option2'>
+<label class='radio-button form-check-label' for='exampleRadios2-2-2'>
+Second default radio
+</label>
 </div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' disabled='disabled' id='inlineRadio2-3' name='inlineRadioOptions' type='radio' value='option3'>
-<label class='form-check-label' for='inlineRadio2-3'>3 (disabled)</label>
+<div class='form-check sa-radio-buttons-after'>
+<input class='form-check-input' disabled='disabled' id='exampleRadios2-3-3' name='exampleRadios-right' type='radio' value='option3'>
+<label class='radio-button form-check-label' for='exampleRadios2-3-3'>
+Disabled radio
+</label>
+</div>
 </div>
 </div>
 <div class='card-body border-bottom'>
-<h5 class='card-title'>Without labels</h5>
-<p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankCheckbox' type='checkbox' value='option1'>
+<h5 class='card-title'>.sa-radio-buttons (inline)</h5>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' id='inlineRadio2-1' name='inlineRadioOptions' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='inlineRadio2-1'>1</label>
 </div>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankRadio1' name='blankRadio' type='radio' value='option1'>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' id='inlineRadio2-2' name='inlineRadioOptions' type='radio' value='option2'>
+<label class='form-check-label radio-button' for='inlineRadio2-2'>2</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio2-3' name='inlineRadioOptions' type='radio' value='option3'>
+<label class='form-check-label radio-button' for='inlineRadio2-3'>3 (disabled)</label>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons-after (inline)</h5>
+<div class='right'>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' id='inlineRadio-right-2-1-1' name='inlineRadioOptions-right' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-1-1'>1</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' id='inlineRadio-right-2-2-2' name='inlineRadioOptions-right' type='radio' value='option2'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-2-2'>2</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio-right-2-3-3' name='inlineRadioOptions-right' type='radio' value='option3'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-3-3'>3 (disabled)</label>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>Without labels</h5>
+<p class='base'>With SARD styles you DON'T need to add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
+<div class='form-check sa-checkbox'>
+<input aria-label='...' class='form-check-input' id='blankCheckbox-2' type='checkbox' value='option1'>
+<label class='form-check-label' for='blankCheckbox-2'>
+<span class='checkbox'></span>
+</label>
+</div>
+<div class='form-check sa-radio-buttons'>
+<input aria-label='...' class='form-check-input' id='blankRadio2-1' name='blankRadio' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='blankRadio2-1'>
+<span></span>
+</label>
 </div>
 </div>
 </div>
@@ -1156,12 +1204,19 @@ Disabled radio
 <div class='col-sm-12'>
 <hr>
 <h3>Build Notes</h3>
+<p>
+<span class='bold'>Note!</span>
+Bootstrap 4 for has introduced the class of
+<code>.form-check</code>
+This is used as a wrapper for Checkboxes and Radios. However, some of the earlier SARD project were built in BS3, These have their own wrappers (.sa-checkbox and .sa-radio-buttons), It should be possible to use either.
+</p>
 <h5 class='base'>Checkboxes</h5>
 <p>
-To create the SARD checkboxes add
+To create the SARD Checkboxes add
 <code>.sa-checkbox</code>
 to the class of .form-check and add
-<code>%span.checkbox to the text inside the label.</code>
+<code>%span.checkbox</code>
+to the text INSIDE the label.
 <br>
 You can also use
 <code>.sa-checkbox-after</code>
@@ -1169,7 +1224,15 @@ to have the checkbox after the label.
 </p>
 <h5 class='base'>Radios</h5>
 <p>
-To
+To create SARD Radios add
+<code>.sa-radio-buttons</code>
+to the class of .form-check and add
+<code>.radio-button</code>
+to the label.
+<br>
+You can also use
+<code>.sa-radio-buttons-after</code>
+to have the button after the label.
 </p>
 </div>
 </div>
