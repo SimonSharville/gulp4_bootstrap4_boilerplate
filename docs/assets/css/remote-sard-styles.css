@@ -14823,8 +14823,15 @@ sa-radio-buttons-after .position-static {
   height: 25px;
   background-color: white;
   border-radius: 50px;
-  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  border: 2px solid #C7C4C2;
+}
+
+.sa-radio-toggle:hover span.radio::before {
+  border-color: #00B2B2;
+}
+
+.sa-radio-toggle input[type="radio"]:checked + label span.radio::before {
+  border-color: #00B2B2;
 }
 
 .sa-radio-toggle span.radio::after {
@@ -14889,8 +14896,15 @@ sa-radio-buttons-after .position-static {
   height: 25px;
   background-color: white;
   border-radius: 50px;
-  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  border: 2px solid #C7C4C2;
+}
+
+.sa-radio-toggle-right:hover span.radio::before {
+  border-color: #00B2B2;
+}
+
+.sa-radio-toggle-right input[type="radio"]:checked + label span.radio::before {
+  border-color: #00B2B2;
 }
 
 .sa-radio-toggle-right span.radio::after {
@@ -14933,7 +14947,6 @@ sa-radio-buttons-after .position-static {
   border-radius: 1em;
   min-width: 4.5em;
   width: 4.5em;
-  color: #211F0F;
   cursor: pointer;
   -webkit-transition: background-color 0.15s;
   transition: background-color 0.15s;
@@ -14947,7 +14960,7 @@ sa-radio-buttons-after .position-static {
 .sa-toggle-check .toggle-check-text:after {
   content: ' ';
   display: block;
-  background: #00B2B2;
+  background: #C7C4C2;
   width: 1.1em;
   height: 1.1em;
   border-radius: 50%;

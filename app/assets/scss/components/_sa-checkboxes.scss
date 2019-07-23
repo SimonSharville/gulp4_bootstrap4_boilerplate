@@ -575,8 +575,15 @@ sa-radio-buttons-after .position-static{
   height: 25px;
   background-color: white;
   border-radius: 50px;
-  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.2);
+  border: 2px solid $sa-grey-06;
 }
+.sa-radio-toggle:hover span.radio::before{
+  border-color: $client;
+}
+.sa-radio-toggle input[type="radio"]:checked + label span.radio::before{
+  border-color: $client;
+}
+
 .sa-radio-toggle span.radio::after {
   left: 4px;
   top:1px;
@@ -634,7 +641,13 @@ sa-radio-buttons-after .position-static{
   height: 25px;
   background-color: white;
   border-radius: 50px;
-  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.2);
+  border: 2px solid $sa-grey-06;
+}
+.sa-radio-toggle-right:hover span.radio::before{
+  border-color: $client;
+}
+.sa-radio-toggle-right input[type="radio"]:checked + label span.radio::before{
+  border-color: $client;
 }
 .sa-radio-toggle-right span.radio::after {
   right: 24px;
@@ -680,7 +693,6 @@ sa-radio-buttons-after .position-static{
     border-radius: 1em;
     min-width: 4.5em;
     width: 4.5em;
-    color: $text;
     cursor: pointer;
     transition: background-color 0.15s;
     border: 2px solid $sa-grey-06;
@@ -692,7 +704,7 @@ sa-radio-buttons-after .position-static{
   .toggle-check-text:after {
     content: ' ';
     display: block;
-    background: $client;
+    background: $sa-grey-06;
     width: 1.1em;
     height: 1.1em;
     border-radius: 50%;
