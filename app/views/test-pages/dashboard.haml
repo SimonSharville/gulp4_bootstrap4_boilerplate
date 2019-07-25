@@ -1,0 +1,2239 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Bootstrap 4 Layout - Typography
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/remote-sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body
+    //=include ../navbars/_navbar-x1.haml
+
+    .container{:style => ""}
+      .row
+        .col-xs-12
+          #flash_messages{:style => "display: none;"}
+            .alert.alert-info.alert-dismissable{:role => "alert"}
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              Signed in successfully.
+      .row
+        .col-xs-12
+          .row
+            .col-xs-12
+              .db-page-photo
+                %img{:alt => "Flower md orange", :src => "/system/users/photos/2-3/thumb/flower_md_orange.png?1561371475"}/
+              .db-page-title
+                %h1.page-title
+                  .name
+                    Dr John T Smith
+                  .page
+                    Dashboard
+          .row
+            / Right Column
+            .col-xs-12.col-sm-12.col-md-4.col-md-push-8
+              .row
+                .col-xs-12.col-sm-6.col-md-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a#db-dates{"data-toggle" => "collapse", :href => "#dashboard-dates"}
+                        %h3 Your Dates
+                    #dashboard-dates.panel-collapse.collapse.in
+                      .panel-body.db-your-dates
+                        %dl
+                          / recommendation
+                          .user-dates
+                            .rag-box.rag-green
+                            %dt Recommendation Due
+                            %dd
+                              .rag-date
+                                Fri, 31 Jan 2020
+                                %br/
+                                %span.small (in 6 months)
+                          / section 12
+                          .user-dates
+                            .rag-box.rag-red
+                            %dt Approved Clinician Expiry
+                            %dd
+                              .rag-date
+                                Sun, 22 Oct 2017
+                                %br/
+                                %span.small (almost 2 years ago)
+                          / appraisal due
+                          .user-dates
+                            .rag-box.rag-green
+                            %dt Appraisal Due
+                            %dd
+                              .rag-date
+                                Tue, 31 Dec 2019
+                                %br/
+                                %span.small (in 5 months)
+                            / appraisal proposed meeting date
+                          / msf
+                          .user-dates
+                            .rag-box.rag-green
+                            %a.fa.fa-lg.fa-info-circle.popover-icon.no-pdf.pull-right{"data-original-title" => "", "data-placement" => "auto left", "data-popover-content" => "#msf-popover", "data-target" => "#", :rel => "popover", :tabindex => "0", :title => ""}
+                            #msf-popover.hide
+                              %p.last
+                                Your MSF due date is
+                                5
+                                years
+                                after the date of your last complete MSF.
+                                %br/
+                                To have a complete MSF you must have completed the self assessment questionnaire, colleague feedback and patient feedback.
+                            %dt MSF Due
+                            %dd
+                              .rag-date
+                                Wed, 14 Jul 2021
+                                %br/
+                                %span.small (in almost 2 years)
+                          / job planning
+                          .user-dates
+                            .rag-box.rag-green
+                            %dt Job Plan Due
+                            %dd
+                              .rag-date
+                                Sat, 06 Jun 2020
+                                %br/
+                                %span.small (in 11 months)
+                .col-xs-12.col-sm-6.col-md-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a#db-details{"data-toggle" => "collapse", :href => "#dashboard-details"}
+                        %h3 Your Details
+                    #dashboard-details.panel-collapse.collapse.in
+                      .panel-body
+                        .db-your-details
+                          %dl.user-details
+                            %dt
+                              %p
+                                %strong
+                                  Allocated Appraisal Month:
+                                December
+                            %dt
+                              %p
+                                %strong GMC Reference Number:
+                                123456788
+                            %dt
+                              %p
+                                %strong Employee Number:
+                                3
+                            %dt
+                              %p
+                                %strong Email:
+                                john@example.com
+                            %dt
+                              %p
+                                %strong Directorate:
+                                Cardiology
+                            %dt
+                              %p
+                                %strong Location Org L4:
+                                North of England
+                            %dt
+                              %p
+                                %strong Team:
+                                Health Protection
+                            %dt
+                              %p
+                                %strong Specialty:
+                                ADULT MENTAL ILLNESS
+                            %dt
+                              %p
+                                %strong Delegates:
+                                %br/
+                                Mrs Bella Owen
+                                %br>/
+                                Miss Jane T Jones
+                            %dt
+                              %p
+                                %strong
+                                  Lead Appraiser:
+                                %br/
+                                Dr Janet T Johnson
+                                %br/
+                                %a{:href => "mailto:janet@example.com"} Email: janet@example.com
+                                %br/
+                            %dt
+                              %p
+                                %strong Medical Roles:
+                                %br/
+                                DIR OP Doctor (T)
+                                %br>/
+                                Doctor
+                                %br>/
+                                Educational Supervisor
+                                %br>/
+                                Inpatient Doctor (T)
+                                %br>/
+                                Medical Educator
+                                %br>/
+                                Psychiatrist (T)
+                                %br>/
+                                Those with responsibility to section (T)
+                            %dt
+                              %strong> AOA 2016/2017
+                              \:
+                              2.1.1 Consultants
+                      .panel-footer
+                        %a.btn.btn-default.btn-xs{:href => "/users/edit"} Edit Details
+                        %a.btn.btn-default.btn-xs{:href => "/email_preferences/2-3/edit"} Email Preferences
+                .col-sm-4.col-md-12.hidden-xs.hidden-sm
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a#db-support.collapsed{"data-toggle" => "collapse", :href => "#dashboard-support-docs"}
+                        %h3 Support Docs
+                    #dashboard-support-docs.panel-collapse.collapse
+                      .panel-body
+                        %ul.no-bullet.list-group
+                          %li.list-group-item.group-title Trust Policy Documents
+                          %li.list-group-item.link-arrow
+                            %a{:href => "http://demo.lvh.me:8080/support_documents/52b46315e3e1f157470003f2"} Appraisal Policy
+                          %li.list-group-item.link-arrow
+                            %a{:href => "http://demo.lvh.me:8080/support_documents/57e13f4f8025420c86000005"} DBS Declaration
+                .col-sm-4.col-md-12.hidden-xs.hidden-sm
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-guides-side"}
+                        %h3 Guides
+                    #dashboard-guides-side.panel-collapse.collapse
+                      .panel-body
+                        .guides
+                          %a{:href => "/user_guides/medical_revalidation"}
+                            %img.guide-image{:alt => "Medical revalidation", :src => "/support/images/medical_revalidation.png"}/
+                          %a{:href => "/user_guides/job_planning"}
+                            %img.guide-image{:alt => "Job planning", :src => "/support/images/job_planning.png"}/
+                          %a{:href => "/user_guides/eleave"}
+                            %img.guide-image{:alt => "Eleave", :src => "/support/images/eleave.png"}/
+                          %a{:href => "/user_guides/360"}
+                            %img.guide-image{:alt => "360", :src => "/support/images/360.png"}/
+            / Main Column
+            .col-xs-12.col-md-8.col-md-pull-4
+              .row
+                .col-xs-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a{"data-toggle" => "collapse", :href => "#dashboard-wtdn"}
+                        %h3 What to do next
+                    #dashboard-wtdn.panel-collapse.collapse.in
+                      .panel-body
+                        %a.fa.fa-lg.fa-info-circle.popover-icon.no-pdf.pull-right{"aria-hidden" => "true", "data-original-title" => "", "data-placement" => "bottom", "data-popover-content" => "#wtdn-popover", "data-popover-title" => "#wtdn-popover-title", "data-target" => "#", :rel => "popover", :tabindex => "0", :title => ""}
+                        #wtdn-popover-title.hide
+                          Getting Started
+                        #wtdn-popover.hide
+                          %p.bold
+                            To get started, click on the ‘New Appraisal’ button in the Appraisals section. This will create 2 new pages:
+                            %strong My Appraisal
+                            and
+                            = succeed "." do
+                              %strong My Portfolio
+                          %p
+                            %span.heavy.white
+                              01 Update Portfolio
+                            Evidence should be added for each section of your portfolio, then the section marked as green, amber or N/A.
+                          %p
+                            %span.heavy.white
+                              Appraisal Preparation
+                            Sections 1 to 18 of your appraisal should be filled in. Once you’ve completed a section you need to click on ‘Mark As Complete’.
+                          %p
+                            %span.heavy.white
+                              Send to Appraiser
+                            When Sections 1 to 18 have been marked as completed and all sections of the portfolio have been marked green, amber or N/A, you can submit the appraisal to your appraiser.
+                          %p
+                            %span.heavy.white
+                              Agree PDP and statements
+                            The appraiser is responsible for Section 19 and Section 20 of your appraisal. These should be completed during or after the appraisal meeting.
+                          %p
+                            %span.heavy.white
+                              Appraiser Sign-Off and Doctor Sign-Off
+                            Section 21 should be completed by the appraiser. Section 22 should be completed by the doctor.
+                          %p.last
+                            %span.heavy.white
+                              Submit to RO
+                            Once the appraisal is complete, the appraiser can submit it to the responsible officer. No changes can be made after this point.
+                        .do-next-wrapper
+                          / show steps of the appraisal. the current step is coloure green.
+                          .dn-wrapper
+                            .dn-rule
+                            .do-next-chart
+                              .dn-row-one
+                                .dn-station
+                                  .dn-stop.1 01
+                                .dn-line  
+                                .dn-station
+                                  .dn-stop.2 02
+                                .dn-line  
+                                .dn-station
+                                  .dn-stop.3 03
+                                .dn-line  
+                                .dn-station
+                                  .appraisal.4
+                                    Appraisal
+                                    %br>/
+                                    Meeting
+                                .dn-line  
+                                .dn-station
+                                  .dn-stop.4 04
+                                .dn-line  
+                                .dn-station
+                                  .dn-stop.5 05
+                                .dn-line  
+                                .dn-station
+                                  .6.complete.dn-stop 06
+                              .dn-row-two
+                                .dn-title
+                                  .dn-text
+                                    %p
+                                      Update Portfolio
+                                .dn-line  
+                                .dn-title
+                                  .dn-text
+                                    %p
+                                      Appraisal Preparation
+                                .dn-line  
+                                .dn-title
+                                  .dn-text
+                                    %p
+                                      Send to Appraiser
+                                .dn-line  
+                                .dn-title  
+                                .dn-line  
+                                .dn-title
+                                  .dn-text
+                                    %p
+                                      Agree PDP and Statements
+                                .dn-line  
+                                .dn-title
+                                  .dn-text
+                                    %p.sign-off-1
+                                      Appraiser Sign-off
+                                    %p.sign-off-2
+                                      Doctor Sign-off
+                                .dn-line  
+                                .dn-title
+                                  .dn-text
+                                    %p
+                                      Submit to RO
+                          / instruction text which show underneath depending on which step the user is on.
+                          .perf.perf-white
+                          .wtdn-instructions
+                            Your appraisal has been signed off and your lead appraiser can now submit it to the RO.
+                            You will be notified when they have done this.
+                .col-xs-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a{"data-toggle" => "collapse", :href => "#dashboard-notifications"}
+                        %h3 Your Notifications
+                    #dashboard-notifications.panel-collapse.collapse.in
+                      .panel-body.padding-bottom0
+                        .notifications
+                          %ul.link-arrow.no-bullet
+                            .date Mon, 24 Jun 2019
+                            %li.li-group-item
+                              %a{:href => "http://localhost:8080/users/2-3/appraisals/5b7fc851f2a39f2541000031/portfolio#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f12443000055"} Evidence uploaded by SARD System was attached to your portfolio Jan 2019
+                              \-  01:48PM
+                          %ul.link-arrow.no-bullet
+                            .date Wed, 17 Apr 2019
+                            %li.li-group-item
+                              %a{:href => "http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-12+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Mr Simon Sharville approved a leave period (for 12 Apr 2019)
+                              \-  02:18PM
+                            %li.li-group-item
+                              %a{:href => "http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-10+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Mr Simon Sharville rejected a leave period (for 10 Apr 2019)
+                              \-  02:17PM
+                            %li.li-group-item
+                              %a{:href => "http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-09+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Mr Simon Sharville approved a leave period (for 09 Apr 2019)
+                              \-  02:11PM
+                          %ul.link-arrow.no-bullet
+                            .date Tue, 16 Apr 2019
+                            %li.li-group-item
+                              %a{:href => "http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-07+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Mr Simon Sharville approved a leave period (for 07 Apr 2019)
+                              \-  01:52PM
+                            %li.li-group-item
+                              %a{:href => "http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-05+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Mr Simon Sharville rejected a leave period (for 05 Apr 2019)
+                              \-  01:50PM
+                            %li.li-group-item
+                              %a{:href => "http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-04+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Mr Simon Sharville approved a leave period (for 04 Apr 2019)
+                              \-  01:49PM
+                          %ul.link-arrow.no-bullet
+                            .date Fri, 01 Feb 2019
+                            %li.li-group-item
+                              %a{:href => "http://demo.sardjv.co.uk:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-02-20+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Dr Janet T Johnson approved a leave period (for 20 Feb 2019 to 21 Feb 2019)
+                              \-  11:09AM
+                          %ul.link-arrow.no-bullet
+                            .date Tue, 29 Jan 2019
+                            %li.li-group-item
+                              %a{:href => "http://demo.sardjv.co.uk:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-12-25+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Dr Janet T Johnson approved a leave period (for 25 Dec 2019)
+                              \-  02:41PM
+                            %li.li-group-item
+                              %a{:href => "http://demo.sardjv.co.uk:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-12-25+00%3A00%3A00+UTC&start_with%5Bid%5D=2-3&start_with%5Btab%5D=user"} Dr Janet T Johnson approved a leave period (for 25 Dec 2019)
+                              \-  02:38PM
+                      .panel-body.panel-buttons
+                        .perf.perf-white
+                        .buttons-right
+                          %a.btn.btn-sm.btn-client{:href => "/notifications"} See All Notifications
+                .col-xs-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-user-appraisals"}
+                        %h3 Your Appraisals
+                    #dashboard-user-appraisals.panel-collapse.collapse
+                      .panel-body
+                        %table.table.table-sard
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/5b7fc851f2a39f2541000031/edit"} Appraisal Jan 2019
+                              %td.title
+                                eDocs
+                                .sa-state.state-colour.submitted submitted
+                            %tr
+                              %td
+                                .state Submitted
+                                .date Tue, 29 Jan 2019
+                              / edocs
+                              %td.border-left
+                                Portfolio Jan 2019
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit"} Appraisal Sep 2018
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Sun, 16 Sep 2018
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_complete_dataset_category_pdf", :target => "_blank"} Medical Educators Framework Areas PDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/portfolio"} Portfolio Sep 2018
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/5788e665802542463a00000f/edit"} Appraisal Dec 2016
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Mon, 05 Dec 2016
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5788e665802542463a00000f/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5788e665802542463a00000f/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5788e665802542463a00000f/download_complete_dataset_category_pdf", :target => "_blank"} Medical Educators Framework Areas PDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5788e665802542463a00000f/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/5788e665802542463a00000f/portfolio"} Portfolio Dec 2016
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/offline_appraisals/54f988998025420bf5000001"} Appraisal Mar 2015 (Offline)
+                              %td.title
+                                eDocs
+                                .sa-state.state-colour.submitted submitted
+                            %tr
+                              %td
+                                .state Submitted
+                                .date Sun, 01 Mar 2015
+                              / edocs
+                              %td
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/53d7aef9f2a39f25b200025b/edit"} Appraisal Nov 2015
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Mon, 09 Nov 2015
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_complete_dataset_category_pdf", :target => "_blank"} Medical Educators Framework Areas PDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/53d7aef9f2a39f25b200025b/portfolio"} Portfolio Nov 2015
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/5257a774e3e1f1145400001f/edit"} Appraisal Jul 2014
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Tue, 29 Jul 2014
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5257a774e3e1f1145400001f/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5257a774e3e1f1145400001f/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5257a774e3e1f1145400001f/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/5257a774e3e1f1145400001f/portfolio"} Portfolio Jul 2014
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/edit"} Appraisal Oct 2013
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Thu, 10 Oct 2013
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/portfolio"} Portfolio Oct 2013
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/517e8f0ee3e1f12769000361/edit"} Appraisal Jun 2013
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Sat, 15 Jun 2013
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/517e8f0ee3e1f12769000361/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/517e8f0ee3e1f12769000361/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/517e8f0ee3e1f12769000361/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/517e8f0ee3e1f12769000361/portfolio"} Portfolio Jun 2013
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/512b782be3e1f12459000028/edit"} Appraisal Mar 2013
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Fri, 15 Mar 2013
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/512b782be3e1f12459000028/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/512b782be3e1f12459000028/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/512b782be3e1f12459000028/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/512b782be3e1f12459000028/portfolio"} Portfolio Mar 2013
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/510112fbe3e1f16612000015/edit"} Appraisal Feb 2012
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Thu, 16 Feb 2012
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/510112fbe3e1f16612000015/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/510112fbe3e1f16612000015/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/510112fbe3e1f16612000015/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/510112fbe3e1f16612000015/portfolio"} Portfolio Feb 2012
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/5034e03ae3e1f12443000088/edit"} Appraisal Nov 2012
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Mon, 19 Nov 2012
+                              / edocs
+                              %td.border-left
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5034e03ae3e1f12443000088/download_complete_appraisal_pdf", :target => "_blank"} AppraisalPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5034e03ae3e1f12443000088/download_complete_portfolio_pdf", :target => "_blank"} PortfolioPDF
+                                .link-pdf.plus-download
+                                  %a{:href => "/users/2-3/appraisals/5034e03ae3e1f12443000088/download_appraisal_summary_pdf", :target => "_blank"} SummaryPDF
+                                .link-arrow
+                                  %a{:href => "/users/2-3/appraisals/5034e03ae3e1f12443000088/portfolio"} Portfolio Nov 2012
+                          %tbody
+                            %tr
+                              %td.title
+                                .link-arrow
+                                  %a{:href => "/users/2-3/offline_appraisals/5034e033e3e1f1244300006f"} Appraisal Aug 2010 (Offline)
+                              %td.title
+                                eDocs
+                                .complete.sa-state.state-colour complete
+                            %tr
+                              %td
+                                .state Complete
+                                .date Sun, 22 Aug 2010
+                              / edocs
+                              %td
+                      .panel-body.panel-buttons
+                        .perf.perf-white
+                        .buttons-right
+                          %a.btn.btn-sm.btn-client{:href => "/users/2-3/appraisals/5b7fc851f2a39f2541000031/edit"} Go to Appraisal
+                .col-xs-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-user-msfs"}
+                        %h3 Multi Source Feedback
+                    #dashboard-user-msfs.panel-collapse.collapse
+                      .panel-body
+                        .table-responsive
+                          %table.table.table-sard
+                            %thead
+                              %tr
+                                %th Title
+                                %th SA?
+                                %th CF?
+                                %th PF?
+                                %th Date
+                                %th Report
+                            %tbody
+                              %tr
+                                %td
+                                  .link-arrow
+                                    %a{:href => "/users/2-3/offline_msfs/519a9f06e3e1f15782000004"} MSF May 2012 (offline)
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes self assessment"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes colleague feedback"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes patient feedback"}
+                                %td Wed, 02 May 2012
+                                %td
+                            %tbody
+                              %tr
+                                %td
+                                  .link-arrow
+                                    %a{:href => "/online_msfs/578fdb39802542632e00000c"} MSF Mar 2017
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes self assessment"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes colleague feedback"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes patient feedback"}
+                                %td No Date
+                                %td
+                            %tbody
+                              %tr
+                                %td
+                                  .link-arrow
+                                    %a{:href => "/online_msfs/51b0d1d8e3e1f14325000013"} MSF Jul 2016 (complete)
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes self assessment"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes colleague feedback"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes patient feedback"}
+                                %td Thu, 14 Jul 2016
+                                %td.file
+                                  %a{:class => "Dr-John-T-Smith-27Nov15-at-1414-msf.pdf", :href => "/edocs/5658655d80254242d4000001/download", :target => "_blank"} MSF Report Nov 2015
+                            %tbody
+                              %tr
+                                %td
+                                  .link-arrow
+                                    %a{:href => "/users/2-3/offline_msfs/584fd5d1f2a39f7171000030"} MSF Jan 2016 (offline)
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes self assessment"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes colleague feedback"}
+                                %td.strong
+                                  %i.fa.fa-check{"aria-hidden" => "true", :title => "MSF includes patient feedback"}
+                                %td Mon, 18 Jan 2016
+                                %td
+                      .panel-body.panel-buttons
+                        .perf.perf-white
+                        .buttons-right
+                          %a.btn.btn-sm.btn-client{:href => "/msfs/578fdb39802542632e00000c"} Go to My MSF
+                          %a.btn.btn-sm.btn-client{:href => "/users/2-3/offline_msfs/new"} Upload previous MSF
+                .col-xs-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-sig-job-plans"}
+                        %h3 Job Plans for which you are a signatory
+                    #dashboard-sig-job-plans.panel-collapse.collapse
+                      .panel-body
+                        .table-responsive
+                          %table.table.table-sard.multi-table.ruled
+                            %caption
+                              Submitted job plans requiring your signature
+                              %strong now
+                            %thead
+                              %tr
+                                %th Doctor
+                                %th Effective Date
+                                %th At Tier
+                                %th Your Tier
+                                %th Your Role
+                                %th
+                            %tbody
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/54bfbabcf2a39f73cb000248"} Dr John T Smith
+                                %td 06 Apr 18
+                                %td 1 of 1
+                                %td 1
+                                %td Owner
+                                %td
+                                  .sa-state.state-colour.submitted Submitted
+                          %table.table.table-sard.multi-table.ruled
+                            %caption
+                              The next 10 job plans you're a signatory for but are
+                              %strong in draft
+                            %thead
+                              %tr
+                                %th Doctor
+                                %th Effective Date
+                                %th Your Role
+                                %th
+                            %tbody
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5c1a5124bdd601c36500014c"} Dr John T Smith
+                                %td 01 Apr 19
+                                %td Job Plan Owner
+                                %td
+                                  .draft.sa-state.state-colour Draft
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5b50ab818025427bf600007c"} Dr John T Smith
+                                %td 02 Apr 18
+                                %td Job Plan Owner
+                                %td
+                                  .draft.sa-state.state-colour Draft
+                          %table.table.table-sard.multi-table.ruled
+                            %caption
+                              The last 10 job plans you've
+                              %strong already signed
+                            %thead
+                              %tr
+                                %th Doctor
+                                %th Effective Date
+                                %th Your Role
+                                %th
+                            %tbody
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5b0fe4808025426c45000039"} Dr John T Smith
+                                %td 01 Apr 19
+                                %td Job Plan Owner
+                                %td
+                                  .complete.sa-state.state-colour Complete
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5a12f1b78025423e7200006c"} Dr John T Smith
+                                %td 01 Apr 18
+                                %td Job Plan Owner
+                                %td
+                                  .complete.sa-state.state-colour Complete
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/59b7aacbf2a39f087c00000d"} Dr Kenny Daglish
+                                %td 01 Oct 17
+                                %td Service Lead
+                                %td
+                                  .complete.sa-state.state-colour Complete
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/594be337802542b4d300002b"} Dr John T Smith
+                                %td 01 Apr 17
+                                %td Job Plan Owner
+                                %td
+                                  .sa-state.state-colour.submitted Submitted
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/555c56c1f2a39f7ff900017f"} Dr John T Smith
+                                %td 01 Apr 17
+                                %td Job Plan Owner
+                                %td
+                                  .complete.sa-state.state-colour Complete
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/54e652bf80254210b2000030"} Dr John T Smith
+                                %td 01 Jan 16
+                                %td Job Plan Owner
+                                %td
+                                  .complete.sa-state.state-colour Complete
+                .col-xs-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-user-job-plans"}
+                        %h3 Your Job Plans
+                    #dashboard-user-job-plans.panel-collapse.collapse
+                      .panel-body
+                        .table-responsive
+                          %table.table.table-sard
+                            %thead
+                              %tr
+                                %th Title
+                                %th Job Title
+                                %th Effective date
+                                %th Edoc
+                                %th State
+                            %tbody
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/users/2-3/offline_job_plans/5d10c67ca54d7501fa000127"} Job Plan Jun 2019 - Jun 2020 (offline)
+                                %td
+                                %td Thu, 06 Jun 2019
+                                %td.link-file
+                                  %a{:class => "flower_md_pink.png", :href => "/edocs/5d10c67ca54d7501fa000128/download", :target => "_blank"} Flower Md Pink
+                                %td
+                                  .complete.sa-state.state-colour
+                                  Complete
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/users/2-3/offline_job_plans/5d10abc1a54d75847a00007c"} Job Plan Jun 2019 - Jun 2020 (offline)
+                                %td
+                                %td Thu, 06 Jun 2019
+                                %td None
+                                %td
+                                  .complete.sa-state.state-colour
+                                  Complete
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5c1a5124bdd601c36500014c"} Job Plan Apr 2019 - Mar 2020
+                                %td
+                                %td Mon, 01 Apr 2019
+                                %td None
+                                %td
+                                  .draft.sa-state.state-colour
+                                  Draft
+                                  %br/
+                                  %a{:href => "/online_job_plans/5c1a5124bdd601c36500014c#section/sign_off"} Requires your signature
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5b0fe4808025426c45000039"} Job Plan Apr 2019 - Mar 2020 (complete)
+                                %td
+                                %td Mon, 01 Apr 2019
+                                %td.link-file
+                                  %a{:class => "Dr-John-T-Smith-09Jul18-at-1206-job_plan.pdf", :href => "/edocs/5b434fccf2a39f3fb0000001/download", :target => "_blank"} Job Plan Apr 2019 - Mar 2020
+                                %td
+                                  .complete.sa-state.state-colour
+                                  Complete
+                                  %br/
+                                  Signed by you
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/54bfbabcf2a39f73cb000248"} Job Plan Apr 2018 - Apr 2019
+                                %td
+                                %td Fri, 06 Apr 2018
+                                %td.link-file
+                                  %a{:class => "Dr-John-T-Smith-01Sep16-at-0951-job_plan.pdf", :href => "/edocs/57c7fa33f2a39f2094000001/download", :target => "_blank"} Job Plan Jan 2015
+                                %td
+                                  .sa-state.state-colour.submitted
+                                  Submitted
+                                  %br/
+                                  %a{:href => "/online_job_plans/54bfbabcf2a39f73cb000248#section/sign_off"} Requires your signature
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5b50ab818025427bf600007c"} Job Plan Apr 2018 - Apr 2019
+                                %td
+                                %td Mon, 02 Apr 2018
+                                %td None
+                                %td
+                                  .draft.sa-state.state-colour
+                                  Draft
+                                  %br/
+                                  %a{:href => "/online_job_plans/5b50ab818025427bf600007c#section/sign_off"} Requires your signature
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/5a12f1b78025423e7200006c"} Job Plan Apr 2018 - Mar 2019 (complete)
+                                %td
+                                %td Sun, 01 Apr 2018
+                                %td.link-file
+                                  %a{:class => "Dr-John-T-Smith-17May18-at-0932-job_plan.pdf", :href => "/edocs/5afd4c428025420a19000001/download", :target => "_blank"} Job Plan Apr 2018 - Mar 2019
+                                %td
+                                  .complete.sa-state.state-colour
+                                  Complete
+                                  %br/
+                                  Signed by you
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/555c56c1f2a39f7ff900017f"} Job Plan Apr 2017 - Mar 2018 (complete)
+                                %td Consultant
+                                %td Sat, 01 Apr 2017
+                                %td None
+                                %td
+                                  .complete.sa-state.state-colour
+                                  Complete
+                                  %br/
+                                  Signed by you
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/594be337802542b4d300002b"} Job Plan Apr 2017 - Mar 2018
+                                %td Consultant
+                                %td Sat, 01 Apr 2017
+                                %td None
+                                %td
+                                  .sa-state.state-colour.submitted
+                                  Submitted
+                                  %br/
+                                  Signed by you
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/54e652bf80254210b2000030"} Job Plan Jan 2016 - Dec 2016 (complete)
+                                %td top man
+                                %td Fri, 01 Jan 2016
+                                %td.link-file
+                                  %a{:class => "Dr-John-T-Smith-08Dec16-at-1042-job_plan.pdf", :href => "/edocs/584938f98025427293000001/download", :target => "_blank"} Job Plan Jan 2016
+                                %td
+                                  .complete.sa-state.state-colour
+                                  Complete
+                                  %br/
+                                  Signed by you
+                              %tr
+                                %td.link-arrow
+                                  %a{:href => "/online_job_plans/51310bcfe3e1f12fab000001"} Job Plan Mar 2013 - Feb 2014 (complete)
+                                %td Consultant Anaesthetist
+                                %td Fri, 01 Mar 2013
+                                %td None
+                                %td
+                                  .complete.sa-state.state-colour
+                                  Complete
+                                  %br/
+                      .panel-body.panel-buttons
+                        .perf.perf-white
+                        .buttons-right
+                          %a.btn.btn-sm.btn-client{:href => "/online_job_plans/5c1a5124bdd601c36500014c"} Go to My Job Plan
+                          %a.btn.btn-sm.btn-client{:href => "/users/2-3/offline_job_plans/new"} Upload previous Job Plan
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-user-job-plan-templates"}
+                        %h3 Your shared Job Plan Templates
+                    #dashboard-user-job-plan-templates.panel-collapse.collapse
+                      .panel-body
+                        .table-responsive
+                          %table.table.table-sard
+                            %thead
+                              %tr
+                                %th Title
+                                %th Job Title
+                            %tbody
+                              %tr.link-arrow
+                                %td
+                                  %a{:href => "/online_job_plans/5a54a0d28025427982000040"} Dr John T Smith's 2017 Job Plan Template
+                                %td
+                              %tr.link-arrow
+                                %td
+                                  %a{:href => "/online_job_plans/59d78a1a80254279e2000013"} Dr John T Smith's 2017 Job Plan Template
+                                %td Consultant
+                              %tr.link-arrow
+                                %td
+                                  %a{:href => "/online_job_plans/59d350c2f2a39fb6bf000016"} Dr John T Smith's 2017 Job Plan Template
+                                %td Consultant
+                              %tr.link-arrow
+                                %td
+                                  %a{:href => "/online_job_plans/59d26707802542e164000011"} Dr John T Smith's 2017 Job Plan Template
+                                %td Consultant
+                .col-xs-12
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-my-eLeave-requests"}
+                        %h3 My eLeave
+                    #dashboard-my-eLeave-requests.panel-collapse.collapse
+                      .panel-body
+                        .table-responsive
+                          %table.table.table-sard
+                            %thead
+                              %tr
+                                %th Allowance Name
+                                %th From Date
+                                %th Start Time
+                                %th Until Date
+                                %th End Time
+                                %th State
+                            %tbody
+                              %tr.requested
+                                %td Annual Leave
+                                %td Wed, 03 Apr 2019
+                                %td 09:00
+                                %td Wed, 03 Apr 2019
+                                %td 17:00
+                                %td Requested
+                              %tr.approved
+                                %td Annual Leave
+                                %td Thu, 04 Apr 2019
+                                %td 09:00
+                                %td Thu, 04 Apr 2019
+                                %td 17:00
+                                %td Approved
+                              %tr
+                                %td Annual Leave
+                                %td Fri, 05 Apr 2019
+                                %td 09:00
+                                %td Fri, 05 Apr 2019
+                                %td 17:00
+                                %td Rejected
+                              %tr
+                                %td Annual Leave
+                                %td Sat, 06 Apr 2019
+                                %td 09:00
+                                %td Sat, 06 Apr 2019
+                                %td 17:00
+                                %td Cancelled
+                              %tr
+                                %td Annual Leave
+                                %td Sun, 07 Apr 2019
+                                %td 09:00
+                                %td Sun, 07 Apr 2019
+                                %td 17:00
+                                %td Cancelled
+                              %tr
+                                %td Annual Leave
+                                %td Sun, 07 Apr 2019
+                                %td 09:00
+                                %td Sun, 07 Apr 2019
+                                %td 17:00
+                                %td Requested To Cancel
+                              %tr.requested
+                                %td Annual Leave (accrue)
+                                %td Mon, 08 Apr 2019
+                                %td 09:00
+                                %td Mon, 08 Apr 2019
+                                %td 17:00
+                                %td Requested
+                              %tr
+                                %td Annual Leave (accrue)
+                                %td Tue, 09 Apr 2019
+                                %td 09:00
+                                %td Tue, 09 Apr 2019
+                                %td 17:00
+                                %td Requested To Cancel
+                              %tr
+                                %td Annual Leave (accrue)
+                                %td Wed, 10 Apr 2019
+                                %td 09:00
+                                %td Wed, 10 Apr 2019
+                                %td 17:00
+                                %td Rejected
+                              %tr
+                                %td Annual Leave
+                                %td Thu, 11 Apr 2019
+                                %td 09:00
+                                %td Thu, 11 Apr 2019
+                                %td 17:00
+                                %td Cancelled
+                              %tr.approved
+                                %td Annual Leave (accrue)
+                                %td Fri, 12 Apr 2019
+                                %td 09:00
+                                %td Fri, 12 Apr 2019
+                                %td 17:00
+                                %td Approved
+                              %tr
+                                %td Annual Leave (accrue)
+                                %td Sat, 13 Apr 2019
+                                %td 09:00
+                                %td Sat, 13 Apr 2019
+                                %td 17:00
+                                %td Cancelled
+                              %tr.approved
+                                %td Study / Professional Leave
+                                %td Wed, 25 Dec 2019
+                                %td 09:00
+                                %td Wed, 25 Dec 2019
+                                %td 17:00
+                                %td Approved
+                              %tr.approved
+                                %td Annual Leave (accrue)
+                                %td Wed, 25 Dec 2019
+                                %td 09:00
+                                %td Wed, 25 Dec 2019
+                                %td 17:00
+                                %td Approved
+                              %tr.requested
+                                %td Study / Professional Leave
+                                %td Tue, 07 Apr 2020
+                                %td 17:00
+                                %td Tue, 07 Apr 2020
+                                %td 18:00
+                                %td Requested
+                              %tr.requested
+                                %td Annual Leave
+                                %td Tue, 07 Apr 2020
+                                %td 12:00
+                                %td Tue, 07 Apr 2020
+                                %td 13:00
+                                %td Requested
+                              %tr.requested
+                                %td Study / Professional Leave
+                                %td Tue, 14 Apr 2020
+                                %td 17:30
+                                %td Tue, 14 Apr 2020
+                                %td 18:30
+                                %td Requested
+                              %tr.requested
+                                %td Study / Professional Leave
+                                %td Tue, 14 Apr 2020
+                                %td 12:00
+                                %td Tue, 14 Apr 2020
+                                %td 13:00
+                                %td Requested
+                              %tr.requested
+                                %td Study / Professional Leave
+                                %td Fri, 09 Oct 2020
+                                %td 09:00
+                                %td Fri, 09 Oct 2020
+                                %td 17:00
+                                %td Requested
+                      .panel-body.panel-buttons
+                        .perf.perf-white
+                        .buttons-right
+                          %a.btn.btn-sm.btn-client{:href => "/users/2-3/eleave_calendar"} Go to My eLeave
+                / / Shown at small sizes
+                .col-xs-12.col-sm-6.hidden-lg.hidden-md
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a#db-support.collapsed{"data-toggle" => "collapse", :href => "#dashboard-support-docs-base"}
+                        %h3 Support Docs
+                    #dashboard-support-docs-base.panel-collapse.collapse
+                      .panel-body
+                        %ul.no-bullet.list-group
+                          %li.list-group-item.group-title Trust Policy Documents
+                          %li.list-group-item.link-arrow
+                            %a{:href => "http://demo.lvh.me:8080/support_documents/52b46315e3e1f157470003f2"} Appraisal Policy
+                          %li.list-group-item.link-arrow
+                            %a{:href => "http://demo.lvh.me:8080/support_documents/57e13f4f8025420c86000005"} DBS Declaration
+                .col-xs-12.col-sm-6.hidden-lg.hidden-md
+                  .panel.panel-default.toggle-panel
+                    .panel-heading.toggle-plus
+                      %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-guides-base"}
+                        %h3 Guides
+                    #dashboard-guides-base.panel-collapse.collapse
+                      .panel-body
+                        .guides
+                          %a{:href => "/user_guides/medical_revalidation"}
+                            %img.guide-image{:alt => "Medical revalidation", :src => "/support/images/medical_revalidation.png"}/
+                          %a{:href => "/user_guides/job_planning"}
+                            %img.guide-image{:alt => "Job planning", :src => "/support/images/job_planning.png"}/
+                          %a{:href => "/user_guides/eleave"}
+                            %img.guide-image{:alt => "Eleave", :src => "/support/images/eleave.png"}/
+                          %a{:href => "/user_guides/360"}
+                            %img.guide-image{:alt => "360", :src => "/support/images/360.png"}/
+          / This collapses or opens panels depending on window size
+          / Use this if you wish certain panels to be open at large size, but closed at small sizes or visa-versa
+          / DO NOT REMOVE
+          / :javascript
+          / $(window).on('resize',function(details) {
+          / var width = $(window).width();
+          / if(width > 992) {
+          / $('#db-dates,#db-dates').addClass('collapsed');
+          / $('#dashboard-dates,#dashboard-dates-docs').removeClass('in');
+          / $('#db-details,#db-details').addClass('collapsed');
+          / $('#dashboard-details,#dashboard-details-docs').removeClass('in');
+          / }else{
+          / $('#db-dates,#db-dates').removeClass('collapsed');
+          / $('#dashboard-dates,#dashboard-dates-docs').addClass('in');
+          / $('#db-details,#db-details').removeClass('collapsed');
+          / $('#dashboard-details,#dashboard-details-docs').addClass('in');
+          / }
+          / }).trigger('resize');
+        .col-sm-12
+          #questionnaire.patient-questionnaire
+            %form#new_gmc_patient_questionnaire.form-horizontal{"accept-charset" => "UTF-8", :action => "/admin/online_msfs/583c4063f2a39f345e00001a/gmc_patient_questionnaires", :method => "post"}
+              %div{:style => "margin:0;padding:0;display:inline"}
+                %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+                %input{:name => "authenticity_token", :type => "hidden", :value => "1b1qqZAtWJxpmpy5EYcwmrfnckp9LxBVd5FJ0Jv1TUM="}/
+              %input#new_at{:name => "new_at", :type => "hidden", :value => "2019-06-13 10:37:27 +0100"}/
+              .row
+                .col-xs-12
+                  %h3 Patient Questionnaire
+                  %p Licensed doctors are expected to seek feedback from colleagues and patients and review and act upon that feedback where appropriate.
+                  %p The purpose of this exercise is to provide doctors with information about their work through the eyes of those they work with and treat, and is intended to help inform their further development.
+                  %p.bold Please do not write your name on this questionnaire.
+                  %p.bold Please base your answers only on the consultation you have had today.
+                  %p Please mark the box like this [✓] with a ball point pen. If you change your mind just cross out your old response and make your new choice.
+                  %ul
+                    %li.no-bullet.bold KEYBOARD SHORTCUTS FOR FILLING IN THIS FORM:
+                    %li Press Alt or the Option key to switch on the keyboard shortcuts which should appear in red.
+                    %li Press Tab to scroll through each question. Hold Shift and Tab to go back a question.
+                    %li Type a number to toggle the checkboxes or radio buttons on and off.
+                    %li Use the arrow keys to scroll through select boxes, and hit enter to choose an option.
+                    %li You can click the mouse at any time.
+                    %li Give it a try! We hope it speeds up your day!
+              .row
+                .col-xs-12
+                  .panel.panel-default
+                    .panel-heading
+                      %h3 About the Patient...
+                    .panel-body
+                      %table.table.table-pq-questionnaire
+                        %tbody
+                          %tr
+                            %td
+                              %label.control-label
+                                %label{:for => "gmc_patient_questionnaire_patient_completed_date"} Please write today's date here:
+                            %td.textfield.date
+                              %input#datepicker.datepicker.form-control.hasDatepicker{:name => "gmc_patient_questionnaire[patient_completed_date]", :type => "text"}/
+                    .panel-body
+                      / Q1
+                      %table.table.table-pq-questionnaire
+                        %thead
+                          %tr.q-question
+                            %th.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 1
+                            %th.qq{:colspan => "9"}
+                              %label{:for => "gmc_patient_questionnaire_are_you_filling_this_question_in_for"} Are you filling in this questionnaire for:
+                        %thead.hidden-xs
+                          %tr.q-question
+                            %th.qn.hidden-xs  
+                            %th.rating Yourself
+                            %th.rating Your child
+                            %th.rating Your spouse or partner
+                            %th.rating Another relative or friend
+                            %th.dk.rating Spoiled
+                        %tbody
+                          %tr.q-answers
+                            %td.qn.hidden-xs
+                            %td.rating-label.mobile-only Yourself
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q1a1.q1{:name => "gmc_patient_questionnaire[are_you_filling_this_question_in_for]", :type => "radio", :value => "yourself"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Your child
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q1a2.q1{:name => "gmc_patient_questionnaire[are_you_filling_this_question_in_for]", :tabindex => "-1", :type => "radio", :value => "your child"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Your spouse or partner
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q1a3.q1{:name => "gmc_patient_questionnaire[are_you_filling_this_question_in_for]", :tabindex => "-1", :type => "radio", :value => "your spouse or partner"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Another relative or friend
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q1a4.q1{:name => "gmc_patient_questionnaire[are_you_filling_this_question_in_for]", :tabindex => "-1", :type => "radio", :value => "another relative or friend"}/
+                              .radio-button
+                               
+                            %td.dk.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q1a5.q1{:name => "gmc_patient_questionnaire[are_you_filling_this_question_in_for]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                    .q-comment.border-top
+                      If you are filling this in for someone else, please answer the following questions from the
+                      %span.bold
+                        patient’s
+                      point of view.
+                    .panel-body
+                      / Q2
+                      %table.table.table-pq-questionnaire
+                        %thead
+                          %tr.q-question
+                            %th.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 2
+                            %th.qq{:colspan => "3"}
+                              %label{:for => "gmc_patient_questionnaire_the_reason_you_saw_the_doctor_today"} Which of the following best describes the reason you saw the doctor today? (Please tick all the boxes that apply):
+                        %tbody
+                          %tr.q-answers
+                            %td.qn.hidden-xs
+                            %td.rating-label.mobile-only To ask for advice
+                            %td.q-checkboxes
+                              %span.accesskey{:style => "display: none;"} 1
+                              %label.q-checkbox{:for => "q2a1"}
+                                %span.hidden-xs To ask for advice
+                                %input#q2a1.q2{:name => "gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]", :type => "checkbox", :value => "to ask for advice"}/
+                                .checkmark
+                            %td.rating-label.mobile-only Because of an ongoing problem
+                            %td.q-checkboxes
+                              %span.accesskey{:style => "display: none;"} 2
+                              %label.q-checkbox{:for => "q2a2"}
+                                %span.hidden-xs Because of an ongoing problem
+                                %input#q2a2.q2{:name => "gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]", :tabindex => "-1", :type => "checkbox", :value => "because of an ongoing problem"}/
+                                .checkmark
+                            %td.rating-label.mobile-only For treatment (including prescriptions)
+                            %td.q-checkboxes
+                              %span.accesskey{:style => "display: none;"} 3
+                              %label.q-checkbox{:for => "q2a3"}
+                                %span.hidden-xs For treatment (including prescriptions)
+                                %input#q2a3.q2{:name => "gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]", :tabindex => "-1", :type => "checkbox", :value => "for treatment"}/
+                                .checkmark
+                          %tr
+                            %td.qn.hidden-xs
+                            %td.rating-label.mobile-only Because of a one-off problem
+                            %td.q-checkboxes
+                              %span.accesskey{:style => "display: none;"} 4
+                              %label.q-checkbox{:for => "q2a4"}
+                                %span.hidden-xs Because of a one-off problem
+                                %input#q2a4.q2{:name => "gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]", :tabindex => "-1", :type => "checkbox", :value => "because of a one-off problem"}/
+                                .checkmark
+                            %td.rating-label.mobile-only For a routine check
+                            %td.q-checkboxes
+                              %span.accesskey{:style => "display: none;"} 5
+                              %label.q-checkbox{:for => "q2a5"}
+                                %span.hidden-xs For a routine check
+                                %input#q2a5.q2{:name => "gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]", :tabindex => "-1", :type => "checkbox", :value => "for a routine check"}/
+                                .checkmark
+                            %td.rating-label.mobile-only Other (please give details)
+                            %td.q-checkboxes
+                              %span.accesskey{:style => "display: none;"} 6
+                              %label.q-checkbox{:for => "q2a6"}
+                                %span.hidden-xs Other (please give details)
+                                %input#q2a6.q2{:name => "gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]", :tabindex => "-1", :type => "checkbox", :value => "other"}/
+                                .checkmark
+                          %tr.textfield
+                            %td.qn.hidden-xs
+                            %td.textfield{:colspan => "3"}
+                              %span.accesskey{:style => "display: none;"} 7
+                              %textarea#q2a7.q2.form-control{:cols => "40", :name => "gmc_patient_questionnaire[other_reason]", :placeholder => "please give details", :rows => "20", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 200px;", :tabindex => "-1"}
+                    .panel-body
+                      / Q3
+                      %table.table.table-pq-questionnaire
+                        %thead
+                          %tr.q-question
+                            %th.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 3
+                            %th.qq{:colspan => "6"}
+                              %label{:for => "gmc_patient_questionnaire_how_important_was_your_reason_for_visiting"} On a scale of 1 to 5, how important to your health and wellbeing was your reason for visiting the doctor today?
+                        %thead.hidden-xs
+                          %tr.q-question
+                            %th.qn  
+                            %th.rating Not Very Important (1)
+                            %th.rating Not Important
+                            %th.rating Average
+                            %th.rating Important
+                            %th.rating Very Important (5)
+                            %th.dk.rating spoiled
+                        %tbody
+                          %tr.q-answers
+                            %td.qn.hidden-xs  
+                            %td.rating-label.mobile-only Not very important (1)
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q3a1.q3{:name => "gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]", :type => "radio", :value => "not very important"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Not important
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q3a2.q3{:name => "gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]", :tabindex => "-1", :type => "radio", :value => "not important"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Average
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q3a3.q3{:name => "gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]", :tabindex => "-1", :type => "radio", :value => "average"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Important
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q3a4.q3{:name => "gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]", :tabindex => "-1", :type => "radio", :value => "important"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very Important (5)
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q3a5.q3{:name => "gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]", :tabindex => "-1", :type => "radio", :value => "very important"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q3a6.q3{:name => "gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                  .panel.panel-default
+                    .panel-heading
+                      %h3 About the doctor...
+                    .panel-body
+                      / Q4
+                      %table.table.table-pq-questionnaire
+                        %thead.first
+                          %tr.q-question
+                            %th.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 4
+                            %th.qq{:colspan => "9"}
+                              %label How good was your doctor today at each of the following? (Please tick one box in each line)
+                        %thead.hidden-xs
+                          %tr.q-question
+                            %th.qn  
+                            %th  
+                            %th.rating Poor
+                            %th.rating Less than satisfactory
+                            %th.rating Satisfactory
+                            %th.rating Good
+                            %th.rating Very good
+                            %th.rating Does not apply
+                            %th.dk.rating Spoiled
+                        %tbody
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number a
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_being_polite"} Being polite
+                            %td.rating-label.mobile-only Poor
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q4aa1.q4a{:name => "gmc_patient_questionnaire[being_polite]", :type => "radio", :value => "poor"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Less than satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q4aa2.q4a{:name => "gmc_patient_questionnaire[being_polite]", :tabindex => "-1", :type => "radio", :value => "less than satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q4aa3.q4a{:name => "gmc_patient_questionnaire[being_polite]", :tabindex => "-1", :type => "radio", :value => "satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q4aa4.q4a{:name => "gmc_patient_questionnaire[being_polite]", :tabindex => "-1", :type => "radio", :value => "good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q4aa5.q4a{:name => "gmc_patient_questionnaire[being_polite]", :tabindex => "-1", :type => "radio", :value => "very good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q4aa6.q4a{:name => "gmc_patient_questionnaire[being_polite]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q4aa7.q4a{:name => "gmc_patient_questionnaire[being_polite]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number b
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_making_you_feel_at_ease"} Making you feel at ease
+                            %td.rating-label.mobile-only Poor
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q4ba1.q4b{:name => "gmc_patient_questionnaire[making_you_feel_at_ease]", :type => "radio", :value => "poor"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Less than satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q4ba2.q4b{:name => "gmc_patient_questionnaire[making_you_feel_at_ease]", :tabindex => "-1", :type => "radio", :value => "less than satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q4ba3.q4b{:name => "gmc_patient_questionnaire[making_you_feel_at_ease]", :tabindex => "-1", :type => "radio", :value => "satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q4ba4.q4b{:name => "gmc_patient_questionnaire[making_you_feel_at_ease]", :tabindex => "-1", :type => "radio", :value => "good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q4ba5.q4b{:name => "gmc_patient_questionnaire[making_you_feel_at_ease]", :tabindex => "-1", :type => "radio", :value => "very good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q4ba6.q4b{:name => "gmc_patient_questionnaire[making_you_feel_at_ease]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q4ba7.q4b{:name => "gmc_patient_questionnaire[making_you_feel_at_ease]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number c
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_listening_to_you"} Listening to you
+                            %td.rating-label.mobile-only Poor
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q4ca1.q4c{:name => "gmc_patient_questionnaire[listening_to_you]", :type => "radio", :value => "poor"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Less than satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q4ca2.q4c{:name => "gmc_patient_questionnaire[listening_to_you]", :tabindex => "-1", :type => "radio", :value => "less than satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q4ca3.q4c{:name => "gmc_patient_questionnaire[listening_to_you]", :tabindex => "-1", :type => "radio", :value => "satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q4ca4.q4c{:name => "gmc_patient_questionnaire[listening_to_you]", :tabindex => "-1", :type => "radio", :value => "good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q4ca5.q4c{:name => "gmc_patient_questionnaire[listening_to_you]", :tabindex => "-1", :type => "radio", :value => "very good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q4ca6.q4c{:name => "gmc_patient_questionnaire[listening_to_you]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q4ca7.q4c{:name => "gmc_patient_questionnaire[listening_to_you]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number d
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_assessing_your_medical_condition"} Assessing your medical condition
+                            %td.rating-label.mobile-only Poor
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q4da1.q4d{:name => "gmc_patient_questionnaire[assessing_your_medical_condition]", :type => "radio", :value => "poor"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Less than satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q4da2.q4d{:name => "gmc_patient_questionnaire[assessing_your_medical_condition]", :tabindex => "-1", :type => "radio", :value => "less than satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q4da3.q4d{:name => "gmc_patient_questionnaire[assessing_your_medical_condition]", :tabindex => "-1", :type => "radio", :value => "satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q4da4.q4d{:name => "gmc_patient_questionnaire[assessing_your_medical_condition]", :tabindex => "-1", :type => "radio", :value => "good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q4da5.q4d{:name => "gmc_patient_questionnaire[assessing_your_medical_condition]", :tabindex => "-1", :type => "radio", :value => "very good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q4da6.q4d{:name => "gmc_patient_questionnaire[assessing_your_medical_condition]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q4da7.q4d{:name => "gmc_patient_questionnaire[assessing_your_medical_condition]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number e
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_explaining_your_condition_and_treatment"} Explaining your condition and treatment
+                            %td.rating-label.mobile-only Poor
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q4ea1.q4e{:name => "gmc_patient_questionnaire[explaining_your_condition_and_treatment]", :type => "radio", :value => "poor"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Less than satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q4ea2.q4e{:name => "gmc_patient_questionnaire[explaining_your_condition_and_treatment]", :tabindex => "-1", :type => "radio", :value => "less than satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q4ea3.q4e{:name => "gmc_patient_questionnaire[explaining_your_condition_and_treatment]", :tabindex => "-1", :type => "radio", :value => "satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q4ea4.q4e{:name => "gmc_patient_questionnaire[explaining_your_condition_and_treatment]", :tabindex => "-1", :type => "radio", :value => "good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q4ea5.q4e{:name => "gmc_patient_questionnaire[explaining_your_condition_and_treatment]", :tabindex => "-1", :type => "radio", :value => "very good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q4ea6.q4e{:name => "gmc_patient_questionnaire[explaining_your_condition_and_treatment]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q4ea7.q4e{:name => "gmc_patient_questionnaire[explaining_your_condition_and_treatment]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number f
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_involving_you_in_decisions_about_your_treatment"} Involving you in decisions about your treatment
+                            %td.rating-label.mobile-only Poor
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q4fa1.q4f{:name => "gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]", :type => "radio", :value => "poor"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Less than satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q4fa2.q4f{:name => "gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]", :tabindex => "-1", :type => "radio", :value => "less than satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q4fa3.q4f{:name => "gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]", :tabindex => "-1", :type => "radio", :value => "satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q4fa4.q4f{:name => "gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]", :tabindex => "-1", :type => "radio", :value => "good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q4fa5.q4f{:name => "gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]", :tabindex => "-1", :type => "radio", :value => "very good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q4fa6.q4f{:name => "gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q4fa7.q4f{:name => "gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number g
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_providing_or_arranging_treatment_for_you"} Providing or arranging treatment for you
+                            %td.rating-label.mobile-only Poor
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q4ga1.q4g{:name => "gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]", :type => "radio", :value => "poor"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Less than satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q4ga2.q4g{:name => "gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]", :tabindex => "-1", :type => "radio", :value => "less than satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Satisfactory
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q4ga3.q4g{:name => "gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]", :tabindex => "-1", :type => "radio", :value => "satisfactory"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q4ga4.q4g{:name => "gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]", :tabindex => "-1", :type => "radio", :value => "good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Very good
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q4ga5.q4g{:name => "gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]", :tabindex => "-1", :type => "radio", :value => "very good"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q4ga6.q4g{:name => "gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q4ga7.q4g{:name => "gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                    .panel-body
+                      / Q5
+                      %table.table.table-pq-questionnaire
+                        %thead
+                          %tr.q-question
+                            %th.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 5
+                            %th.qq{:colspan => "9"}
+                              %label Please decide how strongly you agree or disagree with the following statements by ticking one box in each line.
+                        %thead.hidden-xs
+                          %tr
+                            %th.qn  
+                            %th  
+                            %th.rating Strongly disagree
+                            %th.rating Disagree
+                            %th.rating Neutral
+                            %th.rating Agree
+                            %th.rating Strongly agree
+                            %th.rating Does not apply
+                            %th.dk.rating Spoiled
+                        %tbody
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number a
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_this_doctor_will_keep_information_about_me_confidential"} This doctor will keep information about me confidential
+                            %td.rating-label.mobile-only Strongly disagree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q5aa1.q5a{:name => "gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]", :type => "radio", :value => "strongly disagree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Disagree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q5aa2.q5a{:name => "gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]", :tabindex => "-1", :type => "radio", :value => "disagree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Neutral
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q5aa3.q5a{:name => "gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]", :tabindex => "-1", :type => "radio", :value => "neutral"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Agree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q5aa4.q5a{:name => "gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]", :tabindex => "-1", :type => "radio", :value => "agree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Strongly agree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q5aa5.q5a{:name => "gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]", :tabindex => "-1", :type => "radio", :value => "strongly agree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q5aa6.q5a{:name => "gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q5aa7.q5a{:name => "gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          %tr.q-answers.q-sub-questions
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .sub-number b
+                            %td.sub-question
+                              %label{:for => "gmc_patient_questionnaire_this_doctor_is_honest_and_trustworthy"} This doctor is honest and trustworthy
+                            %td.rating-label.mobile-only Strongly disagree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q5ba1.q5b{:name => "gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]", :type => "radio", :value => "strongly disagree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Disagree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q5ba2.q5b{:name => "gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]", :tabindex => "-1", :type => "radio", :value => "disagree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Neutral
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q5ba3.q5b{:name => "gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]", :tabindex => "-1", :type => "radio", :value => "neutral"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Agree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q5ba4.q5b{:name => "gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]", :tabindex => "-1", :type => "radio", :value => "agree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Strongly agree
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q5ba5.q5b{:name => "gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]", :tabindex => "-1", :type => "radio", :value => "strongly agree"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Does not apply
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 6
+                              %input#q5ba6.q5b{:name => "gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]", :tabindex => "-1", :type => "radio", :value => "does not apply"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 7
+                              %input#q5ba7.q5b{:name => "gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                    .panel-body
+                      / Q6
+                      %table.table.table-pq-questionnaire
+                        %thead
+                        %thead.hidden-xs
+                          %tr.q-question
+                            %th.qn
+                            %th{:colspan => "3"}
+                            %th Yes
+                            %th No
+                            %th.dk Spoiled
+                        %tbody
+                          %tr.q-answers
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 6
+                            %td.qq{:colspan => "3"}
+                              %label{:for => "gmc_patient_questionnaire_i_am_confident_about_this_doctors_ability_to_provide_care"} I am confident about this doctor’s ability to provide care
+                            %td.rating-label.mobile-only Yes
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q6a1.q6{:name => "gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]", :type => "radio", :value => "yes"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only No
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q6a2.q6{:name => "gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]", :tabindex => "-1", :type => "radio", :value => "no"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q6a3.q6{:name => "gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          / Q7
+                          %tr.q-answers.border-top-xs
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 7
+                            %td.qq{:colspan => "3"}
+                              %label{:for => "gmc_patient_questionnaire_i_would_be_completely_happy_to_see_this_doctor_again"} I would be completely happy to see this doctor again
+                            %td.rating-label.mobile-only Yes
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q7a1.q7{:name => "gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]", :type => "radio", :value => "yes"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only No
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q7a2.q7{:name => "gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]", :tabindex => "-1", :type => "radio", :value => "no"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q7a3.q7{:name => "gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                          / Q8
+                          %tr.q-answers.border-top-xs
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 8
+                            %td.qq{:colspan => "3"}
+                              %label{:for => "gmc_patient_questionnaire_was_this_visit_with_your_usual_doctor"} Was this visit with your usual doctor?
+                            %td.rating-label.mobile-only Yes
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q8a1.q8{:name => "gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]", :type => "radio", :value => "yes"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only No
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q8a2.q8{:name => "gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]", :tabindex => "-1", :type => "radio", :value => "no"}/
+                              .radio-button
+                               
+                            %td.rating-label.mobile-only Spoiled
+                            %td.dk.spoiled.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q8a3.q8{:name => "gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                              .radio-button
+                               
+                    / Q9
+                    .panel-body
+                      %table.table.table-pq-questionnaire
+                        %tbody
+                          %tr.q-answers
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 9
+                            %td.qq{:colspan => "6"}
+                              %label#q9a1.left-align{:for => "gmc_patient_questionnaire_comments"} Please add any other comments you want to make about this doctor. Please note: No patients will be identified when this information is given to the doctor.
+                          %tr.textfield
+                            %td.qn.hidden-xs
+                            %td.textfield{:colspan => "6"}
+                              %textarea#gmc_patient_questionnaire_comments{:cols => "40", :name => "gmc_patient_questionnaire[comments]", :placeholder => "Add comments", :rows => "20", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 344px;"}
+                  / Q10
+                  .panel.panel-default
+                    .panel-heading
+                      About you...
+                    .q-comment
+                      %strong The next questions will give us some basic information about who took part in the survey.
+                    .panel-body
+                      %table.table.table-pq-questionnaire
+                        %tbody
+                          %tr.q-answers
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 10
+                            %td.qq
+                              %label{:for => "gmc_patient_questionnaire_male_or_female"} Gender:
+                            %td.rating-label.mobile-only Female
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q10a1.q10{:name => "gmc_patient_questionnaire[male_or_female]", :type => "radio", :value => "female"}/
+                              .radio-button
+                              %span.hidden-xs Female
+                            %td.rating-label.mobile-only Male
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q10a2.q10{:name => "gmc_patient_questionnaire[male_or_female]", :tabindex => "-1", :type => "radio", :value => "male"}/
+                              .radio-button
+                              %span.hidden-xs Male
+                    / Q11
+                    .panel-body
+                      %table.table.table-pq-questionnaire
+                        %tbody
+                          %tr.q-answers
+                            %td.qn
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              .number 11
+                            %td.qq
+                              %label{:for => "gmc_patient_questionnaire_age"} Age:
+                            %td.rating-label.mobile-only Under 15
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 1
+                              %input#q11a1.q11{:name => "gmc_patient_questionnaire[age]", :type => "radio", :value => "under 15"}/
+                              .radio-button
+                              %span.hidden-xs Under 15
+                            %td.rating-label.mobile-only 15 to 20
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 2
+                              %input#q11a2.q11{:name => "gmc_patient_questionnaire[age]", :tabindex => "-1", :type => "radio", :value => "15 to 20"}/
+                              .radio-button
+                              %span.hidden-xs 15 to 20
+                            %td.rating-label.mobile-only 21 to 40
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 3
+                              %input#q11a3.q11{:name => "gmc_patient_questionnaire[age]", :tabindex => "-1", :type => "radio", :value => "21 to 40"}/
+                              .radio-button
+                              %span.hidden-xs 21 to 40
+                            %td.rating-label.mobile-only 40 to 60
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 4
+                              %input#q11a4.q11{:name => "gmc_patient_questionnaire[age]", :tabindex => "-1", :type => "radio", :value => "40 to 60"}/
+                              .radio-button
+                              %span.hidden-xs 40 to 60
+                            %td.rating-label.mobile-only 60 or over
+                            %td.sa-radio-buttons
+                              %span.accesskey{:style => "display: none;"} 5
+                              %input#q11a5.q11{:name => "gmc_patient_questionnaire[age]", :tabindex => "-1", :type => "radio", :value => "60 or over"}/
+                              .radio-button
+                              %span.hidden-xs 60 or over
+                    / Q12
+                    .panel-body
+                      .q-column-table
+                        .question-head
+                          .cell.qn
+                            %span.accesskey{:style => "display: none;"} ⇥
+                            .number 12
+                          .cell.qq.question
+                            %label{:for => "gmc_patient_questionnaire_ethnic_group"} What is your ethnic group? Please choose one section from A to E, and then select the appropriate box to indicate your cultural background.
+                        .body
+                          .column.qn.hidden-xs
+                            .cell.ethnic-q  
+                          .column
+                            .cell.ethnic-q A. White
+                            .cell
+                              .rating-label.mobile-only British
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} 01
+                                %input#q12aa1.q12a{:name => "gmc_patient_questionnaire[ethnic_group]", :type => "radio", :value => "british"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type British
+                            .cell
+                              .rating-label.mobile-only Irish
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} 02
+                                %input#q12aa2.q12a{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "irish"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Irish
+                            .cell
+                              .rating-label.mobile-only Any other White background
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} 03
+                                %input#q12aa3.q12a{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "any other white background"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Any other White background
+                            .cell.hidden-xs  
+                            .cell.textfield
+                              %span.accesskey{:style => "display: none;"} 04
+                              %input#q12aa4.q12a.form-control{:name => "gmc_patient_questionnaire[ethnic_group_a_other]", :placeholder => "Other", :size => "30", :tabindex => "-1", :type => "text"}/
+                          .column
+                            .cell.ethnic-q B. Mixed
+                            .cell
+                              .rating-label.mobile-only White and Black Caribbean
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} 05
+                                %input#q12aa5.q12a{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "white and black caribbean"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type White and Black Caribbean
+                            .cell
+                              .rating-label.mobile-only White and Black African
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} 06
+                                %input#q12aa6.q12a{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "white and black african"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type White and Black African
+                            .cell
+                              .rating-label.mobile-only White and Asian
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} 07
+                                %input#q12aa7.q12a{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "white and asian"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type White and Asian
+                            .cell
+                              .rating-label.mobile-only Any other Mixed background
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} 08
+                                %input#q12aa8.q12a{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "any other mixed background"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Any other Mixed background
+                            .cell.textfield
+                              %span.accesskey{:style => "display: none;"} 09
+                              %input#q12aa9.q12b.form-control{:name => "gmc_patient_questionnaire[ethnic_group_b_other]", :placeholder => "Other", :size => "30", :tabindex => "-1", :type => "text"}/
+                          .column
+                            .cell.ethnic-q C. Asian or Asian British
+                            .cell
+                              .rating-label.mobile-only Indian
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} -1
+                                %input#q12ca1.q12c{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "indian"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Indian
+                            .cell
+                              .rating-label.mobile-only Pakistani
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} -2
+                                %input#q12ca2.q12c{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "pakistani"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Pakistani
+                            .cell
+                              .rating-label.mobile-only Bangladeshi
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} -3
+                                %input#q12ca3.q12c{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "bangladeshi"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Bangladeshi
+                            .cell
+                              .rating-label.mobile-only Any other Asian background
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} -4
+                                %input#q12ca4.q12c{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "any other asian background"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Any other Asian background
+                            .cell.textfield
+                              %span.accesskey{:style => "display: none;"} -5
+                              %input#q12ca5.q12c.form-control{:name => "gmc_patient_questionnaire[ethnic_group_c_other]", :placeholder => "Other", :size => "30", :tabindex => "-1", :type => "text"}/
+                          .column
+                            .cell.ethnic-q D. Black or Black British
+                            .cell
+                              .rating-label.mobile-only Caribbean
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} -6
+                                %input#q12ca6.q12c{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "caribbean"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Caribbean
+                            .cell
+                              .rating-label.mobile-only African
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} -7
+                                %input#q12ca7.q12c{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "african"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type African
+                            .cell
+                              .rating-label.mobile-only Any other Black background
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} -8
+                                %input#q12ca8.q12c{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "any other black background"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Any other Black background
+                            .cell.hidden-xs  
+                            .cell.textfield
+                              %span.accesskey{:style => "display: none;"} -9
+                              %input#q12ca9.q12d.form-control{:name => "gmc_patient_questionnaire[ethnic_group_d_other]", :placeholder => "Other", :size => "30", :tabindex => "-1", :type => "text"}/
+                          .column
+                            .cell.ethnic-q
+                              %label E. Chinese or other ethnic group
+                            .cell
+                              .rating-label.mobile-only Chinese
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} +1
+                                %input#q12ea1.q12e{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "chinese"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Chinese
+                            .cell
+                              .rating-label.mobile-only Any other
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} +2
+                                %input#q12ea2.q12e{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "any other"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Any other
+                            .cell.hidden-xs  
+                            .cell.hidden-xs  
+                            .cell.textfield
+                              %span.accesskey{:style => "display: none;"} +3
+                              %input#q12ea3.q12e.form-control{:name => "gmc_patient_questionnaire[ethnic_group_e_other]", :placeholder => "Other", :size => "30", :tabindex => "-1", :type => "text"}/
+                          .column
+                            .cell.ethnic-q Spoiled
+                            .cell
+                              .rating-label.mobile-only Spoiled
+                              .sa-radio-buttons
+                                %span.accesskey{:style => "display: none;"} +4
+                                %input#q12ea4.q12e{:name => "gmc_patient_questionnaire[ethnic_group]", :tabindex => "-1", :type => "radio", :value => "spoiled"}/
+                                .radio-button.radio-inline
+                                %span.ethnic-type Spoiled
+                            .cell.hidden-xs  
+                            .cell.hidden-xs  
+                            .cell.hidden-xs  
+                            .cell.hidden-xs  
+                  / Administrators Only
+                  .panel.panel-default
+                    .panel-heading
+                      ADMINISTRATORS ONLY
+                    .panel-body
+                      %table.table.table-pq-questionnaire
+                        %tbody
+                          %tr
+                            %td.block
+                              %span.accesskey{:style => "display: none;"} ⇥
+                              %label.left-align{:for => "gmc_patient_questionnaire_admin_comments"} Comments e.g. reason if marked as spoiled
+                          %tr
+                            %td.textfield
+                              %textarea#gmc_patient_questionnaire_admin_comments{:cols => "40", :name => "gmc_patient_questionnaire[admin_comments]", :placeholder => "Add comments", :rows => "20", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 344px;"}
+                  .save.right
+                    %span.accesskey{:style => "display: none;"} ⇥
+                    %input.btn.btn-success{"data-disable-with" => "Submitting...", :name => "commit", :type => "submit", :value => "Submit response"}/
+                    %span.accesskey{:style => "display: none;"} (on the next page, press enter to create a new questionnaire)
+
+
+    / Scripts ================================
+
+    %script{:src => "../assets/js/remote-sard-scripts.min.js"}

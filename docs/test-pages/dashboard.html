@@ -1,0 +1,3116 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+<head>
+<title>Bootstrap 4 Layout - Typography</title>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='../assets/css/remote-sard-styles.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+<nav class='navbar fixed-top navbar-expand-lg navbar-sard'>
+<div class='container'>
+<a class='navbar-brand' href='../index.html'>Navbar</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'>
+<a class='nav-link' href='../index.html'>
+Home
+<span class='sr-only'>(current)</span>
+</a>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='sardUI' role='button'>
+Sard UI
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='../sard-ui/sa-typography.html'>Typography</a>
+<a class='dropdown-item' href='../sard-ui/sa-icons.html'>Icons</a>
+<a class='dropdown-item' href='../sard-ui/sa-colours.html'>Colours</a>
+<a class='dropdown-item' href='../sard-ui/sa-links.html'>Links</a>
+</div>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='bsComponents' role='button'>
+Components
+</a>
+<div aria-labelledby='bsComponents' class='dropdown-menu'>
+<a class='dropdown-item' href='../components/components.html#alerts-anchor'>Alerts</a>
+<a class='dropdown-item' href='../components/components.html#badges-anchor'>Badges</a>
+<a class='dropdown-item' href='../components/components.html#breadcrumbs-anchor'>Breadcrumbs</a>
+<a class='dropdown-item' href='../components/components.html#buttons-anchor'>Buttons</a>
+<a class='dropdown-item' href='../components/components.html#cards-anchor'>Cards</a>
+<a class='dropdown-item' href='../components/components.html#checkboxes-anchor'>Checkboxes and Radios</a>
+<a class='dropdown-item' href='../components/components.html#collapse-anchor'>Collapse</a>
+<a class='dropdown-item' href='../components/components.html#dropdowns-anchor'>Dropdowns</a>
+<a class='dropdown-item' href='../components/components.html#forms-anchor'>Forms</a>
+<a class='dropdown-item' href='../components/components.html#input-group-anchor'>Input Groups</a>
+<a class='dropdown-item' href='../components/components.html#list-group-anchor'>List Groups</a>
+<a class='dropdown-item' href='../components/components.html#modal-anchor'>Modal</a>
+<a class='dropdown-item' href='../components/components.html#navbar-anchor'>Navbar</a>
+<a class='dropdown-item' href='../components/components.html#navs-anchor'>Navs</a>
+<a class='dropdown-item' href='../components/components.html#pagination-anchor'>Pagination</a>
+<a class='dropdown-item' href='../components/components.html#popovers-anchor'>Popovers</a>
+<a class='dropdown-item' href='../components/components.html#progress-anchor'>Progress Bars</a>
+<a class='dropdown-item' href='../components/components.html#searchbars-anchor'>Searchbars</a>
+<a class='dropdown-item' href='../components/components.html#tables-anchor'>Tables</a>
+<a class='dropdown-item' href='../components/components.html#tooltips-anchor'>Tooltips</a>
+<div class='dropdown-divider'></div>
+<div class='dropdown-header'>BS3 Components</div>
+<a class='dropdown-item' href='../components/components.html#panels-anchor'>Panels</a>
+</div>
+</li>
+<li class='nav-item'>
+<a aria-disabled='true' class='nav-link disabled' href='#' tabindex='-1'>Disabled</a>
+</li>
+</ul>
+<form class='form-inline input-group searchbar-sard'>
+<input aria-label='Search' class='form-control' placeholder='Search' type='search'>
+<div class='input-group-append'>
+<button class='btn btn-navbar' type='submit'>Search</button>
+</div>
+</form>
+</div>
+</div>
+</nav>
+</header>
+<div class='container' style=''>
+<div class='row'>
+<div class='col-xs-12'>
+<div id='flash_messages' style='display: none;'>
+<div class='alert alert-info alert-dismissable' role='alert'>
+<button aria-label='Close' class='close' data-dismiss='alert' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+Signed in successfully.
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-12'>
+<div class='row'>
+<div class='col-xs-12'>
+<div class='db-page-photo'>
+<img alt='Flower md orange' src='/system/users/photos/2-3/thumb/flower_md_orange.png?1561371475'>
+</div>
+<div class='db-page-title'>
+<h1 class='page-title'>
+<div class='name'>
+Dr John T Smith
+</div>
+<div class='page'>
+Dashboard
+</div>
+</h1>
+</div>
+</div>
+</div>
+<div class='row'>
+<!-- Right Column -->
+<div class='col-xs-12 col-sm-12 col-md-4 col-md-push-8'>
+<div class='row'>
+<div class='col-xs-12 col-sm-6 col-md-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a data-toggle='collapse' href='#dashboard-dates' id='db-dates'>
+<h3>Your Dates</h3>
+</a>
+</div>
+<div class='panel-collapse collapse in' id='dashboard-dates'>
+<div class='panel-body db-your-dates'>
+<dl>
+<!-- recommendation -->
+<div class='user-dates'>
+<div class='rag-box rag-green'></div>
+<dt>Recommendation Due</dt>
+<dd>
+<div class='rag-date'>
+Fri, 31 Jan 2020
+<br>
+<span class='small'>(in 6 months)</span>
+</div>
+</dd>
+</div>
+<!-- section 12 -->
+<div class='user-dates'>
+<div class='rag-box rag-red'></div>
+<dt>Approved Clinician Expiry</dt>
+<dd>
+<div class='rag-date'>
+Sun, 22 Oct 2017
+<br>
+<span class='small'>(almost 2 years ago)</span>
+</div>
+</dd>
+</div>
+<!-- appraisal due -->
+<div class='user-dates'>
+<div class='rag-box rag-green'></div>
+<dt>Appraisal Due</dt>
+<dd>
+<div class='rag-date'>
+Tue, 31 Dec 2019
+<br>
+<span class='small'>(in 5 months)</span>
+</div>
+</dd>
+<!-- appraisal proposed meeting date -->
+</div>
+<!-- msf -->
+<div class='user-dates'>
+<div class='rag-box rag-green'></div>
+<a class='fa fa-lg fa-info-circle popover-icon no-pdf pull-right' data-original-title='' data-placement='auto left' data-popover-content='#msf-popover' data-target='#' rel='popover' tabindex='0' title=''></a>
+<div class='hide' id='msf-popover'>
+<p class='last'>
+Your MSF due date is
+5
+years
+after the date of your last complete MSF.
+<br>
+To have a complete MSF you must have completed the self assessment questionnaire, colleague feedback and patient feedback.
+</p>
+</div>
+<dt>MSF Due</dt>
+<dd>
+<div class='rag-date'>
+Wed, 14 Jul 2021
+<br>
+<span class='small'>(in almost 2 years)</span>
+</div>
+</dd>
+</div>
+<!-- job planning -->
+<div class='user-dates'>
+<div class='rag-box rag-green'></div>
+<dt>Job Plan Due</dt>
+<dd>
+<div class='rag-date'>
+Sat, 06 Jun 2020
+<br>
+<span class='small'>(in 11 months)</span>
+</div>
+</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12 col-sm-6 col-md-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a data-toggle='collapse' href='#dashboard-details' id='db-details'>
+<h3>Your Details</h3>
+</a>
+</div>
+<div class='panel-collapse collapse in' id='dashboard-details'>
+<div class='panel-body'>
+<div class='db-your-details'>
+<dl class='user-details'>
+<dt>
+<p>
+<strong>
+Allocated Appraisal Month:
+</strong>
+December
+</p>
+</dt>
+<dt>
+<p>
+<strong>GMC Reference Number:</strong>
+123456788
+</p>
+</dt>
+<dt>
+<p>
+<strong>Employee Number:</strong>
+3
+</p>
+</dt>
+<dt>
+<p>
+<strong>Email:</strong>
+john@example.com
+</p>
+</dt>
+<dt>
+<p>
+<strong>Directorate:</strong>
+Cardiology
+</p>
+</dt>
+<dt>
+<p>
+<strong>Location Org L4:</strong>
+North of England
+</p>
+</dt>
+<dt>
+<p>
+<strong>Team:</strong>
+Health Protection
+</p>
+</dt>
+<dt>
+<p>
+<strong>Specialty:</strong>
+ADULT MENTAL ILLNESS
+</p>
+</dt>
+<dt>
+<p>
+<strong>Delegates:</strong>
+<br>
+Mrs Bella Owen<br>Miss Jane T Jones
+</p>
+</dt>
+<dt>
+<p>
+<strong>
+Lead Appraiser:
+</strong>
+<br>
+Dr Janet T Johnson
+<br>
+<a href='mailto:janet@example.com'>Email: janet@example.com</a>
+<br>
+</p>
+</dt>
+<dt>
+<p>
+<strong>Medical Roles:</strong>
+<br>
+DIR OP Doctor (T)<br>Doctor<br>Educational Supervisor<br>Inpatient Doctor (T)<br>Medical Educator<br>Psychiatrist (T)<br>Those with responsibility to section (T)
+</p>
+</dt>
+<dt><strong>AOA 2016/2017</strong>:
+2.1.1 Consultants
+</dt>
+</dl>
+</div>
+</div>
+<div class='panel-footer'>
+<a class='btn btn-default btn-xs' href='/users/edit'>Edit Details</a>
+<a class='btn btn-default btn-xs' href='/email_preferences/2-3/edit'>Email Preferences</a>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-4 col-md-12 hidden-xs hidden-sm'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-support-docs' id='db-support'>
+<h3>Support Docs</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-support-docs'>
+<div class='panel-body'>
+<ul class='no-bullet list-group'>
+<li class='list-group-item group-title'>Trust Policy Documents</li>
+<li class='list-group-item link-arrow'>
+<a href='http://demo.lvh.me:8080/support_documents/52b46315e3e1f157470003f2'>Appraisal Policy</a>
+</li>
+<li class='list-group-item link-arrow'>
+<a href='http://demo.lvh.me:8080/support_documents/57e13f4f8025420c86000005'>DBS Declaration</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-4 col-md-12 hidden-xs hidden-sm'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-guides-side'>
+<h3>Guides</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-guides-side'>
+<div class='panel-body'>
+<div class='guides'>
+<a href='/user_guides/medical_revalidation'>
+<img alt='Medical revalidation' class='guide-image' src='/support/images/medical_revalidation.png'>
+</a>
+<a href='/user_guides/job_planning'>
+<img alt='Job planning' class='guide-image' src='/support/images/job_planning.png'>
+</a>
+<a href='/user_guides/eleave'>
+<img alt='Eleave' class='guide-image' src='/support/images/eleave.png'>
+</a>
+<a href='/user_guides/360'>
+<img alt='360' class='guide-image' src='/support/images/360.png'>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Column -->
+<div class='col-xs-12 col-md-8 col-md-pull-4'>
+<div class='row'>
+<div class='col-xs-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a data-toggle='collapse' href='#dashboard-wtdn'>
+<h3>What to do next</h3>
+</a>
+</div>
+<div class='panel-collapse collapse in' id='dashboard-wtdn'>
+<div class='panel-body'>
+<a aria-hidden='true' class='fa fa-lg fa-info-circle popover-icon no-pdf pull-right' data-original-title='' data-placement='bottom' data-popover-content='#wtdn-popover' data-popover-title='#wtdn-popover-title' data-target='#' rel='popover' tabindex='0' title=''></a>
+<div class='hide' id='wtdn-popover-title'>
+Getting Started
+</div>
+<div class='hide' id='wtdn-popover'>
+<p class='bold'>
+To get started, click on the ‘New Appraisal’ button in the Appraisals section. This will create 2 new pages:
+<strong>My Appraisal</strong>
+and
+<strong>My Portfolio</strong>.
+</p>
+<p>
+<span class='heavy white'>
+01 Update Portfolio
+</span>
+Evidence should be added for each section of your portfolio, then the section marked as green, amber or N/A.
+</p>
+<p>
+<span class='heavy white'>
+Appraisal Preparation
+</span>
+Sections 1 to 18 of your appraisal should be filled in. Once you’ve completed a section you need to click on ‘Mark As Complete’.
+</p>
+<p>
+<span class='heavy white'>
+Send to Appraiser
+</span>
+When Sections 1 to 18 have been marked as completed and all sections of the portfolio have been marked green, amber or N/A, you can submit the appraisal to your appraiser.
+</p>
+<p>
+<span class='heavy white'>
+Agree PDP and statements
+</span>
+The appraiser is responsible for Section 19 and Section 20 of your appraisal. These should be completed during or after the appraisal meeting.
+</p>
+<p>
+<span class='heavy white'>
+Appraiser Sign-Off and Doctor Sign-Off
+</span>
+Section 21 should be completed by the appraiser. Section 22 should be completed by the doctor.
+</p>
+<p class='last'>
+<span class='heavy white'>
+Submit to RO
+</span>
+Once the appraisal is complete, the appraiser can submit it to the responsible officer. No changes can be made after this point.
+</p>
+</div>
+<div class='do-next-wrapper'>
+<!-- show steps of the appraisal. the current step is coloure green. -->
+<div class='dn-wrapper'>
+<div class='dn-rule'></div>
+<div class='do-next-chart'>
+<div class='dn-row-one'>
+<div class='dn-station'>
+<div class='dn-stop 1'>01</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-station'>
+<div class='dn-stop 2'>02</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-station'>
+<div class='dn-stop 3'>03</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-station'>
+<div class='appraisal 4'>
+Appraisal<br>Meeting
+</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-station'>
+<div class='dn-stop 4'>04</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-station'>
+<div class='dn-stop 5'>05</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-station'>
+<div class='6 complete dn-stop'>06</div>
+</div>
+</div>
+<div class='dn-row-two'>
+<div class='dn-title'>
+<div class='dn-text'>
+<p>
+Update Portfolio
+</p>
+</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-title'>
+<div class='dn-text'>
+<p>
+Appraisal Preparation
+</p>
+</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-title'>
+<div class='dn-text'>
+<p>
+Send to Appraiser
+</p>
+</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-title'> </div>
+<div class='dn-line'> </div>
+<div class='dn-title'>
+<div class='dn-text'>
+<p>
+Agree PDP and Statements
+</p>
+</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-title'>
+<div class='dn-text'>
+<p class='sign-off-1'>
+Appraiser Sign-off
+</p>
+<p class='sign-off-2'>
+Doctor Sign-off
+</p>
+</div>
+</div>
+<div class='dn-line'> </div>
+<div class='dn-title'>
+<div class='dn-text'>
+<p>
+Submit to RO
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- instruction text which show underneath depending on which step the user is on. -->
+<div class='perf perf-white'></div>
+<div class='wtdn-instructions'>
+Your appraisal has been signed off and your lead appraiser can now submit it to the RO.
+You will be notified when they have done this.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a data-toggle='collapse' href='#dashboard-notifications'>
+<h3>Your Notifications</h3>
+</a>
+</div>
+<div class='panel-collapse collapse in' id='dashboard-notifications'>
+<div class='panel-body padding-bottom0'>
+<div class='notifications'>
+<ul class='link-arrow no-bullet'>
+<div class='date'>Mon, 24 Jun 2019</div>
+<li class='li-group-item'>
+<a href='http://localhost:8080/users/2-3/appraisals/5b7fc851f2a39f2541000031/portfolio#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f12443000055'>Evidence uploaded by SARD System was attached to your portfolio Jan 2019</a>
+-  01:48PM
+</li>
+</ul>
+<ul class='link-arrow no-bullet'>
+<div class='date'>Wed, 17 Apr 2019</div>
+<li class='li-group-item'>
+<a href='http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-12+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Mr Simon Sharville approved a leave period (for 12 Apr 2019)</a>
+-  02:18PM
+</li>
+<li class='li-group-item'>
+<a href='http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-10+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Mr Simon Sharville rejected a leave period (for 10 Apr 2019)</a>
+-  02:17PM
+</li>
+<li class='li-group-item'>
+<a href='http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-09+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Mr Simon Sharville approved a leave period (for 09 Apr 2019)</a>
+-  02:11PM
+</li>
+</ul>
+<ul class='link-arrow no-bullet'>
+<div class='date'>Tue, 16 Apr 2019</div>
+<li class='li-group-item'>
+<a href='http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-07+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Mr Simon Sharville approved a leave period (for 07 Apr 2019)</a>
+-  01:52PM
+</li>
+<li class='li-group-item'>
+<a href='http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-05+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Mr Simon Sharville rejected a leave period (for 05 Apr 2019)</a>
+-  01:50PM
+</li>
+<li class='li-group-item'>
+<a href='http://localhost:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-04-04+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Mr Simon Sharville approved a leave period (for 04 Apr 2019)</a>
+-  01:49PM
+</li>
+</ul>
+<ul class='link-arrow no-bullet'>
+<div class='date'>Fri, 01 Feb 2019</div>
+<li class='li-group-item'>
+<a href='http://demo.sardjv.co.uk:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-02-20+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Dr Janet T Johnson approved a leave period (for 20 Feb 2019 to 21 Feb 2019)</a>
+-  11:09AM
+</li>
+</ul>
+<ul class='link-arrow no-bullet'>
+<div class='date'>Tue, 29 Jan 2019</div>
+<li class='li-group-item'>
+<a href='http://demo.sardjv.co.uk:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-12-25+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Dr Janet T Johnson approved a leave period (for 25 Dec 2019)</a>
+-  02:41PM
+</li>
+<li class='li-group-item'>
+<a href='http://demo.sardjv.co.uk:8080/users/2-3/eleave_calendar?start_with%5Bdate%5D=2019-12-25+00%3A00%3A00+UTC&amp;start_with%5Bid%5D=2-3&amp;start_with%5Btab%5D=user'>Dr Janet T Johnson approved a leave period (for 25 Dec 2019)</a>
+-  02:38PM
+</li>
+</ul>
+</div>
+</div>
+<div class='panel-body panel-buttons'>
+<div class='perf perf-white'></div>
+<div class='buttons-right'>
+<a class='btn btn-sm btn-client' href='/notifications'>See All Notifications</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-user-appraisals'>
+<h3>Your Appraisals</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-user-appraisals'>
+<div class='panel-body'>
+<table class='table table-sard'>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/5b7fc851f2a39f2541000031/edit'>Appraisal Jan 2019</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='sa-state state-colour submitted'>submitted</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Submitted</div>
+<div class='date'>Tue, 29 Jan 2019</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+Portfolio Jan 2019
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit'>Appraisal Sep 2018</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Sun, 16 Sep 2018</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_complete_dataset_category_pdf' target='_blank'>Medical Educators Framework Areas PDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/portfolio'>Portfolio Sep 2018</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/5788e665802542463a00000f/edit'>Appraisal Dec 2016</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Mon, 05 Dec 2016</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5788e665802542463a00000f/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5788e665802542463a00000f/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5788e665802542463a00000f/download_complete_dataset_category_pdf' target='_blank'>Medical Educators Framework Areas PDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5788e665802542463a00000f/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/5788e665802542463a00000f/portfolio'>Portfolio Dec 2016</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/offline_appraisals/54f988998025420bf5000001'>Appraisal Mar 2015 (Offline)</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='sa-state state-colour submitted'>submitted</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Submitted</div>
+<div class='date'>Sun, 01 Mar 2015</div>
+</td>
+<!-- edocs -->
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/53d7aef9f2a39f25b200025b/edit'>Appraisal Nov 2015</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Mon, 09 Nov 2015</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_complete_dataset_category_pdf' target='_blank'>Medical Educators Framework Areas PDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/53d7aef9f2a39f25b200025b/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/53d7aef9f2a39f25b200025b/portfolio'>Portfolio Nov 2015</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/5257a774e3e1f1145400001f/edit'>Appraisal Jul 2014</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Tue, 29 Jul 2014</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5257a774e3e1f1145400001f/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5257a774e3e1f1145400001f/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5257a774e3e1f1145400001f/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/5257a774e3e1f1145400001f/portfolio'>Portfolio Jul 2014</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/edit'>Appraisal Oct 2013</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Thu, 10 Oct 2013</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/51b1c4d4e3e1f1431d00016c/portfolio'>Portfolio Oct 2013</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/517e8f0ee3e1f12769000361/edit'>Appraisal Jun 2013</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Sat, 15 Jun 2013</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/517e8f0ee3e1f12769000361/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/517e8f0ee3e1f12769000361/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/517e8f0ee3e1f12769000361/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/517e8f0ee3e1f12769000361/portfolio'>Portfolio Jun 2013</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/512b782be3e1f12459000028/edit'>Appraisal Mar 2013</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Fri, 15 Mar 2013</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/512b782be3e1f12459000028/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/512b782be3e1f12459000028/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/512b782be3e1f12459000028/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/512b782be3e1f12459000028/portfolio'>Portfolio Mar 2013</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/510112fbe3e1f16612000015/edit'>Appraisal Feb 2012</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Thu, 16 Feb 2012</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/510112fbe3e1f16612000015/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/510112fbe3e1f16612000015/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/510112fbe3e1f16612000015/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/510112fbe3e1f16612000015/portfolio'>Portfolio Feb 2012</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/5034e03ae3e1f12443000088/edit'>Appraisal Nov 2012</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Mon, 19 Nov 2012</div>
+</td>
+<!-- edocs -->
+<td class='border-left'>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5034e03ae3e1f12443000088/download_complete_appraisal_pdf' target='_blank'>AppraisalPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5034e03ae3e1f12443000088/download_complete_portfolio_pdf' target='_blank'>PortfolioPDF</a>
+</div>
+<div class='link-pdf plus-download'>
+<a href='/users/2-3/appraisals/5034e03ae3e1f12443000088/download_appraisal_summary_pdf' target='_blank'>SummaryPDF</a>
+</div>
+<div class='link-arrow'>
+<a href='/users/2-3/appraisals/5034e03ae3e1f12443000088/portfolio'>Portfolio Nov 2012</a>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class='title'>
+<div class='link-arrow'>
+<a href='/users/2-3/offline_appraisals/5034e033e3e1f1244300006f'>Appraisal Aug 2010 (Offline)</a>
+</div>
+</td>
+<td class='title'>
+eDocs
+<div class='complete sa-state state-colour'>complete</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='state'>Complete</div>
+<div class='date'>Sun, 22 Aug 2010</div>
+</td>
+<!-- edocs -->
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body panel-buttons'>
+<div class='perf perf-white'></div>
+<div class='buttons-right'>
+<a class='btn btn-sm btn-client' href='/users/2-3/appraisals/5b7fc851f2a39f2541000031/edit'>Go to Appraisal</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-user-msfs'>
+<h3>Multi Source Feedback</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-user-msfs'>
+<div class='panel-body'>
+<div class='table-responsive'>
+<table class='table table-sard'>
+<thead>
+<tr>
+<th>Title</th>
+<th>SA?</th>
+<th>CF?</th>
+<th>PF?</th>
+<th>Date</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class='link-arrow'>
+<a href='/users/2-3/offline_msfs/519a9f06e3e1f15782000004'>MSF May 2012 (offline)</a>
+</div>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes self assessment'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes colleague feedback'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes patient feedback'></i>
+</td>
+<td>Wed, 02 May 2012</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>
+<div class='link-arrow'>
+<a href='/online_msfs/578fdb39802542632e00000c'>MSF Mar 2017</a>
+</div>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes self assessment'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes colleague feedback'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes patient feedback'></i>
+</td>
+<td>No Date</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>
+<div class='link-arrow'>
+<a href='/online_msfs/51b0d1d8e3e1f14325000013'>MSF Jul 2016 (complete)</a>
+</div>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes self assessment'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes colleague feedback'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes patient feedback'></i>
+</td>
+<td>Thu, 14 Jul 2016</td>
+<td class='file'>
+<a class='Dr-John-T-Smith-27Nov15-at-1414-msf.pdf' href='/edocs/5658655d80254242d4000001/download' target='_blank'>MSF Report Nov 2015</a>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>
+<div class='link-arrow'>
+<a href='/users/2-3/offline_msfs/584fd5d1f2a39f7171000030'>MSF Jan 2016 (offline)</a>
+</div>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes self assessment'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes colleague feedback'></i>
+</td>
+<td class='strong'>
+<i aria-hidden='true' class='fa fa-check' title='MSF includes patient feedback'></i>
+</td>
+<td>Mon, 18 Jan 2016</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='panel-body panel-buttons'>
+<div class='perf perf-white'></div>
+<div class='buttons-right'>
+<a class='btn btn-sm btn-client' href='/msfs/578fdb39802542632e00000c'>Go to My MSF</a>
+<a class='btn btn-sm btn-client' href='/users/2-3/offline_msfs/new'>Upload previous MSF</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-sig-job-plans'>
+<h3>Job Plans for which you are a signatory</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-sig-job-plans'>
+<div class='panel-body'>
+<div class='table-responsive'>
+<table class='table table-sard multi-table ruled'>
+<caption>
+Submitted job plans requiring your signature
+<strong>now</strong>
+</caption>
+<thead>
+<tr>
+<th>Doctor</th>
+<th>Effective Date</th>
+<th>At Tier</th>
+<th>Your Tier</th>
+<th>Your Role</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/54bfbabcf2a39f73cb000248'>Dr John T Smith</a>
+</td>
+<td>06 Apr 18</td>
+<td>1 of 1</td>
+<td>1</td>
+<td>Owner</td>
+<td>
+<div class='sa-state state-colour submitted'>Submitted</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class='table table-sard multi-table ruled'>
+<caption>
+The next 10 job plans you're a signatory for but are
+<strong>in draft</strong>
+</caption>
+<thead>
+<tr>
+<th>Doctor</th>
+<th>Effective Date</th>
+<th>Your Role</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5c1a5124bdd601c36500014c'>Dr John T Smith</a>
+</td>
+<td>01 Apr 19</td>
+<td>Job Plan Owner</td>
+<td>
+<div class='draft sa-state state-colour'>Draft</div>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5b50ab818025427bf600007c'>Dr John T Smith</a>
+</td>
+<td>02 Apr 18</td>
+<td>Job Plan Owner</td>
+<td>
+<div class='draft sa-state state-colour'>Draft</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class='table table-sard multi-table ruled'>
+<caption>
+The last 10 job plans you've
+<strong>already signed</strong>
+</caption>
+<thead>
+<tr>
+<th>Doctor</th>
+<th>Effective Date</th>
+<th>Your Role</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5b0fe4808025426c45000039'>Dr John T Smith</a>
+</td>
+<td>01 Apr 19</td>
+<td>Job Plan Owner</td>
+<td>
+<div class='complete sa-state state-colour'>Complete</div>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5a12f1b78025423e7200006c'>Dr John T Smith</a>
+</td>
+<td>01 Apr 18</td>
+<td>Job Plan Owner</td>
+<td>
+<div class='complete sa-state state-colour'>Complete</div>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/59b7aacbf2a39f087c00000d'>Dr Kenny Daglish</a>
+</td>
+<td>01 Oct 17</td>
+<td>Service Lead</td>
+<td>
+<div class='complete sa-state state-colour'>Complete</div>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/594be337802542b4d300002b'>Dr John T Smith</a>
+</td>
+<td>01 Apr 17</td>
+<td>Job Plan Owner</td>
+<td>
+<div class='sa-state state-colour submitted'>Submitted</div>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/555c56c1f2a39f7ff900017f'>Dr John T Smith</a>
+</td>
+<td>01 Apr 17</td>
+<td>Job Plan Owner</td>
+<td>
+<div class='complete sa-state state-colour'>Complete</div>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/54e652bf80254210b2000030'>Dr John T Smith</a>
+</td>
+<td>01 Jan 16</td>
+<td>Job Plan Owner</td>
+<td>
+<div class='complete sa-state state-colour'>Complete</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-user-job-plans'>
+<h3>Your Job Plans</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-user-job-plans'>
+<div class='panel-body'>
+<div class='table-responsive'>
+<table class='table table-sard'>
+<thead>
+<tr>
+<th>Title</th>
+<th>Job Title</th>
+<th>Effective date</th>
+<th>Edoc</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='link-arrow'>
+<a href='/users/2-3/offline_job_plans/5d10c67ca54d7501fa000127'>Job Plan Jun 2019 - Jun 2020 (offline)</a>
+</td>
+<td></td>
+<td>Thu, 06 Jun 2019</td>
+<td class='link-file'>
+<a class='flower_md_pink.png' href='/edocs/5d10c67ca54d7501fa000128/download' target='_blank'>Flower Md Pink</a>
+</td>
+<td>
+<div class='complete sa-state state-colour'></div>
+Complete
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/users/2-3/offline_job_plans/5d10abc1a54d75847a00007c'>Job Plan Jun 2019 - Jun 2020 (offline)</a>
+</td>
+<td></td>
+<td>Thu, 06 Jun 2019</td>
+<td>None</td>
+<td>
+<div class='complete sa-state state-colour'></div>
+Complete
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5c1a5124bdd601c36500014c'>Job Plan Apr 2019 - Mar 2020</a>
+</td>
+<td></td>
+<td>Mon, 01 Apr 2019</td>
+<td>None</td>
+<td>
+<div class='draft sa-state state-colour'></div>
+Draft
+<br>
+<a href='/online_job_plans/5c1a5124bdd601c36500014c#section/sign_off'>Requires your signature</a>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5b0fe4808025426c45000039'>Job Plan Apr 2019 - Mar 2020 (complete)</a>
+</td>
+<td></td>
+<td>Mon, 01 Apr 2019</td>
+<td class='link-file'>
+<a class='Dr-John-T-Smith-09Jul18-at-1206-job_plan.pdf' href='/edocs/5b434fccf2a39f3fb0000001/download' target='_blank'>Job Plan Apr 2019 - Mar 2020</a>
+</td>
+<td>
+<div class='complete sa-state state-colour'></div>
+Complete
+<br>
+Signed by you
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/54bfbabcf2a39f73cb000248'>Job Plan Apr 2018 - Apr 2019</a>
+</td>
+<td></td>
+<td>Fri, 06 Apr 2018</td>
+<td class='link-file'>
+<a class='Dr-John-T-Smith-01Sep16-at-0951-job_plan.pdf' href='/edocs/57c7fa33f2a39f2094000001/download' target='_blank'>Job Plan Jan 2015</a>
+</td>
+<td>
+<div class='sa-state state-colour submitted'></div>
+Submitted
+<br>
+<a href='/online_job_plans/54bfbabcf2a39f73cb000248#section/sign_off'>Requires your signature</a>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5b50ab818025427bf600007c'>Job Plan Apr 2018 - Apr 2019</a>
+</td>
+<td></td>
+<td>Mon, 02 Apr 2018</td>
+<td>None</td>
+<td>
+<div class='draft sa-state state-colour'></div>
+Draft
+<br>
+<a href='/online_job_plans/5b50ab818025427bf600007c#section/sign_off'>Requires your signature</a>
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/5a12f1b78025423e7200006c'>Job Plan Apr 2018 - Mar 2019 (complete)</a>
+</td>
+<td></td>
+<td>Sun, 01 Apr 2018</td>
+<td class='link-file'>
+<a class='Dr-John-T-Smith-17May18-at-0932-job_plan.pdf' href='/edocs/5afd4c428025420a19000001/download' target='_blank'>Job Plan Apr 2018 - Mar 2019</a>
+</td>
+<td>
+<div class='complete sa-state state-colour'></div>
+Complete
+<br>
+Signed by you
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/555c56c1f2a39f7ff900017f'>Job Plan Apr 2017 - Mar 2018 (complete)</a>
+</td>
+<td>Consultant</td>
+<td>Sat, 01 Apr 2017</td>
+<td>None</td>
+<td>
+<div class='complete sa-state state-colour'></div>
+Complete
+<br>
+Signed by you
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/594be337802542b4d300002b'>Job Plan Apr 2017 - Mar 2018</a>
+</td>
+<td>Consultant</td>
+<td>Sat, 01 Apr 2017</td>
+<td>None</td>
+<td>
+<div class='sa-state state-colour submitted'></div>
+Submitted
+<br>
+Signed by you
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/54e652bf80254210b2000030'>Job Plan Jan 2016 - Dec 2016 (complete)</a>
+</td>
+<td>top man</td>
+<td>Fri, 01 Jan 2016</td>
+<td class='link-file'>
+<a class='Dr-John-T-Smith-08Dec16-at-1042-job_plan.pdf' href='/edocs/584938f98025427293000001/download' target='_blank'>Job Plan Jan 2016</a>
+</td>
+<td>
+<div class='complete sa-state state-colour'></div>
+Complete
+<br>
+Signed by you
+</td>
+</tr>
+<tr>
+<td class='link-arrow'>
+<a href='/online_job_plans/51310bcfe3e1f12fab000001'>Job Plan Mar 2013 - Feb 2014 (complete)</a>
+</td>
+<td>Consultant Anaesthetist</td>
+<td>Fri, 01 Mar 2013</td>
+<td>None</td>
+<td>
+<div class='complete sa-state state-colour'></div>
+Complete
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='panel-body panel-buttons'>
+<div class='perf perf-white'></div>
+<div class='buttons-right'>
+<a class='btn btn-sm btn-client' href='/online_job_plans/5c1a5124bdd601c36500014c'>Go to My Job Plan</a>
+<a class='btn btn-sm btn-client' href='/users/2-3/offline_job_plans/new'>Upload previous Job Plan</a>
+</div>
+</div>
+</div>
+</div>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-user-job-plan-templates'>
+<h3>Your shared Job Plan Templates</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-user-job-plan-templates'>
+<div class='panel-body'>
+<div class='table-responsive'>
+<table class='table table-sard'>
+<thead>
+<tr>
+<th>Title</th>
+<th>Job Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class='link-arrow'>
+<td>
+<a href='/online_job_plans/5a54a0d28025427982000040'>Dr John T Smith's 2017 Job Plan Template</a>
+</td>
+<td></td>
+</tr>
+<tr class='link-arrow'>
+<td>
+<a href='/online_job_plans/59d78a1a80254279e2000013'>Dr John T Smith's 2017 Job Plan Template</a>
+</td>
+<td>Consultant</td>
+</tr>
+<tr class='link-arrow'>
+<td>
+<a href='/online_job_plans/59d350c2f2a39fb6bf000016'>Dr John T Smith's 2017 Job Plan Template</a>
+</td>
+<td>Consultant</td>
+</tr>
+<tr class='link-arrow'>
+<td>
+<a href='/online_job_plans/59d26707802542e164000011'>Dr John T Smith's 2017 Job Plan Template</a>
+</td>
+<td>Consultant</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-my-eLeave-requests'>
+<h3>My eLeave</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-my-eLeave-requests'>
+<div class='panel-body'>
+<div class='table-responsive'>
+<table class='table table-sard'>
+<thead>
+<tr>
+<th>Allowance Name</th>
+<th>From Date</th>
+<th>Start Time</th>
+<th>Until Date</th>
+<th>End Time</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr class='requested'>
+<td>Annual Leave</td>
+<td>Wed, 03 Apr 2019</td>
+<td>09:00</td>
+<td>Wed, 03 Apr 2019</td>
+<td>17:00</td>
+<td>Requested</td>
+</tr>
+<tr class='approved'>
+<td>Annual Leave</td>
+<td>Thu, 04 Apr 2019</td>
+<td>09:00</td>
+<td>Thu, 04 Apr 2019</td>
+<td>17:00</td>
+<td>Approved</td>
+</tr>
+<tr>
+<td>Annual Leave</td>
+<td>Fri, 05 Apr 2019</td>
+<td>09:00</td>
+<td>Fri, 05 Apr 2019</td>
+<td>17:00</td>
+<td>Rejected</td>
+</tr>
+<tr>
+<td>Annual Leave</td>
+<td>Sat, 06 Apr 2019</td>
+<td>09:00</td>
+<td>Sat, 06 Apr 2019</td>
+<td>17:00</td>
+<td>Cancelled</td>
+</tr>
+<tr>
+<td>Annual Leave</td>
+<td>Sun, 07 Apr 2019</td>
+<td>09:00</td>
+<td>Sun, 07 Apr 2019</td>
+<td>17:00</td>
+<td>Cancelled</td>
+</tr>
+<tr>
+<td>Annual Leave</td>
+<td>Sun, 07 Apr 2019</td>
+<td>09:00</td>
+<td>Sun, 07 Apr 2019</td>
+<td>17:00</td>
+<td>Requested To Cancel</td>
+</tr>
+<tr class='requested'>
+<td>Annual Leave (accrue)</td>
+<td>Mon, 08 Apr 2019</td>
+<td>09:00</td>
+<td>Mon, 08 Apr 2019</td>
+<td>17:00</td>
+<td>Requested</td>
+</tr>
+<tr>
+<td>Annual Leave (accrue)</td>
+<td>Tue, 09 Apr 2019</td>
+<td>09:00</td>
+<td>Tue, 09 Apr 2019</td>
+<td>17:00</td>
+<td>Requested To Cancel</td>
+</tr>
+<tr>
+<td>Annual Leave (accrue)</td>
+<td>Wed, 10 Apr 2019</td>
+<td>09:00</td>
+<td>Wed, 10 Apr 2019</td>
+<td>17:00</td>
+<td>Rejected</td>
+</tr>
+<tr>
+<td>Annual Leave</td>
+<td>Thu, 11 Apr 2019</td>
+<td>09:00</td>
+<td>Thu, 11 Apr 2019</td>
+<td>17:00</td>
+<td>Cancelled</td>
+</tr>
+<tr class='approved'>
+<td>Annual Leave (accrue)</td>
+<td>Fri, 12 Apr 2019</td>
+<td>09:00</td>
+<td>Fri, 12 Apr 2019</td>
+<td>17:00</td>
+<td>Approved</td>
+</tr>
+<tr>
+<td>Annual Leave (accrue)</td>
+<td>Sat, 13 Apr 2019</td>
+<td>09:00</td>
+<td>Sat, 13 Apr 2019</td>
+<td>17:00</td>
+<td>Cancelled</td>
+</tr>
+<tr class='approved'>
+<td>Study / Professional Leave</td>
+<td>Wed, 25 Dec 2019</td>
+<td>09:00</td>
+<td>Wed, 25 Dec 2019</td>
+<td>17:00</td>
+<td>Approved</td>
+</tr>
+<tr class='approved'>
+<td>Annual Leave (accrue)</td>
+<td>Wed, 25 Dec 2019</td>
+<td>09:00</td>
+<td>Wed, 25 Dec 2019</td>
+<td>17:00</td>
+<td>Approved</td>
+</tr>
+<tr class='requested'>
+<td>Study / Professional Leave</td>
+<td>Tue, 07 Apr 2020</td>
+<td>17:00</td>
+<td>Tue, 07 Apr 2020</td>
+<td>18:00</td>
+<td>Requested</td>
+</tr>
+<tr class='requested'>
+<td>Annual Leave</td>
+<td>Tue, 07 Apr 2020</td>
+<td>12:00</td>
+<td>Tue, 07 Apr 2020</td>
+<td>13:00</td>
+<td>Requested</td>
+</tr>
+<tr class='requested'>
+<td>Study / Professional Leave</td>
+<td>Tue, 14 Apr 2020</td>
+<td>17:30</td>
+<td>Tue, 14 Apr 2020</td>
+<td>18:30</td>
+<td>Requested</td>
+</tr>
+<tr class='requested'>
+<td>Study / Professional Leave</td>
+<td>Tue, 14 Apr 2020</td>
+<td>12:00</td>
+<td>Tue, 14 Apr 2020</td>
+<td>13:00</td>
+<td>Requested</td>
+</tr>
+<tr class='requested'>
+<td>Study / Professional Leave</td>
+<td>Fri, 09 Oct 2020</td>
+<td>09:00</td>
+<td>Fri, 09 Oct 2020</td>
+<td>17:00</td>
+<td>Requested</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='panel-body panel-buttons'>
+<div class='perf perf-white'></div>
+<div class='buttons-right'>
+<a class='btn btn-sm btn-client' href='/users/2-3/eleave_calendar'>Go to My eLeave</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- / Shown at small sizes -->
+<div class='col-xs-12 col-sm-6 hidden-lg hidden-md'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-support-docs-base' id='db-support'>
+<h3>Support Docs</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-support-docs-base'>
+<div class='panel-body'>
+<ul class='no-bullet list-group'>
+<li class='list-group-item group-title'>Trust Policy Documents</li>
+<li class='list-group-item link-arrow'>
+<a href='http://demo.lvh.me:8080/support_documents/52b46315e3e1f157470003f2'>Appraisal Policy</a>
+</li>
+<li class='list-group-item link-arrow'>
+<a href='http://demo.lvh.me:8080/support_documents/57e13f4f8025420c86000005'>DBS Declaration</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='col-xs-12 col-sm-6 hidden-lg hidden-md'>
+<div class='panel panel-default toggle-panel'>
+<div class='panel-heading toggle-plus'>
+<a class='collapsed' data-toggle='collapse' href='#dashboard-guides-base'>
+<h3>Guides</h3>
+</a>
+</div>
+<div class='panel-collapse collapse' id='dashboard-guides-base'>
+<div class='panel-body'>
+<div class='guides'>
+<a href='/user_guides/medical_revalidation'>
+<img alt='Medical revalidation' class='guide-image' src='/support/images/medical_revalidation.png'>
+</a>
+<a href='/user_guides/job_planning'>
+<img alt='Job planning' class='guide-image' src='/support/images/job_planning.png'>
+</a>
+<a href='/user_guides/eleave'>
+<img alt='Eleave' class='guide-image' src='/support/images/eleave.png'>
+</a>
+<a href='/user_guides/360'>
+<img alt='360' class='guide-image' src='/support/images/360.png'>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- This collapses or opens panels depending on window size -->
+<!-- Use this if you wish certain panels to be open at large size, but closed at small sizes or visa-versa -->
+<!-- DO NOT REMOVE -->
+<!-- :javascript -->
+<!-- $(window).on('resize',function(details) { -->
+<!-- var width = $(window).width(); -->
+<!-- if(width > 992) { -->
+<!-- $('#db-dates,#db-dates').addClass('collapsed'); -->
+<!-- $('#dashboard-dates,#dashboard-dates-docs').removeClass('in'); -->
+<!-- $('#db-details,#db-details').addClass('collapsed'); -->
+<!-- $('#dashboard-details,#dashboard-details-docs').removeClass('in'); -->
+<!-- }else{ -->
+<!-- $('#db-dates,#db-dates').removeClass('collapsed'); -->
+<!-- $('#dashboard-dates,#dashboard-dates-docs').addClass('in'); -->
+<!-- $('#db-details,#db-details').removeClass('collapsed'); -->
+<!-- $('#dashboard-details,#dashboard-details-docs').addClass('in'); -->
+<!-- } -->
+<!-- }).trigger('resize'); -->
+</div>
+<div class='col-sm-12'>
+<div class='patient-questionnaire' id='questionnaire'>
+<form accept-charset='UTF-8' action='/admin/online_msfs/583c4063f2a39f345e00001a/gmc_patient_questionnaires' class='form-horizontal' id='new_gmc_patient_questionnaire' method='post'>
+<div style='margin:0;padding:0;display:inline'>
+<input name='utf8' type='hidden' value='✓'>
+<input name='authenticity_token' type='hidden' value='1b1qqZAtWJxpmpy5EYcwmrfnckp9LxBVd5FJ0Jv1TUM='>
+</div>
+<input id='new_at' name='new_at' type='hidden' value='2019-06-13 10:37:27 +0100'>
+<div class='row'>
+<div class='col-xs-12'>
+<h3>Patient Questionnaire</h3>
+<p>Licensed doctors are expected to seek feedback from colleagues and patients and review and act upon that feedback where appropriate.</p>
+<p>The purpose of this exercise is to provide doctors with information about their work through the eyes of those they work with and treat, and is intended to help inform their further development.</p>
+<p class='bold'>Please do not write your name on this questionnaire.</p>
+<p class='bold'>Please base your answers only on the consultation you have had today.</p>
+<p>Please mark the box like this [✓] with a ball point pen. If you change your mind just cross out your old response and make your new choice.</p>
+<ul>
+<li class='no-bullet bold'>KEYBOARD SHORTCUTS FOR FILLING IN THIS FORM:</li>
+<li>Press Alt or the Option key to switch on the keyboard shortcuts which should appear in red.</li>
+<li>Press Tab to scroll through each question. Hold Shift and Tab to go back a question.</li>
+<li>Type a number to toggle the checkboxes or radio buttons on and off.</li>
+<li>Use the arrow keys to scroll through select boxes, and hit enter to choose an option.</li>
+<li>You can click the mouse at any time.</li>
+<li>Give it a try! We hope it speeds up your day!</li>
+</ul>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-12'>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<h3>About the Patient...</h3>
+</div>
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr>
+<td>
+<label class='control-label'>
+<label for='gmc_patient_questionnaire_patient_completed_date'>Please write today's date here:</label>
+</label>
+</td>
+<td class='textfield date'>
+<input class='datepicker form-control hasDatepicker' id='datepicker' name='gmc_patient_questionnaire[patient_completed_date]' type='text'>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q1 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>1</div>
+</th>
+<th class='qq' colspan='9'>
+<label for='gmc_patient_questionnaire_are_you_filling_this_question_in_for'>Are you filling in this questionnaire for:</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn hidden-xs'> </th>
+<th class='rating'>Yourself</th>
+<th class='rating'>Your child</th>
+<th class='rating'>Your spouse or partner</th>
+<th class='rating'>Another relative or friend</th>
+<th class='dk rating'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn hidden-xs'></td>
+<td class='rating-label mobile-only'>Yourself</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q1' id='q1a1' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' type='radio' value='yourself'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Your child</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q1' id='q1a2' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='your child'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Your spouse or partner</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q1' id='q1a3' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='your spouse or partner'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Another relative or friend</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q1' id='q1a4' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='another relative or friend'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='dk rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q1' id='q1a5' name='gmc_patient_questionnaire[are_you_filling_this_question_in_for]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='q-comment border-top'>
+If you are filling this in for someone else, please answer the following questions from the
+<span class='bold'>
+patient’s
+</span>
+point of view.
+</div>
+<div class='panel-body'>
+<!-- Q2 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>2</div>
+</th>
+<th class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_the_reason_you_saw_the_doctor_today'>Which of the following best describes the reason you saw the doctor today? (Please tick all the boxes that apply):</label>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn hidden-xs'></td>
+<td class='rating-label mobile-only'>To ask for advice</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>1</span>
+<label class='q-checkbox' for='q2a1'>
+<span class='hidden-xs'>To ask for advice</span>
+<input class='q2' id='q2a1' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' type='checkbox' value='to ask for advice'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>Because of an ongoing problem</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>2</span>
+<label class='q-checkbox' for='q2a2'>
+<span class='hidden-xs'>Because of an ongoing problem</span>
+<input class='q2' id='q2a2' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='because of an ongoing problem'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>For treatment (including prescriptions)</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>3</span>
+<label class='q-checkbox' for='q2a3'>
+<span class='hidden-xs'>For treatment (including prescriptions)</span>
+<input class='q2' id='q2a3' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='for treatment'>
+<div class='checkmark'></div>
+</label>
+</td>
+</tr>
+<tr>
+<td class='qn hidden-xs'></td>
+<td class='rating-label mobile-only'>Because of a one-off problem</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>4</span>
+<label class='q-checkbox' for='q2a4'>
+<span class='hidden-xs'>Because of a one-off problem</span>
+<input class='q2' id='q2a4' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='because of a one-off problem'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>For a routine check</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>5</span>
+<label class='q-checkbox' for='q2a5'>
+<span class='hidden-xs'>For a routine check</span>
+<input class='q2' id='q2a5' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='for a routine check'>
+<div class='checkmark'></div>
+</label>
+</td>
+<td class='rating-label mobile-only'>Other (please give details)</td>
+<td class='q-checkboxes'>
+<span class='accesskey' style='display: none;'>6</span>
+<label class='q-checkbox' for='q2a6'>
+<span class='hidden-xs'>Other (please give details)</span>
+<input class='q2' id='q2a6' name='gmc_patient_questionnaire[the_reason_you_saw_the_doctor_today][]' tabindex='-1' type='checkbox' value='other'>
+<div class='checkmark'></div>
+</label>
+</td>
+</tr>
+<tr class='textfield'>
+<td class='qn hidden-xs'></td>
+<td class='textfield' colspan='3'>
+<span class='accesskey' style='display: none;'>7</span>
+<textarea class='q2 form-control' cols='40' id='q2a7' name='gmc_patient_questionnaire[other_reason]' placeholder='please give details' rows='20' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 200px;' tabindex='-1'></textarea>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q3 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>3</div>
+</th>
+<th class='qq' colspan='6'>
+<label for='gmc_patient_questionnaire_how_important_was_your_reason_for_visiting'>On a scale of 1 to 5, how important to your health and wellbeing was your reason for visiting the doctor today?</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn'> </th>
+<th class='rating'>Not Very Important (1)</th>
+<th class='rating'>Not Important</th>
+<th class='rating'>Average</th>
+<th class='rating'>Important</th>
+<th class='rating'>Very Important (5)</th>
+<th class='dk rating'>spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn hidden-xs'> </td>
+<td class='rating-label mobile-only'>Not very important (1)</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q3' id='q3a1' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' type='radio' value='not very important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Not important</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q3' id='q3a2' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='not important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Average</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q3' id='q3a3' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='average'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Important</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q3' id='q3a4' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very Important (5)</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q3' id='q3a5' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='very important'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q3' id='q3a6' name='gmc_patient_questionnaire[how_important_was_your_reason_for_visiting]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<h3>About the doctor...</h3>
+</div>
+<div class='panel-body'>
+<!-- Q4 -->
+<table class='table table-pq-questionnaire'>
+<thead class='first'>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>4</div>
+</th>
+<th class='qq' colspan='9'>
+<label>How good was your doctor today at each of the following? (Please tick one box in each line)</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn'> </th>
+<th> </th>
+<th class='rating'>Poor</th>
+<th class='rating'>Less than satisfactory</th>
+<th class='rating'>Satisfactory</th>
+<th class='rating'>Good</th>
+<th class='rating'>Very good</th>
+<th class='rating'>Does not apply</th>
+<th class='dk rating'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>a</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_being_polite'>Being polite</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4a' id='q4aa1' name='gmc_patient_questionnaire[being_polite]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4a' id='q4aa2' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4a' id='q4aa3' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4a' id='q4aa4' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4a' id='q4aa5' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4a' id='q4aa6' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4a' id='q4aa7' name='gmc_patient_questionnaire[being_polite]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>b</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_making_you_feel_at_ease'>Making you feel at ease</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4b' id='q4ba1' name='gmc_patient_questionnaire[making_you_feel_at_ease]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4b' id='q4ba2' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4b' id='q4ba3' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4b' id='q4ba4' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4b' id='q4ba5' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4b' id='q4ba6' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4b' id='q4ba7' name='gmc_patient_questionnaire[making_you_feel_at_ease]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>c</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_listening_to_you'>Listening to you</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4c' id='q4ca1' name='gmc_patient_questionnaire[listening_to_you]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4c' id='q4ca2' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4c' id='q4ca3' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4c' id='q4ca4' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4c' id='q4ca5' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4c' id='q4ca6' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4c' id='q4ca7' name='gmc_patient_questionnaire[listening_to_you]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>d</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_assessing_your_medical_condition'>Assessing your medical condition</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4d' id='q4da1' name='gmc_patient_questionnaire[assessing_your_medical_condition]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4d' id='q4da2' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4d' id='q4da3' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4d' id='q4da4' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4d' id='q4da5' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4d' id='q4da6' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4d' id='q4da7' name='gmc_patient_questionnaire[assessing_your_medical_condition]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>e</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_explaining_your_condition_and_treatment'>Explaining your condition and treatment</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4e' id='q4ea1' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4e' id='q4ea2' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4e' id='q4ea3' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4e' id='q4ea4' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4e' id='q4ea5' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4e' id='q4ea6' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4e' id='q4ea7' name='gmc_patient_questionnaire[explaining_your_condition_and_treatment]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>f</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_involving_you_in_decisions_about_your_treatment'>Involving you in decisions about your treatment</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4f' id='q4fa1' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4f' id='q4fa2' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4f' id='q4fa3' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4f' id='q4fa4' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4f' id='q4fa5' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4f' id='q4fa6' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4f' id='q4fa7' name='gmc_patient_questionnaire[involving_you_in_decisions_about_your_treatment]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>g</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_providing_or_arranging_treatment_for_you'>Providing or arranging treatment for you</label>
+</td>
+<td class='rating-label mobile-only'>Poor</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q4g' id='q4ga1' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' type='radio' value='poor'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Less than satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q4g' id='q4ga2' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='less than satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Satisfactory</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q4g' id='q4ga3' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='satisfactory'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q4g' id='q4ga4' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Very good</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q4g' id='q4ga5' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='very good'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q4g' id='q4ga6' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q4g' id='q4ga7' name='gmc_patient_questionnaire[providing_or_arranging_treatment_for_you]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q5 -->
+<table class='table table-pq-questionnaire'>
+<thead>
+<tr class='q-question'>
+<th class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>5</div>
+</th>
+<th class='qq' colspan='9'>
+<label>Please decide how strongly you agree or disagree with the following statements by ticking one box in each line.</label>
+</th>
+</tr>
+</thead>
+<thead class='hidden-xs'>
+<tr>
+<th class='qn'> </th>
+<th> </th>
+<th class='rating'>Strongly disagree</th>
+<th class='rating'>Disagree</th>
+<th class='rating'>Neutral</th>
+<th class='rating'>Agree</th>
+<th class='rating'>Strongly agree</th>
+<th class='rating'>Does not apply</th>
+<th class='dk rating'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>a</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_this_doctor_will_keep_information_about_me_confidential'>This doctor will keep information about me confidential</label>
+</td>
+<td class='rating-label mobile-only'>Strongly disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q5a' id='q5aa1' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' type='radio' value='strongly disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q5a' id='q5aa2' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Neutral</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q5a' id='q5aa3' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='neutral'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q5a' id='q5aa4' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Strongly agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q5a' id='q5aa5' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='strongly agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q5a' id='q5aa6' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q5a' id='q5aa7' name='gmc_patient_questionnaire[this_doctor_will_keep_information_about_me_confidential]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<tr class='q-answers q-sub-questions'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='sub-number'>b</div>
+</td>
+<td class='sub-question'>
+<label for='gmc_patient_questionnaire_this_doctor_is_honest_and_trustworthy'>This doctor is honest and trustworthy</label>
+</td>
+<td class='rating-label mobile-only'>Strongly disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q5b' id='q5ba1' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' type='radio' value='strongly disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Disagree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q5b' id='q5ba2' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='disagree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Neutral</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q5b' id='q5ba3' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='neutral'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q5b' id='q5ba4' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Strongly agree</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q5b' id='q5ba5' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='strongly agree'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Does not apply</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>6</span>
+<input class='q5b' id='q5ba6' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='does not apply'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>7</span>
+<input class='q5b' id='q5ba7' name='gmc_patient_questionnaire[this_doctor_is_honest_and_trustworthy]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<!-- Q6 -->
+<table class='table table-pq-questionnaire'>
+<thead></thead>
+<thead class='hidden-xs'>
+<tr class='q-question'>
+<th class='qn'></th>
+<th colspan='3'></th>
+<th>Yes</th>
+<th>No</th>
+<th class='dk'>Spoiled</th>
+</tr>
+</thead>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>6</div>
+</td>
+<td class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_i_am_confident_about_this_doctors_ability_to_provide_care'>I am confident about this doctor’s ability to provide care</label>
+</td>
+<td class='rating-label mobile-only'>Yes</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q6' id='q6a1' name='gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]' type='radio' value='yes'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>No</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q6' id='q6a2' name='gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]' tabindex='-1' type='radio' value='no'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q6' id='q6a3' name='gmc_patient_questionnaire[i_am_confident_about_this_doctors_ability_to_provide_care]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<!-- Q7 -->
+<tr class='q-answers border-top-xs'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>7</div>
+</td>
+<td class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_i_would_be_completely_happy_to_see_this_doctor_again'>I would be completely happy to see this doctor again</label>
+</td>
+<td class='rating-label mobile-only'>Yes</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q7' id='q7a1' name='gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]' type='radio' value='yes'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>No</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q7' id='q7a2' name='gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]' tabindex='-1' type='radio' value='no'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q7' id='q7a3' name='gmc_patient_questionnaire[i_would_be_completely_happy_to_see_this_doctor_again]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+<!-- Q8 -->
+<tr class='q-answers border-top-xs'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>8</div>
+</td>
+<td class='qq' colspan='3'>
+<label for='gmc_patient_questionnaire_was_this_visit_with_your_usual_doctor'>Was this visit with your usual doctor?</label>
+</td>
+<td class='rating-label mobile-only'>Yes</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q8' id='q8a1' name='gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]' type='radio' value='yes'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>No</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q8' id='q8a2' name='gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]' tabindex='-1' type='radio' value='no'>
+<div class='radio-button'></div>
+ 
+</td>
+<td class='rating-label mobile-only'>Spoiled</td>
+<td class='dk spoiled sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q8' id='q8a3' name='gmc_patient_questionnaire[was_this_visit_with_your_usual_doctor]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button'></div>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Q9 -->
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>9</div>
+</td>
+<td class='qq' colspan='6'>
+<label class='left-align' for='gmc_patient_questionnaire_comments' id='q9a1'>Please add any other comments you want to make about this doctor. Please note: No patients will be identified when this information is given to the doctor.</label>
+</td>
+</tr>
+<tr class='textfield'>
+<td class='qn hidden-xs'></td>
+<td class='textfield' colspan='6'>
+<textarea cols='40' id='gmc_patient_questionnaire_comments' name='gmc_patient_questionnaire[comments]' placeholder='Add comments' rows='20' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 344px;'></textarea>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Q10 -->
+<div class='panel panel-default'>
+<div class='panel-heading'>
+About you...
+</div>
+<div class='q-comment'>
+<strong>The next questions will give us some basic information about who took part in the survey.</strong>
+</div>
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>10</div>
+</td>
+<td class='qq'>
+<label for='gmc_patient_questionnaire_male_or_female'>Gender:</label>
+</td>
+<td class='rating-label mobile-only'>Female</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q10' id='q10a1' name='gmc_patient_questionnaire[male_or_female]' type='radio' value='female'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>Female</span>
+</td>
+<td class='rating-label mobile-only'>Male</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q10' id='q10a2' name='gmc_patient_questionnaire[male_or_female]' tabindex='-1' type='radio' value='male'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>Male</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Q11 -->
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr class='q-answers'>
+<td class='qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>11</div>
+</td>
+<td class='qq'>
+<label for='gmc_patient_questionnaire_age'>Age:</label>
+</td>
+<td class='rating-label mobile-only'>Under 15</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>1</span>
+<input class='q11' id='q11a1' name='gmc_patient_questionnaire[age]' type='radio' value='under 15'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>Under 15</span>
+</td>
+<td class='rating-label mobile-only'>15 to 20</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>2</span>
+<input class='q11' id='q11a2' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='15 to 20'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>15 to 20</span>
+</td>
+<td class='rating-label mobile-only'>21 to 40</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>3</span>
+<input class='q11' id='q11a3' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='21 to 40'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>21 to 40</span>
+</td>
+<td class='rating-label mobile-only'>40 to 60</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>4</span>
+<input class='q11' id='q11a4' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='40 to 60'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>40 to 60</span>
+</td>
+<td class='rating-label mobile-only'>60 or over</td>
+<td class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>5</span>
+<input class='q11' id='q11a5' name='gmc_patient_questionnaire[age]' tabindex='-1' type='radio' value='60 or over'>
+<div class='radio-button'></div>
+<span class='hidden-xs'>60 or over</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Q12 -->
+<div class='panel-body'>
+<div class='q-column-table'>
+<div class='question-head'>
+<div class='cell qn'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<div class='number'>12</div>
+</div>
+<div class='cell qq question'>
+<label for='gmc_patient_questionnaire_ethnic_group'>What is your ethnic group? Please choose one section from A to E, and then select the appropriate box to indicate your cultural background.</label>
+</div>
+</div>
+<div class='body'>
+<div class='column qn hidden-xs'>
+<div class='cell ethnic-q'> </div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>A. White</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>British</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>01</span>
+<input class='q12a' id='q12aa1' name='gmc_patient_questionnaire[ethnic_group]' type='radio' value='british'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>British</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Irish</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>02</span>
+<input class='q12a' id='q12aa2' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='irish'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Irish</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other White background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>03</span>
+<input class='q12a' id='q12aa3' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other white background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other White background</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>04</span>
+<input class='q12a form-control' id='q12aa4' name='gmc_patient_questionnaire[ethnic_group_a_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>B. Mixed</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>White and Black Caribbean</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>05</span>
+<input class='q12a' id='q12aa5' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='white and black caribbean'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>White and Black Caribbean</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>White and Black African</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>06</span>
+<input class='q12a' id='q12aa6' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='white and black african'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>White and Black African</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>White and Asian</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>07</span>
+<input class='q12a' id='q12aa7' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='white and asian'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>White and Asian</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other Mixed background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>08</span>
+<input class='q12a' id='q12aa8' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other mixed background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other Mixed background</span>
+</div>
+</div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>09</span>
+<input class='q12b form-control' id='q12aa9' name='gmc_patient_questionnaire[ethnic_group_b_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>C. Asian or Asian British</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Indian</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-1</span>
+<input class='q12c' id='q12ca1' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='indian'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Indian</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Pakistani</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-2</span>
+<input class='q12c' id='q12ca2' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='pakistani'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Pakistani</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Bangladeshi</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-3</span>
+<input class='q12c' id='q12ca3' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='bangladeshi'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Bangladeshi</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other Asian background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-4</span>
+<input class='q12c' id='q12ca4' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other asian background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other Asian background</span>
+</div>
+</div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>-5</span>
+<input class='q12c form-control' id='q12ca5' name='gmc_patient_questionnaire[ethnic_group_c_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>D. Black or Black British</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Caribbean</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-6</span>
+<input class='q12c' id='q12ca6' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='caribbean'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Caribbean</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>African</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-7</span>
+<input class='q12c' id='q12ca7' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='african'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>African</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other Black background</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>-8</span>
+<input class='q12c' id='q12ca8' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other black background'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other Black background</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>-9</span>
+<input class='q12d form-control' id='q12ca9' name='gmc_patient_questionnaire[ethnic_group_d_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>
+<label>E. Chinese or other ethnic group</label>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Chinese</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>+1</span>
+<input class='q12e' id='q12ea1' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='chinese'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Chinese</span>
+</div>
+</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Any other</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>+2</span>
+<input class='q12e' id='q12ea2' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='any other'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Any other</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+<div class='cell textfield'>
+<span class='accesskey' style='display: none;'>+3</span>
+<input class='q12e form-control' id='q12ea3' name='gmc_patient_questionnaire[ethnic_group_e_other]' placeholder='Other' size='30' tabindex='-1' type='text'>
+</div>
+</div>
+<div class='column'>
+<div class='cell ethnic-q'>Spoiled</div>
+<div class='cell'>
+<div class='rating-label mobile-only'>Spoiled</div>
+<div class='sa-radio-buttons'>
+<span class='accesskey' style='display: none;'>+4</span>
+<input class='q12e' id='q12ea4' name='gmc_patient_questionnaire[ethnic_group]' tabindex='-1' type='radio' value='spoiled'>
+<div class='radio-button radio-inline'></div>
+<span class='ethnic-type'>Spoiled</span>
+</div>
+</div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+<div class='cell hidden-xs'> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Administrators Only -->
+<div class='panel panel-default'>
+<div class='panel-heading'>
+ADMINISTRATORS ONLY
+</div>
+<div class='panel-body'>
+<table class='table table-pq-questionnaire'>
+<tbody>
+<tr>
+<td class='block'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<label class='left-align' for='gmc_patient_questionnaire_admin_comments'>Comments e.g. reason if marked as spoiled</label>
+</td>
+</tr>
+<tr>
+<td class='textfield'>
+<textarea cols='40' id='gmc_patient_questionnaire_admin_comments' name='gmc_patient_questionnaire[admin_comments]' placeholder='Add comments' rows='20' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 344px;'></textarea>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='save right'>
+<span class='accesskey' style='display: none;'>⇥</span>
+<input class='btn btn-success' data-disable-with='Submitting...' name='commit' type='submit' value='Submit response'>
+<span class='accesskey' style='display: none;'>(on the next page, press enter to create a new questionnaire)</span>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts ================================ -->
+<script src='../assets/js/remote-sard-scripts.min.js'></script>
+</body>
+</html>
