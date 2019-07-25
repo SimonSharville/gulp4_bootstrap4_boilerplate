@@ -1,6 +1,9 @@
 // Checkboxes ===================================
 
-
+$checkbox-background:           white;
+$checkbox-background-checked:   $client;
+$checkbox-background-border:    $sa-grey-06;
+$checkbox-background-disabled:  transparent;
 
 // SARD Checkboxes ===========================
 // https://www.templatemonster.com/blog/style-checkboxes-radio-buttons-css/
@@ -62,21 +65,21 @@
   text-align: center;
   font-size: 100%;
   line-height: 1.15em;
-  border: 2px solid $sa-grey-06;
-  background-color: $white;
+  border: 2px solid $checkbox-background-border;
+  background-color: $checkbox-background;
 }
 .sa-checkbox input[type="checkbox"][disabled] + label{
   cursor: not-allowed;
 }
 .sa-checkbox input[type="checkbox"][disabled] + label span.checkbox::before{
-  background-color: $sa-grey-02;
+  background-color: $checkbox-background-disabled;
   cursor: not-allowed;
 }
 
 .sa-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
-  color: white;
-  background-color: $client;
-  border-color: $client;
+  color: $checkbox-background;
+  background-color: $checkbox-background-checked;
+  border-color: $checkbox-background-checked;
 }
 
 .sa-checkbox.right label{
@@ -122,8 +125,8 @@
   font-size: 100%;
   font-weight: 900;
   line-height: 1.15em;
-  border: 2px solid $sa-grey-06;
-  background-color: $white;
+  border: 2px solid $checkbox-background-border;
+  background-color: $checkbox-background;
   margin-left: 8px;
 }
 .sa-checkbox-after span.checkbox.right::after{
@@ -134,92 +137,27 @@
   cursor: not-allowed;
 }
 .sa-checkbox-after input[type="checkbox"][disabled] + label span.checkbox::after{
-  background-color: $sa-grey-02;
+  background-color: $checkbox-background-disabled;
   cursor: not-allowed;
 }
 
 .sa-checkbox-after input[type="checkbox"]:checked + label span.checkbox::after {
-  color: white;
-  background-color: $client;
-  border-color: $client;
+  color: $checkbox-background;
+  background-color: $checkbox-background-checked;
+  border-color: $checkbox-background-checked;
 }
 
 // Hover effect
 .sa-checkbox:hover span.checkbox::before,
 .sa-checkbox-after:hover span.checkbox::after{
-  border-color: $client;
+  border-color: $checkbox-background-checked;
 }
 
 .sa-checkbox:hover input[type="checkbox"][disabled] + label span.checkbox::before,
 .sa-checkbox-after:hover input[type="checkbox"][disabled] + label span.checkbox::after{
-  border-color: $sa-grey-06;
+  border-color: $checkbox-background-border;
 }
 
-// Inferred Checkbox ============
-// Used in Admin / Directorates / Edit Form
-
-.sa-inferred-checkbox{
-  padding-top: 4px;
-  padding-bottom: 3px;
-  float:left;
-  margin-right: 10px;
-  border-right: 1px solid white;
-}
-
-.sa-inferred-checkbox input[type="checkbox"],
-.sa-inferred-checkbox-after input[type="checkbox"]{
-  display: none;
-}
-
-.sa-inferred-checkbox label {
-  position: relative;
-  padding-right: 30px;
-  @include roboto-bold;
-  line-height: 1.2em;
-}
-
-.sa-inferred-checkbox span.checkbox{
-  padding-left: 0px;
-}
-
-.sa-inferred-checkbox span.checkbox::before,
-.sa-inferred-checkbox span.checkbox::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  bottom: 0;
-  margin: auto;
-  margin-top:0px;
-}
-
-.sa-inferred-checkbox span.checkbox::before {
-  left: 0px;
-  width: 20px;
-  height: 20px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  content: '\f00c';
-  font-family: 'FontAwesome';
-  color: transparent;
-  text-align: center;
-  font-size: 100%;
-  line-height: 1.15em;
-  border: 2px solid $sa-grey-06;
-  background-color: $white;
-}
-
-.sa-inferred-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
-  color: $admin-2;
-}
-
-.sa-inferred-checkbox input[type="checkbox"][disabled] + label span.checkbox::before{
-  background-color: $sa-grey-02;
-  cursor: not-allowed;
-}
-
-.sa-inferred-checkbox input[type="checkbox"][disabled]:checked + label span.checkbox::before{
-  color: $sa-grey-08;
-}
 
 
 // Adjustments
@@ -266,8 +204,8 @@
   content:'';
   width:20px;
   height:20px;
-  border:2px solid $sa-grey-06;
-  background-color: white;
+  border:2px solid $checkbox-background-border;
+  background-color: $checkbox-background;
   position:absolute;
   left:0;
   margin-top:1px;
@@ -287,15 +225,15 @@
 
 
 .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
-  background-color: $client;
-  border-color: $client;
+  background-color: $checkbox-background-checked;
+  border-color: $checkbox-background-checked;
 }
 .sa-radio-buttons input[type="radio"]:checked + .radio-button:before{
   content:'';
   width:10px;
   height:10px;
   position:absolute;
-  background:white;
+  background:$checkbox-background;
   left:5px;
   top:4px;
   border-radius:100%;
@@ -313,16 +251,16 @@
 }
 
 .sa-radio-buttons input[type="radio"]:disabled + .radio-button:after{
-  background-color: $sa-grey-02;
+  background-color: $checkbox-background-disabled;
   cursor: not-allowed;
 }
 .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:after{
-  border-color: mix($sa-grey-02, $client, 50%);
-  background-color: mix($sa-grey-02, $client, 50%);
+  border-color: mix($checkbox-background-disabled, $checkbox-background-checked, 50%);
+  background-color: mix($checkbox-background-disabled, $checkbox-background-checked, 50%);
   cursor: not-allowed;
 }
 .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:before{
-  background-color: $sa-grey-02;
+  background-color: $checkbox-background-disabled;
   cursor: not-allowed;
 }
 
@@ -348,8 +286,8 @@
   content:'';
   width:20px;
   height:20px;
-  border:2px solid $sa-grey-06;
-  background-color: white;
+  border:2px solid $checkbox-background-border;
+  background-color: $checkbox-background;
   position:absolute;
   right:0;
   margin-top:1px;
@@ -370,15 +308,15 @@
 
 .sa-radio-buttons-after input[type="radio"]:checked + .radio-button:after {
   color:#0B8;
-  background-color: $client;
-  border-color: $client;
+  background-color: $checkbox-background-checked;
+  border-color: $checkbox-background-checked;
 }
 .sa-radio-buttons-after input[type="radio"]:checked + .radio-button:before{
   content:'';
   width:10px;
   height:10px;
   position:absolute;
-  background:white;
+  background:$checkbox-background;
   right:5px;
   top:4px;
   border-radius:100%;
@@ -387,7 +325,6 @@
 
 .form-check-inline.sa-radio-buttons-after input[type="radio"]:checked + .radio-button:before{
   top:6px;
-  
 }
 
 .sa-radio-buttons-after input[type="radio"]:disabled{
@@ -397,28 +334,28 @@
   cursor: not-allowed;
 }
 .sa-radio-buttons-after input[type="radio"]:disabled + .radio-button:after{
-  background-color: $sa-grey-02;
+  background-color: $checkbox-background-disabled;
   cursor: not-allowed;
 }
 .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:after{
-  border-color: mix($sa-grey-02, $client, 50%);
-  background-color: mix($sa-grey-02, $client, 50%);
+  border-color: mix($checkbox-background-disabled, $checkbox-background-checked, 50%);
+  background-color: mix($checkbox-background-disabled, $checkbox-background-checked, 50%);
   cursor: not-allowed;
 }
 .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:before{
-  background-color: $sa-grey-02;
+  background-color: $checkbox-background-disabled;
   cursor: not-allowed;
 }
 
 // Hover effect
 .sa-radio-buttons:hover .radio-button:after,
 .sa-radio-buttons-after:hover .radio-button:after{
-  border-color: $client;
+  border-color: $checkbox-background-checked;
 }
 
 .sa-radio-buttons:hover input[type="radio"]:disabled + .radio-button:after,
 .sa-radio-buttons-after:hover input[type="radio"]:disabled + .radio-button:after{
-  border-color: $sa-grey-06;
+  border-color: $checkbox-background-border;
 }
 
 
@@ -439,9 +376,6 @@ sa-radio-buttons-after .position-static{
   position: absolute!important;
 }
 
-// .sa-radio-buttons-after .position-static{
-//   margin-left: -35px!important;
-// }
 .form-group-row .sa-radio-buttons{
   margin-top: 7px;
   margin-bottom: 7px;
@@ -468,74 +402,123 @@ sa-radio-buttons-after .position-static{
 // https://codepen.io/morganfeeney/pen/KiBty
 // http://codersblock.com/blog/checkbox-trickery-with-css/
 // https://www.w3schools.com/howto/howto_css_switch.asp
-.sa-toggle-switch {
-  position: relative;
-  display: block;
-  padding-bottom: 10px;
+.sa-toggle-switch-right input[type="checkbox"],
+.sa-toggle-switch input[type="checkbox"]{
+  display: none;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
 }
 
-/* Hide default HTML checkbox */
-.sa-toggle-switch input {display:none;}
+.sa-toggle-switch label {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 8px;
+}
 
-/* The slider */
-.sa-toggle-switch .slider {
+.sa-toggle-switch span::before,
+.sa-toggle-switch span::after {
+  content: '';
   position: absolute;
-  cursor: pointer;
   top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sa-toggle-switch span.slider{
+  padding-top: 4px;
+}
+.sa-toggle-switch span.slider:hover {
+  cursor: pointer;
+}
+.sa-toggle-switch span.slider::before {
+  left: 0px;
   width: 45px;
   height: 25px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 25px;
+  background-color: $checkbox-background;
+  border-radius: 50px;
+  border: 2px solid $checkbox-background-border;
+}
+.sa-toggle-switch:hover span.slider::before{
+  border-color: $checkbox-background-checked;
+}
+.sa-toggle-switch input[type="radio"]:checked + label span.slider::before{
+  border-color: $checkbox-background-checked;
 }
 
-.sa-toggle-switch .slider:before {
-  position: absolute;
-  content: "";
+.sa-toggle-switch span.slider::after {
+  left: 4px;
+  top:1px;
   width: 17px;
   height: 17px;
-  left: 4px;
-  bottom: 4px;
-  background-color: $client;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
+  border-radius: 10px;
+  background-color: $checkbox-background-border;
+  transition: .25s, background-color .25s;
 }
-
-.sa-toggle-switch input:checked + .slider {
-  background-color: $client;
-}
-
-.sa-toggle-switch input:focus + .slider {
-  box-shadow: 0 0 1px $client;
-}
-
-.sa-toggle-switch input:checked + .slider:before {
-  background-color: white;
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
-}
-
-.sa-toggle-switch label{
-  padding-top: 2px!important;
-  padding-left: 50px;
-}
-.sa-toggle-switch input:checked + label{
+.sa-toggle-switch input[type="checkbox"]:checked + label{
   @include roboto-bold;
+}
+.sa-toggle-switch input[type="checkbox"]:checked + label span.slider::after {
+  left: 24px;
+  background-color: $checkbox-background-checked;
 }
 
 // right variation
-
-.sa-toggle-switch.right .slider{
-  right: 0;
+.sa-toggle-switch-right{
+  text-align: right;
 }
-.sa-toggle-switch.right label{
-  padding-top: 2px;
-  padding-left: 0px;
+.sa-toggle-switch-right label {
+  position: relative;
   padding-right: 50px;
+  margin-bottom: 8px;
 }
+.sa-toggle-switch-right span::before,
+.sa-toggle-switch-right span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sa-toggle-switch-right span.slider{
+  padding-top: 4px;
+}
+.sa-toggle-switch-right span.slider:hover {
+  cursor: pointer;
+}
+
+.sa-toggle-switch-right span.slider::before {
+  right: 0px;
+  width: 45px;
+  height: 25px;
+  background-color: $checkbox-background;
+  border-radius: 50px;
+  border: 2px solid $checkbox-background-border;
+}
+.sa-toggle-switch-right:hover span.slider::before{
+  border-color: $checkbox-background-checked;
+}
+.sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before{
+  border-color: $checkbox-background-checked;
+}
+
+.sa-toggle-switch-right span.slider::after {
+  right: 24px;
+  top:1px;
+  width: 17px;
+  height: 17px;
+  border-radius: 10px;
+  background-color: $checkbox-background-border;
+  transition: .25s, background-color .25s;
+}
+.sa-toggle-switch-right input[type="checkbox"]:checked + label{
+  @include roboto-bold;
+}
+.sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::after {
+  right: 4px;
+  background-color: $checkbox-background-checked;
+}
+
 
 
 // SARD Radio Toggles =========================
@@ -573,15 +556,15 @@ sa-radio-buttons-after .position-static{
   left: 0px;
   width: 45px;
   height: 25px;
-  background-color: white;
+  background-color: $checkbox-background;
   border-radius: 50px;
-  border: 2px solid $sa-grey-06;
+  border: 2px solid $checkbox-background-border;
 }
 .sa-radio-toggle:hover span.radio::before{
-  border-color: $client;
+  border-color: $checkbox-background-checked;
 }
 .sa-radio-toggle input[type="radio"]:checked + label span.radio::before{
-  border-color: $client;
+  border-color: $checkbox-background-checked;
 }
 
 .sa-radio-toggle span.radio::after {
@@ -590,7 +573,7 @@ sa-radio-buttons-after .position-static{
   width: 17px;
   height: 17px;
   border-radius: 10px;
-  background-color: $sa-grey-06;
+  background-color: $checkbox-background-border;
   transition: .25s, background-color .25s;
 }
 .sa-radio-toggle input[type="radio"]:checked + label{
@@ -598,7 +581,7 @@ sa-radio-buttons-after .position-static{
 }
 .sa-radio-toggle input[type="radio"]:checked + label span.radio::after {
   left: 24px;
-  background-color: $client;
+  background-color: $checkbox-background-checked;
 }
 
 // sa-radio-toggle Right ==============
@@ -639,15 +622,15 @@ sa-radio-buttons-after .position-static{
   right: 0px;
   width: 45px;
   height: 25px;
-  background-color: white;
+  background-color: $checkbox-background;
   border-radius: 50px;
-  border: 2px solid $sa-grey-06;
+  border: 2px solid $checkbox-background-border;
 }
 .sa-radio-toggle-right:hover span.radio::before{
-  border-color: $client;
+  border-color: $checkbox-background-checked;
 }
 .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::before{
-  border-color: $client;
+  border-color: $checkbox-background-checked;
 }
 .sa-radio-toggle-right span.radio::after {
   right: 24px;
@@ -655,7 +638,7 @@ sa-radio-buttons-after .position-static{
   width: 17px;
   height: 17px;
   border-radius: 10px;
-  background-color: $sa-grey-06;
+  background-color: $checkbox-background-border;
   transition: .25s, background-color .25s;
 }
 .sa-radio-toggle-right input[type="radio"]:checked + label{
@@ -663,14 +646,15 @@ sa-radio-buttons-after .position-static{
 }
 .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::after {
   right: 4px;
-  background-color: $client;
+  background-color: $checkbox-background-checked;
 }
 
 // SARD Toggle Check ===============================================================
 // This is the Yes/No Switch used in Appraisals
 // https://codepen.io/anon/pen/GgpdwY
 
-.sa-toggle-check{
+.sa-toggle-check,
+.sa-toggle-check-right{
   input[type="checkbox"]{
     display: none;
   }
@@ -688,53 +672,187 @@ sa-radio-buttons-after .position-static{
     display: inline-block;
     position: relative;
     text-transform: uppercase;
-    background: white;
-    padding: 0.15em 0.5em 0.15em 2em;
+    background: $checkbox-background;
+    padding: 0em 0.5em 0em 2em;
     border-radius: 1em;
-    min-width: 4.5em;
-    width: 4.5em;
+    min-width: 4.2em;
+    width: 4.2em;
     cursor: pointer;
     transition: background-color 0.15s;
-    border: 2px solid $sa-grey-06;
+    border: 2px solid $checkbox-background-border;
   }
   .toggle-check-text:hover{
-    border-color: $client;
+    border-color: $checkbox-background-checked;
   }
 
   .toggle-check-text:after {
     content: ' ';
     display: block;
-    background: $sa-grey-06;
+    background: $checkbox-background-border;
     width: 1.1em;
     height: 1.1em;
     border-radius: 50%;
     position: absolute;
-    left: 0.3em;
-    top: 0.3em;
-    transition: left 0.15s, margin-left 0.15s;
+    left: 0.2em;
+    top: 0.15em;
+    transition: 0.15s, margin-left 0.15s;
   }
 
   .toggle-check-text:before {
     content: 'No';
-    color: $sa-grey-06;
+    color: $checkbox-background-border;
   }
 
   .toggle-check-input:checked ~ .toggle-check-text {
-    background: $client;
-    border-color: $client;
+    background: $checkbox-background-checked;
+    border-color: $checkbox-background-checked;
     padding-left: 0.5em;
-    // padding-right: 2em;
   }
 
   .toggle-check-input:checked ~ .toggle-check-text:before {
     content: 'Yes';
-    color: white;
+    color: $checkbox-background;
     @include roboto-bold;
   }
 
   .toggle-check-input:checked ~ .toggle-check-text:after {
     left: 100%;
-    margin-left: -1.4em;
-    background: white;
+    margin-left: -1.3em;
+    background: $checkbox-background;
   }
+}
+
+// Right Version
+.sa-toggle-check-right{
+  text-align: right;
+
+  .toggle-check-input {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+  }
+
+  .toggle-check-text {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    background: $checkbox-background;
+    padding: 0em 0.5em 0em 2em;
+    border-radius: 1em;
+    min-width: 4.2em;
+    width: 4.2em;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    border: 2px solid $checkbox-background-border;
+    text-align: left;
+  }
+  .toggle-check-text:hover{
+    border-color: $checkbox-background-checked;
+  }
+
+  .toggle-check-text:after {
+    content: ' ';
+    display: block;
+    background: $checkbox-background-border;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    position: absolute;
+    left: 0.2em;
+    top: 0.15em;
+    transition: left 0.15s, margin-left 0.15s;
+  }
+
+  .toggle-check-text:before {
+    content: 'No';
+    color: $checkbox-background-border;
+  }
+
+  .toggle-check-input:checked ~ .toggle-check-text {
+    background: $checkbox-background-checked;
+    border-color: $checkbox-background-checked;
+    padding-left: 0.5em;
+  }
+
+  .toggle-check-input:checked ~ .toggle-check-text:before {
+    content: 'Yes';
+    color: $checkbox-background;
+    @include roboto-bold;
+  }
+
+  .toggle-check-input:checked ~ .toggle-check-text:after {
+    left: 100%;
+    margin-left: -1.3em;
+    background: $checkbox-background;
+  }
+}
+
+
+// ==================================================================
+
+// Inferred Checkbox ============
+// Used in Admin / Directorates / Edit Form
+
+.sa-inferred-checkbox{
+  padding-top: 4px;
+  padding-bottom: 3px;
+  float:left;
+  margin-right: 10px;
+  border-right: 1px solid $checkbox-background;
+}
+
+.sa-inferred-checkbox input[type="checkbox"],
+.sa-inferred-checkbox-after input[type="checkbox"]{
+  display: none;
+}
+
+.sa-inferred-checkbox label {
+  position: relative;
+  padding-right: 30px;
+  @include roboto-bold;
+  line-height: 1.2em;
+}
+
+.sa-inferred-checkbox span.checkbox{
+  padding-left: 0px;
+}
+
+.sa-inferred-checkbox span.checkbox::before,
+.sa-inferred-checkbox span.checkbox::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  margin: auto;
+  margin-top:0px;
+}
+
+.sa-inferred-checkbox span.checkbox::before {
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f00c" ;
+  font-weight: 900;
+  color: transparent;
+  text-align: center;
+  font-size: 100%;
+  line-height: 1.15em;
+  border: 2px solid $checkbox-background-border;
+  background-color: $checkbox-background;
+}
+
+.sa-inferred-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
+  color: $admin-2;
+}
+
+.sa-inferred-checkbox input[type="checkbox"][disabled] + label span.checkbox::before{
+  background-color: $checkbox-background-disabled;
+  cursor: not-allowed;
+}
+
+.sa-inferred-checkbox input[type="checkbox"][disabled]:checked + label span.checkbox::before{
+  color: $sa-grey-08;
 }

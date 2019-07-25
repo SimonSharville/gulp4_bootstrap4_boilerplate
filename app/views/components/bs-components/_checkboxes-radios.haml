@@ -2,8 +2,45 @@
   .col-sm-12
     %h1#checkboxes-anchor.bs-anchor Checkboxes and Radios
     %p Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand out better.
-     
-    %p Below you will see the Default and SARD styles next to each other.
+
+    %h3 Build Notes
+    %p
+      %span.bold Note! 
+      Bootstrap 4 for has introduced the class of 
+      %code .form-check 
+      This is uses as a wrapper for Checkboxes and Radios. However, some of the earlier SARD project were built in BS3, These have their own wrappers (.sa-checkbox and .sa-radio-buttons), Which if using BS4 should be added to .form-check.
+
+    %h5.base Checkboxes
+    %p
+      To create the SARD Checkboxes add 
+      %code .sa-checkbox
+      to the class of .form-check, and 
+      %span.bold ADD 
+      %code %span.checkbox 
+      %span.bold INSIDE 
+      the label.
+      %br/
+      You can instead use 
+      %code .sa-checkbox-after
+      to have the checkbox after the label.
+    
+    %h5.base Radios
+    %p
+      To create SARD Radios add 
+      %code .sa-radio-buttons
+      to the class of .form-check, and 
+      %span.bold ADD 
+      %code .radio-button
+      %span.bold TO 
+      the label.
+      %br/
+      You can instead use 
+      %code .sa-radio-buttons-after
+      to have the button after the label. 
+    
+    %p Below you will see the Standard and SARD styles next to each other.
+
+
 
   -# Standard =====
   .col-sm-6
@@ -167,65 +204,31 @@
 
   .col-sm-12
     %hr/
-    %h3 Build Notes
-    %p
-      %span.bold Note! 
-      Bootstrap 4 for has introduced the class of 
-      %code .form-check 
-      This is used as a wrapper for Checkboxes and Radios. However, some of the earlier SARD project were built in BS3, These have their own wrappers (.sa-checkbox and .sa-radio-buttons), Which if using BS4 should be added to .form-check.
-
-    %h5.base Checkboxes
-    %p
-      To create the SARD Checkboxes add 
-      %code .sa-checkbox
-      to the class of .form-check, and 
-      %span.bold ADD 
-      %code %span.checkbox 
-      %span.bold INSIDE 
-      the label.
-      %br/
-      You can instead use 
-      %code .sa-checkbox-after
-      to have the checkbox after the label.
-    
-    %h5.base Radios
-    %p
-      To create SARD Radios add 
-      %code .sa-radio-buttons
-      to the class of .form-check, and 
-      %span.bold ADD 
-      %code .radio-button
-      %span.bold TO 
-      the label.
-      %br/
-      You can instead use 
-      %code .sa-radio-buttons-after
-      to have the button after the label.
-
-
-  .col-sm-12
-    %hr/
     %h3 Toggle Switches
+    %p
+      Toggle Switches are based on Checkboxes or Radios. Each has a specific purpose and each is written slighly differently. 
     .card.card-sard
       .card-header Toggle Switches
       .card-body
         .row  
           .col-sm-6
-            %label.sa-toggle-switch
-              %input{type: 'checkbox', id: 'advanced_when', name: 'advanced_when', class: 'advanced_when'}
-              %span.slider#advanced_when_toggle
-              %label .sa-toggle-switch
+            .sa-toggle-switch
+              %input#advanced_when_toggle{type: 'checkbox', name: 'advanced_when', class: 'advanced_when'}
+              %label{:for => "advanced_when_toggle"} 
+                %span.slider .sa-toggle-switch
           .col-sm-6
-            %label.sa-toggle-switch.right
-              %input{type: 'checkbox', id: 'advanced_when', name: 'advanced_when', class: 'advanced_when'}
-              %span.slider#advanced_when_toggle
-              %label .sa-toggle-switch.right
+            .sa-toggle-switch-right
+              %input#advanced_when_toggle_right{type: 'checkbox', name: 'advanced_when', class: 'advanced_when'}
+              %label{:for => "advanced_when_toggle_right"} 
+                %span.slider .sa-toggle-switch-right
       .card-body
         %p 
           %code .sa-toggle-switch 
-          is a form of checkbox. They can be arranged either left (default) or right by adding the class of
-          %code .right
-          to .sa-toggle-switch
+          is a form of checkbox. 
+          %br/
+          They can be arranged either left (default) or right by using the class of
+          %code .sa-toggle-switch-right
+          instead.
 
 
     .card.card-sard
@@ -253,7 +256,9 @@
       .card-body
         %p 
           %code .sa-radio-toggle 
-          is a set of radio buttons, when one is selected, the other is de-selected. They can be arranged either left (default) or right by using the class of
+          is a set of radio buttons, when one is selected, the other is de-selected. 
+          %br/
+          They can be arranged either left (default) or right by using the class of
           %code .sa-radio-toggle-right
           instead.
 
@@ -261,12 +266,24 @@
     .card.card-sard
       .card-header Toggle Check
       .card-body
-        %label.sa-toggle-check
-          %input.toggle-check-input{:type => "checkbox", id: "own_cpd_record", class: "have_own_cpd", name: "own_cpd_record", value: "true", checked: "checked"}/
-          %span.toggle-check-text
+        .row
+          .col-sm-6
+            .sa-toggle-check
+              %label
+                %input.toggle-check-input{:type => "checkbox", id: "own_cpd_record", class: "have_own_cpd", name: "own_cpd_record", value: "true", checked: "checked"}/
+                %span.toggle-check-text
+          .col-sm-6
+            .sa-toggle-check-right
+              %label
+                %input.toggle-check-input{:type => "checkbox", id: "own_cpd_record", class: "have_own_cpd", name: "own_cpd_record", value: "true", checked: "checked"}/
+                %span.toggle-check-text
       .card-body
         %p 
           %code .sa-toggle-check 
           is a single checkbox, with a YES / NO Statement.
+          %br/
+          They can be arranged either left (default) or right by using the class of
+          %code .sa-toggle-check-right
+          instead.
 
         
