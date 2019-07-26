@@ -15947,14 +15947,14 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .custom-file-label {
-  border-radius: 0 2rem 2rem 0;
+  border-radius: 0 1.1rem 1.1rem 0;
   border: 2px solid #00B2B2;
 }
 
 .custom-file-label::after {
   top: -1px;
   right: -1px;
-  border-radius: 0 2rem 2rem 0;
+  border-radius: 0 1.1rem 1.1rem 0;
   background-color: #00B2B2;
   color: white;
   border: none;
@@ -15962,6 +15962,68 @@ input[type=range]:focus::-ms-fill-upper {
 
 .custom-file + .input-group-append {
   border-left: 1px solid white;
+}
+
+.custom-file-label {
+  border-radius: 1.1rem;
+}
+
+.input-group.sa-file-upload label:first-child .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: pointer;
+}
+
+.input-group.sa-file-upload label:last-child .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
+
+.input-group.sa-file-upload label input {
+  display: none;
+}
+
+.input-group.sa-file-upload input.form-control {
+  background-color: white;
+  border-color: #00B2B2;
+  cursor: default;
+}
+
+.input-group.sa-file-upload input.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.input-group.sa-file-upload .btn {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-width: .125rem;
+  padding-top: 0.3125rem;
+}
+
+input.form-control::-webkit-input-placeholder {
+  color: #A39E9C;
+}
+
+input.form-control::-moz-placeholder {
+  color: #A39E9C;
+}
+
+input.form-control:-ms-input-placeholder {
+  color: #A39E9C;
+}
+
+input.form-control::-ms-input-placeholder {
+  color: #A39E9C;
+}
+
+input.form-control::placeholder {
+  color: #A39E9C;
+}
+
+.custom-file-label {
+  color: #A39E9C;
 }
 
 .navbar.fixed-top {

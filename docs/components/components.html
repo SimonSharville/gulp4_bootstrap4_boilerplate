@@ -1945,40 +1945,10 @@ Form Controls
 <div class='row'>
 <div class='col-sm-12'>
 <hr>
+<h4>Range Inputs</h4>
 <div class='card card-sard'>
 <div class='card-header'>
-File Imports
-</div>
-<div class='card-body'>
-<p>This is the standard Bootstrap version.</p>
-<p>
-For file inputs, swap the
-<code>.form-control</code>
-for
-<code>.form-control-file</code>
-.
-</p>
-</div>
-<div class='card-body'>
-<form>
-<div class='form-group'>
-<label for='exampleFormControlFile1'>Example file input</label>
-<input class='form-control-file' id='exampleFormControlFile1' type='file'>
-</div>
-</form>
-</div>
-<div class='card-body border-top'>
-<p>This is the SARD version for File Uploads</p>
-</div>
-</div>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<hr>
-<div class='card card-sard'>
-<div class='card-header'>
-Range Inputs
+Standard Bootstrap Inputs
 </div>
 <div class='card-body'>
 <p>
@@ -2612,6 +2582,75 @@ You can add multiple Fieldsets within a Card or Panel.
 <button class='btn btn-outline-secondary' id='inputGroupFileAddon04' type='button'>Button</button>
 </div>
 </div>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-12 mb-3'>
+<h2 class='bs-anchor'>File Imports</h2>
+<h6>Standard Bootstrap version</h6>
+<p>
+For file inputs, swap the
+<code>.form-control</code>
+for
+<code>.form-control-file</code>
+.
+</p>
+<form>
+<div class='form-group mb-3'>
+<label for='exampleFormControlFile1'>Example file input</label>
+<input class='form-control-file' id='exampleFormControlFile1' type='file'>
+</div>
+</form>
+</div>
+<div class='col-sm-12'>
+<h4>SARD File Upload</h4>
+<p>
+This version is taken from
+<a href='https://codepen.io/claviska/pen/vAgmd' target='blank'>A Pen by Cory LaViska</a>
+and style to fit.
+</p>
+<p>
+The following classes need to be added.
+<br>
+<code class='bold'>.sa-file-upload</code>
+shoud be added to
+<code>.input-group</code>
+</p>
+<p>
+If you are using the Reset button, you will also need to add
+<code class='bold'>.sa-file</code>
+to
+<code>input.form-control</code>
+</p>
+<form action=''>
+<div class='input-group sa-file-upload mb-3'>
+<label class='input-group-btn' id='file_upload_1'>
+<span class='btn btn-primary'>
+Browse…
+<input for='file_upload_1' multiple='multiple' type='file'>
+</span>
+</label>
+<input class='form-control' for='file_upload_1' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
+</div>
+<p>
+Version with added Reset Button
+</p>
+<div class='input-group sa-file-upload'>
+<label class='input-group-btn' id='file_upload_2'>
+<span class='btn btn-primary'>
+Browse…
+<input for='file_upload_2' multiple='multiple' type='file'>
+</span>
+</label>
+<input class='form-control sa-file' for='file_upload_2' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
+<label class='input-group-btn' id='file_upload_2'>
+<span class='btn btn-primary btn-reset'>
+Reset
+</span>
+</label>
+</div>
+</form>
 </div>
 </div>
 <hr class='black'>
