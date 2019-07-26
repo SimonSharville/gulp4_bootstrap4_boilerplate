@@ -89,13 +89,22 @@
       .card-header
         File Imports
       .card-body
-        %p For file inputs, swap the .form-control for .form-control-file.
+        %p This is the standard Bootstrap version.
+        %p 
+          For file inputs, swap the 
+          %code .form-control 
+          for 
+          %code .form-control-file
+          \.
     
       .card-body
         %form
           .form-group
             %label{:for => "exampleFormControlFile1"} Example file input
             %input#exampleFormControlFile1.form-control-file{:type => "file"}/
+
+      .card-body.border-top
+        %p This is the SARD version for File Uploads
 
 
 .row
@@ -108,7 +117,7 @@
         %p 
           This is the standard Bootstrap version using 
           %code .form-control-range
-          \. It is quite difficult to style, but we have added some colouring to it
+          \. It is quite difficult to style, but we have added some colouring to it.
         %form
           .form-group
             %label{:for => "formControlRange"} Example Range input

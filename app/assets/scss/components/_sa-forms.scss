@@ -12,22 +12,20 @@ label {
 // Form Control =============
 .form-control {
   color: $text;
-  border: 1px solid $sa-grey-08;
+  border: 2px solid $sa-grey-08;
   border-radius: .375rem;
 }
 
 .form-control:focus {
   color: $text;
   border-color: $client;
-  -webkit-box-shadow: 0 0 0 0.2rem $client;
-  box-shadow: 0 0 0 0.2rem $client;
+  box-shadow: 0 0 0 0.1rem $client;
 }
 
 .custom-select:focus {
   border-color: $client;
     outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem $client;
-  box-shadow: 0 0 0 0.2rem $client;
+  box-shadow: 0 0 0 0.1rem $client;
 }
 
 // Form Group adjustments =======================
@@ -153,6 +151,108 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background-color: $range-track-bg;
+}
+
+
+// Input Groups =================================
+
+// OLD STyles =====
+// .input-group{
+//   margin-top:10px;
+//   margin-bottom:5px;
+// }
+//  .input-group:first-of-type{
+//   margin-top:0px;
+// }
+//  .input-group:last-of-type{
+//   margin-top:5px;
+// }
+
+// .input-group label{
+//   padding: 0px;
+// }
+
+//  .input-group .form-control{
+//   margin-bottom:0px;
+// }
+
+//  .input-group-addon{
+//   background-color:$sa-grey-16;
+//   color:white;
+//   border-color:$sa-grey-16;
+// }
+
+//  .input-group-btn > .btn{
+//   padding: 6px 12px;
+//   font-size: 14px;
+//   line-height: 1.6;
+// }
+//  .input-group-lg > .input-group-btn > .btn {
+//   height: 46px;
+//   padding: 10px 16px;
+//   font-size: 18px;
+//   line-height: 1.3333333;
+// }
+//  .input-group-sm > .input-group-btn > .btn {
+//   height: 30px;
+//   padding: 5px 10px;
+//   font-size: 12px;
+//   line-height: 1.5;
+// }
+
+.input-group>.input-group-prepend>.input-group-text{
+  border-radius: 2rem 0 0 2rem;
+  padding: 0 $sard-spacer-8;
+  background-color: $client;
+  color: white;
+  border-color: $client;
+}
+.input-group>.input-group-append>.input-group-text{
+  border-radius: 0 2rem 2rem 0;
+  padding: 0 $sard-spacer-8;
+  background-color: $client;
+  color: white;
+  border-color: $client;
+}
+
+.input-group>.input-group-prepend,
+.input-group>.input-group-append{
+  .btn{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: none;
+  }
+}
+.input-group>.input-group-prepend + input{
+  border-left:none;
+}
+.input-group-append{
+  margin-left: -1px;
+  z-index: 2;
+}
+
+// Custom Select ================================
+
+.custom-select{
+  border-width: 2px;
+}
+
+// File Imputs and Uploads ======================
+
+.custom-file-label{
+  border-radius: 0 2rem 2rem 0;
+  border: 2px solid $client;
+}
+.custom-file-label::after{
+  top: -1px;
+  right: -1px;
+  border-radius: 0 2rem 2rem 0;
+  background-color: $client;
+  color: white;
+  border: none;
+}
+.custom-file + .input-group-append{
+  border-left:1px solid white;
 }
 
 

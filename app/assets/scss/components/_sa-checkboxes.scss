@@ -2,7 +2,7 @@
 
 $checkbox-background:           white;
 $checkbox-background-checked:   $client;
-$checkbox-background-border:    $sa-grey-06;
+$checkbox-background-border:    $sa-grey-08;
 $checkbox-background-disabled:  transparent;
 
 // SARD Checkboxes ===========================
@@ -854,5 +854,5 @@ sa-radio-buttons-after .position-static{
 }
 
 .sa-inferred-checkbox input[type="checkbox"][disabled]:checked + label span.checkbox::before{
-  color: $sa-grey-08;
+  color: $sa-grey-10;
 }
