@@ -199,6 +199,9 @@ input[type=range]:focus::-ms-fill-upper {
 //   font-size: 12px;
 //   line-height: 1.5;
 // }
+.input-group>.custom-file+.custom-file, .input-group>.custom-file+.custom-select, .input-group>.custom-file+.form-control, .input-group>.custom-select+.custom-file, .input-group>.custom-select+.custom-select, .input-group>.custom-select+.form-control, .input-group>.form-control+.custom-file, .input-group>.form-control+.custom-select, .input-group>.form-control+.form-control, .input-group>.form-control-plaintext+.custom-file, .input-group>.form-control-plaintext+.custom-select, .input-group>.form-control-plaintext+.form-control {
+  margin-left: -2px; // Overrides BS Default of 1px
+}
 
 .input-group>.input-group-prepend>.input-group-text{
   border-radius: 2rem 0 0 2rem;
