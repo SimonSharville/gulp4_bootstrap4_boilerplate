@@ -53,13 +53,13 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
   border: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .navbar-sard .dropdown-menu .dropdown-item{
   padding: $sard-spacer-4 $sard-spacer-8;
   color: white;
-  border-bottom: 1px solid $sa-navbar-bg;
+  border-top: 1px solid $sa-navbar-bg;
   &:focus{
     background-color: darken($sa-navbar-bg, 25%);
   }
@@ -136,4 +136,35 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
     margin-bottom: $sard-spacer-8;
   }
   
+}
+
+
+// Dropdown Submenu - Added as not included in BS4
+// https://stackoverflow.com/questions/44467377/bootstrap-4-multilevel-dropdown-inside-navigation
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+  // overflow: visible;
+  top: 0;
+  left: 100%;
+  // margin-left: .1rem;
+  // margin-right: .1rem;
+}
+
+.dropdown-submenu a:last-of-type{
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.navbar-sard .dropdown-submenu .dropdown-menu{
+  border-left: 1px solid darken($sa-navbar-bg, 30%);
 }

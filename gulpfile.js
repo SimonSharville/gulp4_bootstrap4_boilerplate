@@ -38,6 +38,7 @@ var jsSRC = [
   'node_modules/bootstrap/dist/js/bootstrap.js',
   
   // Local (Add in order used)
+  'app/assets/js/scripts/dropdown-submenu.js',
   'app/assets/js/scripts/popovers.js',
   'app/assets/js/scripts/file-uploads.js'
 ];
