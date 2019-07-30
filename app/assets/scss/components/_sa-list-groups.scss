@@ -1,0 +1,245 @@
+// List Groups ==================================
+
+.list-group-item{
+  padding: $sard-spacer-8 $sard-spacer-10;
+  border:1px solid $sa-grey-04;
+}
+
+// In Cards, Panels, Fieldsets
+.card, .panel, fieldset{
+  & .list-group-item{
+    border-right: none;
+    border-left: none;
+  }
+  & .list-group-item:first-child{
+    border-top: none;
+  }
+  & .list-group-item:last-child{
+    border-bottom: none;
+  }
+}
+
+// list-group-flush =========
+.card, .panel, fieldset{
+  & .list-group.list-group-flush:first-of-type{
+    margin: -$sard-spacer-10;
+    & .list-group-item{
+      border:1px solid $sa-grey-06;
+      // margin: -1px;
+    }
+    & .list-group-item:first-child{
+      border-top: none;
+    }
+  }
+  & .list-group.list-group-flush:last-of-type{
+    & .list-group-item:last-child{
+      border-bottom-left-radius: $sard-border-radius;
+      border-bottom-right-radius: $sard-border-radius;
+    }
+  }
+}
+
+// Horizontal ===============
+.card, .panel, fieldset{
+  & .list-group-horizontal {
+    & .list-group-item{
+      border:1px solid $sa-grey-04;
+      border-top: none;
+      border-bottom: none;
+      width: -webkit-fill-available;
+    }
+    & .list-group-item:first-child{
+      border-left: none;
+    }
+    & .list-group-item:last-child{
+      border-right: none;
+    }
+  }
+}
+
+.card, .panel, fieldset{
+  & .list-group.list-group-flush.list-group-horizontal{
+    margin-top: -$sard-spacer-8;
+    & .list-group-item{
+      border:1px solid $sa-grey-04;
+      border-top: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      width: -webkit-fill-available;
+    }
+    & .list-group-item{
+    }
+    & .list-group-item:first-child{
+    }
+    & .list-group-item:last-child{
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+// Contextual ===============
+
+a.list-group-item-action{
+  color: darken($client, 0%);
+  // border: 1px solid white!important;
+  &:visited{
+    color: darken($client, 0%);
+  }
+  &:focus,
+  &:hover{
+    color: darken($client, 20%);
+    background-color: $sa-grey-03;
+  } 
+  &:active{
+    color: darken($client, 20%);
+    background-color: $sa-grey-04;
+  }
+  & small.text-muted{ color: $sa-grey-10!important;}
+}
+
+
+a.list-group-item-primary{
+  background-color: $primary;
+  color: darken($client, 20%);
+  &:visited{
+    color: white;
+  }
+}
+.list-group-item-primary.list-group-item-action:focus, .list-group-item-primary.list-group-item-action:hover{
+  background-color: darken($client, 3%);
+  color: white;
+}
+.list-group-item-primary.list-group-item-action:active{
+  background-color: darken($client, 6%);
+  color: white;
+}
+
+
+a.list-group-item-secondary{
+  background-color: $secondary;
+  color: darken($secondary, 20%);
+  &:visited{
+    color: white;
+  }
+}
+.list-group-item-secondary.list-group-item-action:focus, .list-group-item-secondary.list-group-item-action:hover{
+  background-color: darken($secondary, 3%);
+  color: white;
+}
+.list-group-item-secondary.list-group-item-action:active{
+  background-color: darken($secondary, 6%);
+  color: white;
+}
+
+a.list-group-item-success{
+  background-color: $success;
+  color: darken($success, 20%);
+  &:visited{
+    color: white;
+  }
+}
+.list-group-item-success.list-group-item-action:focus, .list-group-item-success.list-group-item-action:hover{
+  background-color: darken($success, 3%);
+  color: white;
+}
+.list-group-item-success.list-group-item-action:active{
+  background-color: darken($success, 6%);
+  color: white;
+}
+
+a.list-group-item-danger{
+  background-color: $danger;
+  color: darken($danger, 20%);
+  &:visited{
+    color: white;
+  }
+}
+.list-group-item-danger.list-group-item-action:focus, .list-group-item-danger.list-group-item-action:hover{
+  background-color: darken($danger, 3%);
+  color: white;
+}
+.list-group-item-danger.list-group-item-action:active{
+  background-color: darken($danger, 6%);
+  color: white;
+}
+
+a.list-group-item-warning{
+  background-color: $warning;
+  color: darken($warning, 20%);
+  &:visited{
+    color: $text;
+  }
+}
+.list-group-item-warning.list-group-item-action:focus, .list-group-item-warning.list-group-item-action:hover{
+  background-color: darken($warning, 3%);
+  color: $text;
+}
+.list-group-item-warning.list-group-item-action:active{
+  background-color: darken($warning, 6%);
+  color: $text;
+}
+
+a.list-group-item-info{
+  background-color: $info;
+  color: darken($info, 20%);
+  &:visited{
+    color: white;
+  }
+}
+.list-group-item-info.list-group-item-action:focus, .list-group-item-info.list-group-item-action:hover{
+  background-color: darken($info, 3%);
+  color: white;
+}
+.list-group-item-info.list-group-item-action:active{
+  background-color: darken($info, 6%);
+  color: white;
+}
+
+a.list-group-item-light{
+  background-color: $light;
+  color: darken($light, 20%);
+  &:visited{
+    color: darken($client, 10%);
+  }
+}
+.list-group-item-light.list-group-item-action:focus, .list-group-item-light.list-group-item-action:hover{
+  background-color: darken($light, 3%);
+  color: darken($client, 20%);
+}
+.list-group-item-light.list-group-item-action:active{
+  background-color: darken($light, 6%);
+  color: darken($client, 20%);
+}
+
+a.list-group-item-dark{
+  background-color: $dark;
+  color: darken($dark, 20%);
+  &:visited{
+    color: white;
+  }
+}
+.list-group-item-dark.list-group-item-action:focus, .list-group-item-dark.list-group-item-action:hover{
+  background-color: darken($dark, 5%);
+  color: white;
+}
+.list-group-item-dark.list-group-item-action:active{
+  background-color: darken($dark, 10%);
+  color: white;
+}
+
+a.list-group-item-action.active{
+  & small{ color: white;}
+  &:visited{
+    color: darken($client, 0%);
+  }
+  &:focus,
+  &:hover{
+    color: white;
+    background-color: darken($client, 5%);
+  } 
+  &:active{
+    color: white;
+    background-color: darken($client, 10%);
+  }
+}
+
