@@ -120,17 +120,18 @@ $client-2-very-light:     lighten($client-2, 10%);
 $client-2-dark:           darken($client-2, 10%);
 $client-2-very-dark:      darken($client-2, 20%);
 
-$success:                $sa-green;
-$success-light:          lighten($success, 5%);
-$success-very-light:     lighten($success, 10%);
-$success-dark:           darken($success, 10%);
-$success-very-dark:      darken($success, 20%);
+// Used in Theme Testing
+$theme-test:                $sa-lime;
+$theme-test-light:          lighten($theme-test, 5%);
+$theme-test-very-light:     lighten($theme-test, 10%);
+$theme-test-dark:           darken($theme-test, 10%);
+$theme-test-very-dark:      darken($theme-test, 20%);
 
-$success-2:                darken($sa-success, 10%);
-$success-2-light:          lighten($success-2, 5%);
-$success-2-very-light:     lighten($success-2, 10%);
-$success-2-dark:           darken($success-2, 10%);
-$success-2-very-dark:      darken($success-2, 20%);
+$theme-test-2:                darken($theme-test, 10%);
+$theme-test-2-light:          lighten($theme-test-2, 5%);
+$theme-test-2-very-light:     lighten($theme-test-2, 10%);
+$theme-test-2-dark:           darken($theme-test-2, 10%);
+$theme-test-2-very-dark:      darken($theme-test-2, 20%);
 
 $medic:                 $sa-turq;
 $non-medic:             $sa-ink;
