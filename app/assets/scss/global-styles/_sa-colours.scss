@@ -120,6 +120,17 @@ $client-2-very-light:     lighten($client-2, 10%);
 $client-2-dark:           darken($client-2, 10%);
 $client-2-very-dark:      darken($client-2, 20%);
 
+$success:                $sa-green;
+$success-light:          lighten($success, 5%);
+$success-very-light:     lighten($success, 10%);
+$success-dark:           darken($success, 10%);
+$success-very-dark:      darken($success, 20%);
+
+$success-2:                darken($sa-success, 10%);
+$success-2-light:          lighten($success-2, 5%);
+$success-2-very-light:     lighten($success-2, 10%);
+$success-2-dark:           darken($success-2, 10%);
+$success-2-very-dark:      darken($success-2, 20%);
 
 $medic:                 $sa-turq;
 $non-medic:             $sa-ink;
