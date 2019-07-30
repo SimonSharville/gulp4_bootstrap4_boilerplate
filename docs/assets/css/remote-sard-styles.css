@@ -16057,7 +16057,7 @@ input.form-control::placeholder {
 }
 
 .card .list-group.list-group-flush:first-of-type .list-group-item, .panel .list-group.list-group-flush:first-of-type .list-group-item, fieldset .list-group.list-group-flush:first-of-type .list-group-item {
-  border: 1px solid #C7C4C2;
+  border: 1px solid #E3E1E1;
 }
 
 .card .list-group.list-group-flush:first-of-type .list-group-item:first-child, .panel .list-group.list-group-flush:first-of-type .list-group-item:first-child, fieldset .list-group.list-group-flush:first-of-type .list-group-item:first-child {
