@@ -133,6 +133,20 @@ $theme-test-2-very-light:     lighten($theme-test-2, 10%);
 $theme-test-2-dark:           darken($theme-test-2, 10%);
 $theme-test-2-very-dark:      darken($theme-test-2, 20%);
 
+
+// Trust Colours ======================
+$trust:                $sa-turq;
+$trust-light:          lighten($trust, 5%);
+$trust-very-light:     lighten($trust, 10%);
+$trust-dark:           darken($trust, 10%);
+$trust-very-dark:      darken($trust, 20%);
+
+$trust-2:                $sa-blue;
+$trust-2-light:          lighten($trust-2, 5%);
+$trust-2-very-light:     lighten($trust-2, 10%);
+$trust-2-dark:           darken($trust-2, 10%);
+$trust-2-very-dark:      darken($trust-2, 20%);
+
 $medic:                 $sa-turq;
 $non-medic:             $sa-ink;
 

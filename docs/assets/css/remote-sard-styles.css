@@ -16849,7 +16849,7 @@ a.list-group-item-action.active:active {
 
 hr {
   border-bottom: none !important;
-  border-color: #C7C4C2;
+  border-color: #B5B0B0;
 }
 
 hr.x2 {
@@ -16884,7 +16884,11 @@ hr.black {
   border-color: #211F0F;
 }
 
-hr.client {
+hr.grey {
+  background-color: #B5B0B0;
+}
+
+hr.trust {
   border-color: #00B2B2;
 }
 
@@ -16955,7 +16959,11 @@ hr.white {
   background-color: #211F0F;
 }
 
-.perf.client {
+.perf.grey {
+  background-color: #B5B0B0;
+}
+
+.perf.trust {
   background-color: #00B2B2;
 }
 
@@ -17305,6 +17313,14 @@ hr.white {
   color: #002b85;
 }
 
+.theme-user hr.trust {
+  border-color: #00B2B2;
+}
+
+.theme-user .perf.trust {
+  background-color: #00B2B2;
+}
+
 .theme-admin ::-webkit-scrollbar-thumb {
   background-color: #E50073;
 }
@@ -17385,6 +17401,14 @@ hr.white {
 
 .theme-admin .breadcrumb a:active {
   color: #660066;
+}
+
+.theme-admin hr.trust {
+  border-color: #E50073;
+}
+
+.theme-admin .perf.trust {
+  background-color: #E50073;
 }
 
 .theme-trust ::-webkit-scrollbar-thumb {
@@ -17469,6 +17493,14 @@ hr.white {
   color: #606d1c;
 }
 
+.theme-trust hr.trust {
+  border-color: #A7BF30;
+}
+
+.theme-trust .perf.trust {
+  background-color: #A7BF30;
+}
+
 .theme-test ::-webkit-scrollbar-thumb {
   background-color: #A7BF30;
 }
@@ -17549,6 +17581,14 @@ hr.white {
 
 .theme-test .breadcrumb a:active {
   color: #606d1c;
+}
+
+.theme-test hr.trust {
+  border-color: #A7BF30;
+}
+
+.theme-test .perf.trust {
+  background-color: #A7BF30;
 }
 
 /*# sourceMappingURL=remote-sard-styles.css.map */
