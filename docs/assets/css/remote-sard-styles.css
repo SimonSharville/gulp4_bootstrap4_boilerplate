@@ -16303,7 +16303,6 @@ a.list-group-item-action.active:active {
 
 /* change the background color */
 .navbar-sard {
-  background-color: #00B2B2;
   padding: 0rem 1rem;
 }
 
@@ -16323,12 +16322,6 @@ a.list-group-item-action.active:active {
 .navbar-sard .nav-item:focus .nav-link,
 .navbar-sard .nav-item:hover .nav-link {
   color: #ffffff;
-  background-color: #007f7f;
-}
-
-.navbar-sard .nav-item.active .nav-link {
-  background-color: #004c4c;
-  /* add background-color to active links */
 }
 
 .navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle {
@@ -17222,12 +17215,56 @@ hr.white {
   padding: 0.375rem 0.625rem;
 }
 
+/* Theme Colouring */
 .theme-user ::-webkit-scrollbar-thumb {
   background-color: #00B2B2;
 }
 
+.theme-user .navbar-sard {
+  background-color: #00B2B2;
+}
+
+.theme-user .navbar-sard .nav-item:focus .nav-link,
+.theme-user .navbar-sard .nav-item:hover .nav-link {
+  background-color: #007f7f;
+}
+
+.theme-user .navbar-sard .nav-item.active .nav-link {
+  background-color: #004c4c;
+}
+
 .theme-admin ::-webkit-scrollbar-thumb {
   background-color: #E50073;
+}
+
+.theme-admin .navbar-sard {
+  background-color: #E50073;
+}
+
+.theme-admin .navbar-sard .nav-item:focus .nav-link,
+.theme-admin .navbar-sard .nav-item:hover .nav-link {
+  background-color: #b20059;
+}
+
+.theme-admin .navbar-sard .nav-item.active .nav-link {
+  background-color: #7f0040;
+}
+
+.theme-trust ::-webkit-scrollbar-thumb {
+  background-color: #359E00;
+}
+
+.theme-trust .navbar-sard {
+  background-color: #359E00;
+}
+
+.theme-trust .navbar-sard .nav-item:focus .nav-link,
+.theme-trust .navbar-sard .nav-item:hover .nav-link {
+  background-color: #246b00;
+}
+
+.theme-trust .navbar-sard .nav-item.active .nav-link {
+  background-color: #133800;
 }
 
 /*# sourceMappingURL=remote-sard-styles.css.map */

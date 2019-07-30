@@ -11,7 +11,7 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 }
 /* change the background color */
 .navbar-sard {
-    background-color: $sa-navbar-bg;
+    // background-color: $sa-navbar-bg;
     padding: 0rem 1rem;
 }
 
@@ -32,10 +32,10 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 .navbar-sard .nav-item:focus .nav-link,
 .navbar-sard .nav-item:hover .nav-link {
     color: #ffffff;
-    background-color: darken($sa-navbar-bg, 10%); 
+    // background-color: darken($sa-navbar-bg, 10%); 
 }
 .navbar-sard .nav-item.active .nav-link{
-  background-color: darken($sa-navbar-bg, 20%); /* add background-color to active links */
+  // background-color: darken($sa-navbar-bg, 20%); /* add background-color to active links */
 }
 
 

@@ -8,36 +8,61 @@
 // Compass (v1.0.0.alpha.18)
 // ----
 
+/* Theme Colouring */
 
-// Main Mixin - Theme Includes are added at the base of this file
-@mixin theme($theme-name, $first-colour, $second-colour, $third-colour, $forth-colour) {
-  $first: $first-colour;
-  $second: $second-colour;
-  $third: $third-colour;
-  $forth: $forth-colour;
+// ================================================================================================
+// Main Mixin - Theme Includes are added at the base of this file =================================
+@mixin theme($theme-name, $first-colour,  $second-colour, $third-colour,  $forth-colour) {
+  $theme-primary:         $first-colour;
+  $theme-primary-dark:                    $second-colour;
+  $theme-secondary:                                       $third-colour;
+  $theme-secondary-dark:                                                  $forth-colour;
 
   // Panels =====================================
   // .#{$theme-name} {
   //   .panel-sard {
   //     background-color: $first;
   //     & .panel-heading, .panel-footer{
-  //       background-color: $second;
+  //       background-color: $theme-primary-dark;
   //     }
   //   }
   // } // End Panels Mixin
 
-
-  // Scrollbar ==================================
+  // ============================================
+  // Theme Name =================================
   .#{$theme-name} {
+    // Scrollbar ==============
     ::-webkit-scrollbar-thumb {
-        background-color: $first;
+        background-color: $theme-primary;
     }
-  } // End Scrollbar Theme
 
 
-} // End Main Mixin
+    // Navbar =================
+    .navbar-sard {
+      background-color: $theme-primary;
+    }
+    .navbar-sard .nav-item:focus .nav-link,
+    .navbar-sard .nav-item:hover .nav-link {
+        background-color: darken($theme-primary, 10%); 
+    }
+    .navbar-sard .nav-item.active .nav-link{
+      background-color: darken($theme-primary, 20%); // add background-color to active links 
+    }
 
 
+    
+  } // End Theme Name ===========================
+  // ============================================
+
+
+} // End Main Mixin ===============================================================================
+// ================================================================================================
+
+
+
+// ================================================================================================
 // This need to come at the base - Colours for each theme.
-@include theme(theme-user, $client, $client-dark, $client-2, $client-2-dark);
-@include theme(theme-admin, $admin, $admin-dark, $admin-2, $admin-2-dark);
+@include theme(theme-user,    $client,    $client-dark,   $client-2,    $client-2-dark  );
+@include theme(theme-admin,   $admin,     $admin-dark,    $admin-2,     $admin-2-dark   );
+
+@include theme(theme-trust,   $success,   $success-dark,  $success-2,   $success-2-dark );
