@@ -1,42 +1,41 @@
 // Links
 
-$text_link:             darken($client, 5%);
-$text_link_visited:     darken($client, 5%);
-$text_link_hover:       darken($client, 15%);
-$text_link_active:      darken($client, 20%);
+$text-link:             darken($client, 5%);
+$text-link-hover:       darken($client, 15%);
+$text-link-active:      darken($client, 20%);
 
 a{
   transition: all 320ms ease;
-  color: $text_link;
+  color: $text-link;
   text-decoration: none;
   &:visited{
-    color: $text_link_visited;
+    color: $text-link;
   }
   &:focus,
   &:hover{
-    color: $text_link_hover;
+    color: $text-link-hover;
     text-decoration: none;
   } 
   &:active{
-    color: $text_link_active;
+    color: $text-link-active;
     text-decoration: none;
   }
 }
 
 a:not([href]):not([tabindex]) {
   transition: all 320ms ease;
-  color: $text_link;
+  color: $text-link;
   text-decoration: none;
   &:visited{
-    color: $text_link_visited;
+    color: $text-link;
   }
   &:focus,
   &:hover{
-    color: $text_link_hover;
+    color: $text-link-hover;
     text-decoration: none;
   } 
   &:active{
-    color: $text_link_active;
+    color: $text-link-active;
     text-decoration: none;
   }
 }

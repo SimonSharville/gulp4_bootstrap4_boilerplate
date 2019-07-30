@@ -87,6 +87,73 @@
       border-left-color:  darken($theme-primary, 30%);
     }
 
+    // Breadcrumbs
+    .breadcrumb{
+      a{
+        color: $theme-primary;
+        &:visited{
+          color: $theme-primary;
+        }
+        &:focus,
+        &:hover{
+          color: $theme-primary-dark;
+        } 
+        &:active{
+          color: $theme-secondary-dark;
+        }
+      }
+    }
+
+    // Links
+    // a{
+    //   color: $theme-primary;
+    //   &:visited{
+    //     color: $theme-primary;
+    //   }
+    //   &:focus,
+    //   &:hover{
+    //     color: $theme-primary-dark;
+    //   } 
+    //   &:active{
+    //     color: $theme-secondary-dark;
+    //   }
+    // }
+    // a:not([href]):not([tabindex]) {
+    //   transition: all 320ms ease;
+    //   color: $theme-primary;
+    //   text-decoration: none;
+    //   &:visited{
+    //     color: $theme-primary;
+    //   }
+    //   &:focus,
+    //   &:hover{
+    //     color: $theme-primary-dark;
+    //     text-decoration: none;
+    //   } 
+    //   &:active{
+    //     color: $theme-secondary-dark;
+    //     text-decoration: none;
+    //   }
+    // }
+    // Cards / Panels / Fieldsets
+    // .card-header,
+    // .card-footer,
+    // .panel-heading,
+    // .panel-header,
+    // .panel-footer,
+    // legend,
+    // .form-footer{
+    //   a{
+    //     &:focus,
+    //     &:hover{
+    //       color: lighten($theme-primary-dark, 5%);
+    //     } 
+    //     &:active{
+    //       color: lighten($theme-primary-dark, 10%);
+    //     }
+    //   }
+    // } 
+
 
     
   } // End Theme Name ===========================
@@ -107,3 +174,6 @@
 @include theme(theme-trust,   $theme-test,    $theme-test-dark, $theme-test-2,    $theme-test-2-dark );
 
 @include theme(theme-test,    $theme-test,    $theme-test-dark, $theme-test-2,    $theme-test-2-dark );
+
+
+
