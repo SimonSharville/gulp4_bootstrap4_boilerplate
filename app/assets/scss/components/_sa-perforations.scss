@@ -1,0 +1,70 @@
+// Perforations =================================
+
+// Horizontal Rules =========
+hr{
+  border-bottom: none!important;
+  border-color: $sa-grey-06;
+}
+
+hr.x2{ border-width: 2px; }
+hr.x4{ border-width: 4px; }
+hr.x8{ border-width: 8px; }
+hr.x12{ border-width: 12px; }
+hr.x16{ border-width: 16px; }
+
+hr.dashed{ border-style: dashed;}
+hr.dotted{ border-style: dotted;}
+
+hr.black{ border-color: $text; }
+hr.client{ border-color: $client; }
+hr.admin{ border-color: $admin; }
+hr.primary{ border-color: $primary; }
+hr.secondary{ border-color: $secondary; }
+hr.white{ border-color: white; }
+
+
+// Perfs in Cards etc =======
+
+.card-body + .perf,
+.panel-body + .perf,
+.form-group + .perf{
+  height: 8px;
+  background-color: white;
+  margin: 0px -1px;
+  width: calc(100% + 2px);
+}
+
+.card-body .perf,
+.panel-body .perf,
+.form-group .perf{
+  height: 8px;
+  background-color: white;
+  margin: 0px -10px 10px -10px;
+  width: calc(100% + 20px);
+}
+
+// Perfs ====================
+
+.perf{
+  display:block;
+  width:100%;
+  height: 1px;
+  background-repeat: repeat-x;
+  mask-image: url("../images/perf-mask.svg");
+}
+
+.perf.x2{ height: 2px; }
+.perf.x4{ height: 4px; }
+.perf.x8{ height: 8px; }
+.perf.x12{ height: 12px; }
+.perf.x16{ height: 16px; }
+
+
+.perf.black { background-color: $text; }
+.perf.client { background-color: $client; }
+.perf.admin { background-color: $admin; }
+.perf.primary { background-color: $primary; }
+.perf.secondary { background-color: $secondary; }
+.perf.white { background-color: white; }
+
+

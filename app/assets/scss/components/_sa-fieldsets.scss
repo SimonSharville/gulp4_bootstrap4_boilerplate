@@ -39,7 +39,7 @@ fieldset{
     padding: $sard-body-padding;
     margin: -1px;
   }
-
+  
   & hr{
     border-color: white;
     margin: 0 8px;
@@ -62,6 +62,18 @@ fieldset{
     border-bottom-right-radius: $sard-border-radius;
   }
 }
+.form-group p:last-child {
+  margin-bottom: 0;
+}
+.form-group hr{
+  margin: 0;
+  margin-bottom: .5rem;
+}
+.form-group p+hr {
+  margin-top: -.5rem;
+}
+
+
 
 .card fieldset, .panel fieldset{
   border-color: $sard-border-color;
