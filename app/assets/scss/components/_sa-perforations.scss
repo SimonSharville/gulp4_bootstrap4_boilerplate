@@ -3,7 +3,7 @@
 // Horizontal Rules =========
 hr{
   border-bottom: none!important;
-  border-color: $sa-grey-06;
+  border-color: $sa-grey-08;
 }
 
 hr.x2{ border-width: 2px; }
@@ -16,7 +16,8 @@ hr.dashed{ border-style: dashed;}
 hr.dotted{ border-style: dotted;}
 
 hr.black{ border-color: $text; }
-hr.client{ border-color: $client; }
+hr.grey { background-color: $sa-grey-08; }
+hr.trust{ border-color: $trust; }
 hr.admin{ border-color: $admin; }
 hr.primary{ border-color: $primary; }
 hr.secondary{ border-color: $secondary; }
@@ -61,7 +62,8 @@ hr.white{ border-color: white; }
 
 
 .perf.black { background-color: $text; }
-.perf.client { background-color: $client; }
+.perf.grey { background-color: $sa-grey-08; }
+.perf.trust { background-color: $trust; }
 .perf.admin { background-color: $admin; }
 .perf.primary { background-color: $primary; }
 .perf.secondary { background-color: $secondary; }

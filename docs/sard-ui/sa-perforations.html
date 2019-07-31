@@ -6,7 +6,7 @@
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/remote-sard-styles.min.css' rel='stylesheet'>
 </head>
-<body>
+<body class='theme-test'>
 <header>
 <nav class='navbar fixed-top navbar-expand-lg navbar-sard'>
 <div class='container'>
@@ -112,13 +112,13 @@ Components
 <p>Add the colours as below.</p>
 <code>hr.black</code>
 <hr class='black'>
+<code>hr.grey</code>
+<hr class='grey'>
 <code>hr.primary</code>
-or
-<code>hr.client</code>
 <hr class='primary'>
+<code>hr.trust</code>
+<hr class='trust'>
 <code>hr.secondary</code>
-or
-<code>hr.admin</code>
 <hr class='secondary'>
 <code>hr.white</code>
 <div class='card card-sard'>
@@ -132,8 +132,8 @@ or
 <code>hr.dotted</code>
 <hr class='dotted'>
 <h5>Mix n match</h5>
-<code>hr.client.dashed.x4</code>
-<hr class='client dashed x4'>
+<code>hr.trust.dashed.x4</code>
+<hr class='trust dashed x4'>
 <code>hr.admin.dotted.x12</code>
 <hr class='admin x12 dotted'>
 </div>
@@ -143,29 +143,29 @@ or
 <h3 class='mt-3'>Perforations</h3>
 <p>Dotted horizontal rules don't always behave well in varions browsers, So we have created a set of perforations that can be used as dividers instead.</p>
 <p>
-<code>.perf.client</code>
-<div class='perf client'></div>
+<code>.perf.trust</code>
+<div class='perf grey'></div>
 </p>
 <h5>Various weights</h5>
 <p>
-<code>.perf.client.x2</code>
-<div class='perf client x2'></div>
+<code>.perf.x2</code>
+<div class='perf grey x2'></div>
 </p>
 <p>
-<code>.perf.client.x4</code>
-<div class='perf client x4'></div>
+<code>.perf.x4</code>
+<div class='perf grey x4'></div>
 </p>
 <p>
-<code>.perf.client.x8</code>
-<div class='perf client x8'></div>
+<code>.perf.x8</code>
+<div class='perf grey x8'></div>
 </p>
 <p>
-<code>.perf.client.x12</code>
-<div class='perf client x12'></div>
+<code>.perf.x12</code>
+<div class='perf grey x12'></div>
 </p>
 <p>
-<code>.perf.client.x16</code>
-<div class='perf client x16'></div>
+<code>.perf.x16</code>
+<div class='perf grey x16'></div>
 </p>
 <h5>Various colours</h5>
 <p>
@@ -173,15 +173,17 @@ or
 <div class='perf black x8'></div>
 </p>
 <p>
+<code>.perf.grey</code>
+<div class='perf grey x8'></div>
+</p>
+<p>
 <code>.perf.primary</code>
-or
-<code>.perf.client</code>
-<div class='perf client x8'></div>
+<div class='perf a x8'></div>
+<code>.perf.trust</code>
+<div class='perf trust x8'></div>
 </p>
 <p>
 <code>.perf.secondary</code>
-or
-<code>.perf.admin</code>
 <div class='perf secondary x8'></div>
 </p>
 <p>
@@ -189,7 +191,7 @@ or
 </p>
 <div class='card card-sard'>
 <div class='card-body'>
-<div class='perf white x8'></div>
+<div class='perf white x8 mt-2'></div>
 </div>
 </div>
 </div>
