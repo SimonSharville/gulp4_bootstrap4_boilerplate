@@ -42,6 +42,21 @@
   }
 }
 
+.btn-trust{
+  background-color: $user-colour;
+  color: white!important;
+  &:hover { 
+    background-color: darken($user-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-colour, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($user-colour, .25);
+  }
+}
+
 .btn-user-dark{
   background-color: $user-colour-dark;
   color: white!important;
@@ -168,6 +183,8 @@ $btn-default: $sa-grey-14;
   }
 }
 
+// Button Outlines ==============================
+
 .btn.btn-outline-light{
   color: $sa-grey-06;
   border-color: $sa-grey-06;
@@ -176,7 +193,22 @@ $btn-default: $sa-grey-14;
   }
 }
 
-// Button Outlines ==============================
+.btn.btn-outline-trust{
+  color: $user-colour;
+  border-color: $user-colour;
+  &:hover{
+    background-color: $user-colour;
+    color: white;
+  }
+}
+
+.btn.btn-outline-warning{
+  color: $text;
+  &:hover{
+    color: $text;
+  }
+}
+
 .btn-outline-primary,
 .btn-outline-secondary,
 .btn-outline-success,
@@ -184,7 +216,8 @@ $btn-default: $sa-grey-14;
 .btn-outline-warning,
 .btn-outline-info,
 .btn-outline-light,
-.btn-outline-dark{
+.btn-outline-dark,
+.btn-outline-trust{
   border-width: 2px;
 }
 

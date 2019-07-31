@@ -161,7 +161,40 @@
     .text-trust-admin-2-light{ color: lighten($admin-colour-2, 10%) !important;}
 
 
+    // Buttons ==============
+    .btn-trust{
+      background-color: $theme-primary;
+      &:hover { 
+        background-color: darken($theme-primary, 5%); 
+      }
+      &:active {
+        background-color: darken($theme-primary, 10%);
+      }
+      &:focus,
+      &.focus {
+        box-shadow: 0 0 0 0.2rem rgba($theme-primary, .25);
+      }
+    }
 
+    .btn.btn-outline-trust{
+      color: $theme-primary;
+      border-color: $theme-primary;
+      &:hover{
+        background-color: $theme-primary;
+        color: white;
+      }
+    }
+
+    // Range Inputs =========
+    input[type=range]::-webkit-slider-thumb {
+      background-color: $theme-primary;
+    }
+    input[type=range]::-moz-range-thumb {
+      background-color: $theme-primary;
+    }
+    input[type=range]::-ms-thumb {
+      background-color: $theme-primary;
+    }
     
   } // End Theme Name ===========================
   // ============================================
