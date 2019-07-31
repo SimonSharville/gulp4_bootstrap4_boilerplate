@@ -1,8 +1,8 @@
 // Links
 
-$text-link:             darken($user-colour, 5%);
-$text-link-hover:       darken($user-colour, 15%);
-$text-link-active:      darken($user-colour, 20%);
+$text-link:             $link-color;
+$text-link-hover:       darken($link-color, 15%);
+$text-link-active:      darken($link-color, 20%);
 
 a{
   transition: all 320ms ease;
