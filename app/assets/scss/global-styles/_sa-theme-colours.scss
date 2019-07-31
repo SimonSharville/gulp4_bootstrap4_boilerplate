@@ -124,7 +124,7 @@
     .bg-trust-user-light{ background-color: lighten($user-colour, 5%) !important;}
 
     .bg-trust-user-2{ background-color: $user-colour-2 !important;}
-    .bg-trust-user-2-dark{ background-color: darken($user-colour-2, 10%) !important;}
+    .bg-trust-user-2-dark{ background-color: darken($user-colour-2, 5%) !important;}
     .bg-trust-user-2-light{ background-color: lighten($user-colour-2, 10%) !important;}
 
     .bg-trust-admin{ background-color: $admin-colour !important;}
@@ -149,7 +149,7 @@
     .text-trust-user-light{ color: lighten($user-colour, 5%) !important;}
 
     .text-trust-user-2{ color: $user-colour-2 !important;}
-    .text-trust-user-2-dark{ color: darken($user-colour-2, 10%) !important;}
+    .text-trust-user-2-dark{ color: darken($user-colour-2, 5%) !important;}
     .text-trust-user-2-light{ color: lighten($user-colour-2, 10%) !important;}
 
     .text-trust-admin{ color: $admin-colour !important;}

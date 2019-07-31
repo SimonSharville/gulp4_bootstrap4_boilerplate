@@ -112,13 +112,15 @@ $bodytext:                    $sa-grey-18;
 
 
 // Trust Colours ================================
-$trust-colour:                $sa-yellow;
+// $trust-colour:                $sa-yellow;
+$trust-colour:                #999966 ; // Used for Testing - Swap with above
 $trust-colour-light:          lighten($trust-colour, 5%);
 $trust-colour-very-light:     lighten($trust-colour, 10%);
 $trust-colour-dark:           darken($trust-colour, 10%);
 $trust-colour-very-dark:      darken($trust-colour, 20%);
 
-$trust-colour-2:              $sa-orange;
+// $trust-colour-2:              $sa-orange;
+$trust-colour-2:              #996633; // Used for Testing - Swap with above
 $trust-colour-2-light:        lighten($trust-colour-2, 5%);
 $trust-colour-2-very-light:   lighten($trust-colour-2, 10%);
 $trust-colour-2-dark:         darken($trust-colour-2, 10%);
