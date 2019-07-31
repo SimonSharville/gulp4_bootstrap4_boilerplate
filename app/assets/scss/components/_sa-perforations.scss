@@ -18,7 +18,7 @@ hr.dotted{ border-style: dotted;}
 hr.black{ border-color: $text; }
 hr.grey { background-color: $sa-grey-08; }
 hr.trust{ border-color: $trust; }
-hr.admin{ border-color: $admin; }
+hr.admin{ border-color: $admin-colour; }
 hr.primary{ border-color: $primary; }
 hr.secondary{ border-color: $secondary; }
 hr.white{ border-color: white; }
@@ -64,7 +64,7 @@ hr.white{ border-color: white; }
 .perf.black { background-color: $text; }
 .perf.grey { background-color: $sa-grey-08; }
 .perf.trust { background-color: $trust; }
-.perf.admin { background-color: $admin; }
+.perf.admin { background-color: $admin-colour; }
 .perf.primary { background-color: $primary; }
 .perf.secondary { background-color: $secondary; }
 .perf.white { background-color: white; }

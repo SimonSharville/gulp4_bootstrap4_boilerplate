@@ -1,12 +1,12 @@
 // Dropdowns ====================================
 
-$default_dropdown_visited:      darken($client, 5%);
+$default_dropdown_visited:      darken($user-colour, 5%);
 $default_dropdown_hover:        $sa-grey-04;
-$default_dropdown_active:       $client;
-$default_dropdown_hover_click:  darken($client, 10%);
+$default_dropdown_active:       $user-colour;
+$default_dropdown_hover_click:  darken($user-colour, 10%);
 
 .dropdown-menu{
-  border-color: $client;
+  border-color: $user-colour;
   box-shadow:$sa-box-shadow;
   .dropdown-header{
     @include roboto-bold;
@@ -41,29 +41,29 @@ $default_dropdown_hover_click:  darken($client, 10%);
 }
 
 
-$admin_dropdown_visited:      darken($admin, 5%);
-$admin_dropdown_hover:        $sa-grey-04;
-$admin_dropdown_active:       $admin;
-$admin_dropdown_hover_click:  darken($admin, 10%);
+$admin-colour_dropdown_visited:      darken($admin-colour, 5%);
+$admin-colour_dropdown_hover:        $sa-grey-04;
+$admin-colour_dropdown_active:       $admin-colour;
+$admin-colour_dropdown_hover_click:  darken($admin-colour, 10%);
 
 .btn-admin + .dropdown-menu{
-  border-color: $admin;
+  border-color: $admin-colour;
 }
 .btn-admin + .dropdown-menu .dropdown-item{
   &:focus{
-    background-color: $admin_dropdown_active;
+    background-color: $admin-colour_dropdown_active;
   }
   &:hover{
-    background-color: $admin_dropdown_hover;
+    background-color: $admin-colour_dropdown_hover;
   }
   &:active{
-    background-color: $admin_dropdown_hover_click;
+    background-color: $admin-colour_dropdown_hover_click;
   }
   &.active{
-    background-color: $admin_dropdown_active;
+    background-color: $admin-colour_dropdown_active;
   }
   &.active:hover{
-    background-color: $admin_dropdown_active;
+    background-color: $admin-colour_dropdown_active;
   }
 }
 

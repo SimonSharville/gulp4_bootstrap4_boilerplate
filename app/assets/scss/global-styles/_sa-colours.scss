@@ -108,17 +108,17 @@ $jp_uni:                #C2D26F;
 $text:                  $sa-grey-18;
 $bodytext:              $sa-grey-18;
 
-$client:                $sa-turq;
-$client-light:          lighten($client, 5%);
-$client-very-light:     lighten($client, 10%);
-$client-dark:           darken($client, 10%);
-$client-very-dark:      darken($client, 20%);
+$user-colour:                $sa-turq;
+$user-colour-light:          lighten($user-colour, 5%);
+$user-colour-very-light:     lighten($user-colour, 10%);
+$user-colour-dark:           darken($user-colour, 10%);
+$user-colour-very-dark:      darken($user-colour, 20%);
 
-$client-2:                $sa-blue;
-$client-2-light:          lighten($client-2, 5%);
-$client-2-very-light:     lighten($client-2, 10%);
-$client-2-dark:           darken($client-2, 10%);
-$client-2-very-dark:      darken($client-2, 20%);
+$user-colour-2:                $sa-blue;
+$user-colour-2-light:          lighten($user-colour-2, 5%);
+$user-colour-2-very-light:     lighten($user-colour-2, 10%);
+$user-colour-2-dark:           darken($user-colour-2, 10%);
+$user-colour-2-very-dark:      darken($user-colour-2, 20%);
 
 // Used in Theme Testing
 $theme-test:                $sa-lime;
@@ -155,21 +155,21 @@ $link-color:            lighten($sa-ink, 20%);
 
 // Admin Mixins =================================
 
-$admin:               $sa-pink;
-$admin-light:         lighten($admin, 5%);
-$admin-very-light:    lighten($admin, 10%);
-$admin-dark:          darken($admin, 10%);
-$admin-very-dark:     darken($admin, 20%);
+$admin-colour:               $sa-pink;
+$admin-colour-light:         lighten($admin-colour, 5%);
+$admin-colour-very-light:    lighten($admin-colour, 10%);
+$admin-colour-dark:          darken($admin-colour, 10%);
+$admin-colour-very-dark:     darken($admin-colour, 20%);
 
-$admin-2:             $sa-plum;
-$admin-2-light:       lighten($admin-2, 5%);
-$admin-2-very-light:  lighten($admin-2, 10%);
-$admin-2-dark:        darken($admin-2, 10%);
-$admin-2-very-dark:   darken($admin-2, 20%);
+$admin-colour-2:             $sa-plum;
+$admin-colour-2-light:       lighten($admin-colour-2, 5%);
+$admin-colour-2-very-light:  lighten($admin-colour-2, 10%);
+$admin-colour-2-dark:        darken($admin-colour-2, 10%);
+$admin-colour-2-very-dark:   darken($admin-colour-2, 20%);
 
 // Navbar Admin =================================
 
-$navAdminBase        : $admin-2;
+$navAdminBase        : $admin-colour-2;
 $navAdminHover       : darken($navAdminBase, 10%);
 $navAdminFocus       : darken($navAdminBase, 15%);
 $navAdminActive      : darken($navAdminBase, 15%);
@@ -183,9 +183,9 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 
 .text-default {color: $text!important;}
 
-.text-client {color: $client;}
-.text-admin {color: $admin;}
-.text-admin-2 {color: $admin-2;}
+.text-client {color: $user-colour;}
+.text-admin {color: $admin-colour;}
+.text-admin-2 {color: $admin-colour-2;}
 
 .text-turq{ color: $sa-turq;}
 .text-pink{ color: $sa-pink;}

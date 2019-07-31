@@ -13,127 +13,127 @@
 }
 
 .btn-client{
-  background-color: $client;
+  background-color: $user-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($client, 5%); 
+    background-color: darken($user-colour, 5%); 
   }
   &:active {
-    background-color: darken($client, 10%);
+    background-color: darken($user-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($client, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-colour, .25);
   }
 }
 
 .btn-client-dark{
-  background-color: $client-dark;
+  background-color: $user-colour-dark;
   color: white!important;
   &:hover { 
-    background-color: darken($client-dark, 5%); 
+    background-color: darken($user-colour-dark, 5%); 
   }
   &:active {
-    background-color: darken($client-dark, 10%);
+    background-color: darken($user-colour-dark, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($client-dark, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-colour-dark, .25);
   }
 }
 
 .btn-client-2{
-  background-color: $client-2;
+  background-color: $user-colour-2;
   color: white!important;
   &:hover { 
-    background-color: darken($client-2, 5%); 
+    background-color: darken($user-colour-2, 5%); 
   }
   &:active {
-    background-color: darken($client-2, 10%);
+    background-color: darken($user-colour-2, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($client-2, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-colour-2, .25);
   }
 }
 
 .btn-client-2-dark{
-  background-color: $client-2-dark;
+  background-color: $user-colour-2-dark;
   color: white!important;
   &:hover { 
-    background-color: darken($client-2-dark, 5%); 
+    background-color: darken($user-colour-2-dark, 5%); 
   }
   &:active {
-    background-color: darken($client-2-dark, 10%);
+    background-color: darken($user-colour-2-dark, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($client-2-dark, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-colour-2-dark, .25);
   }
 }
 
 
 .btn-admin{
-  background-color: $admin;
+  background-color: $admin-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($admin, 5%); 
+    background-color: darken($admin-colour, 5%); 
   }
   &:active {
-    background-color: darken($admin, 10%);
+    background-color: darken($admin-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($admin, .25);
+    box-shadow: 0 0 0 0.2rem rgba($admin-colour, .25);
   }
 }
 // Outer Glow
 .btn-admin:not(:disabled):not(.disabled).active:focus, .btn-admin:not(:disabled):not(.disabled):active:focus, .show>.btn-admin.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba($admin, .25);
+  box-shadow: 0 0 0 0.2rem rgba($admin-colour, .25);
 }
 
 .btn-admin-dark{
-  background-color: $admin-dark;
+  background-color: $admin-colour-dark;
   color: white!important;
   &:hover { 
-    background-color: darken($admin-dark, 5%); 
+    background-color: darken($admin-colour-dark, 5%); 
   }
   &:active {
-    background-color: darken($admin-dark, 10%);
+    background-color: darken($admin-colour-dark, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($admin-dark, .25);
+    box-shadow: 0 0 0 0.2rem rgba($admin-colour-dark, .25);
   }
 }
 
 .btn-admin-2{
-  background-color: $admin-2;
+  background-color: $admin-colour-2;
   color: white!important;
   &:hover { 
-    background-color: darken($admin-2, 5%); 
+    background-color: darken($admin-colour-2, 5%); 
   }
   &:active {
-    background-color: darken($admin-2, 10%);
+    background-color: darken($admin-colour-2, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($admin-2, .25);
+    box-shadow: 0 0 0 0.2rem rgba($admin-colour-2, .25);
   }
 }
 
 .btn-admin-2-dark{
-  background-color: $admin-2-dark;
+  background-color: $admin-colour-2-dark;
   color: white!important;
   &:hover { 
-    background-color: darken($admin-2-dark, 5%); 
+    background-color: darken($admin-colour-2-dark, 5%); 
   }
   &:active {
-    background-color: darken($admin-2-dark, 10%);
+    background-color: darken($admin-colour-2-dark, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($admin-2-dark, .25);
+    box-shadow: 0 0 0 0.2rem rgba($admin-colour-2-dark, .25);
   }
 }
 
