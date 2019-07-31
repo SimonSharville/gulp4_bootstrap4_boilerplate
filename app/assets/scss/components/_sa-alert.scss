@@ -94,5 +94,12 @@ $alert-color-level:                 1 ;
   p{ color: white;}
 }
 
-
+.alert.alert-user{
+  background-color: $user-colour;
+  color: white;
+}
+.alert.alert-admin{
+  background-color: $admin-colour;
+  color: white;
+}
 
