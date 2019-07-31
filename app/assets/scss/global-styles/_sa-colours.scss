@@ -105,56 +105,39 @@ $jp_uni:                #C2D26F;
 
 // Global Mixins ===================
 
-$text:                  $sa-grey-18;
-$bodytext:              $sa-grey-18;
-
-$user-colour:                $sa-turq;
-$user-colour-light:          lighten($user-colour, 5%);
-$user-colour-very-light:     lighten($user-colour, 10%);
-$user-colour-dark:           darken($user-colour, 10%);
-$user-colour-very-dark:      darken($user-colour, 20%);
-
-$user-colour-2:                $sa-blue;
-$user-colour-2-light:          lighten($user-colour-2, 5%);
-$user-colour-2-very-light:     lighten($user-colour-2, 10%);
-$user-colour-2-dark:           darken($user-colour-2, 10%);
-$user-colour-2-very-dark:      darken($user-colour-2, 20%);
-
-// Used in Theme Testing
-$theme-test:                $sa-lime;
-$theme-test-light:          lighten($theme-test, 5%);
-$theme-test-very-light:     lighten($theme-test, 10%);
-$theme-test-dark:           darken($theme-test, 10%);
-$theme-test-very-dark:      darken($theme-test, 20%);
-
-$theme-test-2:                darken($theme-test, 10%);
-$theme-test-2-light:          lighten($theme-test-2, 5%);
-$theme-test-2-very-light:     lighten($theme-test-2, 10%);
-$theme-test-2-dark:           darken($theme-test-2, 10%);
-$theme-test-2-very-dark:      darken($theme-test-2, 20%);
+$text:                        $sa-grey-18;
+$bodytext:                    $sa-grey-18;
 
 
-// Trust Colours ======================
-$trust:                $sa-turq;
-$trust-light:          lighten($trust, 5%);
-$trust-very-light:     lighten($trust, 10%);
-$trust-dark:           darken($trust, 10%);
-$trust-very-dark:      darken($trust, 20%);
-
-$trust-2:                $sa-blue;
-$trust-2-light:          lighten($trust-2, 5%);
-$trust-2-very-light:     lighten($trust-2, 10%);
-$trust-2-dark:           darken($trust-2, 10%);
-$trust-2-very-dark:      darken($trust-2, 20%);
-
-$medic:                 $sa-turq;
-$non-medic:             $sa-ink;
-
-$link-color:            lighten($sa-ink, 20%);
 
 
-// Admin Mixins =================================
+// Trust Colours ================================
+$trust-colour:                $sa-yellow;
+$trust-colour-light:          lighten($trust-colour, 5%);
+$trust-colour-very-light:     lighten($trust-colour, 10%);
+$trust-colour-dark:           darken($trust-colour, 10%);
+$trust-colour-very-dark:      darken($trust-colour, 20%);
 
+$trust-colour-2:              $sa-orange;
+$trust-colour-2-light:        lighten($trust-colour-2, 5%);
+$trust-colour-2-very-light:   lighten($trust-colour-2, 10%);
+$trust-colour-2-dark:         darken($trust-colour-2, 10%);
+$trust-colour-2-very-dark:    darken($trust-colour-2, 20%);
+
+// Trust User Colours ===========================
+$user-colour:                 $sa-turq;
+$user-colour-light:           lighten($user-colour, 5%);
+$user-colour-very-light:      lighten($user-colour, 10%);
+$user-colour-dark:            darken($user-colour, 10%);
+$user-colour-very-dark:       darken($user-colour, 20%);
+
+$user-colour-2:               $sa-teal;
+$user-colour-2-light:         lighten($user-colour-2, 5%);
+$user-colour-2-very-light:    lighten($user-colour-2, 10%);
+$user-colour-2-dark:          darken($user-colour-2, 10%);
+$user-colour-2-very-dark:     darken($user-colour-2, 20%);
+
+// Trust Admin Colours ==========================
 $admin-colour:               $sa-pink;
 $admin-colour-light:         lighten($admin-colour, 5%);
 $admin-colour-very-light:    lighten($admin-colour, 10%);
@@ -166,6 +149,17 @@ $admin-colour-2-light:       lighten($admin-colour-2, 5%);
 $admin-colour-2-very-light:  lighten($admin-colour-2, 10%);
 $admin-colour-2-dark:        darken($admin-colour-2, 10%);
 $admin-colour-2-very-dark:   darken($admin-colour-2, 20%);
+
+
+// Other Colour Mixins ==========================
+$medic:                       $sa-turq;
+$non-medic:                   $sa-ink;
+
+
+$link-color:                  lighten($sa-ink, 20%);
+
+
+
 
 // Navbar Admin =================================
 
@@ -309,3 +303,53 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 .bg-sa-danger{ background-color: $sa-danger !important;}
 .bg-sa-alarm{ background-color: $sa-alert !important;}
 
+// Trust Colours ==============
+// Backgrounds
+.bg-trust{ background-color: $trust-colour !important;}
+.bg-trust-dark{ background-color: darken($trust-colour, 10%) !important;}
+.bg-trust-light{ background-color: lighten($trust-colour, 10%) !important;}
+
+.bg-trust-2{ background-color: $trust-colour-2 !important;}
+.bg-trust-2-dark{ background-color: darken($trust-colour-2, 10%) !important;}
+.bg-trust-2-light{ background-color: lighten($trust-colour-2, 10%) !important;}
+
+.bg-trust-user{ background-color: $user-colour !important;}
+.bg-trust-user-dark{ background-color: darken($user-colour, 10%) !important;}
+.bg-trust-user-light{ background-color: lighten($user-colour, 10%) !important;}
+
+.bg-trust-user-2{ background-color: $user-colour-2 !important;}
+.bg-trust-user-2-dark{ background-color: darken($user-colour-2, 10%) !important;}
+.bg-trust-user-2-light{ background-color: lighten($user-colour-2, 10%) !important;}
+
+.bg-trust-admin{ background-color: $admin-colour !important;}
+.bg-trust-admin-dark{ background-color: darken($admin-colour, 10%) !important;}
+.bg-trust-admin-light{ background-color: lighten($admin-colour, 10%) !important;}
+
+.bg-trust-admin-2{ background-color: $admin-colour-2 !important;}
+.bg-trust-admin-2-dark{ background-color: darken($admin-colour-2, 10%) !important;}
+.bg-trust-admin-2-light{ background-color: lighten($admin-colour-2, 10%) !important;}
+
+// Foregrounds
+.text-trust{ color: $trust-colour !important;}
+.text-trust-dark{ color: darken($trust-colour, 10%) !important;}
+.text-trust-light{ color: lighten($trust-colour, 10%) !important;}
+
+.text-trust-2{ color: $trust-colour-2 !important;}
+.text-trust-2-dark{ color: darken($trust-colour-2, 10%) !important;}
+.text-trust-2-light{ color: lighten($trust-colour-2, 10%) !important;}
+
+.text-trust-user{ color: $user-colour !important;}
+.text-trust-user-dark{ color: darken($user-colour, 10%) !important;}
+.text-trust-user-light{ color: lighten($user-colour, 10%) !important;}
+
+.text-trust-user-2{ color: $user-colour-2 !important;}
+.text-trust-user-2-dark{ color: darken($user-colour-2, 10%) !important;}
+.text-trust-user-2-light{ color: lighten($user-colour-2, 10%) !important;}
+
+.text-trust-admin{ color: $admin-colour !important;}
+.text-trust-admin-dark{ color: darken($admin-colour, 10%) !important;}
+.text-trust-admin-light{ color: lighten($admin-colour, 10%) !important;}
+
+.text-trust-admin-2{ color: $admin-colour-2 !important;}
+.text-trust-admin-2-dark{ color: darken($admin-colour-2, 10%) !important;}
+.text-trust-admin-2-light{ color: lighten($admin-colour-2, 10%) !important;}
