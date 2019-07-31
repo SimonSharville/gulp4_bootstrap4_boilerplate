@@ -5,13 +5,13 @@
   }
   .multi-column-2-client, .multi-column-3-client, .multi-column-4-client {
     column-gap: 30px;
-    column-rule: 1px solid $client;
+    column-rule: 1px solid $user-colour;
     column-rule-width: 1px;
   }
   
   .multi-column-2-admin, .multi-column-3-admin, .multi-column-4-admin {
     column-gap: 30px;
-    column-rule: 1px solid $admin;
+    column-rule: 1px solid $admin-colour;
     column-rule-width: 1px;
   }
   

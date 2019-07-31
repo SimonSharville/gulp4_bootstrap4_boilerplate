@@ -18,14 +18,14 @@ label {
 
 .form-control:focus {
   color: $text;
-  border-color: $client;
-  box-shadow: 0 0 0 0.1rem $client;
+  border-color: $user-colour;
+  box-shadow: 0 0 0 0.1rem $user-colour;
 }
 
 .custom-select:focus {
-  border-color: $client;
+  border-color: $user-colour;
     outline: 0;
-  box-shadow: 0 0 0 0.1rem $client;
+  box-shadow: 0 0 0 0.1rem $user-colour;
 }
 
 // Form Group adjustments =======================
@@ -90,7 +90,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  background-color: $client;
+  background-color: $user-colour;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -5px;
@@ -113,7 +113,7 @@ input[type=range]::-moz-range-thumb {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  background-color: $client;
+  background-color: $user-colour;
   cursor: pointer;
 }
 input[type=range]::-ms-track {
@@ -142,7 +142,7 @@ input[type=range]::-ms-thumb {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  background-color: $client;
+  background-color: $user-colour;
   cursor: pointer;
   height: 10px;
 }
@@ -206,16 +206,16 @@ input[type=range]:focus::-ms-fill-upper {
 .input-group>.input-group-prepend>.input-group-text{
   border-radius: 2rem 0 0 2rem;
   padding: 0 $sard-spacer-8;
-  background-color: $client;
+  background-color: $user-colour;
   color: white;
-  border-color: $client;
+  border-color: $user-colour;
 }
 .input-group>.input-group-append>.input-group-text{
   border-radius: 0 2rem 2rem 0;
   padding: 0 $sard-spacer-8;
-  background-color: $client;
+  background-color: $user-colour;
   color: white;
-  border-color: $client;
+  border-color: $user-colour;
 }
 
 .input-group>.input-group-prepend,
@@ -245,13 +245,13 @@ input[type=range]:focus::-ms-fill-upper {
 
 .custom-file-label{
   border-radius: 0 1.1rem 1.1rem 0;
-  border: 2px solid $client;
+  border: 2px solid $user-colour;
 }
 .custom-file-label::after{
   top: -1px;
   right: -1px;
   border-radius: 0 1.1rem 1.1rem 0;
-  background-color: $client;
+  background-color: $user-colour;
   color: white;
   border: none;
 }
@@ -281,7 +281,7 @@ input[type=range]:focus::-ms-fill-upper {
   & label input{ display: none;}
   & input.form-control{
     background-color: white;
-    border-color: $client;
+    border-color: $user-colour;
     cursor: default;
     &:focus{
       box-shadow: none;

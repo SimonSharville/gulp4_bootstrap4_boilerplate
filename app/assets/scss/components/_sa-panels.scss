@@ -124,25 +124,25 @@
 
 
 .panel.panel-primary{
-  background-color: $client;
+  background-color: $user-colour;
   & .panel-heading, .panel-header, .panel-footer{
-    background-color: darken($client, 15%);
+    background-color: darken($user-colour, 15%);
     & .text-muted { 
-      color: darken($client, 25%) !important;
+      color: darken($user-colour, 25%) !important;
     }
   }
 }
 .panel.panel-primary.outline{
   background-color: white;
-  border-color: $client;
+  border-color: $user-colour;
   & .panel-body.border-bottom{
-    border-color: $client!important;
+    border-color: $user-colour!important;
   }
   & .panel-body.border-top{
-    border-color: $client!important;
+    border-color: $user-colour!important;
   }
   & .panel-body hr{
-    border-color: $client;
+    border-color: $user-colour;
   }
 }
 

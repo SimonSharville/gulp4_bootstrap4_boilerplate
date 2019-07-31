@@ -1,8 +1,8 @@
 // Links
 
-$text-link:             darken($client, 5%);
-$text-link-hover:       darken($client, 15%);
-$text-link-active:      darken($client, 20%);
+$text-link:             darken($user-colour, 5%);
+$text-link-hover:       darken($user-colour, 15%);
+$text-link-active:      darken($user-colour, 20%);
 
 a{
   transition: all 320ms ease;
@@ -51,10 +51,10 @@ legend,
   a{
     &:focus,
     &:hover{
-      color: lighten($client, 5%);
+      color: lighten($user-colour, 5%);
     } 
     &:active{
-      color: lighten($client, 10%);
+      color: lighten($user-colour, 10%);
     }
   }
 } 

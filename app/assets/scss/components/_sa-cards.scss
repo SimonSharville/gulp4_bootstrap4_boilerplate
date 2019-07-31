@@ -116,25 +116,25 @@
 
 
 .card.card-primary{
-  background-color: $client;
+  background-color: $user-colour;
   & .card-header, .card-footer{
-    background-color: darken($client, 15%);
+    background-color: darken($user-colour, 15%);
     & .text-muted { 
-      color: darken($client, 25%) !important;
+      color: darken($user-colour, 25%) !important;
     }
   }
 }
 .card.card-primary.outline{
   background-color: white;
-  border-color: $client;
+  border-color: $user-colour;
   & .card-body.border-bottom{
-    border-color: $client!important;
+    border-color: $user-colour!important;
   }
   & .card-body.border-top{
-    border-color: $client!important;
+    border-color: $user-colour!important;
   }
   & .card-body hr{
-    border-color: $client;
+    border-color: $user-colour;
   }
 }
 

@@ -1,7 +1,7 @@
 // Checkboxes ===================================
 
 $checkbox-background:           white;
-$checkbox-background-checked:   $client;
+$checkbox-background-checked:   $user-colour;
 $checkbox-background-border:    $sa-grey-08;
 $checkbox-background-disabled:  transparent;
 
@@ -845,7 +845,7 @@ sa-radio-buttons-after .position-static{
 }
 
 .sa-inferred-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
-  color: $admin-2;
+  color: $admin-colour-2;
 }
 
 .sa-inferred-checkbox input[type="checkbox"][disabled] + label span.checkbox::before{

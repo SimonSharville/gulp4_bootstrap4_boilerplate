@@ -126,8 +126,8 @@
 // ================================================================================================
 // This need to come at the base - Colours for each theme.
 //             theme          first-colour    second-colour     third-colour      fourth-colour
-@include theme(theme-user,    $client,        $client-dark,     $client-2,        $client-2-dark  );
-@include theme(theme-admin,   $admin,         $admin-dark,      $admin-2,         $admin-2-dark   );
+@include theme(theme-user,    $user-colour,        $user-colour-dark,     $user-colour-2,        $user-colour-2-dark  );
+@include theme(theme-admin,   $admin-colour,         $admin-colour-dark,      $admin-colour-2,         $admin-colour-2-dark   );
 
 @include theme(theme-trust,   $theme-test,    $theme-test-dark, $theme-test-2,    $theme-test-2-dark );
 
