@@ -12,7 +12,7 @@
   font-size: .75rem;
 }
 
-.btn-client{
+.btn-user{
   background-color: $user-colour;
   color: white!important;
   &:hover { 
@@ -27,7 +27,7 @@
   }
 }
 
-.btn-client-dark{
+.btn-user-dark{
   background-color: $user-colour-dark;
   color: white!important;
   &:hover { 
@@ -42,7 +42,7 @@
   }
 }
 
-.btn-client-2{
+.btn-user-2{
   background-color: $user-colour-2;
   color: white!important;
   &:hover { 
@@ -57,7 +57,7 @@
   }
 }
 
-.btn-client-2-dark{
+.btn-user-2-dark{
   background-color: $user-colour-2-dark;
   color: white!important;
   &:hover { 

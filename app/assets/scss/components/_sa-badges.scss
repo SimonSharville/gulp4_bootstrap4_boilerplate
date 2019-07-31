@@ -5,8 +5,26 @@ a.badge{
   color: white;
 }
 
+.badge{
+  color: white;
+}
+
 a.badge.badge-warning,
 a.badge.badge-light
 {
   color: $text;
+}
+
+.badge.badge-warning,
+.badge.badge-light
+{
+  color: $text;
+}
+
+.badge.badge-user{ 
+  background-color: $user-colour; 
+}
+
+.badge.badge-admin{ 
+  background-color: $admin-colour; 
 }

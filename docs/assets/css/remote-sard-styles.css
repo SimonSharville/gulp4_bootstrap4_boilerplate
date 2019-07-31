@@ -13802,9 +13802,26 @@ a.badge {
   color: white;
 }
 
+.badge {
+  color: white;
+}
+
 a.badge.badge-warning,
 a.badge.badge-light {
   color: #211F0F;
+}
+
+.badge.badge-warning,
+.badge.badge-light {
+  color: #211F0F;
+}
+
+.badge.badge-user {
+  background-color: #00B2B2;
+}
+
+.badge.badge-admin {
+  background-color: #E50073;
 }
 
 .breadcrumb {
@@ -13843,74 +13860,74 @@ a.badge.badge-light {
   font-size: .75rem;
 }
 
-.btn-client {
+.btn-user {
   background-color: #00B2B2;
   color: white !important;
 }
 
-.btn-client:hover {
+.btn-user:hover {
   background-color: #009999;
 }
 
-.btn-client:active {
+.btn-user:active {
   background-color: #007f7f;
 }
 
-.btn-client:focus, .btn-client.focus {
+.btn-user:focus, .btn-user.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 178, 178, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(0, 178, 178, 0.25);
 }
 
-.btn-client-dark {
+.btn-user-dark {
   background-color: #007f7f;
   color: white !important;
 }
 
-.btn-client-dark:hover {
+.btn-user-dark:hover {
   background-color: #006666;
 }
 
-.btn-client-dark:active {
+.btn-user-dark:active {
   background-color: #004c4c;
 }
 
-.btn-client-dark:focus, .btn-client-dark.focus {
+.btn-user-dark:focus, .btn-user-dark.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 127, 127, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(0, 127, 127, 0.25);
 }
 
-.btn-client-2 {
+.btn-user-2 {
   background-color: #004D4D;
   color: white !important;
 }
 
-.btn-client-2:hover {
+.btn-user-2:hover {
   background-color: #003434;
 }
 
-.btn-client-2:active {
+.btn-user-2:active {
   background-color: #001a1a;
 }
 
-.btn-client-2:focus, .btn-client-2.focus {
+.btn-user-2:focus, .btn-user-2.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 77, 77, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(0, 77, 77, 0.25);
 }
 
-.btn-client-2-dark {
+.btn-user-2-dark {
   background-color: #001a1a;
   color: white !important;
 }
 
-.btn-client-2-dark:hover {
+.btn-user-2-dark:hover {
   background-color: #000101;
 }
 
-.btn-client-2-dark:active {
+.btn-user-2-dark:active {
   background-color: black;
 }
 
-.btn-client-2-dark:focus, .btn-client-2-dark.focus {
+.btn-user-2-dark:focus, .btn-user-2-dark.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 26, 26, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(0, 26, 26, 0.25);
 }
