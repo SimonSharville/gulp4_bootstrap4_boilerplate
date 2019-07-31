@@ -13855,9 +13855,21 @@ a.badge.badge-light {
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
+.btn:visited {
+  color: white;
+}
+
 .btn-xs {
   padding: 0 0.375rem;
   font-size: .75rem;
+}
+
+.btn-warning:visited, .btn-light:visited {
+  color: #211F0F;
+}
+
+.btn-link:visited {
+  color: #00B2B2;
 }
 
 .btn-user {

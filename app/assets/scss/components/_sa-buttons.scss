@@ -5,11 +5,26 @@
 .btn{
   border-radius: 2rem;
   box-shadow: $sa-box-shadow;
+  &:visited { 
+    color: white; 
+  }
 }
 
 .btn-xs{
   padding: 0 $sard-spacer-6;
   font-size: .75rem;
+}
+
+.btn-warning, .btn-light{
+  &:visited { 
+    color: $text; 
+  }
+}
+
+.btn-link{
+  &:visited { 
+    color: $link-color; 
+  }
 }
 
 .btn-user{
