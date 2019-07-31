@@ -14193,32 +14193,177 @@ a.badge.badge-light {
 }
 
 .card.card-primary {
-  background-color: #00B2B2;
+  background-color: #999966;
 }
 
 .card.card-primary .card-header, .card.card-primary .card-footer {
-  background-color: #006666;
+  background-color: #6b6b47;
 }
 
 .card.card-primary .card-header .text-muted, .card.card-primary .card-footer .text-muted {
-  color: #003333 !important;
+  color: #4d4d33 !important;
 }
 
 .card.card-primary.outline {
   background-color: white;
-  border-color: #00B2B2;
+  border-color: #999966;
 }
 
 .card.card-primary.outline .card-body.border-bottom {
-  border-color: #00B2B2 !important;
+  border-color: #999966 !important;
 }
 
 .card.card-primary.outline .card-body.border-top {
-  border-color: #00B2B2 !important;
+  border-color: #999966 !important;
 }
 
 .card.card-primary.outline .card-body hr {
+  border-color: #999966;
+}
+
+.card.card-secondary {
+  background-color: #996633;
+}
+
+.card.card-secondary .card-header, .card.card-secondary .card-footer {
+  background-color: #604020;
+}
+
+.card.card-secondary .card-header .text-muted, .card.card-secondary .card-footer .text-muted {
+  color: #392613 !important;
+}
+
+.card.card-secondary.outline {
+  background-color: white;
+  border-color: #996633;
+}
+
+.card.card-secondary.outline .card-body.border-bottom {
+  border-color: #996633 !important;
+}
+
+.card.card-secondary.outline .card-body.border-top {
+  border-color: #996633 !important;
+}
+
+.card.card-secondary.outline .card-body hr {
+  border-color: #996633;
+}
+
+.card.card-user {
+  background-color: #00B2B2;
+}
+
+.card.card-user .card-header, .card.card-user .card-footer {
+  background-color: #006666;
+}
+
+.card.card-user .card-header .text-muted, .card.card-user .card-footer .text-muted {
+  color: #003333 !important;
+}
+
+.card.card-user.outline {
+  background-color: white;
   border-color: #00B2B2;
+}
+
+.card.card-user.outline .card-body.border-bottom {
+  border-color: #00B2B2 !important;
+}
+
+.card.card-user.outline .card-body.border-top {
+  border-color: #00B2B2 !important;
+}
+
+.card.card-user.outline .card-body hr {
+  border-color: #00B2B2;
+}
+
+.card.card-user-2 {
+  background-color: #004D4D;
+}
+
+.card.card-user-2 .card-header, .card.card-user-2 .card-footer {
+  background-color: #000101;
+}
+
+.card.card-user-2 .card-header .text-muted, .card.card-user-2 .card-footer .text-muted {
+  color: black !important;
+}
+
+.card.card-user-2.outline {
+  background-color: white;
+  border-color: #004D4D;
+}
+
+.card.card-user-2.outline .card-body.border-bottom {
+  border-color: #004D4D !important;
+}
+
+.card.card-user-2.outline .card-body.border-top {
+  border-color: #004D4D !important;
+}
+
+.card.card-user-2.outline .card-body hr {
+  border-color: #004D4D;
+}
+
+.card.card-admin {
+  background-color: #E50073;
+}
+
+.card.card-admin .card-header, .card.card-admin .card-footer {
+  background-color: #99004d;
+}
+
+.card.card-admin .card-header .text-muted, .card.card-admin .card-footer .text-muted {
+  color: #660033 !important;
+}
+
+.card.card-admin.outline {
+  background-color: white;
+  border-color: #E50073;
+}
+
+.card.card-admin.outline .card-body.border-bottom {
+  border-color: #E50073 !important;
+}
+
+.card.card-admin.outline .card-body.border-top {
+  border-color: #E50073 !important;
+}
+
+.card.card-admin.outline .card-body hr {
+  border-color: #E50073;
+}
+
+.card.card-admin-2 {
+  background-color: #990099;
+}
+
+.card.card-admin-2 .card-header, .card.card-admin-2 .card-footer {
+  background-color: #4d004d;
+}
+
+.card.card-admin-2 .card-header .text-muted, .card.card-admin-2 .card-footer .text-muted {
+  color: #1a001a !important;
+}
+
+.card.card-admin-2.outline {
+  background-color: white;
+  border-color: #990099;
+}
+
+.card.card-admin-2.outline .card-body.border-bottom {
+  border-color: #990099 !important;
+}
+
+.card.card-admin-2.outline .card-body.border-top {
+  border-color: #990099 !important;
+}
+
+.card.card-admin-2.outline .card-body hr {
+  border-color: #990099;
 }
 
 .card.card-success {

@@ -116,6 +116,53 @@
 
 
 .card.card-primary{
+  background-color: $trust-colour;
+  & .card-header, .card-footer{
+    background-color: darken($trust-colour, 15%);
+    & .text-muted { 
+      color: darken($trust-colour, 25%) !important;
+    }
+  }
+}
+.card.card-primary.outline{
+  background-color: white;
+  border-color: $trust-colour;
+  & .card-body.border-bottom{
+    border-color: $trust-colour!important;
+  }
+  & .card-body.border-top{
+    border-color: $trust-colour!important;
+  }
+  & .card-body hr{
+    border-color: $trust-colour;
+  }
+}
+
+.card.card-secondary{
+  background-color: $trust-colour-2;
+  & .card-header, .card-footer{
+    background-color: darken($trust-colour-2, 15%);
+    & .text-muted { 
+      color: darken($trust-colour-2, 25%) !important;
+    }
+  }
+}
+.card.card-secondary.outline{
+  background-color: white;
+  border-color: $trust-colour-2;
+  & .card-body.border-bottom{
+    border-color: $trust-colour-2!important;
+  }
+  & .card-body.border-top{
+    border-color: $trust-colour-2!important;
+  }
+  & .card-body hr{
+    border-color: $trust-colour-2;
+  }
+}
+
+
+.card.card-user{
   background-color: $user-colour;
   & .card-header, .card-footer{
     background-color: darken($user-colour, 15%);
@@ -124,7 +171,7 @@
     }
   }
 }
-.card.card-primary.outline{
+.card.card-user.outline{
   background-color: white;
   border-color: $user-colour;
   & .card-body.border-bottom{
@@ -137,6 +184,76 @@
     border-color: $user-colour;
   }
 }
+
+.card.card-user-2{
+  background-color: $user-colour-2;
+  & .card-header, .card-footer{
+    background-color: darken($user-colour-2, 15%);
+    & .text-muted { 
+      color: darken($user-colour-2, 25%) !important;
+    }
+  }
+}
+.card.card-user-2.outline{
+  background-color: white;
+  border-color: $user-colour-2;
+  & .card-body.border-bottom{
+    border-color: $user-colour-2!important;
+  }
+  & .card-body.border-top{
+    border-color: $user-colour-2!important;
+  }
+  & .card-body hr{
+    border-color: $user-colour-2;
+  }
+}
+
+.card.card-admin{
+  background-color: $admin-colour;
+  & .card-header, .card-footer{
+    background-color: darken($admin-colour, 15%);
+    & .text-muted { 
+      color: darken($admin-colour, 25%) !important;
+    }
+  }
+}
+.card.card-admin.outline{
+  background-color: white;
+  border-color: $admin-colour;
+  & .card-body.border-bottom{
+    border-color: $admin-colour!important;
+  }
+  & .card-body.border-top{
+    border-color: $admin-colour!important;
+  }
+  & .card-body hr{
+    border-color: $admin-colour;
+  }
+}
+
+.card.card-admin-2{
+  background-color: $admin-colour-2;
+  & .card-header, .card-footer{
+    background-color: darken($admin-colour-2, 15%);
+    & .text-muted { 
+      color: darken($admin-colour-2, 25%) !important;
+    }
+  }
+}
+.card.card-admin-2.outline{
+  background-color: white;
+  border-color: $admin-colour-2;
+  & .card-body.border-bottom{
+    border-color: $admin-colour-2!important;
+  }
+  & .card-body.border-top{
+    border-color: $admin-colour-2!important;
+  }
+  & .card-body hr{
+    border-color: $admin-colour-2;
+  }
+}
+
 
 .card.card-success{
   background-color: $success;
