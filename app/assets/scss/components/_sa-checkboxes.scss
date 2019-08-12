@@ -448,7 +448,7 @@ sa-radio-buttons-after .position-static{
 
 .sa-toggle-switch span.slider::after {
   left: 4px;
-  top:1px;
+  // top:1px;
   width: 17px;
   height: 17px;
   border-radius: 10px;
@@ -504,7 +504,7 @@ sa-radio-buttons-after .position-static{
 
 .sa-toggle-switch-right span.slider::after {
   right: 24px;
-  top:1px;
+  // top:1px;
   width: 17px;
   height: 17px;
   border-radius: 10px;
@@ -569,7 +569,7 @@ sa-radio-buttons-after .position-static{
 
 .sa-radio-toggle span.radio::after {
   left: 4px;
-  top:1px;
+  // top:1px;
   width: 17px;
   height: 17px;
   border-radius: 10px;
@@ -634,7 +634,7 @@ sa-radio-buttons-after .position-static{
 }
 .sa-radio-toggle-right span.radio::after {
   right: 24px;
-  top:1px;
+  // top:1px;
   width: 17px;
   height: 17px;
   border-radius: 10px;
@@ -694,7 +694,7 @@ sa-radio-buttons-after .position-static{
     border-radius: 50%;
     position: absolute;
     left: 0.2em;
-    top: 0.15em;
+    top: 0.2em;
     transition: 0.15s, margin-left 0.15s;
   }
 
@@ -759,7 +759,7 @@ sa-radio-buttons-after .position-static{
     border-radius: 50%;
     position: absolute;
     left: 0.2em;
-    top: 0.15em;
+    top: 0.2em;
     transition: left 0.15s, margin-left 0.15s;
   }
 
