@@ -199,7 +199,8 @@ input[type=range]:focus::-ms-fill-upper {
 //   font-size: 12px;
 //   line-height: 1.5;
 // }
-.input-group>.custom-file+.custom-file, .input-group>.custom-file+.custom-select, .input-group>.custom-file+.form-control, .input-group>.custom-select+.custom-file, .input-group>.custom-select+.custom-select, .input-group>.custom-select+.form-control, .input-group>.form-control+.custom-file, .input-group>.form-control+.custom-select, .input-group>.form-control+.form-control, .input-group>.form-control-plaintext+.custom-file, .input-group>.form-control-plaintext+.custom-select, .input-group>.form-control-plaintext+.form-control {
+.input-group>.custom-file+.custom-file, .input-group>.custom-file+.custom-select, .input-group>.custom-file+.form-control, .input-group>.custom-select+.custom-file, .input-group>.custom-select+.custom-select, .input-group>.custom-select+.form-control, .input-group>.form-control+.custom-file, .input-group>.form-control+.custom-select, .input-group>.form-control+.form-control, .input-group>.form-control-plaintext+.custom-file, .input-group>.form-control-plaintext+.custom-select, .input-group>.form-control-plaintext+.form-control,
+.input-group>.input-group-prepend+textarea {
   margin-left: -2px; // Overrides BS Default of 1px
 }
 
@@ -229,9 +230,20 @@ input[type=range]:focus::-ms-fill-upper {
 .input-group>.input-group-prepend + input{
   border-left:none;
 }
+.input-group-prepend{
+  z-index: 2;
+}
 .input-group-append{
   margin-left: -1px;
   z-index: 2;
+}
+
+.input-group > .form-control,
+.input-group > .custom-select{
+  &:focus{
+    border-color: $user-colour;
+    box-shadow: none;
+  }
 }
 
 // Custom Select ================================
@@ -242,6 +254,11 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 // BS File Imputs and Uploads ===================
+
+.input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.form-control:focus{
+  border-color: darken($user-colour, 10%);
+  box-shadow: none!important;
+}
 
 .custom-file-label{
   border-radius: 0 1.1rem 1.1rem 0;
@@ -262,7 +279,17 @@ input[type=range]:focus::-ms-fill-upper {
 .custom-file-label{
   border-radius: 1.1rem ;
 }
-
+.custom-file-input~.custom-file-label::after{
+  background-color: $user-colour;
+}
+.custom-file-input:hover~.custom-file-label::after{
+  background-color: darken($user-colour, 5%);
+  border-color: darken($user-colour, 5%);
+}
+.custom-file-input:focus~.custom-file-label::after{
+  background-color: darken($user-colour, 10%);
+  border-color: darken($user-colour, 10%);
+}
 
 // SARD File Imputs and Uploads =================
 
