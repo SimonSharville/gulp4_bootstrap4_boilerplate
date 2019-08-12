@@ -185,6 +185,31 @@ $btn-default: $sa-grey-14;
 
 // SARD Buttons
 
+.btn-save{
+  background-color: $success;
+  color: white!important;
+  &:hover { 
+    background-color: darken($success, 5%); 
+  }
+  &:active {
+    background-color: darken($success, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($success, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f0c7" ;
+    color:white;
+    font-size: 1.45rem;
+    line-height: 1rem;
+    position: relative;
+    top: 3.5px;
+    left: -5px;
+  }
+}
+
 .btn-submit{
   background-color: $success;
   color: white!important;
@@ -415,6 +440,7 @@ $btn-default: $sa-grey-14;
     left: -3px;
   }
 }
+.btn-save,
 .btn-sign-in,
 .btn-sign-out,
 .btn-submit,
@@ -435,6 +461,7 @@ $btn-default: $sa-grey-14;
     right: -10px;
   }
 }
+.btn-save,
 .btn-sign-in,
 .btn-sign-out,
 .btn-submit,
@@ -455,6 +482,7 @@ $btn-default: $sa-grey-14;
     right: -5px;
   }
 }
+.btn-save,
 .btn-sign-in,
 .btn-sign-out,
 .btn-submit,
@@ -560,6 +588,22 @@ $btn-default: $sa-grey-14;
   }
   &.btn-download{
     padding: 0 $sard-spacer-3;
+  }
+}
+
+.btn-save{
+  padding-left: $sard-spacer-14;
+  &.btn-lg{
+    padding-left: $sard-spacer-18;
+  }
+  &.btn-sm{
+    padding-left: $sard-spacer-12;
+  }
+  &.btn-xs{
+    padding-left: $sard-spacer-8;
+  }
+  &.btn-notext{
+    padding-left: $sard-spacer-7;
   }
 }
 

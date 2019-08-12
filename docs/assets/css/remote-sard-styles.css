@@ -14061,6 +14061,35 @@ a.badge.badge-light {
   box-shadow: 0 0 0 0.2rem rgba(97, 94, 92, 0.25);
 }
 
+.btn-save {
+  background-color: #359E00;
+  color: white !important;
+}
+
+.btn-save:hover {
+  background-color: #2c8500;
+}
+
+.btn-save:active {
+  background-color: #246b00;
+}
+
+.btn-save:focus, .btn-save.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+}
+
+.btn-save::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0c7";
+  color: white;
+  font-size: 1.45rem;
+  line-height: 1rem;
+  position: relative;
+  top: 3.5px;
+  left: -5px;
+}
+
 .btn-submit {
   background-color: #359E00;
   color: white !important;
@@ -14329,7 +14358,9 @@ a.badge.badge-light {
   left: -3px;
 }
 
-.btn-sign-in.btn-lg::before, .btn-group-lg > .btn-sign-in.btn::before,
+.btn-save.btn-lg::before, .btn-group-lg > .btn-save.btn::before,
+.btn-sign-in.btn-lg::before,
+.btn-group-lg > .btn-sign-in.btn::before,
 .btn-sign-out.btn-lg::before,
 .btn-group-lg > .btn-sign-out.btn::before,
 .btn-submit.btn-lg::before,
@@ -14351,7 +14382,9 @@ a.badge.badge-light {
   left: -8px;
 }
 
-.btn-sign-in.btn-lg::after, .btn-group-lg > .btn-sign-in.btn::after,
+.btn-save.btn-lg::after, .btn-group-lg > .btn-save.btn::after,
+.btn-sign-in.btn-lg::after,
+.btn-group-lg > .btn-sign-in.btn::after,
 .btn-sign-out.btn-lg::after,
 .btn-group-lg > .btn-sign-out.btn::after,
 .btn-submit.btn-lg::after,
@@ -14373,7 +14406,9 @@ a.badge.badge-light {
   right: -10px;
 }
 
-.btn-sign-in.btn-sm::before, .btn-group-sm > .btn-sign-in.btn::before,
+.btn-save.btn-sm::before, .btn-group-sm > .btn-save.btn::before,
+.btn-sign-in.btn-sm::before,
+.btn-group-sm > .btn-sign-in.btn::before,
 .btn-sign-out.btn-sm::before,
 .btn-group-sm > .btn-sign-out.btn::before,
 .btn-submit.btn-sm::before,
@@ -14395,7 +14430,9 @@ a.badge.badge-light {
   left: -3px;
 }
 
-.btn-sign-in.btn-sm::after, .btn-group-sm > .btn-sign-in.btn::after,
+.btn-save.btn-sm::after, .btn-group-sm > .btn-save.btn::after,
+.btn-sign-in.btn-sm::after,
+.btn-group-sm > .btn-sign-in.btn::after,
 .btn-sign-out.btn-sm::after,
 .btn-group-sm > .btn-sign-out.btn::after,
 .btn-submit.btn-sm::after,
@@ -14417,6 +14454,7 @@ a.badge.badge-light {
   right: -5px;
 }
 
+.btn-save.btn-xs::before,
 .btn-sign-in.btn-xs::before,
 .btn-sign-out.btn-xs::before,
 .btn-submit.btn-xs::before,
@@ -14431,6 +14469,7 @@ a.badge.badge-light {
   left: -2px;
 }
 
+.btn-save.btn-xs::after,
 .btn-sign-in.btn-xs::after,
 .btn-sign-out.btn-xs::after,
 .btn-submit.btn-xs::after,
@@ -14551,6 +14590,26 @@ a.badge.badge-light {
 
 .btn-notext.btn-xs.btn-download {
   padding: 0 0.1875rem;
+}
+
+.btn-save {
+  padding-left: 0.875rem;
+}
+
+.btn-save.btn-lg, .btn-group-lg > .btn-save.btn {
+  padding-left: 1.125rem;
+}
+
+.btn-save.btn-sm, .btn-group-sm > .btn-save.btn {
+  padding-left: 0.75rem;
+}
+
+.btn-save.btn-xs {
+  padding-left: 0.5rem;
+}
+
+.btn-save.btn-notext {
+  padding-left: 0.4375rem;
 }
 
 .btn.btn-outline-light {
