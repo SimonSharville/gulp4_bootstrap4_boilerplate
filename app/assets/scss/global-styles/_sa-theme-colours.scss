@@ -160,11 +160,11 @@
     .text-trust-admin-2-dark{ color: darken($admin-colour-2, 10%) !important;}
     .text-trust-admin-2-light{ color: lighten($admin-colour-2, 10%) !important;}
 
-    // Badges ===============
+    // Badges ---------------
     .badge.badge-trust{ 
       background-color: $theme-primary; 
     }
-    // Buttons ==============
+    // Buttons --------------
     .btn-trust{
       background-color: $theme-primary;
       &:hover { 
@@ -188,7 +188,7 @@
       }
     }
 
-    // Range Inputs =========
+    // Range Inputs ---------
     input[type=range]::-webkit-slider-thumb {
       background-color: $theme-primary;
     }
@@ -199,7 +199,7 @@
       background-color: $theme-primary;
     }
 
-    // Checkboxes etc =======
+    // Checkboxes etc -------
     .sa-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
       background-color: $theme-primary;
       border-color: $theme-primary;
@@ -215,7 +215,7 @@
       border-color: $theme-primary;
     }
 
-    // Radios
+    // Radios ---------------
     .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
       background-color: $theme-primary;
       border-color: $theme-primary;
@@ -240,7 +240,7 @@
       border-color: $theme-primary;
     }
 
-    // Toggles
+    // Toggles --------------
     .sa-toggle-switch:hover span.slider::before{
       border-color: $theme-primary;
     }
@@ -292,7 +292,7 @@
       border-color: $theme-primary;
     }
 
-    // File uploads =========
+    // File uploads ---------
     .input-group.sa-file-upload{
       & input.form-control{
         border-color: $theme-primary;
@@ -311,7 +311,7 @@
       }
     }
 
-    // Input Groups =========
+    // Input Groups ---------
     .input-group>.input-group-prepend>.input-group-text{
       background-color: $theme-primary;
       border-color: $theme-primary;
@@ -328,7 +328,7 @@
       }
     }
 
-    // BS File Imputs and Uploads ===================
+    // BS File Imputs and Uploads ---------------
     .input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.form-control:focus{
       border-color: darken($theme-primary, 10%);
     }
@@ -349,6 +349,29 @@
     .custom-file-input:focus~.custom-file-label::after{
       background-color: darken($theme-primary, 10%);
       border-color: darken($theme-primary, 10%);
+    }
+
+    // List Groups ----------
+    a.list-group-item-trust{
+      color: darken($theme-primary, 0%);
+      border-color: darken($theme-primary, 0%);
+      &:visited{
+        color: darken($theme-primary, 0%);
+      }
+      &:focus,
+      &:hover{
+        color: darken($theme-primary, 20%);
+        background-color: $sa-grey-04;
+      } 
+      &:active{
+        color: darken($theme-primary, 20%);
+        background-color: $sa-grey-04;
+      }
+      &.active{
+        color: white;
+        background-color: darken($theme-primary, 0%);
+      }
+      & small.text-muted{ color: $sa-grey-10!important;}
     }
     
     

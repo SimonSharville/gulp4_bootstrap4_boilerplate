@@ -81,7 +81,6 @@
 
 a.list-group-item-action{
   color: darken($user-colour, 0%);
-  // border: 1px solid white!important;
   &:visited{
     color: darken($user-colour, 0%);
   }
@@ -96,6 +95,30 @@ a.list-group-item-action{
   }
   & small.text-muted{ color: $sa-grey-10!important;}
 }
+
+
+a.list-group-item-trust{
+  color: darken($user-colour, 0%);
+  border-color: darken($user-colour, 0%);
+  &:visited{
+    color: darken($user-colour, 0%);
+  }
+  &:focus,
+  &:hover{
+    color: darken($user-colour, 20%);
+    background-color: $sa-grey-03;
+  } 
+  &:active{
+    color: darken($user-colour, 20%);
+    background-color: $sa-grey-04;
+  }
+  &.active{
+    color: white;
+    background-color: darken($user-colour, 0%);
+  }
+  & small.text-muted{ color: $sa-grey-10!important;}
+}
+
 
 
 a.list-group-item-primary{
