@@ -20,7 +20,9 @@ a.badge.badge-light
 {
   color: $text;
 }
-
+.badge.badge-trust{ 
+  background-color: $user-colour; 
+}
 .badge.badge-user{ 
   background-color: $user-colour; 
 }

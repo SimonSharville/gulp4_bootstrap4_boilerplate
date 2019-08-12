@@ -13816,6 +13816,10 @@ a.badge.badge-light {
   color: #211F0F;
 }
 
+.badge.badge-trust {
+  background-color: #00B2B2;
+}
+
 .badge.badge-user {
   background-color: #00B2B2;
 }
@@ -18363,6 +18367,10 @@ hr.white {
   color: #cc00cc !important;
 }
 
+.theme-user .badge.badge-trust {
+  background-color: #00B2B2;
+}
+
 .theme-user .btn-trust {
   background-color: #00B2B2;
 }
@@ -18805,6 +18813,10 @@ hr.white {
   color: #cc00cc !important;
 }
 
+.theme-admin .badge.badge-trust {
+  background-color: #E50073;
+}
+
 .theme-admin .btn-trust {
   background-color: #E50073;
 }
@@ -19245,6 +19257,10 @@ hr.white {
 
 .theme-trust .text-trust-admin-2-light {
   color: #cc00cc !important;
+}
+
+.theme-trust .badge.badge-trust {
+  background-color: #999966;
 }
 
 .theme-trust .btn-trust {

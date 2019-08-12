@@ -160,7 +160,10 @@
     .text-trust-admin-2-dark{ color: darken($admin-colour-2, 10%) !important;}
     .text-trust-admin-2-light{ color: lighten($admin-colour-2, 10%) !important;}
 
-
+    // Badges ===============
+    .badge.badge-trust{ 
+      background-color: $theme-primary; 
+    }
     // Buttons ==============
     .btn-trust{
       background-color: $theme-primary;
