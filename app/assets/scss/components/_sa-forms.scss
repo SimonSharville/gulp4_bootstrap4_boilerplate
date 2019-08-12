@@ -282,6 +282,7 @@ input[type=range]:focus::-ms-fill-upper {
   & input.form-control{
     background-color: white;
     border-color: $user-colour;
+    height: calc(1.5em + .75rem + 3px);
     cursor: default;
     &:focus{
       box-shadow: none;
@@ -291,6 +292,16 @@ input[type=range]:focus::-ms-fill-upper {
     box-shadow: none; 
     border-width: .125rem; // 2px
     padding-top: 0.3125rem; // 5px
+    background-color: $user-colour;
+    border-color: $user-colour;
+    &:hover { 
+      background-color: darken($user-colour, 5%); 
+      border-color: darken($user-colour, 5%); 
+    }
+    &:active {
+      background-color: darken($user-colour, 10%);
+      border-color: darken($user-colour, 10%);
+    }
   }
 }
 
