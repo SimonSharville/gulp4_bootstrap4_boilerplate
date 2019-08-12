@@ -14057,6 +14057,418 @@ a.badge.badge-light {
   box-shadow: 0 0 0 0.2rem rgba(97, 94, 92, 0.25);
 }
 
+.btn-submit {
+  background-color: #359E00;
+  color: white !important;
+}
+
+.btn-submit:hover {
+  background-color: #2c8500;
+}
+
+.btn-submit:active {
+  background-color: #246b00;
+}
+
+.btn-submit:focus, .btn-submit.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+}
+
+.btn-submit::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  color: white;
+  font-size: 1.45rem;
+  line-height: 1rem;
+  position: relative;
+  top: 3.5px;
+  left: -5px;
+}
+
+.btn-cancel {
+  background-color: #BF0000;
+  color: white !important;
+}
+
+.btn-cancel:hover {
+  background-color: #a60000;
+}
+
+.btn-cancel:active {
+  background-color: #8c0000;
+}
+
+.btn-cancel:focus, .btn-cancel.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 0, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(191, 0, 0, 0.25);
+}
+
+.btn-cancel::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f057";
+  color: white;
+  font-size: 1.45rem;
+  line-height: 1rem;
+  position: relative;
+  top: 3.5px;
+  left: -5px;
+}
+
+.btn-back {
+  background-color: #615E5C;
+  color: white !important;
+}
+
+.btn-back:hover {
+  background-color: #545150;
+}
+
+.btn-back:active {
+  background-color: #474543;
+}
+
+.btn-back:focus, .btn-back.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(97, 94, 92, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(97, 94, 92, 0.25);
+}
+
+.btn-back::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f060";
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  position: relative;
+  top: 2px;
+  left: -3px;
+}
+
+.btn-forward {
+  background-color: #615E5C;
+  color: white !important;
+}
+
+.btn-forward:hover {
+  background-color: #545150;
+}
+
+.btn-forward:active {
+  background-color: #474543;
+}
+
+.btn-forward:focus, .btn-forward.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(97, 94, 92, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(97, 94, 92, 0.25);
+}
+
+.btn-forward::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f061";
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  position: relative;
+  top: 2px;
+  right: -6px;
+}
+
+.btn-download {
+  background-color: #00a0e0;
+  color: white !important;
+}
+
+.btn-download:hover {
+  background-color: #008ec7;
+}
+
+.btn-download:active {
+  background-color: #007cad;
+}
+
+.btn-download:focus, .btn-download.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 160, 224, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 160, 224, 0.25);
+}
+
+.btn-download::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f381";
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  position: relative;
+  top: 2px;
+  left: -3px;
+}
+
+.btn-upload {
+  background-color: #00a0e0;
+  color: white !important;
+}
+
+.btn-upload:hover {
+  background-color: #008ec7;
+}
+
+.btn-upload:active {
+  background-color: #007cad;
+}
+
+.btn-upload:focus, .btn-upload.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 160, 224, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 160, 224, 0.25);
+}
+
+.btn-upload::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f382";
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  position: relative;
+  top: 2px;
+  left: -3px;
+}
+
+.btn-refresh {
+  background-color: #359E00;
+  color: white !important;
+}
+
+.btn-refresh:hover {
+  background-color: #2c8500;
+}
+
+.btn-refresh:active {
+  background-color: #246b00;
+}
+
+.btn-refresh:focus, .btn-refresh.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+}
+
+.btn-refresh::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f2f1";
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  position: relative;
+  top: 2px;
+  left: -3px;
+}
+
+.btn-submit.btn-lg::before, .btn-group-lg > .btn-submit.btn::before,
+.btn-cancel.btn-lg::before,
+.btn-group-lg > .btn-cancel.btn::before,
+.btn-back.btn-lg::before,
+.btn-group-lg > .btn-back.btn::before,
+.btn-forward.btn-lg::before,
+.btn-group-lg > .btn-forward.btn::before,
+.btn-download.btn-lg::before,
+.btn-group-lg > .btn-download.btn::before,
+.btn-upload.btn-lg::before,
+.btn-group-lg > .btn-upload.btn::before,
+.btn-refresh.btn-lg::before,
+.btn-group-lg > .btn-refresh.btn::before {
+  font-size: 1.7rem;
+  top: 4px;
+  left: -8px;
+}
+
+.btn-submit.btn-lg::after, .btn-group-lg > .btn-submit.btn::after,
+.btn-cancel.btn-lg::after,
+.btn-group-lg > .btn-cancel.btn::after,
+.btn-back.btn-lg::after,
+.btn-group-lg > .btn-back.btn::after,
+.btn-forward.btn-lg::after,
+.btn-group-lg > .btn-forward.btn::after,
+.btn-download.btn-lg::after,
+.btn-group-lg > .btn-download.btn::after,
+.btn-upload.btn-lg::after,
+.btn-group-lg > .btn-upload.btn::after,
+.btn-refresh.btn-lg::after,
+.btn-group-lg > .btn-refresh.btn::after {
+  font-size: 1.7rem;
+  top: 4px;
+  right: -10px;
+}
+
+.btn-submit.btn-sm::before, .btn-group-sm > .btn-submit.btn::before,
+.btn-cancel.btn-sm::before,
+.btn-group-sm > .btn-cancel.btn::before,
+.btn-back.btn-sm::before,
+.btn-group-sm > .btn-back.btn::before,
+.btn-forward.btn-sm::before,
+.btn-group-sm > .btn-forward.btn::before,
+.btn-download.btn-sm::before,
+.btn-group-sm > .btn-download.btn::before,
+.btn-upload.btn-sm::before,
+.btn-group-sm > .btn-upload.btn::before,
+.btn-refresh.btn-sm::before,
+.btn-group-sm > .btn-refresh.btn::before {
+  font-size: 1.1rem;
+  top: 2px;
+  left: -3px;
+}
+
+.btn-submit.btn-sm::after, .btn-group-sm > .btn-submit.btn::after,
+.btn-cancel.btn-sm::after,
+.btn-group-sm > .btn-cancel.btn::after,
+.btn-back.btn-sm::after,
+.btn-group-sm > .btn-back.btn::after,
+.btn-forward.btn-sm::after,
+.btn-group-sm > .btn-forward.btn::after,
+.btn-download.btn-sm::after,
+.btn-group-sm > .btn-download.btn::after,
+.btn-upload.btn-sm::after,
+.btn-group-sm > .btn-upload.btn::after,
+.btn-refresh.btn-sm::after,
+.btn-group-sm > .btn-refresh.btn::after {
+  font-size: 1.1rem;
+  top: 2px;
+  right: -5px;
+}
+
+.btn-submit.btn-xs::before,
+.btn-cancel.btn-xs::before,
+.btn-back.btn-xs::before,
+.btn-forward.btn-xs::before,
+.btn-download.btn-xs::before,
+.btn-upload.btn-xs::before,
+.btn-refresh.btn-xs::before {
+  font-size: 0.8rem;
+  top: 1px;
+  left: -2px;
+}
+
+.btn-submit.btn-xs::after,
+.btn-cancel.btn-xs::after,
+.btn-back.btn-xs::after,
+.btn-forward.btn-xs::after,
+.btn-download.btn-xs::after,
+.btn-upload.btn-xs::after,
+.btn-refresh.btn-xs::after {
+  font-size: 0.8rem;
+  top: 1px;
+  right: -5px;
+}
+
+.btn-notext {
+  padding: 0.375rem;
+}
+
+.btn-notext::before {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext::after {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext.btn-forward {
+  padding: 0.375rem 0.5rem;
+}
+
+.btn-notext.btn-back {
+  padding: 0.375rem 0.5rem;
+}
+
+.btn-notext.btn-refresh {
+  padding: 0.375rem 0.5rem;
+}
+
+.btn-notext.btn-lg, .btn-group-lg > .btn-notext.btn {
+  padding: 0.4375rem;
+}
+
+.btn-notext.btn-lg::before, .btn-group-lg > .btn-notext.btn::before {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext.btn-lg::after, .btn-group-lg > .btn-notext.btn::after {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext.btn-lg.btn-forward, .btn-group-lg > .btn-notext.btn-forward.btn {
+  padding: 0.4375rem 0.5625rem;
+}
+
+.btn-notext.btn-lg.btn-back, .btn-group-lg > .btn-notext.btn-back.btn {
+  padding: 0.4375rem 0.5625rem;
+}
+
+.btn-notext.btn-sm, .btn-group-sm > .btn-notext.btn {
+  padding: 0.25rem;
+}
+
+.btn-notext.btn-sm::before, .btn-group-sm > .btn-notext.btn::before {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext.btn-sm::after, .btn-group-sm > .btn-notext.btn::after {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext.btn-sm.btn-forward, .btn-group-sm > .btn-notext.btn-forward.btn {
+  padding: 0.25rem 0.375rem;
+}
+
+.btn-notext.btn-sm.btn-back, .btn-group-sm > .btn-notext.btn-back.btn {
+  padding: 0.25rem 0.375rem;
+}
+
+.btn-notext.btn-xs {
+  padding: 0 0.125rem;
+}
+
+.btn-notext.btn-xs::before {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext.btn-xs::after {
+  left: 0;
+  right: 0;
+}
+
+.btn-notext.btn-xs.btn-cancel {
+  padding: 0 0.1875rem;
+}
+
+.btn-notext.btn-xs.btn-forward {
+  padding: 0 0.1875rem;
+}
+
+.btn-notext.btn-xs.btn-back {
+  padding: 0 0.1875rem;
+}
+
+.btn-notext.btn-xs.btn-refresh {
+  padding: 0 0.1875rem;
+}
+
+.btn-notext.btn-xs.btn-upload {
+  padding: 0 0.1875rem;
+}
+
+.btn-notext.btn-xs.btn-download {
+  padding: 0 0.1875rem;
+}
+
 .btn.btn-outline-light {
   color: #C7C4C2;
   border-color: #C7C4C2;
