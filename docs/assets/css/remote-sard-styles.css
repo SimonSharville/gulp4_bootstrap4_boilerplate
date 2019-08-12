@@ -18361,6 +18361,114 @@ hr.white {
   background-color: #00B2B2;
 }
 
+.theme-user .sa-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
+  background-color: #00B2B2;
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-checkbox-after input[type="checkbox"]:checked + label span.checkbox::after {
+  background-color: #00B2B2;
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-checkbox:hover span.checkbox::before,
+.theme-user .sa-checkbox-after:hover span.checkbox::after {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
+  background-color: #00B2B2;
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:after {
+  border-color: rgba(0, 178, 178, 0.5);
+  background-color: rgba(0, 178, 178, 0.5);
+}
+
+.theme-user .sa-radio-buttons-after input[type="radio"]:checked + .radio-button:after {
+  color: #0B8;
+  background-color: #00B2B2;
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:after {
+  border-color: rgba(0, 178, 178, 0.5);
+  background-color: rgba(0, 178, 178, 0.5);
+  cursor: not-allowed;
+}
+
+.theme-user .sa-radio-buttons:hover .radio-button:after,
+.theme-user .sa-radio-buttons-after:hover .radio-button:after {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-toggle-switch:hover span.slider::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-toggle-switch input[type="radio"]:checked + label span.slider::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::after {
+  background-color: #00B2B2;
+}
+
+.theme-user .sa-toggle-switch-right:hover span.slider::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::after {
+  background-color: #00B2B2;
+}
+
+.theme-user .sa-radio-toggle:hover span.radio::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-radio-toggle input[type="radio"]:checked + label span.radio::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-radio-toggle input[type="radio"]:checked + label span.radio::after {
+  background-color: #00B2B2;
+}
+
+.theme-user .sa-radio-toggle-right:hover span.radio::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::before {
+  border-color: #00B2B2;
+}
+
+.theme-user .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::after {
+  background-color: #00B2B2;
+}
+
+.theme-user .toggle-check-text:hover {
+  border-color: #00B2B2;
+}
+
+.theme-user .toggle-check-input:checked ~ .toggle-check-text {
+  background: #00B2B2;
+  border-color: #00B2B2;
+}
+
+.theme-user .toggle-check-text:hover {
+  border-color: #00B2B2;
+}
+
+.theme-user .toggle-check-input:checked ~ .toggle-check-text {
+  background: #00B2B2;
+  border-color: #00B2B2;
+}
+
 .theme-admin ::-webkit-scrollbar-thumb {
   background-color: #E50073;
 }
@@ -18634,6 +18742,114 @@ hr.white {
   background-color: #E50073;
 }
 
+.theme-admin .sa-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
+  background-color: #E50073;
+  border-color: #E50073;
+}
+
+.theme-admin .sa-checkbox-after input[type="checkbox"]:checked + label span.checkbox::after {
+  background-color: #E50073;
+  border-color: #E50073;
+}
+
+.theme-admin .sa-checkbox:hover span.checkbox::before,
+.theme-admin .sa-checkbox-after:hover span.checkbox::after {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
+  background-color: #E50073;
+  border-color: #E50073;
+}
+
+.theme-admin .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:after {
+  border-color: rgba(229, 0, 115, 0.5);
+  background-color: rgba(229, 0, 115, 0.5);
+}
+
+.theme-admin .sa-radio-buttons-after input[type="radio"]:checked + .radio-button:after {
+  color: #0B8;
+  background-color: #E50073;
+  border-color: #E50073;
+}
+
+.theme-admin .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:after {
+  border-color: rgba(229, 0, 115, 0.5);
+  background-color: rgba(229, 0, 115, 0.5);
+  cursor: not-allowed;
+}
+
+.theme-admin .sa-radio-buttons:hover .radio-button:after,
+.theme-admin .sa-radio-buttons-after:hover .radio-button:after {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-toggle-switch:hover span.slider::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-toggle-switch input[type="radio"]:checked + label span.slider::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::after {
+  background-color: #E50073;
+}
+
+.theme-admin .sa-toggle-switch-right:hover span.slider::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::after {
+  background-color: #E50073;
+}
+
+.theme-admin .sa-radio-toggle:hover span.radio::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-radio-toggle input[type="radio"]:checked + label span.radio::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-radio-toggle input[type="radio"]:checked + label span.radio::after {
+  background-color: #E50073;
+}
+
+.theme-admin .sa-radio-toggle-right:hover span.radio::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::before {
+  border-color: #E50073;
+}
+
+.theme-admin .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::after {
+  background-color: #E50073;
+}
+
+.theme-admin .toggle-check-text:hover {
+  border-color: #E50073;
+}
+
+.theme-admin .toggle-check-input:checked ~ .toggle-check-text {
+  background: #E50073;
+  border-color: #E50073;
+}
+
+.theme-admin .toggle-check-text:hover {
+  border-color: #E50073;
+}
+
+.theme-admin .toggle-check-input:checked ~ .toggle-check-text {
+  background: #E50073;
+  border-color: #E50073;
+}
+
 .theme-trust ::-webkit-scrollbar-thumb {
   background-color: #999966;
 }
@@ -18905,6 +19121,114 @@ hr.white {
 
 .theme-trust input[type=range]::-ms-thumb {
   background-color: #999966;
+}
+
+.theme-trust .sa-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
+  background-color: #999966;
+  border-color: #999966;
+}
+
+.theme-trust .sa-checkbox-after input[type="checkbox"]:checked + label span.checkbox::after {
+  background-color: #999966;
+  border-color: #999966;
+}
+
+.theme-trust .sa-checkbox:hover span.checkbox::before,
+.theme-trust .sa-checkbox-after:hover span.checkbox::after {
+  border-color: #999966;
+}
+
+.theme-trust .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
+  background-color: #999966;
+  border-color: #999966;
+}
+
+.theme-trust .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:after {
+  border-color: rgba(153, 153, 102, 0.5);
+  background-color: rgba(153, 153, 102, 0.5);
+}
+
+.theme-trust .sa-radio-buttons-after input[type="radio"]:checked + .radio-button:after {
+  color: #0B8;
+  background-color: #999966;
+  border-color: #999966;
+}
+
+.theme-trust .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:after {
+  border-color: rgba(153, 153, 102, 0.5);
+  background-color: rgba(153, 153, 102, 0.5);
+  cursor: not-allowed;
+}
+
+.theme-trust .sa-radio-buttons:hover .radio-button:after,
+.theme-trust .sa-radio-buttons-after:hover .radio-button:after {
+  border-color: #999966;
+}
+
+.theme-trust .sa-toggle-switch:hover span.slider::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-toggle-switch input[type="radio"]:checked + label span.slider::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::after {
+  background-color: #999966;
+}
+
+.theme-trust .sa-toggle-switch-right:hover span.slider::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::after {
+  background-color: #999966;
+}
+
+.theme-trust .sa-radio-toggle:hover span.radio::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-radio-toggle input[type="radio"]:checked + label span.radio::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-radio-toggle input[type="radio"]:checked + label span.radio::after {
+  background-color: #999966;
+}
+
+.theme-trust .sa-radio-toggle-right:hover span.radio::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::before {
+  border-color: #999966;
+}
+
+.theme-trust .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::after {
+  background-color: #999966;
+}
+
+.theme-trust .toggle-check-text:hover {
+  border-color: #999966;
+}
+
+.theme-trust .toggle-check-input:checked ~ .toggle-check-text {
+  background: #999966;
+  border-color: #999966;
+}
+
+.theme-trust .toggle-check-text:hover {
+  border-color: #999966;
+}
+
+.theme-trust .toggle-check-input:checked ~ .toggle-check-text {
+  background: #999966;
+  border-color: #999966;
 }
 
 /*# sourceMappingURL=remote-sard-styles.css.map */

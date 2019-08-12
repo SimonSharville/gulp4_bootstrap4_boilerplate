@@ -195,6 +195,99 @@
     input[type=range]::-ms-thumb {
       background-color: $theme-primary;
     }
+
+    // Checkboxes etc =======
+    .sa-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
+      background-color: $theme-primary;
+      border-color: $theme-primary;
+    }
+    .sa-checkbox-after input[type="checkbox"]:checked + label span.checkbox::after {
+      background-color: $theme-primary;
+      border-color: $theme-primary;
+    }
+
+    // Hover effect
+    .sa-checkbox:hover span.checkbox::before,
+    .sa-checkbox-after:hover span.checkbox::after{
+      border-color: $theme-primary;
+    }
+
+    // Radios
+    .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
+      background-color: $theme-primary;
+      border-color: $theme-primary;
+    }
+    .sa-radio-buttons input[type="radio"]:disabled:checked + .radio-button:after{
+      border-color: mix($checkbox-background-disabled, $theme-primary, 50%);
+      background-color: mix($checkbox-background-disabled, $theme-primary, 50%);
+    }
+    .sa-radio-buttons-after input[type="radio"]:checked + .radio-button:after {
+      color:#0B8;
+      background-color: $theme-primary;
+      border-color: $theme-primary;
+    }
+    .sa-radio-buttons-after input[type="radio"]:disabled:checked + .radio-button:after{
+      border-color: mix($checkbox-background-disabled, $theme-primary, 50%);
+      background-color: mix($checkbox-background-disabled, $theme-primary, 50%);
+      cursor: not-allowed;
+    }
+    // Hover effect
+    .sa-radio-buttons:hover .radio-button:after,
+    .sa-radio-buttons-after:hover .radio-button:after{
+      border-color: $theme-primary;
+    }
+
+    // Toggles
+    .sa-toggle-switch:hover span.slider::before{
+      border-color: $theme-primary;
+    }
+    .sa-toggle-switch input[type="radio"]:checked + label span.slider::before{
+      border-color: $theme-primary;
+    }
+    .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::after {
+      background-color: $theme-primary;
+    }
+    .sa-toggle-switch-right:hover span.slider::before{
+      border-color: $theme-primary;
+    }
+    .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before{
+      border-color: $theme-primary;
+    }
+    .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::after {
+      background-color: $theme-primary;
+    }
+    .sa-radio-toggle:hover span.radio::before{
+      border-color: $theme-primary;
+    }
+    .sa-radio-toggle input[type="radio"]:checked + label span.radio::before{
+      border-color: $theme-primary;
+    }
+    .sa-radio-toggle input[type="radio"]:checked + label span.radio::after {
+      background-color: $theme-primary;
+    }
+    .sa-radio-toggle-right:hover span.radio::before{
+      border-color: $theme-primary;
+    }
+    .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::before{
+      border-color: $theme-primary;
+    }
+    .sa-radio-toggle-right input[type="radio"]:checked + label span.radio::after {
+      background-color: $theme-primary;
+    }
+    .toggle-check-text:hover{
+      border-color: $theme-primary;
+    }
+    .toggle-check-input:checked ~ .toggle-check-text {
+      background: $theme-primary;
+      border-color: $theme-primary;
+    }
+    .toggle-check-text:hover{
+      border-color: $theme-primary;
+    }
+  .toggle-check-input:checked ~ .toggle-check-text {
+      background: $theme-primary;
+      border-color: $theme-primary;
+    }
     
   } // End Theme Name ===========================
   // ============================================
