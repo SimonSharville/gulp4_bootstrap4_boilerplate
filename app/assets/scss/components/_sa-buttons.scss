@@ -201,13 +201,63 @@ $btn-default: $sa-grey-14;
   &::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f058" ;
-    // padding-right: $link-icon-padding ;
     color:white;
     font-size: 1.45rem;
     line-height: 1rem;
     position: relative;
     top: 3.5px;
     left: -5px;
+  }
+}
+.btn-sign-in{
+  background-color: $success;
+  color: white!important;
+  &:hover { 
+    background-color: darken($success, 5%); 
+  }
+  &:active {
+    background-color: darken($success, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($success, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f2f6" ;
+    color:white;
+    font-size: 1.45rem;
+    font-weight: 900;
+    line-height: 1rem;
+    position: relative;
+    top: 3.5px;
+    left: -5px;
+  }
+}
+
+.btn-sign-out{
+  background-color: $success;
+  color: white!important;
+  &:hover { 
+    background-color: darken($success, 5%); 
+  }
+  &:active {
+    background-color: darken($success, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($success, .25);
+  }
+  &::after{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f2f5" ;
+    color:white;
+    font-size: 1.45rem;
+    font-weight: 900;
+    line-height: 1rem;
+    position: relative;
+    top: 3.5px;
+    right: -6px;
   }
 }
 
@@ -227,7 +277,6 @@ $btn-default: $sa-grey-14;
   &::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f057" ;
-    // padding-right: $link-icon-padding ;
     color:white;
     font-size: 1.45rem;
     line-height: 1rem;
@@ -253,7 +302,6 @@ $btn-default: $sa-grey-14;
   &::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f060" ;
-    // padding-right: $link-icon-padding ;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
@@ -280,7 +328,6 @@ $btn-default: $sa-grey-14;
   &::after{
     font-family: "Font Awesome 5 Free"; 
     content: "\f061" ;
-    // padding-right: $link-icon-padding ;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
@@ -307,7 +354,6 @@ $btn-default: $sa-grey-14;
   &::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f381" ;
-    // padding-right: $link-icon-padding ;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
@@ -334,7 +380,6 @@ $btn-default: $sa-grey-14;
   &::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f382" ;
-    // padding-right: $link-icon-padding ;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
@@ -361,7 +406,6 @@ $btn-default: $sa-grey-14;
   &::before{
     font-family: "Font Awesome 5 Free"; 
   content: "\f2f1" ;
-    // padding-right: $link-icon-padding ;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
@@ -371,7 +415,8 @@ $btn-default: $sa-grey-14;
     left: -3px;
   }
 }
-
+.btn-sign-in,
+.btn-sign-out,
 .btn-submit,
 .btn-cancel,
 .btn-back,
@@ -390,6 +435,8 @@ $btn-default: $sa-grey-14;
     right: -10px;
   }
 }
+.btn-sign-in,
+.btn-sign-out,
 .btn-submit,
 .btn-cancel,
 .btn-back,
@@ -408,6 +455,8 @@ $btn-default: $sa-grey-14;
     right: -5px;
   }
 }
+.btn-sign-in,
+.btn-sign-out,
 .btn-submit,
 .btn-cancel,
 .btn-back,

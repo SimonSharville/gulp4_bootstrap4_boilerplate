@@ -14086,6 +14086,66 @@ a.badge.badge-light {
   left: -5px;
 }
 
+.btn-sign-in {
+  background-color: #359E00;
+  color: white !important;
+}
+
+.btn-sign-in:hover {
+  background-color: #2c8500;
+}
+
+.btn-sign-in:active {
+  background-color: #246b00;
+}
+
+.btn-sign-in:focus, .btn-sign-in.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+}
+
+.btn-sign-in::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f2f6";
+  color: white;
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1rem;
+  position: relative;
+  top: 3.5px;
+  left: -5px;
+}
+
+.btn-sign-out {
+  background-color: #359E00;
+  color: white !important;
+}
+
+.btn-sign-out:hover {
+  background-color: #2c8500;
+}
+
+.btn-sign-out:active {
+  background-color: #246b00;
+}
+
+.btn-sign-out:focus, .btn-sign-out.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+}
+
+.btn-sign-out::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f2f5";
+  color: white;
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1rem;
+  position: relative;
+  top: 3.5px;
+  right: -6px;
+}
+
 .btn-cancel {
   background-color: #BF0000;
   color: white !important;
@@ -14265,7 +14325,11 @@ a.badge.badge-light {
   left: -3px;
 }
 
-.btn-submit.btn-lg::before, .btn-group-lg > .btn-submit.btn::before,
+.btn-sign-in.btn-lg::before, .btn-group-lg > .btn-sign-in.btn::before,
+.btn-sign-out.btn-lg::before,
+.btn-group-lg > .btn-sign-out.btn::before,
+.btn-submit.btn-lg::before,
+.btn-group-lg > .btn-submit.btn::before,
 .btn-cancel.btn-lg::before,
 .btn-group-lg > .btn-cancel.btn::before,
 .btn-back.btn-lg::before,
@@ -14283,7 +14347,11 @@ a.badge.badge-light {
   left: -8px;
 }
 
-.btn-submit.btn-lg::after, .btn-group-lg > .btn-submit.btn::after,
+.btn-sign-in.btn-lg::after, .btn-group-lg > .btn-sign-in.btn::after,
+.btn-sign-out.btn-lg::after,
+.btn-group-lg > .btn-sign-out.btn::after,
+.btn-submit.btn-lg::after,
+.btn-group-lg > .btn-submit.btn::after,
 .btn-cancel.btn-lg::after,
 .btn-group-lg > .btn-cancel.btn::after,
 .btn-back.btn-lg::after,
@@ -14301,7 +14369,11 @@ a.badge.badge-light {
   right: -10px;
 }
 
-.btn-submit.btn-sm::before, .btn-group-sm > .btn-submit.btn::before,
+.btn-sign-in.btn-sm::before, .btn-group-sm > .btn-sign-in.btn::before,
+.btn-sign-out.btn-sm::before,
+.btn-group-sm > .btn-sign-out.btn::before,
+.btn-submit.btn-sm::before,
+.btn-group-sm > .btn-submit.btn::before,
 .btn-cancel.btn-sm::before,
 .btn-group-sm > .btn-cancel.btn::before,
 .btn-back.btn-sm::before,
@@ -14319,7 +14391,11 @@ a.badge.badge-light {
   left: -3px;
 }
 
-.btn-submit.btn-sm::after, .btn-group-sm > .btn-submit.btn::after,
+.btn-sign-in.btn-sm::after, .btn-group-sm > .btn-sign-in.btn::after,
+.btn-sign-out.btn-sm::after,
+.btn-group-sm > .btn-sign-out.btn::after,
+.btn-submit.btn-sm::after,
+.btn-group-sm > .btn-submit.btn::after,
 .btn-cancel.btn-sm::after,
 .btn-group-sm > .btn-cancel.btn::after,
 .btn-back.btn-sm::after,
@@ -14337,6 +14413,8 @@ a.badge.badge-light {
   right: -5px;
 }
 
+.btn-sign-in.btn-xs::before,
+.btn-sign-out.btn-xs::before,
 .btn-submit.btn-xs::before,
 .btn-cancel.btn-xs::before,
 .btn-back.btn-xs::before,
@@ -14349,6 +14427,8 @@ a.badge.badge-light {
   left: -2px;
 }
 
+.btn-sign-in.btn-xs::after,
+.btn-sign-out.btn-xs::after,
 .btn-submit.btn-xs::after,
 .btn-cancel.btn-xs::after,
 .btn-back.btn-xs::after,
