@@ -1,0 +1,159 @@
+// List Styles ==================================
+
+ul{
+  padding: 0;
+}
+
+ol{
+  padding-left:30px
+}
+
+// Bullet Points ========================
+ul{
+  list-style: none;
+  text-indent: -16px; // Hanging bullet
+}
+
+ul li{
+  padding-left: 16px; // Hanging bullet
+  padding-bottom: 5px;
+  // line-height:18px;
+}
+ul.flat{margin-bottom: 0;}
+
+ul li::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f111" ; // Circle
+  font-weight: 900;
+  padding-right:7px;
+  font-size: 10px;
+  position:relative;
+  top: -2px;
+}
+
+ul.open-bullet li::before,
+ul li.open-bullet::before{
+  font-weight: 100;
+}
+
+
+// No Bullets ===================================
+ul.no-bullet{ // Overrides indents when no bullet
+  text-indent: 0; 
+  li{ 
+    padding-left: 0; 
+  }
+  li:before{ // Removes Bullets
+    content: none;
+    display:none;
+  }
+}
+
+.no-bullet li:before{ // Removes Bullets
+  content: none;
+  display:none;
+}
+
+.no-bullet ul li:before{ // Removes Bullets
+  content: none;
+  display:none;
+}
+
+li.no-bullet:before{ // Removes Bullets
+  content: none;
+  display:none;
+}
+
+// List Groups ==================================
+ul.list-group{
+  text-indent: 0;
+}
+ul.no-bullet.list-group{ // Overrides indents when no bullet
+  text-indent: 0; 
+  li.list-group-item{ 
+    padding-left: 0.5em; 
+  }
+}
+ul.no-bullet.list-group li:before{ // Removes Bullets
+  content: none;
+  display:none;
+}
+
+//  With Icons ==================================
+
+// ul li{
+//   .glyphicon, .fa{ 
+//     padding: 0 5px 0 10px; // Overrides indents when Bullet
+//   }
+// }
+
+//  ul.no-bullet li{
+//   .glyphicon, .fa{ 
+//     padding: 0 5px 0 0; // Overrides indents when no bullet
+//   }
+// }
+
+// ul.indent.no-bullet{
+//   padding-left: 20px; // Overrides indents when no bullet
+// }
+
+// Navbar & Dropdowns ===========================
+
+ul.navbar-nav{ // Overrides indents when no bullet
+  text-indent: 0; 
+  li{ 
+    padding: 0; 
+  }
+  li:before{ // Removes Bullets
+    content: none;
+    display:none;
+  }
+  ul{ text-indent: 0; }
+}
+
+ul.nav{ // Overrides indents when no bullet
+  text-indent: 0; 
+  li{ 
+    padding: 0; 
+  }
+  li:before{ // Removes Bullets
+    content: none;
+    display:none;
+  }
+  ul{ text-indent: 0; }
+}
+
+ul.pagination{ // Overrides indents when no bullet
+  text-indent: 0; 
+  li{ 
+    padding: 0; 
+  }
+  li:before{ // Removes Bullets
+    content: none;
+    display:none;
+  }
+  ul{ text-indent: 0; }
+}
+
+// Colouring ====================================
+
+ul.trust-list{
+  li::before{ color: $user-colour; }
+}
+ul{
+  li.trust-list::before{ color: $user-colour; }
+}
+
+ul.user-list{
+  li::before{ color: $user-colour; }
+}
+ul{
+  li.user-list::before{ color: $user-colour; }
+}
+
+ul.admin-list{
+  li::before{ color: $admin-colour; }
+}
+ul{
+  li.admin-list::before{ color: $admin-colour; }
+}

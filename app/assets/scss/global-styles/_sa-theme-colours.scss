@@ -373,6 +373,14 @@
       }
       & small.text-muted{ color: $sa-grey-10!important;}
     }
+
+    // List styles ----------
+    ul.trust-list{
+      li::before{ color: $theme-primary; }
+    }
+    ul{
+      li.trust-list::before{ color: $theme-primary; }
+    }
     
     
   } // End Theme Name ===========================

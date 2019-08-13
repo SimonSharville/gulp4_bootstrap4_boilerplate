@@ -31,6 +31,7 @@ Sard UI
 <a class='dropdown-item' href='../sard-ui/sa-icons.html'>Icons</a>
 <a class='dropdown-item' href='../sard-ui/sa-colours.html'>Colours</a>
 <a class='dropdown-item' href='../sard-ui/sa-links.html'>Links</a>
+<a class='dropdown-item' href='../sard-ui/sa-lists.html'>Lists</a>
 <a class='dropdown-item' href='../sard-ui/sa-perforations.html'>Perforations and Dividers</a>
 </div>
 </li>
@@ -2903,7 +2904,7 @@ Reset
 </div>
 </div>
 <div class='row'>
-<div class='col-sm-6'>
+<div class='col-sm-4'>
 <div class='card card-sard'>
 <div class='card-header'>Basic example</div>
 <div class='card-body'>
@@ -2917,11 +2918,31 @@ Reset
 </div>
 </div>
 </div>
-<div class='col-sm-6'>
+<div class='col-sm-4'>
 <div class='card card-sard'>
 <div class='card-header'>Flush example</div>
 <div class='card-body'>
 <ul class='list-group list-group-flush'>
+<li class='list-group-item'>Cras justo odio</li>
+<li class='list-group-item'>Dapibus ac facilisis in</li>
+<li class='list-group-item'>Morbi leo risus</li>
+<li class='list-group-item'>Porta ac consectetur ac</li>
+<li class='list-group-item'>Vestibulum at eros</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='col-sm-4'>
+<div class='card card-sard'>
+<div class='card-header'>List Group No Bullet</div>
+<div class='card-body'>
+<p>
+Add
+<code>.no-bullet</code>
+to
+<code>ul.list-group</code>
+</p>
+<ul class='list-group no-bullet'>
 <li class='list-group-item'>Cras justo odio</li>
 <li class='list-group-item'>Dapibus ac facilisis in</li>
 <li class='list-group-item'>Morbi leo risus</li>
@@ -2938,7 +2959,7 @@ Reset
 <div class='card card-sard'>
 <div class='card-header'>Horizontal</div>
 <div class='card-body'>
-<ul class='list-group list-group-horizontal'>
+<ul class='list-group no-bullet list-group-horizontal'>
 <li class='list-group-item'>Cras justo odio</li>
 <li class='list-group-item'>Dapibus ac facilisis in</li>
 <li class='list-group-item'>Morbi leo risus</li>
@@ -2950,7 +2971,7 @@ Reset
 <div class='card card-sard'>
 <div class='card-header'>Horizontal / Flush</div>
 <div class='card-body'>
-<ul class='list-group list-group-flush list-group-horizontal'>
+<ul class='list-group no-bullet list-group-flush list-group-horizontal'>
 <li class='list-group-item'>Cras justo odio</li>
 <li class='list-group-item'>Dapibus ac facilisis in</li>
 <li class='list-group-item'>Morbi leo risus</li>
@@ -2965,7 +2986,7 @@ Reset
 <div class='card card-sard'>
 <div class='card-header'>With badges</div>
 <div class='card-body'>
-<ul class='list-group'>
+<ul class='list-group no-bullet'>
 <li class='list-group-item d-flex justify-content-between align-items-center'>
 Cras justo odio
 <span class='badge badge-trust badge-pill'>14</span>
@@ -2986,7 +3007,7 @@ Morbi leo risus
 <div class='card card-sard'>
 <div class='card-header'>Flush</div>
 <div class='card-body'>
-<ul class='list-group list-group-flush'>
+<ul class='list-group no-bullet list-group-flush'>
 <li class='list-group-item d-flex justify-content-between align-items-center'>
 Cras justo odio
 <span class='badge badge-trust badge-pill'>14</span>
@@ -3127,8 +3148,9 @@ long content
 <li>List Item Three</li>
 </ul>
 <hr>
+<h6 class='base'>ul.no-bullet</h6>
 <ul class='no-bullet'>
-<li>ul.no-bullet</li>
+<li>List Item One</li>
 <li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
 <li>List Item Three</li>
 </ul>
