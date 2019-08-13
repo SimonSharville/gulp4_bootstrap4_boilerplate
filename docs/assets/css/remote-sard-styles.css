@@ -17285,7 +17285,101 @@ a.list-group-item-action.active:active {
 }
 
 .modal-dialog {
-  padding-top: 2.5rem;
+  padding-top: 3.5rem;
+}
+
+.modal-dialog.modal-dialog-centered {
+  padding-top: 0;
+}
+
+.modal-header .close {
+  background-color: white;
+  min-width: 30px;
+  width: 30px;
+  min-height: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+  margin: -24px -30px auto auto;
+  text-align: center;
+  opacity: 1;
+  border: 2px solid white;
+}
+
+.modal-header .close span {
+  font-size: 28px;
+  line-height: 28px;
+  color: #BF0000;
+}
+
+.modal-header .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+  background-color: #BF0000;
+}
+
+.modal-header .close:not(:disabled):not(.disabled):hover span {
+  color: white;
+  line-height: 26px;
+}
+
+.modal-content {
+  border-radius: 12px;
+  border: 2px solid white;
+}
+
+.modal-header {
+  background-color: #403D3D;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  min-height: 43px;
+  max-height: auto;
+  padding: 0.5rem 0.75rem;
+  font-size: 21px;
+  line-height: 21.3px;
+  color: white;
+}
+
+.modal-header h1.modal-title,
+.modal-header h2.modal-title,
+.modal-header h3.modal-title,
+.modal-header h4.modal-title,
+.modal-header h5.modal-title,
+.modal-header h6.modal-title {
+  padding: 0;
+  margin: 0;
+  padding-top: 1px;
+}
+
+.modal-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.575rem;
+  color: white;
+  padding-top: 1px;
+}
+
+.modal-body {
+  padding: 0.5rem 0.75rem;
+  padding-bottom: 0;
+}
+
+.modal-footer {
+  margin-top: 0px;
+  margin-left: -2px;
+  width: calc(100% + 4px);
+  padding: 0.5rem 0.75rem;
+  border-top: 1px solid #B5B0B0;
+}
+
+.modal-footer .btn, .modal-footer .btn + .btn {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.modal-dialog-scrollable .modal-content {
+  overflow: visible;
 }
 
 .navbar.fixed-top {
