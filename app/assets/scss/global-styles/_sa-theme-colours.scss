@@ -382,7 +382,26 @@
       li.trust-list::before{ color: $theme-primary; }
     }
     
-    
+    // Modal Trust ----------------------------------
+
+    .modal-trust .modal-header {
+      background-color: $theme-primary;
+    }
+
+    .modal-trust .modal-footer {
+      background-color: $theme-primary;
+    }
+
+    .modal-trust .modal-body a:hover {color: darken($theme-primary, 20%);}
+    .modal-trust .modal-body a:focus {color: darken($theme-primary, 25%)!important;}
+    .modal-trust .modal-body a:active {color: darken($theme-primary, 25%)!important;}
+
+    .modal-trust .modal-body hr{
+      border-color: $theme-primary;
+    }
+
+
+
   } // End Theme Name ===========================
   // ============================================
 

@@ -76,8 +76,12 @@
 }
 
 .modal-body{
-  @include modal-padding;
-  padding-bottom: 0;
+  padding: 0 $sard-spacer-12;
+  margin: $sard-spacer-8 0;
+}
+
+.modal-body p:last-of-type{
+  margin-bottom: $sard-spacer-8;
 }
 
 .modal-footer {
@@ -96,4 +100,380 @@
 // Scrollable
 .modal-dialog-scrollable .modal-content{
   overflow: visible; 
+}
+
+
+// SARD Colour Variations =======================
+
+// Modal Info -----------------------------------
+.modal-info .modal-content{
+  background-color: $sa-info;
+}
+
+.modal-info .modal-header {
+  background-color: darken($sa-info, 20%);
+  color: white;
+  border-bottom: none;
+}
+
+.modal-info .modal-footer {
+  border-color: darken($sa-info, 20%);
+  color: white;
+}
+.modal-info .modal-body h1,
+.modal-info .modal-body h2,
+.modal-info .modal-body h3,
+.modal-info .modal-body h4,
+.modal-info .modal-body h5,
+.modal-info .modal-body h6{
+  color:white;
+}
+
+.modal-info .modal-body ul li:before {
+  color: white;
+}
+
+.modal-info .modal-body a:link {color: white;}
+.modal-info .modal-body a:visited {color: white;}
+.modal-info .modal-body a:hover {color: darken($sa-info, 20%);}
+.modal-info .modal-body a:focus {color: darken($sa-info, 25%)!important;}
+.modal-info .modal-body a:active {color: darken($sa-info, 25%)!important;}
+
+.modal-info .btn-info { background-color: darken($sa-info, 20%);}
+.modal-info .btn-info:visited { background-color: darken($sa-info, 20%);}
+.modal-info .btn-info:hover { background-color: darken($sa-info, 25%); }
+.modal-info .btn-info:focus { background-color: darken($sa-info, 27%)!important;}
+.modal-info .btn-info:active,  { background-color: darken($sa-info, 28%)!important;}
+
+.modal-info .btn-success { background-color: darken($sa-success, 10%);}
+.modal-info .btn-success:visited { background-color: darken($sa-success, 10%);}
+.modal-info .btn-success:hover { background-color: darken($sa-success, 15%);}
+.modal-info .btn-success:focus { background-color: darken($sa-success, 17%)!important;}
+.modal-info .btn-success:active,  { background-color: darken($sa-success, 18%)!important;}
+
+.modal-info .btn-save { background-color: darken($sa-success, 10%);}
+.modal-info .btn-save:visited { background-color: darken($sa-success, 10%);}
+.modal-info .btn-save:hover { background-color: darken($sa-success, 15%);}
+.modal-info .btn-save:focus { background-color: darken($sa-success, 17%)!important;}
+.modal-info .btn-save:active,  { background-color: darken($sa-success, 18%)!important;}
+
+.modal-info .modal-body hr{
+  border-color: white;
+}
+
+.modal-info .modal-footer {
+  margin-left: 0px;
+  width: 100%;
+}
+
+.modal-info ::-webkit-scrollbar-thumb {
+  background-color: darken($sa-info, 20%)!important;
+}
+
+
+// Modal Trust ----------------------------------
+
+.modal-trust .modal-header {
+  background-color: $user-colour;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-trust .modal-footer {
+  background-color: $user-colour;
+  border-top: none;
+  color: white;
+}
+
+.modal-trust .modal-body a:link {color: white;}
+.modal-trust .modal-body a:visited {color: white;}
+.modal-trust .modal-body a:hover {color: darken($user-colour, 20%);}
+.modal-trust .modal-body a:focus {color: darken($user-colour, 25%)!important;}
+.modal-trust .modal-body a:active {color: darken($user-colour, 25%)!important;}
+
+.modal-trust .modal-footer .btn-info { 
+  background-color: darken($sa-info, 20%); 
+  border-color: darken($sa-info, 20%);
+}
+.modal-trust .modal-footer .btn-info:visited { 
+  background-color: darken($sa-info, 20%); 
+  border-color: darken($sa-info, 20%);
+}
+.modal-trust .modal-footer .btn-info:hover { 
+  background-color: darken($sa-info, 25%); 
+  border-color: darken($sa-info, 25%); 
+}
+.modal-trust .modal-footer .btn-info:focus { 
+  background-color: darken($sa-info, 27%)!important; 
+  border-color: darken($sa-info, 27%)!important;
+}
+.modal-trust .modal-footer .btn-info:active,  { 
+  background-color: darken($sa-info, 28%)!important; 
+  border-color: darken($sa-info, 28%)!important;
+}
+
+.modal-trust .modal-footer .btn-danger { 
+  background-color: darken($sa-danger, 10%);
+  border-color: darken($sa-danger, 10%); 
+}
+.modal-trust .modal-footer .btn-danger:visited { 
+  background-color: darken($sa-danger, 10%); 
+  border-color: darken($sa-danger, 10%); 
+}
+.modal-trust .modal-footer .btn-danger:hover { 
+  background-color: darken($sa-danger, 15%); 
+  border-color: darken($sa-danger, 15%); 
+}
+.modal-trust .modal-footer .btn-danger:focus { 
+  background-color: darken($sa-danger, 17%)!important; 
+  border-color: darken($sa-danger, 17%)!important; 
+}
+.modal-trust .modal-footer .btn-danger:active,  { 
+  background-color: darken($sa-danger, 18%)!important; 
+  border-color: darken($sa-danger, 18%)!important; 
+}
+
+.modal-trust .modal-footer .btn-success { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-trust .modal-footer .btn-success:visited { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-trust .modal-footer .btn-success:hover { 
+  background-color: darken($sa-success, 15%);
+  border-color: darken($sa-success, 15%);
+}
+.modal-trust .modal-footer .btn-success:focus { 
+  background-color: darken($sa-success, 17%)!important;
+  border-color: darken($sa-success, 17%)!important;
+}
+.modal-trust .modal-footer .btn-success:active,  { 
+  background-color: darken($sa-success, 18%)!important;
+  border-color: darken($sa-success, 18%)!important;
+}
+
+.modal-trust .modal-footer .btn-save { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-trust .modal-footer .btn-save:visited { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-trust .modal-footer .btn-save:hover { 
+  background-color: darken($sa-success, 15%);
+  border-color: darken($sa-success, 15%);
+}
+.modal-trust .modal-footer .btn-save:focus { 
+  background-color: darken($sa-success, 17%)!important;
+  border-color: darken($sa-success, 17%)!important;
+}
+.modal-trust .modal-footer .btn-save:active,  { 
+  background-color: darken($sa-success, 18%)!important;
+  border-color: darken($sa-success, 18%)!important;
+}
+
+.modal-trust .modal-body hr{
+  border-color: $user-colour;
+}
+
+.modal-trust .modal-footer {
+  margin-left: 0px;
+  width: 100%;
+}
+
+
+// Modal User ----------------------------------
+
+.modal-user .modal-header {
+  background-color: $user-colour;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-user .modal-footer {
+  background-color: $user-colour;
+  border-top: none;
+  color: white;
+}
+
+.modal-user .modal-body a:link {color: white;}
+.modal-user .modal-body a:visited {color: white;}
+.modal-user .modal-body a:hover {color: darken($user-colour, 20%);}
+.modal-user .modal-body a:focus {color: darken($user-colour, 25%)!important;}
+.modal-user .modal-body a:active {color: darken($user-colour, 25%)!important;}
+
+.modal-user .modal-footer .btn-info { 
+  background-color: darken($sa-info, 20%); 
+  border-color: darken($sa-info, 20%);
+}
+.modal-user .modal-footer .btn-info:visited { 
+  background-color: darken($sa-info, 20%); 
+  border-color: darken($sa-info, 20%);
+}
+.modal-user .modal-footer .btn-info:hover { 
+  background-color: darken($sa-info, 25%); 
+  border-color: darken($sa-info, 25%); 
+}
+.modal-user .modal-footer .btn-info:focus { 
+  background-color: darken($sa-info, 27%)!important; 
+  border-color: darken($sa-info, 27%)!important;
+}
+.modal-user .modal-footer .btn-info:active,  { 
+  background-color: darken($sa-info, 28%)!important; 
+  border-color: darken($sa-info, 28%)!important;
+}
+
+.modal-user .modal-footer .btn-success { background-color: darken($sa-success, 10%);}
+.modal-user .modal-footer .btn-success:visited { background-color: darken($sa-success, 10%);}
+.modal-user .modal-footer .btn-success:hover { background-color: darken($sa-success, 15%);}
+.modal-user .modal-footer .btn-success:focus { background-color: darken($sa-success, 17%)!important;}
+.modal-user .modal-footer .btn-success:active,  { background-color: darken($sa-success, 18%)!important;}
+
+.modal-user .modal-footer .btn-save { background-color: darken($sa-success, 10%);}
+.modal-user .modal-footer .btn-save:visited { background-color: darken($sa-success, 10%);}
+.modal-user .modal-footer .btn-save:hover { background-color: darken($sa-success, 15%);}
+.modal-user .modal-footer .btn-save:focus { background-color: darken($sa-success, 17%)!important;}
+.modal-user .modal-footer .btn-save:active,  { background-color: darken($sa-success, 18%)!important;}
+
+.modal-user .modal-body hr{
+  border-color: $user-colour;
+}
+
+.modal-user .modal-footer {
+  margin-left: 0px;
+  width: 100%;
+}
+
+.modal-user ::-webkit-scrollbar-thumb {
+  background-color: darken($user-colour, 20%)!important;
+}
+
+// Modal Admin ----------------------------------
+
+.modal-admin .modal-header {
+  background-color: $admin-colour;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-admin .modal-footer {
+  background-color: $admin-colour;
+  border-top: none;
+  color: white;
+}
+
+.modal-admin .modal-body a:link {color: white;}
+.modal-admin .modal-body a:visited {color: white;}
+.modal-admin .modal-body a:hover {color: darken($admin-colour, 20%);}
+.modal-admin .modal-body a:focus {color: darken($admin-colour, 25%)!important;}
+.modal-admin .modal-body a:active {color: darken($admin-colour, 25%)!important;}
+
+.modal-admin .modal-footer .btn-info { 
+  background-color: darken($sa-info, 20%); 
+  border-color: darken($sa-info, 20%);
+}
+.modal-admin .modal-footer .btn-info:visited { 
+  background-color: darken($sa-info, 20%); 
+  border-color: darken($sa-info, 20%);
+}
+.modal-admin .modal-footer .btn-info:hover { 
+  background-color: darken($sa-info, 25%); 
+  border-color: darken($sa-info, 25%); 
+}
+.modal-admin .modal-footer .btn-info:focus { 
+  background-color: darken($sa-info, 27%)!important; 
+  border-color: darken($sa-info, 27%)!important;
+}
+.modal-admin .modal-footer .btn-info:active,  { 
+  background-color: darken($sa-info, 28%)!important; 
+  border-color: darken($sa-info, 28%)!important;
+}
+
+.modal-admin .modal-footer .btn-danger { 
+  background-color: darken($sa-danger, 10%); 
+  border-color: darken($sa-danger, 10%); 
+}
+.modal-admin .modal-footer .btn-danger:visited { 
+  background-color: darken($sa-danger, 10%); 
+  border-color: darken($sa-danger, 10%); 
+}
+.modal-admin .modal-footer .btn-danger:hover { 
+  background-color: darken($sa-danger, 15%); 
+  border-color: darken($sa-danger, 15%); 
+}
+.modal-admin .modal-footer .btn-danger:focus { 
+  background-color: darken($sa-danger, 17%)!important; 
+  border-color: darken($sa-danger, 17%)!important; 
+}
+.modal-admin .modal-footer .btn-danger:active,  { 
+  background-color: darken($sa-danger, 18%)!important;
+  border-color: darken($sa-danger, 18%)!important; 
+}
+
+.modal-admin .modal-footer .btn-success { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-admin .modal-footer .btn-success:visited { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-admin .modal-footer .btn-success:hover { 
+  background-color: darken($sa-success, 15%);
+  border-color: darken($sa-success, 15%);
+}
+.modal-admin .modal-footer .btn-success:focus { 
+  background-color: darken($sa-success, 17%)!important;
+  border-color: darken($sa-success, 17%)!important;
+}
+.modal-admin .modal-footer .btn-success:active,  { 
+  background-color: darken($sa-success, 18%)!important;
+  border-color: darken($sa-success, 18%)!important;
+}
+
+.modal-admin .modal-footer .btn-save { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-admin .modal-footer .btn-save:visited { 
+  background-color: darken($sa-success, 10%);
+  border-color: darken($sa-success, 10%);
+}
+.modal-admin .modal-footer .btn-save:hover { 
+  background-color: darken($sa-success, 15%);
+  border-color: darken($sa-success, 15%);
+}
+.modal-admin .modal-footer .btn-save:focus { 
+  background-color: darken($sa-success, 17%)!important;
+  border-color: darken($sa-success, 17%)!important;
+}
+.modal-admin .modal-footer .btn-save:active,  { 
+  background-color: darken($sa-success, 18%)!important;
+  border-color: darken($sa-success, 18%)!important;
+}
+
+.modal-admin .modal-body hr{
+  border-color: $admin-colour;
+}
+
+.modal-admin .modal-footer {
+  margin-left: 0px;
+  width: 100%;
+}
+
+.modal-admin ::-webkit-scrollbar-thumb {
+  background-color: darken($admin-colour, 20%)!important;
+}
+
+// Modal Form -----------------------------------
+
+.modal-form fieldset:first-of-type{
+  margin-top: 8px;
+}
+
+.modal-form fieldset:last-of-type{
+  margin-bottom: 8px;
 }
