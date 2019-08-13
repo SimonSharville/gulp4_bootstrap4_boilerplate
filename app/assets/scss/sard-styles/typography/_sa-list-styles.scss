@@ -36,6 +36,16 @@ ul li.open-bullet::before{
   font-weight: 100;
 }
 
+// Nested Bullets ===============================
+
+ul > ul{
+  list-style: none;
+  text-indent: 0px; // Hanging bullet
+}
+ul.no-bullet > ul{
+  list-style: none;
+  text-indent: 16px; // Hanging bullet
+}
 
 // No Bullets ===================================
 ul.no-bullet{ // Overrides indents when no bullet
