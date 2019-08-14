@@ -1,6 +1,5 @@
 // Navbar =======================================
 
-$sa-navbar-bg:    $user-colour;
 
 $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") ;
 
@@ -10,134 +9,114 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
   box-shadow: $sa-box-shadow;
 }
 /* change the background color */
-.navbar-sard {
-    background-color: $sa-navbar-bg;
+.navbar {
     padding: 0rem 1rem;
 }
 
-/* change the brand and text color */
-.navbar-sard .navbar-brand,
-.navbar-sard .navbar-text {
-    color: white;
+/* change the padding for height */
+.navbar .navbar-nav .nav-link {
+    padding: $sard-spacer-15 $sard-spacer-8;
 }
 
-/* change the link color and add padding for height */
-.navbar-sard .navbar-nav .nav-link {
-    color: white;
-    padding: $sard-spacer-14 $sard-spacer-8;
+.navbar .nav-item:hover .nav-link {
+  background-color: $sa-grey-04; 
+}
+.navbar .nav-item:focus .nav-link,
+.navbar .nav-item.active .nav-link,
+.navbar .nav-item.active:hover .nav-link{
+  background-color: $sa-grey-06; 
+}
+.navbar .nav-item:active .nav-link {
+  background-color: $sa-grey-08; 
 }
 
-/* change the color of active or hovered links */
+// // Dropdown Menu
 
-.navbar-sard .nav-item:focus .nav-link,
-.navbar-sard .nav-item:hover .nav-link {
-    color: #ffffff;
-    background-color: darken($sa-navbar-bg, 10%); 
-}
-.navbar-sard .nav-item.active .nav-link{
-  background-color: darken($sa-navbar-bg, 20%); /* add background-color to active links */
-}
-
-
-
-// Dropdown Menu
-.navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
-  background-color: darken($sa-navbar-bg, 25%);
-}
-
-.navbar-sard .dropdown-menu{
-  margin: 0;
-  padding: 0;
-  background-color: darken($sa-navbar-bg, 20%);
-  color: white;
-  border: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  // overflow: hidden;
-}
-
-.navbar-sard .dropdown-menu .dropdown-item{
-  padding: $sard-spacer-4 $sard-spacer-8;
-  color: white;
-  border-top: 1px solid $sa-navbar-bg;
-  &:focus{
-    background-color: darken($sa-navbar-bg, 25%);
+.navbar {
+  .dropdown-menu{
+    border-color: $sa-grey-08;
   }
-  &:hover{
-    background-color: darken($sa-navbar-bg, 25%);
+  .dropdown-item{
+    color: $text;
+    padding: $sard-spacer-4 $sard-spacer-8;
+    &:visited { 
+      color: $text;
+    }
+    &:hover{
+      background-color: $sa-grey-04;
+    }
+    &:focus,
+    &.active,
+    &.active:hover{
+      background-color: $sa-grey-06;
+    }
+    &:active{
+      background-color: $sa-grey-08;
+    }
   }
-  &:active{
-    background-color: darken($sa-navbar-bg, 30%);
+  
+  .dropdown-item:first-of-type{ // Override Dopdown styles
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
-}
-.navbar-sard .dropdown-menu .dropdown-item:last-child{
-  border-bottom: none;
-}
-
-.navbar-sard .dropdown-menu .dropdown-divider {
-    height: 0;
-    margin: 0;
-    margin-top: -1px;
-    overflow: hidden;
-    border-top: 1px solid white;
-}
-
-.dropdown-menu a:last-of-type{
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-// Dropdown header
-.navbar-sard .dropdown-menu .dropdown-header{
-  padding: $sard-spacer-4 $sard-spacer-8 0 $sard-spacer-8;
-  color: white;
-  font-size: 1rem;
+  .dropdown-item:last-of-type{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .dropdown-menu li:first-of-type .dropdown-item{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .dropdown-menu li:last-of-type .dropdown-item{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
 }
 
 
 
 // Navbar Toggler
-.navbar-sard .navbar-toggler{
-  background-color: darken($sa-navbar-bg, 20%);
+.navbar .navbar-toggler{
+  background-color: darken($user-colour, 20%);
   border:none;
   padding: 0 $sard-spacer-4;
   &:focus{
-    background-color: darken($sa-navbar-bg, 25%);
+    background-color: darken($user-colour, 25%);
   }
   &:hover{
-    background-color: darken($sa-navbar-bg, 25%);
+    background-color: darken($user-colour, 25%);
   }
   &:active{
-    background-color: darken($sa-navbar-bg, 30%);
+    background-color: darken($user-colour, 30%);
   }
 }
 
-.navbar-sard .navbar-toggler .navbar-toggler-icon {
+.navbar .navbar-toggler .navbar-toggler-icon {
   background-image: $navbar-sard-toggler-icon-bg;
   font-size: 1rem;
 }
 
 // Disabled
 // https://stackoverflow.com/questions/1107551/css-strikethrough-different-color-from-text
-.navbar-sard .nav-item a.disabled{
+.navbar .nav-item a.disabled{
   color:         rgba(225, 225, 225, 0.5);
   text-decoration: line-through;
   /*noinspection CssOverwrittenProperties*/
   text-decoration: white line-through; /* Ignored in CSS1/CSS2 UAs */
 }
-.navbar-sard .nav-item:focus .nav-link.disabled,
-.navbar-sard .nav-item:hover .nav-link.disabled {
-  color:         rgba(225, 225, 225, 0.5);
-  background-color: $sa-navbar-bg; 
+.navbar .nav-item:focus .nav-link.disabled,
+.navbar .nav-item:hover .nav-link.disabled {
+  // color:         rgba(225, 225, 225, 0.5);
+  // background-color: $user-colour; 
 }
 
 
 // Navbar dropdowns at small screens
 @media (max-width: 991px){
-  .navbar-sard .navbar-nav .nav-link {
+  .navbar .navbar-nav .nav-link {
     padding: $sard-spacer-4 $sard-spacer-8;
   }
-  .navbar-sard .searchbar-sard {
+  .navbar .searchbar-sard {
     margin-bottom: $sard-spacer-8;
   }
   
@@ -166,10 +145,69 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 }
 
 .dropdown-submenu a:last-of-type{
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  // border-bottom-left-radius: 6px;
+  // border-bottom-right-radius: 6px;
 }
 
 .navbar-sard .dropdown-submenu .dropdown-menu{
-  border-left: 1px solid darken($sa-navbar-bg, 30%);
+  border-left: 1px solid darken($user-colour, 30%);
+}
+
+
+// Navbar Colours ===============================
+
+.navbar-sard {
+  background-color: $user-colour;
+}
+
+.navbar-sard .navbar-brand,
+.navbar-sard .navbar-text {
+    color: white;
+}
+
+.navbar-sard .navbar-nav .nav-link {
+  color: white;
+}
+
+/* change the color of active or hovered links */
+.navbar-sard .nav-item:focus .nav-link,
+.navbar-sard .nav-item:hover .nav-link {
+  color: #ffffff;
+  background-color: darken($user-colour, 10%); 
+}
+.navbar-sard .nav-item.active .nav-link{
+  background-color: darken($user-colour, 20%); /* add background-color to active links */
+}
+
+// Dropdown Menu
+.navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
+  background-color: darken($user-colour, 25%);
+}
+
+.navbar-sard .dropdown-menu{
+  background-color: darken($user-colour, 20%);
+  color: white;
+}
+
+.navbar-sard .dropdown-menu .dropdown-item{
+  color: white;
+  border-color: $user-colour;
+  &:focus{
+    background-color: darken($user-colour, 25%);
+  }
+  &:hover{
+    background-color: darken($user-colour, 25%);
+  }
+  &:active{
+    background-color: darken($user-colour, 30%);
+  }
+}
+
+.navbar-sard .dropdown-menu .dropdown-divider {
+    border-color: white;
+}
+
+// Dropdown header
+.navbar-sard .dropdown-menu .dropdown-header{
+  color: white;
 }

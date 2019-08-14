@@ -8,11 +8,16 @@ $default_dropdown_hover_click:  darken($user-colour, 10%);
 .dropdown-menu{
   border-color: $user-colour;
   box-shadow:$sa-box-shadow;
+  padding: 0 ;
+  margin: 0 ;
   .dropdown-header{
     @include roboto-bold;
     font-size: 1rem; 
     color: $text;
     padding: $sard-spacer-4 $sard-spacer-8;
+  }
+  hr{
+    margin: 0;
   }
 }
 .dropdown-item{
@@ -39,6 +44,17 @@ $default_dropdown_hover_click:  darken($user-colour, 10%);
     background-color: $default_dropdown_active;
   }
 }
+
+.dropdown-item:first-of-type{
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.dropdown-item:last-of-type{
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+
 
 
 $admin-colour_dropdown_visited:      darken($admin-colour, 5%);

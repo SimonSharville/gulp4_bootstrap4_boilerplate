@@ -38,54 +38,54 @@
 
 
     // Navbar =================
-    .navbar-sard {
-      background-color: $theme-primary;
-    }
-    .navbar-sard .nav-item:focus .nav-link,
-    .navbar-sard .nav-item:hover .nav-link {
-        background-color: darken($theme-primary, 10%); 
-    }
-    .navbar-sard .nav-item.active .nav-link{
-      background-color: darken($theme-primary, 20%); // add background-color to active links 
-    }
-    .navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
-      background-color: darken($theme-primary, 25%);
-    }
-    .navbar-sard .dropdown-menu{
-      background-color: darken($theme-primary, 20%);
-    }
-    .navbar-sard .dropdown-menu .dropdown-item{
-      border-color: $theme-primary;
-      &:focus{
-        background-color: darken($theme-primary, 25%);
-      }
-      &:hover{
-        background-color: darken($theme-primary, 25%);
-      }
-      &:active{
-        background-color: darken($theme-primary, 30%);
-      }
-    }
-    // Navbar Toggler
-    .navbar-sard .navbar-toggler{
-      background-color: darken($theme-primary, 20%);
-      &:focus{
-        background-color: darken($theme-primary, 25%);
-      }
-      &:hover{
-        background-color: darken($theme-primary, 25%);
-      }
-      &:active{
-        background-color: darken($theme-primary, 30%);
-      }
-    }
-    .navbar-sard .nav-item:focus .nav-link.disabled,
-    .navbar-sard .nav-item:hover .nav-link.disabled {
-      background-color: $theme-primary; 
-    }
-    .navbar-sard .dropdown-submenu .dropdown-menu{
-      border-left-color:  darken($theme-primary, 30%);
-    }
+    // .navbar-sard {
+    //   background-color: $theme-primary;
+    // }
+    // .navbar-sard .nav-item:focus .nav-link,
+    // .navbar-sard .nav-item:hover .nav-link {
+    //     background-color: darken($theme-primary, 10%); 
+    // }
+    // .navbar-sard .nav-item.active .nav-link{
+    //   background-color: darken($theme-primary, 20%); // add background-color to active links 
+    // }
+    // .navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
+    //   background-color: darken($theme-primary, 25%);
+    // }
+    // .navbar-sard .dropdown-menu{
+    //   background-color: darken($theme-primary, 20%);
+    // }
+    // .navbar-sard .dropdown-menu .dropdown-item{
+    //   border-color: $theme-primary;
+    //   &:focus{
+    //     background-color: darken($theme-primary, 25%);
+    //   }
+    //   &:hover{
+    //     background-color: darken($theme-primary, 25%);
+    //   }
+    //   &:active{
+    //     background-color: darken($theme-primary, 30%);
+    //   }
+    // }
+    // // Navbar Toggler
+    // .navbar-sard .navbar-toggler{
+    //   background-color: darken($theme-primary, 20%);
+    //   &:focus{
+    //     background-color: darken($theme-primary, 25%);
+    //   }
+    //   &:hover{
+    //     background-color: darken($theme-primary, 25%);
+    //   }
+    //   &:active{
+    //     background-color: darken($theme-primary, 30%);
+    //   }
+    // }
+    // .navbar-sard .nav-item:focus .nav-link.disabled,
+    // .navbar-sard .nav-item:hover .nav-link.disabled {
+    //   background-color: $theme-primary; 
+    // }
+    // .navbar-sard .dropdown-submenu .dropdown-menu{
+    //   border-left-color:  darken($theme-primary, 30%);
+    // }
 
     // Breadcrumbs
     .breadcrumb{
