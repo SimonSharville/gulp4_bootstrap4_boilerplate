@@ -2,10 +2,14 @@
 
 ul{
   padding: 0;
+  font-size: 0.9375rem; // 15px
+  line-height: 1.25rem;
 }
 
 ol{
-  padding-left:30px
+  padding-left:30px;
+  font-size: 0.9375rem; // 15px
+  line-height: 1.25rem;
 }
 
 // Bullet Points ========================
@@ -17,7 +21,6 @@ ul{
 ul li{
   padding-left: 16px; // Hanging bullet
   padding-bottom: 5px;
-  // line-height:18px;
 }
 ul.flat{margin-bottom: 0;}
 

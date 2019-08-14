@@ -12477,6 +12477,7 @@ h6, .h6 {
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
 }
 
@@ -12509,10 +12510,14 @@ b, strong, .bold, .strong {
 
 ul {
   padding: 0;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 ol {
   padding-left: 30px;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 ul {
@@ -16779,15 +16784,18 @@ fieldset .border-bottom, fieldset .border-top {
   border-color: white !important;
 }
 
-fieldset .form-footer {
+fieldset .form-footer,
+fieldset footer {
   min-width: calc(100% + 2px);
-  margin: 0 -1px;
+  margin: -1px;
+  margin-top: -3px;
   overflow: hidden;
   padding: 0.25rem 0.625rem;
   background-color: #403D3D;
   color: white;
   border-bottom-left-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
+  font-weight: 300;
 }
 
 .form-group p:last-child {
@@ -18066,6 +18074,111 @@ a.list-group-item-action.active:active {
 .modal-roles .btn-save:active {
   background-color: #164200 !important;
   border-color: #164200 !important;
+}
+
+.card-header a.modal-info-circle,
+.panel-header a.modal-info-circle,
+.panel-heading a.modal-info-circle,
+legend a.modal-info-circle {
+  background-color: #00a0e0;
+  height: 22px;
+  width: 22px;
+  border: 2px solid white;
+  position: relative;
+  top: 2px;
+  right: 0px;
+  border-radius: 11px;
+  float: right;
+}
+
+.card-header a.modal-info-circle::before,
+.panel-header a.modal-info-circle::before,
+.panel-heading a.modal-info-circle::before,
+legend a.modal-info-circle::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f129";
+  color: white;
+  font-weight: 900;
+  font-size: 11px;
+  position: relative;
+  top: -5.5px;
+  right: -6.5px;
+}
+
+.card-body a.modal-info-circle,
+.panel-body a.modal-info-circle,
+.form-group a.modal-info-circle {
+  background-color: #00a0e0;
+  height: 22px;
+  width: 22px;
+  border: 2px solid white;
+  position: relative;
+  top: 2px;
+  right: 0px;
+  border-radius: 11px;
+  float: right;
+}
+
+.card-body a.modal-info-circle::before,
+.panel-body a.modal-info-circle::before,
+.form-group a.modal-info-circle::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f129";
+  color: white;
+  font-weight: 900;
+  font-size: 11px;
+  position: relative;
+  top: -3.5px;
+  right: -6.5px;
+}
+
+.card-footer a.modal-info-circle,
+.panel-footer a.modal-info-circle,
+.form-footer a.modal-info-circle {
+  background-color: #00a0e0;
+  height: 22px;
+  width: 22px;
+  border: 2px solid white;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  border-radius: 11px;
+  float: right;
+}
+
+.card-footer a.modal-info-circle::before,
+.panel-footer a.modal-info-circle::before,
+.form-footer a.modal-info-circle::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f129";
+  color: white;
+  font-weight: 900;
+  font-size: 11px;
+  position: relative;
+  top: -3.5px;
+  right: -6.5px;
+}
+
+p > a.modal-info-circle-inline {
+  background-color: #00a0e0;
+  height: 22px;
+  width: 22px;
+  border: 2px solid white;
+  display: inline-block;
+  border-radius: 11px;
+  clear: both;
+}
+
+p > a.modal-info-circle-inline::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f129";
+  color: white;
+  font-weight: 900;
+  font-size: 11px;
+  display: block;
+  position: relative;
+  top: -2px;
+  right: -7.5px;
 }
 
 .navbar.fixed-top {

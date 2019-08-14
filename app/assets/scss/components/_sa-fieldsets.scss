@@ -47,19 +47,18 @@ fieldset{
   & .border-bottom, .border-top{
     border-color: white!important;
   }
-  & .form-footer{
+  & .form-footer,
+  & footer{
     min-width: calc(100% + 2px );
-
-    margin: 0 -1px;
+    margin: -1px;
+    margin-top: -3px;
     overflow: hidden;
-
     padding: $sard-heading-padding;
-
     background-color: $sard-heading-bg;
     color: $sard-heading-text-color;
-
     border-bottom-left-radius: $sard-border-radius;
     border-bottom-right-radius: $sard-border-radius;
+    font-weight: $sard-heading-font-weight;
   }
 }
 .form-group p:last-child {
@@ -74,6 +73,7 @@ fieldset{
 }
 
 
+// Fieldsets within Cards or Panels -------------
 
 .card fieldset, .panel fieldset{
   border-color: $sard-border-color;
