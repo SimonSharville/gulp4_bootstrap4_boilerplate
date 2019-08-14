@@ -17602,66 +17602,6 @@ a.list-group-item-action.active:active {
   color: #004561 !important;
 }
 
-.modal-info .btn-info {
-  background-color: #00577a;
-}
-
-.modal-info .btn-info:visited {
-  background-color: #00577a;
-}
-
-.modal-info .btn-info:hover {
-  background-color: #004561;
-}
-
-.modal-info .btn-info:focus {
-  background-color: #003e56 !important;
-}
-
-.modal-info .btn-info:active {
-  background-color: #003a51 !important;
-}
-
-.modal-info .btn-success {
-  background-color: #246b00;
-}
-
-.modal-info .btn-success:visited {
-  background-color: #246b00;
-}
-
-.modal-info .btn-success:hover {
-  background-color: #1b5200;
-}
-
-.modal-info .btn-success:focus {
-  background-color: #184700 !important;
-}
-
-.modal-info .btn-success:active {
-  background-color: #164200 !important;
-}
-
-.modal-info .btn-save {
-  background-color: #246b00;
-}
-
-.modal-info .btn-save:visited {
-  background-color: #246b00;
-}
-
-.modal-info .btn-save:hover {
-  background-color: #1b5200;
-}
-
-.modal-info .btn-save:focus {
-  background-color: #184700 !important;
-}
-
-.modal-info .btn-save:active {
-  background-color: #164200 !important;
-}
-
 .modal-info .modal-body hr {
   border-color: white;
 }
@@ -17707,106 +17647,6 @@ a.list-group-item-action.active:active {
   color: #003333 !important;
 }
 
-.modal-trust .modal-footer .btn-info {
-  background-color: #00577a;
-  border-color: #00577a;
-}
-
-.modal-trust .modal-footer .btn-info:visited {
-  background-color: #00577a;
-  border-color: #00577a;
-}
-
-.modal-trust .modal-footer .btn-info:hover {
-  background-color: #004561;
-  border-color: #004561;
-}
-
-.modal-trust .modal-footer .btn-info:focus {
-  background-color: #003e56 !important;
-  border-color: #003e56 !important;
-}
-
-.modal-trust .modal-footer .btn-info:active {
-  background-color: #003a51 !important;
-  border-color: #003a51 !important;
-}
-
-.modal-trust .modal-footer .btn-danger {
-  background-color: #8c0000;
-  border-color: #8c0000;
-}
-
-.modal-trust .modal-footer .btn-danger:visited {
-  background-color: #8c0000;
-  border-color: #8c0000;
-}
-
-.modal-trust .modal-footer .btn-danger:hover {
-  background-color: #730000;
-  border-color: #730000;
-}
-
-.modal-trust .modal-footer .btn-danger:focus {
-  background-color: #680000 !important;
-  border-color: #680000 !important;
-}
-
-.modal-trust .modal-footer .btn-danger:active {
-  background-color: #630000 !important;
-  border-color: #630000 !important;
-}
-
-.modal-trust .modal-footer .btn-success {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-trust .modal-footer .btn-success:visited {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-trust .modal-footer .btn-success:hover {
-  background-color: #1b5200;
-  border-color: #1b5200;
-}
-
-.modal-trust .modal-footer .btn-success:focus {
-  background-color: #184700 !important;
-  border-color: #184700 !important;
-}
-
-.modal-trust .modal-footer .btn-success:active {
-  background-color: #164200 !important;
-  border-color: #164200 !important;
-}
-
-.modal-trust .modal-footer .btn-save {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-trust .modal-footer .btn-save:visited {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-trust .modal-footer .btn-save:hover {
-  background-color: #1b5200;
-  border-color: #1b5200;
-}
-
-.modal-trust .modal-footer .btn-save:focus {
-  background-color: #184700 !important;
-  border-color: #184700 !important;
-}
-
-.modal-trust .modal-footer .btn-save:active {
-  background-color: #164200 !important;
-  border-color: #164200 !important;
-}
-
 .modal-trust .modal-body hr {
   border-color: #00B2B2;
 }
@@ -17846,71 +17686,6 @@ a.list-group-item-action.active:active {
 
 .modal-user .modal-body a:active {
   color: #003333 !important;
-}
-
-.modal-user .modal-footer .btn-info {
-  background-color: #00577a;
-  border-color: #00577a;
-}
-
-.modal-user .modal-footer .btn-info:visited {
-  background-color: #00577a;
-  border-color: #00577a;
-}
-
-.modal-user .modal-footer .btn-info:hover {
-  background-color: #004561;
-  border-color: #004561;
-}
-
-.modal-user .modal-footer .btn-info:focus {
-  background-color: #003e56 !important;
-  border-color: #003e56 !important;
-}
-
-.modal-user .modal-footer .btn-info:active {
-  background-color: #003a51 !important;
-  border-color: #003a51 !important;
-}
-
-.modal-user .modal-footer .btn-success {
-  background-color: #246b00;
-}
-
-.modal-user .modal-footer .btn-success:visited {
-  background-color: #246b00;
-}
-
-.modal-user .modal-footer .btn-success:hover {
-  background-color: #1b5200;
-}
-
-.modal-user .modal-footer .btn-success:focus {
-  background-color: #184700 !important;
-}
-
-.modal-user .modal-footer .btn-success:active {
-  background-color: #164200 !important;
-}
-
-.modal-user .modal-footer .btn-save {
-  background-color: #246b00;
-}
-
-.modal-user .modal-footer .btn-save:visited {
-  background-color: #246b00;
-}
-
-.modal-user .modal-footer .btn-save:hover {
-  background-color: #1b5200;
-}
-
-.modal-user .modal-footer .btn-save:focus {
-  background-color: #184700 !important;
-}
-
-.modal-user .modal-footer .btn-save:active {
-  background-color: #164200 !important;
 }
 
 .modal-user .modal-body hr {
@@ -17958,106 +17733,6 @@ a.list-group-item-action.active:active {
   color: #660033 !important;
 }
 
-.modal-admin .modal-footer .btn-info {
-  background-color: #00577a;
-  border-color: #00577a;
-}
-
-.modal-admin .modal-footer .btn-info:visited {
-  background-color: #00577a;
-  border-color: #00577a;
-}
-
-.modal-admin .modal-footer .btn-info:hover {
-  background-color: #004561;
-  border-color: #004561;
-}
-
-.modal-admin .modal-footer .btn-info:focus {
-  background-color: #003e56 !important;
-  border-color: #003e56 !important;
-}
-
-.modal-admin .modal-footer .btn-info:active {
-  background-color: #003a51 !important;
-  border-color: #003a51 !important;
-}
-
-.modal-admin .modal-footer .btn-danger {
-  background-color: #8c0000;
-  border-color: #8c0000;
-}
-
-.modal-admin .modal-footer .btn-danger:visited {
-  background-color: #8c0000;
-  border-color: #8c0000;
-}
-
-.modal-admin .modal-footer .btn-danger:hover {
-  background-color: #730000;
-  border-color: #730000;
-}
-
-.modal-admin .modal-footer .btn-danger:focus {
-  background-color: #680000 !important;
-  border-color: #680000 !important;
-}
-
-.modal-admin .modal-footer .btn-danger:active {
-  background-color: #630000 !important;
-  border-color: #630000 !important;
-}
-
-.modal-admin .modal-footer .btn-success {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-admin .modal-footer .btn-success:visited {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-admin .modal-footer .btn-success:hover {
-  background-color: #1b5200;
-  border-color: #1b5200;
-}
-
-.modal-admin .modal-footer .btn-success:focus {
-  background-color: #184700 !important;
-  border-color: #184700 !important;
-}
-
-.modal-admin .modal-footer .btn-success:active {
-  background-color: #164200 !important;
-  border-color: #164200 !important;
-}
-
-.modal-admin .modal-footer .btn-save {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-admin .modal-footer .btn-save:visited {
-  background-color: #246b00;
-  border-color: #246b00;
-}
-
-.modal-admin .modal-footer .btn-save:hover {
-  background-color: #1b5200;
-  border-color: #1b5200;
-}
-
-.modal-admin .modal-footer .btn-save:focus {
-  background-color: #184700 !important;
-  border-color: #184700 !important;
-}
-
-.modal-admin .modal-footer .btn-save:active {
-  background-color: #164200 !important;
-  border-color: #164200 !important;
-}
-
 .modal-admin .modal-body hr {
   border-color: #E50073;
 }
@@ -18076,7 +17751,321 @@ a.list-group-item-action.active:active {
 }
 
 .modal-form fieldset:last-of-type {
-  margin-bottom: 8px;
+  margin-bottom: 0px;
+}
+
+.modal-form .modal-footer {
+  border-top: none;
+  padding-top: 0px;
+}
+
+.modal-roles .close {
+  background-color: white;
+  min-width: 30px;
+  width: 30px;
+  min-height: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  text-align: center;
+  opacity: 1;
+  border: 2px solid white;
+  z-index: 100;
+}
+
+.modal-roles .close span {
+  font-size: 28px;
+  line-height: 28px;
+  color: #BF0000;
+}
+
+.modal-roles .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+  background-color: #BF0000;
+}
+
+.modal-roles .close:not(:disabled):not(.disabled):hover span {
+  color: white;
+  line-height: 26px;
+}
+
+.modal-roles .modal-content {
+  background-color: #00a0e0;
+}
+
+.modal-roles .modal-header {
+  border-bottom: none;
+  color: white;
+}
+
+.modal-roles .modal-dialog-scrollable .modal-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-roles .modal-body {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.modal-roles .modal-body h3 {
+  background-color: #00577a;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  min-height: 43px;
+  max-height: auto;
+  padding: 7.5px 15px;
+  font-size: 21px;
+  color: white;
+  margin-top: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 10px;
+}
+
+.modal-roles .modal-body h1,
+.modal-roles .modal-body h2,
+.modal-roles .modal-body h4,
+.modal-roles .modal-body h5,
+.modal-roles .modal-body h6 {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #211F0F;
+  margin-bottom: 0;
+}
+
+.modal-roles .modal-body p {
+  font-size: 15px;
+  line-height: 17px;
+  color: #211F0F;
+}
+
+.modal-roles .modal-body ul li {
+  color: #211F0F;
+}
+
+.modal-roles .modal-body ul li:before {
+  color: white;
+}
+
+.modal-roles .modal-body ul li:last-child {
+  padding-bottom: 0;
+}
+
+.modal-roles .modal-body hr {
+  border-color: white;
+}
+
+.modal-roles .modal-footer {
+  margin-left: 0px;
+  width: 100%;
+  border-color: #00577a;
+  color: white;
+}
+
+.modal-roles .modal-body a:link {
+  color: white;
+}
+
+.modal-roles .modal-body a:visited {
+  color: white;
+}
+
+.modal-roles .modal-body a:hover {
+  color: #00577a;
+}
+
+.modal-roles .modal-body a:focus {
+  color: #004561 !important;
+}
+
+.modal-roles .modal-body a:active {
+  color: #004561 !important;
+}
+
+.modal-info .btn-info,
+.modal-trust .modal-footer .btn-info,
+.modal-user .modal-footer .btn-info,
+.modal-admin .modal-footer .btn-info,
+.modal-roles .btn-info {
+  background-color: #00577a;
+  border-color: #00577a;
+}
+
+.modal-info .btn-info:visited,
+.modal-trust .modal-footer .btn-info:visited,
+.modal-user .modal-footer .btn-info:visited,
+.modal-admin .modal-footer .btn-info:visited,
+.modal-roles .btn-info:visited {
+  background-color: #00577a;
+  border-color: #00577a;
+}
+
+.modal-info .btn-info:hover,
+.modal-trust .modal-footer .btn-info:hover,
+.modal-user .modal-footer .btn-info:hover,
+.modal-admin .modal-footer .btn-info:hover,
+.modal-roles .btn-info:hover {
+  background-color: #004561;
+  border-color: #004561;
+}
+
+.modal-info .btn-info:focus,
+.modal-trust .modal-footer .btn-info:focus,
+.modal-user .modal-footer .btn-info:focus,
+.modal-admin .modal-footer .btn-info:focus,
+.modal-roles .btn-info:focus {
+  background-color: #003e56 !important;
+  border-color: #003e56 !important;
+}
+
+.modal-info .btn-info:active,
+.modal-trust .modal-footer .btn-info:active,
+.modal-user .modal-footer .btn-info:active,
+.modal-admin .modal-footer .btn-info:active,
+.modal-roles .btn-info:active {
+  background-color: #003a51 !important;
+  border-color: #003a51 !important;
+}
+
+.modal-info .btn-danger,
+.modal-trust .modal-footer .btn-danger,
+.modal-user .modal-footer .btn-danger,
+.modal-admin .modal-footer .btn-danger,
+.modal-roles .btn-danger {
+  background-color: #8c0000;
+  border-color: #8c0000;
+}
+
+.modal-info .btn-danger:visited,
+.modal-trust .modal-footer .btn-danger:visited,
+.modal-user .modal-footer .btn-danger:visited,
+.modal-admin .modal-footer .btn-danger:visited,
+.modal-roles .btn-danger:visited {
+  background-color: #8c0000;
+  border-color: #8c0000;
+}
+
+.modal-info .btn-danger:hover,
+.modal-trust .modal-footer .btn-danger:hover,
+.modal-user .modal-footer .btn-danger:hover,
+.modal-admin .modal-footer .btn-danger:hover,
+.modal-roles .btn-danger:hover {
+  background-color: #730000;
+  border-color: #730000;
+}
+
+.modal-info .btn-danger:focus,
+.modal-trust .modal-footer .btn-danger:focus,
+.modal-user .modal-footer .btn-danger:focus,
+.modal-admin .modal-footer .btn-danger:focus,
+.modal-roles .btn-danger:focus {
+  background-color: #680000 !important;
+  border-color: #680000 !important;
+}
+
+.modal-info .btn-danger:active,
+.modal-trust .modal-footer .btn-danger:active,
+.modal-user .modal-footer .btn-danger:active,
+.modal-admin .modal-footer .btn-danger:active,
+.modal-roles .btn-danger:active {
+  background-color: #630000 !important;
+  border-color: #630000 !important;
+}
+
+.modal-info .btn-success,
+.modal-trust .modal-footer .btn-success,
+.modal-user .modal-footer .btn-success,
+.modal-admin .modal-footer .btn-success,
+.modal-roles .btn-success {
+  background-color: #246b00;
+  border-color: #246b00;
+}
+
+.modal-info .btn-success:visited,
+.modal-trust .modal-footer .btn-success:visited,
+.modal-user .modal-footer .btn-success:visited,
+.modal-admin .modal-footer .btn-success:visited,
+.modal-roles .btn-success:visited {
+  background-color: #246b00;
+  border-color: #246b00;
+}
+
+.modal-info .btn-success:hover,
+.modal-trust .modal-footer .btn-success:hover,
+.modal-user .modal-footer .btn-success:hover,
+.modal-admin .modal-footer .btn-success:hover,
+.modal-roles .btn-success:hover {
+  background-color: #1b5200;
+  border-color: #1b5200;
+}
+
+.modal-info .btn-success:focus,
+.modal-trust .modal-footer .btn-success:focus,
+.modal-user .modal-footer .btn-success:focus,
+.modal-admin .modal-footer .btn-success:focus,
+.modal-roles .btn-success:focus {
+  background-color: #184700 !important;
+  border-color: #184700 !important;
+}
+
+.modal-info .btn-success:active,
+.modal-trust .modal-footer .btn-success:active,
+.modal-user .modal-footer .btn-success:active,
+.modal-admin .modal-footer .btn-success:active,
+.modal-roles .btn-success:active {
+  background-color: #164200 !important;
+  border-color: #164200 !important;
+}
+
+.modal-info .btn-save,
+.modal-trust .modal-footer .btn-save,
+.modal-user .modal-footer .btn-save,
+.modal-admin .modal-footer .btn-save,
+.modal-roles .btn-save {
+  background-color: #246b00;
+  border-color: #246b00;
+}
+
+.modal-info .btn-save:visited,
+.modal-trust .modal-footer .btn-save:visited,
+.modal-user .modal-footer .btn-save:visited,
+.modal-admin .modal-footer .btn-save:visited,
+.modal-roles .btn-save:visited {
+  background-color: #246b00;
+  border-color: #246b00;
+}
+
+.modal-info .btn-save:hover,
+.modal-trust .modal-footer .btn-save:hover,
+.modal-user .modal-footer .btn-save:hover,
+.modal-admin .modal-footer .btn-save:hover,
+.modal-roles .btn-save:hover {
+  background-color: #1b5200;
+  border-color: #1b5200;
+}
+
+.modal-info .btn-save:focus,
+.modal-trust .modal-footer .btn-save:focus,
+.modal-user .modal-footer .btn-save:focus,
+.modal-admin .modal-footer .btn-save:focus,
+.modal-roles .btn-save:focus {
+  background-color: #184700 !important;
+  border-color: #184700 !important;
+}
+
+.modal-info .btn-save:active,
+.modal-trust .modal-footer .btn-save:active,
+.modal-user .modal-footer .btn-save:active,
+.modal-admin .modal-footer .btn-save:active,
+.modal-roles .btn-save:active {
+  background-color: #164200 !important;
+  border-color: #164200 !important;
 }
 
 .navbar.fixed-top {
