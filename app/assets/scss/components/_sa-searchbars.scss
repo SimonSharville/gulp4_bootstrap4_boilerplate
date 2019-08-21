@@ -2,35 +2,79 @@
 
 // Base styles
 
-.navbar-sard .searchbar-sard.input-group{
+// Within Navabr ================================
+
+.navbar .searchbar-sard{
+  border-radius:8px;
+}
+.navbar .searchbar-sard{
   width: initial;
 }
-.navbar-sard .searchbar-sard input{
-  border-top-left-radius: 1.25rem;
-  border-bottom-left-radius: 1.25rem;
-  border-color: transparent;
+.navbar .searchbar-sard input{
+    padding: 10px;
+    padding-right: 38px;
+    margin-right: -38px;
+    border-radius: 4px;
+    background-color: white;
+    border: 0;
+    box-shadow: none;
+    border-radius: 20px;
+    height:36px;
+    border:2px solid $sa-grey-06;
 }
 
-.navbar-sard .searchbar-sard .form-control:focus {
-    color: #211f0f;
-    border-color: darken($user-colour, 30%);
-    -webkit-box-shadow: none;
-    box-shadow: none;
+
+.navbar .searchbar-sard .btn-search{
+  float:right;
+  width:36px;
+  height:36px;
+  border-radius: 0 20px 20px 0;
+  color: $user-colour;
+  border:none;
+  border-left: none;
+  box-shadow: none;
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f002" ;
+    padding-right: $link-icon-padding ;
+    color:$sa-grey-14;
+    font-weight: 900;
+    font-size: 1.2rem;
+    position: relative;
+    top: -2px;
+    right: 4px;
+  }
 }
 
-.navbar-sard .searchbar-sard .btn-navbar{
-  background-color: darken($user-colour, 15%);
-  color: white!important;
-  &:focus{
-    background-color: darken($user-colour, 20%);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  &:hover{
-    background-color: darken($user-colour, 20%);
-  }
-  &:active{
-    background-color: darken($user-colour, 25%);
+.navbar .searchbar-sard .btn-search:hover{
+  &::before{
+    color: $sa-grey-16;
   }
 }
+.navbar .searchbar-sard .btn-search:focus{
+  &::before{
+    color: $sa-grey-18;
+  }
+}
+
+.navbar .searchbar-sard input:hover{
+  border-color: $sa-grey-10;
+}
+.navbar .searchbar-sard input:focus{
+  border-color: $sa-grey-14;
+}
+
+
+.navbar .searchbar-sard input:hover + .btn-search{
+  &::before{
+    color: $sa-grey-16;
+  }
+}
+.navbar .searchbar-sard input:focus + .btn-search{
+  &::before{
+    color: $sa-grey-18;
+  }
+}
+
+
 
