@@ -117,6 +117,7 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 .navbar .nav-item:hover .nav-link.disabled {
   // color:         rgba(225, 225, 225, 0.5);
   background-color: transparent; 
+  cursor: not-allowed;
 }
 
 
@@ -164,6 +165,85 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 
 
 // ==============================================
+// Navbar Dark ==================================
+
+.navbar-dark {
+  background-color: $sa-grey-14;
+}
+
+/* change the color of active or hovered links */
+.navbar-dark .nav-item:hover .nav-link {
+  background-color: $sa-grey-16; 
+}
+.navbar-dark .nav-item:focus .nav-link {
+  background-color: $sa-grey-18; 
+}
+.navbar-dark .nav-item:active .nav-link {
+  background-color: $sa-grey-16  
+}
+// add background-color to active links
+.navbar-dark .nav-item.active .nav-link{ 
+  background-color: $sa-grey-16 
+}
+.navbar-dark .nav-item.active .nav-link:hover{
+  background-color: $sa-grey-18 
+}
+.navbar-dark .nav-item.active .nav-link:focus{
+  background-color: black
+}
+
+// Dropdown Menu
+
+.navbar-dark .nav-item.dropdown.show .nav-link.dropdown-toggle{
+  background-color: $sa-grey-18;
+}
+.navbar-dark .dropdown-menu{
+  border:none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.navbar-dark .dropdown-menu{
+  background-color: $sa-grey-14;
+}
+
+.navbar-dark .dropdown-menu .dropdown-item{
+  color: white;
+  border-color: $user-colour;
+  &:hover{
+    background-color: $sa-grey-16;
+    color: white;
+  }
+  &:focus{
+    background-color: $sa-grey-18;
+    color: white;
+  }
+  &:active{
+    background-color: black;
+    color: white;
+  }
+}
+
+// Submenu
+// .navbar-dark .nav-item:active .dropdown-menu.show .dropdown-submenu .dropdown-item.dropdown-toggle:active{
+//   background-color: $sa-grey-18;
+// }
+
+.navbar-dark .dropdown-submenu .dropdown-menu{
+  border:none;
+  border-top-left-radius: $sard-border-radius;
+  border-top-right-radius: $sard-border-radius;
+}
+.navbar-dark .dropdown-menu .dropdown-divider {
+    border-color: white;
+}
+
+// Dropdown header
+.navbar-dark .dropdown-menu .dropdown-header{
+  color: white;
+}
+
+
 // Navbar SARD ==================================
 
 .navbar-sard {
@@ -180,12 +260,11 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
 }
 
 /* change the color of active or hovered links */
-.navbar-sard .nav-item:focus .nav-link {
-  background-color: $sa-grey-04; 
-  background-color: darken($user-colour, 10%); 
-}
 .navbar-sard .nav-item:hover .nav-link {
   background-color: darken($user-colour, 15%); 
+}
+.navbar-sard .nav-item:focus .nav-link {
+  background-color: darken($user-colour, 10%); 
 }
 .navbar-sard .nav-item:active .nav-link {
   background-color: darken($user-colour, 20%); 
@@ -201,8 +280,18 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
   background-color: darken($user-colour, 30%); 
 }
 
+.navbar-sard .nav-item:focus .nav-link.disabled,
+.navbar-sard .nav-item:hover .nav-link.disabled {
+  color:         rgba(225, 225, 225, 0.5);
+}
 
 // Dropdown Menu
+.navbar-sard .dropdown-menu{
+  border:none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
   background-color: darken($user-colour, 25%);
 }
@@ -226,19 +315,11 @@ $navbar-sard-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg v
   }
 }
 
-.navbar-sard .nav-item:focus .nav-link.disabled,
-.navbar-sard .nav-item:hover .nav-link.disabled {
-  color:         rgba(225, 225, 225, 0.5);
-}
 
-// Dropdown
-.navbar-sard .dropdown-menu{
-  border:none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-
+// Submenu
+// .navbar-sard .dropdown-submenu .dropdown-item.dropdown-toggle.active{
+//   background-color: darken($user-colour, 25%);
+// }
 .navbar-sard .dropdown-submenu .dropdown-menu{
   border:none;
   border-top-left-radius: $sard-border-radius;
