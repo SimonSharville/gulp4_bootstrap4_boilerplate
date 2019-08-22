@@ -2,7 +2,7 @@
 
 // Base styles
 
-// Within Navabr ================================
+// Within Navbar ================================
 
 .navbar .searchbar-sard{
   border-radius:8px;
@@ -21,6 +21,12 @@
     border-radius: 20px;
     height:36px;
     border:2px solid $sa-grey-06;
+    &:hover{
+      border-color: $sa-grey-10;
+    }
+    &:focus{
+      border-color: $sa-grey-14;
+    }
 }
 
 
@@ -29,7 +35,6 @@
   width:36px;
   height:36px;
   border-radius: 0 20px 20px 0;
-  color: $user-colour;
   border:none;
   border-left: none;
   box-shadow: none;
@@ -57,14 +62,6 @@
   }
 }
 
-.navbar .searchbar-sard input:hover{
-  border-color: $sa-grey-10;
-}
-.navbar .searchbar-sard input:focus{
-  border-color: $sa-grey-14;
-}
-
-
 .navbar .searchbar-sard input:hover + .btn-search{
   &::before{
     color: $sa-grey-16;
@@ -76,5 +73,164 @@
   }
 }
 
+// Colour variations ============================
 
+// Navbar DARK ==================================
 
+.navbar-dark .searchbar-sard input{
+  border:2px solid $sa-grey-14;
+  &:hover{
+    border-color: $sa-grey-16;
+  }
+  &:focus{
+    border-color: $sa-grey-18;
+  }
+}
+
+.navbar-dark .searchbar-sard .btn-search{
+  &::before{
+    color:$sa-grey-14;
+  }
+}
+
+.navbar-dark .searchbar-sard .btn-search:hover{
+  &::before{
+    color: $sa-grey-16;
+  }
+}
+.navbar-dark .searchbar-sard .btn-search:focus{
+  &::before{
+    color: $sa-grey-18;
+  }
+}
+
+.navbar-dark .searchbar-sard input:hover + .btn-search{
+  &::before{
+    color: $sa-grey-16;
+  }
+}
+.navbar-dark .searchbar-sard input:focus + .btn-search{
+  &::before{
+    color: $sa-grey-18;
+  }
+}
+
+// Navbar SARD ==================================
+
+.navbar-sard .searchbar-sard input{
+  border:2px solid darken($user-colour, 10%);
+  &:hover{
+    border-color: darken($user-colour, 15%);
+  }
+  &:focus{
+    border-color: darken($user-colour, 25%);
+  }
+}
+
+.navbar-sard .searchbar-sard .btn-search{
+  &::before{
+    color:darken($user-colour, 15%);
+  }
+}
+
+.navbar-sard .searchbar-sard .btn-search:hover{
+  &::before{
+    color: darken($user-colour, 20%);
+  }
+}
+.navbar-sard .searchbar-sard .btn-search:focus{
+  &::before{
+    color: darken($user-colour, 25%);
+  }
+}
+
+.navbar-sard .searchbar-sard input:hover + .btn-search{
+  &::before{
+    color: darken($user-colour, 20%);
+  }
+}
+.navbar-sard .searchbar-sard input:focus + .btn-search{
+  &::before{
+    color: darken($user-colour, 25%);
+  }
+}
+
+// Navbar TRUST =================================
+
+.navbar-trust .searchbar-sard input{
+  border:2px solid darken($user-colour, 10%);
+  &:hover{
+    border-color: darken($user-colour, 15%);
+  }
+  &:focus{
+    border-color: darken($user-colour, 25%);
+  }
+}
+
+.navbar-trust .searchbar-sard .btn-search{
+  &::before{
+    color:darken($user-colour, 15%);
+  }
+}
+
+.navbar-trust .searchbar-sard .btn-search:hover{
+  &::before{
+    color: darken($user-colour, 20%);
+  }
+}
+.navbar-trust .searchbar-sard .btn-search:focus{
+  &::before{
+    color: darken($user-colour, 25%);
+  }
+}
+
+.navbar-trust .searchbar-sard input:hover + .btn-search{
+  &::before{
+    color: darken($user-colour, 20%);
+  }
+}
+.navbar-trust .searchbar-sard input:focus + .btn-search{
+  &::before{
+    color: darken($user-colour, 25%);
+  }
+}
+
+// Navbar SECONDARY =============================
+
+.navbar-secondary .searchbar-sard input{
+  border:2px solid darken($admin-colour, 10%);
+  &:hover{
+    border-color: darken($admin-colour, 15%);
+  }
+  &:focus{
+    border-color: darken($admin-colour, 25%);
+  }
+}
+
+.navbar-secondary .searchbar-sard .btn-search{
+  &::before{
+    color:darken($admin-colour, 15%);
+  }
+}
+
+.navbar-secondary .searchbar-sard .btn-search:hover{
+  &::before{
+    color: darken($admin-colour, 20%);
+  }
+}
+.navbar-secondary .searchbar-sard .btn-search:focus{
+  &::before{
+    color: darken($admin-colour, 25%);
+  }
+}
+
+.navbar-secondary .searchbar-sard input:hover + .btn-search{
+  &::before{
+    color: darken($admin-colour, 20%);
+  }
+}
+.navbar-secondary .searchbar-sard input:focus + .btn-search{
+  &::before{
+    color: darken($admin-colour, 25%);
+  }
+}
