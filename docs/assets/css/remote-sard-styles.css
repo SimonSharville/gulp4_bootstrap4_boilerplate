@@ -13335,6 +13335,14 @@ td.link-icon a {
   margin-bottom: 0.25rem;
 }
 
+a.link-external:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f35d";
+  padding-right: 0.25rem;
+  color: #211F0F;
+  font-weight: 900;
+}
+
 @font-face {
   font-family: "sard-icons";
   src: url("../sard-icons/fonts/sard-icons.eot");
@@ -18707,6 +18715,54 @@ p > a.modal-info-circle-inline::before {
   color: white;
 }
 
+.nav.nav-pills .nav-item,
+.nav.nav-pills .nav-link {
+  border-radius: 0.375rem;
+}
+
+.nav.nav-pills .nav-item:hover,
+.nav.nav-pills .nav-link:hover {
+  background-color: #EDEBEB;
+}
+
+.nav.nav-pills .nav-item:focus, .nav.nav-pills .nav-item:active,
+.nav.nav-pills .nav-link:focus,
+.nav.nav-pills .nav-link:active {
+  background-color: #D9D6D6;
+}
+
+.nav.nav-pills .nav-link.active:focus, .nav.nav-pills .nav-link.active:active {
+  background-color: #00B2B2;
+}
+
+.nav-trust.nav.nav-pills .nav-item a,
+.nav-trust.nav.nav-pills .nav-link a {
+  color: #00B2B2;
+}
+
+.nav-trust.nav.nav-pills .nav-link.active {
+  background-color: #00B2B2;
+  color: white;
+}
+
+.nav-trust.nav.nav-pills .nav-link.active:focus, .nav-trust.nav.nav-pills .nav-link.active:active {
+  background-color: #00B2B2;
+}
+
+.nav-admin.nav.nav-pills .nav-item a,
+.nav-admin.nav.nav-pills .nav-link a {
+  color: #E50073;
+}
+
+.nav-admin.nav.nav-pills .nav-link.active {
+  background-color: #E50073;
+  color: white;
+}
+
+.nav-admin.nav.nav-pills .nav-link.active:focus, .nav-admin.nav.nav-pills .nav-link.active:active {
+  background-color: #E50073;
+}
+
 .panel {
   position: relative;
   display: -webkit-box;
@@ -20267,6 +20323,20 @@ hr.white {
   border-color: #00B2B2;
 }
 
+.theme-user .nav-trust.nav.nav-pills .nav-item a,
+.theme-user .nav-trust.nav.nav-pills .nav-link a {
+  color: #00B2B2;
+}
+
+.theme-user .nav-trust.nav.nav-pills .nav-link.active {
+  background-color: #00B2B2;
+  color: white;
+}
+
+.theme-user .nav-trust.nav.nav-pills .nav-link.active:focus, .theme-user .nav-trust.nav.nav-pills .nav-link.active:active {
+  background-color: #00B2B2;
+}
+
 .theme-admin {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -20894,6 +20964,20 @@ hr.white {
   border-color: #E50073;
 }
 
+.theme-admin .nav-trust.nav.nav-pills .nav-item a,
+.theme-admin .nav-trust.nav.nav-pills .nav-link a {
+  color: #E50073;
+}
+
+.theme-admin .nav-trust.nav.nav-pills .nav-link.active {
+  background-color: #E50073;
+  color: white;
+}
+
+.theme-admin .nav-trust.nav.nav-pills .nav-link.active:focus, .theme-admin .nav-trust.nav.nav-pills .nav-link.active:active {
+  background-color: #E50073;
+}
+
 .theme-trust {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -21519,6 +21603,20 @@ hr.white {
 
 .theme-trust .modal-trust .modal-body hr {
   border-color: #999966;
+}
+
+.theme-trust .nav-trust.nav.nav-pills .nav-item a,
+.theme-trust .nav-trust.nav.nav-pills .nav-link a {
+  color: #999966;
+}
+
+.theme-trust .nav-trust.nav.nav-pills .nav-link.active {
+  background-color: #999966;
+  color: white;
+}
+
+.theme-trust .nav-trust.nav.nav-pills .nav-link.active:focus, .theme-trust .nav-trust.nav.nav-pills .nav-link.active:active {
+  background-color: #999966;
 }
 
 /*# sourceMappingURL=remote-sard-styles.css.map */

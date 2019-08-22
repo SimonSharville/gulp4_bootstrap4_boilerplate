@@ -508,3 +508,12 @@ td.link-icon a{
   padding-left: 1.375rem ; // 22px
   margin-bottom: 0.25rem;
 }
+
+a.link-external:before
+{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f35d" ;
+  padding-right: $link-icon-padding ;
+  color:$text;
+  font-weight: 900;
+}

@@ -1,0 +1,51 @@
+// Navs =========================================
+
+.nav.nav-pills .nav-item,
+.nav.nav-pills .nav-link{
+  border-radius: $sard-spacer-6;
+  &:hover{
+    background-color: $sa-grey-02;
+  }
+  &:focus,
+  &:active{
+    background-color: $sa-grey-04;
+  }
+}
+.nav.nav-pills .nav-link.active{
+  &:focus,
+  &:active{
+    background-color: $user-colour;
+  }
+}
+
+// Colour variations ----------------------------
+
+.nav-trust.nav.nav-pills .nav-item,
+.nav-trust.nav.nav-pills .nav-link{
+  & a{
+    color: $user-colour;
+  }
+}
+.nav-trust.nav.nav-pills .nav-link.active{
+  background-color: $user-colour;
+  color: white;
+  &:focus,
+  &:active{
+    background-color: $user-colour;
+  }
+}
+
+.nav-admin.nav.nav-pills .nav-item,
+.nav-admin.nav.nav-pills .nav-link{
+  & a{
+    color: $admin-colour;
+  }
+}
+.nav-admin.nav.nav-pills .nav-link.active{
+  background-color: $admin-colour;
+  color: white;
+  &:focus,
+  &:active{
+    background-color: $admin-colour;
+  }
+}
