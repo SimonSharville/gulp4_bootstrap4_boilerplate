@@ -18985,6 +18985,151 @@ p > a.modal-info-circle-inline::before {
   background-color: #E50073;
 }
 
+.pagination-sard a.page-link span {
+  display: none;
+}
+
+.pagination-sard .page-item.active .page-link {
+  background-color: #00b2b2;
+  border-color: #00b2b2;
+  color: white;
+}
+
+.pagination-sard .page-item.active .page-link:hover {
+  background-color: #00a3a3;
+  border-color: #00a3a3;
+}
+
+.pagination-sard .page-item.active .page-link:focus {
+  background-color: #009393;
+  border-color: #009393;
+}
+
+.pagination-sard .page-link {
+  color: #00b2b2;
+}
+
+.pagination-sard .page-link:hover {
+  background-color: #00a3a3;
+  border-color: #00a3a3;
+  color: white;
+}
+
+.pagination-sard .page-link:focus {
+  background-color: #009393;
+  border-color: #009393;
+  color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.pagination-sard .page-link[aria-label="Previous"],
+.pagination-sard .page-link[aria-label="Next"] {
+  padding: 0px;
+  max-width: 36px;
+  width: 36px;
+  max-height: 36px;
+  height: 36px;
+}
+
+.pagination-sard .page-link[aria-label="Previous"]::before,
+.pagination-sard .page-link[aria-label="Next"]::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #00B2B2;
+  font-size: 1.21rem;
+  position: relative;
+  top: 6px;
+  left: 7px;
+}
+
+.pagination-sard .page-link[aria-label="Previous"]:hover::before, .pagination-sard .page-link[aria-label="Previous"]:focus::before,
+.pagination-sard .page-link[aria-label="Next"]:hover::before,
+.pagination-sard .page-link[aria-label="Next"]:focus::before {
+  color: white;
+}
+
+.pagination-sard .page-link[aria-label="Previous"] {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.pagination-sard .page-link[aria-label="Previous"]::before {
+  content: "\f0a8";
+}
+
+.pagination-sard .page-link[aria-label="Next"] {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.pagination-sard .page-link[aria-label="Next"]::before {
+  content: "\f0a9";
+}
+
+.pagination-sard.pagination-lg .page-link[aria-label="Previous"],
+.pagination-sard.pagination-lg .page-link[aria-label="Next"] {
+  max-width: 54px;
+  width: 54px;
+  max-height: 54px;
+  height: 54px;
+}
+
+.pagination-sard.pagination-lg .page-link[aria-label="Previous"]::before,
+.pagination-sard.pagination-lg .page-link[aria-label="Next"]::before {
+  font-size: 1.75rem;
+  position: relative;
+  top: 6px;
+  left: 12px;
+}
+
+.pagination-sard.pagination-sm .page-link[aria-label="Previous"],
+.pagination-sard.pagination-sm .page-link[aria-label="Next"] {
+  max-width: 29px;
+  width: 29px;
+  max-height: 29px;
+  height: 29px;
+}
+
+.pagination-sard.pagination-sm .page-link[aria-label="Previous"]::before,
+.pagination-sard.pagination-sm .page-link[aria-label="Next"]::before {
+  font-size: 1.05rem;
+  position: relative;
+  top: 1px;
+  left: 6px;
+}
+
+.card-body .pagination-div,
+.panel-body .pagination-div,
+.form-group .pagination-div {
+  border-top: 1px solid #00B2B2;
+  padding-top: 1rem;
+}
+
+.card-body .pagination-div .pagination,
+.panel-body .pagination-div .pagination,
+.form-group .pagination-div .pagination {
+  float: right;
+  margin-bottom: 0rem;
+}
+
+.form-group .pagination-div .pagination {
+  margin-bottom: 0.7rem;
+}
+
+.pagination-entries {
+  display: inline-block;
+  float: left;
+  margin-top: -0.3rem;
+}
+
+@media (max-width: 991px) {
+  .pagination-entries {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
 .panel {
   position: relative;
   display: -webkit-box;
@@ -20663,6 +20808,54 @@ hr.white {
   background-color: #00B2B2;
 }
 
+.theme-user .pagination-sard .page-item.active .page-link {
+  background-color: #00b2b2;
+  border-color: #00b2b2;
+}
+
+.theme-user .pagination-sard .page-item.active .page-link:hover {
+  background-color: #00a3a3;
+  border-color: #00a3a3;
+}
+
+.theme-user .pagination-sard .page-item.active .page-link:focus {
+  background-color: #009393;
+  border-color: #009393;
+}
+
+.theme-user .pagination-sard .page-link {
+  color: #00b2b2;
+}
+
+.theme-user .pagination-sard .page-link:hover {
+  background-color: #00a3a3;
+  border-color: #00a3a3;
+  color: white;
+}
+
+.theme-user .pagination-sard .page-link:focus {
+  background-color: #009393;
+  border-color: #009393;
+  color: white;
+}
+
+.theme-user .pagination-sard .page-link[aria-label="Previous"]::before,
+.theme-user .pagination-sard .page-link[aria-label="Next"]::before {
+  color: #00B2B2;
+}
+
+.theme-user .pagination-sard .page-link[aria-label="Previous"]:hover::before, .theme-user .pagination-sard .page-link[aria-label="Previous"]:focus::before,
+.theme-user .pagination-sard .page-link[aria-label="Next"]:hover::before,
+.theme-user .pagination-sard .page-link[aria-label="Next"]:focus::before {
+  color: white;
+}
+
+.theme-user .card-body .pagination-div,
+.theme-user .panel-body .pagination-div,
+.theme-user .form-group .pagination-div {
+  border-top: 1px solid #00B2B2;
+}
+
 .theme-admin {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -21408,6 +21601,54 @@ hr.white {
   background-color: #E50073;
 }
 
+.theme-admin .pagination-sard .page-item.active .page-link {
+  background-color: #e50073;
+  border-color: #e50073;
+}
+
+.theme-admin .pagination-sard .page-item.active .page-link:hover {
+  background-color: #d6006b;
+  border-color: #d6006b;
+}
+
+.theme-admin .pagination-sard .page-item.active .page-link:focus {
+  background-color: #c60064;
+  border-color: #c60064;
+}
+
+.theme-admin .pagination-sard .page-link {
+  color: #e50073;
+}
+
+.theme-admin .pagination-sard .page-link:hover {
+  background-color: #d6006b;
+  border-color: #d6006b;
+  color: white;
+}
+
+.theme-admin .pagination-sard .page-link:focus {
+  background-color: #c60064;
+  border-color: #c60064;
+  color: white;
+}
+
+.theme-admin .pagination-sard .page-link[aria-label="Previous"]::before,
+.theme-admin .pagination-sard .page-link[aria-label="Next"]::before {
+  color: #E50073;
+}
+
+.theme-admin .pagination-sard .page-link[aria-label="Previous"]:hover::before, .theme-admin .pagination-sard .page-link[aria-label="Previous"]:focus::before,
+.theme-admin .pagination-sard .page-link[aria-label="Next"]:hover::before,
+.theme-admin .pagination-sard .page-link[aria-label="Next"]:focus::before {
+  color: white;
+}
+
+.theme-admin .card-body .pagination-div,
+.theme-admin .panel-body .pagination-div,
+.theme-admin .form-group .pagination-div {
+  border-top: 1px solid #E50073;
+}
+
 .theme-trust {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -22151,6 +22392,54 @@ hr.white {
 
 .theme-trust .nav-trust.nav.nav-pills .nav-link.active:focus, .theme-trust .nav-trust.nav.nav-pills .nav-link.active:active {
   background-color: #999966;
+}
+
+.theme-trust .pagination-sard .page-item.active .page-link {
+  background-color: #999966;
+  border-color: #999966;
+}
+
+.theme-trust .pagination-sard .page-item.active .page-link:hover {
+  background-color: #909060;
+  border-color: #909060;
+}
+
+.theme-trust .pagination-sard .page-item.active .page-link:focus {
+  background-color: #87875a;
+  border-color: #87875a;
+}
+
+.theme-trust .pagination-sard .page-link {
+  color: #999966;
+}
+
+.theme-trust .pagination-sard .page-link:hover {
+  background-color: #909060;
+  border-color: #909060;
+  color: white;
+}
+
+.theme-trust .pagination-sard .page-link:focus {
+  background-color: #87875a;
+  border-color: #87875a;
+  color: white;
+}
+
+.theme-trust .pagination-sard .page-link[aria-label="Previous"]::before,
+.theme-trust .pagination-sard .page-link[aria-label="Next"]::before {
+  color: #999966;
+}
+
+.theme-trust .pagination-sard .page-link[aria-label="Previous"]:hover::before, .theme-trust .pagination-sard .page-link[aria-label="Previous"]:focus::before,
+.theme-trust .pagination-sard .page-link[aria-label="Next"]:hover::before,
+.theme-trust .pagination-sard .page-link[aria-label="Next"]:focus::before {
+  color: white;
+}
+
+.theme-trust .card-body .pagination-div,
+.theme-trust .panel-body .pagination-div,
+.theme-trust .form-group .pagination-div {
+  border-top: 1px solid #999966;
 }
 
 /*# sourceMappingURL=remote-sard-styles.css.map */

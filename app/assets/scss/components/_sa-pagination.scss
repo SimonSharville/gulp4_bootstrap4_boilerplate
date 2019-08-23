@@ -1,0 +1,144 @@
+// Pagination ===================================
+
+// Pagination Sard
+.pagination-sard{
+  a.page-link span{
+    display: none;
+  }
+}
+
+.pagination-sard .page-item.active .page-link{
+  background-color: darken($user-colour, 0%);
+  border-color: darken($user-colour, 0%);
+  color: white;
+  &:hover{
+    background-color: darken($user-colour, 3%);
+    border-color: darken($user-colour, 3%);
+  }
+  &:focus{
+    background-color: darken($user-colour, 6%);
+    border-color: darken($user-colour, 6%);
+  }
+}
+
+.pagination-sard .page-link{
+  color: darken($user-colour, 0%);
+  
+  &:hover{
+    background-color: darken($user-colour, 3%);
+    border-color: darken($user-colour, 3%);
+    color: white;
+  }
+  &:focus{
+    background-color: darken($user-colour, 6%);
+    border-color: darken($user-colour, 6%);
+    color: white;
+    box-shadow: none;
+  }
+}
+
+.pagination-sard{
+  .page-link[aria-label="Previous"],
+  .page-link[aria-label="Next"] {
+    padding: 0px;
+    max-width: 36px;
+    width: 36px;
+    max-height: 36px;
+    height: 36px;
+    &::before{
+      font-family: "Font Awesome 5 Free"; 
+      font-weight: 900;
+      color: $user-colour;
+      font-size: 1.21rem;
+      position: relative;
+      top: 6px;
+      left: 7px;
+      }
+      &:hover::before,
+      &:focus::before{
+        color: white;
+      }
+  } 
+}
+
+.pagination-sard{
+  .page-link[aria-label="Previous"] {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    &::before{
+      content: "\f0a8" ;
+    }
+  }
+}
+.pagination-sard{
+  .page-link[aria-label="Next"] {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    &::before{
+      content: "\f0a9" ;
+    }
+  }
+}
+
+// sizing
+.pagination-sard.pagination-lg{
+  .page-link[aria-label="Previous"],
+  .page-link[aria-label="Next"] {
+    max-width: 54px;
+    width: 54px;
+    max-height: 54px;
+    height: 54px;
+    &::before{
+      font-size: 1.75rem;
+      position: relative;
+      top: 6px;
+      left: 12px;
+    }
+  } 
+}
+
+.pagination-sard.pagination-sm{
+  .page-link[aria-label="Previous"],
+  .page-link[aria-label="Next"] {
+    max-width: 29px;
+    width: 29px;
+    max-height: 29px;
+    height: 29px;
+    &::before{
+      font-size: 1.05rem;
+      position: relative;
+      top: 1px;
+      left: 6px;
+    }
+  } 
+}
+
+// Within Cards, Panels and Fieldsets
+
+.card-body .pagination-div,
+.panel-body .pagination-div,
+.form-group .pagination-div{
+  border-top: 1px solid $user-colour;
+  padding-top: 1rem;
+  
+  .pagination{
+    float: right;
+    margin-bottom: 0rem;
+  }
+}
+.form-group .pagination-div{
+  .pagination{
+    margin-bottom: 0.7rem;
+  }
+}
+
+
+.pagination-entries{
+  display:inline-block;
+  float:left;
+  margin-top: -0.3rem;
+  @media (max-width: 991px) { // Small Screens
+    min-width:100%;
+    width:100%;
+  } 
+}

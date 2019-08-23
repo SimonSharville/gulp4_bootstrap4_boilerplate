@@ -675,6 +675,51 @@
       }
     }
 
+    // Pagination --------------------------------
+    .pagination-sard .page-item.active .page-link{
+      background-color: darken($theme-primary, 0%);
+      border-color: darken($theme-primary, 0%);
+      &:hover{
+        background-color: darken($theme-primary, 3%);
+        border-color: darken($theme-primary, 3%);
+      }
+      &:focus{
+        background-color: darken($theme-primary, 6%);
+        border-color: darken($theme-primary, 6%);
+      }
+    }
+    
+    .pagination-sard .page-link{
+      color: darken($theme-primary, 0%);
+      &:hover{
+        background-color: darken($theme-primary, 3%);
+        border-color: darken($theme-primary, 3%);
+        color: white;
+      }
+      &:focus{
+        background-color: darken($theme-primary, 6%);
+        border-color: darken($theme-primary, 6%);
+        color: white;
+      }
+    }
+
+    .pagination-sard{
+      .page-link[aria-label="Previous"],
+      .page-link[aria-label="Next"] {
+        &::before{
+          color: $theme-primary;
+          }
+          &:hover::before,
+          &:focus::before{
+            color: white;
+          }
+      } 
+    }
+    .card-body .pagination-div,
+    .panel-body .pagination-div,
+    .form-group .pagination-div{
+      border-top: 1px solid $theme-primary;
+    }
 
   } // End Theme Name ===========================
   // ============================================
