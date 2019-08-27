@@ -19468,6 +19468,10 @@ hr.white {
   height: 16px;
 }
 
+.perf {
+  background-color: #B5B0B0;
+}
+
 .perf.black {
   background-color: #211F0F;
 }
@@ -20212,12 +20216,20 @@ hr.white {
   color: #001a1a;
 }
 
-.theme-user hr.trust {
+.theme-user hr.primary {
   border-color: #00B2B2;
 }
 
-.theme-user .perf.trust {
+.theme-user hr.secondary {
+  border-color: #004D4D;
+}
+
+.theme-user .perf.primary {
   background-color: #00B2B2;
+}
+
+.theme-user .perf.secondary {
+  background-color: #004D4D;
 }
 
 .theme-user .bg-trust {
@@ -21102,12 +21114,20 @@ hr.white {
   color: #660066;
 }
 
-.theme-admin hr.trust {
+.theme-admin hr.primary {
   border-color: #E50073;
 }
 
-.theme-admin .perf.trust {
+.theme-admin hr.secondary {
+  border-color: #990099;
+}
+
+.theme-admin .perf.primary {
   background-color: #E50073;
+}
+
+.theme-admin .perf.secondary {
+  background-color: #990099;
 }
 
 .theme-admin .bg-trust {
@@ -21992,12 +22012,20 @@ hr.white {
   color: #734d26;
 }
 
-.theme-trust hr.trust {
+.theme-trust hr.primary {
   border-color: #999966;
 }
 
-.theme-trust .perf.trust {
+.theme-trust hr.secondary {
+  border-color: #996633;
+}
+
+.theme-trust .perf.primary {
   background-color: #999966;
+}
+
+.theme-trust .perf.secondary {
+  background-color: #996633;
 }
 
 .theme-trust .bg-trust {

@@ -27,7 +27,7 @@
         background-color: $theme-primary;
     }
 
-    // Navbar SARD ==============================
+    // Navbar PRIMARY ===========================
 
     .navbar-primary {
       background-color: $theme-primary;
@@ -254,7 +254,7 @@
     }
 
     // Small Sizes
-      // SARD
+      // Primary
   @media (max-width: 991px){
     .navbar-primary .dropdown-submenu .dropdown-menu.show{
       border: 1px solid white;
@@ -354,9 +354,11 @@
     }
 
     // Perforations
-    hr.trust{ border-color: $theme-primary; }
+    hr.primary{ border-color: $theme-primary; }
+    hr.secondary{ border-color: $theme-secondary; }
 
-    .perf.trust { background-color: $theme-primary; }
+    .perf.primary { background-color: $theme-primary; }
+    .perf.secondary { background-color: $theme-secondary; }
 
     // Trust Colours ==============
     // Background
