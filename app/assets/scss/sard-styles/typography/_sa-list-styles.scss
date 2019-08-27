@@ -1,5 +1,7 @@
 // List Styles ==================================
 
+$sa-bullet-size: 0.6rem;
+
 ul{
   padding: 0;
   font-size: 0.9375rem; // 15px
@@ -15,11 +17,11 @@ ol{
 // Bullet Points ========================
 ul{
   list-style: none;
-  text-indent: -16px; // Hanging bullet
+  text-indent: -$sa-bullet-size; // Hanging bullet
 }
 
 ul li{
-  padding-left: 16px; // Hanging bullet
+  padding-left: $sa-bullet-size * 1.75; // Hanging bullet
   padding-bottom: 5px;
 }
 ul.flat{margin-bottom: 0;}
@@ -28,10 +30,11 @@ ul li::before{
   font-family: "Font Awesome 5 Free";
   content: "\f111" ; // Circle
   font-weight: 900;
-  padding-right:7px;
-  font-size: 10px;
+  // padding-right:7px;
+  font-size: $sa-bullet-size;
   position:relative;
-  top: -2px;
+  top: -$sa-bullet-size / 4;
+  left: -$sa-bullet-size / 1.75;
 }
 
 ul.open-bullet li::before,
@@ -45,10 +48,22 @@ ul > ul{
   list-style: none;
   text-indent: 0px; // Hanging bullet
 }
+ul > ul li{
+  text-indent: -$sa-bullet-size;
+  padding-left: $sa-bullet-size * 3.5;
+}
+
 ul.no-bullet > ul{
   list-style: none;
-  text-indent: 16px; // Hanging bullet
+  text-indent: $sa-bullet-size; // Hanging bullet
 }
+
+ul.no-bullet > ul li{
+  text-indent: 0rem;
+  padding-left: 0.6rem;
+}
+
+
 
 // No Bullets ===================================
 ul.no-bullet{ // Overrides indents when no bullet
@@ -71,7 +86,9 @@ ul.no-bullet{ // Overrides indents when no bullet
   content: none;
   display:none;
 }
-
+li.no-bullet{
+  text-indent: 0;
+}
 li.no-bullet:before{ // Removes Bullets
   content: none;
   display:none;
@@ -81,6 +98,17 @@ li.no-bullet:before{ // Removes Bullets
 ul.list-group{
   text-indent: 0;
 }
+ul.list-group{
+  list-style: none;
+  text-indent: -$sa-bullet-size; // Hanging bullet
+}
+
+ul.list-group li{
+  // padding-left: $sa-bullet-size * 1.5; // Hanging bullet
+  padding-left: ($sa-bullet-size + 1rem); // Hanging bullet
+  padding-bottom: 5px;
+}
+
 ul.no-bullet.list-group{ // Overrides indents when no bullet
   text-indent: 0; 
   li.list-group-item{ 
@@ -92,23 +120,6 @@ ul.no-bullet.list-group li:before{ // Removes Bullets
   display:none;
 }
 
-//  With Icons ==================================
-
-// ul li{
-//   .glyphicon, .fa{ 
-//     padding: 0 5px 0 10px; // Overrides indents when Bullet
-//   }
-// }
-
-//  ul.no-bullet li{
-//   .glyphicon, .fa{ 
-//     padding: 0 5px 0 0; // Overrides indents when no bullet
-//   }
-// }
-
-// ul.indent.no-bullet{
-//   padding-left: 20px; // Overrides indents when no bullet
-// }
 
 // Navbar & Dropdowns ===========================
 
@@ -150,23 +161,24 @@ ul.pagination{ // Overrides indents when no bullet
 
 // Colouring ====================================
 
-ul.trust-list{
+ul.list-primary{
   li::before{ color: $user-colour; }
 }
 ul{
-  li.trust-list::before{ color: $user-colour; }
+  li.list-primary::before{ color: $user-colour; }
 }
 
-ul.user-list{
-  li::before{ color: $user-colour; }
+ul.list-secondary{
+  li::before{ color: $secondary; }
 }
 ul{
-  li.user-list::before{ color: $user-colour; }
+  li.list-secondary::before{ color: $secondary; }
 }
 
-ul.admin-list{
-  li::before{ color: $admin-colour; }
-}
-ul{
-  li.admin-list::before{ color: $admin-colour; }
-}
+
+// Line break issue{
+  ul li br.line-break {
+    display: block;
+    padding-left: 30px;
+    content: " ";
+ }

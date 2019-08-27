@@ -12522,11 +12522,11 @@ ol {
 
 ul {
   list-style: none;
-  text-indent: -16px;
+  text-indent: -0.6rem;
 }
 
 ul li {
-  padding-left: 16px;
+  padding-left: 1.05rem;
   padding-bottom: 5px;
 }
 
@@ -12538,10 +12538,10 @@ ul li::before {
   font-family: "Font Awesome 5 Free";
   content: "\f111";
   font-weight: 900;
-  padding-right: 7px;
-  font-size: 10px;
+  font-size: 0.6rem;
   position: relative;
-  top: -2px;
+  top: -0.15rem;
+  left: -0.34286rem;
 }
 
 ul.open-bullet li::before,
@@ -12554,9 +12554,19 @@ ul > ul {
   text-indent: 0px;
 }
 
+ul > ul li {
+  text-indent: -0.6rem;
+  padding-left: 2.1rem;
+}
+
 ul.no-bullet > ul {
   list-style: none;
-  text-indent: 16px;
+  text-indent: 0.6rem;
+}
+
+ul.no-bullet > ul li {
+  text-indent: 0rem;
+  padding-left: 0.6rem;
 }
 
 ul.no-bullet {
@@ -12582,6 +12592,10 @@ ul.no-bullet li:before {
   display: none;
 }
 
+li.no-bullet {
+  text-indent: 0;
+}
+
 li.no-bullet:before {
   content: none;
   display: none;
@@ -12589,6 +12603,16 @@ li.no-bullet:before {
 
 ul.list-group {
   text-indent: 0;
+}
+
+ul.list-group {
+  list-style: none;
+  text-indent: -0.6rem;
+}
+
+ul.list-group li {
+  padding-left: 1.6rem;
+  padding-bottom: 5px;
 }
 
 ul.no-bullet.list-group {
@@ -12655,28 +12679,26 @@ ul.pagination ul {
   text-indent: 0;
 }
 
-ul.trust-list li::before {
+ul.list-primary li::before {
   color: #00B2B2;
 }
 
-ul li.trust-list::before {
+ul li.list-primary::before {
   color: #00B2B2;
 }
 
-ul.user-list li::before {
-  color: #00B2B2;
+ul.list-secondary li::before {
+  color: #004D4D;
 }
 
-ul li.user-list::before {
-  color: #00B2B2;
+ul li.list-secondary::before {
+  color: #004D4D;
 }
 
-ul.admin-list li::before {
-  color: #E50073;
-}
-
-ul li.admin-list::before {
-  color: #E50073;
+ul li br.line-break {
+  display: block;
+  padding-left: 30px;
+  content: " ";
 }
 
 .multi-column-2, .multi-column-3, .multi-column-4 {
@@ -20717,12 +20739,20 @@ hr.white {
   color: #A39E9C !important;
 }
 
-.theme-user ul.trust-list li::before {
+.theme-user ul.list-primary li::before {
   color: #00B2B2;
 }
 
-.theme-user ul li.trust-list::before {
+.theme-user ul li.list-primary::before {
   color: #00B2B2;
+}
+
+.theme-user ul.list-secondary li::before {
+  color: #004D4D;
+}
+
+.theme-user ul li.list-secondary::before {
+  color: #004D4D;
 }
 
 .theme-user .modal-sard .modal-header {
@@ -21647,12 +21677,20 @@ hr.white {
   color: #A39E9C !important;
 }
 
-.theme-admin ul.trust-list li::before {
+.theme-admin ul.list-primary li::before {
   color: #E50073;
 }
 
-.theme-admin ul li.trust-list::before {
+.theme-admin ul li.list-primary::before {
   color: #E50073;
+}
+
+.theme-admin ul.list-secondary li::before {
+  color: #990099;
+}
+
+.theme-admin ul li.list-secondary::before {
+  color: #990099;
 }
 
 .theme-admin .modal-sard .modal-header {
@@ -22577,12 +22615,20 @@ hr.white {
   color: #A39E9C !important;
 }
 
-.theme-trust ul.trust-list li::before {
+.theme-trust ul.list-primary li::before {
   color: #999966;
 }
 
-.theme-trust ul li.trust-list::before {
+.theme-trust ul li.list-primary::before {
   color: #999966;
+}
+
+.theme-trust ul.list-secondary li::before {
+  color: #996633;
+}
+
+.theme-trust ul li.list-secondary::before {
+  color: #996633;
 }
 
 .theme-trust .modal-sard .modal-header {

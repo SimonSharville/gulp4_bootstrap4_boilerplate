@@ -728,11 +728,18 @@
     }
 
     // List styles ----------
-    ul.trust-list{
+    ul.list-primary{
       li::before{ color: $theme-primary; }
     }
     ul{
-      li.trust-list::before{ color: $theme-primary; }
+      li.list-primary::before{ color: $theme-primary; }
+    }
+
+    ul.list-secondary{
+      li::before{ color: $theme-secondary; }
+    }
+    ul{
+      li.list-secondary::before{ color: $theme-secondary; }
     }
     
     // Modal Trust ----------------------------------
