@@ -412,8 +412,11 @@
     .text-trust-admin-2-light{ color: lighten($admin-colour-2, 10%) !important;}
 
     // Badges ---------------
-    .badge.badge-trust{ 
+    .badge.badge-primary{ 
       background-color: $theme-primary; 
+    }
+    .badge.badge-secondary{ 
+      background-color: $theme-secondary; 
     }
     // Buttons --------------
     .btn-primary{

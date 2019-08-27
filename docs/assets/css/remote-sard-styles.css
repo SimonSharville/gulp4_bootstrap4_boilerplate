@@ -13997,7 +13997,7 @@ a.badge.badge-light {
   color: #211F0F;
 }
 
-.badge.badge-trust {
+.badge.badge-primary {
   background-color: #00B2B2;
 }
 
@@ -20376,8 +20376,12 @@ hr.white {
   color: #cc00cc !important;
 }
 
-.theme-user .badge.badge-trust {
+.theme-user .badge.badge-primary {
   background-color: #00B2B2;
+}
+
+.theme-user .badge.badge-secondary {
+  background-color: #004D4D;
 }
 
 .theme-user .btn-primary {
@@ -21274,8 +21278,12 @@ hr.white {
   color: #cc00cc !important;
 }
 
-.theme-admin .badge.badge-trust {
+.theme-admin .badge.badge-primary {
   background-color: #E50073;
+}
+
+.theme-admin .badge.badge-secondary {
+  background-color: #990099;
 }
 
 .theme-admin .btn-primary {
@@ -22172,8 +22180,12 @@ hr.white {
   color: #cc00cc !important;
 }
 
-.theme-trust .badge.badge-trust {
+.theme-trust .badge.badge-primary {
   background-color: #999966;
+}
+
+.theme-trust .badge.badge-secondary {
+  background-color: #996633;
 }
 
 .theme-trust .btn-primary {
