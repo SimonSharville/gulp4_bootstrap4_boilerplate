@@ -156,25 +156,25 @@
 // Modal Primary ----------------------------------
 
 .modal-primary .modal-header {
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   color: white;
   border-bottom: none;
 }
 
 .modal-primary .modal-footer {
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   border-top: none;
   color: white;
 }
 
 .modal-primary .modal-body a:link {color: white;}
 .modal-primary .modal-body a:visited {color: white;}
-.modal-primary .modal-body a:hover {color: darken($user-colour, 20%);}
-.modal-primary .modal-body a:focus {color: darken($user-colour, 25%)!important;}
-.modal-primary .modal-body a:active {color: darken($user-colour, 25%)!important;}
+.modal-primary .modal-body a:hover {color: darken($user-primary-colour, 20%);}
+.modal-primary .modal-body a:focus {color: darken($user-primary-colour, 25%)!important;}
+.modal-primary .modal-body a:active {color: darken($user-primary-colour, 25%)!important;}
 
 .modal-primary .modal-body hr{
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
 }
 
 .modal-primary .modal-footer {
@@ -183,7 +183,7 @@
 }
 
 .modal-primary ::-webkit-scrollbar-thumb {
-  background-color: darken($user-colour, 20%)!important;
+  background-color: darken($user-primary-colour, 20%)!important;
 }
 
 

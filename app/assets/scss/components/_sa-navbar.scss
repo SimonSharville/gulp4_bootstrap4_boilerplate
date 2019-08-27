@@ -150,7 +150,7 @@
 }
 
 .navbar-primary .dropdown-submenu .dropdown-menu{
-  border-left: 1px solid darken($user-colour, 30%);
+  border-left: 1px solid darken($user-primary-colour, 30%);
 }
 
 
@@ -196,7 +196,7 @@
 
 .navbar-dark .dropdown-menu .dropdown-item{
   color: white;
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
   &:hover{
     background-color: $sa-grey-16;
     color: white;
@@ -231,7 +231,7 @@
 // Navbar Toggler
 .navbar-dark .dropdown-menu .dropdown-item.dropdown-toggle:active,
 .navbar-dark .dropdown-menu .dropdown-item.dropdown-toggle.active{
-  background-color: darken($user-colour, 30%);
+  background-color: darken($user-primary-colour, 30%);
 }
 .navbar-dark .navbar-toggler{
   background-color: $sa-grey-04;
@@ -254,7 +254,7 @@
 // Navbar SARD ==================================
 
 .navbar-primary {
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
 }
 
 .navbar-primary .navbar-brand,
@@ -268,23 +268,23 @@
 
 /* change the color of active or hovered links */
 .navbar-primary .nav-item:hover .nav-link {
-  background-color: darken($user-colour, 15%); 
+  background-color: darken($user-primary-colour, 15%); 
 }
 .navbar-primary .nav-item:focus .nav-link {
-  background-color: darken($user-colour, 10%); 
+  background-color: darken($user-primary-colour, 10%); 
 }
 .navbar-primary .nav-item:active .nav-link {
-  background-color: darken($user-colour, 20%); 
+  background-color: darken($user-primary-colour, 20%); 
 }
 // add background-color to active links
 .navbar-primary .nav-item.active .nav-link{ 
-  background-color: darken($user-colour, 20%); 
+  background-color: darken($user-primary-colour, 20%); 
 }
 .navbar-primary .nav-item.active .nav-link:hover{
-  background-color: darken($user-colour, 25%); 
+  background-color: darken($user-primary-colour, 25%); 
 }
 .navbar-primary .nav-item.active .nav-link:focus{
-  background-color: darken($user-colour, 30%); 
+  background-color: darken($user-primary-colour, 30%); 
 }
 
 .navbar-primary .nav-item:focus .nav-link.disabled,
@@ -297,25 +297,25 @@
   border:none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: darken($user-colour, 15%);
+  background-color: darken($user-primary-colour, 15%);
   color: white;
 }
 
 .navbar-primary .nav-item.dropdown.show .nav-link.dropdown-toggle{
-  background-color: darken($user-colour, 25%);
+  background-color: darken($user-primary-colour, 25%);
 }
 
 .navbar-primary .dropdown-menu .dropdown-item{
   color: white;
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
   &:focus{
-    background-color: darken($user-colour, 25%);
+    background-color: darken($user-primary-colour, 25%);
   }
   &:hover{
-    background-color: darken($user-colour, 25%);
+    background-color: darken($user-primary-colour, 25%);
   }
   &:active{
-    background-color: darken($user-colour, 30%);
+    background-color: darken($user-primary-colour, 30%);
   }
 }
 
@@ -323,7 +323,7 @@
 // Submenu
 .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle:active,
 .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle.active{
-  background-color: darken($user-colour, 30%);
+  background-color: darken($user-primary-colour, 30%);
 }
 .navbar-primary .dropdown-submenu .dropdown-menu{
   border:none;
@@ -341,13 +341,13 @@
 
 // Navbar Toggler
 .navbar-primary .navbar-toggler{
-  background-color: darken($user-colour, 20%);
+  background-color: darken($user-primary-colour, 20%);
   &:hover{
-    background-color: darken($user-colour, 25%);
+    background-color: darken($user-primary-colour, 25%);
   }
   &:focus,
   &:active{
-    background-color: darken($user-colour, 30%);
+    background-color: darken($user-primary-colour, 30%);
   }
 }
 
@@ -362,7 +362,7 @@
 // Navbar SECONDARY =============================
 
 .navbar-secondary {
-  background-color: $admin-colour;
+  background-color: $admin-primary-colour;
 }
 
 .navbar-secondary .navbar-brand,
@@ -376,23 +376,23 @@
 
 /* change the color of active or hovered links */
 .navbar-secondary .nav-item:hover .nav-link {
-  background-color: darken($admin-colour, 15%); 
+  background-color: darken($admin-primary-colour, 15%); 
 }
 .navbar-secondary .nav-item:focus .nav-link {
-  background-color: darken($admin-colour, 10%); 
+  background-color: darken($admin-primary-colour, 10%); 
 }
 .navbar-secondary .nav-item:active .nav-link {
-  background-color: darken($admin-colour, 20%); 
+  background-color: darken($admin-primary-colour, 20%); 
 }
 // add background-color to active links
 .navbar-secondary .nav-item.active .nav-link{ 
-  background-color: darken($admin-colour, 20%); 
+  background-color: darken($admin-primary-colour, 20%); 
 }
 .navbar-secondary .nav-item.active .nav-link:hover{
-  background-color: darken($admin-colour, 25%); 
+  background-color: darken($admin-primary-colour, 25%); 
 }
 .navbar-secondary .nav-item.active .nav-link:focus{
-  background-color: darken($admin-colour, 30%); 
+  background-color: darken($admin-primary-colour, 30%); 
 }
 
 .navbar-secondary .nav-item:focus .nav-link.disabled,
@@ -405,25 +405,25 @@
   border:none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: darken($admin-colour, 10%);
+  background-color: darken($admin-primary-colour, 10%);
   color: white;
 }
 
 .navbar-secondary .nav-item.dropdown.show .nav-link.dropdown-toggle{
-  background-color: darken($admin-colour, 25%);
+  background-color: darken($admin-primary-colour, 25%);
 }
 
 .navbar-secondary .dropdown-menu .dropdown-item{
   color: white;
-  border-color: $admin-colour;
+  border-color: $admin-primary-colour;
   &:focus{
-    background-color: darken($admin-colour, 25%);
+    background-color: darken($admin-primary-colour, 25%);
   }
   &:hover{
-    background-color: darken($admin-colour, 25%);
+    background-color: darken($admin-primary-colour, 25%);
   }
   &:active{
-    background-color: darken($admin-colour, 30%);
+    background-color: darken($admin-primary-colour, 30%);
   }
 }
 
@@ -431,7 +431,7 @@
 // Submenu
 .navbar-secondary .dropdown-menu .dropdown-item.dropdown-toggle:active,
 .navbar-secondary .dropdown-menu .dropdown-item.dropdown-toggle.active{
-  background-color: darken($admin-colour, 30%);
+  background-color: darken($admin-primary-colour, 30%);
 }
 .navbar-secondary .dropdown-submenu .dropdown-menu{
   border:none;
@@ -449,13 +449,13 @@
 
 // Navbar Toggler
 .navbar-secondary .navbar-toggler{
-  background-color: darken($admin-colour, 20%);
+  background-color: darken($admin-primary-colour, 20%);
   &:hover{
-    background-color: darken($admin-colour, 25%);
+    background-color: darken($admin-primary-colour, 25%);
   }
   &:focus,
   &:active{
-    background-color: darken($admin-colour, 30%);
+    background-color: darken($admin-primary-colour, 30%);
   }
 }
 
@@ -534,35 +534,35 @@
 
   .navbar-primary .dropdown-submenu .dropdown-menu.show{
     border: 0px ;
-    background-color: darken($user-colour, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
 
   .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-item{
     &:hover{
-      background-color: darken($user-colour, 15%);
+      background-color: darken($user-primary-colour, 15%);
     }
     &:focus{
-      background-color: darken($user-colour, 20%);
+      background-color: darken($user-primary-colour, 20%);
     }
     &:active{
-      background-color: darken($user-colour, 25%);
+      background-color: darken($user-primary-colour, 25%);
     }
   }
   // t
   .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu.show{
     border: 0px solid white;
-    background-color: darken($user-colour, 15%);
+    background-color: darken($user-primary-colour, 15%);
   }
 
   .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-item{
     &:hover{
-      background-color: darken($user-colour, 20%);
+      background-color: darken($user-primary-colour, 20%);
     }
     &:focus{
-      background-color: darken($user-colour, 25%);
+      background-color: darken($user-primary-colour, 25%);
     }
     &:active{
-      background-color: darken($user-colour, 30%);
+      background-color: darken($user-primary-colour, 30%);
     }
   }
 } // End small sizes
@@ -575,35 +575,35 @@
   
     .navbar-trust .dropdown-submenu .dropdown-menu.show{
       border: 0px ;
-      background-color: darken($user-colour, 10%);
+      background-color: darken($user-primary-colour, 10%);
     }
   
     .navbar-trust .dropdown-submenu .dropdown-menu .dropdown-item{
       &:hover{
-        background-color: darken($user-colour, 15%);
+        background-color: darken($user-primary-colour, 15%);
       }
       &:focus{
-        background-color: darken($user-colour, 20%);
+        background-color: darken($user-primary-colour, 20%);
       }
       &:active{
-        background-color: darken($user-colour, 25%);
+        background-color: darken($user-primary-colour, 25%);
       }
     }
     // t
     .navbar-trust .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu.show{
       border: 0px solid white;
-      background-color: darken($user-colour, 15%);
+      background-color: darken($user-primary-colour, 15%);
     }
   
     .navbar-trust .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-item{
       &:hover{
-        background-color: darken($user-colour, 20%);
+        background-color: darken($user-primary-colour, 20%);
       }
       &:focus{
-        background-color: darken($user-colour, 25%);
+        background-color: darken($user-primary-colour, 25%);
       }
       &:active{
-        background-color: darken($user-colour, 30%);
+        background-color: darken($user-primary-colour, 30%);
       }
     }
   } // End small sizes
@@ -616,35 +616,35 @@
     
       .navbar-secondary .dropdown-submenu .dropdown-menu.show{
         border: 0px ;
-        background-color: darken($admin-colour, 10%);
+        background-color: darken($admin-primary-colour, 10%);
       }
     
       .navbar-secondary .dropdown-submenu .dropdown-menu .dropdown-item{
         &:hover{
-          background-color: darken($admin-colour, 15%);
+          background-color: darken($admin-primary-colour, 15%);
         }
         &:focus{
-          background-color: darken($admin-colour, 20%);
+          background-color: darken($admin-primary-colour, 20%);
         }
         &:active{
-          background-color: darken($admin-colour, 25%);
+          background-color: darken($admin-primary-colour, 25%);
         }
       }
       // t
       .navbar-secondary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu.show{
         border: 0px solid white;
-        background-color: darken($admin-colour, 15%);
+        background-color: darken($admin-primary-colour, 15%);
       }
     
       .navbar-secondary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-item{
         &:hover{
-          background-color: darken($admin-colour, 20%);
+          background-color: darken($admin-primary-colour, 20%);
         }
         &:focus{
-          background-color: darken($admin-colour, 25%);
+          background-color: darken($admin-primary-colour, 25%);
         }
         &:active{
-          background-color: darken($admin-colour, 30%);
+          background-color: darken($admin-primary-colour, 30%);
         }
       }
     } // End small sizes

@@ -64,8 +64,8 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $user-colour;
-$secondary:     $user-colour-2;
+$primary:       $user-primary-colour;
+$secondary:     $user-secondary-colour;
 $success:       $green;
 $info:          $sa-info;
 $warning:       $sa-yellow;

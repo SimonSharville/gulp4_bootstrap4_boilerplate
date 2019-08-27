@@ -1,12 +1,12 @@
 // Dropdowns ====================================
 
-$default_dropdown_visited:      darken($user-colour, 5%);
+$default_dropdown_visited:      darken($user-primary-colour, 5%);
 $default_dropdown_hover:        $sa-grey-04;
-$default_dropdown_active:       $user-colour;
-$default_dropdown_hover_click:  darken($user-colour, 10%);
+$default_dropdown_active:       $user-primary-colour;
+$default_dropdown_hover_click:  darken($user-primary-colour, 10%);
 
 .dropdown-menu{
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
   box-shadow:$sa-box-shadow;
   padding: 0 ;
   margin: 0 ;
@@ -57,29 +57,29 @@ $default_dropdown_hover_click:  darken($user-colour, 10%);
 
 
 
-$admin-colour_dropdown_visited:      darken($admin-colour, 5%);
-$admin-colour_dropdown_hover:        $sa-grey-04;
-$admin-colour_dropdown_active:       $admin-colour;
-$admin-colour_dropdown_hover_click:  darken($admin-colour, 10%);
+$admin-primary-colour_dropdown_visited:      darken($admin-primary-colour, 5%);
+$admin-primary-colour_dropdown_hover:        $sa-grey-04;
+$admin-primary-colour_dropdown_active:       $admin-primary-colour;
+$admin-primary-colour_dropdown_hover_click:  darken($admin-primary-colour, 10%);
 
-.btn-admin + .dropdown-menu{
-  border-color: $admin-colour;
+.btn-secondary + .dropdown-menu{
+  border-color: $admin-primary-colour;
 }
-.btn-admin + .dropdown-menu .dropdown-item{
+.btn-secondary + .dropdown-menu .dropdown-item{
   &:focus{
-    background-color: $admin-colour_dropdown_active;
+    background-color: $admin-primary-colour_dropdown_active;
   }
   &:hover{
-    background-color: $admin-colour_dropdown_hover;
+    background-color: $admin-primary-colour_dropdown_hover;
   }
   &:active{
-    background-color: $admin-colour_dropdown_hover_click;
+    background-color: $admin-primary-colour_dropdown_hover_click;
   }
   &.active{
-    background-color: $admin-colour_dropdown_active;
+    background-color: $admin-primary-colour_dropdown_active;
   }
   &.active:hover{
-    background-color: $admin-colour_dropdown_active;
+    background-color: $admin-primary-colour_dropdown_active;
   }
 }
 

@@ -8,30 +8,30 @@
 }
 
 .pagination-sard .page-item.active .page-link{
-  background-color: darken($user-colour, 0%);
-  border-color: darken($user-colour, 0%);
+  background-color: darken($user-primary-colour, 0%);
+  border-color: darken($user-primary-colour, 0%);
   color: white;
   &:hover{
-    background-color: darken($user-colour, 3%);
-    border-color: darken($user-colour, 3%);
+    background-color: darken($user-primary-colour, 3%);
+    border-color: darken($user-primary-colour, 3%);
   }
   &:focus{
-    background-color: darken($user-colour, 6%);
-    border-color: darken($user-colour, 6%);
+    background-color: darken($user-primary-colour, 6%);
+    border-color: darken($user-primary-colour, 6%);
   }
 }
 
 .pagination-sard .page-link{
-  color: darken($user-colour, 0%);
+  color: darken($user-primary-colour, 0%);
   
   &:hover{
-    background-color: darken($user-colour, 3%);
-    border-color: darken($user-colour, 3%);
+    background-color: darken($user-primary-colour, 3%);
+    border-color: darken($user-primary-colour, 3%);
     color: white;
   }
   &:focus{
-    background-color: darken($user-colour, 6%);
-    border-color: darken($user-colour, 6%);
+    background-color: darken($user-primary-colour, 6%);
+    border-color: darken($user-primary-colour, 6%);
     color: white;
     box-shadow: none;
   }
@@ -48,7 +48,7 @@
     &::before{
       font-family: "Font Awesome 5 Free"; 
       font-weight: 900;
-      color: $user-colour;
+      color: $user-primary-colour;
       font-size: 1.21rem;
       position: relative;
       top: 6px;
@@ -118,7 +118,7 @@
 .card-body .pagination-div,
 .panel-body .pagination-div,
 .form-group .pagination-div{
-  border-top: 1px solid $user-colour;
+  border-top: 1px solid $user-primary-colour;
   padding-top: 1rem;
   
   .pagination{

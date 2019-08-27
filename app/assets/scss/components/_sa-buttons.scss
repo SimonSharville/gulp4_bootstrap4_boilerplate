@@ -28,59 +28,59 @@
 }
 
 .btn-primary{
-  background-color: $user-colour;
-  border-color: $user-colour;
+  background-color: $user-primary-colour;
+  border-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($user-colour, 5%); 
-    border-color: darken($user-colour, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
+    border-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($user-colour, 10%);
-    border-color: darken($user-colour, 10%);
+    background-color: darken($user-primary-colour, 10%);
+    border-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($user-colour, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
-  background-color: darken($user-colour, 15%);
-    border-color: darken($user-colour, 15%);
-    box-shadow: 0 0 0 0.2rem rgba($user-colour, .25);
+  background-color: darken($user-primary-colour, 15%);
+    border-color: darken($user-primary-colour, 15%);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
-  background-color: darken($user-colour, 15%);
-  border-color: darken($user-colour, 15%);
-  box-shadow: 0 0 0 0.2rem rgba($user-colour, .25);
+  background-color: darken($user-primary-colour, 15%);
+  border-color: darken($user-primary-colour, 15%);
+  box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
 }
 
 .btn-secondary{
-  background-color: $user-colour-dark;
-  border-color: $user-colour-dark;
+  background-color: $user-primary-colour-dark;
+  border-color: $user-primary-colour-dark;
   color: white!important;
   &:hover { 
-    background-color: darken($user-colour-dark, 5%);
-    border-color: darken($user-colour-dark, 5%); 
+    background-color: darken($user-primary-colour-dark, 5%);
+    border-color: darken($user-primary-colour-dark, 5%); 
   }
   &:active {
-    background-color: darken($user-colour-dark, 10%);
-    border-color: darken($user-colour-dark, 10%);
+    background-color: darken($user-primary-colour-dark, 10%);
+    border-color: darken($user-primary-colour-dark, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($user-colour-dark, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour-dark, .25);
   }
 }
 .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
-  background-color: darken($user-colour-dark, 15%);
-  border-color: darken($user-colour-dark, 15%);
-  box-shadow: 0 0 0 0.2rem rgba($user-colour-dark, .25);
+  background-color: darken($user-primary-colour-dark, 15%);
+  border-color: darken($user-primary-colour-dark, 15%);
+  box-shadow: 0 0 0 0.2rem rgba($user-primary-colour-dark, .25);
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
-  background-color: darken($user-colour-dark, 15%);
-  border-color: darken($user-colour-dark, 15%);
-  box-shadow: 0 0 0 0.2rem rgba($user-colour-dark, .25);
+  background-color: darken($user-primary-colour-dark, 15%);
+  border-color: darken($user-primary-colour-dark, 15%);
+  box-shadow: 0 0 0 0.2rem rgba($user-primary-colour-dark, .25);
 }
 
 $btn-default-colour: $sa-grey-14;
@@ -533,29 +533,29 @@ $btn-default-colour: $sa-grey-14;
 
 // Button Outlines ==============================
 .btn.btn-outline-primary{
-  color: $user-colour;
-  border-color: $user-colour;
+  color: $user-primary-colour;
+  border-color: $user-primary-colour;
   &:hover{
-    background-color: $user-colour;
+    background-color: $user-primary-colour;
     color: white;
   }
 }
 .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle{
-  background-color: darken($user-colour, 15%);
-  border-color: darken($user-colour, 15%);
+  background-color: darken($user-primary-colour, 15%);
+  border-color: darken($user-primary-colour, 15%);
 }
 
 .btn.btn-outline-secondary{
-  color: $user-colour-dark;
-  border-color: $user-colour-dark;
+  color: $user-primary-colour-dark;
+  border-color: $user-primary-colour-dark;
   &:hover{
-    background-color: $user-colour-dark;
+    background-color: $user-primary-colour-dark;
     color: white;
   }
 }
 .btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show>.btn-outline-secondary.dropdown-toggle{
-  background-color: darken($user-colour-dark, 15%);
-  border-color: darken($user-colour-dark, 15%);
+  background-color: darken($user-primary-colour-dark, 15%);
+  border-color: darken($user-primary-colour-dark, 15%);
 }
 
 .btn.btn-outline-default{

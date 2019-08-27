@@ -124,25 +124,25 @@
 
 
 .panel.panel-primary{
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   & .panel-heading, .panel-header, .panel-footer{
-    background-color: darken($user-colour, 15%);
+    background-color: darken($user-primary-colour, 15%);
     & .text-muted { 
-      color: darken($user-colour, 25%) !important;
+      color: darken($user-primary-colour, 25%) !important;
     }
   }
 }
 .panel.panel-primary.outline{
   background-color: white;
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
   & .panel-body.border-bottom{
-    border-color: $user-colour!important;
+    border-color: $user-primary-colour!important;
   }
   & .panel-body.border-top{
-    border-color: $user-colour!important;
+    border-color: $user-primary-colour!important;
   }
   & .panel-body hr{
-    border-color: $user-colour;
+    border-color: $user-primary-colour;
   }
 }
 

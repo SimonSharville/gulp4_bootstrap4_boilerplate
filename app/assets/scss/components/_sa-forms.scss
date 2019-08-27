@@ -18,14 +18,14 @@ label {
 
 .form-control:focus {
   color: $text;
-  border-color: $user-colour;
-  box-shadow: 0 0 0 0.1rem $user-colour;
+  border-color: $user-primary-colour;
+  box-shadow: 0 0 0 0.1rem $user-primary-colour;
 }
 
 .custom-select:focus {
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
     outline: 0;
-  box-shadow: 0 0 0 0.1rem $user-colour;
+  box-shadow: 0 0 0 0.1rem $user-primary-colour;
 }
 
 // Form Group adjustments =======================
@@ -90,7 +90,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -5px;
@@ -113,7 +113,7 @@ input[type=range]::-moz-range-thumb {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   cursor: pointer;
 }
 input[type=range]::-ms-track {
@@ -142,7 +142,7 @@ input[type=range]::-ms-thumb {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   cursor: pointer;
   height: 10px;
 }
@@ -207,16 +207,16 @@ input[type=range]:focus::-ms-fill-upper {
 .input-group>.input-group-prepend>.input-group-text{
   border-radius: 2rem 0 0 2rem;
   padding: 0 $sard-spacer-8;
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   color: white;
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
 }
 .input-group>.input-group-append>.input-group-text{
   border-radius: 0 2rem 2rem 0;
   padding: 0 $sard-spacer-8;
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   color: white;
-  border-color: $user-colour;
+  border-color: $user-primary-colour;
 }
 
 .input-group>.input-group-prepend,
@@ -241,7 +241,7 @@ input[type=range]:focus::-ms-fill-upper {
 .input-group > .form-control,
 .input-group > .custom-select{
   &:focus{
-    border-color: $user-colour;
+    border-color: $user-primary-colour;
     box-shadow: none;
   }
 }
@@ -256,19 +256,19 @@ input[type=range]:focus::-ms-fill-upper {
 // BS File Imputs and Uploads ===================
 
 .input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.form-control:focus{
-  border-color: darken($user-colour, 10%);
+  border-color: darken($user-primary-colour, 10%);
   box-shadow: none!important;
 }
 
 .custom-file-label{
   border-radius: 0 1.1rem 1.1rem 0;
-  border: 2px solid $user-colour;
+  border: 2px solid $user-primary-colour;
 }
 .custom-file-label::after{
   top: -1px;
   right: -1px;
   border-radius: 0 1.1rem 1.1rem 0;
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   color: white;
   border: none;
 }
@@ -280,15 +280,15 @@ input[type=range]:focus::-ms-fill-upper {
   border-radius: 1.1rem ;
 }
 .custom-file-input~.custom-file-label::after{
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
 }
 .custom-file-input:hover~.custom-file-label::after{
-  background-color: darken($user-colour, 5%);
-  border-color: darken($user-colour, 5%);
+  background-color: darken($user-primary-colour, 5%);
+  border-color: darken($user-primary-colour, 5%);
 }
 .custom-file-input:focus~.custom-file-label::after{
-  background-color: darken($user-colour, 10%);
-  border-color: darken($user-colour, 10%);
+  background-color: darken($user-primary-colour, 10%);
+  border-color: darken($user-primary-colour, 10%);
 }
 
 // SARD File Imputs and Uploads =================
@@ -308,7 +308,7 @@ input[type=range]:focus::-ms-fill-upper {
   & label input{ display: none;}
   & input.form-control{
     background-color: white;
-    border-color: $user-colour;
+    border-color: $user-primary-colour;
     height: calc(1.5em + .75rem + 3px);
     cursor: default;
     &:focus{
@@ -319,15 +319,15 @@ input[type=range]:focus::-ms-fill-upper {
     box-shadow: none; 
     border-width: .125rem; // 2px
     padding-top: 0.3125rem; // 5px
-    background-color: $user-colour;
-    border-color: $user-colour;
+    background-color: $user-primary-colour;
+    border-color: $user-primary-colour;
     &:hover { 
-      background-color: darken($user-colour, 5%); 
-      border-color: darken($user-colour, 5%); 
+      background-color: darken($user-primary-colour, 5%); 
+      border-color: darken($user-primary-colour, 5%); 
     }
     &:active {
-      background-color: darken($user-colour, 10%);
-      border-color: darken($user-colour, 10%);
+      background-color: darken($user-primary-colour, 10%);
+      border-color: darken($user-primary-colour, 10%);
     }
   }
 }

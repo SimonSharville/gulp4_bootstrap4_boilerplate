@@ -370,21 +370,21 @@
     .bg-trust-2-dark{ background-color: darken($theme-secondary, 10%) !important;}
     .bg-trust-2-light{ background-color: lighten($theme-secondary, 10%) !important;}
 
-    .bg-trust-user{ background-color: $user-colour !important;}
-    .bg-trust-user-dark{ background-color: darken($user-colour, 10%) !important;}
-    .bg-trust-user-light{ background-color: lighten($user-colour, 5%) !important;}
+    .bg-trust-user{ background-color: $user-primary-colour !important;}
+    .bg-trust-user-dark{ background-color: darken($user-primary-colour, 10%) !important;}
+    .bg-trust-user-light{ background-color: lighten($user-primary-colour, 5%) !important;}
 
-    .bg-trust-user-2{ background-color: $user-colour-2 !important;}
-    .bg-trust-user-2-dark{ background-color: darken($user-colour-2, 5%) !important;}
-    .bg-trust-user-2-light{ background-color: lighten($user-colour-2, 10%) !important;}
+    .bg-trust-user-2{ background-color: $user-secondary-colour !important;}
+    .bg-trust-user-2-dark{ background-color: darken($user-secondary-colour, 5%) !important;}
+    .bg-trust-user-2-light{ background-color: lighten($user-secondary-colour, 10%) !important;}
 
-    .bg-trust-admin{ background-color: $admin-colour !important;}
-    .bg-trust-admin-dark{ background-color: darken($admin-colour, 10%) !important;}
-    .bg-trust-admin-light{ background-color: lighten($admin-colour, 10%) !important;}
+    .bg-trust-admin{ background-color: $admin-primary-colour !important;}
+    .bg-trust-admin-dark{ background-color: darken($admin-primary-colour, 10%) !important;}
+    .bg-trust-admin-light{ background-color: lighten($admin-primary-colour, 10%) !important;}
 
-    .bg-trust-admin-2{ background-color: $admin-colour-2 !important;}
-    .bg-trust-admin-2-dark{ background-color: darken($admin-colour-2, 10%) !important;}
-    .bg-trust-admin-2-light{ background-color: lighten($admin-colour-2, 10%) !important;}
+    .bg-trust-admin-2{ background-color: $admin-secondary-colour !important;}
+    .bg-trust-admin-2-dark{ background-color: darken($admin-secondary-colour, 10%) !important;}
+    .bg-trust-admin-2-light{ background-color: lighten($admin-secondary-colour, 10%) !important;}
 
     // Foreground
     .text-trust{ color: $theme-primary !important;}
@@ -395,21 +395,21 @@
     .text-trust-2-dark{ color: darken($theme-secondary, 10%) !important;}
     .text-trust-2-light{ color: lighten($theme-secondary, 10%) !important;}
 
-    .text-trust-user{ color: $user-colour !important;}
-    .text-trust-user-dark{ color: darken($user-colour, 10%) !important;}
-    .text-trust-user-light{ color: lighten($user-colour, 5%) !important;}
+    .text-trust-user{ color: $user-primary-colour !important;}
+    .text-trust-user-dark{ color: darken($user-primary-colour, 10%) !important;}
+    .text-trust-user-light{ color: lighten($user-primary-colour, 5%) !important;}
 
-    .text-trust-user-2{ color: $user-colour-2 !important;}
-    .text-trust-user-2-dark{ color: darken($user-colour-2, 5%) !important;}
-    .text-trust-user-2-light{ color: lighten($user-colour-2, 10%) !important;}
+    .text-trust-user-2{ color: $user-secondary-colour !important;}
+    .text-trust-user-2-dark{ color: darken($user-secondary-colour, 5%) !important;}
+    .text-trust-user-2-light{ color: lighten($user-secondary-colour, 10%) !important;}
 
-    .text-trust-admin{ color: $admin-colour !important;}
-    .text-trust-admin-dark{ color: darken($admin-colour, 10%) !important;}
-    .text-trust-admin-light{ color: lighten($admin-colour, 10%) !important;}
+    .text-trust-admin{ color: $admin-primary-colour !important;}
+    .text-trust-admin-dark{ color: darken($admin-primary-colour, 10%) !important;}
+    .text-trust-admin-light{ color: lighten($admin-primary-colour, 10%) !important;}
 
-    .text-trust-admin-2{ color: $admin-colour-2 !important;}
-    .text-trust-admin-2-dark{ color: darken($admin-colour-2, 10%) !important;}
-    .text-trust-admin-2-light{ color: lighten($admin-colour-2, 10%) !important;}
+    .text-trust-admin-2{ color: $admin-secondary-colour !important;}
+    .text-trust-admin-2-dark{ color: darken($admin-secondary-colour, 10%) !important;}
+    .text-trust-admin-2-light{ color: lighten($admin-secondary-colour, 10%) !important;}
 
     // Badges ---------------
     .badge.badge-primary{ 
@@ -891,10 +891,10 @@
 // ================================================================================================
 // This need to come at the base - Colours for each theme.
 //             theme          first-colour      second-colour           third-colour            fourth-colour
-@include theme(theme-user,    $user-colour,     $user-colour-dark,      $user-colour-2,         $user-colour-2-dark  );
-@include theme(theme-admin,   $admin-colour,    $admin-colour-dark,     $admin-colour-2,        $admin-colour-2-dark   );
+@include theme(theme-user,    $user-primary-colour,     $user-primary-colour-dark,      $user-secondary-colour,         $user-secondary-colour-dark  );
+@include theme(theme-admin,   $admin-primary-colour,    $admin-primary-colour-dark,     $admin-secondary-colour,        $admin-secondary-colour-dark   );
 
-@include theme(theme-trust,   $trust-colour,    $trust-colour-dark,     $trust-colour-2,         $trust-colour-2-dark );
+@include theme(theme-trust,   $trust-primary-colour,    $trust-primary-colour-dark,     $trust-secondary-colour,         $trust-secondary-colour-dark );
 
 
 

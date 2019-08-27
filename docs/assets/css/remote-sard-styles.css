@@ -16589,27 +16589,27 @@ fieldset.collapsable legend a:hover {
   border-bottom-right-radius: 6px;
 }
 
-.btn-admin + .dropdown-menu {
+.btn-secondary + .dropdown-menu {
   border-color: #E50073;
 }
 
-.btn-admin + .dropdown-menu .dropdown-item:focus {
+.btn-secondary + .dropdown-menu .dropdown-item:focus {
   background-color: #E50073;
 }
 
-.btn-admin + .dropdown-menu .dropdown-item:hover {
+.btn-secondary + .dropdown-menu .dropdown-item:hover {
   background-color: #D9D6D6;
 }
 
-.btn-admin + .dropdown-menu .dropdown-item:active {
+.btn-secondary + .dropdown-menu .dropdown-item:active {
   background-color: #b20059;
 }
 
-.btn-admin + .dropdown-menu .dropdown-item.active {
+.btn-secondary + .dropdown-menu .dropdown-item.active {
   background-color: #E50073;
 }
 
-.btn-admin + .dropdown-menu .dropdown-item.active:hover {
+.btn-secondary + .dropdown-menu .dropdown-item.active:hover {
   background-color: #E50073;
 }
 

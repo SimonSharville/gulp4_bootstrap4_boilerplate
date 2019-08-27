@@ -95,11 +95,11 @@ $alert-color-level:                 1 ;
 }
 
 .alert.alert-user{
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   color: white;
 }
 .alert.alert-admin{
-  background-color: $admin-colour;
+  background-color: $admin-primary-colour;
   color: white;
 }
 

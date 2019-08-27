@@ -162,10 +162,10 @@ ul.pagination{ // Overrides indents when no bullet
 // Colouring ====================================
 
 ul.list-primary{
-  li::before{ color: $user-colour; }
+  li::before{ color: $user-primary-colour; }
 }
 ul{
-  li.list-primary::before{ color: $user-colour; }
+  li.list-primary::before{ color: $user-primary-colour; }
 }
 
 ul.list-secondary{

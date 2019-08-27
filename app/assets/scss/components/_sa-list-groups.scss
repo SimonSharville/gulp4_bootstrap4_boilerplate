@@ -80,17 +80,17 @@
 // Contextual ===============
 
 a.list-group-item-action{
-  color: darken($user-colour, 0%);
+  color: darken($user-primary-colour, 0%);
   &:visited{
-    color: darken($user-colour, 0%);
+    color: darken($user-primary-colour, 0%);
   }
   &:focus,
   &:hover{
-    color: darken($user-colour, 20%);
+    color: darken($user-primary-colour, 20%);
     background-color: $sa-grey-03;
   } 
   &:active{
-    color: darken($user-colour, 20%);
+    color: darken($user-primary-colour, 20%);
     background-color: $sa-grey-04;
   }
   & small.text-muted{ color: $sa-grey-10!important;}
@@ -98,23 +98,23 @@ a.list-group-item-action{
 
 
 // a.list-group-item-primary{
-//   color: darken($user-colour, 0%);
-//   border-color: darken($user-colour, 0%);
+//   color: darken($user-primary-colour, 0%);
+//   border-color: darken($user-primary-colour, 0%);
 //   &:visited{
-//     color: darken($user-colour, 0%);
+//     color: darken($user-primary-colour, 0%);
 //   }
 //   &:focus,
 //   &:hover{
-//     color: darken($user-colour, 20%);
+//     color: darken($user-primary-colour, 20%);
 //     background-color: $sa-grey-03;
 //   } 
 //   &:active{
-//     color: darken($user-colour, 20%);
+//     color: darken($user-primary-colour, 20%);
 //     background-color: $sa-grey-04;
 //   }
 //   &.active{
 //     color: white;
-//     background-color: darken($user-colour, 0%);
+//     background-color: darken($user-primary-colour, 0%);
 //   }
 //   & small.text-muted{ color: $sa-grey-10!important;}
 // }
@@ -123,17 +123,17 @@ a.list-group-item-action{
 
 a.list-group-item-primary{
   background-color:white;
-  color: darken($user-colour, 20%);
+  color: darken($user-primary-colour, 20%);
   &:visited{
     color: white;
   }
 }
 .list-group-item-primary.list-group-item-action:focus, .list-group-item-primary.list-group-item-action:hover{
-  background-color: darken($user-colour, 3%);
+  background-color: darken($user-primary-colour, 3%);
   color: white;
 }
 .list-group-item-primary.list-group-item-action:active{
-  background-color: darken($user-colour, 6%);
+  background-color: darken($user-primary-colour, 6%);
   color: white;
 }
 
@@ -222,16 +222,16 @@ a.list-group-item-light{
   background-color: $light;
   color: darken($light, 20%);
   &:visited{
-    color: darken($user-colour, 10%);
+    color: darken($user-primary-colour, 10%);
   }
 }
 .list-group-item-light.list-group-item-action:focus, .list-group-item-light.list-group-item-action:hover{
   background-color: darken($light, 3%);
-  color: darken($user-colour, 20%);
+  color: darken($user-primary-colour, 20%);
 }
 .list-group-item-light.list-group-item-action:active{
   background-color: darken($light, 6%);
-  color: darken($user-colour, 20%);
+  color: darken($user-primary-colour, 20%);
 }
 
 a.list-group-item-dark{
@@ -253,16 +253,16 @@ a.list-group-item-dark{
 a.list-group-item-action.active{
   & small{ color: white;}
   &:visited{
-    color: darken($user-colour, 0%);
+    color: darken($user-primary-colour, 0%);
   }
   &:focus,
   &:hover{
     color: white;
-    background-color: darken($user-colour, 5%);
+    background-color: darken($user-primary-colour, 5%);
   } 
   &:active{
     color: white;
-    background-color: darken($user-colour, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
 }
 

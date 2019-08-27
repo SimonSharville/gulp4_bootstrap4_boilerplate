@@ -21,12 +21,12 @@ a.badge.badge-light
   color: $text;
 }
 .badge.badge-primary{ 
-  background-color: $user-colour; 
+  background-color: $user-primary-colour; 
 }
 .badge.badge-user{ 
-  background-color: $user-colour; 
+  background-color: $user-primary-colour; 
 }
 
 .badge.badge-admin{ 
-  background-color: $admin-colour; 
+  background-color: $admin-primary-colour; 
 }

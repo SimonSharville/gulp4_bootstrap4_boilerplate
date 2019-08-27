@@ -64,30 +64,30 @@ $sa-nav-colour: $sa-grey-14;
 .nav-primary.nav.nav-pills .nav-item,
 .nav-primary.nav.nav-pills .nav-link{
   & a{
-    color: $user-colour;
+    color: $user-primary-colour;
   }
 }
 .nav-primary.nav.nav-pills .nav-link.active{
-  background-color: $user-colour;
+  background-color: $user-primary-colour;
   color: white;
   &:focus,
   &:active{
-    background-color: $user-colour;
+    background-color: $user-primary-colour;
   }
 }
 
 .nav-admin.nav.nav-pills .nav-item,
 .nav-admin.nav.nav-pills .nav-link{
   & a{
-    color: $admin-colour;
+    color: $admin-primary-colour;
   }
 }
 .nav-admin.nav.nav-pills .nav-link.active{
-  background-color: $admin-colour;
+  background-color: $admin-primary-colour;
   color: white;
   &:focus,
   &:active{
-    background-color: $admin-colour;
+    background-color: $admin-primary-colour;
   }
 }
 

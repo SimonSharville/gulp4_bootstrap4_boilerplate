@@ -51,10 +51,10 @@ legend,
   a{
     &:focus,
     &:hover{
-      color: lighten($user-colour, 5%);
+      color: lighten($user-primary-colour, 5%);
     } 
     &:active{
-      color: lighten($user-colour, 10%);
+      color: lighten($user-primary-colour, 10%);
     }
   }
 } 
