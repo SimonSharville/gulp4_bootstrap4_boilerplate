@@ -418,6 +418,7 @@
     .badge.badge-secondary{ 
       background-color: $theme-secondary; 
     }
+
     // Buttons --------------
     .btn-primary{
       background-color: $theme-primary;
@@ -574,7 +575,7 @@
     .sa-toggle-switch:hover span.slider::before{
       border-color: $theme-primary;
     }
-    .sa-toggle-switch input[type="radio"]:checked + label span.slider::before{
+    .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::before{
       border-color: $theme-primary;
     }
     .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::after {
@@ -583,7 +584,7 @@
     .sa-toggle-switch-right:hover span.slider::before{
       border-color: $theme-primary;
     }
-    .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before{
+    .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::before{
       border-color: $theme-primary;
     }
     .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::after {

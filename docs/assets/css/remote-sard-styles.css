@@ -15754,7 +15754,7 @@ sa-radio-buttons-after .position-static {
   border-color: #00B2B2;
 }
 
-.sa-toggle-switch input[type="radio"]:checked + label span.slider::before {
+.sa-toggle-switch input[type="checkbox"]:checked + label span.slider::before {
   border-color: #00B2B2;
 }
 
@@ -15818,7 +15818,7 @@ sa-radio-buttons-after .position-static {
   border-color: #00B2B2;
 }
 
-.sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before {
+.sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::before {
   border-color: #00B2B2;
 }
 
@@ -20566,7 +20566,7 @@ hr.white {
   border-color: #00B2B2;
 }
 
-.theme-user .sa-toggle-switch input[type="radio"]:checked + label span.slider::before {
+.theme-user .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::before {
   border-color: #00B2B2;
 }
 
@@ -20578,7 +20578,7 @@ hr.white {
   border-color: #00B2B2;
 }
 
-.theme-user .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before {
+.theme-user .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::before {
   border-color: #00B2B2;
 }
 
@@ -21468,7 +21468,7 @@ hr.white {
   border-color: #E50073;
 }
 
-.theme-admin .sa-toggle-switch input[type="radio"]:checked + label span.slider::before {
+.theme-admin .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::before {
   border-color: #E50073;
 }
 
@@ -21480,7 +21480,7 @@ hr.white {
   border-color: #E50073;
 }
 
-.theme-admin .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before {
+.theme-admin .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::before {
   border-color: #E50073;
 }
 
@@ -22370,7 +22370,7 @@ hr.white {
   border-color: #999966;
 }
 
-.theme-trust .sa-toggle-switch input[type="radio"]:checked + label span.slider::before {
+.theme-trust .sa-toggle-switch input[type="checkbox"]:checked + label span.slider::before {
   border-color: #999966;
 }
 
@@ -22382,7 +22382,7 @@ hr.white {
   border-color: #999966;
 }
 
-.theme-trust .sa-toggle-switch-right input[type="radio"]:checked + label span.slider::before {
+.theme-trust .sa-toggle-switch-right input[type="checkbox"]:checked + label span.slider::before {
   border-color: #999966;
 }
 
