@@ -103,6 +103,10 @@ $btn-default-colour: $sa-grey-14;
     border-color: darken($btn-default-colour, 15%);
 }
 
+.btn.btn-link{
+  box-shadow: none;
+}
+
 // SARD Buttons
 
 .btn-save{

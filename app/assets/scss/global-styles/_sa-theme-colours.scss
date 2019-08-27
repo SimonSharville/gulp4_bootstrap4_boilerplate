@@ -18,18 +18,9 @@
   $theme-secondary:                                       $third-colour;
   $theme-secondary-dark:                                                  $forth-colour;
 
-  // Panels =====================================
-  // .#{$theme-name} {
-  //   .panel-sard {
-  //     background-color: $first;
-  //     & .panel-heading, .panel-footer{
-  //       background-color: $theme-primary-dark;
-  //     }
-  //   }
-  // } // End Panels Mixin
 
-  // ============================================
-  // Theme Name =================================
+  // ================================================================
+  // Theme colouring based on theme-name ============================
   .#{$theme-name} {
     // Scrollbar ==============
     ::-webkit-scrollbar-thumb {
@@ -483,29 +474,43 @@
     }
 
     .btn.btn-outline-primary{
-      color: $user-colour;
-      border-color: $user-colour;
+      color: $theme-primary;
+      border-color: $theme-primary;
       &:hover{
-        background-color: $user-colour;
+        background-color: $theme-primary;
         color: white;
       }
     }
     .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle{
-      background-color: darken($user-colour, 15%);
-      border-color: darken($user-colour, 15%);
+      background-color: darken($theme-primary, 15%);
+      border-color: darken($theme-primary, 15%);
+    }
+
+    .btn-outline-primary.focus, .btn-outline-primary:focus{
+      box-shadow: 0 0 0 0.2rem rgba($theme-primary, .25);
+    }
+    .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus{
+      box-shadow: 0 0 0 0.2rem rgba($theme-primary, .25);
     }
     
     .btn.btn-outline-secondary{
-      color: $user-colour-dark;
-      border-color: $user-colour-dark;
+      color: $theme-secondary;
+      border-color: $theme-secondary;
       &:hover{
-        background-color: $user-colour-dark;
+        background-color: $theme-secondary;
         color: white;
       }
     }
     .btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show>.btn-outline-secondary.dropdown-toggle{
-      background-color: darken($user-colour-dark, 15%);
-      border-color: darken($user-colour-dark, 15%);
+      background-color: darken($theme-secondary, 15%);
+      border-color: darken($theme-secondary, 15%);
+    }
+
+    .btn-outline-secondary.focus, .btn-outline-secondary:focus{
+      box-shadow: 0 0 0 0.2rem rgba($theme-secondary, .25);
+    }
+    .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-secondary.dropdown-toggle:focus{
+      box-shadow: 0 0 0 0.2rem rgba($theme-secondary, .25);
     }
 
     // Range Inputs ---------
@@ -783,8 +788,8 @@
       border-top: 1px solid $theme-primary;
     }
 
-  } // End Theme Name ===========================
-  // ============================================
+  } // End Theme Name ===============================================
+  // ================================================================
 
 
 } // End Main Mixin ===============================================================================
