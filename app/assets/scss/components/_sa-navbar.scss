@@ -149,7 +149,7 @@
   // border-bottom-right-radius: $sard-inner-border-radius;
 }
 
-.navbar-sard .dropdown-submenu .dropdown-menu{
+.navbar-primary .dropdown-submenu .dropdown-menu{
   border-left: 1px solid darken($user-colour, 30%);
 }
 
@@ -253,47 +253,47 @@
 
 // Navbar SARD ==================================
 
-.navbar-sard {
+.navbar-primary {
   background-color: $user-colour;
 }
 
-.navbar-sard .navbar-brand,
-.navbar-sard .navbar-text {
+.navbar-primary .navbar-brand,
+.navbar-primary .navbar-text {
     color: white;
 }
 
-.navbar-sard .navbar-nav .nav-link {
+.navbar-primary .navbar-nav .nav-link {
   color: white;
 }
 
 /* change the color of active or hovered links */
-.navbar-sard .nav-item:hover .nav-link {
+.navbar-primary .nav-item:hover .nav-link {
   background-color: darken($user-colour, 15%); 
 }
-.navbar-sard .nav-item:focus .nav-link {
+.navbar-primary .nav-item:focus .nav-link {
   background-color: darken($user-colour, 10%); 
 }
-.navbar-sard .nav-item:active .nav-link {
+.navbar-primary .nav-item:active .nav-link {
   background-color: darken($user-colour, 20%); 
 }
 // add background-color to active links
-.navbar-sard .nav-item.active .nav-link{ 
+.navbar-primary .nav-item.active .nav-link{ 
   background-color: darken($user-colour, 20%); 
 }
-.navbar-sard .nav-item.active .nav-link:hover{
+.navbar-primary .nav-item.active .nav-link:hover{
   background-color: darken($user-colour, 25%); 
 }
-.navbar-sard .nav-item.active .nav-link:focus{
+.navbar-primary .nav-item.active .nav-link:focus{
   background-color: darken($user-colour, 30%); 
 }
 
-.navbar-sard .nav-item:focus .nav-link.disabled,
-.navbar-sard .nav-item:hover .nav-link.disabled {
+.navbar-primary .nav-item:focus .nav-link.disabled,
+.navbar-primary .nav-item:hover .nav-link.disabled {
   color:         rgba(225, 225, 225, 0.5);
 }
 
 // Dropdown Menu
-.navbar-sard .dropdown-menu{
+.navbar-primary .dropdown-menu{
   border:none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -301,11 +301,11 @@
   color: white;
 }
 
-.navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
+.navbar-primary .nav-item.dropdown.show .nav-link.dropdown-toggle{
   background-color: darken($user-colour, 25%);
 }
 
-.navbar-sard .dropdown-menu .dropdown-item{
+.navbar-primary .dropdown-menu .dropdown-item{
   color: white;
   border-color: $user-colour;
   &:focus{
@@ -321,26 +321,26 @@
 
 
 // Submenu
-.navbar-sard .dropdown-menu .dropdown-item.dropdown-toggle:active,
-.navbar-sard .dropdown-menu .dropdown-item.dropdown-toggle.active{
+.navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle:active,
+.navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle.active{
   background-color: darken($user-colour, 30%);
 }
-.navbar-sard .dropdown-submenu .dropdown-menu{
+.navbar-primary .dropdown-submenu .dropdown-menu{
   border:none;
   border-top-left-radius: $sard-border-radius;
   border-top-right-radius: $sard-border-radius;
 }
-.navbar-sard .dropdown-menu .dropdown-divider {
+.navbar-primary .dropdown-menu .dropdown-divider {
     border-color: white;
 }
 
 // Dropdown header
-.navbar-sard .dropdown-menu .dropdown-header{
+.navbar-primary .dropdown-menu .dropdown-header{
   color: white;
 }
 
 // Navbar Toggler
-.navbar-sard .navbar-toggler{
+.navbar-primary .navbar-toggler{
   background-color: darken($user-colour, 20%);
   &:hover{
     background-color: darken($user-colour, 25%);
@@ -351,119 +351,13 @@
   }
 }
 
-.navbar-sard .navbar-toggler .navbar-toggler-icon{
+.navbar-primary .navbar-toggler .navbar-toggler-icon{
   background-image: none;
   &::before{
     color:white;
   }
 }
 
-// Navbar TRUST =================================
-
-.navbar-trust {
-  background-color: $user-colour;
-}
-
-.navbar-trust .navbar-brand,
-.navbar-trust .navbar-text {
-    color: white;
-}
-
-.navbar-trust .navbar-nav .nav-link {
-  color: white;
-}
-
-/* change the color of active or hovered links */
-.navbar-trust .nav-item:hover .nav-link {
-  background-color: darken($user-colour, 15%); 
-}
-.navbar-trust .nav-item:focus .nav-link {
-  background-color: darken($user-colour, 10%); 
-}
-.navbar-trust .nav-item:active .nav-link {
-  background-color: darken($user-colour, 20%); 
-}
-// add background-color to active links
-.navbar-trust .nav-item.active .nav-link{ 
-  background-color: darken($user-colour, 20%); 
-}
-.navbar-trust .nav-item.active .nav-link:hover{
-  background-color: darken($user-colour, 25%); 
-}
-.navbar-trust .nav-item.active .nav-link:focus{
-  background-color: darken($user-colour, 30%); 
-}
-
-.navbar-trust .nav-item:focus .nav-link.disabled,
-.navbar-trust .nav-item:hover .nav-link.disabled {
-  color:         rgba(225, 225, 225, 0.5);
-}
-
-// Dropdown Menu
-.navbar-trust .dropdown-menu{
-  border:none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  background-color: darken($user-colour, 15%);
-  color: white;
-}
-
-.navbar-trust .nav-item.dropdown.show .nav-link.dropdown-toggle{
-  background-color: darken($user-colour, 25%);
-}
-
-.navbar-trust .dropdown-menu .dropdown-item{
-  color: white;
-  border-color: $user-colour;
-  &:focus{
-    background-color: darken($user-colour, 25%);
-  }
-  &:hover{
-    background-color: darken($user-colour, 25%);
-  }
-  &:active{
-    background-color: darken($user-colour, 30%);
-  }
-}
-
-
-// Submenu
-.navbar-trust .dropdown-menu .dropdown-item.dropdown-toggle:active,
-.navbar-trust .dropdown-menu .dropdown-item.dropdown-toggle.active{
-  background-color: darken($user-colour, 30%);
-}
-.navbar-trust .dropdown-submenu .dropdown-menu{
-  border:none;
-  border-top-left-radius: $sard-border-radius;
-  border-top-right-radius: $sard-border-radius;
-}
-.navbar-trust .dropdown-menu .dropdown-divider {
-    border-color: white;
-}
-
-// Dropdown header
-.navbar-trust .dropdown-menu .dropdown-header{
-  color: white;
-}
-
-// Navbar Toggler
-.navbar-trust .navbar-toggler{
-  background-color: darken($user-colour, 20%);
-  &:hover{
-    background-color: darken($user-colour, 25%);
-  }
-  &:focus,
-  &:active{
-    background-color: darken($user-colour, 30%);
-  }
-}
-
-.navbar-trust .navbar-toggler .navbar-toggler-icon{
-  background-image: none;
-  &::before{
-    color:white;
-  }
-}
 
 // Navbar SECONDARY =============================
 
@@ -634,16 +528,16 @@
 
   // SARD
 @media (max-width: 991px){
-  .navbar-sard .dropdown-submenu .dropdown-menu.show{
+  .navbar-primary .dropdown-submenu .dropdown-menu.show{
     border: 1px solid white;
   }
 
-  .navbar-sard .dropdown-submenu .dropdown-menu.show{
+  .navbar-primary .dropdown-submenu .dropdown-menu.show{
     border: 0px ;
     background-color: darken($user-colour, 10%);
   }
 
-  .navbar-sard .dropdown-submenu .dropdown-menu .dropdown-item{
+  .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-item{
     &:hover{
       background-color: darken($user-colour, 15%);
     }
@@ -655,12 +549,12 @@
     }
   }
   // t
-  .navbar-sard .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu.show{
+  .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu.show{
     border: 0px solid white;
     background-color: darken($user-colour, 15%);
   }
 
-  .navbar-sard .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-item{
+  .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-item{
     &:hover{
       background-color: darken($user-colour, 20%);
     }

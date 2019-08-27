@@ -27,43 +27,43 @@
         background-color: $theme-primary;
     }
 
-    // Navbar TRUST =============================
+    // Navbar SARD ==============================
 
-    .navbar-sard {
+    .navbar-primary {
       background-color: $theme-primary;
     }
 
     /* change the color of active or hovered links */
-    .navbar-sard .nav-item:hover .nav-link {
+    .navbar-primary .nav-item:hover .nav-link {
       background-color: darken($theme-primary, 15%); 
     }
-    .navbar-sard .nav-item:focus .nav-link {
+    .navbar-primary .nav-item:focus .nav-link {
       background-color: darken($theme-primary, 10%); 
     }
-    .navbar-sard .nav-item:active .nav-link {
+    .navbar-primary .nav-item:active .nav-link {
       background-color: darken($theme-primary, 20%); 
     }
     // add background-color to active links
-    .navbar-sard .nav-item.active .nav-link{ 
+    .navbar-primary .nav-item.active .nav-link{ 
       background-color: darken($theme-primary, 20%); 
     }
-    .navbar-sard .nav-item.active .nav-link:hover{
+    .navbar-primary .nav-item.active .nav-link:hover{
       background-color: darken($theme-primary, 25%); 
     }
-    .navbar-sard .nav-item.active .nav-link:focus{
+    .navbar-primary .nav-item.active .nav-link:focus{
       background-color: darken($theme-primary, 30%); 
     }
 
     // Dropdown Menu
-    .navbar-sard .dropdown-menu{
+    .navbar-primary .dropdown-menu{
       background-color: darken($theme-primary, 15%);
     }
 
-    .navbar-sard .nav-item.dropdown.show .nav-link.dropdown-toggle{
+    .navbar-primary .nav-item.dropdown.show .nav-link.dropdown-toggle{
       background-color: darken($theme-primary, 25%);
     }
 
-    .navbar-sard .dropdown-menu .dropdown-item{
+    .navbar-primary .dropdown-menu .dropdown-item{
       border-color: $theme-primary;
       &:focus{
         background-color: darken($theme-primary, 25%);
@@ -78,13 +78,13 @@
 
 
     // Submenu
-    .navbar-sard .dropdown-menu .dropdown-item.dropdown-toggle:active,
-    .navbar-sard .dropdown-menu .dropdown-item.dropdown-toggle.active{
+    .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle:active,
+    .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle.active{
       background-color: darken($theme-primary, 30%);
     }
 
     // Searchbar
-    .navbar-sard .searchbar-sard input{
+    .navbar-primary .searchbar-sard input{
       border:2px solid darken($theme-primary, 10%);
       &:hover{
         border-color: darken($theme-primary, 15%);
@@ -94,35 +94,35 @@
       }
     }
     
-    .navbar-sard .searchbar-sard .btn-search{
+    .navbar-primary .searchbar-sard .btn-search{
       &::before{
         color:darken($theme-primary, 15%);
       }
     }
     
-    .navbar-sard .searchbar-sard .btn-search:hover{
+    .navbar-primary .searchbar-sard .btn-search:hover{
       &::before{
         color: darken($theme-primary, 20%);
       }
     }
-    .navbar-sard .searchbar-sard .btn-search:focus{
+    .navbar-primary .searchbar-sard .btn-search:focus{
       &::before{
         color: darken($theme-primary, 25%);
       }
     }
     
-    .navbar-sard .searchbar-sard input:hover + .btn-search{
+    .navbar-primary .searchbar-sard input:hover + .btn-search{
       &::before{
         color: darken($theme-primary, 20%);
       }
     }
-    .navbar-sard .searchbar-sard input:focus + .btn-search{
+    .navbar-primary .searchbar-sard input:focus + .btn-search{
       &::before{
         color: darken($theme-primary, 25%);
       }
     }
     // Navbar Toggler
-    .navbar-sard .navbar-toggler{
+    .navbar-primary .navbar-toggler{
       background-color: darken($theme-primary, 20%);
       &:hover{
         background-color: darken($theme-primary, 25%);
@@ -133,7 +133,7 @@
       }
     }
 
-    .navbar-sard .navbar-toggler .navbar-toggler-icon{
+    .navbar-primary .navbar-toggler .navbar-toggler-icon{
       background-image: none;
       &::before{
         color:white;
@@ -254,18 +254,18 @@
     }
 
     // Small Sizes
-      // Trust
+      // SARD
   @media (max-width: 991px){
-    .navbar-sard .dropdown-submenu .dropdown-menu.show{
+    .navbar-primary .dropdown-submenu .dropdown-menu.show{
       border: 1px solid white;
     }
   
-    .navbar-sard .dropdown-submenu .dropdown-menu.show{
+    .navbar-primary .dropdown-submenu .dropdown-menu.show{
       border: 0px ;
       background-color: darken($theme-primary, 10%);
     }
   
-    .navbar-sard .dropdown-submenu .dropdown-menu .dropdown-item{
+    .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-item{
       &:hover{
         background-color: darken($theme-primary, 15%);
       }
@@ -277,12 +277,12 @@
       }
     }
     // t
-    .navbar-sard .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu.show{
+    .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu.show{
       border: 0px solid white;
       background-color: darken($theme-primary, 15%);
     }
   
-    .navbar-sard .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-item{
+    .navbar-primary .dropdown-submenu .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-item{
       &:hover{
         background-color: darken($theme-primary, 20%);
       }
