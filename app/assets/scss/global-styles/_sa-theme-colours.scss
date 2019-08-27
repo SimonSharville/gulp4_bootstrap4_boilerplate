@@ -787,18 +787,49 @@
 
 
     // Navs -------------------------------------
-    .nav-trust.nav.nav-pills .nav-item,
-    .nav-trust.nav.nav-pills .nav-link{
+    
+    .nav-tabs.nav-primary .nav-item.show .nav-link, .nav-tabs.nav-primary .nav-link.active {
+      color: $theme-primary;
+      border-color: $theme-primary $theme-primary #fff;
+    }
+    .nav-tabs.nav-primary {
+      border-bottom-color: $theme-primary
+    }
+
+    .nav-primary.nav.nav-pills .nav-item,
+    .nav-primary.nav.nav-pills .nav-link{
       & a{
         color: $theme-primary;
       }
     }
-    .nav-trust.nav.nav-pills .nav-link.active{
+    .nav-primary.nav.nav-pills .nav-link.active{
       background-color: $theme-primary;
       color: white;
       &:focus,
       &:active{
         background-color: $theme-primary;
+      }
+    }
+
+    .nav-tabs.nav-secondary .nav-item.show .nav-link, .nav-tabs.nav-secondary .nav-link.active {
+      color: $theme-secondary;
+      border-color: $theme-secondary $theme-secondary #fff;
+    }
+    .nav-tabs.nav-secondary {
+      border-bottom-color: $theme-secondary
+    }
+    .nav-secondary.nav.nav-pills .nav-item,
+    .nav-secondary.nav.nav-pills .nav-link{
+      & a{
+        color: $theme-secondary;
+      }
+    }
+    .nav-secondary.nav.nav-pills .nav-link.active{
+      background-color: $theme-secondary;
+      color: white;
+      &:focus,
+      &:active{
+        background-color: $theme-secondary;
       }
     }
 

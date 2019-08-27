@@ -1,32 +1,73 @@
 // Navs =========================================
 
-.nav.nav-pills .nav-item,
+$sa-nav-colour: $sa-grey-14;
+
+.nav-item{
+  .nav-link{
+    color: $sa-nav-colour;
+    &:visited{
+      color: $sa-nav-colour;
+    }
+    &:hover{
+      background-color: $sa-grey-02;
+    }
+    &:focus,
+    &:active{
+      background-color: $sa-grey-04;
+    }
+  }
+}
+
 .nav.nav-pills .nav-link{
   border-radius: $sard-spacer-6;
+  color: $sa-nav-colour;
+  &:visited{
+    color: $sa-nav-colour;
+  }
   &:hover{
-    background-color: $sa-grey-02;
+    background-color: lighten($sa-nav-colour, 55%);
   }
   &:focus,
   &:active{
-    background-color: $sa-grey-04;
+    background-color: lighten($sa-nav-colour, 45%);
   }
 }
+
 .nav.nav-pills .nav-link.active{
   &:focus,
   &:active{
-    background-color: $user-colour;
+    background-color: $sa-nav-colour;
+  }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: $sa-nav-colour;
+}
+
+.nav.nav-pills .nav-item,
+.nav.nav-pills .nav-link{
+  & a{
+    color: $sa-nav-colour;
+  }
+}
+.nav.nav-pills .nav-link.active{
+  background-color: $sa-nav-colour;
+  color: white;
+  &:focus,
+  &:active{
+    background-color: $sa-nav-colour;
   }
 }
 
 // Colour variations ----------------------------
 
-.nav-trust.nav.nav-pills .nav-item,
-.nav-trust.nav.nav-pills .nav-link{
+.nav-primary.nav.nav-pills .nav-item,
+.nav-primary.nav.nav-pills .nav-link{
   & a{
     color: $user-colour;
   }
 }
-.nav-trust.nav.nav-pills .nav-link.active{
+.nav-primary.nav.nav-pills .nav-link.active{
   background-color: $user-colour;
   color: white;
   &:focus,
@@ -49,3 +90,20 @@
     background-color: $admin-colour;
   }
 }
+
+
+.nav-secondary.nav.nav-pills .nav-item,
+.nav-secondary.nav.nav-pills .nav-link{
+  & a{
+    color: $secondary;
+  }
+}
+.nav-secondary.nav.nav-pills .nav-link.active{
+  background-color: $secondary;
+  color: white;
+  &:focus,
+  &:active{
+    background-color: $secondary;
+  }
+}
+
