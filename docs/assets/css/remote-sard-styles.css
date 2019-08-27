@@ -17239,36 +17239,8 @@ a.list-group-item-action small.text-muted {
   color: #A39E9C !important;
 }
 
-a.list-group-item-trust {
-  color: #00b2b2;
-  border-color: #00b2b2;
-}
-
-a.list-group-item-trust:visited {
-  color: #00b2b2;
-}
-
-a.list-group-item-trust:focus, a.list-group-item-trust:hover {
-  color: #004c4c;
-  background-color: #E3E1E1;
-}
-
-a.list-group-item-trust:active {
-  color: #004c4c;
-  background-color: #D9D6D6;
-}
-
-a.list-group-item-trust.active {
-  color: white;
-  background-color: #00b2b2;
-}
-
-a.list-group-item-trust small.text-muted {
-  color: #A39E9C !important;
-}
-
 a.list-group-item-primary {
-  background-color: #00B2B2;
+  background-color: white;
   color: #004c4c;
 }
 
@@ -17287,7 +17259,7 @@ a.list-group-item-primary:visited {
 }
 
 a.list-group-item-secondary {
-  background-color: #004D4D;
+  background-color: white;
   color: black;
 }
 
@@ -20689,31 +20661,59 @@ hr.white {
   border-color: #007f7f;
 }
 
-.theme-user a.list-group-item-trust {
+.theme-user a.list-group-item-primary {
   color: #00b2b2;
   border-color: #00b2b2;
 }
 
-.theme-user a.list-group-item-trust:visited {
+.theme-user a.list-group-item-primary:visited {
   color: #00b2b2;
 }
 
-.theme-user a.list-group-item-trust:focus, .theme-user a.list-group-item-trust:hover {
+.theme-user a.list-group-item-primary:focus, .theme-user a.list-group-item-primary:hover {
   color: #004c4c;
   background-color: #D9D6D6;
 }
 
-.theme-user a.list-group-item-trust:active {
+.theme-user a.list-group-item-primary:active {
   color: #004c4c;
   background-color: #D9D6D6;
 }
 
-.theme-user a.list-group-item-trust.active {
+.theme-user a.list-group-item-primary.active {
   color: white;
   background-color: #00b2b2;
 }
 
-.theme-user a.list-group-item-trust small.text-muted {
+.theme-user a.list-group-item-primary small.text-muted {
+  color: #A39E9C !important;
+}
+
+.theme-user a.list-group-item-secondary {
+  color: #004d4d;
+  border-color: #004d4d;
+}
+
+.theme-user a.list-group-item-secondary:visited {
+  color: #004d4d;
+}
+
+.theme-user a.list-group-item-secondary:focus, .theme-user a.list-group-item-secondary:hover {
+  color: black;
+  background-color: #D9D6D6;
+}
+
+.theme-user a.list-group-item-secondary:active {
+  color: black;
+  background-color: #D9D6D6;
+}
+
+.theme-user a.list-group-item-secondary.active {
+  color: white;
+  background-color: #004d4d;
+}
+
+.theme-user a.list-group-item-secondary small.text-muted {
   color: #A39E9C !important;
 }
 
@@ -21591,31 +21591,59 @@ hr.white {
   border-color: #b20059;
 }
 
-.theme-admin a.list-group-item-trust {
+.theme-admin a.list-group-item-primary {
   color: #e50073;
   border-color: #e50073;
 }
 
-.theme-admin a.list-group-item-trust:visited {
+.theme-admin a.list-group-item-primary:visited {
   color: #e50073;
 }
 
-.theme-admin a.list-group-item-trust:focus, .theme-admin a.list-group-item-trust:hover {
+.theme-admin a.list-group-item-primary:focus, .theme-admin a.list-group-item-primary:hover {
   color: #7f0040;
   background-color: #D9D6D6;
 }
 
-.theme-admin a.list-group-item-trust:active {
+.theme-admin a.list-group-item-primary:active {
   color: #7f0040;
   background-color: #D9D6D6;
 }
 
-.theme-admin a.list-group-item-trust.active {
+.theme-admin a.list-group-item-primary.active {
   color: white;
   background-color: #e50073;
 }
 
-.theme-admin a.list-group-item-trust small.text-muted {
+.theme-admin a.list-group-item-primary small.text-muted {
+  color: #A39E9C !important;
+}
+
+.theme-admin a.list-group-item-secondary {
+  color: #990099;
+  border-color: #990099;
+}
+
+.theme-admin a.list-group-item-secondary:visited {
+  color: #990099;
+}
+
+.theme-admin a.list-group-item-secondary:focus, .theme-admin a.list-group-item-secondary:hover {
+  color: #330033;
+  background-color: #D9D6D6;
+}
+
+.theme-admin a.list-group-item-secondary:active {
+  color: #330033;
+  background-color: #D9D6D6;
+}
+
+.theme-admin a.list-group-item-secondary.active {
+  color: white;
+  background-color: #990099;
+}
+
+.theme-admin a.list-group-item-secondary small.text-muted {
   color: #A39E9C !important;
 }
 
@@ -22493,31 +22521,59 @@ hr.white {
   border-color: #7a7a52;
 }
 
-.theme-trust a.list-group-item-trust {
+.theme-trust a.list-group-item-primary {
   color: #999966;
   border-color: #999966;
 }
 
-.theme-trust a.list-group-item-trust:visited {
+.theme-trust a.list-group-item-primary:visited {
   color: #999966;
 }
 
-.theme-trust a.list-group-item-trust:focus, .theme-trust a.list-group-item-trust:hover {
+.theme-trust a.list-group-item-primary:focus, .theme-trust a.list-group-item-primary:hover {
   color: #5c5c3d;
   background-color: #D9D6D6;
 }
 
-.theme-trust a.list-group-item-trust:active {
+.theme-trust a.list-group-item-primary:active {
   color: #5c5c3d;
   background-color: #D9D6D6;
 }
 
-.theme-trust a.list-group-item-trust.active {
+.theme-trust a.list-group-item-primary.active {
   color: white;
   background-color: #999966;
 }
 
-.theme-trust a.list-group-item-trust small.text-muted {
+.theme-trust a.list-group-item-primary small.text-muted {
+  color: #A39E9C !important;
+}
+
+.theme-trust a.list-group-item-secondary {
+  color: #996633;
+  border-color: #996633;
+}
+
+.theme-trust a.list-group-item-secondary:visited {
+  color: #996633;
+}
+
+.theme-trust a.list-group-item-secondary:focus, .theme-trust a.list-group-item-secondary:hover {
+  color: #4d331a;
+  background-color: #D9D6D6;
+}
+
+.theme-trust a.list-group-item-secondary:active {
+  color: #4d331a;
+  background-color: #D9D6D6;
+}
+
+.theme-trust a.list-group-item-secondary.active {
+  color: white;
+  background-color: #996633;
+}
+
+.theme-trust a.list-group-item-secondary small.text-muted {
   color: #A39E9C !important;
 }
 

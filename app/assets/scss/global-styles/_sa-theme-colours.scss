@@ -683,7 +683,7 @@
     }
 
     // List Groups ----------
-    a.list-group-item-trust{
+    a.list-group-item-primary{
       color: darken($theme-primary, 0%);
       border-color: darken($theme-primary, 0%);
       &:visited{
@@ -701,6 +701,28 @@
       &.active{
         color: white;
         background-color: darken($theme-primary, 0%);
+      }
+      & small.text-muted{ color: $sa-grey-10!important;}
+    }
+
+    a.list-group-item-secondary{
+      color: darken($theme-secondary, 0%);
+      border-color: darken($theme-secondary, 0%);
+      &:visited{
+        color: darken($theme-secondary, 0%);
+      }
+      &:focus,
+      &:hover{
+        color: darken($theme-secondary, 20%);
+        background-color: $sa-grey-04;
+      } 
+      &:active{
+        color: darken($theme-secondary, 20%);
+        background-color: $sa-grey-04;
+      }
+      &.active{
+        color: white;
+        background-color: darken($theme-secondary, 0%);
       }
       & small.text-muted{ color: $sa-grey-10!important;}
     }

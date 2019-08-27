@@ -97,32 +97,32 @@ a.list-group-item-action{
 }
 
 
-a.list-group-item-trust{
-  color: darken($user-colour, 0%);
-  border-color: darken($user-colour, 0%);
-  &:visited{
-    color: darken($user-colour, 0%);
-  }
-  &:focus,
-  &:hover{
-    color: darken($user-colour, 20%);
-    background-color: $sa-grey-03;
-  } 
-  &:active{
-    color: darken($user-colour, 20%);
-    background-color: $sa-grey-04;
-  }
-  &.active{
-    color: white;
-    background-color: darken($user-colour, 0%);
-  }
-  & small.text-muted{ color: $sa-grey-10!important;}
-}
+// a.list-group-item-primary{
+//   color: darken($user-colour, 0%);
+//   border-color: darken($user-colour, 0%);
+//   &:visited{
+//     color: darken($user-colour, 0%);
+//   }
+//   &:focus,
+//   &:hover{
+//     color: darken($user-colour, 20%);
+//     background-color: $sa-grey-03;
+//   } 
+//   &:active{
+//     color: darken($user-colour, 20%);
+//     background-color: $sa-grey-04;
+//   }
+//   &.active{
+//     color: white;
+//     background-color: darken($user-colour, 0%);
+//   }
+//   & small.text-muted{ color: $sa-grey-10!important;}
+// }
 
 
 
 a.list-group-item-primary{
-  background-color: $primary;
+  background-color:white;
   color: darken($user-colour, 20%);
   &:visited{
     color: white;
@@ -139,7 +139,7 @@ a.list-group-item-primary{
 
 
 a.list-group-item-secondary{
-  background-color: $secondary;
+  background-color: white;
   color: darken($secondary, 20%);
   &:visited{
     color: white;
