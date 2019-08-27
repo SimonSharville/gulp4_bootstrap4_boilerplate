@@ -18761,19 +18761,19 @@ p > a.modal-info-circle-inline::before {
   }
 }
 
-.nav-item .nav-link {
+.nav.nav-tabs .nav-item .nav-link {
   color: #615E5C;
 }
 
-.nav-item .nav-link:visited {
+.nav.nav-tabs .nav-item .nav-link:visited {
   color: #615E5C;
 }
 
-.nav-item .nav-link:hover {
+.nav.nav-tabs .nav-item .nav-link:hover {
   background-color: #EDEBEB;
 }
 
-.nav-item .nav-link:focus, .nav-item .nav-link:active {
+.nav.nav-tabs .nav-item .nav-link:focus, .nav.nav-tabs .nav-item .nav-link:active {
   background-color: #D9D6D6;
 }
 

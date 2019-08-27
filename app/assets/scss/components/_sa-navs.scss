@@ -2,7 +2,7 @@
 
 $sa-nav-colour: $sa-grey-14;
 
-.nav-item{
+.nav.nav-tabs .nav-item{
   .nav-link{
     color: $sa-nav-colour;
     &:visited{
