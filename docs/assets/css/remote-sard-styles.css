@@ -19524,6 +19524,10 @@ hr.white {
   border-top-right-radius: calc(.5rem - 3px);
 }
 
+.progress-bar {
+  background-color: #00B2B2;
+}
+
 .navbar .searchbar-sard {
   border-radius: 8px;
 }
@@ -20346,6 +20350,14 @@ hr.white {
   color: #cc00cc !important;
 }
 
+.theme-user .bg-primary {
+  background-color: #00B2B2 !important;
+}
+
+.theme-user .bg-secondary {
+  background-color: #004D4D !important;
+}
+
 .theme-user .badge.badge-primary {
   background-color: #00B2B2;
 }
@@ -21075,6 +21087,10 @@ hr.white {
   background-color: #00B2B2;
 }
 
+.theme-user .progress-bar {
+  background-color: #00B2B2;
+}
+
 .theme-admin {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -21550,6 +21566,14 @@ hr.white {
 
 .theme-admin .text-trust-admin-2-light {
   color: #cc00cc !important;
+}
+
+.theme-admin .bg-primary {
+  background-color: #E50073 !important;
+}
+
+.theme-admin .bg-secondary {
+  background-color: #990099 !important;
 }
 
 .theme-admin .badge.badge-primary {
@@ -22281,6 +22305,10 @@ hr.white {
   background-color: #E50073;
 }
 
+.theme-admin .progress-bar {
+  background-color: #E50073;
+}
+
 .theme-trust {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -22756,6 +22784,14 @@ hr.white {
 
 .theme-trust .text-trust-admin-2-light {
   color: #cc00cc !important;
+}
+
+.theme-trust .bg-primary {
+  background-color: #999966 !important;
+}
+
+.theme-trust .bg-secondary {
+  background-color: #996633 !important;
 }
 
 .theme-trust .badge.badge-primary {
@@ -23484,6 +23520,10 @@ hr.white {
 }
 
 .theme-trust .popover-header {
+  background-color: #999966;
+}
+
+.theme-trust .progress-bar {
   background-color: #999966;
 }
 

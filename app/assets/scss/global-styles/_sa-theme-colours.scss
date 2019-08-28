@@ -423,6 +423,14 @@
     .text-trust-admin-2-dark{ color: darken($admin-secondary-colour, 10%) !important;}
     .text-trust-admin-2-light{ color: lighten($admin-secondary-colour, 10%) !important;}
 
+    // Background Colours -----------------------
+    .bg-primary {
+      background-color: $theme-primary!important;
+    }
+    .bg-secondary {
+      background-color: $theme-secondary!important;
+    }
+
     // Badges -----------------------------------
     .badge.badge-primary{ 
       background-color: $theme-primary; 
@@ -1059,6 +1067,12 @@
     .popover-header{
       background-color: $theme-primary;
     }
+
+    // Progress bars ----------------------------
+    .progress-bar {
+      background-color: $theme-primary;
+    }
+    
 
   } // End Theme Name ===============================================
   // ================================================================
