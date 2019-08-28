@@ -146,6 +146,39 @@
   }
 }
 
+.panel.panel-secondary{
+  background-color: $user-secondary-colour;
+  & .panel-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: white;
+    }
+  }
+  & .panel-heading, .panel-header, .panel-footer{
+    background-color: darken($user-secondary-colour, 5%);
+    & .text-muted { 
+      color: lighten($user-secondary-colour, 10%) !important;
+    }
+  }
+}
+.panel.panel-secondary.outline{
+  background-color: white;
+  border-color: $user-secondary-colour;
+  & .panel-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: $text;
+    }
+  }
+  & .panel-body.border-bottom{
+    border-color: $user-secondary-colour!important;
+  }
+  & .panel-body.border-top{
+    border-color: $user-secondary-colour!important;
+  }
+  & .panel-body hr{
+    border-color: $user-secondary-colour;
+  }
+}
+
 .panel.panel-success{
   background-color: $success;
   & .panel-heading, .panel-header, .panel-footer{
