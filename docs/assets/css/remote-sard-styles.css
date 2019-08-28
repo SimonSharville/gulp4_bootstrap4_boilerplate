@@ -20744,6 +20744,44 @@ hr.white {
   border-color: #004D4D;
 }
 
+.theme-user .accordion .card-header .btn::after,
+.theme-user .accordion .card-header a::after,
+.theme-user .accordion .panel-heading .btn::after,
+.theme-user .accordion .panel-heading a::after,
+.theme-user .accordion .panel-header .btn::after,
+.theme-user .accordion .panel-header a::after,
+.theme-user .accordion fieldset legend .btn::after,
+.theme-user .accordion fieldset legend a::after,
+.theme-user .card.collapsable .card-header .btn::after,
+.theme-user .card.collapsable .card-header a::after,
+.theme-user .panel.collapsable .panel-heading .btn::after,
+.theme-user .panel.collapsable .panel-heading a::after,
+.theme-user .panel.collapsable .panel-header .btn::after,
+.theme-user .panel.collapsable .panel-header a::after,
+.theme-user fieldset.collapsable legend .btn::after,
+.theme-user fieldset.collapsable legend a::after {
+  color: #00B2B2;
+}
+
+.theme-user .accordion .card-header .btn.collapsed::after,
+.theme-user .accordion .card-header a.collapsed::after,
+.theme-user .accordion .panel-heading .btn.collapsed::after,
+.theme-user .accordion .panel-heading a.collapsed::after,
+.theme-user .accordion .panel-header .btn.collapsed::after,
+.theme-user .accordion .panel-header a.collapsed::after,
+.theme-user .accordion fieldset legend .btn.collapsed::after,
+.theme-user .accordion fieldset legend a.collapsed::after,
+.theme-user .card.collapsable .card-header .btn.collapsed::after,
+.theme-user .card.collapsable .card-header a.collapsed::after,
+.theme-user .panel.collapsable .panel-heading .btn.collapsed::after,
+.theme-user .panel.collapsable .panel-heading a.collapsed::after,
+.theme-user .panel.collapsable .panel-header .btn.collapsed::after,
+.theme-user .panel.collapsable .panel-header a.collapsed::after,
+.theme-user fieldset.collapsable legend .btn.collapsed::after,
+.theme-user fieldset.collapsable legend a.collapsed::after {
+  color: #00B2B2;
+}
+
 .theme-user a.list-group-item-primary {
   color: #00b2b2;
   border-color: #00b2b2;
@@ -21888,6 +21926,44 @@ hr.white {
   border-color: #990099;
 }
 
+.theme-admin .accordion .card-header .btn::after,
+.theme-admin .accordion .card-header a::after,
+.theme-admin .accordion .panel-heading .btn::after,
+.theme-admin .accordion .panel-heading a::after,
+.theme-admin .accordion .panel-header .btn::after,
+.theme-admin .accordion .panel-header a::after,
+.theme-admin .accordion fieldset legend .btn::after,
+.theme-admin .accordion fieldset legend a::after,
+.theme-admin .card.collapsable .card-header .btn::after,
+.theme-admin .card.collapsable .card-header a::after,
+.theme-admin .panel.collapsable .panel-heading .btn::after,
+.theme-admin .panel.collapsable .panel-heading a::after,
+.theme-admin .panel.collapsable .panel-header .btn::after,
+.theme-admin .panel.collapsable .panel-header a::after,
+.theme-admin fieldset.collapsable legend .btn::after,
+.theme-admin fieldset.collapsable legend a::after {
+  color: #E50073;
+}
+
+.theme-admin .accordion .card-header .btn.collapsed::after,
+.theme-admin .accordion .card-header a.collapsed::after,
+.theme-admin .accordion .panel-heading .btn.collapsed::after,
+.theme-admin .accordion .panel-heading a.collapsed::after,
+.theme-admin .accordion .panel-header .btn.collapsed::after,
+.theme-admin .accordion .panel-header a.collapsed::after,
+.theme-admin .accordion fieldset legend .btn.collapsed::after,
+.theme-admin .accordion fieldset legend a.collapsed::after,
+.theme-admin .card.collapsable .card-header .btn.collapsed::after,
+.theme-admin .card.collapsable .card-header a.collapsed::after,
+.theme-admin .panel.collapsable .panel-heading .btn.collapsed::after,
+.theme-admin .panel.collapsable .panel-heading a.collapsed::after,
+.theme-admin .panel.collapsable .panel-header .btn.collapsed::after,
+.theme-admin .panel.collapsable .panel-header a.collapsed::after,
+.theme-admin fieldset.collapsable legend .btn.collapsed::after,
+.theme-admin fieldset.collapsable legend a.collapsed::after {
+  color: #E50073;
+}
+
 .theme-admin a.list-group-item-primary {
   color: #e50073;
   border-color: #e50073;
@@ -23030,6 +23106,44 @@ hr.white {
 
 .theme-trust .panel.panel-secondary.outline .panel-body hr {
   border-color: #996633;
+}
+
+.theme-trust .accordion .card-header .btn::after,
+.theme-trust .accordion .card-header a::after,
+.theme-trust .accordion .panel-heading .btn::after,
+.theme-trust .accordion .panel-heading a::after,
+.theme-trust .accordion .panel-header .btn::after,
+.theme-trust .accordion .panel-header a::after,
+.theme-trust .accordion fieldset legend .btn::after,
+.theme-trust .accordion fieldset legend a::after,
+.theme-trust .card.collapsable .card-header .btn::after,
+.theme-trust .card.collapsable .card-header a::after,
+.theme-trust .panel.collapsable .panel-heading .btn::after,
+.theme-trust .panel.collapsable .panel-heading a::after,
+.theme-trust .panel.collapsable .panel-header .btn::after,
+.theme-trust .panel.collapsable .panel-header a::after,
+.theme-trust fieldset.collapsable legend .btn::after,
+.theme-trust fieldset.collapsable legend a::after {
+  color: #999966;
+}
+
+.theme-trust .accordion .card-header .btn.collapsed::after,
+.theme-trust .accordion .card-header a.collapsed::after,
+.theme-trust .accordion .panel-heading .btn.collapsed::after,
+.theme-trust .accordion .panel-heading a.collapsed::after,
+.theme-trust .accordion .panel-header .btn.collapsed::after,
+.theme-trust .accordion .panel-header a.collapsed::after,
+.theme-trust .accordion fieldset legend .btn.collapsed::after,
+.theme-trust .accordion fieldset legend a.collapsed::after,
+.theme-trust .card.collapsable .card-header .btn.collapsed::after,
+.theme-trust .card.collapsable .card-header a.collapsed::after,
+.theme-trust .panel.collapsable .panel-heading .btn.collapsed::after,
+.theme-trust .panel.collapsable .panel-heading a.collapsed::after,
+.theme-trust .panel.collapsable .panel-header .btn.collapsed::after,
+.theme-trust .panel.collapsable .panel-header a.collapsed::after,
+.theme-trust fieldset.collapsable legend .btn.collapsed::after,
+.theme-trust fieldset.collapsable legend a.collapsed::after {
+  color: #999966;
 }
 
 .theme-trust a.list-group-item-primary {

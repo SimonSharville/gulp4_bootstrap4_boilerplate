@@ -810,6 +810,34 @@
         }
       }
 
+    // Collapse ---------------------------------
+    .accordion .card-header,
+    .accordion .panel-heading,
+    .accordion .panel-header,
+    .accordion fieldset legend,
+    .card.collapsable .card-header,
+    .panel.collapsable .panel-heading,
+    .panel.collapsable .panel-header,
+    fieldset.collapsable legend{
+      & .btn::after,
+      & a::after{
+        color:$theme-primary;
+      }
+    }
+    .accordion .card-header,
+    .accordion .panel-heading,
+    .accordion .panel-header,
+    .accordion fieldset legend,
+    .card.collapsable .card-header,
+    .panel.collapsable .panel-heading,
+    .panel.collapsable .panel-header,
+    fieldset.collapsable legend{
+      & .btn.collapsed::after,
+      & a.collapsed::after{
+        color:$theme-primary;
+      }
+    }
+
     // List Groups ------------------------------
     a.list-group-item-primary{
       color: darken($theme-primary, 0%);
