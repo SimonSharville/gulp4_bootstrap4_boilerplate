@@ -94,11 +94,11 @@ $alert-color-level:                 1 ;
   p{ color: white;}
 }
 
-.alert.alert-user{
+.alert.alert-primary{
   background-color: $user-primary-colour;
   color: white;
 }
-.alert.alert-admin{
+.alert.alert-secondary{
   background-color: $admin-primary-colour;
   color: white;
 }

@@ -22,12 +22,24 @@
   // ================================================================
   // Theme colouring based on theme-name ============================
   .#{$theme-name} {
-    // Scrollbar ==============
+    
+    // Scrollbar --------------------------------
     ::-webkit-scrollbar-thumb {
         background-color: $theme-primary;
     }
 
-    // Navbar PRIMARY ===========================
+    // Alerts -----------------------------------
+
+    .alert.alert-primary{
+      background-color: $theme-primary;
+      border-color: $theme-primary;
+    }
+    .alert.alert-secondary{
+      background-color: $theme-secondary;
+      border-color: $theme-secondary;
+    }
+
+    // Navbar PRIMARY ---------------------------
 
     .navbar-primary {
       background-color: $theme-primary;
@@ -54,7 +66,7 @@
       background-color: darken($theme-primary, 30%); 
     }
 
-    // Dropdown Menu
+    // Dropdown Menu 
     .navbar-primary .dropdown-menu{
       background-color: darken($theme-primary, 15%);
     }
@@ -77,7 +89,7 @@
     }
 
 
-    // Submenu
+    // Submenu 
     .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle:active,
     .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle.active{
       background-color: darken($theme-primary, 30%);
@@ -140,7 +152,7 @@
       }
     }
 
-    // Navbar SECONDARY =========================
+    // Navbar SECONDARY -------------------------
 
     .navbar-secondary {
       background-color: $theme-secondary;
@@ -336,7 +348,7 @@
       }
     } // End small sizes
 
-    // Breadcrumbs ==============================
+    // Breadcrumbs ------------------------------
     .breadcrumb{
       a{
         color: $theme-primary;
@@ -353,7 +365,7 @@
       }
     }
 
-    // Perforations
+    // Perforations -----------------------------
     hr.primary{ border-color: $theme-primary; }
     hr.secondary{ border-color: $theme-secondary; }
 
@@ -362,56 +374,56 @@
 
     // Trust Colours ==============
     // Background
-    .bg-trust{ background-color: $theme-primary !important;}
-    .bg-trust-dark{ background-color: darken($theme-primary, 10%) !important;}
-    .bg-trust-light{ background-color: lighten($theme-primary, 10%) !important;}
+    // .bg-trust{ background-color: $theme-primary !important;}
+    // .bg-trust-dark{ background-color: darken($theme-primary, 10%) !important;}
+    // .bg-trust-light{ background-color: lighten($theme-primary, 10%) !important;}
 
-    .bg-trust-2{ background-color: $theme-secondary !important;}
-    .bg-trust-2-dark{ background-color: darken($theme-secondary, 10%) !important;}
-    .bg-trust-2-light{ background-color: lighten($theme-secondary, 10%) !important;}
+    // .bg-trust-2{ background-color: $theme-secondary !important;}
+    // .bg-trust-2-dark{ background-color: darken($theme-secondary, 10%) !important;}
+    // .bg-trust-2-light{ background-color: lighten($theme-secondary, 10%) !important;}
 
-    .bg-trust-user{ background-color: $user-primary-colour !important;}
-    .bg-trust-user-dark{ background-color: darken($user-primary-colour, 10%) !important;}
-    .bg-trust-user-light{ background-color: lighten($user-primary-colour, 5%) !important;}
+    // .bg-trust-user{ background-color: $user-primary-colour !important;}
+    // .bg-trust-user-dark{ background-color: darken($user-primary-colour, 10%) !important;}
+    // .bg-trust-user-light{ background-color: lighten($user-primary-colour, 5%) !important;}
 
-    .bg-trust-user-2{ background-color: $user-secondary-colour !important;}
-    .bg-trust-user-2-dark{ background-color: darken($user-secondary-colour, 5%) !important;}
-    .bg-trust-user-2-light{ background-color: lighten($user-secondary-colour, 10%) !important;}
+    // .bg-trust-user-2{ background-color: $user-secondary-colour !important;}
+    // .bg-trust-user-2-dark{ background-color: darken($user-secondary-colour, 5%) !important;}
+    // .bg-trust-user-2-light{ background-color: lighten($user-secondary-colour, 10%) !important;}
 
-    .bg-trust-admin{ background-color: $admin-primary-colour !important;}
-    .bg-trust-admin-dark{ background-color: darken($admin-primary-colour, 10%) !important;}
-    .bg-trust-admin-light{ background-color: lighten($admin-primary-colour, 10%) !important;}
+    // .bg-trust-admin{ background-color: $admin-primary-colour !important;}
+    // .bg-trust-admin-dark{ background-color: darken($admin-primary-colour, 10%) !important;}
+    // .bg-trust-admin-light{ background-color: lighten($admin-primary-colour, 10%) !important;}
 
-    .bg-trust-admin-2{ background-color: $admin-secondary-colour !important;}
-    .bg-trust-admin-2-dark{ background-color: darken($admin-secondary-colour, 10%) !important;}
-    .bg-trust-admin-2-light{ background-color: lighten($admin-secondary-colour, 10%) !important;}
+    // .bg-trust-admin-2{ background-color: $admin-secondary-colour !important;}
+    // .bg-trust-admin-2-dark{ background-color: darken($admin-secondary-colour, 10%) !important;}
+    // .bg-trust-admin-2-light{ background-color: lighten($admin-secondary-colour, 10%) !important;}
 
     // Foreground
-    .text-trust{ color: $theme-primary !important;}
-    .text-trust-dark{ color: darken($theme-primary, 10%) !important;}
-    .text-trust-light{ color: lighten($theme-primary, 10%) !important;}
+    // .text-trust{ color: $theme-primary !important;}
+    // .text-trust-dark{ color: darken($theme-primary, 10%) !important;}
+    // .text-trust-light{ color: lighten($theme-primary, 10%) !important;}
 
-    .text-trust-2{ color: $theme-secondary !important;}
-    .text-trust-2-dark{ color: darken($theme-secondary, 10%) !important;}
-    .text-trust-2-light{ color: lighten($theme-secondary, 10%) !important;}
+    // .text-trust-2{ color: $theme-secondary !important;}
+    // .text-trust-2-dark{ color: darken($theme-secondary, 10%) !important;}
+    // .text-trust-2-light{ color: lighten($theme-secondary, 10%) !important;}
 
-    .text-trust-user{ color: $user-primary-colour !important;}
-    .text-trust-user-dark{ color: darken($user-primary-colour, 10%) !important;}
-    .text-trust-user-light{ color: lighten($user-primary-colour, 5%) !important;}
+    // .text-trust-user{ color: $user-primary-colour !important;}
+    // .text-trust-user-dark{ color: darken($user-primary-colour, 10%) !important;}
+    // .text-trust-user-light{ color: lighten($user-primary-colour, 5%) !important;}
 
-    .text-trust-user-2{ color: $user-secondary-colour !important;}
-    .text-trust-user-2-dark{ color: darken($user-secondary-colour, 5%) !important;}
-    .text-trust-user-2-light{ color: lighten($user-secondary-colour, 10%) !important;}
+    // .text-trust-user-2{ color: $user-secondary-colour !important;}
+    // .text-trust-user-2-dark{ color: darken($user-secondary-colour, 5%) !important;}
+    // .text-trust-user-2-light{ color: lighten($user-secondary-colour, 10%) !important;}
 
-    .text-trust-admin{ color: $admin-primary-colour !important;}
-    .text-trust-admin-dark{ color: darken($admin-primary-colour, 10%) !important;}
-    .text-trust-admin-light{ color: lighten($admin-primary-colour, 10%) !important;}
+    // .text-trust-admin{ color: $admin-primary-colour !important;}
+    // .text-trust-admin-dark{ color: darken($admin-primary-colour, 10%) !important;}
+    // .text-trust-admin-light{ color: lighten($admin-primary-colour, 10%) !important;}
 
-    .text-trust-admin-2{ color: $admin-secondary-colour !important;}
-    .text-trust-admin-2-dark{ color: darken($admin-secondary-colour, 10%) !important;}
-    .text-trust-admin-2-light{ color: lighten($admin-secondary-colour, 10%) !important;}
+    // .text-trust-admin-2{ color: $admin-secondary-colour !important;}
+    // .text-trust-admin-2-dark{ color: darken($admin-secondary-colour, 10%) !important;}
+    // .text-trust-admin-2-light{ color: lighten($admin-secondary-colour, 10%) !important;}
 
-    // Badges ---------------
+    // Badges -----------------------------------
     .badge.badge-primary{ 
       background-color: $theme-primary; 
     }
@@ -419,7 +431,7 @@
       background-color: $theme-secondary; 
     }
 
-    // Buttons --------------
+    // Buttons ----------------------------------
     .btn-primary{
       background-color: $theme-primary;
       border-color: $theme-primary;
@@ -519,7 +531,7 @@
       box-shadow: 0 0 0 0.2rem rgba($theme-secondary, .25);
     }
 
-    // Range Inputs ---------
+    // Range Inputs -----------------------------
     input[type=range]::-webkit-slider-thumb {
       background-color: $theme-primary;
     }
@@ -530,7 +542,7 @@
       background-color: $theme-primary;
     }
 
-    // Checkboxes etc -------
+    // Checkboxes etc ---------------------------
     .sa-checkbox input[type="checkbox"]:checked + label span.checkbox::before {
       background-color: $theme-primary;
       border-color: $theme-primary;
@@ -546,7 +558,7 @@
       border-color: $theme-primary;
     }
 
-    // Radios ---------------
+    // Radios -----------------------------------
     .sa-radio-buttons input[type="radio"]:checked + .radio-button:after {
       background-color: $theme-primary;
       border-color: $theme-primary;
@@ -571,7 +583,7 @@
       border-color: $theme-primary;
     }
 
-    // Toggles --------------
+    // Toggles ----------------------------------
     .sa-toggle-switch:hover span.slider::before{
       border-color: $theme-primary;
     }
@@ -623,7 +635,7 @@
       border-color: $theme-primary;
     }
 
-    // File uploads ---------
+    // File uploads -----------------------------
     .input-group.sa-file-upload{
       & input.form-control{
         border-color: $theme-primary;
@@ -642,7 +654,7 @@
       }
     }
 
-    // Input Groups ---------
+    // Input Groups -----------------------------
     .input-group>.input-group-prepend>.input-group-text{
       background-color: $theme-primary;
       border-color: $theme-primary;
@@ -682,7 +694,7 @@
       border-color: darken($theme-primary, 10%);
     }
 
-    // List Groups ----------
+    // List Groups ------------------------------
     a.list-group-item-primary{
       color: darken($theme-primary, 0%);
       border-color: darken($theme-primary, 0%);
@@ -727,7 +739,7 @@
       & small.text-muted{ color: $sa-grey-10!important;}
     }
 
-    // List styles ----------
+    // List styles ------------------------------
     ul.list-primary{
       li::before{ color: $theme-primary; }
     }
@@ -833,7 +845,7 @@
       }
     }
 
-    // Pagination --------------------------------
+    // Pagination -------------------------------
     .pagination-sard .page-item.active .page-link{
       background-color: darken($theme-primary, 0%);
       border-color: darken($theme-primary, 0%);
