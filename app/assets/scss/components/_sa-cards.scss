@@ -116,143 +116,65 @@
 
 
 .card.card-primary{
-  background-color: $primary-colour;
+  background-color: $user-primary-colour;
   & .card-header, .card-footer{
-    background-color: darken($primary-colour, 15%);
+    background-color: darken($user-primary-colour, 15%);
     & .text-muted { 
-      color: darken($primary-colour, 25%) !important;
+      color: darken($user-primary-colour, 25%) !important;
     }
   }
 }
 .card.card-primary.outline{
   background-color: white;
-  border-color: $primary-colour;
+  border-color: $user-primary-colour;
   & .card-body.border-bottom{
-    border-color: $primary-colour!important;
+    border-color: $user-primary-colour!important;
   }
   & .card-body.border-top{
-    border-color: $primary-colour!important;
+    border-color: $user-primary-colour!important;
   }
   & .card-body hr{
-    border-color: $primary-colour;
+    border-color: $user-primary-colour;
   }
 }
 
 .card.card-secondary{
-  background-color: $secondary-colour;
+  background-color: $user-secondary-colour;
+  & .card-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: white;
+    }
+  }
   & .card-header, .card-footer{
-    background-color: darken($secondary-colour, 15%);
+    background-color: darken($user-secondary-colour, 5%);
     & .text-muted { 
-      color: darken($secondary-colour, 25%) !important;
+      color: lighten($user-secondary-colour, 10%) !important;
     }
   }
 }
 .card.card-secondary.outline{
   background-color: white;
-  border-color: $secondary-colour;
-  & .card-body.border-bottom{
-    border-color: $secondary-colour!important;
-  }
-  & .card-body.border-top{
-    border-color: $secondary-colour!important;
-  }
-  & .card-body hr{
-    border-color: $secondary-colour;
-  }
-}
-
-
-.card.card-user{
-  background-color: $user-colour;
-  & .card-header, .card-footer{
-    background-color: darken($user-colour, 15%);
-    & .text-muted { 
-      color: darken($user-colour, 25%) !important;
+  border-color: $user-secondary-colour;
+  & .card-body{
+    & h1, h2, h3, h4, h5, h6, p{
+      color: $text;
     }
   }
-}
-.card.card-user.outline{
-  background-color: white;
-  border-color: $user-colour;
   & .card-body.border-bottom{
-    border-color: $user-colour!important;
+    border-color: $user-secondary-colour!important;
   }
   & .card-body.border-top{
-    border-color: $user-colour!important;
+    border-color: $user-secondary-colour!important;
   }
   & .card-body hr{
-    border-color: $user-colour;
+    border-color: $user-secondary-colour;
   }
 }
 
-.card.card-user-2{
-  background-color: $user-colour-2;
-  & .card-header, .card-footer{
-    background-color: darken($user-colour-2, 15%);
-    & .text-muted { 
-      color: darken($user-colour-2, 25%) !important;
-    }
-  }
-}
-.card.card-user-2.outline{
-  background-color: white;
-  border-color: $user-colour-2;
-  & .card-body.border-bottom{
-    border-color: $user-colour-2!important;
-  }
-  & .card-body.border-top{
-    border-color: $user-colour-2!important;
-  }
-  & .card-body hr{
-    border-color: $user-colour-2;
-  }
-}
 
-.card.card-admin{
-  background-color: $admin-colour;
-  & .card-header, .card-footer{
-    background-color: darken($admin-colour, 15%);
-    & .text-muted { 
-      color: darken($admin-colour, 25%) !important;
-    }
-  }
-}
-.card.card-admin.outline{
-  background-color: white;
-  border-color: $admin-colour;
-  & .card-body.border-bottom{
-    border-color: $admin-colour!important;
-  }
-  & .card-body.border-top{
-    border-color: $admin-colour!important;
-  }
-  & .card-body hr{
-    border-color: $admin-colour;
-  }
-}
 
-.card.card-admin-2{
-  background-color: $admin-colour-2;
-  & .card-header, .card-footer{
-    background-color: darken($admin-colour-2, 15%);
-    & .text-muted { 
-      color: darken($admin-colour-2, 25%) !important;
-    }
-  }
-}
-.card.card-admin-2.outline{
-  background-color: white;
-  border-color: $admin-colour-2;
-  & .card-body.border-bottom{
-    border-color: $admin-colour-2!important;
-  }
-  & .card-body.border-top{
-    border-color: $admin-colour-2!important;
-  }
-  & .card-body hr{
-    border-color: $admin-colour-2;
-  }
-}
+
+
 
 
 .card.card-success{

@@ -694,6 +694,63 @@
       border-color: darken($theme-primary, 10%);
     }
 
+    // Cards ------------------------------------
+    
+    .card.card-primary{
+      background-color: $theme-primary;
+      & .card-header, .card-footer{
+        background-color: darken($theme-primary, 15%);
+        & .text-muted { 
+          color: darken($theme-primary, 25%) !important;
+        }
+      }
+    }
+    .card.card-primary.outline{
+      background-color: white;
+      border-color: $theme-primary;
+      & .card-body.border-bottom{
+        border-color: $theme-primary!important;
+      }
+      & .card-body.border-top{
+        border-color: $theme-primary!important;
+      }
+      & .card-body hr{
+        border-color: $theme-primary;
+      }
+    }
+    
+    .card.card-secondary{
+      background-color: $theme-secondary;
+      & .card-body{
+        & h1, h2, h3, h4, h5, h6, p{
+          color: white;
+        }
+      }
+      & .card-header, .card-footer{
+        background-color: darken($theme-secondary, 5%);
+        & .text-muted { 
+          color: lighten($theme-secondary, 10%) !important;
+        }
+      }
+    }
+    .card.card-secondary.outline{
+      background-color: white;
+      border-color: $theme-secondary;
+      & .card-body{
+        & h1, h2, h3, h4, h5, h6, p{
+          color: $text;
+        }
+      }
+      & .card-body.border-bottom{
+        border-color: $theme-secondary!important;
+      }
+      & .card-body.border-top{
+        border-color: $theme-secondary!important;
+      }
+      & .card-body hr{
+        border-color: $theme-secondary;
+      }
+    }
     // List Groups ------------------------------
     a.list-group-item-primary{
       color: darken($theme-primary, 0%);

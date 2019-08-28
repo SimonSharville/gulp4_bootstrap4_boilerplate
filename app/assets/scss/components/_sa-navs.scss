@@ -76,20 +76,20 @@ $sa-nav-colour: $sa-grey-14;
   }
 }
 
-.nav-admin.nav.nav-pills .nav-item,
-.nav-admin.nav.nav-pills .nav-link{
-  & a{
-    color: $admin-primary-colour;
-  }
-}
-.nav-admin.nav.nav-pills .nav-link.active{
-  background-color: $admin-primary-colour;
-  color: white;
-  &:focus,
-  &:active{
-    background-color: $admin-primary-colour;
-  }
-}
+// .nav-admin.nav.nav-pills .nav-item,
+// .nav-admin.nav.nav-pills .nav-link{
+//   & a{
+//     color: $admin-colour;
+//   }
+// }
+// .nav-admin.nav.nav-pills .nav-link.active{
+//   background-color: $admin-colour;
+//   color: white;
+//   &:focus,
+//   &:active{
+//     background-color: $admin-colour;
+//   }
+// }
 
 
 .nav-secondary.nav.nav-pills .nav-item,
