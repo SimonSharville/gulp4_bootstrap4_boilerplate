@@ -18737,6 +18737,36 @@ p > a.modal-info-circle-inline::before {
   background-color: #004D4D;
 }
 
+.card-header-tabs {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.375rem;
+  margin-bottom: -0.625rem;
+}
+
+.nav.nav-tabs.card-header-tabs .nav-item .nav-link {
+  color: #615E5C;
+  background-color: white;
+  margin-right: 1px;
+  padding-top: 0.125rem;
+}
+
+.nav.nav-tabs.card-header-tabs .nav-item .nav-link:visited {
+  color: #615E5C;
+}
+
+.nav.nav-tabs.card-header-tabs .nav-item .nav-link:hover {
+  background-color: #EDEBEB;
+}
+
+.nav.nav-tabs.card-header-tabs .nav-item .nav-link:focus, .nav.nav-tabs.card-header-tabs .nav-item .nav-link:active {
+  background-color: #D9D6D6;
+}
+
+.nav.nav-tabs.card-header-tabs .nav-item .nav-link.active {
+  background-color: #EDEBEB;
+}
+
 .pagination-sard a.page-link span {
   display: none;
 }
