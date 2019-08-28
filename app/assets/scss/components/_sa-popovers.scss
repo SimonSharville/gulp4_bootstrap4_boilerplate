@@ -1,0 +1,46 @@
+// Popovers =====================================
+
+
+.popover{
+  border: 2px solid $user-primary-colour;
+  box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.5);
+}
+
+.bs-popover-auto[x-placement^=right]>.arrow::before, .bs-popover-right>.arrow::before {
+  border-right-color: $user-primary-colour;
+}
+.bs-popover-auto[x-placement^=right]>.arrow::after, .bs-popover-right>.arrow::after{
+  left: 3px;
+}
+
+.bs-popover-auto[x-placement^=top]>.arrow::before, .bs-popover-top>.arrow::before {
+  border-top-color: $user-primary-colour;
+}
+.bs-popover-auto[x-placement^=top]>.arrow::after, .bs-popover-top>.arrow::after {
+  bottom: 3px;
+}
+
+.bs-popover-auto[x-placement^=bottom]>.arrow::before, .bs-popover-bottom>.arrow::before {
+  border-bottom-color: $user-primary-colour;
+}
+.bs-popover-auto[x-placement^=bottom]>.arrow::after, .bs-popover-bottom>.arrow::after{
+  top: 3px;
+}
+
+.bs-popover-auto[x-placement^=left]>.arrow::before, .bs-popover-left>.arrow::before {
+  border-left-color: $user-primary-colour;
+}
+.bs-popover-auto[x-placement^=left]>.arrow::after, .bs-popover-left>.arrow::after{
+  right: 3px;
+}
+
+
+.popover-header{
+  background-color: $user-primary-colour;
+  margin-top: 0;
+  color: white;
+  border:none;
+  border-top-left-radius: calc(.5rem - 3px);
+  border-top-right-radius: calc(.5rem - 3px);
+}
+

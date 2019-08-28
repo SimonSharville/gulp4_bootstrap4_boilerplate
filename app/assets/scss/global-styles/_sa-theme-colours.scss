@@ -1035,6 +1035,31 @@
       border-top: 1px solid $theme-primary;
     }
 
+    // Popovers ---------------------------------
+    .popover{
+      border: 2px solid $theme-primary;
+    }
+    
+    .bs-popover-auto[x-placement^=right]>.arrow::before, .bs-popover-right>.arrow::before {
+      border-right-color: $theme-primary;
+    }
+    
+    .bs-popover-auto[x-placement^=top]>.arrow::before, .bs-popover-top>.arrow::before {
+      border-top-color: $theme-primary;
+    }
+    
+    .bs-popover-auto[x-placement^=bottom]>.arrow::before, .bs-popover-bottom>.arrow::before {
+      border-bottom-color: $theme-primary;
+    }
+    
+    .bs-popover-auto[x-placement^=left]>.arrow::before, .bs-popover-left>.arrow::before {
+      border-left-color: $theme-primary;
+    }
+   
+    .popover-header{
+      background-color: $theme-primary;
+    }
+
   } // End Theme Name ===============================================
   // ================================================================
 
