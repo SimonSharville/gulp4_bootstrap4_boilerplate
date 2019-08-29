@@ -28,6 +28,7 @@
         background-color: $theme-primary;
     }
 
+
     // Alerts -----------------------------------
 
     .alert.alert-primary{
@@ -39,7 +40,8 @@
       border-color: $theme-secondary;
     }
 
-    // Searchbar Primary ============================
+
+    // Searchbar Primary ------------------------
 
     .searchbar-sard.searchbar-primary input{
       border:2px solid darken($theme-primary, 0%);
@@ -79,7 +81,7 @@
       }
     }
 
-    // Searchbar Secondary ==========================
+    // Searchbar Secondary ----------------------
 
     .searchbar-sard.searchbar-secondary input{
       border:2px solid darken($theme-secondary, 0%);
@@ -118,6 +120,7 @@
         color: darken($theme-secondary, 15%);
       }
     }
+
 
     // Navbar PRIMARY ---------------------------
 
@@ -428,6 +431,7 @@
       }
     } // End small sizes
 
+
     // Breadcrumbs ------------------------------
     .breadcrumb{
       a{
@@ -445,6 +449,7 @@
       }
     }
 
+
     // Perforations -----------------------------
     hr.primary{ border-color: $theme-primary; }
     hr.secondary{ border-color: $theme-secondary; }
@@ -452,31 +457,16 @@
     .perf.primary { background-color: $theme-primary; }
     .perf.secondary { background-color: $theme-secondary; }
 
+
     // Trust Colours ==============
     // Background
-    .bg-trust{ background-color: $theme-primary !important;}
-    .bg-trust-dark{ background-color: darken($theme-primary, 10%) !important;}
-    .bg-trust-light{ background-color: lighten($theme-primary, 10%) !important;}
+    .bg-trust-primary{ background-color: $theme-primary !important;}
+    .bg-trust-primary-dark{ background-color: darken($theme-primary, 10%) !important;}
+    .bg-trust-primary-light{ background-color: lighten($theme-primary, 10%) !important;}
 
-    .bg-trust-2{ background-color: $theme-secondary !important;}
-    .bg-trust-2-dark{ background-color: darken($theme-secondary, 10%) !important;}
-    .bg-trust-2-light{ background-color: lighten($theme-secondary, 10%) !important;}
-
-    .bg-trust-user{ background-color: $user-primary-colour !important;}
-    .bg-trust-user-dark{ background-color: darken($user-primary-colour, 10%) !important;}
-    .bg-trust-user-light{ background-color: lighten($user-primary-colour, 4%) !important;}
-
-    .bg-trust-user-2{ background-color: $user-secondary-colour !important;}
-    .bg-trust-user-2-dark{ background-color: darken($user-secondary-colour, 5%) !important;}
-    .bg-trust-user-2-light{ background-color: lighten($user-secondary-colour, 10%) !important;}
-
-    .bg-trust-admin{ background-color: $admin-primary-colour !important;}
-    .bg-trust-admin-dark{ background-color: darken($admin-primary-colour, 10%) !important;}
-    .bg-trust-admin-light{ background-color: lighten($admin-primary-colour, 10%) !important;}
-
-    .bg-trust-admin-2{ background-color: $admin-secondary-colour !important;}
-    .bg-trust-admin-2-dark{ background-color: darken($admin-secondary-colour, 10%) !important;}
-    .bg-trust-admin-2-light{ background-color: lighten($admin-secondary-colour, 10%) !important;}
+    .bg-trust-secondary{ background-color: $theme-secondary !important;}
+    .bg-trust-secondary-dark{ background-color: darken($theme-secondary, 10%) !important;}
+    .bg-trust-secondary-light{ background-color: lighten($theme-secondary, 10%) !important;}
 
     // Foreground
     .text-trust{ color: $theme-primary !important;}
@@ -487,21 +477,6 @@
     .text-trust-2-dark{ color: darken($theme-secondary, 10%) !important;}
     .text-trust-2-light{ color: lighten($theme-secondary, 10%) !important;}
 
-    .text-trust-user{ color: $user-primary-colour !important;}
-    .text-trust-user-dark{ color: darken($user-primary-colour, 10%) !important;}
-    .text-trust-user-light{ color: lighten($user-primary-colour, 4%) !important;}
-
-    .text-trust-user-2{ color: $user-secondary-colour !important;}
-    .text-trust-user-2-dark{ color: darken($user-secondary-colour, 5%) !important;}
-    .text-trust-user-2-light{ color: lighten($user-secondary-colour, 10%) !important;}
-
-    .text-trust-admin{ color: $admin-primary-colour !important;}
-    .text-trust-admin-dark{ color: darken($admin-primary-colour, 10%) !important;}
-    .text-trust-admin-light{ color: lighten($admin-primary-colour, 10%) !important;}
-
-    .text-trust-admin-2{ color: $admin-secondary-colour !important;}
-    .text-trust-admin-2-dark{ color: darken($admin-secondary-colour, 10%) !important;}
-    .text-trust-admin-2-light{ color: lighten($admin-secondary-colour, 10%) !important;}
 
     // Background Colours -----------------------
     .bg-primary {
@@ -518,6 +493,7 @@
     .badge.badge-secondary{ 
       background-color: $theme-secondary; 
     }
+
 
     // Buttons ----------------------------------
     .btn-primary{
@@ -723,6 +699,7 @@
       border-color: $theme-primary;
     }
 
+
     // File uploads -----------------------------
     .input-group.sa-file-upload{
       & input.form-control{
@@ -742,6 +719,7 @@
       }
     }
 
+
     // Input Groups -----------------------------
     .input-group>.input-group-prepend>.input-group-text{
       background-color: $theme-primary;
@@ -758,6 +736,7 @@
         border-color: $theme-primary;
       }
     }
+
 
     // BS File Imputs and Uploads ---------------
     .input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.form-control:focus{
@@ -781,6 +760,7 @@
       background-color: darken($theme-primary, 10%);
       border-color: darken($theme-primary, 10%);
     }
+
 
     // Cards ------------------------------------
     
@@ -840,63 +820,65 @@
       }
     }
   
-      // panels ------------------------------------
-    
-      .panel.panel-primary{
-        background-color: $theme-primary;
-        & .panel-heading, .panel-header, .panel-footer{
-          background-color: darken($theme-primary, 15%);
-          & .text-muted { 
-            color: darken($theme-primary, 25%) !important;
-          }
+
+    // panels -----------------------------------
+  
+    .panel.panel-primary{
+      background-color: $theme-primary;
+      & .panel-heading, .panel-header, .panel-footer{
+        background-color: darken($theme-primary, 15%);
+        & .text-muted { 
+          color: darken($theme-primary, 25%) !important;
         }
       }
-      .panel.panel-primary.outline{
-        background-color: white;
+    }
+    .panel.panel-primary.outline{
+      background-color: white;
+      border-color: $theme-primary;
+      & .panel-body.border-bottom{
+        border-color: $theme-primary!important;
+      }
+      & .panel-body.border-top{
+        border-color: $theme-primary!important;
+      }
+      & .panel-body hr{
         border-color: $theme-primary;
-        & .panel-body.border-bottom{
-          border-color: $theme-primary!important;
-        }
-        & .panel-body.border-top{
-          border-color: $theme-primary!important;
-        }
-        & .panel-body hr{
-          border-color: $theme-primary;
+      }
+    }
+    
+    .panel.panel-secondary{
+      background-color: $theme-secondary;
+      & .panel-body{
+        & h1, h2, h3, h4, h5, h6, p{
+          color: white;
         }
       }
-      
-      .panel.panel-secondary{
-        background-color: $theme-secondary;
-        & .panel-body{
-          & h1, h2, h3, h4, h5, h6, p{
-            color: white;
-          }
-        }
-        & .panel-heading, .panel-header, .panel-footer{
-          background-color: darken($theme-secondary, 5%);
-          & .text-muted { 
-            color: lighten($theme-secondary, 10%) !important;
-          }
+      & .panel-heading, .panel-header, .panel-footer{
+        background-color: darken($theme-secondary, 5%);
+        & .text-muted { 
+          color: lighten($theme-secondary, 10%) !important;
         }
       }
-      .panel.panel-secondary.outline{
-        background-color: white;
+    }
+    .panel.panel-secondary.outline{
+      background-color: white;
+      border-color: $theme-secondary;
+      & .panel-body{
+        & h1, h2, h3, h4, h5, h6, p{
+          color: $text;
+        }
+      }
+      & .panel-body.border-bottom{
+        border-color: $theme-secondary!important;
+      }
+      & .panel-body.border-top{
+        border-color: $theme-secondary!important;
+      }
+      & .panel-body hr{
         border-color: $theme-secondary;
-        & .panel-body{
-          & h1, h2, h3, h4, h5, h6, p{
-            color: $text;
-          }
-        }
-        & .panel-body.border-bottom{
-          border-color: $theme-secondary!important;
-        }
-        & .panel-body.border-top{
-          border-color: $theme-secondary!important;
-        }
-        & .panel-body hr{
-          border-color: $theme-secondary;
-        }
       }
+    }
+
 
     // Collapse ---------------------------------
     .accordion .card-header,
@@ -925,6 +907,7 @@
         color:$theme-primary;
       }
     }
+
 
     // List Groups ------------------------------
     a.list-group-item-primary{
@@ -971,6 +954,7 @@
       & small.text-muted{ color: $sa-grey-10!important;}
     }
 
+
     // List styles ------------------------------
     ul.list-primary{
       li::before{ color: $theme-primary; }
@@ -986,6 +970,7 @@
       li.list-secondary::before{ color: $theme-secondary; }
     }
     
+
     // Modals -----------------------------------
 
     .modal-primary .modal-header {
@@ -1077,6 +1062,7 @@
       }
     }
 
+
     // Pagination -------------------------------
     .pagination-sard .page-item.active .page-link{
       background-color: darken($theme-primary, 0%);
@@ -1123,6 +1109,7 @@
       border-top: 1px solid $theme-primary;
     }
 
+
     // Popovers ---------------------------------
     .popover{
       border: 2px solid $theme-primary;
@@ -1148,6 +1135,7 @@
       background-color: $theme-primary;
     }
 
+    
     // Progress bars ----------------------------
     .progress-bar {
       background-color: $theme-primary;

@@ -305,15 +305,16 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 .bg-sa-danger{ background-color: $sa-danger !important;}
 .bg-sa-alarm{ background-color: $sa-alert !important;}
 
-// Trust Colours ==============
+// Trust Colours ================================
+// Used on Colours page =========================
 // Backgrounds
-.bg-trust{ background-color: $user-primary-colour !important;}
-.bg-trust-dark{ background-color: darken($user-primary-colour, 10%) !important;}
-.bg-trust-light{ background-color: lighten($user-primary-colour, 4%) !important;}
+.bg-trust-primary{ background-color: $user-primary-colour !important;}
+.bg-trust-primary-dark{ background-color: darken($user-primary-colour, 10%) !important;}
+.bg-trust-primary-light{ background-color: lighten($user-primary-colour, 4%) !important;}
 
-.bg-trust-2{ background-color: $user-secondary-colour !important;}
-.bg-trust-2-dark{ background-color: darken($user-secondary-colour, 10%) !important;}
-.bg-trust-2-light{ background-color: lighten($user-secondary-colour, 10%) !important;}
+.bg-trust-secondary{ background-color: $user-secondary-colour !important;}
+.bg-trust-secondary-dark{ background-color: darken($user-secondary-colour, 10%) !important;}
+.bg-trust-secondary-light{ background-color: lighten($user-secondary-colour, 10%) !important;}
 
 .bg-user{ background-color: $user-primary-colour !important;}
 .bg-user-dark{ background-color: darken($user-primary-colour, 10%) !important;}
