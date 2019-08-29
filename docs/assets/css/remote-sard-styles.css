@@ -19528,15 +19528,18 @@ hr.white {
   background-color: #00B2B2;
 }
 
-.navbar .searchbar-sard {
+.searchbar-sard {
   border-radius: 8px;
+  margin: 0 -2px;
 }
 
-.navbar .searchbar-sard {
-  width: initial;
+.searchbar-sard .form-control {
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
-.navbar .searchbar-sard input {
+.searchbar-sard input {
   padding: 10px;
   padding-right: 38px;
   margin-right: -38px;
@@ -19550,15 +19553,15 @@ hr.white {
   border: 2px solid #C7C4C2;
 }
 
-.navbar .searchbar-sard input:hover {
+.searchbar-sard input:hover {
   border-color: #A39E9C;
 }
 
-.navbar .searchbar-sard input:focus {
+.searchbar-sard input:focus {
   border-color: #615E5C;
 }
 
-.navbar .searchbar-sard .btn-search {
+.searchbar-sard .btn-search {
   float: right;
   width: 36px;
   height: 36px;
@@ -19569,7 +19572,7 @@ hr.white {
   box-shadow: none;
 }
 
-.navbar .searchbar-sard .btn-search::before {
+.searchbar-sard .btn-search::before {
   font-family: "Font Awesome 5 Free";
   content: "\f002";
   padding-right: 0.25rem;
@@ -19581,84 +19584,84 @@ hr.white {
   right: 4px;
 }
 
-.navbar .searchbar-sard .btn-search:hover::before {
+.searchbar-sard .btn-search:hover::before {
   color: #403D3D;
 }
 
-.navbar .searchbar-sard .btn-search:focus::before {
+.searchbar-sard .btn-search:focus::before {
   color: #211F0F;
 }
 
-.navbar .searchbar-sard input:hover + .btn-search::before {
+.searchbar-sard input:hover + .btn-search::before {
   color: #403D3D;
 }
 
-.navbar .searchbar-sard input:focus + .btn-search::before {
+.searchbar-sard input:focus + .btn-search::before {
   color: #211F0F;
 }
 
-.navbar-primary .searchbar-sard input {
-  border: 2px solid #007f7f;
+.searchbar-sard.searchbar-primary input {
+  border: 2px solid #00b2b2;
 }
 
-.navbar-primary .searchbar-sard input:hover {
+.searchbar-sard.searchbar-primary input:hover {
+  border-color: #009999;
+}
+
+.searchbar-sard.searchbar-primary input:focus {
   border-color: #006666;
 }
 
-.navbar-primary .searchbar-sard input:focus {
-  border-color: #003333;
+.searchbar-sard.searchbar-primary .btn-search::before {
+  color: #009999;
 }
 
-.navbar-primary .searchbar-sard .btn-search::before {
+.searchbar-sard.searchbar-primary .btn-search:hover::before {
+  color: #007f7f;
+}
+
+.searchbar-sard.searchbar-primary .btn-search:focus::before {
   color: #006666;
 }
 
-.navbar-primary .searchbar-sard .btn-search:hover::before {
-  color: #004c4c;
+.searchbar-sard.searchbar-primary input:hover + .btn-search::before {
+  color: #007f7f;
 }
 
-.navbar-primary .searchbar-sard .btn-search:focus::before {
-  color: #003333;
+.searchbar-sard.searchbar-primary input:focus + .btn-search::before {
+  color: #006666;
 }
 
-.navbar-primary .searchbar-sard input:hover + .btn-search::before {
-  color: #004c4c;
+.searchbar-sard.searchbar-secondary input {
+  border: 2px solid #004d4d;
 }
 
-.navbar-primary .searchbar-sard input:focus + .btn-search::before {
-  color: #003333;
+.searchbar-sard.searchbar-secondary input:hover {
+  border-color: #003434;
 }
 
-.navbar-secondary .searchbar-sard input {
-  border: 2px solid #b20059;
+.searchbar-sard.searchbar-secondary input:focus {
+  border-color: #000101;
 }
 
-.navbar-secondary .searchbar-sard input:hover {
-  border-color: #99004d;
+.searchbar-sard.searchbar-secondary .btn-search::before {
+  color: #003434;
 }
 
-.navbar-secondary .searchbar-sard input:focus {
-  border-color: #660033;
+.searchbar-sard.searchbar-secondary .btn-search:hover::before {
+  color: #001a1a;
 }
 
-.navbar-secondary .searchbar-sard .btn-search::before {
-  color: #99004d;
+.searchbar-sard.searchbar-secondary .btn-search:focus::before {
+  color: #000101;
 }
 
-.navbar-secondary .searchbar-sard .btn-search:hover::before {
-  color: #7f0040;
+.searchbar-sard.searchbar-secondary input:hover + .btn-search::before {
+  color: #001a1a;
 }
 
-.navbar-secondary .searchbar-sard .btn-search:focus::before {
-  color: #660033;
-}
-
-.navbar-secondary .searchbar-sard input:hover + .btn-search::before {
-  color: #7f0040;
-}
-
-.navbar-secondary .searchbar-sard input:focus + .btn-search::before {
-  color: #660033;
+.searchbar-sard.searchbar-secondary input:focus + .btn-search::before {
+  color: #000101;
 }
 
 .panel-body .table, .card-body .table {
@@ -19890,6 +19893,70 @@ hr.white {
 .theme-user .alert.alert-secondary {
   background-color: #004D4D;
   border-color: #004D4D;
+}
+
+.theme-user .searchbar-sard.searchbar-primary input {
+  border: 2px solid #00b2b2;
+}
+
+.theme-user .searchbar-sard.searchbar-primary input:hover {
+  border-color: #009999;
+}
+
+.theme-user .searchbar-sard.searchbar-primary input:focus {
+  border-color: #006666;
+}
+
+.theme-user .searchbar-sard.searchbar-primary .btn-search::before {
+  color: #009999;
+}
+
+.theme-user .searchbar-sard.searchbar-primary .btn-search:hover::before {
+  color: #007f7f;
+}
+
+.theme-user .searchbar-sard.searchbar-primary .btn-search:focus::before {
+  color: #006666;
+}
+
+.theme-user .searchbar-sard.searchbar-primary input:hover + .btn-search::before {
+  color: #007f7f;
+}
+
+.theme-user .searchbar-sard.searchbar-primary input:focus + .btn-search::before {
+  color: #006666;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary input {
+  border: 2px solid #004d4d;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary input:hover {
+  border-color: #003434;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary input:focus {
+  border-color: #000101;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary .btn-search::before {
+  color: #003434;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary .btn-search:hover::before {
+  color: #001a1a;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary .btn-search:focus::before {
+  color: #000101;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary input:hover + .btn-search::before {
+  color: #001a1a;
+}
+
+.theme-user .searchbar-sard.searchbar-secondary input:focus + .btn-search::before {
+  color: #000101;
 }
 
 .theme-user .navbar-primary {
@@ -21110,6 +21177,70 @@ hr.white {
   border-color: #990099;
 }
 
+.theme-admin .searchbar-sard.searchbar-primary input {
+  border: 2px solid #e50073;
+}
+
+.theme-admin .searchbar-sard.searchbar-primary input:hover {
+  border-color: #cc0066;
+}
+
+.theme-admin .searchbar-sard.searchbar-primary input:focus {
+  border-color: #99004d;
+}
+
+.theme-admin .searchbar-sard.searchbar-primary .btn-search::before {
+  color: #cc0066;
+}
+
+.theme-admin .searchbar-sard.searchbar-primary .btn-search:hover::before {
+  color: #b20059;
+}
+
+.theme-admin .searchbar-sard.searchbar-primary .btn-search:focus::before {
+  color: #99004d;
+}
+
+.theme-admin .searchbar-sard.searchbar-primary input:hover + .btn-search::before {
+  color: #b20059;
+}
+
+.theme-admin .searchbar-sard.searchbar-primary input:focus + .btn-search::before {
+  color: #99004d;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary input {
+  border: 2px solid #990099;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary input:hover {
+  border-color: purple;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary input:focus {
+  border-color: #4d004d;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary .btn-search::before {
+  color: purple;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary .btn-search:hover::before {
+  color: #660066;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary .btn-search:focus::before {
+  color: #4d004d;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary input:hover + .btn-search::before {
+  color: #660066;
+}
+
+.theme-admin .searchbar-sard.searchbar-secondary input:focus + .btn-search::before {
+  color: #4d004d;
+}
+
 .theme-admin .navbar-primary {
   background-color: #E50073;
 }
@@ -22326,6 +22457,70 @@ hr.white {
 .theme-trust .alert.alert-secondary {
   background-color: #996633;
   border-color: #996633;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary input {
+  border: 2px solid #999966;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary input:hover {
+  border-color: #8a8a5c;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary input:focus {
+  border-color: #6b6b47;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary .btn-search::before {
+  color: #8a8a5c;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary .btn-search:hover::before {
+  color: #7a7a52;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary .btn-search:focus::before {
+  color: #6b6b47;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary input:hover + .btn-search::before {
+  color: #7a7a52;
+}
+
+.theme-trust .searchbar-sard.searchbar-primary input:focus + .btn-search::before {
+  color: #6b6b47;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary input {
+  border: 2px solid #996633;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary input:hover {
+  border-color: #86592d;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary input:focus {
+  border-color: #604020;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary .btn-search::before {
+  color: #86592d;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary .btn-search:hover::before {
+  color: #734d26;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary .btn-search:focus::before {
+  color: #604020;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary input:hover + .btn-search::before {
+  color: #734d26;
+}
+
+.theme-trust .searchbar-sard.searchbar-secondary input:focus + .btn-search::before {
+  color: #604020;
 }
 
 .theme-trust .navbar-primary {
