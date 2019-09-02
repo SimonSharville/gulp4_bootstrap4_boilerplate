@@ -41,8 +41,7 @@ var jsSRC = [
   // Local (Add in order used)
   'app/assets/js/scripts/dropdown-submenu.js',
   'app/assets/js/scripts/popovers.js',
-  'app/assets/js/scripts/file-uploads.js',
-  'app/assets/js/scripts/search-clear-button.js'
+  'app/assets/js/scripts/file-uploads.js'
 ];
 
 var imgSRC = 'app/assets/images/**/*',
