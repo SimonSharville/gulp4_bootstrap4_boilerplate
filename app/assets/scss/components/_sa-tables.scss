@@ -4,75 +4,62 @@ $sard-table-head-bg:          $sa-grey-14;
 $sard-table-dark-head-bg:     $sa-grey-18;
 // Base styles
 
-.panel-body .table, .card-body .table{
+.panel-body .table, .card-body .table, .form-group .table{
   margin: -$sard-spacer-x;
   min-width: calc(100% + #{$sard-spacer-x-2x});
   font-size: 0.875rem; // 14px
 }
 
 
-
-.panel-body .table-responsive, .card-body .table-responsive,
-.panel-body .table-responsive-sm, .card-body .table-responsive-sm,
-.panel-body .table-responsive-md, .card-body .table-responsive-md,
-.panel-body .table-responsive-lg, .card-body .table-responsive-lg,
-.panel-body .table-responsive-xl, .card-body .table-responsive-xl{
-  margin: -$sard-spacer-x;
-  min-width: calc(100% + #{$sard-spacer-x-2x});
+// Table Responsive ---------
+.table-responsive{
+  margin: -8px -10px -10px -10px;
+  width: calc(100% + 20px);
+  .table-sard{
+    margin: 0;
+  }
 }
-.panel-body .table-responsive table, .card-body .table-responsive table,
-.panel-body .table-responsive-sm table, .card-body .table-responsive-sm table,
-.panel-body .table-responsive-md table, .card-body .table-responsive-md table,
-.panel-body .table-responsive-lg table, .card-body .table-responsive-lg table,
-.panel-body .table-responsive-xl table, .card-body .table-responsive-xl table{
-  margin: 0 ;
-}
-
-
-
-
-
-
 
 @media (max-width: 575.98px) {
-  .table-responsive-sm {
-    display: block;
-    width: 100%;
-    min-width: calc(100% + #{$sard-spacer-x-2x});
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+  .table-responsive-sm{
+    margin: -8px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
   }
 }
 
 @media (max-width: 767.98px) {
-  .table-responsive-md {
-    display: block;
-    width: 100%;
-    min-width: calc(100% + #{$sard-spacer-x-2x});
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+  .table-responsive-md{
+    margin: -8px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
   }
 }
 
 @media (max-width: 991.98px) {
-  .table-responsive-lg {
-    display: block;
-    width: 100%;
-    min-width: calc(100% + #{$sard-spacer-x-2x});
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+  .table-responsive-lg{
+    margin: -8px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
   }
 }
 
 @media (max-width: 1199.98px) {
-  .table-responsive-xl {
-    display: block;
-    width: 100%;
-    min-width: calc(100% + #{$sard-spacer-x-2x});
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+  .table-responsive-xl{
+    margin: -8px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
   }
 }
+
 
 
 // ==========================
