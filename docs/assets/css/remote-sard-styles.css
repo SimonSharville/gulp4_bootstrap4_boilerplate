@@ -14818,6 +14818,10 @@ a.badge.badge-light {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
+.buttons-grouped .btn {
+  margin: 2.5px 0;
+}
+
 .card {
   border: 1px solid transparent;
   margin-bottom: 1rem;
