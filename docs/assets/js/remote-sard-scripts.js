@@ -17674,11 +17674,12 @@ $(function() {
     $('[data-toggle="tooltip"]').tooltip(); 
 });
 
-}).done(function(data) {
-  $(".modal-content").html($(data).find('.inner_modal'));
-  $(".modal-header").prepend('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>');
-  $('[data-toggle="popover"]').popover({trigger: "hover",  placement: 'auto left'});
-});
+// Not Working
+// done(function(data) {
+//   $(".modal-content").html($(data).find('.inner_modal'));
+//   $(".modal-header").prepend('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>');
+//   $('[data-toggle="popover"]').popover({trigger: "hover",  placement: 'auto left'});
+// });
 
 // Add Local Scripts here
 
@@ -17725,6 +17726,17 @@ $(document).ready(function() {
 
 /* Plugin to integrate in your js. By djibe, MIT license */
 // https://jsfiddle.net/djibe89/6gj5k3ed/
+// https://codepen.io/frosdqy/pen/grbxGW/
 
 
+// $('.has-clear input[type="text"]').on('input propertychange', function() {
+//   var $this = $(this);
+//   var visible = Boolean($this.val());
+//   $this.siblings('.form-control-clear').toggleClass('hidden', !visible);
+// }).trigger('propertychange');
+
+// $('.form-control-clear').click(function() {
+//   $(this).siblings('input[type="text"]').val('')
+//     .trigger('propertychange').focus();
+// });
 //# sourceMappingURL=remote-sard-scripts.js.map
