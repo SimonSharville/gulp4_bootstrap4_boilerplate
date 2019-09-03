@@ -104,12 +104,21 @@ $grid-breakpoints: (
   xxl: 1590px // Added
 );
 
+// Originals
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1560px // Added
+// );
+// Amended to allow for Side Tabs
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1560px // Added
+  sm: 504px,
+  md: 697px,
+  lg: 920px,
+  xl: 1128px,
+  xxl: 1518px // Added
 );
 
 /* Small devices (landscape phones, 576px and up) */

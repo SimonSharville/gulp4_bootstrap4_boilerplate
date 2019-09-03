@@ -1,5 +1,19 @@
 // Navbar =======================================
 
+// To allow for Side tabs
+
+@media (max-width: 991.98px){
+  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+      padding-right: 8px;
+      padding-left: 8px;
+  }
+}
+@media (max-width: 575.98px){
+  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+      padding-right: 14px;
+      padding-left: 14px;
+  }
+}
 
 // Base styles
 .navbar.fixed-top{
