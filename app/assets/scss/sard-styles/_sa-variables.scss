@@ -86,6 +86,9 @@ $sard-inner-border:          #ddd !default;
 $sard-footer-bg:             $sard-heading-bg !default;
 
 
+// Body adjust to allow for footer ==================================
+
+body { margin-bottom: 70px; }
 
 // Remove outer glow from Focus =====================================
 
@@ -116,10 +119,17 @@ $sa-box-shadow:         1px 1px 2px 0px rgba(0,0,0,0.2);
 .right-align{
   text-align: right;
 }
+.center, 
+.align-center,
+.center-align{
+  text-align: center;
+}
 
-// Global UI Variables
+.inline-block{
+  display: inline-block;
+}
 
-// body{ background-color: $sa-grey-02;}
+// Global UI Variables ==============================================
 
 header{
   height: 100px;

@@ -12354,6 +12354,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+body {
+  margin-bottom: 70px;
+}
+
 textarea:focus,
 select:focus,
 input:focus,
@@ -12375,6 +12379,16 @@ button:focus,
 .align-right,
 .right-align {
   text-align: right;
+}
+
+.center,
+.align-center,
+.center-align {
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 header {
@@ -19899,6 +19913,70 @@ hr.white {
   top: -5px;
 }
 
+.sa-footer #accordion {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 4px solid white;
+}
+
+.sa-footer .footer-header {
+  background: #211F0F;
+  border-radius: none;
+  padding: 8px 0px;
+  color: white;
+}
+
+.sa-footer .footer-header em, .sa-footer .footer-header h1, .sa-footer .footer-header h2, .sa-footer .footer-header h3, .sa-footer .footer-header h4, .sa-footer .footer-header h5, .sa-footer .footer-header h6, .sa-footer .footer-header p, .sa-footer .footer-header a {
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  font-size: 0.9375rem;
+  line-height: 1rem;
+}
+
+.sa-footer .footer-header a {
+  color: white;
+}
+
+.sa-footer .footer-header a:hover {
+  color: #00B2B2;
+}
+
+.sa-footer .footer-header.collapsable .expand-button::before {
+  content: "Expand";
+}
+
+.sa-footer .footer-header.collapsable .expand-button::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f106";
+  font-weight: 900;
+  padding-left: 0.375rem;
+  color: #00B2B2;
+  font-size: 1.75rem;
+  line-height: 0.5rem;
+  position: relative;
+  top: 5px;
+}
+
+.sa-footer .footer-header.collapsable .expand-button[aria-expanded="true"]::before {
+  content: "Close";
+}
+
+.sa-footer .footer-header.collapsable .expand-button[aria-expanded="true"]::after {
+  content: "\f107";
+}
+
+.sa-footer .footer-header .slash {
+  color: #827D7D;
+}
+
+.sa-footer .footer-body {
+  background-color: #EDEBEB;
+  padding: 8px 0px;
+}
+
 /* Theme Colouring */
 .theme-user {
   /* change the color of active or hovered links */
@@ -21084,6 +21162,14 @@ hr.white {
 
 .theme-user .progress-bar {
   background-color: #00B2B2;
+}
+
+.theme-user .sa-footer .footer-header a:hover {
+  color: #00B2B2;
+}
+
+.theme-user .sa-footer .footer-header.collapsable .expand-button::after {
+  color: #00B2B2;
 }
 
 .theme-admin {
@@ -22272,6 +22358,14 @@ hr.white {
   background-color: #E50073;
 }
 
+.theme-admin .sa-footer .footer-header a:hover {
+  color: #E50073;
+}
+
+.theme-admin .sa-footer .footer-header.collapsable .expand-button::after {
+  color: #E50073;
+}
+
 .theme-trust {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -23456,6 +23550,14 @@ hr.white {
 
 .theme-trust .progress-bar {
   background-color: #999966;
+}
+
+.theme-trust .sa-footer .footer-header a:hover {
+  color: #999966;
+}
+
+.theme-trust .sa-footer .footer-header.collapsable .expand-button::after {
+  color: #999966;
 }
 
 /*# sourceMappingURL=remote-sard-styles.css.map */

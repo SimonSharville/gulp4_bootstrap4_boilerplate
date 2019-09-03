@@ -1141,6 +1141,16 @@
       background-color: $theme-primary;
     }
     
+    .sa-footer{
+      .footer-header a {
+        &:hover{
+          color: $theme-primary;
+        }
+      }
+      .footer-header.collapsable .expand-button::after{
+        color:$theme-primary;
+      }
+    }
 
   } // End Theme Name ===============================================
   // ================================================================

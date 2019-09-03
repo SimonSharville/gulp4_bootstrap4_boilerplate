@@ -1,0 +1,62 @@
+// Footer =======================================
+
+.sa-footer{
+  #accordion {
+    position: fixed;
+    bottom: 0;
+    width: 100%;  
+    border-top:4px solid white;  
+  }
+  
+  .footer-header {
+    background: $sa-grey-18;
+    border-radius: none;
+    padding: 8px 0px;
+    color: white;
+    em, h1, h2, h3, h4, h5, h6, p, a{
+      color: white;
+      margin: 0 ;
+      padding: 0 ;
+      display: inline;
+      font-size: 0.9375rem; // 15px
+      line-height: 1rem;
+    }
+  }
+  
+  .footer-header a {
+    color: white;
+    &:hover{
+      color: $user-primary-colour;
+    }
+  }
+
+  .footer-header.collapsable .expand-button::before{
+    content: "Expand" ;
+  }
+  .footer-header.collapsable .expand-button::after{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f106" ;
+    font-weight: 900;
+    padding-left: $sard-spacer-6;
+    color:$user-primary-colour;
+    font-size: 1.75rem;
+    line-height: 0.5rem;
+    position: relative;
+    top: 5px;
+  }
+  
+  .footer-header.collapsable .expand-button[aria-expanded="true"]::before{
+    content: "Close" ;
+  }
+  .footer-header.collapsable .expand-button[aria-expanded="true"]::after{
+    content: "\f107" ;
+  }
+
+  .footer-header .slash { color:$sa-grey-12;}
+  
+  .footer-body{
+    background-color: $sa-grey-02;
+    padding: 8px 0px;
+  }
+
+} // End Footer
