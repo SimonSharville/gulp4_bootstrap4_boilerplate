@@ -2,4 +2,16 @@
 
 // Look at: https://mdbootstrap.com/docs/jquery/forms/validation/
 
-// Base styles
+// Bootstrap Validation Overrides and addons
+.needs-validation > .required label::after,
+.needs-validation label.required::after{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f069" ;
+    padding-left: $link-icon-padding ;
+    color:$text;
+    font-size: 0.5rem;
+    font-weight: 900;
+    position: relative;
+    top: -5px;
+  }
+
