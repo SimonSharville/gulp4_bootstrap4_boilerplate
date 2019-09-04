@@ -17,14 +17,28 @@ $sa-plum:                  #990099;
 $sa-red:                   #BF0000;
 $sa-white:                 #FFFFFF;
 
-$MRv:                   $sa-turq;
-$NRv:                   $sa-orange;
-$sa-360:                $sa-yellow;
-$eLeave:                $sa-lime;
-$A4A:                   $sa-plum;
-$JPL:                   $sa-pink;
-$eRo:                   $sa-teal;
-$CPL:                   $sa-red;
+$MRv:                       $sa-turq;
+$NRv:                       $sa-orange;
+$sa-360:                    $sa-yellow;
+$eLeave:                    $sa-lime;
+$A4A:                       $sa-plum;
+$JPL:                       $sa-pink;
+$eRo:                       $sa-teal;
+$CPL:                       $sa-red;
+
+
+// RAG Colours =================
+$RAG-danger:                $sa-red;
+$RAG-warning:               $sa-yellow;
+$RAG-success:               $sa-green;
+$RAG-approved:              $sa-green;
+$RAG-complete:              $sa-green;
+$RAG-recommended:           $sa-orange;
+$RAG-archived:              $sa-teal;
+$RAG-draft:                 $sa-yellow;
+$RAG-submitted:             $sa-lime;
+$RAG-due:                   $sa-orange;
+$RAG-abandoned:             $sa-red;
 
 // Dark Colours ================
 $sa-turq-dark:              #007C7C;

@@ -13425,34 +13425,6 @@ a.link-external:before {
   content: "\63";
 }
 
-.sicon-arrow-down:before {
-  content: "\64";
-}
-
-.sicon-arrow-down-circle:before {
-  content: "\65";
-}
-
-.sicon-arrow-down-circle-o:before {
-  content: "\66";
-}
-
-.sicon-arrow-left:before {
-  content: "\67";
-}
-
-.sicon-arrow-left-circle:before {
-  content: "\68";
-}
-
-.sicon-arrow-left-circle-o:before {
-  content: "\69";
-}
-
-.sicon-arrow-left-right:before {
-  content: "\6a";
-}
-
 .sicon-arrow-right:before {
   content: "\6b";
 }
@@ -13475,34 +13447,6 @@ a.link-external:before {
 
 .sicon-arrow-up-circle-o:before {
   content: "\70";
-}
-
-.sicon-arrow-up-down:before {
-  content: "\71";
-}
-
-.sicon-cancel:before {
-  content: "\72";
-}
-
-.sicon-circle:before {
-  content: "\73";
-}
-
-.sicon-circle-dot:before {
-  content: "\74";
-}
-
-.sicon-comment-left:before {
-  content: "\75";
-}
-
-.sicon-comment-left-o:before {
-  content: "\76";
-}
-
-.sicon-comment-right:before {
-  content: "\77";
 }
 
 .sicon-comment-right-o:before {
@@ -13529,34 +13473,6 @@ a.link-external:before {
   content: "\43";
 }
 
-.sicon-flower-circle-lg:before {
-  content: "\44";
-}
-
-.sicon-flower-circle-md:before {
-  content: "\45";
-}
-
-.sicon-flower-circle-o-lg:before {
-  content: "\46";
-}
-
-.sicon-flower-circle-o-md:before {
-  content: "\47";
-}
-
-.sicon-flower-circle-o-sm:before {
-  content: "\48";
-}
-
-.sicon-flower-circle-o-xl:before {
-  content: "\49";
-}
-
-.sicon-flower-circle-o-xs:before {
-  content: "\4a";
-}
-
 .sicon-flower-circle-sm:before {
   content: "\4b";
 }
@@ -13579,34 +13495,6 @@ a.link-external:before {
 
 .sicon-flower-sm:before {
   content: "\50";
-}
-
-.sicon-flower-xl:before {
-  content: "\51";
-}
-
-.sicon-flower-xs:before {
-  content: "\52";
-}
-
-.sicon-nav-icon-admin:before {
-  content: "\53";
-}
-
-.sicon-nav-icon-site:before {
-  content: "\54";
-}
-
-.sicon-nhs-logo:before {
-  content: "\55";
-}
-
-.sicon-nhs-oxleas:before {
-  content: "\56";
-}
-
-.sicon-nhs-oxleas-joint:before {
-  content: "\57";
 }
 
 .sicon-page-approved:before {
@@ -13633,34 +13521,6 @@ a.link-external:before {
   content: "\32";
 }
 
-.sicon-page-submitted:before {
-  content: "\33";
-}
-
-.sicon-quote:before {
-  content: "\34";
-}
-
-.sicon-quote-o:before {
-  content: "\35";
-}
-
-.sicon-reject:before {
-  content: "\36";
-}
-
-.sicon-reject-circle:before {
-  content: "\37";
-}
-
-.sicon-reject-circle-o:before {
-  content: "\38";
-}
-
-.sicon-sard-logo-lg:before {
-  content: "\39";
-}
-
 .sicon-sard-logo-md:before {
   content: "\21";
 }
@@ -13685,34 +13545,6 @@ a.link-external:before {
   content: "\26";
 }
 
-.sicon-sol-a4a:before {
-  content: "\27";
-}
-
-.sicon-sol-a4a-o:before {
-  content: "\28";
-}
-
-.sicon-sol-ele:before {
-  content: "\29";
-}
-
-.sicon-sol-ele-o:before {
-  content: "\2a";
-}
-
-.sicon-sol-eros:before {
-  content: "\2b";
-}
-
-.sicon-sol-eros-o:before {
-  content: "\2c";
-}
-
-.sicon-sol-jp:before {
-  content: "\2d";
-}
-
 .sicon-sol-jp-o:before {
   content: "\2e";
 }
@@ -13725,112 +13557,284 @@ a.link-external:before {
   content: "\3a";
 }
 
-.sicon-sol-nrv:before {
-  content: "\3b";
+.sicon-arrow-down:before {
+  content: "\65";
 }
 
-.sicon-sol-nrv-o:before {
-  content: "\3c";
+.sicon-arrow-down-circle:before {
+  content: "\67";
 }
 
-.sicon-sort-asc:before {
-  content: "\3d";
+.sicon-arrow-down-circle-o:before {
+  content: "\68";
 }
 
-.sicon-sort-both:before {
+.sicon-arrow-left:before {
+  content: "\69";
+}
+
+.sicon-arrow-left-circle:before {
+  content: "\6a";
+}
+
+.sicon-arrow-left-circle-o:before {
+  content: "\71";
+}
+
+.sicon-arrow-left-right:before {
+  content: "\72";
+}
+
+.sicon-arrow-up-down:before {
+  content: "\73";
+}
+
+.sicon-cancel:before {
+  content: "\74";
+}
+
+.sicon-circle:before {
+  content: "\75";
+}
+
+.sicon-circle-dot:before {
+  content: "\76";
+}
+
+.sicon-comment-left:before {
+  content: "\77";
+}
+
+.sicon-comment-left-o:before {
+  content: "\44";
+}
+
+.sicon-comment-right:before {
+  content: "\45";
+}
+
+.sicon-flower-circle-lg:before {
+  content: "\46";
+}
+
+.sicon-flower-circle-md:before {
+  content: "\47";
+}
+
+.sicon-flower-circle-o-lg:before {
+  content: "\48";
+}
+
+.sicon-flower-circle-o-md:before {
+  content: "\49";
+}
+
+.sicon-flower-circle-o-sm:before {
+  content: "\4a";
+}
+
+.sicon-flower-circle-o-xl:before {
+  content: "\51";
+}
+
+.sicon-flower-circle-o-xs:before {
+  content: "\52";
+}
+
+.sicon-flower-xl:before {
+  content: "\53";
+}
+
+.sicon-flower-xs:before {
+  content: "\54";
+}
+
+.sicon-nav-icon-admin:before {
+  content: "\55";
+}
+
+.sicon-nav-icon-site:before {
+  content: "\56";
+}
+
+.sicon-nhs-logo:before {
+  content: "\57";
+}
+
+.sicon-nhs-oxleas:before {
+  content: "\33";
+}
+
+.sicon-nhs-oxleas-joint:before {
+  content: "\34";
+}
+
+.sicon-page-submitted:before {
+  content: "\35";
+}
+
+.sicon-quote:before {
+  content: "\36";
+}
+
+.sicon-quote-o:before {
+  content: "\37";
+}
+
+.sicon-reject:before {
+  content: "\38";
+}
+
+.sicon-reject-circle:before {
+  content: "\39";
+}
+
+.sicon-reject-circle-o:before {
+  content: "\27";
+}
+
+.sicon-sard-logo-lg:before {
+  content: "\28";
+}
+
+.sicon-sol-a4a:before {
+  content: "\29";
+}
+
+.sicon-sol-a4a-o:before {
+  content: "\2a";
+}
+
+.sicon-sol-ele:before {
+  content: "\2b";
+}
+
+.sicon-sol-ele-o:before {
+  content: "\2c";
+}
+
+.sicon-sol-eros:before {
+  content: "\2d";
+}
+
+.sicon-sol-eros-o:before {
   content: "\3e";
 }
 
-.sicon-sort-desc:before {
+.sicon-sol-jp:before {
   content: "\3f";
 }
 
+.sicon-sort-both:before {
+  content: "\64";
+}
+
+.sicon-sort-desc:before {
+  content: "\66";
+}
+
 .sicon-status-approved:before {
-  content: "\40";
+  content: "\3b";
 }
 
-.sicon-status-archived:before {
-  content: "\5b";
-}
-
-.sicon-status-archived-o:before {
-  content: "\5d";
-}
-
-.sicon-status-danger:before {
-  content: "\5e";
-}
-
-.sicon-status-danger-o:before {
-  content: "\5f";
-}
-
-.sicon-status-draft:before {
-  content: "\60";
-}
-
-.sicon-status-draft-o:before {
-  content: "\7b";
-}
-
-.sicon-status-due:before {
-  content: "\7c";
-}
-
-.sicon-status-due-o:before {
-  content: "\7d";
+.sicon-status-approved-o:before {
+  content: "\3c";
 }
 
 .sicon-status-recommended:before {
-  content: "\7e";
+  content: "\7b";
 }
 
-.sicon-status-recommended-o:before {
+.sicon-sol-nrv:before {
   content: "\5c";
 }
 
-.sicon-status-submitted:before {
+.sicon-sol-nrv-o:before {
   content: "\e000";
 }
 
-.sicon-status-submitted-o:before {
+.sicon-sort-asc:before {
   content: "\e001";
 }
 
-.sicon-status-success:before {
+.sicon-status-archived:before {
   content: "\e002";
 }
 
-.sicon-status-success-o:before {
+.sicon-status-archived-o:before {
   content: "\e003";
 }
 
-.sicon-status-warning:before {
+.sicon-status-danger:before {
   content: "\e004";
 }
 
-.sicon-status-warning-o:before {
+.sicon-status-submitted:before {
   content: "\e005";
 }
 
-.sicon-super-admin:before {
+.sicon-status-recommended-o:before {
   content: "\e006";
 }
 
-.sicon-super-admin-o:before {
+.sicon-volcano:before {
   content: "\e007";
 }
 
-.sicon-upload:before {
+.sicon-upload-o:before {
   content: "\e008";
 }
 
-.sicon-upload-o:before {
+.sicon-upload:before {
   content: "\e009";
 }
 
-.sicon-volcano:before {
+.sicon-super-admin-o:before {
   content: "\e00a";
+}
+
+.sicon-super-admin:before {
+  content: "\e00b";
+}
+
+.sicon-status-warning-o:before {
+  content: "\e00c";
+}
+
+.sicon-status-due-o:before {
+  content: "\e00d";
+}
+
+.sicon-status-due:before {
+  content: "\e00e";
+}
+
+.sicon-status-warning:before {
+  content: "\e00f";
+}
+
+.sicon-status-success-o:before {
+  content: "\e010";
+}
+
+.sicon-status-draft-o:before {
+  content: "\e011";
+}
+
+.sicon-status-draft:before {
+  content: "\e012";
+}
+
+.sicon-status-success:before {
+  content: "\e013";
+}
+
+.sicon-status-submitted-o:before {
+  content: "\e014";
+}
+
+.sicon-status-danger-o:before {
+  content: "\e015";
 }
 
 .alert {
