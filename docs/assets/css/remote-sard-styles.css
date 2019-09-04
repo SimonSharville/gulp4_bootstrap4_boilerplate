@@ -928,6 +928,32 @@ body, html {
   scrollbar-arrow-color: #827D7D !important;
 }
 
+/* ===================================================================================================== */
+/* Smooth Scroll ======================================================================================= */
+.scrollToTop {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  bottom: -3px;
+  left: calc(50% - 15px);
+  display: none;
+  color: white;
+  z-index: 1000;
+}
+
+.scrollToTop:before {
+  content: "\70";
+  font-family: "sard-icons";
+  color: white;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.scrollToTop:hover:before {
+  color: #00B2B2;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -21240,6 +21266,10 @@ hr.white {
   color: #00B2B2;
 }
 
+.theme-user .scrollToTop:hover:before {
+  color: #00B2B2;
+}
+
 .theme-admin {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -22434,6 +22464,10 @@ hr.white {
   color: #E50073;
 }
 
+.theme-admin .scrollToTop:hover:before {
+  color: #E50073;
+}
+
 .theme-trust {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -23625,6 +23659,10 @@ hr.white {
 }
 
 .theme-trust .sa-footer .footer-header.collapsable .expand-button::after {
+  color: #999966;
+}
+
+.theme-trust .scrollToTop:hover:before {
   color: #999966;
 }
 

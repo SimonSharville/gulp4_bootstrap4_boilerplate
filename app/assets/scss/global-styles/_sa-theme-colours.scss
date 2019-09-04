@@ -1141,6 +1141,7 @@
       background-color: $theme-primary;
     }
     
+    // Footer -----------------------------------
     .sa-footer{
       .footer-header a {
         &:hover{
@@ -1150,6 +1151,9 @@
       .footer-header.collapsable .expand-button::after{
         color:$theme-primary;
       }
+    }
+    .scrollToTop:hover:before{
+      color:$theme-primary;
     }
 
   } // End Theme Name ===============================================
