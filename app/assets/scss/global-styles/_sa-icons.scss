@@ -206,7 +206,7 @@
 .sicon-inverse {
   color: #fff; }
 
-// sicon status icons colours ===================
+// sicon Status Icons colours ===================
 
 .sicon.sicon-status-danger, .sicon.sicon-status-danger-o {color: $RAG-danger;}
 .sicon.sicon-status-success, .sicon.sicon-status-success-o {color: $RAG-success;}
@@ -218,7 +218,15 @@
 .sicon.sicon-status-due, .sicon.sicon-status-due-o {color: $RAG-due;}
 .sicon.sicon-status-draft, .sicon.sicon-status-draft-o {color: $RAG-draft;}
 
+// sicon Product Icons colours ==================
 
+.sicon.sicon-sol-360, .sicon.sicon-sol-360-o { color: $sa-360;}
+.sicon.sicon-sol-a4a, .sicon.sicon-sol-a4a-o { color: $sa-A4A;}
+.sicon.sicon-sol-ele, .sicon.sicon-sol-ele-o { color: $sa-eLeave;}
+.sicon.sicon-sol-eros, .sicon.sicon-sol-eros-o { color: $sa-eRo;}
+.sicon.sicon-sol-jp, .sicon.sicon-sol-jp-o { color: $sa-JPL;}
+.sicon.sicon-sol-mrv, .sicon.sicon-sol-mrv-o { color: $sa-MRv;}
+.sicon.sicon-sol-nrv, .sicon.sicon-sol-nrv-o { color: $sa-NRv;}
 
 // ==================================================================
 // Font Awesome Icons ===============================================

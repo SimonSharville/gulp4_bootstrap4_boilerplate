@@ -17,14 +17,14 @@ $sa-plum:                  #990099;
 $sa-red:                   #BF0000;
 $sa-white:                 #FFFFFF;
 
-$MRv:                       $sa-turq;
-$NRv:                       $sa-orange;
+$sa-MRv:                       $sa-turq;
+$sa-NRv:                       $sa-orange;
 $sa-360:                    $sa-yellow;
-$eLeave:                    $sa-lime;
-$A4A:                       $sa-plum;
-$JPL:                       $sa-pink;
-$eRo:                       $sa-teal;
-$CPL:                       $sa-red;
+$sa-eLeave:                    $sa-lime;
+$sa-A4A:                       $sa-plum;
+$sa-JPL:                       $sa-pink;
+$sa-eRo:                       $sa-teal;
+$sa-CPL:                       $sa-red;
 
 
 // RAG Colours =================
@@ -211,14 +211,14 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 .text-red{ color: $sa-red;}
 .text-white{ color: $sa-white;}
 
-.text-MRv{ color: $MRv;}
-.text-NRv{ color: $NRv;}
+.text-MRv{ color: $sa-MRv;}
+.text-NRv{ color: $sa-NRv;}
 .text-sa-360{ color: $sa-360;}
-.text-eLeave{ color: $eLeave;}
-.text-A4A{ color: $A4A;}
-.text-JPL{ color: $JPL;}
-.text-eRo{ color: $eRo;}
-.text-CPL{ color: $CPL;}
+.text-eLeave{ color: $sa-eLeave;}
+.text-A4A{ color: $sa-A4A;}
+.text-JPL{ color: $sa-JPL;}
+.text-eRo{ color: $sa-eRo;}
+.text-CPL{ color: $sa-CPL;}
 
 .text-grey-02{ color: $sa-grey-02;}
 .text-grey-03{ color: $sa-grey-03;}
@@ -254,14 +254,14 @@ $navAdminDropdownBG  : darken($navAdminBase, 15%);
 .bg-sa-red{ background-color: $sa-red !important;}
 .bg-sa-white{ background-color: $sa-white !important;}
 
-.bg-sa-MRv{ background-color: $MRv !important;}
-.bg-sa-NRv{ background-color: $NRv !important;}
+.bg-sa-MRv{ background-color: $sa-MRv !important;}
+.bg-sa-NRv{ background-color: $sa-NRv !important;}
 .bg-sa-sa-360{ background-color: $sa-360 !important;}
-.bg-sa-eLeave{ background-color: $eLeave !important;}
-.bg-sa-A4A{ background-color: $A4A !important;}
-.bg-sa-JPL{ background-color: $JPL !important;}
-.bg-sa-eRo{ background-color: $eRo !important;}
-.bg-sa-CPL{ background-color: $CPL !important;}
+.bg-sa-eLeave{ background-color: $sa-eLeave !important;}
+.bg-sa-A4A{ background-color: $sa-A4A !important;}
+.bg-sa-JPL{ background-color: $sa-JPL !important;}
+.bg-sa-eRo{ background-color: $sa-eRo !important;}
+.bg-sa-CPL{ background-color: $sa-CPL !important;}
 
 // Background Colours Dark ===============
 

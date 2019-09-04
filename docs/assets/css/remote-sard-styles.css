@@ -860,6 +860,34 @@
   color: #FFB200;
 }
 
+.sicon.sicon-sol-360, .sicon.sicon-sol-360-o {
+  color: #FFB200;
+}
+
+.sicon.sicon-sol-a4a, .sicon.sicon-sol-a4a-o {
+  color: #990099;
+}
+
+.sicon.sicon-sol-ele, .sicon.sicon-sol-ele-o {
+  color: #A7BF30;
+}
+
+.sicon.sicon-sol-eros, .sicon.sicon-sol-eros-o {
+  color: #004D4D;
+}
+
+.sicon.sicon-sol-jp, .sicon.sicon-sol-jp-o {
+  color: #E50073;
+}
+
+.sicon.sicon-sol-mrv, .sicon.sicon-sol-mrv-o {
+  color: #00B2B2;
+}
+
+.sicon.sicon-sol-nrv, .sicon.sicon-sol-nrv-o {
+  color: #FF6A00;
+}
+
 .fa-icon {
   display: inline-block;
   font-style: normal;
