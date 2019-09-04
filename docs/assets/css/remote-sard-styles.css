@@ -824,6 +824,42 @@
   color: #fff;
 }
 
+.sicon.sicon-status-danger, .sicon.sicon-status-danger-o {
+  color: #BF0000;
+}
+
+.sicon.sicon-status-success, .sicon.sicon-status-success-o {
+  color: #359E00;
+}
+
+.sicon.sicon-status-warning, .sicon.sicon-status-warning-o {
+  color: #FFB200;
+}
+
+.sicon.sicon-status-approved, .sicon.sicon-status-approved-o {
+  color: #359E00;
+}
+
+.sicon.sicon-status-recommended, .sicon.sicon-status-recommended-o {
+  color: #FF6A00;
+}
+
+.sicon.sicon-status-submitted, .sicon.sicon-status-submitted-o {
+  color: #A7BF30;
+}
+
+.sicon.sicon-status-archived, .sicon.sicon-status-archived-o {
+  color: #004D4D;
+}
+
+.sicon.sicon-status-due, .sicon.sicon-status-due-o {
+  color: #FF6A00;
+}
+
+.sicon.sicon-status-draft, .sicon.sicon-status-draft-o {
+  color: #FFB200;
+}
+
 .fa-icon {
   display: inline-block;
   font-style: normal;

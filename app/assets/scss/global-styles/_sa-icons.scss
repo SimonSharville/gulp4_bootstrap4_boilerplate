@@ -206,7 +206,17 @@
 .sicon-inverse {
   color: #fff; }
 
+// sicon status icons colours ===================
 
+.sicon.sicon-status-danger, .sicon.sicon-status-danger-o {color: $RAG-danger;}
+.sicon.sicon-status-success, .sicon.sicon-status-success-o {color: $RAG-success;}
+.sicon.sicon-status-warning, .sicon.sicon-status-warning-o {color: $RAG-warning;}
+.sicon.sicon-status-approved, .sicon.sicon-status-approved-o {color: $RAG-approved;}
+.sicon.sicon-status-recommended, .sicon.sicon-status-recommended-o {color: $RAG-recommended;}
+.sicon.sicon-status-submitted, .sicon.sicon-status-submitted-o {color: $RAG-submitted;}
+.sicon.sicon-status-archived, .sicon.sicon-status-archived-o {color: $RAG-archived;}
+.sicon.sicon-status-due, .sicon.sicon-status-due-o {color: $RAG-due;}
+.sicon.sicon-status-draft, .sicon.sicon-status-draft-o {color: $RAG-draft;}
 
 
 
