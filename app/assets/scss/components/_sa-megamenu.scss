@@ -1,0 +1,166 @@
+// Megamenu =====================================
+
+// =================================================================
+// Megamenu ============================================
+// http://stackoverflow.com/questions/32094344/how-to-make-full-width-mega-menu-in-bootstrap
+// http://jsfiddle.net/ztczg6h7/1/
+
+
+#megamenu{
+
+  .nav-item.dropdown {
+    position: static !important; // This make the menu full body width
+  }
+
+  // Mega Menu Size =================
+  .dropdown-menu.show{
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .megamenu{
+    overflow-y: auto;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,.2);
+    
+    @media (min-width: 1589px) { // XXL 
+      max-height: 400px;
+      width: 1502px ;
+    }
+    @media (max-width: 1588.98px){ // XL
+      width: 1112px ;
+    }
+    @media (max-width: 1199.98px) { // LG
+      max-height: 400px;
+      width: 904px ;
+    }
+    @media (max-width: 991.98px) { // MD
+      max-height: 400px;
+      width: 670px ;
+    }
+    @media (max-width: 991.98px) { // SM
+      max-height: 400px;
+      width: 100% ;
+    }
+    @media (max-width: 767.98px) { // XS
+      max-height: 200px;
+      width: 100% ;
+    }
+    @media (max-width: 575.98px) { // XXS
+      max-height: 200px;
+      width:100%;
+    }
+  }
+
+  // Mega Menu ======================
+  .megamenu{
+    padding: 0 5px;
+    background-color:white!important;
+    @include roboto-regular;
+    border:1px solid $user-primary-colour;
+    border-top: none;
+    @media (max-width: 767.98px){
+      padding: 0;
+    }
+  }
+
+
+  // mega-column layout ======================
+  // https://www.codeply.com/go/qnPaEqNcgE - NOT USED
+
+  .megamenu .mega-columns {
+    @media (max-width: 767.98px){
+      display:block;
+      padding: 0 5px;
+    }
+  }
+
+  .megamenu table {
+    table-layout: fixed;
+    margin-bottom: 0;
+  }
+
+  .megamenu .mega-columns .mega-row{
+    display:table-row;
+    @media (max-width: 767.98px){
+      display:block;
+    }
+  }
+
+  .megamenu .mega-columns .column {
+    display: table-cell;
+    border-top: none;
+    @media (min-width: 768px){
+      height: 100%; // Note: add this to make columns full height.
+    }
+    @media (max-width: 767.98px){
+      display:block;
+    }
+  }
+
+
+
+  // Inside Mega Menu ==========================
+
+  .megamenu .mega-columns .column .list-title{
+    display: inline-block;
+    width:100%;
+    color: $user-primary-colour;
+    padding: 10px 0px 1px 0px;
+    margin-bottom: 0px;
+    @include roboto-bold;
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+  .megamenu .mega-columns .column .list-title:first-child{
+    padding: 1px 0px 1px 0px;
+  }
+
+  .megamenu .mega-columns .column a{
+    display: inline-block;
+    margin-left: -5px;
+    margin-right: -5px;
+    width:calc(100% + 10px);
+    padding: 4px 5px;
+    font-size: 1em;
+    line-height: 1.2em;
+    min-height: auto;
+    height: auto;
+    color: $text;
+  }
+
+  .megamenu .mega-columns .column a:hover{
+    background-color: $sa-grey-02;
+  }
+
+  .megamenu .mega-columns .column li.current.sub-tab a { // Current Tab
+    background-color: $sa-grey-04;
+  }
+
+  .megamenu .mega-columns .column li.sub-tab .sub a{
+    padding-left:15px;
+  }
+
+  hr{
+    border-top: 1px solid $sa-grey-06;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  // Add Super Admin Icon
+  .megamenu .mega-columns .column li.sub-tab.super-admin a:after{
+    font-family: "sard-icons" !important;
+    content: "\e00a";
+    color:$sa-grey-10;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
+
+
+} // END #megamenu
