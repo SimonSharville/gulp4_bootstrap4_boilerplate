@@ -57,110 +57,83 @@
     }
   }
 
-  // Mega Menu ======================
+  // Mega Menu ==============
   .megamenu{
-    padding: 0 5px;
-    background-color:white!important;
+    padding: $sard-spacer-8 $sard-spacer-8;
+    background-color:white;
     @include roboto-regular;
-    border:1px solid $user-primary-colour;
+    border:1px solid darken($user-primary-colour, 15%);
     border-top: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
     @media (max-width: 767.98px){
-      padding: 0;
+      display: block;
     }
   }
 
 
-  // mega-column layout ======================
-  // https://www.codeply.com/go/qnPaEqNcgE - NOT USED
+  // Mega Menu layout =======
 
-  .megamenu .mega-columns {
-    @media (max-width: 767.98px){
-      display:block;
-      padding: 0 5px;
+  .mega-column{
+    flex-grow: 1;
+  }
+
+  @media (max-width: 767.98px){
+    .mega-column{
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid $user-primary-colour;
     }
-  }
-
-  .megamenu table {
-    table-layout: fixed;
-    margin-bottom: 0;
-  }
-
-  .megamenu .mega-columns .mega-row{
-    display:table-row;
-    @media (max-width: 767.98px){
-      display:block;
-    }
-  }
-
-  .megamenu .mega-columns .column {
-    display: table-cell;
+    .mega-column:first-child{
+    margin-top: 0px;
+    padding-top: 0px;
     border-top: none;
-    @media (min-width: 768px){
-      height: 100%; // Note: add this to make columns full height.
-    }
-    @media (max-width: 767.98px){
-      display:block;
-    }
   }
+}
 
-
-
-  // Inside Mega Menu ==========================
-
-  .megamenu .mega-columns .column .list-title{
-    display: inline-block;
-    width:100%;
-    color: $user-primary-colour;
-    padding: 10px 0px 1px 0px;
-    margin-bottom: 0px;
+  .mega-list-title{
+    padding: 0px 5px;
+    padding-bottom: 3px;
+    margin: 0;
     @include roboto-bold;
-    font-size: 1em;
-    line-height: 1.2em;
+    color: $user-primary-colour;
   }
-  .megamenu .mega-columns .column .list-title:first-child{
-    padding: 1px 0px 1px 0px;
-  }
-
-  .megamenu .mega-columns .column a{
-    display: inline-block;
-    margin-left: -5px;
-    margin-right: -5px;
-    width:calc(100% + 10px);
-    padding: 4px 5px;
-    font-size: 1em;
-    line-height: 1.2em;
-    min-height: auto;
-    height: auto;
-    color: $text;
-  }
-
-  .megamenu .mega-columns .column a:hover{
-    background-color: $sa-grey-02;
-  }
-
-  .megamenu .mega-columns .column li.current.sub-tab a { // Current Tab
-    background-color: $sa-grey-04;
-  }
-
-  .megamenu .mega-columns .column li.sub-tab .sub a{
-    padding-left:15px;
+    
+  .mega-item{
+    padding: 3px 5px;
+    & a { color: $text; }
+    &:hover{
+      background-color: $sa-grey-02;
+    }
+    &:focus, &:active{
+      background-color: $sa-grey-04;
+    }
+    &.current{
+      background-color: $user-primary-colour;
+      & a { color: white; }
+      &:hover{
+        background-color: darken($user-primary-colour, 5%);
+      }
+      &:focus, &:active{ background-color: darken($user-primary-colour, 10%); }
+    }
   }
 
   hr{
-    border-top: 1px solid $sa-grey-06;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
   }
 
-  // Add Super Admin Icon
-  .megamenu .mega-columns .column li.sub-tab.super-admin a:after{
+  .mega-item.super-admin a:after{
     font-family: "sard-icons" !important;
+    line-height: initial;
     content: "\e00a";
     color:$sa-grey-10;
     margin-left: 5px;
     position: relative;
     top: 2px;
   }
-
 
 } // END #megamenu

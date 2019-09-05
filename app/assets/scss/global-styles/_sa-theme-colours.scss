@@ -25,7 +25,7 @@
     
     // Scrollbar --------------------------------
     ::-webkit-scrollbar-thumb {
-        background-color: $theme-primary;
+        background-color: $theme-secondary;
     }
 
 
@@ -431,7 +431,32 @@
       }
     } // End small sizes
 
+    // Megamenu ---------------------------------
+    #megamenu{
+      .megamenu{
+        border-color: darken($theme-primary, 15%);
+      }
 
+      @media (max-width: 767.98px){
+        .mega-column{
+          border-color: $theme-primary;
+        }
+      }
+
+      .mega-list-title{
+        color: $theme-primary;
+      }
+
+      .mega-item{
+        &.current{
+          background-color: $theme-primary;
+          &:hover{
+            background-color: darken($theme-primary, 5%);
+          }
+          &:focus, &:active{ background-color: darken($theme-primary, 10%); }
+        }
+      }
+    }
     // Breadcrumbs ------------------------------
     .breadcrumb{
       a{
@@ -989,9 +1014,9 @@
       border-color: $theme-primary;
     }
 
-    .modal-primary ::-webkit-scrollbar-thumb {
-      background-color: darken($theme-primary, 20%)!important;
-    }
+    // .modal-primary ::-webkit-scrollbar-thumb {
+    //   background-color: darken($theme-primary, 20%)!important;
+    // }
 
 
     .modal-secondary .modal-header {

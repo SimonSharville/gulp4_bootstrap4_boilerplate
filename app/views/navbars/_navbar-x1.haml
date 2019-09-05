@@ -52,105 +52,102 @@
               %a.dropdown-item{:href => "../components/components.html#tooltips-anchor"} Tooltips
           
           // Megamenu
-          // %li.current.nav-item.dropdown.menu-large.open
           #megamenu
             %li.nav-item.dropdown
               %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
                 Megamenu
               .dropdown-menu
                 .megamenu
-                  %table.table.mega-columns
-                    %tbody
-                      %tr
-                        %td.column
-                          %p.list-title Users
-                          %li.sub-tab
-                            %a{:href => "#/"} New User
-                          %li.current.sub-tab
-                            %a{:href => "#/"} All Users
-                          %li.sub-tab
-                            %a{:href => "#/"} Advanced User Search
-                          %li.sub-tab.super-admin
-                            %a{:href => "#/"} Guest Users
-                        %td.column
-                          %p.list-title Data
-                          %li.sub-tab
-                            %a{:href => "#/"} Roles
-                          %li.sub-tab
-                            %a{:href => "#/"} Medic Groups
-                          %li.sub-tab
-                            %a{:href => "#/"} Directorates
-                          %li.sub-tab
-                            %a{:href => "#/"} Locations
-                          %li.sub-tab
-                            %a{:href => "#/"} Teams
-                          %li.sub-tab
-                            %a{:href => "#/"} Specialties
-                          %li.sub-tab
-                            %a{:href => "#/"} Position Titles
-                          %li.sub-tab
-                            %a{:href => "#/"} ESR Roles
-                          %li.sub-tab
-                            %a{:href => "#/"} Sites
-                        %td.column
-                          %p.list-title GMC
-                          %li.sub-tab
-                            %a{:href => "#/"} Council Memberships
-                          %li.sub-tab
-                            %a{:href => "#/"} Prescribed Connections
-                        %td.column
-                          %p.list-title CSV Imports
-                          %li.sub-tab
-                            %a{:href => "#/"} New User CSV Import
-                          %li.sub-tab
-                            %a{:href => "#/"} User Update Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Council Membership Import
-                          %hr/
-                          %li.sub-tab
-                            %a{:href => "#/"} Appraisal Month Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Offline Appraisal Import
-                          %li.sub-tab
-                            %a{:href => "#/"} MAG Form Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Recommendation Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Gov and FtoP Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Section 12 Import
-                          %hr/
-                          %li.sub-tab
-                            %a{:href => "#/"} Appraiser Role Import
-                          %li.sub-tab.super-admin
-                            %a{:href => "#/"} User Lead Appraiser Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Custom Appraisal Lead Import
-                          %hr/
-                          %li.sub-tab
-                            %a{:href => "#/"} Offline MSF Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Patient Feedback MSF Import
-                          %hr/
-                          %li.sub-tab
-                            %a{:href => "#/"} Offline Job Plan Import
-                          %hr/
-                          %li.sub-tab
-                            %a{:href => "#/"} Role Import
-                          %li.sub-tab
-                            %a{:href => "#/"} Medic Group Import
-                          %hr/
-                          %li.sub-tab.super-admin
-                            %a{:href => "#/"} Designated Body Import
-                          %li.sub-tab.super-admin
-                            %a{:href => "#/"} Prep Documents Import
-                          %li.sub-tab.super-admin
-                            %a{:href => "#/"} Allocate Appraisal Import
-                          %li.sub-tab.super-admin
-                            %a{:href => "#/"} Equiniti User Appraisals Import
-                          %li.sub-tab.super-admin
-                            %a{:href => "#/"} Equiniti Portfolio Import
+                  .mega-column
+                    %p.mega-list-title Users
+                    .mega-item
+                      %a{:href => "#/"} New User
+                    .current.mega-item
+                      %a{:href => "#/"} All Users
+                    .mega-item
+                      %a{:href => "#/"} Advanced User Search
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Guest Users
+                  .mega-column
+                    %p.mega-list-title Data
+                    .mega-item
+                      %a{:href => "#/"} Roles
+                    .mega-item
+                      %a{:href => "#/"} Medic Groups
+                    .mega-item
+                      %a{:href => "#/"} Directorates
+                    .mega-item
+                      %a{:href => "#/"} Locations
+                    .mega-item
+                      %a{:href => "#/"} Teams
+                    .mega-item
+                      %a{:href => "#/"} Specialties
+                    .mega-item
+                      %a{:href => "#/"} Position Titles
+                    .mega-item
+                      %a{:href => "#/"} ESR Roles
+                    .mega-item
+                      %a{:href => "#/"} Sites
+                  .mega-column
+                    %p.mega-list-title GMC
+                    .mega-item
+                      %a{:href => "#/"} Council Memberships
+                    .mega-item
+                      %a{:href => "#/"} Prescribed Connections
+                  .mega-column
+                    %p.mega-list-title CSV Imports
+                    .mega-item
+                      %a{:href => "#/"} New User CSV Import
+                    .mega-item
+                      %a{:href => "#/"} User Update Import
+                    .mega-item
+                      %a{:href => "#/"} Council Membership Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Appraisal Month Import
+                    .mega-item
+                      %a{:href => "#/"} Offline Appraisal Import
+                    .mega-item
+                      %a{:href => "#/"} MAG Form Import
+                    .mega-item
+                      %a{:href => "#/"} Recommendation Import
+                    .mega-item
+                      %a{:href => "#/"} Gov and FtoP Import
+                    .mega-item
+                      %a{:href => "#/"} Section 12 Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Appraiser Role Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} User Lead Appraiser Import
+                    .mega-item
+                      %a{:href => "#/"} Custom Appraisal Lead Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Offline MSF Import
+                    .mega-item
+                      %a{:href => "#/"} Patient Feedback MSF Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Offline Job Plan Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Role Import
+                    .mega-item
+                      %a{:href => "#/"} Medic Group Import
+                    %hr/
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Designated Body Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Prep Documents Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Allocate Appraisal Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Equiniti User Appraisals Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Equiniti Portfolio Import
           // End Megamenu
+
           %li.nav-item
             %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
         %form.form-inline.searchbar-sard
