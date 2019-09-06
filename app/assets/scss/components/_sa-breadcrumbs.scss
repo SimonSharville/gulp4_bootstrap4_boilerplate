@@ -10,6 +10,7 @@
 
 // Fixed Top Navbar =========
 #breadcrumb-top.fixed-top{
+  z-index: 3000;
   top: 0px;
   border-bottom: 1px solid $sa-grey-04;
   background-color: white;
@@ -26,16 +27,28 @@
 
 // Allignments --------------
 
-#navbar + #breadcrumb-top{
-  top: 50px;
-}
+#navbar + #navbar-admin{ top: 50px; }
 
-#navbar + #navbar-admin + #breadcrumb-top{
-  top: 85px;
-}
+#navbar + #breadcrumb-top{ top: 50px; }
+
+#navbar + #navbar-admin + #breadcrumb-top{ top: 85px; }
 
 #navbar + .container{ margin-top: 87px;}
 
 #navbar + #breadcrumb-top + .container{ margin-top: 115px;}
 
 #navbar + #navbar-admin + #breadcrumb-top + .container{ margin-top: 150px;}
+
+@media (max-width: 991.98px){
+  #navbar + #navbar-admin{ top: 38px; }
+
+  #navbar + #breadcrumb-top{ top: 38px; }
+
+  #navbar + #navbar-admin + #breadcrumb-top{ top: 73px; }
+
+  #navbar + .container{ margin-top: 75px;}
+
+  #navbar + #breadcrumb-top + .container{ margin-top: 103px;}
+
+  #navbar + #navbar-admin + #breadcrumb-top + .container{ margin-top: 138px;}
+}

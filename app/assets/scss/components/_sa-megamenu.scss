@@ -7,7 +7,7 @@
 
 
 #megamenu{
-
+  display: contents;
   .nav-item.dropdown {
     position: static !important; // This make the menu full body width
   }
@@ -21,6 +21,7 @@
     width: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border: none;
   }
   .megamenu{
     overflow-y: auto;
@@ -96,11 +97,13 @@
 }
 
   .mega-list-title{
-    padding: 0px 5px;
-    padding-bottom: 3px;
+    padding: 10px 5px 3px 5px;
     margin: 0;
     @include roboto-bold;
     color: $user-primary-colour;
+  }
+  .mega-list-title:first-child{
+    padding-top: 0;
   }
     
   .mega-item{

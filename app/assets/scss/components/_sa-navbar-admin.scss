@@ -2,73 +2,43 @@
 
 #navbar-admin{
   background-color:$user-secondary-colour;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 50px;
-  min-height: 35px;
-  max-height: 35px;
   height: 35px;
   display: table;
   width: 100%;
-  // z-index: 2000;
+  z-index: 3001;
 }
 
-#navbar-admin .container.top-menu{
-  max-height: 35px;
-  height: 35px;
-  padding-right: 55px; // Allows for Account Menu Dropdown Icon
-  display: block;
-}
-
-#navbar-admin .container.top-menu ul.admin-nav{
-  display: block;
-}
-#navbar-admin .container.top-menu ul.admin-nav li{
-  padding: 0;
-  display: inline-block;
-  float:left;
-  min-height: 35px;
-  height: 35px;
-}
-
-#navbar-admin .container.top-menu .brandlogo{
-  padding-right: 5px;
-  padding-top: 5px;
-
-  background-image: url("ui2017/navbar-brand.png");
-  background-repeat: no-repeat;
-  background-size: 120px;
-  background-position: 0px 10px;
-
-  content: " ";
-
-  overflow: hidden;
-
-  // Extra Small screens
-  @media (max-width: 767px) {
-    width:33px;
+// Navbar Toggler -----------
+#navbar-admin.navbar .navbar-toggler{
+  background-color: $user-primary-colour;
+  border:none;
+  padding: 0 $sard-spacer-6;
+  margin-top: 5px;
+  &:hover{
+    background-color: darken($user-primary-colour, 5%);
   }
-
-  // Small screens up
-  @media (min-width: 768px) {
-    width:125px;
+  &:focus,
+  &:active{
+    background-color: darken($user-primary-colour, 10%);
   }
 }
-#navbar-admin .container.top-menu .brandlogo a{
-  display: block;
-  content: " ";
-  min-height: 35px;
-  height: 35px;
-}
 
-#navbar-admin .container.top-menu .admin-title{
-  h3{
-    @include roboto-light;
-    font-size: 28px;
-    line-height: 56px;
-    color: white;
-    padding-left: 5px;
-    margin: 0;
+#navbar-admin.navbar .navbar-toggler .navbar-toggler-icon{
+  font-size: 1rem;
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f0c9" ;
+    color:white;
+    font-weight: 900;
+    line-height: 1.5rem;
   }
 }
+
+// Nav links ----------------
+#navbar-admin.navbar .navbar-nav .nav-link {
+  padding: 0.475rem .5rem;
+  color: white;
+  &:hover{ background-color: darken($user-secondary-colour, 5%);}
+  &:focus, &:active{ background-color: darken($user-secondary-colour, 10%);}
+}
+
