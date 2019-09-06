@@ -17,12 +17,12 @@
 
 // Base styles
 .navbar.fixed-top{
-  z-index: 3002;
   box-shadow: $sa-box-shadow;
 }
 /* change the background color */
 .navbar {
   padding: 0rem 1rem;
+  z-index: 3002;
 }
 
 /* change the padding for height */

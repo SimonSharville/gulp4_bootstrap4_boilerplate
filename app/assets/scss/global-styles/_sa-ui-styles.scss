@@ -1,0 +1,26 @@
+// UI Styles
+// Used only for the UI Build
+
+header{
+  height: 100px;
+}
+
+.bs-anchor{
+  padding-top: 120px;
+}
+
+.icon-bg{
+  background-color: lightgrey;
+  padding: 0.5rem
+}
+
+// Navbar
+.navbar.fixed-top{
+  z-index: 4002;
+}
+#navbar-admin.fixed-top{
+  z-index: 4001;
+}
+#breadcrumb-top.fixed-top{
+  z-index: 4000;
+}

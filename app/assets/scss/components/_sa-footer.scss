@@ -1,7 +1,9 @@
 // Footer =======================================
 
 .sa-footer{
+  
   #accordion {
+    z-index: 5000;
     position: fixed;
     bottom: 0;
     width: 100%;  
