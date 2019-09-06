@@ -8,6 +8,7 @@
  
   %body.theme-trust
     //=include ../navbars/_navbar-x1.haml
+    //=include ../navbars/_navbar-admin.haml
 
     #breadcrumb-top.fixed-top
       .container
@@ -20,12 +21,12 @@
             %li.breadcrumb-item.active{"aria-current" => "page"} Data
 
 
-    .container.first
+    .container
       .row
         .col-12
           %h1.display-4 Components
           %p.lead These are default Bootstrap Components styled for SARD.
-
+    .container
       //=include bs-components/_alerts.haml
 
       %hr.black.mt-5
