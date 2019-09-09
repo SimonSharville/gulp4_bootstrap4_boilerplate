@@ -322,8 +322,13 @@
 .navbar-primary .dropdown-menu .dropdown-item{
   color: white;
   border-color: $user-primary-colour;
-  &:focus{
+  
+  &:focus,
+  &.active{
     background-color: darken($user-primary-colour, 25%);
+  }
+  &.active:hover{
+    background-color: darken($user-primary-colour, 30%);
   }
   &:hover{
     background-color: darken($user-primary-colour, 25%);
@@ -346,6 +351,13 @@
 }
 .navbar-primary .dropdown-menu .dropdown-divider {
     border-color: white;
+}
+
+.navbar-primary .dropdown-submenu.active .dropdown-item.dropdown-toggle{
+  background-color: darken($user-primary-colour, 25%);
+}
+.navbar-primary .dropdown-submenu.active .dropdown-item.dropdown-toggle:hover{
+  background-color: darken($user-primary-colour, 30%);
 }
 
 // Dropdown header
@@ -447,6 +459,14 @@
 .navbar-secondary .dropdown-menu .dropdown-item.dropdown-toggle.active{
   background-color: darken($admin-primary-colour, 30%);
 }
+
+.navbar-primary .dropdown-submenu.active .dropdown-item.dropdown-toggle{
+  background-color: darken($admin-primary-colour, 25%);
+}
+.navbar-primary .dropdown-submenu.active .dropdown-item.dropdown-toggle:hover{
+  background-color: darken($admin-primary-colour, 30%);
+}
+
 .navbar-secondary .dropdown-submenu .dropdown-menu{
   border:none;
   border-top-left-radius: $sard-border-radius;

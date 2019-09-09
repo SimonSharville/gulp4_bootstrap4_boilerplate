@@ -160,8 +160,12 @@
 
     .navbar-primary .dropdown-menu .dropdown-item{
       border-color: $theme-primary;
-      &:focus{
+      &:focus,
+      &.active{
         background-color: darken($theme-primary, 25%);
+      }
+      &.active:hover{
+        background-color: darken($theme-primary, 30%);
       }
       &:hover{
         background-color: darken($theme-primary, 25%);
@@ -175,6 +179,13 @@
     // Submenu 
     .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle:active,
     .navbar-primary .dropdown-menu .dropdown-item.dropdown-toggle.active{
+      background-color: darken($theme-primary, 30%);
+    }
+
+    .navbar-primary .dropdown-submenu.active .dropdown-item.dropdown-toggle{
+      background-color: darken($theme-primary, 25%);
+    }
+    .navbar-primary .dropdown-submenu.active .dropdown-item.dropdown-toggle:hover{
       background-color: darken($theme-primary, 30%);
     }
 
@@ -273,8 +284,12 @@
 
     .navbar-secondary .dropdown-menu .dropdown-item{
       border-color: $theme-secondary;
-      &:focus{
-        background-color: darken($theme-secondary, 15%);
+      &:focus,
+      &.active{
+        background-color: darken($theme-secondary, 25%);
+      }
+      &.active:hover{
+        background-color: darken($theme-secondary, 30%);
       }
       &:hover{
         background-color: darken($theme-secondary, 15%);
@@ -289,6 +304,13 @@
     .navbar-secondary .dropdown-menu .dropdown-item.dropdown-toggle:active,
     .navbar-secondary .dropdown-menu .dropdown-item.dropdown-toggle.active{
       background-color: darken($theme-secondary, 20%);
+    }
+
+    .navbar-secondary .dropdown-submenu.active .dropdown-item.dropdown-toggle{
+      background-color: darken($theme-secondary, 25%);
+    }
+    .navbar-secondary .dropdown-submenu.active .dropdown-item.dropdown-toggle:hover{
+      background-color: darken($theme-secondary, 30%);
     }
 
     // Searchbar
