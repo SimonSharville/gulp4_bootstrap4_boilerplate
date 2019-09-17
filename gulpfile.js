@@ -43,7 +43,9 @@ var jsSRC = [
   'app/assets/js/scripts/popovers.js',
   'app/assets/js/scripts/file-uploads.js',
   'app/assets/js/scripts/smoothscroll.js',
-  'app/assets/js/scripts/active.js'
+  'app/assets/js/scripts/active.js',
+  'app/assets/js/scripts/off-canvas-options.js',
+  'app/assets/js/scripts/off-canvas-rag-key.js'
 ];
 
 var imgSRC = 'app/assets/images/**/*',
