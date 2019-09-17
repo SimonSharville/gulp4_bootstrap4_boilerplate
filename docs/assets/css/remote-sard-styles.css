@@ -19024,7 +19024,7 @@ p > a.modal-info-circle-inline::before {
   display: contents;
 }
 
-#megamenu .nav-item.dropdown {
+#megamenu .dropdown {
   position: static !important;
 }
 
@@ -19101,7 +19101,7 @@ p > a.modal-info-circle-inline::before {
 }
 
 #megamenu .megamenu {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
   background-color: white;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -19133,19 +19133,6 @@ p > a.modal-info-circle-inline::before {
   flex-grow: 1;
 }
 
-@media (max-width: 767.98px) {
-  #megamenu .mega-column {
-    margin-top: 5px;
-    padding-top: 5px;
-    border-top: 1px solid #00B2B2;
-  }
-  #megamenu .mega-column:first-child {
-    margin-top: 0px;
-    padding-top: 0px;
-    border-top: none;
-  }
-}
-
 #megamenu .mega-list-title {
   padding: 10px 5px 3px 5px;
   margin: 0;
@@ -19158,40 +19145,36 @@ p > a.modal-info-circle-inline::before {
   padding-top: 0;
 }
 
-#megamenu .mega-item {
-  padding: 3px 5px;
-}
-
 #megamenu .mega-item a {
+  display: block;
+  padding: 3px 5px;
+  margin-right: 8px;
   color: #211F0F;
 }
 
-#megamenu .mega-item:hover {
+#megamenu .mega-item a:hover {
   background-color: #EDEBEB;
 }
 
-#megamenu .mega-item:focus, #megamenu .mega-item:active {
+#megamenu .mega-item a:focus, #megamenu .mega-item a:active {
   background-color: #D9D6D6;
 }
 
-#megamenu .mega-item.current {
+#megamenu .mega-item a.active {
   background-color: #00B2B2;
-}
-
-#megamenu .mega-item.current a {
   color: white;
 }
 
-#megamenu .mega-item.current:hover {
+#megamenu .mega-item a.active:hover {
   background-color: #009999;
 }
 
-#megamenu .mega-item.current:focus, #megamenu .mega-item.current:active {
+#megamenu .mega-item a.active:focus, #megamenu .mega-item a.active:active {
   background-color: #007f7f;
 }
 
 #megamenu hr {
-  margin: 5px;
+  margin: 5px 8px 5px 5px;
 }
 
 #megamenu .mega-item.super-admin a:after {
@@ -19202,6 +19185,26 @@ p > a.modal-info-circle-inline::before {
   margin-left: 5px;
   position: relative;
   top: 2px;
+}
+
+@media (max-width: 767.98px) {
+  #megamenu .mega-column {
+    margin-top: 5px;
+    padding-top: 5px;
+    margin-right: 8px;
+    border-top: 1px solid #00B2B2;
+  }
+  #megamenu .mega-column:first-child {
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: none;
+  }
+  #megamenu .mega-item a {
+    margin-right: 0px;
+  }
+  #megamenu hr {
+    margin: 5px 0px 5px 5px;
+  }
 }
 
 .pagination-sard a.page-link span {
@@ -20810,15 +20813,15 @@ header {
   color: #00B2B2;
 }
 
-.theme-user #megamenu .mega-item.current {
+.theme-user #megamenu .mega-item a.active {
   background-color: #00B2B2;
 }
 
-.theme-user #megamenu .mega-item.current:hover {
+.theme-user #megamenu .mega-item a.active:hover {
   background-color: #009999;
 }
 
-.theme-user #megamenu .mega-item.current:focus, .theme-user #megamenu .mega-item.current:active {
+.theme-user #megamenu .mega-item a.active:focus, .theme-user #megamenu .mega-item a.active:active {
   background-color: #007f7f;
 }
 
@@ -22078,15 +22081,15 @@ header {
   color: #E50073;
 }
 
-.theme-admin #megamenu .mega-item.current {
+.theme-admin #megamenu .mega-item a.active {
   background-color: #E50073;
 }
 
-.theme-admin #megamenu .mega-item.current:hover {
+.theme-admin #megamenu .mega-item a.active:hover {
   background-color: #cc0066;
 }
 
-.theme-admin #megamenu .mega-item.current:focus, .theme-admin #megamenu .mega-item.current:active {
+.theme-admin #megamenu .mega-item a.active:focus, .theme-admin #megamenu .mega-item a.active:active {
   background-color: #b20059;
 }
 
@@ -23346,15 +23349,15 @@ header {
   color: #999966;
 }
 
-.theme-trust #megamenu .mega-item.current {
+.theme-trust #megamenu .mega-item a.active {
   background-color: #999966;
 }
 
-.theme-trust #megamenu .mega-item.current:hover {
+.theme-trust #megamenu .mega-item a.active:hover {
   background-color: #8a8a5c;
 }
 
-.theme-trust #megamenu .mega-item.current:focus, .theme-trust #megamenu .mega-item.current:active {
+.theme-trust #megamenu .mega-item a.active:focus, .theme-trust #megamenu .mega-item a.active:active {
   background-color: #7a7a52;
 }
 

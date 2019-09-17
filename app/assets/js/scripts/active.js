@@ -6,9 +6,11 @@ $(function(){
   $('a').each(function(){
       if ($(this).prop('href') == window.location.href) {
           $(this).addClass('active'); 
-          $(this).parents('li').addClass('active');
+          $(this).parents('.nav-item').addClass('active');
           // Added
           $(this).parents('div.dropdown-submenu').addClass('active');
+
+          $(this).parents('.mega-item').addClass('active');
       }
   });
 });

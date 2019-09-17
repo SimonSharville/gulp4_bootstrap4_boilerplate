@@ -8,7 +8,7 @@
 
 #megamenu{
   display: contents;
-  .nav-item.dropdown {
+  .dropdown {
     position: static !important; // This make the menu full body width
   }
 
@@ -60,7 +60,7 @@
 
   // Mega Menu ==============
   .megamenu{
-    padding: $sard-spacer-8 $sard-spacer-8;
+    padding: $sard-spacer-8 $sard-spacer-4 $sard-spacer-8 $sard-spacer-8;
     background-color:white;
     @include roboto-regular;
     border:1px solid darken($user-primary-colour, 15%);
@@ -83,19 +83,6 @@
     flex-grow: 1;
   }
 
-  @media (max-width: 767.98px){
-    .mega-column{
-      margin-top: 5px;
-      padding-top: 5px;
-      border-top: 1px solid $user-primary-colour;
-    }
-    .mega-column:first-child{
-    margin-top: 0px;
-    padding-top: 0px;
-    border-top: none;
-  }
-}
-
   .mega-list-title{
     padding: 10px 5px 3px 5px;
     margin: 0;
@@ -106,18 +93,20 @@
     padding-top: 0;
   }
     
-  .mega-item{
+  .mega-item a{
+    display: block;
     padding: 3px 5px;
-    & a { color: $text; }
+    margin-right: 8px;
+    color: $text; 
     &:hover{
       background-color: $sa-grey-02;
     }
     &:focus, &:active{
       background-color: $sa-grey-04;
     }
-    &.current{
+    &.active{
       background-color: $user-primary-colour;
-      & a { color: white; }
+      color: white; 
       &:hover{
         background-color: darken($user-primary-colour, 5%);
       }
@@ -126,7 +115,7 @@
   }
 
   hr{
-    margin: 5px;
+    margin: 5px 8px 5px 5px;
   }
 
   .mega-item.super-admin a:after{
@@ -137,6 +126,26 @@
     margin-left: 5px;
     position: relative;
     top: 2px;
+  }
+
+  @media (max-width: 767.98px){
+    .mega-column{
+      margin-top: 5px;
+      padding-top: 5px;
+      margin-right: 8px;
+      border-top: 1px solid $user-primary-colour;
+    }
+    .mega-column:first-child{
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: none;
+    }
+    .mega-item a{
+      margin-right: 0px;
+    }
+    hr {
+      margin: 5px 0px 5px 5px;
+    }
   }
 
 } // END #megamenu

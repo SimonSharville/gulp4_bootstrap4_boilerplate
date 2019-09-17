@@ -469,8 +469,8 @@
         color: $theme-primary;
       }
 
-      .mega-item{
-        &.current{
+      .mega-item a{
+        &.active{
           background-color: $theme-primary;
           &:hover{
             background-color: darken($theme-primary, 5%);
