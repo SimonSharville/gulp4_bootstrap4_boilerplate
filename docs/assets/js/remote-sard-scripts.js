@@ -17772,11 +17772,11 @@ $(document).ready(function(){
   // Options Menu Slider
    $('#options-nav-expander').on('click',function(e){
      e.preventDefault();
-     $('body').toggleClass('oc-nav-expanded');
+     $('body').toggleClass('options-nav-expanded');
    });
    $('#options-nav-close').on('click',function(e){
      e.preventDefault();
-     $('body').removeClass('oc-nav-expanded');
+     $('body').removeClass('options-nav-expanded');
    });
    
    // Only needed if we use dropdowns within the menu

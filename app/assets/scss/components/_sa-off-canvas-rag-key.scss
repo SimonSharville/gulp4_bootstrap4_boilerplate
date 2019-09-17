@@ -1,0 +1,227 @@
+// Off Canvas Rag Key ===========================
+// http://blog.themearmada.com/off-canvas-slide-menu-for-bootstrap/
+
+//#160757827 scroll bar covers options menu on IE
+
+$rag-tab:             $sa-grey-04;
+// $user-primary-colour:        $client;
+// $user-primary-colour-admin:  $admin;
+
+body { -ms-overflow-style: scrollbar; }
+
+// navigation button ============================
+
+a.rag-key-expander {
+  background: none repeat scroll 0 0 $rag-tab;
+  color: $text;
+  display: block;
+
+  margin-right: 0;
+  position: absolute;
+  bottom: 80px;
+  right: 0px;
+  text-decoration: none;
+
+  transition: right 0.3s ease-in-out 0s;
+  width: 30px;
+  height: 110px;
+  z-index: 12;
+
+  border-radius: 6px 0px 0px 6px;
+  border: 2px solid white;
+  border-right: none;
+
+  -ms-transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;
+  transition: right 0.3s ease-in-out 0s;
+}
+
+a.rag-key-expander .title{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  @include roboto-regular;
+}
+a.rag-key-expander .title img{
+  width: 20px;
+  padding-top: 3px;
+}
+
+a.rag-key-expander:after{
+  content: "\e00a";
+  font-family: "sa-icon";
+  color:$text;
+  font-size: 1.5em;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+
+  -ms-transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.rag-key-expanded a.rag-key-expander:after{
+  -ms-transform: rotate(1890deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+a.rag-key-expander:hover {
+  cursor: pointer;
+  background: none repeat scroll 0 0 $user-primary-colour;
+}
+
+
+a.rag-key-expander.fixed {
+  position: fixed;
+}
+
+.rag-key-expanded a.rag-key-expander.fixed {
+    right: 300px;
+    background: none repeat scroll 0 0 $user-primary-colour;
+}
+
+@media (max-width: 767px) { // Small Screens
+    a.rag-key-expander{
+      width: 30px;
+      height: 35px;
+    }
+
+    a.rag-key-expander .title{
+      display: none;
+    }
+
+    a.rag-key-expander:after{
+      top: 1px;
+    }
+}
+
+// canvas menu & menu container =================
+
+nav.rag-key-menu {
+  background: $sa-grey-02;
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  z-index: 2000;
+  border-left: 4px solid $user-primary-colour;
+
+  transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;
+}
+
+nav.rag-key-menu hr{
+    border-top: 1px solid white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rag-key-expanded nav.rag-key-menu {
+  right: 0;
+}
+
+body.rag-key-expanded {
+  margin-left: 0em;
+  transition: right 0.4s ease-in-out 0s;
+  -webkit-transition: right 0.4s ease-in-out 0s;
+  -moz-transition: right 0.4s ease-in-out 0s;
+  -o-transition: right 0.4s ease-in-out 0s;
+}
+
+#rag-key-close {
+  min-height:70px;
+  height:70px;
+}
+
+#rag-key-close:after {
+  content: "\e00e";
+  font-family: "sa-icon";
+  color:$text;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+//  menu and animations =========================
+
+.rag-key-menu h3{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.rag-key{
+  min-height: 30px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  overflow: visible;
+  margin-left: 5px;
+  padding-left: 35px;
+  background-color: transparent;
+}
+.rag-key.icon-danger{
+  background-image: url("rag-icons/rag-icon-danger-sm@2x.png");
+}
+.rag-key.icon-warning{
+  background-image: url("rag-icons/rag-icon-warning-sm@2x.png");
+}
+.rag-key.icon-danger-plus{
+  background-image: url("rag-icons/rag-icon-danger-plus-sm@2x.png");
+}
+.rag-key.icon-warning-plus{
+  background-image: url("rag-icons/rag-icon-warning-plus-sm@2x.png");
+}
+.rag-key.icon-approved{
+  background-image: url("rag-icons/rag-icon-approved-sm@2x.png");
+}
+.rag-key.icon-unavailable{
+  background-image: url("rag-icons/rag-icon-unavailable-sm@2x.png");
+}
+.rag-key.icon-success{
+  background-image: url("rag-icons/rag-icon-success-sm@2x.png");
+}
+.rag-key.icon-draft{
+  background-image: url("rag-icons/rag-icon-draft-sm@2x.png");
+}
+.rag-key.icon-submitted{
+  background-image: url("rag-icons/rag-icon-submitted-sm@2x.png");
+}
+.rag-key.icon-recommended{
+  background-image: url("rag-icons/rag-icon-recommended-sm@2x.png");
+}
+.rag-key.icon-abandoned{
+  background-image: url("rag-icons/rag-icon-abandoned-sm@2x.png");
+}
+.rag-key.icon-due{
+  background-image: url("rag-icons/rag-icon-due-sm@2x.png");
+}
+.rag-key p{
+  padding-top: 6px;
+}
+
+
+// User / Admin colour variations ======================
+
+// .theme-admin a.rag-key-expander:hover {
+//   background: none repeat scroll 0 0 $user-primary-colour-admin;
+// }
+// .theme-admin.rag-key-expanded a.rag-key-expander.fixed {
+//   background: none repeat scroll 0 0 $user-primary-colour-admin;
+// }
+// .theme-admin nav.rag-key-menu {
+//   border-left: 4px solid $user-primary-colour-admin;
+// }

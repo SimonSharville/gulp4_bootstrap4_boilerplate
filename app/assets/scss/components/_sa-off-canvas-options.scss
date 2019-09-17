@@ -1,0 +1,444 @@
+// Off Canvas Options ===========================
+// http://blog.themearmada.com/off-canvas-slide-menu-for-bootstrap/
+
+//#160757827 scroll bar covers options menu on IE
+body { -ms-overflow-style: scrollbar; }
+
+// navigation button ============================
+
+a.oc-nav-expander {
+  background: none repeat scroll 0 0 $sa-grey-18;
+  color: #FFFFFF;
+  display: block;
+
+  margin-right: 0;
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  text-decoration: none;
+
+  transition: right 0.3s ease-in-out 0s;
+  width: 30px;
+  height: 130px;
+  z-index: 12;
+
+  border-radius: 6px 0px 0px 6px;
+  border: 2px solid white;
+  border-right: none;
+
+  -ms-transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;
+  transition: right 0.3s ease-in-out 0s;
+}
+
+a.oc-nav-expander .title{
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  @include roboto-regular;
+  font-size: 1.4em;
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari 3-8 */
+  -moz-transform: rotate(-90deg); /* Mozilla */
+  -o-transform: rotate(-90deg); /* Opera */
+  transform: rotate(-90deg);
+}
+
+a.oc-nav-expander:after{
+  content: "\e00a";
+  font-family: "sa-icon";
+  color:white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+
+  -ms-transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.oc-nav-expanded a.oc-nav-expander:after{
+  -ms-transform: rotate(1890deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+a.oc-nav-expander:hover {
+  cursor: pointer;
+  color: white!important;
+}
+
+
+a.oc-nav-expander.fixed {
+  position: fixed;
+}
+
+.oc-nav-expanded a.oc-nav-expander.fixed {
+    right: 300px;
+}
+
+@media (max-width: 767px) { // Small Screens
+    a.oc-nav-expander{
+      width: 30px;
+      height: 35px;
+    }
+
+    a.oc-nav-expander .title{
+      display: none;
+    }
+
+    a.oc-nav-expander:after{
+      top: 1px;
+    }
+}
+
+// canvas menu & menu container =================
+
+nav.oc-menu {
+  background: $sa-grey-16;
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  z-index: 2000;
+  border-left: 4px solid ;
+
+  transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;
+}
+
+.oc-nav-expanded nav.oc-menu {
+  right: 0;
+}
+
+body.oc-nav-expanded {
+  margin-left: 0em;
+  transition: right 0.4s ease-in-out 0s;
+  -webkit-transition: right 0.4s ease-in-out 0s;
+  -moz-transition: right 0.4s ease-in-out 0s;
+  -o-transition: right 0.4s ease-in-out 0s;
+}
+
+#oc-nav-close {
+  min-height:130px;
+  height:130px;
+}
+
+#oc-nav-close:after {
+  content: "\e00e";
+  font-family: "sa-icon";
+  color:white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+//  menu and animations =========================
+
+.main-menu li {
+  padding: 0px;
+}
+
+.main-menu li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  padding: 7px 10px;
+  padding-right: 30px;
+  font-size: 16px;
+}
+
+.main-menu li a:visited{
+  color: white;
+}
+
+.main-menu li a:active,
+.main-menu li a:focus,
+.main-menu li a:hover {
+  background: $sa-grey-18;
+}
+
+.main-menu hr{
+  margin-top: 0px!important;
+  margin-bottom: 0px!important;
+}
+.main-menu li.sub-title{
+  padding-left: 25px!important;
+}
+
+// Animated Icon ---------------------------
+
+.main-menu li a:after {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1;
+  text-transform: none;
+  content: '\f105';
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  color: white;
+}
+
+.main-menu li a:after {
+  float: right;
+  margin: 0.1em 1.7em -0.1em 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.main-menu li a:hover:after {
+  float: right;
+  margin: 0.1em 0.8em -0.1em 0;
+  opacity: 1;
+}
+
+// Added styles =====================================================
+
+.oc-menu .main-menu li:before{ // Removes Bullets
+  content: none;
+  display:none;
+}
+.oc-menu .main-menu li.sub-title{
+  padding: 10px 10px;
+  color: white;
+  font-size: 16px;
+  @include roboto-regular;
+}
+.oc-menu .main-menu li.icon{
+  margin-right: -20px;
+}
+
+.oc-menu .main-menu li.icon a{
+  text-indent: -1.8em;
+  padding-left: 2.5em;
+  padding-right: 50px;
+}
+
+.oc-menu .main-menu li.icon a:before{
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1;
+  text-transform: none;
+  margin-right: 10px;
+}
+
+.oc-menu .main-menu li.new a:before,
+.oc-menu .main-menu li.add a:before{
+  content: '\f067';
+}
+
+.oc-menu .main-menu li.new-set a:before{
+  content: '\f0c5';
+  margin-right: 7px;
+}
+
+.oc-menu .main-menu li.edit a:before{
+  content: '\f040';
+}
+
+.oc-menu .main-menu li.export a:before{
+  content: '\f0ee';
+  margin-right: 6px;
+}
+
+.oc-menu .main-menu li.download a:before,
+.oc-menu .main-menu li.import a:before{
+  content: '\f0ed';
+  margin-right: 6px;
+}
+
+.oc-menu .main-menu li.action-needed a:before,
+.oc-menu .main-menu li.warning a:before{
+  content: '\f071';
+  margin-right: 6px;
+}
+
+.oc-menu .main-menu li.view a:before{
+  content: '\f06e';
+  margin-right: 6px;
+}
+
+.oc-menu .main-menu li.back a:before{
+  content: '\f0a8';
+}
+
+.oc-menu .main-menu li.questionnaire a:before{
+  content: '\f0f6';
+  margin-right: 6px;
+}
+
+.oc-menu .main-menu li.pdf a:before{
+  content: '\f1c1';
+}
+
+.oc-menu .main-menu li.zip a:before{
+  content: '\f1c6';
+}
+
+.oc-menu .main-menu li.email a:before{
+  content: '\f003';
+}
+
+.oc-menu .main-menu li.cancel a:before{
+  content: '\f05e';
+}
+
+.oc-menu .main-menu li.info a:before{
+  content: '\f05a';
+}
+
+.oc-menu .main-menu li.video a:before{
+  content: '\f1c8';
+}
+
+.oc-menu .main-menu li.apply a:before{
+  content: '\f05d';
+}
+
+.oc-menu .main-menu li.refresh a:before{
+  content: '\f021';
+}
+
+.oc-menu .main-menu li.user a:before{
+  content: '\f007';
+}
+
+.oc-menu .main-menu li.user-md a:before{
+  content: '\f0f0';
+}
+
+.oc-menu .main-menu li.all-users a:before{
+  content: '\f0c0';
+}
+
+.oc-menu .main-menu li.new-user a:before{
+  content: '\f234';
+}
+
+.oc-menu .main-menu li.destroy a:before,
+.oc-menu .main-menu li.delete a:before{
+  content: '\f1f8';
+  margin-right: 11px;
+}
+
+
+// Add Super Admin Icon to sidebar
+  .oc-menu .main-menu li.super-admin a:after{
+    font-family: "sa-icon";
+    content: "\e062";
+    color:$sa-grey-10;
+    margin:  0;
+    position: relative;
+    top: 2px;
+    right: -30px;
+    opacity: 1;
+    padding-right: 0px;
+  }
+
+
+
+
+// Only needed if we use dropdowns within the menu
+// DROPDOWN ------------------------------
+// .main-menu a .caret {
+//   width: 0;
+//   height: 0;
+//   display: inline-block;
+//   vertical-align: top;
+//   border-top: 4px solid #4f5963;
+//   border-right: 4px solid transparent;
+//   border-left: 4px solid transparent;
+//   content: "";
+//     margin-top: 8px;
+// }
+
+// .main-menu a:hover .caret {
+//   border-top-color: #4f5963;
+// }
+
+// .main-menu li.open > a > .caret {
+//   border-top: none;
+//   border-bottom: 4px solid #4f5963;
+//   border-right: 4px solid transparent;
+//   border-left: 4px solid transparent;
+// }
+
+// .main-menu li.open > a:hover > .caret {
+//   border-bottom-color: #4f5963;
+// }
+
+// .main-menu li .sub-nav {
+//   border-bottom: 0px;
+//   padding: 4px;
+// }
+
+
+
+// Colouring ====================================
+// .theme-user{
+//   a.oc-nav-expander:hover {
+//     background: none repeat scroll 0 0 $client;
+//   }
+//   .oc-nav-expanded a.oc-nav-expander.fixed {
+//     background: none repeat scroll 0 0 $client;
+//   }
+//   nav.oc-menu {
+//     border-color: $client;
+//   }
+//   .main-menu li a:active,
+//   .main-menu li a:focus,
+//   .main-menu li a:hover {
+//     color: lighten($client, 10%);
+//   }
+//   .icon.selected a{
+//     color: lighten($client, 10%);
+//     @include roboto-regular;
+//   }
+// }
+
+// .theme-admin{
+//   a.oc-nav-expander:hover {
+//     background: none repeat scroll 0 0 $admin;
+//   }
+//   .oc-nav-expanded a.oc-nav-expander.fixed {
+//     background: none repeat scroll 0 0 $admin;
+//   }
+//   nav.oc-menu {
+//     border-color: $admin;
+//   }
+//   .main-menu li a:active,
+//   .main-menu li a:focus,
+//   .main-menu li a:hover {
+//     color: lighten($admin, 10%);
+//   }
+//   .icon.selected a{
+//     color: lighten($admin, 10%);
+//     @include roboto-regular;
+//   }
+// }
