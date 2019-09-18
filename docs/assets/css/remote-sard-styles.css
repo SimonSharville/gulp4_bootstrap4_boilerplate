@@ -20388,8 +20388,8 @@ body {
   -ms-overflow-style: scrollbar;
 }
 
-a.oc-nav-expander {
-  background: none repeat scroll 0 0 #211F0F;
+a.options-nav-expander {
+  background: #211F0F;
   color: #FFFFFF;
   display: block;
   margin-right: 0;
@@ -20397,76 +20397,72 @@ a.oc-nav-expander {
   top: 130px;
   right: 0px;
   text-decoration: none;
-  transition: right 0.3s ease-in-out 0s;
   width: 30px;
-  height: 130px;
+  height: 110px;
   z-index: 12;
   border-radius: 6px 0px 0px 6px;
   border: 2px solid white;
   border-right: none;
-  -webkit-transition: right 0.3s ease-in-out 0s;
-  transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
-a.oc-nav-expander .title {
+a.options-nav-expander .title {
   position: absolute;
-  bottom: 30px;
-  right: -20px;
+  bottom: 25px;
+  right: -18px;
+  color: white;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1.4em;
-  /* IE 9 */
+  font-weight: 300;
+  font-size: 1.2em;
   -webkit-transform: rotate(-90deg);
-  /* Chrome, Safari 3-8 */
-  /* Mozilla */
-  /* Opera */
   transform: rotate(-90deg);
 }
 
-a.oc-nav-expander:after {
-  content: "\e00a";
-  font-family: "sa-icon";
+a.options-nav-expander:after {
+  content: "\71";
+  font-family: "sard-icons";
   color: white;
-  font-size: 1.5em;
+  font-size: 1.25em;
   position: absolute;
   top: 3px;
-  right: 3px;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+  right: 5px;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
-.oc-nav-expanded a.oc-nav-expander:after {
+.options-nav-expanded a.options-nav-expander:after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-a.oc-nav-expander:hover {
+a.options-nav-expander:hover {
   cursor: pointer;
   color: white !important;
 }
 
-a.oc-nav-expander.fixed {
+a.options-nav-expander.fixed {
   position: fixed;
 }
 
-.oc-nav-expanded a.oc-nav-expander.fixed {
+.options-nav-expanded a.options-nav-expander.fixed {
   right: 300px;
 }
 
 @media (max-width: 767px) {
-  a.oc-nav-expander {
+  a.options-nav-expander {
     width: 30px;
     height: 35px;
   }
-  a.oc-nav-expander .title {
+  a.options-nav-expander .title {
     display: none;
   }
-  a.oc-nav-expander:after {
+  a.options-nav-expander:after {
     top: 1px;
   }
 }
 
-nav.oc-menu {
+nav.options-menu {
   background: #403D3D;
   display: block;
   height: 100%;
@@ -20475,46 +20471,56 @@ nav.oc-menu {
   right: -300px;
   top: 0;
   width: 300px;
-  z-index: 2000;
+  z-index: 6000;
   border-left: 4px solid;
-  transition: right 0.3s ease-in-out 0s;
-  -webkit-transition: right 0.3s ease-in-out 0s;
-  -moz-transition: right 0.3s ease-in-out 0s;
-  -o-transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
-.oc-nav-expanded nav.oc-menu {
+.options-nav-expanded nav.options-menu {
   right: 0;
 }
 
-body.oc-nav-expanded {
+body.options-nav-expanded {
   margin-left: 0em;
-  transition: right 0.4s ease-in-out 0s;
-  -webkit-transition: right 0.4s ease-in-out 0s;
-  -moz-transition: right 0.4s ease-in-out 0s;
-  -o-transition: right 0.4s ease-in-out 0s;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
-#oc-nav-close {
-  min-height: 130px;
-  height: 130px;
+#options-nav-close {
+  height: 133px;
 }
 
-#oc-nav-close:after {
-  content: "\e00e";
-  font-family: "sa-icon";
+#options-nav-close:hover {
+  background-color: #383636;
+  content: 'Close';
+  color: white;
+  cursor: pointer;
+}
+
+#options-nav-close:hover:before {
+  content: 'Close';
+  color: white;
+  position: relative;
+  top: 40%;
+  left: 45%;
+}
+
+#options-nav-close:after {
+  content: "\6d";
+  font-family: "sard-icons";
   color: white;
   font-size: 1.5em;
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 10px;
 }
 
-.main-menu li {
+.options-menu .main-menu li {
   padding: 0px;
 }
 
-.main-menu li a {
+.options-menu .main-menu li a {
   position: relative;
   color: white;
   text-decoration: none;
@@ -20524,192 +20530,223 @@ body.oc-nav-expanded {
   padding: 7px 10px;
   padding-right: 30px;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
-.main-menu li a:visited {
+.options-menu .main-menu li a:visited {
   color: white;
 }
 
-.main-menu li a:active,
-.main-menu li a:focus,
-.main-menu li a:hover {
+.options-menu .main-menu li a:active,
+.options-menu .main-menu li a:focus,
+.options-menu .main-menu li a:hover {
   background: #211F0F;
 }
 
-.main-menu hr {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+.options-menu .main-menu hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.main-menu li.sub-title {
-  padding-left: 25px !important;
-}
-
-.main-menu li a:after {
-  font-family: 'FontAwesome';
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-size: 1.2em;
-  line-height: 1;
-  text-transform: none;
-  content: '\f105';
-  position: absolute;
-  top: 7px;
-  right: 0px;
-  color: white;
-}
-
-.main-menu li a:after {
-  float: right;
-  margin: 0.1em 1.7em -0.1em 0;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.main-menu li a:hover:after {
-  float: right;
-  margin: 0.1em 0.8em -0.1em 0;
-  opacity: 1;
-}
-
-.oc-menu .main-menu li:before {
-  content: none;
-  display: none;
-}
-
-.oc-menu .main-menu li.sub-title {
-  padding: 10px 10px;
+.options-menu .main-menu li.sub-title {
+  padding: 7px 10px;
+  text-indent: 0;
   color: white;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-.oc-menu .main-menu li.icon {
-  margin-right: -20px;
-}
-
-.oc-menu .main-menu li.icon a {
-  text-indent: -1.8em;
-  padding-left: 2.5em;
-  padding-right: 50px;
-}
-
-.oc-menu .main-menu li.icon a:before {
-  font-family: 'FontAwesome';
+.options-menu .main-menu li a:after {
+  font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-variant: normal;
-  font-weight: normal;
+  font-weight: 900;
   font-size: 1.2em;
   line-height: 1;
   text-transform: none;
-  margin-right: 10px;
+  content: '\f054';
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  color: white;
 }
 
-.oc-menu .main-menu li.new a:before,
-.oc-menu .main-menu li.add a:before {
+.options-menu .main-menu li a:after {
+  float: right;
+  margin: 0.1rem 1.7rem -0.1rem 0;
+  opacity: 0;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
+}
+
+.options-menu .main-menu li a:hover:after {
+  float: right;
+  margin: 0.1rem -0.3rem -0.1rem 0;
+  opacity: 1;
+}
+
+.options-menu .main-menu li:before {
+  content: none;
+  display: none;
+}
+
+.options-menu .main-menu li.icon a {
+  text-indent: -1.8em;
+  padding-left: 2.5em;
+}
+
+.options-menu .main-menu li.icon a:before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1;
+  text-transform: none;
+  padding-right: 10px;
+}
+
+.options-menu .main-menu li.new a:before,
+.options-menu .main-menu li.add a:before {
   content: '\f067';
+  font-weight: 900;
+  padding-right: 12px;
 }
 
-.oc-menu .main-menu li.new-set a:before {
+.options-menu .main-menu li.new-set a:before {
   content: '\f0c5';
-  margin-right: 7px;
+  font-size: 1.1rem;
+  padding-right: 12px;
 }
 
-.oc-menu .main-menu li.edit a:before {
-  content: '\f040';
+.options-menu .main-menu li.edit a:before {
+  content: '\f303';
+  font-weight: 900;
+  padding-right: 12px;
 }
 
-.oc-menu .main-menu li.export a:before {
-  content: '\f0ee';
-  margin-right: 6px;
+.options-menu .main-menu li.export a:before {
+  content: '\f56e';
+  font-weight: 900;
 }
 
-.oc-menu .main-menu li.download a:before,
-.oc-menu .main-menu li.import a:before {
-  content: '\f0ed';
-  margin-right: 6px;
+.options-menu .main-menu li.download a:before,
+.options-menu .main-menu li.import a:before {
+  content: '\f381';
+  font-weight: 900;
+  padding-right: 8px;
 }
 
-.oc-menu .main-menu li.action-needed a:before,
-.oc-menu .main-menu li.warning a:before {
+.options-menu .main-menu li.action-needed a:before,
+.options-menu .main-menu li.warning a:before {
   content: '\f071';
-  margin-right: 6px;
+  font-weight: 900;
 }
 
-.oc-menu .main-menu li.view a:before {
+.options-menu .main-menu li.view a:before {
   content: '\f06e';
-  margin-right: 6px;
+  font-size: 1.1rem;
+  padding-right: 8px;
 }
 
-.oc-menu .main-menu li.back a:before {
+.options-menu .main-menu li.back a:before {
   content: '\f0a8';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-right: 10px;
 }
 
-.oc-menu .main-menu li.questionnaire a:before {
-  content: '\f0f6';
-  margin-right: 6px;
+.options-menu .main-menu li.questionnaire a:before {
+  content: '\f46c';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-right: 15px;
 }
 
-.oc-menu .main-menu li.pdf a:before {
+.options-menu .main-menu li.pdf a:before {
   content: '\f1c1';
+  font-size: 1.1rem;
+  padding-right: 16px;
 }
 
-.oc-menu .main-menu li.zip a:before {
+.options-menu .main-menu li.zip a:before {
   content: '\f1c6';
+  font-size: 1.1rem;
+  padding-right: 16px;
 }
 
-.oc-menu .main-menu li.email a:before {
-  content: '\f003';
+.options-menu .main-menu li.email a:before {
+  content: '\f0e0';
+  padding-right: 14px;
 }
 
-.oc-menu .main-menu li.cancel a:before {
+.options-menu .main-menu li.cancel a:before {
   content: '\f05e';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-right: 12px;
 }
 
-.oc-menu .main-menu li.info a:before {
+.options-menu .main-menu li.info a:before {
   content: '\f05a';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-right: 12px;
 }
 
-.oc-menu .main-menu li.video a:before {
-  content: '\f1c8';
+.options-menu .main-menu li.video a:before {
+  content: '\f03d';
+  font-weight: 900;
+  padding-right: 12px;
 }
 
-.oc-menu .main-menu li.apply a:before {
-  content: '\f05d';
+.options-menu .main-menu li.apply a:before {
+  content: '\f058';
+  padding-right: 12px;
+  font-size: 1.1rem;
 }
 
-.oc-menu .main-menu li.refresh a:before {
-  content: '\f021';
+.options-menu .main-menu li.refresh a:before {
+  content: '\f2f1';
+  font-weight: 900;
+  padding-right: 14px;
 }
 
-.oc-menu .main-menu li.user a:before {
+.options-menu .main-menu li.user a:before {
   content: '\f007';
+  font-size: 1.1rem;
+  padding-right: 13px;
 }
 
-.oc-menu .main-menu li.user-md a:before {
+.options-menu .main-menu li.user-md a:before {
   content: '\f0f0';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-right: 13px;
 }
 
-.oc-menu .main-menu li.all-users a:before {
+.options-menu .main-menu li.all-users a:before {
   content: '\f0c0';
+  font-weight: 900;
 }
 
-.oc-menu .main-menu li.new-user a:before {
+.options-menu .main-menu li.new-user a:before {
   content: '\f234';
+  font-weight: 900;
 }
 
-.oc-menu .main-menu li.destroy a:before,
-.oc-menu .main-menu li.delete a:before {
-  content: '\f1f8';
-  margin-right: 11px;
+.options-menu .main-menu li.destroy a:before,
+.options-menu .main-menu li.delete a:before {
+  content: '\f2ed';
+  font-size: 1.1rem;
+  padding-right: 14px;
 }
 
-.oc-menu .main-menu li.super-admin a:after {
-  font-family: "sa-icon";
-  content: "\e062";
+.options-menu .main-menu li.super-admin a:after {
+  font-family: "sard-icons";
+  content: "\e00a";
   color: #A39E9C;
   margin: 0;
   position: relative;
@@ -20732,6 +20769,7 @@ a.rag-key-expander {
   bottom: 80px;
   right: 0px;
   text-decoration: none;
+  -webkit-transition: right 0.3s ease-in-out 0s;
   transition: right 0.3s ease-in-out 0s;
   width: 30px;
   height: 110px;
@@ -20739,7 +20777,6 @@ a.rag-key-expander {
   border-radius: 6px 0px 0px 6px;
   border: 2px solid white;
   border-right: none;
-  -webkit-transition: right 0.3s ease-in-out 0s;
   transition: right 0.3s ease-in-out 0s;
 }
 
@@ -20811,10 +20848,8 @@ nav.rag-key-menu {
   width: 300px;
   z-index: 2000;
   border-left: 4px solid #00B2B2;
-  transition: right 0.3s ease-in-out 0s;
   -webkit-transition: right 0.3s ease-in-out 0s;
-  -moz-transition: right 0.3s ease-in-out 0s;
-  -o-transition: right 0.3s ease-in-out 0s;
+  transition: right 0.3s ease-in-out 0s;
 }
 
 nav.rag-key-menu hr {
@@ -20831,10 +20866,8 @@ nav.rag-key-menu hr {
 
 body.rag-key-expanded {
   margin-left: 0em;
-  transition: right 0.4s ease-in-out 0s;
   -webkit-transition: right 0.4s ease-in-out 0s;
-  -moz-transition: right 0.4s ease-in-out 0s;
-  -o-transition: right 0.4s ease-in-out 0s;
+  transition: right 0.4s ease-in-out 0s;
 }
 
 #rag-key-close {

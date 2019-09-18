@@ -31,10 +31,6 @@ a.rag-key-expander {
   border: 2px solid white;
   border-right: none;
 
-  -ms-transition: right 0.3s ease-in-out 0s;
-  -webkit-transition: right 0.3s ease-in-out 0s;
-  -moz-transition: right 0.3s ease-in-out 0s;
-  -o-transition: right 0.3s ease-in-out 0s;
   transition: right 0.3s ease-in-out 0s;
 }
 
@@ -58,17 +54,9 @@ a.rag-key-expander:after{
   top: 3px;
   right: 3px;
 
-  -ms-transition: 0.3s ease-in;
-  -webkit-transition: 0.3s ease-in;
-  -moz-transition: 0.3s ease-in;
-  -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
 .rag-key-expanded a.rag-key-expander:after{
-  -ms-transform: rotate(1890deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -117,9 +105,6 @@ nav.rag-key-menu {
   border-left: 4px solid $user-primary-colour;
 
   transition: right 0.3s ease-in-out 0s;
-  -webkit-transition: right 0.3s ease-in-out 0s;
-  -moz-transition: right 0.3s ease-in-out 0s;
-  -o-transition: right 0.3s ease-in-out 0s;
 }
 
 nav.rag-key-menu hr{
@@ -137,9 +122,6 @@ nav.rag-key-menu hr{
 body.rag-key-expanded {
   margin-left: 0em;
   transition: right 0.4s ease-in-out 0s;
-  -webkit-transition: right 0.4s ease-in-out 0s;
-  -moz-transition: right 0.4s ease-in-out 0s;
-  -o-transition: right 0.4s ease-in-out 0s;
 }
 
 #rag-key-close {
