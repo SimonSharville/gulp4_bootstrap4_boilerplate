@@ -4,15 +4,21 @@
 //#160757827 scroll bar covers options menu on IE
 
 $rag-tab:             $sa-grey-04;
+$rag-tab-open:        $sa-grey-16;
 // $user-primary-colour:        $client;
 // $user-primary-colour-admin:  $admin;
 
 body { -ms-overflow-style: scrollbar; }
 
-// navigation button ============================
+
+@mixin off-canvas-rag-transmission {
+  transition: all 320ms ease!important;
+}
+
+// navigation button ----------------------------
 
 a.rag-key-expander {
-  background: none repeat scroll 0 0 $rag-tab;
+  background-color: $rag-tab;
   color: $text;
   display: block;
 
@@ -22,7 +28,6 @@ a.rag-key-expander {
   right: 0px;
   text-decoration: none;
 
-  transition: right 0.3s ease-in-out 0s;
   width: 30px;
   height: 110px;
   z-index: 12;
@@ -31,7 +36,7 @@ a.rag-key-expander {
   border: 2px solid white;
   border-right: none;
 
-  transition: right 0.3s ease-in-out 0s;
+  @include off-canvas-rag-transmission;
 }
 
 a.rag-key-expander .title{
@@ -46,23 +51,15 @@ a.rag-key-expander .title img{
 }
 
 a.rag-key-expander:after{
-  content: "\e00a";
-  font-family: "sa-icon";
+  content: "\71";
+  font-family: "sard-icons";
   color:$text;
-  font-size: 1.5em;
+  font-size: 1.25em;
   position: absolute;
   top: 3px;
   right: 3px;
 
-  transition: 0.3s ease-in;
-}
-.rag-key-expanded a.rag-key-expander:after{
-  transform: rotate(180deg);
-}
-
-a.rag-key-expander:hover {
-  cursor: pointer;
-  background: none repeat scroll 0 0 $user-primary-colour;
+  @include off-canvas-rag-transmission;
 }
 
 
@@ -72,7 +69,20 @@ a.rag-key-expander.fixed {
 
 .rag-key-expanded a.rag-key-expander.fixed {
     right: 300px;
-    background: none repeat scroll 0 0 $user-primary-colour;
+    background-color: $rag-tab-open;
+}
+
+.rag-key-expanded a.rag-key-expander:after{
+  transform: rotate(180deg);
+  color: white;
+}
+
+a.rag-key-expander:hover {
+  cursor: pointer;
+  background-color: $rag-tab-open;
+}
+a.rag-key-expander:hover:after{
+  color: white;
 }
 
 @media (max-width: 767px) { // Small Screens
@@ -90,7 +100,7 @@ a.rag-key-expander.fixed {
     }
 }
 
-// canvas menu & menu container =================
+// canvas menu & menu container -----------------
 
 nav.rag-key-menu {
   background: $sa-grey-02;
@@ -101,10 +111,10 @@ nav.rag-key-menu {
   right: -300px;
   top: 0;
   width: 300px;
-  z-index: 2000;
-  border-left: 4px solid $user-primary-colour;
+  z-index: 6000;
+  border-left: 4px solid $rag-tab-open;
 
-  transition: right 0.3s ease-in-out 0s;
+  @include off-canvas-rag-transmission;
 }
 
 nav.rag-key-menu hr{
@@ -121,25 +131,36 @@ nav.rag-key-menu hr{
 
 body.rag-key-expanded {
   margin-left: 0em;
-  transition: right 0.4s ease-in-out 0s;
+  @include off-canvas-rag-transmission;
 }
 
 #rag-key-close {
   min-height:70px;
   height:70px;
 }
+#rag-key-close:hover{
+  background-color: darken($sa-grey-02, 3%);
+  cursor: pointer;
+}
+#rag-key-close:hover:before{
+  content: 'Close';
+  color:$text;
+  position: relative;
+  top: 40%;
+  left: 45%;
+}
 
 #rag-key-close:after {
-  content: "\e00e";
-  font-family: "sa-icon";
+  content: "\6d";
+  font-family: "sard-icons";
   color:$text;
   font-size: 1.5em;
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 10px;
 }
 
-//  menu and animations =========================
+//  menu and icons ------------------------------
 
 .rag-key-menu h3{
   font-size: 20px;
@@ -156,54 +177,42 @@ body.rag-key-expanded {
   background-color: transparent;
 }
 .rag-key.icon-danger{
-  background-image: url("rag-icons/rag-icon-danger-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-danger-sm@2x.png");
 }
 .rag-key.icon-warning{
-  background-image: url("rag-icons/rag-icon-warning-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-warning-sm@2x.png");
 }
 .rag-key.icon-danger-plus{
-  background-image: url("rag-icons/rag-icon-danger-plus-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-danger-plus-sm@2x.png");
 }
 .rag-key.icon-warning-plus{
-  background-image: url("rag-icons/rag-icon-warning-plus-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-warning-plus-sm@2x.png");
 }
 .rag-key.icon-approved{
-  background-image: url("rag-icons/rag-icon-approved-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
 }
 .rag-key.icon-unavailable{
-  background-image: url("rag-icons/rag-icon-unavailable-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-unavailable-sm@2x.png");
 }
 .rag-key.icon-success{
-  background-image: url("rag-icons/rag-icon-success-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-success-sm@2x.png");
 }
 .rag-key.icon-draft{
-  background-image: url("rag-icons/rag-icon-draft-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-draft-sm@2x.png");
 }
 .rag-key.icon-submitted{
-  background-image: url("rag-icons/rag-icon-submitted-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-submitted-sm@2x.png");
 }
 .rag-key.icon-recommended{
-  background-image: url("rag-icons/rag-icon-recommended-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-recommended-sm@2x.png");
 }
 .rag-key.icon-abandoned{
-  background-image: url("rag-icons/rag-icon-abandoned-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-abandoned-sm@2x.png");
 }
 .rag-key.icon-due{
-  background-image: url("rag-icons/rag-icon-due-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-due-sm@2x.png");
 }
 .rag-key p{
   padding-top: 6px;
 }
 
-
-// User / Admin colour variations ======================
-
-// .theme-admin a.rag-key-expander:hover {
-//   background: none repeat scroll 0 0 $user-primary-colour-admin;
-// }
-// .theme-admin.rag-key-expanded a.rag-key-expander.fixed {
-//   background: none repeat scroll 0 0 $user-primary-colour-admin;
-// }
-// .theme-admin nav.rag-key-menu {
-//   border-left: 4px solid $user-primary-colour-admin;
-// }

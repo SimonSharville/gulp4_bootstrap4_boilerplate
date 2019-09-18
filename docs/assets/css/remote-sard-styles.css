@@ -20493,8 +20493,6 @@ body.options-nav-expanded {
 
 #options-nav-close:hover {
   background-color: #383636;
-  content: 'Close';
-  color: white;
   cursor: pointer;
 }
 
@@ -20762,7 +20760,7 @@ body {
 }
 
 a.rag-key-expander {
-  background: none repeat scroll 0 0 #D9D6D6;
+  background-color: #D9D6D6;
   color: #211F0F;
   display: block;
   margin-right: 0;
@@ -20770,15 +20768,14 @@ a.rag-key-expander {
   bottom: 80px;
   right: 0px;
   text-decoration: none;
-  -webkit-transition: right 0.3s ease-in-out 0s;
-  transition: right 0.3s ease-in-out 0s;
   width: 30px;
   height: 110px;
   z-index: 12;
   border-radius: 6px 0px 0px 6px;
   border: 2px solid white;
   border-right: none;
-  transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
 a.rag-key-expander .title {
@@ -20795,25 +20792,15 @@ a.rag-key-expander .title img {
 }
 
 a.rag-key-expander:after {
-  content: "\e00a";
-  font-family: "sa-icon";
+  content: "\71";
+  font-family: "sard-icons";
   color: #211F0F;
-  font-size: 1.5em;
+  font-size: 1.25em;
   position: absolute;
   top: 3px;
   right: 3px;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-
-.rag-key-expanded a.rag-key-expander:after {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-a.rag-key-expander:hover {
-  cursor: pointer;
-  background: none repeat scroll 0 0 #00B2B2;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
 a.rag-key-expander.fixed {
@@ -20822,7 +20809,22 @@ a.rag-key-expander.fixed {
 
 .rag-key-expanded a.rag-key-expander.fixed {
   right: 300px;
-  background: none repeat scroll 0 0 #00B2B2;
+  background-color: #403D3D;
+}
+
+.rag-key-expanded a.rag-key-expander:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: white;
+}
+
+a.rag-key-expander:hover {
+  cursor: pointer;
+  background-color: #403D3D;
+}
+
+a.rag-key-expander:hover:after {
+  color: white;
 }
 
 @media (max-width: 767px) {
@@ -20847,10 +20849,10 @@ nav.rag-key-menu {
   right: -300px;
   top: 0;
   width: 300px;
-  z-index: 2000;
-  border-left: 4px solid #00B2B2;
-  -webkit-transition: right 0.3s ease-in-out 0s;
-  transition: right 0.3s ease-in-out 0s;
+  z-index: 6000;
+  border-left: 4px solid #403D3D;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
 nav.rag-key-menu hr {
@@ -20867,8 +20869,8 @@ nav.rag-key-menu hr {
 
 body.rag-key-expanded {
   margin-left: 0em;
-  -webkit-transition: right 0.4s ease-in-out 0s;
-  transition: right 0.4s ease-in-out 0s;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
 }
 
 #rag-key-close {
@@ -20876,13 +20878,26 @@ body.rag-key-expanded {
   height: 70px;
 }
 
+#rag-key-close:hover {
+  background-color: #e6e3e3;
+  cursor: pointer;
+}
+
+#rag-key-close:hover:before {
+  content: 'Close';
+  color: #211F0F;
+  position: relative;
+  top: 40%;
+  left: 45%;
+}
+
 #rag-key-close:after {
-  content: "\e00e";
-  font-family: "sa-icon";
+  content: "\6d";
+  font-family: "sard-icons";
   color: #211F0F;
   font-size: 1.5em;
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 10px;
 }
 
@@ -20903,51 +20918,51 @@ body.rag-key-expanded {
 }
 
 .rag-key.icon-danger {
-  background-image: url("rag-icons/rag-icon-danger-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-danger-sm@2x.png");
 }
 
 .rag-key.icon-warning {
-  background-image: url("rag-icons/rag-icon-warning-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-warning-sm@2x.png");
 }
 
 .rag-key.icon-danger-plus {
-  background-image: url("rag-icons/rag-icon-danger-plus-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-danger-plus-sm@2x.png");
 }
 
 .rag-key.icon-warning-plus {
-  background-image: url("rag-icons/rag-icon-warning-plus-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-warning-plus-sm@2x.png");
 }
 
 .rag-key.icon-approved {
-  background-image: url("rag-icons/rag-icon-approved-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
 }
 
 .rag-key.icon-unavailable {
-  background-image: url("rag-icons/rag-icon-unavailable-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-unavailable-sm@2x.png");
 }
 
 .rag-key.icon-success {
-  background-image: url("rag-icons/rag-icon-success-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-success-sm@2x.png");
 }
 
 .rag-key.icon-draft {
-  background-image: url("rag-icons/rag-icon-draft-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-draft-sm@2x.png");
 }
 
 .rag-key.icon-submitted {
-  background-image: url("rag-icons/rag-icon-submitted-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-submitted-sm@2x.png");
 }
 
 .rag-key.icon-recommended {
-  background-image: url("rag-icons/rag-icon-recommended-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-recommended-sm@2x.png");
 }
 
 .rag-key.icon-abandoned {
-  background-image: url("rag-icons/rag-icon-abandoned-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-abandoned-sm@2x.png");
 }
 
 .rag-key.icon-due {
-  background-image: url("rag-icons/rag-icon-due-sm@2x.png");
+  background-image: url("../rag-icons/rag-icon-due-sm@2x.png");
 }
 
 .rag-key p {

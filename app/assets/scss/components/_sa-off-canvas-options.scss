@@ -117,8 +117,6 @@ body.options-nav-expanded {
 }
 #options-nav-close:hover{
   background-color: darken($sa-grey-16, 3%);
-  content: 'Close';
-  color: white;
   cursor: pointer;
 }
 #options-nav-close:hover:before{
