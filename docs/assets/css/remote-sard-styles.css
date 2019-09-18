@@ -20716,6 +20716,7 @@ body.options-nav-expanded {
 
 .options-menu .main-menu li.user a:before {
   content: '\f007';
+  font-weight: 900;
   font-size: 1.1rem;
   padding-right: 13px;
 }
