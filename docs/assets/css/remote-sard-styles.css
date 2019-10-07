@@ -19173,6 +19173,10 @@ p > a.modal-info-circle-inline::before {
   background-color: #007f7f;
 }
 
+#megamenu a.mega-sub-item {
+  padding-left: 15px;
+}
+
 #megamenu hr {
   margin: 5px 8px 5px 5px;
 }
