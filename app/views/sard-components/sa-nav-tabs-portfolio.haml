@@ -21,187 +21,694 @@
 
 
       // sard-nav-tabs Must be part of a row
-      .row.sard-nav-tabs
-        / main-nav must be part of col
-        .col.col-sm-3.col-xl-2
-          .snt-main-nav
-            .row.pb
-              .nav-info
-                .col-xs-6.col-sm-12.activity-summary
-                  %h5 Activity Summary
-                  #left-activity-summary{:style => "position: relative; zoom: 1;"}
-                    %table.table.table-sard
-                      %thead
-                        %tr.TITLE
-                          %th  
-                          %th Hours
-                          %th PAs
-                      %tbody
-                        %tr.DCC
-                          %td
-                            %strong
-                              DCC
-                          %td 24.82
-                          %td 6.401
-                        %tr.SPA
-                          %td
-                            %strong
-                              SPA
-                          %td 4
-                          %td 1
-                        %tr.TOTAL
-                          %td
-                            %strong
-                              TOTAL
-                          %td 28.82
-                          %td 7.401
-                  #left-activity-summary-toggles
-                    .sa-checkbox
-                      %input#core_toggle{:type => "checkbox"}/
-                      %label.no-pdf{:for => "core_toggle"}
-                        %span.checkbox Core
-                      %input#apa_toggle{:type => "checkbox"}/
-                      %label.no-pdf{:for => "apa_toggle"}
-                        %span.checkbox APA
-                      %input#atc_toggle{:type => "checkbox"}/
-                      %label#atc_toggle_label.no-pdf{:for => "atc_toggle"}
-                        %span.checkbox ATC
-                    %p#atc_warning.atc_warning{:style => "display: none;"} Includes uncontracted work
-                  #left-activity-summary-on-call.no-pdf
-                    #on-call
-                      %strong On-Call
-                      %br/
-                      Low frequency: 1 in 9 or less frequent
-                      %br/
-                      Agreed category: A
-                      %br/
-                      On call supplement: 3.0%
-                .col-xs-6.col-sm-12.nav-info-buttons.no-pdf
-                  %p
-                    %a.btn.btn-xs.btn-default{:href => "/online_job_plans/5d1cae7c4a67d131446cf5a0/summary_pdf.pdf", :target => "_blank"} Summary PDF
-                  %p
-                    %a.btn.btn-xs.btn-default{:href => "/online_job_plans/5d1cae7c4a67d131446cf5a0/full_pdf.pdf", :target => "_blank"} Full PDF
-                  %p
-                    %a#create_template_button.btn.btn-xs.btn-default Share as Template
+      .row
+        .col-sm-12
+          .sard-nav-tabs
+            / main-nav must be part of col
+            .snt-main-nav
+              #quick-nav.no-pdf
+                .qn-click.expanded{:style => "display: none;"}
+                  All Datasets
+                .qn-list
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 1
+                      %span.order-title Good Medical Care (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01ce3e1f12443000020.active
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ce3e1f12443000020"} Discharge Notifications (T)
+                        .app-dataset-5034e01ce3e1f12443000020
+                      .appraisal-dataset.appraisal-dataset-5034e01ce3e1f12443000023
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d000012/appraisal_datasets/5034e01ce3e1f12443000023"} GP Letters (T)
+                        .app-dataset-5034e01ce3e1f12443000023
+                      .appraisal-dataset.appraisal-dataset-5034e01ce3e1f1244300001e
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ce3e1f1244300001e"} Length of Stay (T)
+                        .app-dataset-5034e01ce3e1f1244300001e
+                      .appraisal-dataset.appraisal-dataset-5034e01ce3e1f12443000024
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000e/appraisal_datasets/5034e01ce3e1f12443000024"} Mandatory Data for SHRAD/SHAPPT (T)
+                        .app-dataset-5034e01ce3e1f12443000024
+                      .appraisal-dataset.appraisal-dataset-5034e01ce3e1f12443000021
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ce3e1f12443000021"} Multi-axial coding (T)
+                        .app-dataset-5034e01ce3e1f12443000021
+                      .appraisal-dataset.appraisal-dataset-58dcf747f2a39f4fc60000f8
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/58dcf747f2a39f4fc60000f8"} Pilots License
+                        .app-dataset-58dcf747f2a39f4fc60000f8
+                      .appraisal-dataset.appraisal-dataset-5034e01ce3e1f1244300001f
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ce3e1f1244300001f"} Re-admission Rate (T)
+                        .app-dataset-5034e01ce3e1f1244300001f
+                      .appraisal-dataset.appraisal-dataset-5034e01ce3e1f12443000022
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d000015/appraisal_datasets/5034e01ce3e1f12443000022"} Section 58 Compliance (T)
+                        .app-dataset-5034e01ce3e1f12443000022
+                      .appraisal-dataset.appraisal-dataset-53a8418e8025427009000ca6
+                        .rag_item
+                          .rag-box.rag-amber
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d000017/appraisal_datasets/53a8418e8025427009000ca6"} Test Dataset
+                        .app-dataset-53a8418e8025427009000ca6
+                      .appraisal-dataset.appraisal-dataset-5d41b632bdd60178f435f29d
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5d41b632bdd60178f435f29d"} hello
+                        .app-dataset-5d41b632bdd60178f435f29d
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 2
+                      %span.order-title Clinical Activity Data (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000027
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000f/appraisal_datasets/5034e01de3e1f12443000027"} Cancelled appointments (T)
+                        .app-dataset-5034e01de3e1f12443000027
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000029
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000029"} Care reviews (T)
+                        .app-dataset-5034e01de3e1f12443000029
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000026
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000026"} DNA rate (T)
+                        .app-dataset-5034e01de3e1f12443000026
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300002a
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f1244300002a"} SHRAD - Data (T)
+                        .app-dataset-5034e01de3e1f1244300002a
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000028
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000028"} Ward rounds (T)
+                        .app-dataset-5034e01de3e1f12443000028
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 3
+                      %span.order-title Non-Clinical Activities (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300002c
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f1244300002c"} Non-Clinical Activities (T)
+                        .app-dataset-5034e01de3e1f1244300002c
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 4
+                      %span.order-title Maintaining Good Practice (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300002e
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000f/appraisal_datasets/5034e01de3e1f1244300002e"} CPA breaches (T)
+                        .app-dataset-5034e01de3e1f1244300002e
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000031
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000031"} Clinical Guidelines/formulary (T)
+                        .app-dataset-5034e01de3e1f12443000031
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000030
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000030"} Peer supervision (T)
+                        .app-dataset-5034e01de3e1f12443000030
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300002f
+                        .rag_item
+                          .rag-box.rag-amber
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f1244300002f"} Physical Health (T)
+                        .app-dataset-5034e01de3e1f1244300002f
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 5
+                      %span.order-title Continuing Professional Development (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000033
+                        .rag_item
+                          .rag-box.rag-amber
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000033"} Continuing Professional Development (CPD) (T)
+                        .app-dataset-5034e01de3e1f12443000033
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000036
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000036"} Mandatory & Essential Skills Training (T)
+                        .app-dataset-5034e01de3e1f12443000036
+                      .appraisal-dataset.appraisal-dataset-5800bf03f2a39f2092000019
+                        .rag_item
+                          .rag-box.rag-red
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5800bf03f2a39f2092000019"} Mental Capacity Act
+                        .app-dataset-5800bf03f2a39f2092000019
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000035
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000035"} RC Psych CPD certificate (T)
+                        .app-dataset-5034e01de3e1f12443000035
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 6
+                      %span.order-title Teaching (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300003d
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f1244300003d"} 360 degree trainee feedback (T)
+                        .app-dataset-5034e01de3e1f1244300003d
+                      .appraisal-dataset.appraisal-dataset-51e3b039e3e1f13fc800000a
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/51e3b039e3e1f13fc800000a"} Educators Appraisal
+                        .app-dataset-51e3b039e3e1f13fc800000a
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300003b
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f1244300003b"} Feedback from teaching (T)
+                        .app-dataset-5034e01de3e1f1244300003b
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300003a
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f1244300003a"} Teaching (T)
+                        .app-dataset-5034e01de3e1f1244300003a
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 7
+                      %span.order-title Relationships with Patients (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f1244300003f
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f1244300003f"} 360 degree patient feedback (T)
+                        .app-dataset-5034e01de3e1f1244300003f
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000042
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d000015/appraisal_datasets/5034e01de3e1f12443000042"} Complaints & Incidents (T)
+                        .app-dataset-5034e01de3e1f12443000042
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000043
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d000015/appraisal_datasets/5034e01de3e1f12443000043"} Incidents & Outcomes (T)
+                        .app-dataset-5034e01de3e1f12443000043
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000041
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d000015/appraisal_datasets/5034e01de3e1f12443000041"} Patient Reported Experience Measures (PREM) (T)
+                        .app-dataset-5034e01de3e1f12443000041
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000040
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000040"} Patient Reported Outcome Measures (PROM) (T)
+                        .app-dataset-5034e01de3e1f12443000040
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 8
+                      %span.order-title Working with Colleagues (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000045
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000045"} 360 degree colleague feedback (T)
+                        .app-dataset-5034e01de3e1f12443000045
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000046
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000046"} MDT working practices (T)
+                        .app-dataset-5034e01de3e1f12443000046
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 9
+                      %span.order-title Trust Criteria (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000048
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000048"} Approved Clinician status maintained (T)
+                        .app-dataset-5034e01de3e1f12443000048
+                      .appraisal-dataset.appraisal-dataset-515b1a94e3e1f1367d00000b
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/515b1a94e3e1f1367d00000b"} Capability/Performance Issues
+                        .app-dataset-515b1a94e3e1f1367d00000b
+                      .appraisal-dataset.appraisal-dataset-515b1ab4e3e1f1367d00000e
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/515b1ab4e3e1f1367d00000e"} Criminal Records Bureau
+                        .app-dataset-515b1ab4e3e1f1367d00000e
+                      .appraisal-dataset.appraisal-dataset-515b1acee3e1f1367d000010
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/515b1acee3e1f1367d000010"} Disciplinary
+                        .app-dataset-515b1acee3e1f1367d000010
+                      .appraisal-dataset.appraisal-dataset-515b1aeae3e1f1367d000014
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/515b1aeae3e1f1367d000014"} Grievance
+                        .app-dataset-515b1aeae3e1f1367d000014
+                      .appraisal-dataset.appraisal-dataset-515b1b0ae3e1f1367d000017
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/515b1b0ae3e1f1367d000017"} Health Concerns
+                        .app-dataset-515b1b0ae3e1f1367d000017
+                      .appraisal-dataset.appraisal-dataset-5034e01de3e1f12443000049
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01de3e1f12443000049"} S12 Approval maintained (T)
+                        .app-dataset-5034e01de3e1f12443000049
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 10
+                      %span.order-title Research (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01ee3e1f1244300004b
+                        .rag_item
+                          .rag-box.rag-na
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f1244300004b"} Research (T)
+                        .app-dataset-5034e01ee3e1f1244300004b
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 11
+                      %span.order-title Audit - National & Local (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01ee3e1f1244300004e
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f1244300004e"} Internal - Team or own practice audits (T)
+                        .app-dataset-5034e01ee3e1f1244300004e
+                      .appraisal-dataset.appraisal-dataset-5034e01ee3e1f1244300004d
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f1244300004d"} National, Local & Trust Audits (T)
+                        .app-dataset-5034e01ee3e1f1244300004d
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 12
+                      %span.order-title Outcome Measures (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01ee3e1f12443000050
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f12443000050"} CORC data (T)
+                        .app-dataset-5034e01ee3e1f12443000050
+                      .appraisal-dataset.appraisal-dataset-5034e01ee3e1f12443000051
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000e/appraisal_datasets/5034e01ee3e1f12443000051"} HoNOSCA / other relevant outcome measure (T)
+                        .app-dataset-5034e01ee3e1f12443000051
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 13
+                      %span.order-title Other Relevant Data (T)
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5034e01fe3e1f12443000056
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d000011/appraisal_datasets/5034e01fe3e1f12443000056"} Human Resources data (T)
+                        .app-dataset-5034e01fe3e1f12443000056
+                      .appraisal-dataset.appraisal-dataset-5034e01ee3e1f12443000055
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f12443000055"} Job Plan (T)
+                        .app-dataset-5034e01ee3e1f12443000055
+                      .appraisal-dataset.appraisal-dataset-5034e01ee3e1f12443000054
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01ee3e1f12443000054"} Last appraisal (T)
+                        .app-dataset-5034e01ee3e1f12443000054
+                      .appraisal-dataset.appraisal-dataset-5034e01fe3e1f12443000058
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5034e01fe3e1f12443000058"} Private Practice data (T)
+                        .app-dataset-5034e01fe3e1f12443000058
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 14
+                      %span.order-title Medical Educators Framework Areas
+                      .clear
+                      .order-title-link
+                        %a.btn.btn-xxs.btn-client{:href => "/appraisals/564ddd0bf2a39f172c00007b/appraisal_dataset_categories/52931fc0e3e1f140140001a4/pdf.pdf", :target => "_blank"} PDF
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5293200ae3e1f140140001a6
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5293200ae3e1f140140001a6"} Ensure safe and effective patient care through training
+                        .app-dataset-5293200ae3e1f140140001a6
+                      .appraisal-dataset.appraisal-dataset-5293203be3e1f140140001a8
+                        .rag_item
+                          .rag-box.rag-red
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5293203be3e1f140140001a8"} Establishing and maintaining an environment for learning
+                        .app-dataset-5293203be3e1f140140001a8
+                      .appraisal-dataset.appraisal-dataset-52932060e3e1f140140001aa
+                        .rag_item
+                          .rag-box.rag-red
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/52932060e3e1f140140001aa"} Teaching and facilitating learning
+                        .app-dataset-52932060e3e1f140140001aa
+                      .appraisal-dataset.appraisal-dataset-5293208be3e1f140140001ac
+                        .rag_item
+                          .rag-box.rag-red
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5293208be3e1f140140001ac"} Enhancing learning through assessment
+                        .app-dataset-5293208be3e1f140140001ac
+                      .appraisal-dataset.appraisal-dataset-529320c4e3e1f140140001b0
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/529320c4e3e1f140140001b0"} Supporting and monitoring educational progress
+                        .app-dataset-529320c4e3e1f140140001b0
+                      .appraisal-dataset.appraisal-dataset-52932133e3e1f124a5000363
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/52932133e3e1f124a5000363"} Guiding personal and professional development
+                        .app-dataset-52932133e3e1f124a5000363
+                      .appraisal-dataset.appraisal-dataset-52932165e3e1f124a5000368
+                        .rag_item
+                          .rag-box.rag-red
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/52932165e3e1f124a5000368"} Continuing professional development as an educator
+                        .app-dataset-52932165e3e1f124a5000368
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 15
+                      %span.order-title Test Category
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-5080faa3e3e1f17106000010
+                        .rag_item
+                          .rag-box.rag-green
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000c/appraisal_datasets/5080faa3e3e1f17106000010"} TestCateg_D1
+                        .app-dataset-5080faa3e3e1f17106000010
+                      .appraisal-dataset.appraisal-dataset-592fe7f1802542f3d8000010
+                        .rag_item
+                          .rag-box.rag-red
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000f/appraisal_datasets/592fe7f1802542f3d8000010"} Training and Educational Roles
+                        .app-dataset-592fe7f1802542f3d8000010
+                  .qn-category
+                    .appraisal-dataset-category
+                      %span.order-number 16
+                      %span.order-title DBS
+                      .clear
+                    .appraisal-datasets
+                      .appraisal-dataset.appraisal-dataset-57e13e7c8025427a150001f9
+                        .rag_item
+                          .rag-box.rag-red
+                        %a{:href => "#domain_attributes/5034dfb2e3e1f1226d00000f/appraisal_datasets/57e13e7c8025427a150001f9"} DBS
+                        .app-dataset-57e13e7c8025427a150001f9
+              #sidebar
             
-            #nav-col.no-pdf
-              .nav-row.active{:id => "#nav-instructions"}
-                %a{:href => "#section/instructions"}
-                  .number
-                    0
-                  .title
-                    Instructions
-              .nav-row{:id => "#nav-general_info"}
-                %a{:href => "#section/general_info"}
-                  .number
-                    1
-                  .title
-                    General Info
-              .nav-row{:id => "#nav-signatories"}
-                %a{:href => "#section/signatories"}
-                  .number
-                    2
-                  .title
-                    Signatories
-              .nav-row{:id => "#nav-timetable"}
-                %a{:href => "#section/timetable"}
-                  .number
-                    3
-                  .title
-                    Timetable
-              .nav-row{:id => "#nav-on_call_supplement"}
-                %a{:href => "#section/on_call_supplement"}
-                  .number
-                    4
-                  .title
-                    On-Call Supplement
-              .nav-row{:id => "#nav-spa_notes"}
-                %a{:href => "#section/spa_notes"}
-                  .number
-                    5
-                  .title
-                    SPA Notes
-              .nav-row{:id => "#nav-additional_external"}
-                %a{:href => "#section/additional_external"}
-                  .number
-                    6
-                  .title
-                    Additional / External
-              .nav-row{:id => "#nav-other_agreements"}
-                %a{:href => "#section/other_agreements"}
-                  .number
-                    7
-                  .title
-                    Other Agreements
-              .nav-row{:id => "#nav-additional_pas"}
-                %a{:href => "#section/additional_pas"}
-                  .number
-                    8
-                  .title
-                    APAs / ATCs
-              .nav-row{:id => "#nav-fee_paying_services"}
-                %a{:href => "#section/fee_paying_services"}
-                  .number
-                    9
-                  .title
-                    Fee Paying Services
-              .nav-row{:id => "#nav-private_practice"}
-                %a{:href => "#section/private_practice"}
-                  .number
-                    10
-                  .title
-                    Private Practice
-              .nav-row{:id => "#nav-objectives"}
-                %a{:href => "#section/objectives"}
-                  .number
-                    11
-                  .title
-                    Objectives
-              .nav-row{:id => "#nav-supporting_resources"}
-                %a{:href => "#section/supporting_resources"}
-                  .number
-                    12
-                  .title
-                    Supporting Resources
-              .nav-row{:id => "#nav-general_discussion"}
-                %a{:href => "#section/general_discussion"}
-                  .number
-                    13
-                  .title
-                    General Discussion
-              .nav-row{:id => "#nav-meetings"}
-                %a{:href => "#section/meetings"}
-                  .number
-                    14
-                  .title
-                    Meetings
-              .nav-row{:id => "#nav-sign_off"}
-                %a{:href => "#section/sign_off"}
-                  .number
-                    15
-                  .title
-                    Sign Off
-            .submit-button.no-pdf
-              #job-plan-status
-                %p
-                  %a.btn.btn-block.btn-sm.btn-success.send_for_sign_off{:href => "#"}
-                    Submit for Sign Off
+            / main-section
+            .snt-main-section
+              #domain-tab-body
+                #artifacts.main
+                  %div
+                    .appraisal-dataset-guidance
+                      .header.rag-green
+                        %h3 Discharge Notifications (T)
+                      .guidance-note
+                        %p Evidence that discharge notifications are completed & sent in a timely manner to GPs.  Testing edit KH
+                      %a.fa.fa-lg.fa-info-circle.popover-icon.no-pdf.pull-right{"aria-hidden" => "true", "data-original-title" => "", "data-placement" => "auto bottom", "data-popover-content" => "#dataset-popover", "data-popover-title" => "#dataset-popover-title", "data-target" => "#", :rel => "popover", :tabindex => "0", :title => ""}
+                      #dataset-popover-title.hide
+                        Dataset advice
+                      #dataset-popover.hide
+                        %p
+                          Evidence should be added for each section in your portfolio, then the section marked as ‘Complete’. You cannot submit your appraisal unless every section in your portfolio is marked as ‘In Progress’, ‘Complete’ or ‘Not Applicable’.
+                          %br/
+                          Click on the buttons below to change the status.
+                    .justification
+                      .rag-boxes{:style => "position: relative;"}
+                        .box.rag-red{:title => "Click to mark as Not Started"} Not Started
+                        .box.rag-amber{:title => "Click to mark as In Progress"} In Progress
+                        .box.rag-green.selected{:title => "Click to mark as Complete"} Complete
+                        .box.rag-na{:title => "Click to mark as Not Applicable"} Not Applicable
+                    .evidences
+                      %h2 Evidence
+                      .new-evidence
+                        %p Please enter a description of the evidence you have for this section. You can either upload a document or just make a note of any paper-based evidence that you may have and click ‘Save Evidence’. Setting an expiry date will ensure that any out of date evidence will no longer be included in following appraisals. N.B. Setting an expiry date will not remove the document after this date.
+                        %form#new_evidence.form-horizontal{:method => "post"}
+                          .row
+                            %label.col-xs-4.col-sm-3.col-md-2.control-label Description:
+                            .col-xs-8.col-sm-9.col-md-10
+                              %textarea#content.form-control{:placeholder => "Type your evidence here...", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;"}
+                            .expiry
+                              %label.col-xs-4.col-sm-3.col-md-2.control-label Expiry Date:
+                              .col-xs-8.col-sm-9.col-md-10
+                                %input#expiry.form-control.hasDatepicker{:autocomplete => "off", :type => "text", :value => ""}/
+                            .col-xs-12
+                              .attachments
+                                .new-attachment-fragment
+                                  .field.right
+                                    %button#attach.btn.btn-sm.btn-default{:type => "button"} Attach eDocument
+                            .col-xs-12
+                              .shelf
+                              .add.right
+                                %input#save-new-evidence.btn.btn-sm.btn-success{:name => "commit", :nobind => "true", :type => "submit", :value => "Save Evidence"}/
+                        .clear
+                      .evidence
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              .title
+                              %p This is some text - dated 21/08
+                            .meta.expiry
+                              %strong
+                                Expires: not given
+                                %br/
+                          .details-row
+                            .detail.edocs
+                              .attachments
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-evidence-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-evidence{:href => "#"}
+                      .evidence
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              .title
+                              %p Evidence from previous appraisal
+                            .meta.expiry
+                              %strong
+                                Expires: not given
+                                %br/
+                          .details-row
+                            .detail.edocs
+                              .attachments
+                                .attachment-fragment
+                                  .file
+                                    %a{:class => "Research_Paper.pdf", :href => "/edocs/50914373e3e1f1565000009d/download", :target => "_blank"}
+                                      .name Last Appraisal
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-evidence-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-evidence{:href => "#"}
+                      .evidence
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              .title
+                              %p Job plan and PDP
+                            .meta.expiry
+                              %strong
+                                Expires: not given
+                                %br/
+                          .details-row
+                            .detail.edocs
+                              .attachments
+                                .attachment-fragment
+                                  .file
+                                    %a{:class => "Job_plan.doc", :href => "/edocs/5272838be3e1f14649001128/download", :target => "_blank"}
+                                      .name Job plan
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-evidence-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-evidence{:href => "#"}
+                      .evidence
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              .title
+                              %p All of my appraisal documents for the last 5 years.
+                            .meta.expiry
+                              %strong
+                                Expires: 19/09/2019
+                                %br/
+                          .details-row
+                            .detail.edocs
+                              .attachments
+                                .attachment-fragment
+                                  .file
+                                    %a{:class => "mag_form_jun_6_2011.pdf", :href => "/edocs/52455593e3e1f1176f00021f/download", :target => "_blank"}
+                                      .name MAG form Jun 11
+                                .attachment-fragment
+                                  .file
+                                    %a{:class => "blank_mag.pdf", :href => "/edocs/524556b7e3e1f1176f000235/download", :target => "_blank"}
+                                      .name Blank MAG
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-evidence-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-evidence{:href => "#"}
+                    .comments
+                      %h2 Comments / Reflection
+                      .new-comment
+                        %p These comments can be seen by your appraiser as they can access the portfolio of submitted appraisals. Please use this section to reflect on this entire section, highlight topics you’d like to discuss in your appraisal meeting and/or ask your appraiser questions on this specific section. Your appraiser also has the option to leave comments.
+                        %form#new_comment.new_comment{"accept-charset" => "UTF-8", :action => "/appraisals/564ddd0bf2a39f172c00007b/appraisal_datasets/5034e01ce3e1f12443000020/portfolio_comments", "data-remote" => "true", :method => "post"}
+                          %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+                          .row
+                            .col-xs-12
+                              %textarea#comment_content{:name => "comment[content]", :placeholder => "Type your comment here...", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;"}
+                          .row
+                            .col-xs-12
+                              .shelf
+                              .add.right
+                                %input#save-new-comment.btn.btn-sm.btn-success{:name => "commit", :type => "submit", :value => "Save Comments / Reflection"}/
+                      .comment
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              %p This is some text - dated 21/08
+                            .meta
+                              %strong
+                                By: Dr John T Smith
+                                %br/
+                              %span.expires 21/08/2019 10:37
+                              %br/
+                          .details-row
+                            .detail
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-comment-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-comment{:href => "#"}
+                      .comment
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            .meta
+                              %strong
+                                By: Dr John T Smith
+                                %br/
+                              %span.expires 15/04/2016 15:57
+                              %br/
+                          .details-row
+                            .detail
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-comment-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-comment{:href => "#"}
+                      .comment
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              %p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                            .meta
+                              %strong
+                                By: Dr John T Smith
+                                %br/
+                              %span.expires 15/04/2016 15:58
+                              %br/
+                          .details-row
+                            .detail
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-comment-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-comment{:href => "#"}
+                      .comment
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              %p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                            .meta
+                              %strong
+                                By: Dr John T Smith
+                                %br/
+                              %span.expires 15/04/2016 15:58
+                              %br/
+                          .details-row
+                            .detail
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-pencil.fa-lg.edit-comment-link{:href => "#"}
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-comment{:href => "#"}
+                    .notes
+                      %h2 Private Notes
+                      .new-note
+                        %form#new_note.new_note{"accept-charset" => "UTF-8", :action => "/appraisals/564ddd0bf2a39f172c00007b/appraisal_datasets/5034e01ce3e1f12443000020/notes", :method => "post"}
+                          %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+                          %input{:name => "authenticity_token", :type => "hidden", :value => "i7WaB5Ds81t1rBJGY65s+tJCKqWh2kXv6ip3M7/NTNKEbJN1AGRTbqOziIBNMwb3gO9gGlVt/deiZq6Sx9IGrw=="}/
+                          .row
+                            .col-xs-12
+                              %textarea#note_content{:name => "note[content]", :placeholder => "Type your note here...", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;"}
+                          .row
+                            .col-xs-12
+                              .shelf
+                              .add.right
+                                %input.btn.btn-sm.btn-success{:name => "commit", :type => "submit", :value => "Save Note"}/
+                      .note
+                        .icon
+                        .cen-container
+                          .details-row
+                            .detail.content
+                              %p Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.
+                            .meta
+                              %strong
+                                Written by you
+                                %br/
+                              %span.expires 15/04/2016 15:59
+                              %br/
+                          .details-row
+                            .detail.content
+                            .meta.buttons
+                              .edit-buttons.right
+                                %i
+                                  %a.fa.fa-trash.fa-lg.remove-note{:href => "#"}
+                .clear
 
-        / main-section must be part of col
-        .col.col-sm-9.col-xl-10.snt-main-section
-          #section-view.pb
-            .section
-              .row.no-pdf
-                .col-xs-12
-                  .header
-                    %h3 Instructions
-                  .main
-                    .rc.job_plan_instructions.link-external
-                      %p Job plans are an annual agreement between the employer and the doctor setting out:
+      / END SARD Nav Tabs
 
-        / END SARD Nav Tabs
 
-                
     //=include ../navbars/_footer.haml
 
     / Scripts ================================

@@ -1,4 +1,4 @@
-// sard-nav-tabs =======================================
+// sard-nav-tabs ================================
 
 
 
@@ -6,6 +6,106 @@ $tab-colour:              $sa-grey-04;
 $tab-colour-hover:        $sa-grey-07;
 $tab-colour-active:       $sa-grey-16;
 $tab-number-bg:           $sa-grey-14;
+
+
+// Structure ------------------------------------
+.sard-nav-tabs{
+  // background-color: pink;
+  display: block;
+  @media screen and (min-width: $break-md) {
+    display: table;
+    vertical-align: top;
+  }
+}
+
+.sard-nav-tabs{
+  .snt-main-nav{
+    // background-color: yellow;
+    display: block;
+    @include respond-to(md-screens){
+      display: table-cell;
+      vertical-align: top;
+      width: 30%;
+    }
+    @include respond-to(lg-screens){
+      display: table-cell;
+      vertical-align: top;
+      width: 25%;
+    }
+    @include respond-to(lxl-screens){
+      display: table-cell;
+      vertical-align: top;
+      width: 25%;
+    }
+    @media screen and (min-width: $break-xl) {
+      display: table-cell;
+      vertical-align: top;
+      width: 25%;
+    }
+  }
+
+  .nav-info{
+    display: table;
+    vertical-align: top;
+    min-width: 100%;
+  }
+  .nav-col{
+    display: block;
+  }
+
+  .snt-main-section{
+    display: block;
+    // background-color: lightblue;
+    @include respond-to(md-screens){
+      display: table-cell;
+      vertical-align: top;
+      width: 70%;
+    }
+    @include respond-to(lg-screens){
+      display: table-cell;
+      vertical-align: top;
+      width: 75%;
+    }
+    @include respond-to(xl-screens){
+      display: table-cell;
+      vertical-align: top;
+      width: 75%;
+    }
+    @media screen and (min-width: $break-xl) {
+      display: table-cell;
+      vertical-align: top;
+      width: 75%;
+    }
+  }
+} // End .sard-nav-tabs
+
+.section-view{
+  vertical-align: top;
+}
+
+// Styling --------------------------------------
+
+.sard-nav-tabs{
+  .activity-summary-table{
+    border: 1px solid $tab-colour-active;
+    @media screen and (min-width: $break-md){
+      border-right: none;
+    }
+  }
+  .snt-main-section{
+    border: 1px solid $tab-colour-active;
+    padding-left: 20px;
+    padding-right: 20px;
+    @media screen and (max-width: $break-md){
+      border-top: 10px solid $tab-colour-active;
+    }
+    @media screen and (min-width: $break-md){
+      border-left: 10px solid $tab-colour-active;
+    }
+  }
+} // End .sard-nav-tabs
+
+
 
 // OLD ==========
 // /* SARD Tabs =========================================================================================== */

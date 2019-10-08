@@ -20973,6 +20973,123 @@ body.rag-key-expanded {
   padding-top: 6px;
 }
 
+.sard-nav-tabs {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .sard-nav-tabs {
+    display: table;
+    vertical-align: top;
+  }
+}
+
+.sard-nav-tabs .snt-main-nav {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .sard-nav-tabs .snt-main-nav {
+    display: table-cell;
+    vertical-align: top;
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .sard-nav-tabs .snt-main-nav {
+    display: table-cell;
+    vertical-align: top;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sard-nav-tabs .snt-main-nav {
+    display: table-cell;
+    vertical-align: top;
+    width: 25%;
+  }
+}
+
+.sard-nav-tabs .nav-info {
+  display: table;
+  vertical-align: top;
+  min-width: 100%;
+}
+
+.sard-nav-tabs .nav-col {
+  display: block;
+}
+
+.sard-nav-tabs .snt-main-section {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .sard-nav-tabs .snt-main-section {
+    display: table-cell;
+    vertical-align: top;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .sard-nav-tabs .snt-main-section {
+    display: table-cell;
+    vertical-align: top;
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1590px) {
+  .sard-nav-tabs .snt-main-section {
+    display: table-cell;
+    vertical-align: top;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sard-nav-tabs .snt-main-section {
+    display: table-cell;
+    vertical-align: top;
+    width: 75%;
+  }
+}
+
+.section-view {
+  vertical-align: top;
+}
+
+.sard-nav-tabs .activity-summary-table {
+  border: 1px solid #403D3D;
+}
+
+@media screen and (min-width: 768px) {
+  .sard-nav-tabs .activity-summary-table {
+    border-right: none;
+  }
+}
+
+.sard-nav-tabs .snt-main-section {
+  border: 1px solid #403D3D;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .sard-nav-tabs .snt-main-section {
+    border-top: 10px solid #403D3D;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sard-nav-tabs .snt-main-section {
+    border-left: 10px solid #403D3D;
+  }
+}
+
 header {
   height: 100px;
 }

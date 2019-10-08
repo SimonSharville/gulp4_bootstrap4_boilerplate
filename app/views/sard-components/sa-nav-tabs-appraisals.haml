@@ -21,185 +21,243 @@
 
 
       // sard-nav-tabs Must be part of a row
-      .row.sard-nav-tabs
-        / main-nav must be part of col
-        .col.col-sm-3.col-xl-2
-          .snt-main-nav
-            .row.pb
+      .row
+        .col-sm-12
+          .sard-nav-tabs
+            / main-nav must be part of col
+            .snt-main-nav
               .nav-info
-                .col-xs-6.col-sm-12.activity-summary
-                  %h5 Activity Summary
-                  #left-activity-summary{:style => "position: relative; zoom: 1;"}
-                    %table.table.table-sard
-                      %thead
-                        %tr.TITLE
-                          %th  
-                          %th Hours
-                          %th PAs
-                      %tbody
-                        %tr.DCC
-                          %td
-                            %strong
-                              DCC
-                          %td 24.82
-                          %td 6.401
-                        %tr.SPA
-                          %td
-                            %strong
-                              SPA
-                          %td 4
-                          %td 1
-                        %tr.TOTAL
-                          %td
-                            %strong
-                              TOTAL
-                          %td 28.82
-                          %td 7.401
-                  #left-activity-summary-toggles
-                    .sa-checkbox
-                      %input#core_toggle{:type => "checkbox"}/
-                      %label.no-pdf{:for => "core_toggle"}
-                        %span.checkbox Core
-                      %input#apa_toggle{:type => "checkbox"}/
-                      %label.no-pdf{:for => "apa_toggle"}
-                        %span.checkbox APA
-                      %input#atc_toggle{:type => "checkbox"}/
-                      %label#atc_toggle_label.no-pdf{:for => "atc_toggle"}
-                        %span.checkbox ATC
-                    %p#atc_warning.atc_warning{:style => "display: none;"} Includes uncontracted work
-                  #left-activity-summary-on-call.no-pdf
-                    #on-call
-                      %strong On-Call
+                #appraisal-info
+                  %div
+                    %h5
+                      Recommendation Due date: 31/01/2020
+                    %p
+                      Created: 19/11/2015
                       %br/
-                      Low frequency: 1 in 9 or less frequent
+                      Proposed meeting date: 16/11/2018
+                      %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section3"}
+                        %i.fa.fa-pencil.fa-sm{:title => "Edit Proposed meeting date"}
                       %br/
-                      Agreed category: A
+                      Submitted: 09/12/2015
                       %br/
-                      On call supplement: 3.0%
-                .col-xs-6.col-sm-12.nav-info-buttons.no-pdf
-                  %p
-                    %a.btn.btn-xs.btn-default{:href => "/online_job_plans/5d1cae7c4a67d131446cf5a0/summary_pdf.pdf", :target => "_blank"} Summary PDF
-                  %p
-                    %a.btn.btn-xs.btn-default{:href => "/online_job_plans/5d1cae7c4a67d131446cf5a0/full_pdf.pdf", :target => "_blank"} Full PDF
-                  %p
-                    %a#create_template_button.btn.btn-xs.btn-default Share as Template
-            
-            #nav-col.no-pdf
-              .nav-row.active{:id => "#nav-instructions"}
-                %a{:href => "#section/instructions"}
-                  .number
-                    0
-                  .title
-                    Instructions
-              .nav-row{:id => "#nav-general_info"}
-                %a{:href => "#section/general_info"}
-                  .number
-                    1
-                  .title
-                    General Info
-              .nav-row{:id => "#nav-signatories"}
-                %a{:href => "#section/signatories"}
-                  .number
-                    2
-                  .title
-                    Signatories
-              .nav-row{:id => "#nav-timetable"}
-                %a{:href => "#section/timetable"}
-                  .number
-                    3
-                  .title
-                    Timetable
-              .nav-row{:id => "#nav-on_call_supplement"}
-                %a{:href => "#section/on_call_supplement"}
-                  .number
-                    4
-                  .title
-                    On-Call Supplement
-              .nav-row{:id => "#nav-spa_notes"}
-                %a{:href => "#section/spa_notes"}
-                  .number
-                    5
-                  .title
-                    SPA Notes
-              .nav-row{:id => "#nav-additional_external"}
-                %a{:href => "#section/additional_external"}
-                  .number
-                    6
-                  .title
-                    Additional / External
-              .nav-row{:id => "#nav-other_agreements"}
-                %a{:href => "#section/other_agreements"}
-                  .number
-                    7
-                  .title
-                    Other Agreements
-              .nav-row{:id => "#nav-additional_pas"}
-                %a{:href => "#section/additional_pas"}
-                  .number
-                    8
-                  .title
-                    APAs / ATCs
-              .nav-row{:id => "#nav-fee_paying_services"}
-                %a{:href => "#section/fee_paying_services"}
-                  .number
-                    9
-                  .title
-                    Fee Paying Services
-              .nav-row{:id => "#nav-private_practice"}
-                %a{:href => "#section/private_practice"}
-                  .number
-                    10
-                  .title
-                    Private Practice
-              .nav-row{:id => "#nav-objectives"}
-                %a{:href => "#section/objectives"}
-                  .number
-                    11
-                  .title
-                    Objectives
-              .nav-row{:id => "#nav-supporting_resources"}
-                %a{:href => "#section/supporting_resources"}
-                  .number
-                    12
-                  .title
-                    Supporting Resources
-              .nav-row{:id => "#nav-general_discussion"}
-                %a{:href => "#section/general_discussion"}
-                  .number
-                    13
-                  .title
-                    General Discussion
-              .nav-row{:id => "#nav-meetings"}
-                %a{:href => "#section/meetings"}
-                  .number
-                    14
-                  .title
-                    Meetings
-              .nav-row{:id => "#nav-sign_off"}
-                %a{:href => "#section/sign_off"}
-                  .number
-                    15
-                  .title
-                    Sign Off
-            .submit-button.no-pdf
-              #job-plan-status
+                      Meeting date: 16/09/2018
+                      %br/
+                      Completed:
+                      %br/
+                    %p
+                      Lead Appraiser:
+                      %br/
+                      Dr Ify Okocha
+                      %a{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section3"}
+                        %i.fa.fa-pencil.fa-sm{:title => "EditLead Appraiser:"}
+                      %br/
+                      %a{:href => "mailto:ify@example.com", :style => "color: #0645AD;background:white"} Email: ify@example.com
+                    %p Version 3.2.0
+              
+              .nav-info-buttons
                 %p
-                  %a.btn.btn-block.btn-sm.btn-success.send_for_sign_off{:href => "#"}
-                    Submit for Sign Off
-
-        / main-section must be part of col
-        .col.col-sm-9.col-xl-10.snt-main-section
-          #section-view.pb
-            .section
-              .row.no-pdf
-                .col-xs-12
-                  .header
-                    %h3 Instructions
+                  %a.btn.btn-sm.btn-default{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/pdf.pdf", :target => "_blank"} Download as PDF
+                %p
+                  %a.btn.btn-sm.btn-default{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/portfolio"} Go To Portfolio
+              
+              #nav-col
+                #appraisal-sections-nav
+                  #section-1
+                    #section1-nav.appraisal-section-nav.nav-row.active
+                      %span.section-number.number.rag-green 1
+                      %a.section-title.title{:href => "#section1"} Contents
+                      %span.section-status.number.rag-green
+                  #section-2
+                    #section2-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 2
+                      %a.section-title.title{:href => "#section2"} Instructions
+                      %span.section-status.number.rag-green
+                  #section-3
+                    #section3-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 3
+                      %a.section-title.title{:href => "#section3"} Personal Details
+                      %span.section-status.number.rag-green
+                  #section-4
+                    #section4-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 4
+                      %a.section-title.title{:href => "#section4"} Scope of Work
+                      %span.section-status.number.rag-green
+                  #section-5
+                    #section5-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 5
+                      %a.section-title.title{:href => "#section5"} Record of annual appraisals
+                      %span.section-status.number.rag-green
+                  #section-6
+                    #section6-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 6
+                      %a.section-title.title{:href => "#section6"} Personal development plans and their review
+                      %span.section-status.number.rag-green
+                  #section-7
+                    #section7-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 7
+                      %a.section-title.title{:href => "#section7"} Continuing Professional Development
+                      %span.section-status.number.rag-green
+                  #section-8
+                    #section8-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 8
+                      %a.section-title.title{:href => "#section8"} Quality Improvement Activity
+                      %span.section-status.number.rag-green
+                  #section-9
+                    #section9-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 9
+                      %a.section-title.title{:href => "#section9"} Significant Events
+                      %span.section-status.number.rag-green
+                  #section-10
+                    #section10-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 10
+                      %a.section-title.title{:href => "#section10"} Feedback from colleagues and patients
+                      %span.section-status.number.rag-green
+                  #section-11
+                    #section11-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 11
+                      %a.section-title.title{:href => "#section11"} Review of complaints
+                      %span.section-status.number.rag-green
+                  #section-12a
+                    #section12a-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 12
+                      %a.section-title.title{:href => "#section12a"} Teaching, research, leadership and innovation
+                      %span.section-status.number.rag-green
+                  #section-12
+                    #section12-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 13
+                      %a.section-title.title{:href => "#section12"} Achievements, challenges and aspirations
+                      %span.section-status.number.rag-green
+                  #section-13
+                    #section13-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 14
+                      %a.section-title.title{:href => "#section13"} Probity and health statements
+                      %span.section-status.number.rag-green
+                  #section-14
+                    #section14-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 15
+                      %a.section-title.title{:href => "#section14"} Additional Information
+                      %span.section-status.number.rag-green
+                  #section-15
+                    #section15-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 16
+                      %a.section-title.title{:href => "#section15"} Personal development plan proposals
+                      %span.section-status.number.rag-green
+                  #section-16
+                    #section16-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 17
+                      %a.section-title.title{:href => "#section16"} Supporting Information
+                      %span.section-status.number.rag-green
+                  #section-17
+                    #section17-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 18
+                      %a.section-title.title{:href => "#section17"} Pre-appraisal preparation
+                      %span.section-status.number.rag-green
+                  #submission
+                    %h5 Submitted to appraiser
+                  #section-18
+                    #section18-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 19
+                      %a.section-title.title{:href => "#section18"} The agreed personal development plan
+                      %span.section-status.number.rag-green
+                  #section-19
+                    #section19-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 20
+                      %a.section-title.title{:href => "#section19"} Appraisal Summary
+                      %span.section-status.number.rag-green
+                  #section-20
+                    #section20-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-red 21
+                      %a.section-title.title{:href => "#section20"} Appraiser Statement
+                      %span.section-status.number.rag-red
+                  #section-21
+                    #section21-nav.appraisal-section-nav.nav-row
+                      %span.section-number.number.rag-green 22
+                      %a.section-title.title{:href => "#section21"} Doctor Statement
+                      %span.section-status.number.rag-green
+                  #completion
+                  #rejection
+            / main-section must be part of col
+            .snt-main-section
+              #section-tab-view
+                .contents-view
+                  .header.pb
+                    %a{:name => "section1"}
+                    .appraisal-section-bar
+                      %h2.number Section 1 of 22
+                    %h3.title Contents
                   .main
-                    .rc.job_plan_instructions.link-external
-                      %p Job plans are an annual agreement between the employer and the doctor setting out:
+                    #section-content
+                      %h4 Welcome!
+                      %p Please click on 'Instructions' for guidance on how to enter the information required for your appraisal.
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section1"}
+                        %span.number Section 1
+                        %span.title Contents
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section2"}
+                        %span.number Section 2
+                        %span.title Instructions
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section3"}
+                        %span.number Section 3
+                        %span.title Personal Details
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section4"}
+                        %span.number Section 4
+                        %span.title Scope of Work
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section5"}
+                        %span.number Section 5
+                        %span.title Record of annual appraisals
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section6"}
+                        %span.number Section 6
+                        %span.title Personal development plans and their review
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section7"}
+                        %span.number Section 7
+                        %span.title Continuing Professional Development
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section8"}
+                        %span.number Section 8
+                        %span.title Quality Improvement Activity
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section9"}
+                        %span.number Section 9
+                        %span.title Significant Events
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section10"}
+                        %span.number Section 10
+                        %span.title Feedback from colleagues and patients
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section11"}
+                        %span.number Section 11
+                        %span.title Review of complaints
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section12a"}
+                        %span.number Section 12
+                        %span.title Teaching, research, leadership and innovation
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section12"}
+                        %span.number Section 13
+                        %span.title Achievements, challenges and aspirations
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section13"}
+                        %span.number Section 14
+                        %span.title Probity and health statements
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section14"}
+                        %span.number Section 15
+                        %span.title Additional Information
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section15"}
+                        %span.number Section 16
+                        %span.title Personal development plan proposals
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section16"}
+                        %span.number Section 17
+                        %span.title Supporting Information
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section17"}
+                        %span.number Section 18
+                        %span.title Pre-appraisal preparation
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section18"}
+                        %span.number Section 19
+                        %span.title The agreed personal development plan
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section19"}
+                        %span.number Section 20
+                        %span.title Appraisal Summary
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section20"}
+                        %span.number Section 21
+                        %span.title Appraiser Statement
+                      %a.section{:href => "/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section21"}
+                        %span.number Section 22
+                        %span.title Doctor Statement
 
-        / END SARD Nav Tabs
+            
+          / END SARD Nav Tabs
 
                 
     //=include ../navbars/_footer.haml

@@ -171,282 +171,321 @@ Sard Nav Tabs are created for use on the Job Planning, Portfolio and Appraisals 
 </div>
 </div>
 <!-- / sard-nav-tabs Must be part of a row -->
-<div class='row sard-nav-tabs'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='sard-nav-tabs'>
 <!-- main-nav must be part of col -->
-<div class='col col-sm-3 col-xl-2'>
 <div class='snt-main-nav'>
-<div class='row pb'>
 <div class='nav-info'>
-<div class='col-xs-6 col-sm-12 activity-summary'>
-<h5>Activity Summary</h5>
-<div id='left-activity-summary' style='position: relative; zoom: 1;'>
-<table class='table table-sard'>
-<thead>
-<tr class='TITLE'>
-<th> </th>
-<th>Hours</th>
-<th>PAs</th>
-</tr>
-</thead>
-<tbody>
-<tr class='DCC'>
-<td>
-<strong>
-DCC
-</strong>
-</td>
-<td>24.82</td>
-<td>6.401</td>
-</tr>
-<tr class='SPA'>
-<td>
-<strong>
-SPA
-</strong>
-</td>
-<td>4</td>
-<td>1</td>
-</tr>
-<tr class='TOTAL'>
-<td>
-<strong>
-TOTAL
-</strong>
-</td>
-<td>28.82</td>
-<td>7.401</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id='left-activity-summary-toggles'>
-<div class='sa-checkbox'>
-<input id='core_toggle' type='checkbox'>
-<label class='no-pdf' for='core_toggle'>
-<span class='checkbox'>Core</span>
-</label>
-<input id='apa_toggle' type='checkbox'>
-<label class='no-pdf' for='apa_toggle'>
-<span class='checkbox'>APA</span>
-</label>
-<input id='atc_toggle' type='checkbox'>
-<label class='no-pdf' for='atc_toggle' id='atc_toggle_label'>
-<span class='checkbox'>ATC</span>
-</label>
-</div>
-<p class='atc_warning' id='atc_warning' style='display: none;'>Includes uncontracted work</p>
-</div>
-<div class='no-pdf' id='left-activity-summary-on-call'>
-<div id='on-call'>
-<strong>On-Call</strong>
+<div id='appraisal-info'>
+<div>
+<h5>
+Recommendation Due date: 31/01/2020
+</h5>
+<p>
+Created: 19/11/2015
 <br>
-Low frequency: 1 in 9 or less frequent
+Proposed meeting date: 16/11/2018
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section3'>
+<i class='fa fa-pencil fa-sm' title='Edit Proposed meeting date'></i>
+</a>
 <br>
-Agreed category: A
+Submitted: 09/12/2015
 <br>
-On call supplement: 3.0%
-</div>
-</div>
-</div>
-<div class='col-xs-6 col-sm-12 nav-info-buttons no-pdf'>
-<p>
-<a class='btn btn-xs btn-default' href='/online_job_plans/5d1cae7c4a67d131446cf5a0/summary_pdf.pdf' target='_blank'>Summary PDF</a>
+Meeting date: 16/09/2018
+<br>
+Completed:
+<br>
 </p>
 <p>
-<a class='btn btn-xs btn-default' href='/online_job_plans/5d1cae7c4a67d131446cf5a0/full_pdf.pdf' target='_blank'>Full PDF</a>
+Lead Appraiser:
+<br>
+Dr Ify Okocha
+<a href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section3'>
+<i class='fa fa-pencil fa-sm' title='EditLead Appraiser:'></i>
+</a>
+<br>
+<a href='mailto:ify@example.com' style='color: #0645AD;background:white'>Email: ify@example.com</a>
+</p>
+<p>Version 3.2.0</p>
+</div>
+</div>
+</div>
+<div class='nav-info-buttons'>
+<p>
+<a class='btn btn-sm btn-default' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/pdf.pdf' target='_blank'>Download as PDF</a>
 </p>
 <p>
-<a class='btn btn-xs btn-default' id='create_template_button'>Share as Template</a>
+<a class='btn btn-sm btn-default' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/portfolio'>Go To Portfolio</a>
 </p>
 </div>
+<div id='nav-col'>
+<div id='appraisal-sections-nav'>
+<div id='section-1'>
+<div class='appraisal-section-nav nav-row active' id='section1-nav'>
+<span class='section-number number rag-green'>1</span>
+<a class='section-title title' href='#section1'>Contents</a>
+<span class='section-status number rag-green'></span>
 </div>
 </div>
-<div class='no-pdf' id='nav-col'>
-<div class='nav-row active' id='#nav-instructions'>
-<a href='#section/instructions'>
-<div class='number'>
-0
-</div>
-<div class='title'>
-Instructions
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-general_info'>
-<a href='#section/general_info'>
-<div class='number'>
-1
-</div>
-<div class='title'>
-General Info
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-signatories'>
-<a href='#section/signatories'>
-<div class='number'>
-2
-</div>
-<div class='title'>
-Signatories
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-timetable'>
-<a href='#section/timetable'>
-<div class='number'>
-3
-</div>
-<div class='title'>
-Timetable
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-on_call_supplement'>
-<a href='#section/on_call_supplement'>
-<div class='number'>
-4
-</div>
-<div class='title'>
-On-Call Supplement
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-spa_notes'>
-<a href='#section/spa_notes'>
-<div class='number'>
-5
-</div>
-<div class='title'>
-SPA Notes
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-additional_external'>
-<a href='#section/additional_external'>
-<div class='number'>
-6
-</div>
-<div class='title'>
-Additional / External
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-other_agreements'>
-<a href='#section/other_agreements'>
-<div class='number'>
-7
-</div>
-<div class='title'>
-Other Agreements
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-additional_pas'>
-<a href='#section/additional_pas'>
-<div class='number'>
-8
-</div>
-<div class='title'>
-APAs / ATCs
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-fee_paying_services'>
-<a href='#section/fee_paying_services'>
-<div class='number'>
-9
-</div>
-<div class='title'>
-Fee Paying Services
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-private_practice'>
-<a href='#section/private_practice'>
-<div class='number'>
-10
-</div>
-<div class='title'>
-Private Practice
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-objectives'>
-<a href='#section/objectives'>
-<div class='number'>
-11
-</div>
-<div class='title'>
-Objectives
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-supporting_resources'>
-<a href='#section/supporting_resources'>
-<div class='number'>
-12
-</div>
-<div class='title'>
-Supporting Resources
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-general_discussion'>
-<a href='#section/general_discussion'>
-<div class='number'>
-13
-</div>
-<div class='title'>
-General Discussion
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-meetings'>
-<a href='#section/meetings'>
-<div class='number'>
-14
-</div>
-<div class='title'>
-Meetings
-</div>
-</a>
-</div>
-<div class='nav-row' id='#nav-sign_off'>
-<a href='#section/sign_off'>
-<div class='number'>
-15
-</div>
-<div class='title'>
-Sign Off
-</div>
-</a>
+<div id='section-2'>
+<div class='appraisal-section-nav nav-row' id='section2-nav'>
+<span class='section-number number rag-green'>2</span>
+<a class='section-title title' href='#section2'>Instructions</a>
+<span class='section-status number rag-green'></span>
 </div>
 </div>
-<div class='submit-button no-pdf'>
-<div id='job-plan-status'>
-<p>
-<a class='btn btn-block btn-sm btn-success send_for_sign_off' href='#'>
-Submit for Sign Off
-</a>
-</p>
+<div id='section-3'>
+<div class='appraisal-section-nav nav-row' id='section3-nav'>
+<span class='section-number number rag-green'>3</span>
+<a class='section-title title' href='#section3'>Personal Details</a>
+<span class='section-status number rag-green'></span>
 </div>
+</div>
+<div id='section-4'>
+<div class='appraisal-section-nav nav-row' id='section4-nav'>
+<span class='section-number number rag-green'>4</span>
+<a class='section-title title' href='#section4'>Scope of Work</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-5'>
+<div class='appraisal-section-nav nav-row' id='section5-nav'>
+<span class='section-number number rag-green'>5</span>
+<a class='section-title title' href='#section5'>Record of annual appraisals</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-6'>
+<div class='appraisal-section-nav nav-row' id='section6-nav'>
+<span class='section-number number rag-green'>6</span>
+<a class='section-title title' href='#section6'>Personal development plans and their review</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-7'>
+<div class='appraisal-section-nav nav-row' id='section7-nav'>
+<span class='section-number number rag-green'>7</span>
+<a class='section-title title' href='#section7'>Continuing Professional Development</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-8'>
+<div class='appraisal-section-nav nav-row' id='section8-nav'>
+<span class='section-number number rag-green'>8</span>
+<a class='section-title title' href='#section8'>Quality Improvement Activity</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-9'>
+<div class='appraisal-section-nav nav-row' id='section9-nav'>
+<span class='section-number number rag-green'>9</span>
+<a class='section-title title' href='#section9'>Significant Events</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-10'>
+<div class='appraisal-section-nav nav-row' id='section10-nav'>
+<span class='section-number number rag-green'>10</span>
+<a class='section-title title' href='#section10'>Feedback from colleagues and patients</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-11'>
+<div class='appraisal-section-nav nav-row' id='section11-nav'>
+<span class='section-number number rag-green'>11</span>
+<a class='section-title title' href='#section11'>Review of complaints</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-12a'>
+<div class='appraisal-section-nav nav-row' id='section12a-nav'>
+<span class='section-number number rag-green'>12</span>
+<a class='section-title title' href='#section12a'>Teaching, research, leadership and innovation</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-12'>
+<div class='appraisal-section-nav nav-row' id='section12-nav'>
+<span class='section-number number rag-green'>13</span>
+<a class='section-title title' href='#section12'>Achievements, challenges and aspirations</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-13'>
+<div class='appraisal-section-nav nav-row' id='section13-nav'>
+<span class='section-number number rag-green'>14</span>
+<a class='section-title title' href='#section13'>Probity and health statements</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-14'>
+<div class='appraisal-section-nav nav-row' id='section14-nav'>
+<span class='section-number number rag-green'>15</span>
+<a class='section-title title' href='#section14'>Additional Information</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-15'>
+<div class='appraisal-section-nav nav-row' id='section15-nav'>
+<span class='section-number number rag-green'>16</span>
+<a class='section-title title' href='#section15'>Personal development plan proposals</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-16'>
+<div class='appraisal-section-nav nav-row' id='section16-nav'>
+<span class='section-number number rag-green'>17</span>
+<a class='section-title title' href='#section16'>Supporting Information</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-17'>
+<div class='appraisal-section-nav nav-row' id='section17-nav'>
+<span class='section-number number rag-green'>18</span>
+<a class='section-title title' href='#section17'>Pre-appraisal preparation</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='submission'>
+<h5>Submitted to appraiser</h5>
+</div>
+<div id='section-18'>
+<div class='appraisal-section-nav nav-row' id='section18-nav'>
+<span class='section-number number rag-green'>19</span>
+<a class='section-title title' href='#section18'>The agreed personal development plan</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-19'>
+<div class='appraisal-section-nav nav-row' id='section19-nav'>
+<span class='section-number number rag-green'>20</span>
+<a class='section-title title' href='#section19'>Appraisal Summary</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='section-20'>
+<div class='appraisal-section-nav nav-row' id='section20-nav'>
+<span class='section-number number rag-red'>21</span>
+<a class='section-title title' href='#section20'>Appraiser Statement</a>
+<span class='section-status number rag-red'></span>
+</div>
+</div>
+<div id='section-21'>
+<div class='appraisal-section-nav nav-row' id='section21-nav'>
+<span class='section-number number rag-green'>22</span>
+<a class='section-title title' href='#section21'>Doctor Statement</a>
+<span class='section-status number rag-green'></span>
+</div>
+</div>
+<div id='completion'></div>
+<div id='rejection'></div>
 </div>
 </div>
 </div>
 <!-- main-section must be part of col -->
-<div class='col col-sm-9 col-xl-10 snt-main-section'>
-<div class='pb' id='section-view'>
-<div class='section'>
-<div class='row no-pdf'>
-<div class='col-xs-12'>
-<div class='header'>
-<h3>Instructions</h3>
+<div class='snt-main-section'>
+<div id='section-tab-view'>
+<div class='contents-view'>
+<div class='header pb'>
+<a name='section1'></a>
+<div class='appraisal-section-bar'>
+<h2 class='number'>Section 1 of 22</h2>
+</div>
+<h3 class='title'>Contents</h3>
 </div>
 <div class='main'>
-<div class='rc job_plan_instructions link-external'>
-<p>Job plans are an annual agreement between the employer and the doctor setting out:</p>
-</div>
+<div id='section-content'>
+<h4>Welcome!</h4>
+<p>Please click on 'Instructions' for guidance on how to enter the information required for your appraisal.</p>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section1'>
+<span class='number'>Section 1</span>
+<span class='title'>Contents</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section2'>
+<span class='number'>Section 2</span>
+<span class='title'>Instructions</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section3'>
+<span class='number'>Section 3</span>
+<span class='title'>Personal Details</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section4'>
+<span class='number'>Section 4</span>
+<span class='title'>Scope of Work</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section5'>
+<span class='number'>Section 5</span>
+<span class='title'>Record of annual appraisals</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section6'>
+<span class='number'>Section 6</span>
+<span class='title'>Personal development plans and their review</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section7'>
+<span class='number'>Section 7</span>
+<span class='title'>Continuing Professional Development</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section8'>
+<span class='number'>Section 8</span>
+<span class='title'>Quality Improvement Activity</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section9'>
+<span class='number'>Section 9</span>
+<span class='title'>Significant Events</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section10'>
+<span class='number'>Section 10</span>
+<span class='title'>Feedback from colleagues and patients</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section11'>
+<span class='number'>Section 11</span>
+<span class='title'>Review of complaints</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section12a'>
+<span class='number'>Section 12</span>
+<span class='title'>Teaching, research, leadership and innovation</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section12'>
+<span class='number'>Section 13</span>
+<span class='title'>Achievements, challenges and aspirations</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section13'>
+<span class='number'>Section 14</span>
+<span class='title'>Probity and health statements</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section14'>
+<span class='number'>Section 15</span>
+<span class='title'>Additional Information</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section15'>
+<span class='number'>Section 16</span>
+<span class='title'>Personal development plan proposals</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section16'>
+<span class='number'>Section 17</span>
+<span class='title'>Supporting Information</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section17'>
+<span class='number'>Section 18</span>
+<span class='title'>Pre-appraisal preparation</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section18'>
+<span class='number'>Section 19</span>
+<span class='title'>The agreed personal development plan</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section19'>
+<span class='number'>Section 20</span>
+<span class='title'>Appraisal Summary</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section20'>
+<span class='number'>Section 21</span>
+<span class='title'>Appraiser Statement</span>
+</a>
+<a class='section' href='/users/2-3/appraisals/564ddd0bf2a39f172c00007b/edit#section21'>
+<span class='number'>Section 22</span>
+<span class='title'>Doctor Statement</span>
+</a>
 </div>
 </div>
 </div>
@@ -454,6 +493,7 @@ Submit for Sign Off
 </div>
 </div>
 <!-- END SARD Nav Tabs -->
+</div>
 </div>
 </div>
 <div class='sa-footer'>
