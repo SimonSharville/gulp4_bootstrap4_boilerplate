@@ -32,34 +32,37 @@
 @import '../sard-icons/styles';
 
 
-// Components
-@import 'components/sa-alert';
-@import 'components/sa-badges';
-@import 'components/sa-breadcrumbs';
-@import 'components/sa-buttons';
-@import 'components/sa-cards';
-@import 'components/sa-checkboxes';
-@import 'components/sa-collapse';
-@import 'components/sa-dropdowns';
-@import 'components/sa-fieldsets'; //BS3 specific
-@import 'components/sa-forms';
-@import 'components/sa-list-groups';
-@import 'components/sa-models';
-@import 'components/sa-navbar';
-@import 'components/sa-navbar-admin';
-@import 'components/sa-navs';
-@import 'components/sa-megamenu';
-@import 'components/sa-pagination';
-@import 'components/sa-panels'; //BS3 specific
-@import 'components/sa-perforations';
-@import 'components/sa-popovers';
-@import 'components/sa-progress';
-@import 'components/sa-searchbars';
-@import 'components/sa-tables';
-@import 'components/sa-validation';
-@import 'components/sa-footer';
-@import 'components/sa-off-canvas-options';
-@import 'components/sa-off-canvas-rag-key';
+// BS bs-Components
+@import 'bs-components/sa-alert';
+@import 'bs-components/sa-badges';
+@import 'bs-components/sa-breadcrumbs';
+@import 'bs-components/sa-buttons';
+@import 'bs-components/sa-cards';
+@import 'bs-components/sa-checkboxes';
+@import 'bs-components/sa-collapse';
+@import 'bs-components/sa-dropdowns';
+@import 'bs-components/sa-fieldsets'; //BS3 specific
+@import 'bs-components/sa-forms';
+@import 'bs-components/sa-list-groups';
+@import 'bs-components/sa-models';
+@import 'bs-components/sa-navbar';
+@import 'bs-components/sa-navbar-admin';
+@import 'bs-components/sa-navs';
+@import 'bs-components/sa-megamenu';
+@import 'bs-components/sa-pagination';
+@import 'bs-components/sa-panels'; //BS3 specific
+@import 'bs-components/sa-perforations';
+@import 'bs-components/sa-popovers';
+@import 'bs-components/sa-progress';
+@import 'bs-components/sa-searchbars';
+@import 'bs-components/sa-tables';
+@import 'bs-components/sa-validation';
+@import 'bs-components/sa-footer';
+@import 'bs-components/sa-off-canvas-options';
+@import 'bs-components/sa-off-canvas-rag-key';
+
+// SARD Components
+@import 'sard-components/sa-nav-tabs';
 
 // ==============================================
 // This MUST Come at the end
