@@ -1,6 +1,386 @@
 // sard-nav-tabs =======================================
 
 
-.sard-nav-tabs{
+
+$tab-colour:              $sa-grey-04;
+$tab-colour-hover:        $sa-grey-07;
+$tab-colour-active:       $sa-grey-16;
+$tab-number-bg:           $sa-grey-14;
+
+// OLD ==========
+// /* SARD Tabs =========================================================================================== */
+// /* Standard Horizontal Tabs ============================================================================ */
+
+// #sard-tabs .tabs{
+//   display: table;
+//   border-bottom: 10px solid $tab-colour-active;
+//   width: 100%;
+//   margin: 20px 0px 0px 0px;
+//   padding: 0;
+// }
+
+// #sard-tabs .tabs li:before{ // Removes Bullets from the tabs
+//   content: none;
+//   display:none;
+// }
+// #sard-tabs .tabs li{
+//   display: inline-block;
+//   cursor: pointer;
+//   padding: 0;
+//   padding-right: 5px;
+//   vertical-align: bottom;
+// }
+
+// #sard-tabs .tabs li:last-child{
+//   padding-right: 0px;
+// }
+
+// #sard-tabs .tabs li a{
+//   background-color: $tab-colour;
+//   color:$text;
+//   display: table;
+//   min-width: 100%;
+//   width: 100%;
+//   -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.20);
+//   -moz-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.20);
+//   box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.20);
+// }
+
+// #sard-tabs .tabs li:hover a{
+//   background-color: $tab-colour-hover;
+// }
+
+// #sard-tabs .tabs li:active a{
+//   background-color: darken($tab-colour-hover, 5%);
+// }
+
+// #sard-tabs .tabs li.active a{
+//   background-color: $tab-colour-active;
+//   color: white;
+//   -webkit-box-shadow: none;
+//   -moz-box-shadow: none;
+//   box-shadow: none;
+// }
+
+// #sard-tabs .tabs li a p{
+//   display:table-cell;
+//   min-width: 100%;
+//   width: 100%;
+//   vertical-align: middle;
+//   min-height:40px;
+//   height:40px;
+//   text-align: center;
+//   font-size: 14px;
+//   line-height: 1.2em;
+//   padding: 5px 15px;
+//   @media (max-width: 414px){
+//     padding: 5px 0px;
+//   }
+// }
+
+
+
+// #sard-tabs .tabs.justified li{
+//   display: table-cell;
+// }
+
+// #sard-tabs .tabs.justified li a p{
+//   padding: 5px 5px;
+// }
+
+
+// #sard-tabs .tab-section{
+//   padding:15px;
+//   border: 1px solid $tab-colour-active;
+//   border-top: none;
+// }
+
+
+// /* ===================================================================================================== */
+// /* SARD Nav Tabs ======================================================================================= */
+// /* Vertical tabs with Horizontal tabs nested within ==================================================== */
+
+
+// // Structural ========================================================
+// // This forces the main section to be at least as deep as the main-nav
+
+// @media (min-width: 768px){ // Small screens up
+
+//   .sard-nav-tabs{ // Must also be .row
+//     display:table;
+//     min-height:100%;
+//     height:100%;
+//     width:100%;
+//   }
+
+//   .sard-nav-tabs .snt-main-nav{ // Must also be .col
+//     display: table-cell;
+//     vertical-align: top;
+//     padding:0;
+//     min-height:100%;
+//     height:100%;
+//     float:none;
+//     right: -10px;
+//     margin-left: -10px;
+//   }
+
+//   .sard-nav-tabs .snt-main-section{ // Must also be .col
+//     display: table-cell;
+//     min-height:100%;
+//     height:100%;
+//     float:none;
+//     left:10px;
+//     width:100%;
+//   }
+
+// }
+
+
+// // Main Nav =====================================
+
+// .sard-nav-tabs .nav-row{
+//   display:table;
+//   width:100%;
+
+//   @media (min-width: 768px){ // Small screens up
+//     margin-bottom: 5px;
+//   }
+// }
+
+
+// // Tabs =========================================
+
+// .sard-nav-tabs .nav-row a{
+//   display: table-cell;
+//   background-color: $tab-colour;
+//   color: $text;
+
+//   @media (max-width: 767px){ // Xtra-Small screens
+//     border-top: 1px solid white;
+//   }
+
+//   @media (min-width: 768px){ // Small screens up
+//     -webkit-box-shadow: inset -5px 0px 0px 0px rgba(0,0,0,0.20);
+//     -moz-box-shadow: inset -5px 0px 0px 0px rgba(0,0,0,0.20);
+//     box-shadow: inset -5px 0px 0px 0px rgba(0,0,0,0.20);
+//   }
+// }
+
+
+// .sard-nav-tabs .nav-row a:hover{
+//   background-color: $tab-colour-hover;
+// }
+
+// .sard-nav-tabs .nav-row a:active{
+//   background-color: darken($tab-colour-hover, 5%);
+// }
+
+// .sard-nav-tabs .nav-row.active a{
+//   background-color: $tab-colour-active;
+//   color: white;
+
+//   @media (min-width: 768px){ // Small screens up
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none;
+//   }
+// }
+
+
+// // Tab Numbers =========================
+
+// .sard-nav-tabs .nav-row .number{
+//   color: white;
+//   display: table-cell;
+//   text-align: center;
+//   letter-spacing: $reduced;
+
+//   @media (max-width: 767px){ // Xtra-Small screens
+//     min-width: 25px;
+//     width: 25px;
+//     min-height: 25px;
+//     height: 25px;
+
+//     @include roboto-regular;
+//     font-size: 14px;
+//   }
+
+//   @media (min-width: 768px){ // Small screens up
+//     vertical-align: middle;    
+//     min-width: 40px;
+//     width: 40px;
+//     min-height: 40px;
+//     height: 40px;
+
+//     @include roboto-light;
+//     font-size: 28px;
+//     line-height: 1em;
+//   }
+// }
+
+// // Job Plan only
+// #job-plan .sard-nav-tabs .nav-row.active .number{
+//   background-color: darken($tab-colour-active, 10%);
+// }
+// #job-plan .sard-nav-tabs .nav-row .number{
+//   background-color: $tab-number-bg;
+// }
+
+// // Apprasials only
+// #appraisal .sard-nav-tabs .nav-row .number{
+//   @media (max-width: 767px){ // Xtra-Small screens
+//     border-top: 1px solid white; 
+//   }
+// }
+
+
+
+// // Tab Titles =========================
+// .sard-nav-tabs .nav-row .title{
+//   display: table-cell;
+//   padding: 5px 8px;
+//   @include roboto-regular;
+//   font-size: 14px;
+//   line-height: 1.2em;
   
-}
+//   @media (min-width: 768px){ // Small screens up
+//     vertical-align: middle;
+//     padding: 8px;
+//     padding-right: 10px;
+//   }
+// }
+
+
+// // Main Section =================================
+
+// .sard-nav-tabs .snt-main-section{
+//   @media (max-width: 767px){ // Xtra-Small screens
+//     border-top: 10px solid $tab-colour-active;
+//     width: calc(100% + 20px);
+//     margin-left: -10px;
+//     margin-right: -10px;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//   }
+//   @media (min-width: 768px){ // Small screens up
+//     border: 1px solid $tab-colour-active;
+//     border-left: 10px solid $tab-colour-active;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     padding-bottom: 10px;
+//   }
+// }
+
+
+// // Sub Nav & Sub Section ==================
+// // Horizontal Tabs within a Main Section ==
+
+// .sard-nav-tabs .snt-subnav{
+//   display: table;
+//   border-bottom: 10px solid $tab-colour-active;
+
+//   @media (max-width: 767px){ // Xtra-Small screens
+//     width: 100%;
+//     margin: 20px  0px;
+//     padding: 0;
+//   }
+//   @media (min-width: 768px){ // Small screens up
+//     width: calc(100% + 40px);
+//     margin: 20px -20px;
+//     padding: 0 20px;
+//   }
+// }
+
+// .sard-nav-tabs .snt-subnav li:before{ // Removes the bullets from the tabs
+//   content: none;
+//   display:none;
+// }
+
+// .sard-nav-tabs .snt-subnav li{
+//   display: inline-block;
+//   cursor: pointer;
+//   padding: 0;
+//   padding-left: 5px;
+//   vertical-align: bottom;
+// }
+
+// .sard-nav-tabs .snt-subnav li:first-child{
+//   padding-left: 0px;
+// }
+
+// .sard-nav-tabs .snt-subnav li a{
+//   background-color: $tab-colour;
+//   color:$text;
+//   display: table;
+//   min-width: 100%;
+//   width: 100%;
+//   padding: 0px 0px;
+//   -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.20);
+//   -moz-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.20);
+//   box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.20);
+// }
+
+// .sard-nav-tabs .snt-subnav li:hover a{
+//   background-color: $tab-colour-hover;
+// }
+
+// .sard-nav-tabs .snt-subnav li:active a{
+//   background-color: darken($tab-colour-hover, 5%);
+// }
+
+// .sard-nav-tabs .snt-subnav li.active a{
+//   background-color: $tab-colour-active;
+//   color: white;
+//   -webkit-box-shadow: none;
+//   -moz-box-shadow: none;
+//   box-shadow: none;
+// }
+
+// .sard-nav-tabs .snt-subnav li a p{
+//   display:table-cell;
+//   min-width: 100%;
+//   width: 100%;
+//   vertical-align: middle;
+//   min-height:40px;
+//   height:40px;
+//   text-align: center;
+//   font-size: 14px;
+//   line-height: 1.2em;
+//   padding: 5px;
+// }
+
+// .sard-nav-tabs .snt-subnav.justified li{
+//   display: table-cell;
+// }
+
+// .sard-nav-tabs .snt-subnav.justified li a p{
+//   padding: 0px 5px;
+// }
+
+// .sard-nav-tabs .sub-section{
+//   margin-top:-20px;
+//   padding-top:20px;
+
+//   @media (max-width: 767px){ // Xtra-Small screens
+//     padding:20px 15px 15px 15px;
+//     border: 1px solid $tab-colour-active;
+//     border-top: none;
+//   }
+// }
+
+// // Inside a Panel Body ===========================
+
+// .panel-body{
+//   #sard-tabs .tabs{
+//     width: calc(100% + 30px);
+//     margin: 0px -15px -15px -15px;
+//     padding: 0 15px;
+//   }
+//   #sard-tabs .tabs li{
+//     display: table-cell;
+//     text-align: center;
+//   }
+//   #sard-tabs .tabs li a.active{
+//     background-color: darken($tab-colour-hover, 5%);
+//   }
+// }

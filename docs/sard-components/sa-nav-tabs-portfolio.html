@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 <head>
-<title>Gulp 4, Bootstrap 4 - Perforations and Dividers</title>
+<title>Gulp 4, Bootstrap 4 - Sard Nav Tabs - Portfolio</title>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/remote-sard-styles.min.css' rel='stylesheet'>
@@ -160,199 +160,300 @@ Megamenu
 <div class='container'>
 <div class='row'>
 <div class='col-sm-12'>
-<h1 class='bs-anchor' id='links'>Perforations and Dividers</h1>
-<p>Throughout SARD we use a variety of perforations and divders to visually seperate sections.</p>
+<h1 class='bs-anchor' id='links'>Sard Nav Tabs - Portfolio</h1>
 </div>
 </div>
 <div class='row'>
 <div class='col-sm-12'>
-<h3>Horizontal Rules</h3>
-<p>We have created a range of HR thickness and colours.</p>
-<h4>A standard HR</h4>
-<code>hr</code>
-<hr>
-<h4>Various weights</h4>
-<p>Add the weights as below.</p>
-<code>hr.x2</code>
-<hr class='x2'>
-<code>hr.x4</code>
-<hr class='x4'>
-<code>hr.x8</code>
-<hr class='x8'>
-<code>hr.x12</code>
-<hr class='x12'>
-<code>hr.x16</code>
-<hr class='x16'>
-<h4>Various colours</h4>
-<p>Add the colours as below.</p>
-<code>hr.black</code>
-<hr class='black'>
-<code>hr.grey</code>
-<hr class='grey'>
-<code>hr.primary</code>
-<hr class='primary'>
-<code>hr.secondary</code>
-<hr class='secondary'>
-<code>hr.white</code>
-<div class='card card-sard'>
-<div class='card-body'>
-<hr class='white'>
-</div>
-</div>
-<h4>Various styles</h4>
-<code>hr.primary.dashed</code>
-<hr class='primary dashed'>
-<code>hr.secondary.dotted</code>
-<hr class='secondary dotted'>
-<h4>Mix n match</h4>
-<code>hr.primary.dashed.x4</code>
-<hr class='primary dashed x4'>
-<code>hr.secondary.dotted.x12</code>
-<hr class='secondary x12 dotted'>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<h3 class='mt-3'>Perforations</h3>
-<p>Dotted horizontal rules don't always behave well in varions browsers, So we have created a set of perforations that can be used as dividers instead.</p>
-<p>
-<code>.perf.primary</code>
-<div class='perf primary'></div>
-</p>
-<h4>Various weights</h4>
-<p>
-<code>.perf.x2</code>
-<div class='perf x2'></div>
-</p>
-<p>
-<code>.perf.x4</code>
-<div class='perf x4'></div>
-</p>
-<p>
-<code>.perf.x8</code>
-<div class='perf x8'></div>
-</p>
-<p>
-<code>.perf.x12</code>
-<div class='perf x12'></div>
-</p>
-<p>
-<code>.perf.x16</code>
-<div class='perf x16'></div>
-</p>
-<h4>Various colours</h4>
-<p>
-<code>.perf.black</code>
-<div class='perf black x8'></div>
-</p>
-<p>
-<code>.perf.grey</code>
-<div class='perf grey x8'></div>
-</p>
-<p>
-<code>.perf.primary</code>
-<div class='perf primary a x8'></div>
-</p>
-<p>
-<code>.perf.secondary</code>
-<div class='perf secondary x8'></div>
-</p>
-<p>
-<code>.perf.white</code>
-</p>
-<div class='card card-sard'>
-<div class='card-body'>
-<div class='perf white x8 mt-2'></div>
-</div>
-</div>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<h3 class='mt-3'>Perforations as Card dividers</h3>
-<p>Perforations were origionally designed as dividers between card body dividers. They can be placed within Cards, Panels or Fieldsets to divide them.</p>
-</div>
-<div class='col-sm-4'>
-<div class='card card-sard'>
-<div class='card-header'>Card</div>
-<div class='card-body'>
-<p>
-They can be placed between two card bodies
+<p class='lead'>
+Sard Nav Tabs are created for use on the Job Planning, Portfolio and Appraisals pages, but have a different look on each.
 </p>
 </div>
-<div class='perf'></div>
-<div class='card-body'>
-<p>Like this</p>
-<hr class='black'>
-<p>Or within a .card-body</p>
-<div class='perf'></div>
-<p>like this</p>
 </div>
+<!-- / sard-nav-tabs Must be part of a row -->
+<div class='row sard-nav-tabs'>
+<!-- main-nav must be part of col -->
+<div class='col col-sm-3 col-xl-2'>
+<div class='snt-main-nav'>
+<div class='row pb'>
+<div class='nav-info'>
+<div class='col-xs-6 col-sm-12 activity-summary'>
+<h5>Activity Summary</h5>
+<div id='left-activity-summary' style='position: relative; zoom: 1;'>
+<table class='table table-sard'>
+<thead>
+<tr class='TITLE'>
+<th> </th>
+<th>Hours</th>
+<th>PAs</th>
+</tr>
+</thead>
+<tbody>
+<tr class='DCC'>
+<td>
+<strong>
+DCC
+</strong>
+</td>
+<td>24.82</td>
+<td>6.401</td>
+</tr>
+<tr class='SPA'>
+<td>
+<strong>
+SPA
+</strong>
+</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class='TOTAL'>
+<td>
+<strong>
+TOTAL
+</strong>
+</td>
+<td>28.82</td>
+<td>7.401</td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>
-The Default Perforation for use in Cards is white, 8px. So you only need to have the following code:
+<div id='left-activity-summary-toggles'>
+<div class='sa-checkbox'>
+<input id='core_toggle' type='checkbox'>
+<label class='no-pdf' for='core_toggle'>
+<span class='checkbox'>Core</span>
+</label>
+<input id='apa_toggle' type='checkbox'>
+<label class='no-pdf' for='apa_toggle'>
+<span class='checkbox'>APA</span>
+</label>
+<input id='atc_toggle' type='checkbox'>
+<label class='no-pdf' for='atc_toggle' id='atc_toggle_label'>
+<span class='checkbox'>ATC</span>
+</label>
+</div>
+<p class='atc_warning' id='atc_warning' style='display: none;'>Includes uncontracted work</p>
+</div>
+<div class='no-pdf' id='left-activity-summary-on-call'>
+<div id='on-call'>
+<strong>On-Call</strong>
 <br>
-<code>.card-body</code>
+Low frequency: 1 in 9 or less frequent
 <br>
-<code>.perf</code>
+Agreed category: A
 <br>
-<code>.card-body</code>
-</p>
+On call supplement: 3.0%
 </div>
-<div class='col-sm-4'>
-<div class='panel panel-sard'>
-<div class='panel-header'>Panel</div>
-<div class='panel-body'>
+</div>
+</div>
+<div class='col-xs-6 col-sm-12 nav-info-buttons no-pdf'>
 <p>
-They can be placed between two panel bodies
+<a class='btn btn-xs btn-default' href='/online_job_plans/5d1cae7c4a67d131446cf5a0/summary_pdf.pdf' target='_blank'>Summary PDF</a>
 </p>
-</div>
-<div class='perf'></div>
-<div class='panel-body'>
-<p>Like this</p>
-<hr class='black'>
-<p>Or within a .panel-body</p>
-<div class='perf'></div>
-<p>like this</p>
-</div>
-</div>
 <p>
-The Default Perforation for use in panels is white, 8px. So you only need to have the following code:
-<br>
-<code>.panel-body</code>
-<br>
-<code>.perf</code>
-<br>
-<code>.panel-body</code>
+<a class='btn btn-xs btn-default' href='/online_job_plans/5d1cae7c4a67d131446cf5a0/full_pdf.pdf' target='_blank'>Full PDF</a>
 </p>
-</div>
-<div class='col-sm-4'>
-<fieldset>
-<legend>Fieldset</legend>
-<div class='form-group'>
 <p>
-They can be placed between two form groups
+<a class='btn btn-xs btn-default' id='create_template_button'>Share as Template</a>
 </p>
 </div>
-<div class='perf'></div>
-<div class='form-group'>
-<p>Like this</p>
-<hr class='black'>
-<p>Or within a .form-group</p>
-<div class='perf'></div>
-<p>like this</p>
 </div>
-</fieldset>
+</div>
+<div class='no-pdf' id='nav-col'>
+<div class='nav-row active' id='#nav-instructions'>
+<a href='#section/instructions'>
+<div class='number'>
+0
+</div>
+<div class='title'>
+Instructions
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-general_info'>
+<a href='#section/general_info'>
+<div class='number'>
+1
+</div>
+<div class='title'>
+General Info
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-signatories'>
+<a href='#section/signatories'>
+<div class='number'>
+2
+</div>
+<div class='title'>
+Signatories
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-timetable'>
+<a href='#section/timetable'>
+<div class='number'>
+3
+</div>
+<div class='title'>
+Timetable
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-on_call_supplement'>
+<a href='#section/on_call_supplement'>
+<div class='number'>
+4
+</div>
+<div class='title'>
+On-Call Supplement
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-spa_notes'>
+<a href='#section/spa_notes'>
+<div class='number'>
+5
+</div>
+<div class='title'>
+SPA Notes
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-additional_external'>
+<a href='#section/additional_external'>
+<div class='number'>
+6
+</div>
+<div class='title'>
+Additional / External
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-other_agreements'>
+<a href='#section/other_agreements'>
+<div class='number'>
+7
+</div>
+<div class='title'>
+Other Agreements
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-additional_pas'>
+<a href='#section/additional_pas'>
+<div class='number'>
+8
+</div>
+<div class='title'>
+APAs / ATCs
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-fee_paying_services'>
+<a href='#section/fee_paying_services'>
+<div class='number'>
+9
+</div>
+<div class='title'>
+Fee Paying Services
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-private_practice'>
+<a href='#section/private_practice'>
+<div class='number'>
+10
+</div>
+<div class='title'>
+Private Practice
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-objectives'>
+<a href='#section/objectives'>
+<div class='number'>
+11
+</div>
+<div class='title'>
+Objectives
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-supporting_resources'>
+<a href='#section/supporting_resources'>
+<div class='number'>
+12
+</div>
+<div class='title'>
+Supporting Resources
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-general_discussion'>
+<a href='#section/general_discussion'>
+<div class='number'>
+13
+</div>
+<div class='title'>
+General Discussion
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-meetings'>
+<a href='#section/meetings'>
+<div class='number'>
+14
+</div>
+<div class='title'>
+Meetings
+</div>
+</a>
+</div>
+<div class='nav-row' id='#nav-sign_off'>
+<a href='#section/sign_off'>
+<div class='number'>
+15
+</div>
+<div class='title'>
+Sign Off
+</div>
+</a>
+</div>
+</div>
+<div class='submit-button no-pdf'>
+<div id='job-plan-status'>
 <p>
-The Default Perforation for use in fieldsets is white, 8px. So you only need to have the following code:
-<br>
-<code>.form-group</code>
-<br>
-<code>.perf</code>
-<br>
-<code>.form-group</code>
+<a class='btn btn-block btn-sm btn-success send_for_sign_off' href='#'>
+Submit for Sign Off
+</a>
 </p>
 </div>
+</div>
+</div>
+</div>
+<!-- main-section must be part of col -->
+<div class='col col-sm-9 col-xl-10 snt-main-section'>
+<div class='pb' id='section-view'>
+<div class='section'>
+<div class='row no-pdf'>
+<div class='col-xs-12'>
+<div class='header'>
+<h3>Instructions</h3>
+</div>
+<div class='main'>
+<div class='rc job_plan_instructions link-external'>
+<p>Job plans are an annual agreement between the employer and the doctor setting out:</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END SARD Nav Tabs -->
 </div>
 </div>
 <div class='sa-footer'>
