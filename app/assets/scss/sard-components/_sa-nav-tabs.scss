@@ -169,7 +169,7 @@ $tab-number-bg:           $sa-grey-12;
   }
 
   @include respond-to(md-break-up){ 
-    vertical-align: middle;    
+    vertical-align: top;    
     min-width: 40px;
     width: 40px;
     min-height: 40px;
@@ -178,6 +178,7 @@ $tab-number-bg:           $sa-grey-12;
     @include roboto-light;
     font-size: 24px;
     line-height: 1em;
+    padding-top: 8px;
   }
 } 
 
@@ -190,8 +191,8 @@ $tab-number-bg:           $sa-grey-12;
   line-height: 1.2em;
   
   @include respond-to(md-break-up){ 
-    vertical-align: middle;
-    padding: 8px;
+    vertical-align: top;
+    padding: 7px 8px 8px 8px;
     padding-right: 10px;
   }
 }

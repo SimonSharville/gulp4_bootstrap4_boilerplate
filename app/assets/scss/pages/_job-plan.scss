@@ -7,3 +7,23 @@
 #job-plan .sard-nav-tabs .nav-row .number{
   background-color: $tab-number-bg;
 }
+
+// Activity Summary =================================================
+
+#job-plan .activity-summary{
+
+// Categorisation colours using the SARD light-colour palette
+// see /Dropbox/SARD JV Shared/5. Sales and Marketing/3. SARD Assets/Colour Pallets/SARD_Colours.pdf
+#job-plan .activity-summary table{
+  .TRAV td { background-color: $jp_trav; border-color: $jp_trav; border-top: $jp_trav; }
+  .FPS td { background-color: $jp_fps; border-color: $jp_fps; border-top: $jp_fps; }
+  .MS td { background-color: $jp_ms; border-color: $jp_ms; border-top: $jp_ms; }
+  .ED td { background-color: $jp_ed; border-color: $jp_ed; border-top: $jp_ed; }
+  .SPA td { background-color: $jp_spa; border-color: $jp_spa; border-top: $jp_spa; }
+  .DCC td { background-color: $jp_dcc; border-color: $jp_dcc; border-top: $jp_dcc; }
+  .PRIV td { background-color: $jp_priv; border-color: $jp_priv; border-top: $jp_priv; }
+  .AR td { background-color: $jp_ar; border-color: $jp_ar; border-top: $jp_ar; }
+  .UNI td { background-color: $jp_uni; border-color: $jp_uni; border-top: $jp_uni; }
+  .TOTAL td, .TITLE { background-color: $tab-colour-active; border-color: $tab-colour-active; border-top: $tab-colour-active; color: #FFFFFF; }
+  .warning{ color: red; }
+}

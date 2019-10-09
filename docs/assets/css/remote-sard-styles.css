@@ -20973,6 +20973,30 @@ body.rag-key-expanded {
   padding-top: 6px;
 }
 
+.rag-red {
+  background-color: #BF0000;
+}
+
+.rag-amber {
+  background-color: #FFB200;
+}
+
+.rag-green {
+  background-color: #359E00;
+}
+
+.rag-na {
+  background-color: #827D7D;
+}
+
+.rag-white {
+  background-color: #fff;
+}
+
+.rag-default {
+  background-color: #403D3D;
+}
+
 .sard-nav-tabs {
   display: block;
 }
@@ -21168,7 +21192,7 @@ body.rag-key-expanded {
 
 @media only screen and (min-width: 768px) {
   .sard-nav-tabs .nav-row .number {
-    vertical-align: middle;
+    vertical-align: top;
     min-width: 40px;
     width: 40px;
     min-height: 40px;
@@ -21177,6 +21201,7 @@ body.rag-key-expanded {
     font-weight: 300;
     font-size: 24px;
     line-height: 1em;
+    padding-top: 8px;
   }
 }
 
@@ -21191,8 +21216,8 @@ body.rag-key-expanded {
 
 @media only screen and (min-width: 768px) {
   .sard-nav-tabs .nav-row .title {
-    vertical-align: middle;
-    padding: 8px;
+    vertical-align: top;
+    padding: 7px 8px 8px 8px;
     padding-right: 10px;
   }
 }
@@ -21221,12 +21246,129 @@ body.rag-key-expanded {
   }
 }
 
+#appraisal-sections-nav .section-status.number {
+  min-width: 0px;
+  width: 0px;
+}
+
+@media (max-width: 767px) {
+  #appraisal-sections-nav .section-title {
+    padding-right: 30px;
+  }
+  #appraisal-sections-nav .section-number.number + .section-title + .section-status:before {
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-color: transparent;
+    margin-left: -30px;
+    margin-top: 6px;
+    margin-bottom: -6px;
+    content: "";
+    display: inline-block;
+  }
+  #appraisal-sections-nav .section-number.number.rag-green + .section-title + .section-status:before {
+    background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
+  }
+  #appraisal-sections-nav .section-number.number.rag-red + .section-title + .section-status:before {
+    background-image: url("../rag-icons/rag-icon-circle-sm@2x.png");
+  }
+}
+
+@media (min-width: 768px) {
+  #appraisal-sections-nav .section-title {
+    padding-right: 40px;
+  }
+  #appraisal-sections-nav .section-number.number + .section-title + .section-status:before {
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-color: transparent;
+    margin-left: -43px;
+    margin-top: -2px;
+    content: "";
+    display: inline-block;
+  }
+  #appraisal-sections-nav .section-number.number.rag-green + .section-title + .section-status:before {
+    background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
+  }
+  #appraisal-sections-nav .section-number.number.rag-red + .section-title + .section-status:before {
+    background-image: url("../rag-icons/rag-icon-danger-plus-sm@2x.png");
+  }
+}
+
 #job-plan .sard-nav-tabs .nav-row.active .number {
   background-color: #474543;
 }
 
 #job-plan .sard-nav-tabs .nav-row .number {
   background-color: #827D7D;
+}
+
+#job-plan .activity-summary table .TRAV td {
+  background-color: #ED4D9D;
+  border-color: #ED4D9D;
+  border-top: #ED4D9D;
+}
+
+#job-plan .activity-summary table .FPS td {
+  background-color: #D24D4D;
+  border-color: #D24D4D;
+  border-top: #D24D4D;
+}
+
+#job-plan .activity-summary table .MS td {
+  background-color: #FF974D;
+  border-color: #FF974D;
+  border-top: #FF974D;
+}
+
+#job-plan .activity-summary table .ED td {
+  background-color: #FFC94D;
+  border-color: #FFC94D;
+  border-top: #FFC94D;
+}
+
+#job-plan .activity-summary table .SPA td {
+  background-color: #72BB4D;
+  border-color: #72BB4D;
+  border-top: #72BB4D;
+}
+
+#job-plan .activity-summary table .DCC td {
+  background-color: #4DC9C9;
+  border-color: #4DC9C9;
+  border-top: #4DC9C9;
+}
+
+#job-plan .activity-summary table .PRIV td {
+  background-color: #4D77C9;
+  border-color: #4D77C9;
+  border-top: #4D77C9;
+}
+
+#job-plan .activity-summary table .AR td {
+  background-color: #B84DB8;
+  border-color: #B84DB8;
+  border-top: #B84DB8;
+}
+
+#job-plan .activity-summary table .UNI td {
+  background-color: #C2D26F;
+  border-color: #C2D26F;
+  border-top: #C2D26F;
+}
+
+#job-plan .activity-summary table .TOTAL td, #job-plan .activity-summary table .TITLE {
+  background-color: #615E5C;
+  border-color: #615E5C;
+  border-top: #615E5C;
+  color: #FFFFFF;
+}
+
+#job-plan .activity-summary table .warning {
+  color: red;
 }
 
 header {

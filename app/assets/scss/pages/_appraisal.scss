@@ -6,3 +6,61 @@
     border-top: 1px solid white; 
   }
 }
+
+// Appraisal Tabs ===============================
+// This adds a success icon when green
+
+#appraisal-sections-nav{
+
+  .section-status.number{ // Overrides the .sard-nav-tabs.nav-row.number
+    min-width: 0px;
+    width: 0px;
+  }
+
+@media (max-width: 767px){ // Xtra-Small screens
+  .section-title{
+    padding-right: 30px;
+  }
+  .section-number.number + .section-title + .section-status:before{
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-color: transparent;
+    margin-left:-30px;
+    margin-top:6px;
+    margin-bottom:-6px;
+    content: "" ;
+    display: inline-block;
+  }
+  .section-number.number.rag-green + .section-title + .section-status:before{
+    background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
+  }
+  .section-number.number.rag-red + .section-title + .section-status:before{
+    background-image: url("../rag-icons/rag-icon-circle-sm@2x.png");
+  }
+}
+@media (min-width: 768px){ // Small screens up
+  .section-title{
+    padding-right: 40px;
+  }
+
+  .section-number.number + .section-title + .section-status:before{
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-color: transparent;
+    margin-left:-43px;
+    margin-top:-2px;
+    content: "" ;
+    display: inline-block;
+  }
+  .section-number.number.rag-green + .section-title + .section-status:before{
+    background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
+  }
+  .section-number.number.rag-red + .section-title + .section-status:before{
+    background-image: url("../rag-icons/rag-icon-danger-plus-sm@2x.png");
+  }
+}
+}

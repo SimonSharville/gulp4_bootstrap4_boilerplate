@@ -1,0 +1,20 @@
+// SARD Rag Status ==============================
+
+$rag-red:          $sa-red;
+$rag-amber:        $sa-yellow;
+$rag-green:        $sa-green;
+$rag-na:           $sa-grey-12;
+$rag-white:        $white;
+
+// Colouring
+.rag-red{ background-color:$rag-red; }
+
+.rag-amber{ background-color:$rag-amber; }
+
+.rag-green{ background-color:$rag-green; }
+
+.rag-na{ background-color:$rag-na; }
+
+.rag-white{ background-color:$rag-white; }
+
+.rag-default{ background-color:$sa-grey-16; }
