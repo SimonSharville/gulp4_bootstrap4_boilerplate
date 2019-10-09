@@ -2,17 +2,17 @@
 
 
 
-$tab-colour:              $sa-grey-04;
-$tab-colour-hover:        $sa-grey-07;
-$tab-colour-active:       $sa-grey-16;
-$tab-number-bg:           $sa-grey-14;
+$tab-colour:              $sa-grey-03;
+$tab-colour-hover:        $sa-grey-05;
+$tab-shadow:              $sa-grey-07;
+$tab-colour-active:       $sa-grey-14;
+$tab-number-bg:           $sa-grey-12;
 
 
 // Structure ------------------------------------
 .sard-nav-tabs{
-  // background-color: pink;
   display: block;
-  @media screen and (min-width: $break-md) {
+  @include respond-to(md-break-up) {
     display: table;
     vertical-align: top;
   }
@@ -50,6 +50,14 @@ $tab-number-bg:           $sa-grey-14;
     display: block;
   }
 
+  .nav-row {
+    display: table;
+    width: 100%;
+    @include respond-to(md-break-up){
+      margin-bottom: 5px;
+    }
+}
+
   .snt-main-section{
     @include respond-to(md-break-down){
       display: block;
@@ -78,15 +86,134 @@ $tab-number-bg:           $sa-grey-14;
 
 // Styling --------------------------------------
 
+// snt-main-nav -------------
 .sard-nav-tabs{
-  .activity-summary-table{
-    border: 1px solid $tab-colour-active;
+  #left-activity-summary{
     position: relative; 
     zoom: 1;
+  }
+
+  #left-activity-summary-toggles{
+    border: 1px solid $tab-colour-active;
+    border-top: none;
+    padding-top: 7px;
+    padding-left: 10px;
+    margin-top: -20px;
     @include respond-to(md-break-up){
       border-right: none;
     }
+    .sa-checkbox label {
+      padding-right: 10px;
+    }
   }
+
+  #on-call{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $tab-colour-active;
+  }
+
+  .nav-info-buttons p{
+    margin-bottom: 10px;
+  }
+
+  .submit-button {
+    margin-top: 10px;
+    @include respond-to(md-break-up){
+      margin-right: 10px;
+    }
+  }
+} // End .sard-nav-tabs
+
+// Tabs ---------------------
+.sard-nav-tabs{
+  .nav-row a {
+    display: table-cell;
+    background-color: $tab-colour;
+    color: $text;
+    &:hover{
+      background-color: $tab-colour-hover;
+    }
+    @include respond-to(md-break-down){
+      border-top: 1px solid white;
+    }
+    @include respond-to(md-break-up){
+      box-shadow: inset -5px 0px 0px 0px $tab-shadow;
+    }
+  }
+
+  .nav-row.active a{
+    background-color: $tab-colour-active;
+    color: white;
+    @include respond-to(md-break-up){
+      box-shadow: none;
+    }
+  }
+ 
+} // End .sard-nav-tabs 
+
+// Tab Numbers --------------
+.sard-nav-tabs .nav-row .number{
+  color: white;
+  display: table-cell;
+  text-align: center;
+  letter-spacing: $tight;
+  @include respond-to(md-break-down){ 
+    min-width: 25px;
+    width: 25px;
+    min-height: 25px;
+    height: 25px;
+
+    @include roboto-regular;
+    font-size: 14px;
+  }
+
+  @include respond-to(md-break-up){ 
+    vertical-align: middle;    
+    min-width: 40px;
+    width: 40px;
+    min-height: 40px;
+    height: 40px;
+
+    @include roboto-light;
+    font-size: 24px;
+    line-height: 1em;
+  }
+} 
+// Job Plan only
+#job-plan .sard-nav-tabs .nav-row.active .number{
+  background-color: darken($tab-colour-active, 10%);
+}
+#job-plan .sard-nav-tabs .nav-row .number{
+  background-color: $tab-number-bg;
+}
+
+// Apprasials only
+#appraisal .sard-nav-tabs .nav-row .number{
+  @include respond-to(md-break-down){ 
+    border-top: 1px solid white; 
+  }
+}
+
+// Tab Titles ---------------
+.sard-nav-tabs .nav-row .title{
+  display: table-cell;
+  padding: 5px 8px;
+  @include roboto-regular;
+  font-size: 14px;
+  line-height: 1.2em;
+  
+  @include respond-to(md-break-up){ // Small screens up
+    vertical-align: middle;
+    padding: 8px;
+    padding-right: 10px;
+  }
+}
+
+
+
+// Main Section -------------
+.sard-nav-tabs{
   .snt-main-section{
     border: 1px solid $tab-colour-active;
     padding-left: 20px;

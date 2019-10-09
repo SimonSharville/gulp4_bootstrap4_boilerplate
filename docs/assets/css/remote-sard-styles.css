@@ -20977,7 +20977,7 @@ body.rag-key-expanded {
   display: block;
 }
 
-@media screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .sard-nav-tabs {
     display: table;
     vertical-align: top;
@@ -21024,6 +21024,17 @@ body.rag-key-expanded {
   display: block;
 }
 
+.sard-nav-tabs .nav-row {
+  display: table;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .sard-nav-tabs .nav-row {
+    margin-bottom: 5px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .sard-nav-tabs .snt-main-section {
     display: block;
@@ -21058,33 +21069,163 @@ body.rag-key-expanded {
   vertical-align: top;
 }
 
-.sard-nav-tabs .activity-summary-table {
-  border: 1px solid #403D3D;
+.sard-nav-tabs #left-activity-summary {
   position: relative;
   zoom: 1;
 }
 
+.sard-nav-tabs #left-activity-summary-toggles {
+  border: 1px solid #615E5C;
+  border-top: none;
+  padding-top: 7px;
+  padding-left: 10px;
+  margin-top: -20px;
+}
+
 @media only screen and (min-width: 768px) {
-  .sard-nav-tabs .activity-summary-table {
+  .sard-nav-tabs #left-activity-summary-toggles {
     border-right: none;
   }
 }
 
+.sard-nav-tabs #left-activity-summary-toggles .sa-checkbox label {
+  padding-right: 10px;
+}
+
+.sard-nav-tabs #on-call {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #615E5C;
+}
+
+.sard-nav-tabs .nav-info-buttons p {
+  margin-bottom: 10px;
+}
+
+.sard-nav-tabs .submit-button {
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .sard-nav-tabs .submit-button {
+    margin-right: 10px;
+  }
+}
+
+.sard-nav-tabs .nav-row a {
+  display: table-cell;
+  background-color: #E3E1E1;
+  color: #211F0F;
+}
+
+.sard-nav-tabs .nav-row a:hover {
+  background-color: #d0cecd;
+}
+
+@media only screen and (max-width: 767px) {
+  .sard-nav-tabs .nav-row a {
+    border-top: 1px solid white;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sard-nav-tabs .nav-row a {
+    -webkit-box-shadow: inset -5px 0px 0px 0px #bdbab9;
+    box-shadow: inset -5px 0px 0px 0px #bdbab9;
+  }
+}
+
+.sard-nav-tabs .nav-row.active a {
+  background-color: #615E5C;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .sard-nav-tabs .nav-row.active a {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.sard-nav-tabs .nav-row .number {
+  color: white;
+  display: table-cell;
+  text-align: center;
+  letter-spacing: -0.05rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .sard-nav-tabs .nav-row .number {
+    min-width: 25px;
+    width: 25px;
+    min-height: 25px;
+    height: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sard-nav-tabs .nav-row .number {
+    vertical-align: middle;
+    min-width: 40px;
+    width: 40px;
+    min-height: 40px;
+    height: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+
+#job-plan .sard-nav-tabs .nav-row.active .number {
+  background-color: #474543;
+}
+
+#job-plan .sard-nav-tabs .nav-row .number {
+  background-color: #827D7D;
+}
+
+@media only screen and (max-width: 767px) {
+  #appraisal .sard-nav-tabs .nav-row .number {
+    border-top: 1px solid white;
+  }
+}
+
+.sard-nav-tabs .nav-row .title {
+  display: table-cell;
+  padding: 5px 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .sard-nav-tabs .nav-row .title {
+    vertical-align: middle;
+    padding: 8px;
+    padding-right: 10px;
+  }
+}
+
 .sard-nav-tabs .snt-main-section {
-  border: 1px solid #403D3D;
+  border: 1px solid #615E5C;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 @media only screen and (max-width: 767px) {
   .sard-nav-tabs .snt-main-section {
-    border-top: 10px solid #403D3D;
+    border-top: 10px solid #615E5C;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .sard-nav-tabs .snt-main-section {
-    border-left: 10px solid #403D3D;
+    border-left: 10px solid #615E5C;
   }
 }
 

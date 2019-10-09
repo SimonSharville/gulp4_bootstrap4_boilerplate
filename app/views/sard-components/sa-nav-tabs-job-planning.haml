@@ -9,7 +9,7 @@
   %body.theme-trust
     //=include ../navbars/_navbar-x1.haml
 
-    .container
+    #job-plan.container
       .row
         .col-sm-12
           %h1#links.bs-anchor Sard Nav Tabs - Job Planning
@@ -20,15 +20,15 @@
             Sard Nav Tabs are created for use on the Job Planning, Portfolio and Appraisals pages, but have a different look on each. 
 
 
-      // sard-nav-tabs Must be part of a row
       .row
         .col-sm-12
+          // sard-nav-tabs
           .sard-nav-tabs
             .snt-main-nav.pb
               .nav-info
                 .activity-summary
                   %h5 Activity Summary
-                  #left-activity-summary.activity-summary-table{:style => "position: relative; zoom: 1;"}
+                  #left-activity-summary
                     %table.table.table-sard
                       %thead
                         %tr.TITLE
