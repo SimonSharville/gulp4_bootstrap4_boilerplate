@@ -121,33 +121,9 @@ $container-max-widths: (
   xxl: 1518px // Added
 );
 
-$break-sm: 576px;
-$break-md: 768px;
-$break-lg: 992px;
-$break-xl: 1200px;
-$break-xxl: 1590px;
+// Responsive Media Queries ---------------------
+// See sa-variables
 
-// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
-@mixin respond-to($media) {
-  @if $media == xs-screens {
-    @media only screen and (max-width: $break-sm) { @content; }
-  }
-  @else if $media == sm-screens {
-    @media only screen and (min-width: $break-sm) and (max-width: $break-md) { @content; }
-  }
-  @else if $media == md-screens {
-    @media only screen and (min-width: $break-md) and (max-width: $break-lg) { @content; }
-  }
-  @else if $media == lg-screens {
-    @media only screen and (min-width: $break-lg) and (max-width: $break-xl) { @content; }
-  }
-  @else if $media == xl-screens {
-    @media only screen and (min-width: $break-xl) and (max-width: $break-xxl) { @content; }
-  }
-  @else if $media == xxl-screens {
-    @media only screen and (min-width: $break-xxl) { @content; }
-  }
-}
 
 
 /* Small devices (landscape phones, 576px and up) */

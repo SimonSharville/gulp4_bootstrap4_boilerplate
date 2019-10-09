@@ -20,24 +20,21 @@ $tab-number-bg:           $sa-grey-14;
 
 .sard-nav-tabs{
   .snt-main-nav{
-    // background-color: yellow;
-    display: block;
+    @include respond-to(md-break-down){
+      display: block;
+    }
     @include respond-to(md-screens){
       display: table-cell;
       vertical-align: top;
-      width: 30%;
+      width: 25%;
     }
     @include respond-to(lg-screens){
       display: table-cell;
       vertical-align: top;
       width: 25%;
     }
-    @include respond-to(lxl-screens){
-      display: table-cell;
-      vertical-align: top;
-      width: 25%;
-    }
-    @media screen and (min-width: $break-xl) {
+
+    @include respond-to(xl-break-up) {
       display: table-cell;
       vertical-align: top;
       width: 25%;
@@ -54,24 +51,20 @@ $tab-number-bg:           $sa-grey-14;
   }
 
   .snt-main-section{
-    display: block;
-    // background-color: lightblue;
+    @include respond-to(md-break-down){
+      display: block;
+    }
     @include respond-to(md-screens){
       display: table-cell;
       vertical-align: top;
-      width: 70%;
+      width: 75%;
     }
     @include respond-to(lg-screens){
       display: table-cell;
       vertical-align: top;
       width: 75%;
     }
-    @include respond-to(xl-screens){
-      display: table-cell;
-      vertical-align: top;
-      width: 75%;
-    }
-    @media screen and (min-width: $break-xl) {
+    @include respond-to(xl-break-up) {
       display: table-cell;
       vertical-align: top;
       width: 75%;
@@ -88,7 +81,9 @@ $tab-number-bg:           $sa-grey-14;
 .sard-nav-tabs{
   .activity-summary-table{
     border: 1px solid $tab-colour-active;
-    @media screen and (min-width: $break-md){
+    position: relative; 
+    zoom: 1;
+    @include respond-to(md-break-up){
       border-right: none;
     }
   }
@@ -96,10 +91,10 @@ $tab-number-bg:           $sa-grey-14;
     border: 1px solid $tab-colour-active;
     padding-left: 20px;
     padding-right: 20px;
-    @media screen and (max-width: $break-md){
+    @include respond-to(md-break-down){
       border-top: 10px solid $tab-colour-active;
     }
-    @media screen and (min-width: $break-md){
+    @include respond-to(md-break-up){
       border-left: 10px solid $tab-colour-active;
     }
   }
