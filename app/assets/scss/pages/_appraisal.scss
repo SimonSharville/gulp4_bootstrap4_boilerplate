@@ -1,0 +1,8 @@
+// Appraisal ====================================
+
+// sa nav tabs --------------
+#appraisal .sard-nav-tabs .nav-row .number{
+  @include respond-to(md-break-down){ 
+    border-top: 1px solid white; 
+  }
+}

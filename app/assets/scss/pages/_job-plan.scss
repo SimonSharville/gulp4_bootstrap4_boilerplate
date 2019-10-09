@@ -1,0 +1,9 @@
+// Job Plan =====================================
+
+// sa-nav-tabs --------------
+#job-plan .sard-nav-tabs .nav-row.active .number{
+  background-color: darken($tab-colour-active, 10%);
+}
+#job-plan .sard-nav-tabs .nav-row .number{
+  background-color: $tab-number-bg;
+}

@@ -21180,20 +21180,6 @@ body.rag-key-expanded {
   }
 }
 
-#job-plan .sard-nav-tabs .nav-row.active .number {
-  background-color: #474543;
-}
-
-#job-plan .sard-nav-tabs .nav-row .number {
-  background-color: #827D7D;
-}
-
-@media only screen and (max-width: 767px) {
-  #appraisal .sard-nav-tabs .nav-row .number {
-    border-top: 1px solid white;
-  }
-}
-
 .sard-nav-tabs .nav-row .title {
   display: table-cell;
   padding: 5px 8px;
@@ -21227,6 +21213,20 @@ body.rag-key-expanded {
   .sard-nav-tabs .snt-main-section {
     border-left: 10px solid #615E5C;
   }
+}
+
+@media only screen and (max-width: 767px) {
+  #appraisal .sard-nav-tabs .nav-row .number {
+    border-top: 1px solid white;
+  }
+}
+
+#job-plan .sard-nav-tabs .nav-row.active .number {
+  background-color: #474543;
+}
+
+#job-plan .sard-nav-tabs .nav-row .number {
+  background-color: #827D7D;
 }
 
 header {
