@@ -11,7 +11,10 @@ $tab-number-bg:           $sa-grey-12;
 
 // Structure ------------------------------------
 .sard-nav-tabs{
-  display: block;
+  @include respond-to(md-break-down){
+    display: block;
+    @include breakout;
+  }
   @include respond-to(md-break-up) {
     display: table;
     vertical-align: top;
@@ -159,6 +162,7 @@ $tab-number-bg:           $sa-grey-12;
   text-align: center;
   letter-spacing: $tight;
   @include respond-to(md-break-down){ 
+    vertical-align: top;
     min-width: 25px;
     width: 25px;
     min-height: 25px;
@@ -204,11 +208,14 @@ $tab-number-bg:           $sa-grey-12;
     border: 1px solid $tab-colour-active;
     padding-left: 20px;
     padding-right: 20px;
+
     @include respond-to(md-break-down){
-      border-top: 10px solid $tab-colour-active;
+      border-top-width: 10px;
+      border-left-width: 1px;
     }
     @include respond-to(md-break-up){
-      border-left: 10px solid $tab-colour-active;
+      border-top-width: 1px;
+      border-left-width: 10px;
     }
   }
 } // End .sard-nav-tabs

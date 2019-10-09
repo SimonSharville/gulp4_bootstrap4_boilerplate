@@ -12444,6 +12444,17 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.breakout {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
 body {
   margin-bottom: 70px;
 }
@@ -20997,8 +21008,18 @@ body.rag-key-expanded {
   background-color: #403D3D;
 }
 
-.sard-nav-tabs {
-  display: block;
+@media only screen and (max-width: 768px) {
+  .sard-nav-tabs {
+    display: block;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-left: 44px;
+    padding-right: 44px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -21008,13 +21029,13 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .sard-nav-tabs .snt-main-nav {
     display: block;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 990px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .sard-nav-tabs .snt-main-nav {
     display: table-cell;
     vertical-align: top;
@@ -21022,7 +21043,7 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1198px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .sard-nav-tabs .snt-main-nav {
     display: table-cell;
     vertical-align: top;
@@ -21059,13 +21080,13 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .sard-nav-tabs .snt-main-section {
     display: block;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 990px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .sard-nav-tabs .snt-main-section {
     display: table-cell;
     vertical-align: top;
@@ -21073,7 +21094,7 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1198px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .sard-nav-tabs .snt-main-section {
     display: table-cell;
     vertical-align: top;
@@ -21146,7 +21167,7 @@ body.rag-key-expanded {
   background-color: #d0cecd;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .sard-nav-tabs .nav-row a {
     border-top: 1px solid white;
   }
@@ -21178,8 +21199,9 @@ body.rag-key-expanded {
   letter-spacing: -0.05rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .sard-nav-tabs .nav-row .number {
+    vertical-align: top;
     min-width: 25px;
     width: 25px;
     min-height: 25px;
@@ -21228,19 +21250,21 @@ body.rag-key-expanded {
   padding-right: 20px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .sard-nav-tabs .snt-main-section {
-    border-top: 10px solid #615E5C;
+    border-top-width: 10px;
+    border-left-width: 1px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .sard-nav-tabs .snt-main-section {
-    border-left: 10px solid #615E5C;
+    border-top-width: 1px;
+    border-left-width: 10px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   #appraisal .sard-nav-tabs .nav-row .number {
     border-top: 1px solid white;
   }

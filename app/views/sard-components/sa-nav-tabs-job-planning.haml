@@ -6,10 +6,16 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:href => "../assets/css/remote-sard-styles.min.css", :rel => "stylesheet"}/
  
-  %body.theme-trust
+  %body#job-plan.theme-trust
     //=include ../navbars/_navbar-x1.haml
+    //=include ../navbars/_options-tab.haml
+    //=include ../navbars/_rag-tab.haml
 
-    #job-plan.container
+    .container-fluid
+      .row
+        .col
+          Test
+    .container
       .row
         .col-sm-12
           %h1#links.bs-anchor Sard Nav Tabs - Job Planning
@@ -199,7 +205,7 @@
                       %p Job plans are an annual agreement between the employer and the doctor setting out:
                       %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu scelerisque augue, in venenatis nulla. Proin ante dolor, tempus sed sem vel, viverra pulvinar eros. Aenean eros sapien, sollicitudin sed iaculis placerat, lacinia ut turpis. Nullam porttitor tellus a porttitor molestie. In ac dapibus odio, et egestas massa. Phasellus gravida gravida metus, in imperdiet ante mollis a. Integer tincidunt consectetur velit, pellentesque vulputate mauris sodales nec. Phasellus tempus ipsum eget magna rhoncus cursus. Curabitur aliquet nulla et leo molestie, facilisis ornare enim tempor. Curabitur dolor justo, imperdiet id dictum non, interdum vitae libero. Sed id nisl eu purus aliquam rutrum at at est. Sed condimentum augue volutpat vehicula molestie. Curabitur non est scelerisque, porta odio id, egestas metus. 
 
-        / END SARD Nav Tabs
+            / END SARD Nav Tabs
 
                 
     //=include ../navbars/_footer.haml

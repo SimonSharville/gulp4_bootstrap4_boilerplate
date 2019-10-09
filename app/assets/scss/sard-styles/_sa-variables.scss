@@ -4,11 +4,11 @@
 // http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
 
 //  -1px from bs-variables $grid-breakpoints
-$break-sm: 575px;
-$break-md: 767px;
-$break-lg: 991px;
-$break-xl: 1199px;
-$break-xxl: 1589px;
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$break-xxl: 1590px;
 
 
 @mixin respond-to($media) {
@@ -16,16 +16,16 @@ $break-xxl: 1589px;
     @media only screen and (max-width: $break-sm) { @content; }
   }
   @else if $media == sm-screens {
-    @media only screen and (min-width: $break-sm + 1) and (max-width: $break-md - 1) { @content; }
+    @media only screen and (min-width: $break-sm) and (max-width: $break-md) { @content; }
   }
   @else if $media == md-screens {
-    @media only screen and (min-width: $break-md + 1) and (max-width: $break-lg - 1) { @content; }
+    @media only screen and (min-width: $break-md) and (max-width: $break-lg) { @content; }
   }
   @else if $media == lg-screens {
-    @media only screen and (min-width: $break-lg + 1) and (max-width: $break-xl - 1) { @content; }
+    @media only screen and (min-width: $break-lg) and (max-width: $break-xl) { @content; }
   }
   @else if $media == xl-screens {
-    @media only screen and (min-width: $break-xl + 1) and (max-width: $break-xxl - 1) { @content; }
+    @media only screen and (min-width: $break-xl) and (max-width: $break-xxl) { @content; }
   }
   @else if $media == xxl-screens {
     @media only screen and (min-width: $break-xxl) { @content; }
@@ -34,32 +34,52 @@ $break-xxl: 1589px;
   // Up / Down Sizes
 
   @else if $media == sm-break-up {
-    @media only screen and (min-width: $break-sm +1) { @content; }
+    @media only screen and (min-width: $break-sm) { @content; }
   }
   @else if $media == md-break-down {
     @media only screen and (max-width: $break-md) { @content; }
   }
   @else if $media == md-break-up {
-    @media only screen and (min-width: $break-md +1) { @content; }
+    @media only screen and (min-width: $break-md) { @content; }
   }
   @else if $media == lg-break-down {
-    @media only screen and (max-width: $break-lg) { @content; }
+    @media only screen and (max-width: $break-lg ) { @content; }
   }
   @else if $media == lg-break-up {
-    @media only screen and (min-width: $break-lg +1) { @content; }
+    @media only screen and (min-width: $break-lg) { @content; }
   }
   @else if $media == xl-break-down {
-    @media only screen and (max-width: $break-xl) { @content; }
+    @media only screen and (max-width: $break-xl ) { @content; }
   }
   @else if $media == xl-break-up {
-    @media only screen and (min-width: $break-xl +1) { @content; }
+    @media only screen and (min-width: $break-xl) { @content; }
   }
   @else if $media == xxl-break-down {
-    @media only screen and (max-width: $break-xxl) { @content; }
+    @media only screen and (max-width: $break-xxl ) { @content; }
   }
 }
 
+@mixin breakout{
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-left: 44px;
+  padding-right: 44px;
+}
 
+.breakout{
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-left: 44px;
+  padding-right: 44px;
+}
 // ==================================================================
 
 // Spacing
