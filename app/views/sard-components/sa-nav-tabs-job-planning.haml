@@ -92,97 +92,97 @@
               
               #nav-col.nav-col.no-pdf
                 .nav-row.active{:id => "#nav-instructions"}
-                  %a{:href => "#section/instructions"}
+                  %a#defaultOpen.tablinks{:href => "#section_instructions", :onclick => "openSection(event, 'section_instructions')" }
                     .number
                       0
                     .title
                       Instructions
                 .nav-row{:id => "#nav-general_info"}
-                  %a{:href => "#section/general_info"}
+                  %a.tablinks{:href => "#section_general_info", :onclick => "openSection(event, 'section_general_info')" }
                     .number
                       1
                     .title
                       General Info
                 .nav-row{:id => "#nav-signatories"}
-                  %a{:href => "#section/signatories"}
+                  %a.tablinks{:href => "#section_signatories", :onclick => "openSection(event, 'section_signatories')" }
                     .number
                       2
                     .title
                       Signatories
                 .nav-row{:id => "#nav-timetable"}
-                  %a{:href => "#section/timetable"}
+                  %a{:href => "#section_timetable"}
                     .number
                       3
                     .title
                       Timetable
                 .nav-row{:id => "#nav-on_call_supplement"}
-                  %a{:href => "#section/on_call_supplement"}
+                  %a{:href => "#section_on_call_supplement"}
                     .number
                       4
                     .title
                       On-Call Supplement
                 .nav-row{:id => "#nav-spa_notes"}
-                  %a{:href => "#section/spa_notes"}
+                  %a{:href => "#section_spa_notes"}
                     .number
                       5
                     .title
                       SPA Notes
                 .nav-row{:id => "#nav-additional_external"}
-                  %a{:href => "#section/additional_external"}
+                  %a{:href => "#section_additional_external"}
                     .number
                       6
                     .title
                       Additional / External
                 .nav-row{:id => "#nav-other_agreements"}
-                  %a{:href => "#section/other_agreements"}
+                  %a{:href => "#section_other_agreements"}
                     .number
                       7
                     .title
                       Other Agreements
                 .nav-row{:id => "#nav-additional_pas"}
-                  %a{:href => "#section/additional_pas"}
+                  %a{:href => "#section_additional_pas"}
                     .number
                       8
                     .title
                       APAs / ATCs
                 .nav-row{:id => "#nav-fee_paying_services"}
-                  %a{:href => "#section/fee_paying_services"}
+                  %a{:href => "#section_fee_paying_services"}
                     .number
                       9
                     .title
                       Fee Paying Services
                 .nav-row{:id => "#nav-private_practice"}
-                  %a{:href => "#section/private_practice"}
+                  %a{:href => "#section_private_practice"}
                     .number
                       10
                     .title
                       Private Practice
                 .nav-row{:id => "#nav-objectives"}
-                  %a{:href => "#section/objectives"}
+                  %a{:href => "#section_objectives"}
                     .number
                       11
                     .title
                       Objectives
                 .nav-row{:id => "#nav-supporting_resources"}
-                  %a{:href => "#section/supporting_resources"}
+                  %a{:href => "#section_supporting_resources"}
                     .number
                       12
                     .title
                       Supporting Resources
                 .nav-row{:id => "#nav-general_discussion"}
-                  %a{:href => "#section/general_discussion"}
+                  %a{:href => "#section_general_discussion"}
                     .number
                       13
                     .title
                       General Discussion
                 .nav-row{:id => "#nav-meetings"}
-                  %a{:href => "#section/meetings"}
+                  %a{:href => "#section_meetings"}
                     .number
                       14
                     .title
                       Meetings
                 .nav-row{:id => "#nav-sign_off"}
-                  %a{:href => "#section/sign_off"}
+                  %a{:href => "#section_sign_off"}
                     .number
                       15
                     .title
@@ -197,13 +197,27 @@
             / main-section
             .snt-main-section
               #section-view.section-view.pb
-                .section.no-pdf
+                #section_instructions.section.no-pdf
                   .header
                     %h3 Instructions
                   .main
                     .rc.job_plan_instructions.link-external
                       %p Job plans are an annual agreement between the employer and the doctor setting out:
-                      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu scelerisque augue, in venenatis nulla. Proin ante dolor, tempus sed sem vel, viverra pulvinar eros. Aenean eros sapien, sollicitudin sed iaculis placerat, lacinia ut turpis. Nullam porttitor tellus a porttitor molestie. In ac dapibus odio, et egestas massa. Phasellus gravida gravida metus, in imperdiet ante mollis a. Integer tincidunt consectetur velit, pellentesque vulputate mauris sodales nec. Phasellus tempus ipsum eget magna rhoncus cursus. Curabitur aliquet nulla et leo molestie, facilisis ornare enim tempor. Curabitur dolor justo, imperdiet id dictum non, interdum vitae libero. Sed id nisl eu purus aliquam rutrum at at est. Sed condimentum augue volutpat vehicula molestie. Curabitur non est scelerisque, porta odio id, egestas metus. 
+                       
+                
+                #section_general_info.section.no-pdf
+                  .header
+                    %h3 General Info
+                  .main
+                    .rc.job_plan_instructions.link-external
+                      %p Job plans are an annual
+                
+                #section_signatories.section.no-pdf
+                  .header
+                    %h3 Sigs
+                  .main
+                    .rc.job_plan_instructions.link-external
+                      %p Sigs
 
             / END SARD Nav Tabs
 
@@ -213,3 +227,23 @@
     / Scripts ================================
 
     %script{:src => "../assets/js/remote-sard-scripts.min.js"}
+
+    :javascript
+      function openSection(evt, sectionName) {
+        var i, section, tablinks;
+        section = document.getElementsByClassName("section");
+        for (i = 0; i < section.length; i++) {
+          section[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(sectionName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+
+

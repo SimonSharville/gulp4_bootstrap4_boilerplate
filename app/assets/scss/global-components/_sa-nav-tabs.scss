@@ -17,6 +17,7 @@ $tab-number-bg:           $sa-grey-12;
   }
   @include respond-to(md-break-up) {
     display: table;
+    width:100%;
     vertical-align: top;
   }
 }
@@ -65,26 +66,15 @@ $tab-number-bg:           $sa-grey-12;
     @include respond-to(md-break-down){
       display: block;
     }
-    @include respond-to(md-screens){
+    @include respond-to(md-break-up){
       display: table-cell;
       vertical-align: top;
-      width: 75%;
-    }
-    @include respond-to(lg-screens){
-      display: table-cell;
-      vertical-align: top;
-      width: 75%;
-    }
-    @include respond-to(xl-break-up) {
-      display: table-cell;
-      vertical-align: top;
-      width: 75%;
     }
   }
 } // End .sard-nav-tabs
 
 .section-view{
-  vertical-align: top;
+  display: block;
 }
 
 // Styling --------------------------------------
@@ -145,7 +135,7 @@ $tab-number-bg:           $sa-grey-12;
     }
   }
 
-  .nav-row.active a{
+  .nav-row.active a,{
     background-color: $tab-colour-active;
     color: white;
     @include respond-to(md-break-up){

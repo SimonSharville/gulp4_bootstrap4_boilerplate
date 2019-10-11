@@ -20539,6 +20539,7 @@ body.rag-key-expanded {
 @media only screen and (min-width: 768px) {
   .sard-nav-tabs {
     display: table;
+    width: 100%;
     vertical-align: top;
   }
 }
@@ -20600,32 +20601,15 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
   .sard-nav-tabs .snt-main-section {
     display: table-cell;
     vertical-align: top;
-    width: 75%;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .sard-nav-tabs .snt-main-section {
-    display: table-cell;
-    vertical-align: top;
-    width: 75%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .sard-nav-tabs .snt-main-section {
-    display: table-cell;
-    vertical-align: top;
-    width: 75%;
   }
 }
 
 .section-view {
-  vertical-align: top;
+  display: block;
 }
 
 .sard-nav-tabs #left-activity-summary {
