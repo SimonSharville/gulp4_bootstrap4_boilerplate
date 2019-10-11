@@ -20464,7 +20464,7 @@ a.options-nav-expander.fixed {
   right: 300px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   a.options-nav-expander {
     width: 30px;
     height: 35px;
@@ -21008,7 +21008,7 @@ body.rag-key-expanded {
   background-color: #403D3D;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .sard-nav-tabs {
     display: block;
     width: 100vw;
@@ -21029,13 +21029,13 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .sard-nav-tabs .snt-main-nav {
     display: block;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .sard-nav-tabs .snt-main-nav {
     display: table-cell;
     vertical-align: top;
@@ -21043,7 +21043,7 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sard-nav-tabs .snt-main-nav {
     display: table-cell;
     vertical-align: top;
@@ -21080,13 +21080,13 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .sard-nav-tabs .snt-main-section {
     display: block;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .sard-nav-tabs .snt-main-section {
     display: table-cell;
     vertical-align: top;
@@ -21094,7 +21094,7 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sard-nav-tabs .snt-main-section {
     display: table-cell;
     vertical-align: top;
@@ -21167,7 +21167,7 @@ body.rag-key-expanded {
   background-color: #d0cecd;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .sard-nav-tabs .nav-row a {
     border-top: 1px solid white;
   }
@@ -21199,7 +21199,7 @@ body.rag-key-expanded {
   letter-spacing: -0.05rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .sard-nav-tabs .nav-row .number {
     vertical-align: top;
     min-width: 25px;
@@ -21250,7 +21250,7 @@ body.rag-key-expanded {
   padding-right: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .sard-nav-tabs .snt-main-section {
     border-top-width: 10px;
     border-left-width: 1px;
@@ -21264,7 +21264,7 @@ body.rag-key-expanded {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   #appraisal .sard-nav-tabs .nav-row .number {
     border-top: 1px solid white;
   }

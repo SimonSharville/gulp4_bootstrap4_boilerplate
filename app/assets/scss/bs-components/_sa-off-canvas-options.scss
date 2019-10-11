@@ -71,7 +71,7 @@ a.options-nav-expander.fixed {
   right: 300px;
 }
 
-@media (max-width: 767px) { // Small Screens
+@include respond-to(md-break-down) { // Small Screens
     a.options-nav-expander{
       width: 30px;
       height: 35px;
