@@ -12451,8 +12451,8 @@ a.text-dark:hover, a.text-dark:focus {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  padding-left: 44px;
-  padding-right: 44px;
+  padding-left: 31px;
+  padding-right: 31px;
 }
 
 body {
@@ -21017,8 +21017,8 @@ body.rag-key-expanded {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    padding-left: 44px;
-    padding-right: 44px;
+    padding-left: 31px;
+    padding-right: 31px;
   }
 }
 
