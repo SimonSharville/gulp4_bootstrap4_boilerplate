@@ -72,12 +72,10 @@
 
 
 
-// SARD Specific
-// These are the specific SARD Components, used in SARD system only.
+// FOUNDRY Specific
+// These are the specific FOUNDRY Components, used in FOUNDRY system only.
 // If something is cross system it should be moved to Global Components.
-@import 'sard-specific/appraisal';
-@import 'sard-specific/job-plan';
-@import 'sard-specific/portfolio';
+
 
 // ==============================================
 // This MUST Come at the end

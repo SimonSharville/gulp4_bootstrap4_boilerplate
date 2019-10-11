@@ -72,10 +72,23 @@ function compileCSS(){
   .pipe(gulp.dest('docs/assets/css'))
 }
 
-function concatCSS() {
+function createSardStyles() {
   return gulp.src('docs/assets/css/remote-sard-styles.css')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
   .pipe(concat('remote-sard-styles.min.css'))
+  .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
+  .pipe(sourcemaps.write('./'))
+  .pipe(lineec())
+  .pipe(gulp.dest(function (file) {
+        return file.base;
+    }))
+  .pipe(browserSync.stream());
+}
+
+function createFoundryStyles() {
+  return gulp.src('docs/assets/css/remote-foundry-styles.css')
+  .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
+  .pipe(concat('remote-foundry-styles.min.css'))
   .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
   .pipe(sourcemaps.write('./'))
   .pipe(lineec())
@@ -160,7 +173,8 @@ function watch(done) {
   
   gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
-  gulp.watch('docs/assets/css/remote-sard-styles.css', concatCSS).on('change', browserSync.reload);
+  gulp.watch('docs/assets/css/remote-sard-styles.css', createSardStyles).on('change', browserSync.reload);
+  gulp.watch('docs/assets/css/remote-foundry-styles.css', createFoundryStyles).on('change', browserSync.reload);
   gulp.watch(jsSRC, js).on('change', browserSync.reload);
   gulp.watch('docs/assets/js/remote-sard-scripts.js', minifyJS).on('change', browserSync.reload);
   gulp.watch(imgSRC, imageDelete).on('change', browserSync.reload);
@@ -172,7 +186,8 @@ function watch(done) {
 
 exports.hamlHTML = hamlHTML;
 exports.compileCSS = compileCSS;
-exports.concatCSS = concatCSS;
+exports.createSardStyles = createSardStyles;
+exports.createFoundryStyles = createFoundryStyles;
 exports.js = js;
 exports.minifyImages = minifyImages;
 exports.minifyJS = minifyJS;
