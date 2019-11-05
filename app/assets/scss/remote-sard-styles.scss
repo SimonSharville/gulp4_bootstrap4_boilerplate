@@ -58,26 +58,26 @@
 
 // Global Components
 //  These are the SARD global components, used across the various systems.
-@import 'global-components/sa-navbar-admin';
-@import 'global-components/sa-megamenu';
-@import 'global-components/sa-checkboxes';
-@import 'global-components/sa-rag-status';
-@import 'global-components/sa-off-canvas-options';
-@import 'global-components/sa-off-canvas-rag-key';
-@import 'global-components/sa-nav-tabs';
-@import 'global-components/sa-searchbars';
-@import 'global-components/sa-perforations';
-@import 'global-components/sa-pagination';
-@import 'global-components/sa-footer';
+@import 'sard-components/sa-navbar-admin';
+@import 'sard-components/sa-megamenu';
+@import 'sard-components/sa-checkboxes';
+@import 'sard-components/sa-rag-status';
+@import 'sard-components/sa-off-canvas-options';
+@import 'sard-components/sa-off-canvas-rag-key';
+@import 'sard-components/sa-nav-tabs';
+@import 'sard-components/sa-searchbars';
+@import 'sard-components/sa-perforations';
+@import 'sard-components/sa-pagination';
+@import 'sard-components/sa-footer';
 
 
 
 // SARD Specific
 // These are the specific SARD Components, used in SARD system only.
 // If something is cross system it should be moved to Global Components.
-@import 'sard-specific/appraisal';
-@import 'sard-specific/job-plan';
-@import 'sard-specific/portfolio';
+@import 'pages/sard/appraisal';
+@import 'pages/sard/job-plan';
+@import 'pages/sard/portfolio';
 
 // ==============================================
 // This MUST Come at the end
