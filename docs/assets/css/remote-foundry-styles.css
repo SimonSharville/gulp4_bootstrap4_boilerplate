@@ -21302,6 +21302,10 @@ header {
   height: 100px;
 }
 
+.bs-anchor {
+  padding-top: 120px;
+}
+
 .icon-bg {
   background-color: lightgrey;
   padding: 0.5rem;
