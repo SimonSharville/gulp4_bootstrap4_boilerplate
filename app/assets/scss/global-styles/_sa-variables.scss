@@ -190,6 +190,7 @@ button:focus,
 
 $sa-box-shadow:         1px 1px 2px 0px rgba(0,0,0,0.2);
 
+
 // ==================================================================
 
 // Alignments
@@ -229,3 +230,72 @@ $sa-box-shadow:         1px 1px 2px 0px rgba(0,0,0,0.2);
   max-width: calc(100% - 8rem);
 }
 
+
+// ==============================================
+// Adjust vertical positioning dpending on content
+body{ 
+  padding-top: 20px; 
+  @media (max-width: 991.98px){ padding-top: 10px; }
+}
+
+#navbar + #navbar-admin{
+  margin-top: 50px;
+  @media (max-width: 991.98px){ margin-top: 35px; }
+}
+
+// Breadcrumbs
+#navbar-admin + #breadcrumb-top{
+  margin-top: 35px;
+  @media (max-width: 991.98px){ margin-top: 35px; }
+}
+#navbar + #breadcrumb-top{
+  margin-top: 50px;
+  @media (max-width: 991.98px){ margin-top: 35px; }
+}
+#navbar + #navbar-admin + #breadcrumb-top{
+  margin-top: 85px;
+  @media (max-width: 991.98px){ margin-top: 70px; }
+}
+
+// container
+
+#navbar + .container{
+  margin-top: 50px;
+  @media (max-width: 991.98px){  }
+}
+#navbar + #navbar-admin + .container{
+  margin-top: 75px;
+  @media (max-width: 991.98px){  }
+}
+#navbar-admin + .container{
+  margin-top: 35px;
+  @media (max-width: 991.98px){  }
+}
+#navbar + #breadcrumb-top + .container{
+  margin-top: 75px;
+  @media (max-width: 991.98px){  }
+}
+#navbar + #navbar-admin + #breadcrumb-top + .container{
+  margin-top: 110px;
+  @media (max-width: 991.98px){  }
+}
+#navbar-admin + #breadcrumb-top + .container{
+  margin-top: 60px;
+  @media (max-width: 991.98px){  }
+}
+#breadcrumb-top + .container{
+  margin-top: 35px;
+  @media (max-width: 991.98px){  }
+}
+
+
+// Navbar Layering ==============================
+.navbar.fixed-top{
+  z-index: 4002;
+}
+#navbar-admin{
+  z-index: 4001;
+}
+#breadcrumb-top{
+  z-index: 4000;
+}

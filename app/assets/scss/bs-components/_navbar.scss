@@ -51,6 +51,14 @@
   background-color: $sa-grey-12; /* add background-color to active links */
 }
 
+.navbar-brand{
+  padding: 0 ;
+  @media (max-width: 991.98px){
+    max-height: 35px;
+    height: 35px;
+  }
+}
+
 // Dropdown Menu
 
 .navbar {
