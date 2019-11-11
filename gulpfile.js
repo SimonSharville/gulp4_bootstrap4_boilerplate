@@ -73,6 +73,19 @@ function compileCSS(){
   .pipe(gulp.dest('docs/assets/css'))
 }
 
+function createCoreStyles() {
+  return gulp.src('docs/assets/css/remote-core-styles.css')
+  .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
+  .pipe(concat('remote-core-styles.min.css'))
+  .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
+  .pipe(sourcemaps.write('./'))
+  .pipe(lineec())
+  .pipe(gulp.dest(function (file) {
+        return file.base;
+    }))
+  .pipe(browserSync.stream());
+}
+
 function createSardStyles() {
   return gulp.src('docs/assets/css/remote-sard-styles.css')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
@@ -174,6 +187,7 @@ function watch(done) {
   
   gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
+  gulp.watch('docs/assets/css/remote-core-styles.css', createCoreStyles).on('change', browserSync.reload);
   gulp.watch('docs/assets/css/remote-sard-styles.css', createSardStyles).on('change', browserSync.reload);
   gulp.watch('docs/assets/css/remote-foundry-styles.css', createFoundryStyles).on('change', browserSync.reload);
   gulp.watch(jsSRC, js).on('change', browserSync.reload);
@@ -187,6 +201,7 @@ function watch(done) {
 
 exports.hamlHTML = hamlHTML;
 exports.compileCSS = compileCSS;
+exports.createCoreStyles = createCoreStyles;
 exports.createSardStyles = createSardStyles;
 exports.createFoundryStyles = createFoundryStyles;
 exports.js = js;

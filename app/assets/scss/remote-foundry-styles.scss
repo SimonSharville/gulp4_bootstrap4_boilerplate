@@ -2,85 +2,22 @@
 
 // Import Order =======================
 
-// Global Styles
-@import 'global-styles/sa-colours';
-
-
-// Bootstrap
-@import 'bootstrap-overrides/bs-variables-overrides';
-@import "../../../node_modules/bootstrap/scss/bootstrap";
-@import 'bootstrap-overrides/bs-component-overrides';
-
-
-// Global Styles
-@import 'global-styles/sa-icons';
-@import 'global-styles/sa-scrollbars';
-@import 'global-styles/sa-smoothscroll';
-@import 'global-styles/sa-variables';
-@import 'global-styles/typography/sa-typography';
-@import 'global-styles/sa-links';
-
-
-// Fonts
-// Roboto
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-
-
-// Font Awesome Icons
-// Remote link
-@import url("https://use.fontawesome.com/releases/v5.9.0/css/all.css");
-
-// Sard Icons
-@import '../sard-icons/styles';
-
-
-// BS bs-Components
-// These are the basic bootstrap components, using SARD styling.
-@import 'bs-components/alerts';
-@import 'bs-components/badges';
-@import 'bs-components/breadcrumbs';
-@import 'bs-components/buttons';
-@import 'bs-components/cards';
-@import 'bs-components/collapse';
-@import 'bs-components/dropdowns';
-@import 'bs-components/fieldsets'; //BS3 specific
-@import 'bs-components/forms';
-@import 'bs-components/list-groups';
-@import 'bs-components/models';
-@import 'bs-components/navbar';
-@import 'bs-components/navs';
-@import 'bs-components/panels'; //BS3 specific
-@import 'bs-components/tables';
-@import 'bs-components/popovers';
-@import 'bs-components/progress';
-@import 'bs-components/validation';
-
-
-// Global Components
-//  These are the SARD global components, used across the various systems.
-@import 'sard-components/sa-navbar-admin';
-@import 'sard-components/sa-megamenu';
-@import 'sard-components/sa-checkboxes';
-@import 'sard-components/sa-rag-status';
-@import 'sard-components/sa-off-canvas-options';
-@import 'sard-components/sa-off-canvas-rag-key';
-@import 'sard-components/sa-off-canvas-sidemenu';
-@import 'sard-components/sa-nav-tabs';
-@import 'sard-components/sa-searchbars';
-@import 'sard-components/sa-perforations';
-@import 'sard-components/sa-pagination';
-@import 'sard-components/sa-footer';
+// Global Core Styles
+@import 'remote-core-styles';
 
 
 
-// FOUNDRY Specific
+
+
+// FOUNDRY System Specific
 // These are the specific FOUNDRY Components, used in FOUNDRY system only.
-// If something is cross system it should be moved to Global Components.
+// If something is cross system it should be moved to Global Core Styles.
 
 
 // ==============================================
-// This MUST Come at the end
+// These MUST Come at the end
 
+// Temp UI Styles for build
 @import 'global-styles/sa-ui-styles';
 
 
