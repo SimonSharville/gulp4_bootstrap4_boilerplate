@@ -20572,6 +20572,377 @@ body.rag-key-expanded {
   padding-top: 6px;
 }
 
+body {
+  -ms-overflow-style: scrollbar;
+}
+
+a.sa-sidemenu-nav-expander {
+  background: #211F0F;
+  color: #FFFFFF;
+  display: block;
+  margin-left: 0;
+  position: absolute;
+  top: 130px;
+  left: 0px;
+  text-decoration: none;
+  width: 30px;
+  height: 110px;
+  z-index: 12;
+  border-radius: 6px 0px 0px 6px;
+  border: 2px solid white;
+  border-left: none;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
+}
+
+a.sa-sidemenu-nav-expander .title {
+  position: absolute;
+  bottom: 25px;
+  left: -18px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+a.sa-sidemenu-nav-expander:after {
+  content: "\71";
+  font-family: "sard-icons";
+  color: white;
+  font-size: 1.25em;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
+}
+
+.sa-sidemenu-nav-expanded a.sa-sidemenu-nav-expander:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+a.sa-sidemenu-nav-expander:hover {
+  cursor: pointer;
+  color: white !important;
+}
+
+a.sa-sidemenu-nav-expander.fixed {
+  position: fixed;
+}
+
+.sa-sidemenu-nav-expanded a.sa-sidemenu-nav-expander.fixed {
+  left: 300px;
+}
+
+@media only screen and (max-width: 767px) {
+  a.sa-sidemenu-nav-expander {
+    width: 30px;
+    height: 35px;
+  }
+  a.sa-sidemenu-nav-expander .title {
+    display: none;
+  }
+  a.sa-sidemenu-nav-expander:after {
+    top: 1px;
+  }
+}
+
+nav.sa-sidemenu-menu {
+  background: #403D3D;
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  width: 300px;
+  z-index: 6000;
+  border-left: 4px solid;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
+}
+
+.sa-sidemenu-nav-expanded nav.sa-sidemenu-menu {
+  left: 0;
+}
+
+body.sa-sidemenu-nav-expanded {
+  margin-left: 0em;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
+}
+
+#sa-sidemenu-nav-close {
+  height: 133px;
+}
+
+#sa-sidemenu-nav-close:hover {
+  background-color: #383636;
+  cursor: pointer;
+}
+
+#sa-sidemenu-nav-close:hover:before {
+  content: 'Close';
+  color: white;
+  position: relative;
+  top: 40%;
+  left: 45%;
+}
+
+#sa-sidemenu-nav-close:after {
+  content: "\6d";
+  font-family: "sard-icons";
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.sa-sidemenu-menu .main-menu li {
+  padding: 0px;
+}
+
+.sa-sidemenu-menu .main-menu li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  padding: 7px 10px;
+  padding-left: 30px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.sa-sidemenu-menu .main-menu li a:visited {
+  color: white;
+}
+
+.sa-sidemenu-menu .main-menu li a:active,
+.sa-sidemenu-menu .main-menu li a:focus,
+.sa-sidemenu-menu .main-menu li a:hover {
+  background: #211F0F;
+}
+
+.sa-sidemenu-menu .main-menu hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sa-sidemenu-menu .main-menu li.sub-title {
+  padding: 7px 10px;
+  text-indent: 0;
+  color: white;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.sa-sidemenu-menu .main-menu li a:after {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1;
+  text-transform: none;
+  content: '\f054';
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  color: white;
+}
+
+.sa-sidemenu-menu .main-menu li a:after {
+  float: left;
+  margin: 0.1rem 1.7rem -0.1rem 0;
+  opacity: 0;
+  -webkit-transition: all 320ms ease !important;
+  transition: all 320ms ease !important;
+}
+
+.sa-sidemenu-menu .main-menu li a:hover:after {
+  float: left;
+  margin: 0.1rem -0.3rem -0.1rem 0;
+  opacity: 1;
+}
+
+.sa-sidemenu-menu .main-menu li:before {
+  content: none;
+  display: none;
+}
+
+.sa-sidemenu-menu .main-menu li.icon a {
+  text-indent: -1.8em;
+  padding-left: 2.5em;
+}
+
+.sa-sidemenu-menu .main-menu li.icon a:before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1;
+  text-transform: none;
+  padding-left: 10px;
+}
+
+.sa-sidemenu-menu .main-menu li.new a:before,
+.sa-sidemenu-menu .main-menu li.add a:before {
+  content: '\f067';
+  font-weight: 900;
+  padding-left: 12px;
+}
+
+.sa-sidemenu-menu .main-menu li.new-set a:before {
+  content: '\f0c5';
+  font-size: 1.1rem;
+  padding-left: 12px;
+}
+
+.sa-sidemenu-menu .main-menu li.edit a:before {
+  content: '\f303';
+  font-weight: 900;
+  padding-left: 12px;
+}
+
+.sa-sidemenu-menu .main-menu li.export a:before {
+  content: '\f56e';
+  font-weight: 900;
+}
+
+.sa-sidemenu-menu .main-menu li.download a:before,
+.sa-sidemenu-menu .main-menu li.import a:before {
+  content: '\f381';
+  font-weight: 900;
+  padding-left: 8px;
+}
+
+.sa-sidemenu-menu .main-menu li.action-needed a:before,
+.sa-sidemenu-menu .main-menu li.warning a:before {
+  content: '\f071';
+  font-weight: 900;
+}
+
+.sa-sidemenu-menu .main-menu li.view a:before {
+  content: '\f06e';
+  font-size: 1.1rem;
+  padding-left: 8px;
+}
+
+.sa-sidemenu-menu .main-menu li.back a:before {
+  content: '\f0a8';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 10px;
+}
+
+.sa-sidemenu-menu .main-menu li.questionnaire a:before {
+  content: '\f46c';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 15px;
+}
+
+.sa-sidemenu-menu .main-menu li.pdf a:before {
+  content: '\f1c1';
+  font-size: 1.1rem;
+  padding-left: 16px;
+}
+
+.sa-sidemenu-menu .main-menu li.zip a:before {
+  content: '\f1c6';
+  font-size: 1.1rem;
+  padding-left: 16px;
+}
+
+.sa-sidemenu-menu .main-menu li.email a:before {
+  content: '\f0e0';
+  padding-left: 14px;
+}
+
+.sa-sidemenu-menu .main-menu li.cancel a:before {
+  content: '\f05e';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 12px;
+}
+
+.sa-sidemenu-menu .main-menu li.info a:before {
+  content: '\f05a';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 12px;
+}
+
+.sa-sidemenu-menu .main-menu li.video a:before {
+  content: '\f03d';
+  font-weight: 900;
+  padding-left: 12px;
+}
+
+.sa-sidemenu-menu .main-menu li.apply a:before {
+  content: '\f058';
+  padding-left: 12px;
+  font-size: 1.1rem;
+}
+
+.sa-sidemenu-menu .main-menu li.refresh a:before {
+  content: '\f2f1';
+  font-weight: 900;
+  padding-left: 14px;
+}
+
+.sa-sidemenu-menu .main-menu li.user a:before {
+  content: '\f007';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 13px;
+}
+
+.sa-sidemenu-menu .main-menu li.user-md a:before {
+  content: '\f0f0';
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 13px;
+}
+
+.sa-sidemenu-menu .main-menu li.all-users a:before {
+  content: '\f0c0';
+  font-weight: 900;
+}
+
+.sa-sidemenu-menu .main-menu li.new-user a:before {
+  content: '\f234';
+  font-weight: 900;
+}
+
+.sa-sidemenu-menu .main-menu li.destroy a:before,
+.sa-sidemenu-menu .main-menu li.delete a:before {
+  content: '\f2ed';
+  font-size: 1.1rem;
+  padding-left: 14px;
+}
+
+.sa-sidemenu-menu .main-menu li.super-admin a:after {
+  font-family: "sard-icons";
+  content: "\e00a";
+  color: #A39E9C;
+  margin: 0;
+  position: relative;
+  top: 2px;
+  left: -30px;
+  opacity: 1;
+  padding-left: 0px;
+}
+
 @media only screen and (max-width: 767px) {
   .sard-nav-tabs {
     display: block;
