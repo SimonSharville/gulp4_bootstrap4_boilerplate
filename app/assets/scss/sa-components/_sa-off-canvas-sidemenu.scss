@@ -28,10 +28,13 @@ body { -ms-overflow-style: scrollbar; }
     position: relative;
     top: 0px;
     left: 0px;
+    height:50px;
   }
+
   .brand-area{
     display: none;
   }
+
   .open-icon{
     display: inline-block;
     position: absolute;
@@ -51,7 +54,6 @@ body { -ms-overflow-style: scrollbar; }
 .sa-sidemenu.open{
   @include off-canvas-transmission;
   width: 250px;
-  overflow-y: auto;
 }
 
 .sa-sidemenu.open{
@@ -65,12 +67,14 @@ body { -ms-overflow-style: scrollbar; }
     height: 50px;
   }
   .menu-list{
+    position: relative;
+    left: 0;
     display: block;
     width: 100%;
-    position: static;
-    left: 0;
-    top: 70px;
     padding: 0 ;
+    padding-top: 20px;
+    overflow-y: auto;
+    height:100%;
   }
 }
 
@@ -80,6 +84,10 @@ body { -ms-overflow-style: scrollbar; }
   background: $sa-grey-16;
   color: white;
   cursor: pointer;
+}
+
+.sa-sidemenu .menu-top{
+  background: $sa-grey-18;
 }
 
 .sa-sidemenu .open-icon::before{
@@ -137,20 +145,17 @@ body { -ms-overflow-style: scrollbar; }
 // Screen variations --------
 
 @include respond-to(lg-break-down){
-  .menu-top{
-    height:30px;
+  .sa-sidemenu .menu-top{
+    height:35px;
   }
-  .brand-area{
-    height:30px;
+  .sa-sidemenu .brand-area{
+    height:35px;
   }
-  .open-icon{
-  height:30px;
+  .sa-sidemenu .open-icon{
+  height:35px;
   }
   .sa-sidemenu .open-icon::before{
     top: 5px;
-  }
-  .sa-sidemenu.open .menu-list{
-    top: 50px;
   }
 }
 

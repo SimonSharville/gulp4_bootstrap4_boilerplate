@@ -20592,6 +20592,7 @@ body {
   position: relative;
   top: 0px;
   left: 0px;
+  height: 50px;
 }
 
 .sa-sidemenu .brand-area {
@@ -20617,7 +20618,6 @@ body {
   -webkit-transition: all 320ms ease !important;
   transition: all 320ms ease !important;
   width: 250px;
-  overflow-y: auto;
 }
 
 .sa-sidemenu.open .menu-top {
@@ -20632,18 +20632,24 @@ body {
 }
 
 .sa-sidemenu.open .menu-list {
+  position: relative;
+  left: 0;
   display: block;
   width: 100%;
-  position: static;
-  left: 0;
-  top: 70px;
   padding: 0;
+  padding-top: 20px;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .sa-sidemenu {
   background: #403D3D;
   color: white;
   cursor: pointer;
+}
+
+.sa-sidemenu .menu-top {
+  background: #211F0F;
 }
 
 .sa-sidemenu .open-icon::before {
@@ -20703,20 +20709,17 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
-  .menu-top {
-    height: 30px;
+  .sa-sidemenu .menu-top {
+    height: 35px;
   }
-  .brand-area {
-    height: 30px;
+  .sa-sidemenu .brand-area {
+    height: 35px;
   }
-  .open-icon {
-    height: 30px;
+  .sa-sidemenu .open-icon {
+    height: 35px;
   }
   .sa-sidemenu .open-icon::before {
     top: 5px;
-  }
-  .sa-sidemenu.open .menu-list {
-    top: 50px;
   }
 }
 
