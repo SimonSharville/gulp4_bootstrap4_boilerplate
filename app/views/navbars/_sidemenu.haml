@@ -1,58 +1,54 @@
-#off_canvas
-  %a#sa-sidemenu-nav-expander.sa-sidemenu-nav-expander.fixed
-    .title  sa-sidemenu
-    / %i.fa.fa-bars.fa-lg.white
-  %nav.sa-sidemenu-menu
-    %ul.list-unstyled.main-menu
-      / Include your navigation here
-      #sa-sidemenu-nav-close
-        %a{:href => "/#"}
-      %li.sub-title
-        Below is a list of the range of links with their icons.
-      %hr/
-      %li.icon.new.add
-        %a{:href => "/#"} New / Add 
-      %li.icon.new-set
-        %a{:href => "/#"} New Set 
-      %li.icon.edit
-        %a{:href => "/#"} Edit 
-      %li.icon.export
-        %a{:href => "/#"} Export   
-      %li.icon.download.import
-        %a{:href => "/#"} Download / Import 
-      %li.icon.action-needed.warning
-        %a{:href => "/#"} Action Needed / Warning
-      %li.icon.view
-        %a{:href => "/#"} View
-      %li.icon.back
-        %a{:href => "/#"} Back
-      %li.icon.questionnaire
-        %a{:href => "/#"} Questionnaire
-      %li.icon.pdf
-        %a{:href => "/#"} PDF
-      %li.icon.zip
-        %a{:href => "/#"} Zip
-      %li.icon.email
-        %a{:href => "/#"} Email
-      %li.icon.cancel
-        %a{:href => "/#"} Cancel
-      %li.icon.info
-        %a{:href => "/#"} Info
-      %li.icon.video
-        %a{:href => "/#"} Video
-      %li.icon.apply
-        %a{:href => "/#"} Apply
-      %li.icon.refresh
-        %a{:href => "/#"} Refresh
-      %li.icon.user
-        %a{:href => "/#"} User
-      %li.icon.user-md
-        %a{:href => "/#"} User-md
-      %li.icon.all-users
-        %a{:href => "/#"} All Users
-      %li.icon.new-user
-        %a{:href => "/#"} New User
-      %li.icon.destroy.delete
-        %a{:href => "/#"} Destroy / Delete
-      %li.icon.new.super-admin
-        %a{:href => "/#"} Super Admin
+
+.sa-sidemenu
+  .menu-top
+    .open-icon 
+    .brand-area
+      %a{:href => "/#"} Logo
+  .menu-list
+    / Include your navigation here
+    %a.menu-link{:href => "/#"} 
+      %i.sicon.sicon-approve
+      %span.link-text A very long, I mean really, really, really long link title 
+      
+    %a.menu-link{:href => "/#"} 
+      %i.sicon.sicon-approve
+      %span.link-text A Link  
+    
+    %hr/  
+
+    %a.menu-link{:href => "/#"} 
+      %i.sicon.sicon-approve
+      %span.link-text A Link
+
+    %a.menu-link{:href => "/#"} 
+      %span.link-text link, No Icon 
+
+    %hr/
+
+    .sub-title Sub-title
+
+    %a.menu-link{:href => "/#"} 
+      %i.sicon.sicon-approve
+      %span.link-text A Link
+
+    %hr/
+
+    .sub-title Dropdown Menu
+    
+    %ul
+      %li.dropdown
+        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          Dropdown
+        .dropdown-menu{"aria-labelledby" => "sardUI"}
+          %a.dropdown-item{:href => "#/"} .dropdown-item
+          %a.dropdown-item{:href => "#/"} .dropdown-item
+          %a.dropdown-item{:href => "#/"} .dropdown-item
+          %a.dropdown-item.active{:href => "#/"} .dropdown-item.active
+
+    %hr/
+
+    .sub-title Sub-title
+
+    %a.menu-link{:href => "/#"} 
+      %i.sicon.sicon-approve
+      %span.link-text A Link
