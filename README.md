@@ -97,6 +97,7 @@ Install Process
     npm install --save-dev gulp-include                 (Include Partials into HAML files)
     npm install --save-dev gulp-sourcemaps              (Allows to find original file in development)
     npm install --save-dev del                          (Delete files and folder)
+    npm install --save-dev import-resolve               (Compile all scss files into one scss file)
 
     // Bootstrap
     https://www.youtube.com/watch?v=6Ovw43Dkp44

@@ -17,6 +17,7 @@ const autoprefixer = require('gulp-autoprefixer'),
       haml = require('gulp-ruby-haml');
       include = require('gulp-include');
       del = require('del');
+      importResolve = require('import-resolve');
 
 
 /*
@@ -56,6 +57,21 @@ var imgSRC = 'app/assets/images/**/*',
 // NEVER use the css folder
 
 // Functions ====================================
+
+
+function buildSCSS(){
+
+  importResolve({
+    "ext": "scss",
+    "pathToMain": "app/assets/scss/remote-core-styles.scss",
+    "output": "docs/assets/scss/remote-core-styles.scss"
+  });
+
+  // This need to be re-written to work with gulp 4.
+  // It doesn't read https link when imported.
+
+}
+
 
 // Compile scss to css
 function compileCSS(){
@@ -186,6 +202,7 @@ function watch(done) {
 
   
   gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
+  gulp.watch('app/assets/scss/remote-core-styles.scss', buildSCSS).on('change', browserSync.reload);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
   gulp.watch('docs/assets/css/remote-core-styles.css', createCoreStyles).on('change', browserSync.reload);
   gulp.watch('docs/assets/css/remote-sard-styles.css', createSardStyles).on('change', browserSync.reload);
@@ -200,6 +217,7 @@ function watch(done) {
 
 
 exports.hamlHTML = hamlHTML;
+exports.buildSCSS = buildSCSS;
 exports.compileCSS = compileCSS;
 exports.createCoreStyles = createCoreStyles;
 exports.createSardStyles = createSardStyles;
