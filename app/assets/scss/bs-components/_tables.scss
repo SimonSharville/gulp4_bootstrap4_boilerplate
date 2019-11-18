@@ -1,12 +1,12 @@
 // Tables =======================================
 
-$sard-table-head-bg:          $sa-grey-14;
-$sard-table-dark-head-bg:     $sa-grey-18;
+$sa-table-head-bg:          $sa-grey-14;
+$sa-table-dark-head-bg:     $sa-grey-18;
 // Base styles
 
 .panel-body .table, .card-body .table, .form-group .table{
-  margin: -$sard-spacer-x;
-  min-width: calc(100% + #{$sard-spacer-x-2x});
+  margin: -$sa-spacer-x;
+  min-width: calc(100% + #{$sa-spacer-x-2x});
   font-size: 0.875rem; // 14px
 }
 
@@ -71,7 +71,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard > thead > tr > td,
 .table.table-sard > tbody > tr > td,
 .table.table-sard > tfoot > tr > td {
-  padding: $sard-spacer-6 $sard-spacer-10;
+  padding: $sa-spacer-6 $sa-spacer-10;
 }
 
 .table-sard td, .table-sard th{
@@ -79,7 +79,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 }
 
 .table-sard thead th{
-  background-color: $sard-table-head-bg;
+  background-color: $sa-table-head-bg;
   color: white;
   border-bottom: none;
   border-top: none;
@@ -93,11 +93,11 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 // ==========================
 // Inverted(dark) table
 .table-sard.table-dark{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   margin-bottom: 0;
 }
 .table-sard.table-dark thead th{
-  background-color: $sard-table-dark-head-bg;
+  background-color: $sa-table-dark-head-bg;
 }
 
 // Hoverable table
@@ -144,7 +144,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard.table-sm>tfoot>tr>th, 
 .table.table-sard.table-sm>thead>tr>td, 
 .table.table-sard.table-sm>thead>tr>th{
-  padding: $sard-spacer-3;
+  padding: $sa-spacer-3;
 }
 .table.table-sard.table-sm>tbody>tr>td:first-child, 
 .table.table-sard.table-sm>tbody>tr>th:first-child, 
@@ -152,7 +152,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard.table-sm>tfoot>tr>th:first-child, 
 .table.table-sard.table-sm>thead>tr>td:first-child, 
 .table.table-sard.table-sm>thead>tr>th:first-child{
-  padding-left: $sard-spacer-10;
+  padding-left: $sa-spacer-10;
 }
 .table.table-sard.table-sm>tbody>tr>td:last-child, 
 .table.table-sard.table-sm>tbody>tr>th:last-child, 
@@ -160,7 +160,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard.table-sm>tfoot>tr>th:last-child, 
 .table.table-sard.table-sm>thead>tr>td:last-child, 
 .table.table-sard.table-sm>thead>tr>th:last-child{
-  padding-right: $sard-spacer-10;
+  padding-right: $sa-spacer-10;
 }
 
 // Table head options
@@ -197,14 +197,14 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table-sard caption{
   caption-side: top;
   color: $text;
-  padding: $sard-spacer-6 $sard-spacer-10
+  padding: $sa-spacer-6 $sa-spacer-10
 }
 .table-sard caption.caption-bottom{
   caption-side: bottom;
   border-top: 1px solid white;
 }
 .table-sard.table-dark caption{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   color: white;
-  padding: $sard-spacer-6 $sard-spacer-10
+  padding: $sa-spacer-6 $sa-spacer-10
 }

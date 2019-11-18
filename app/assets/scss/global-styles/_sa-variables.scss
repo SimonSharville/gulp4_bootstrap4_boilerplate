@@ -100,69 +100,78 @@ $break-xxl: 1590px;
 // 2rem = 32px
 // 3rem = 48px
 
-$sard-spacer-1:              .0625rem;
-$sard-spacer-2:              .125rem;
-$sard-spacer-3:              .1875rem;
-$sard-spacer-4:              .25rem;
-$sard-spacer-5:              0.3125rem;
-$sard-spacer-6:              .375rem;
-$sard-spacer-7:              0.4375rem;
-$sard-spacer-8:              .5rem;
-$sard-spacer-9:              0.5625rem;
-$sard-spacer-10:             .625rem;
-$sard-spacer-11:             0.6875rem;
-$sard-spacer-12:             .75rem;
-$sard-spacer-13:             0.8125rem;
-$sard-spacer-14:             .875rem;
-$sard-spacer-15:             0.9375rem;
-$sard-spacer-16:             1rem;
-$sard-spacer-17:             1.0625rem;
-$sard-spacer-18:             1.125rem;
-$sard-spacer-19:             1.1875rem;
-$sard-spacer-20:             1.25rem;
+$sa-spacer-1:              .0625rem;
+$sa-spacer-2:              .125rem;
+$sa-spacer-3:              .1875rem;
+$sa-spacer-4:              .25rem;
+$sa-spacer-5:              0.3125rem;
+$sa-spacer-6:              .375rem;
+$sa-spacer-7:              0.4375rem;
+$sa-spacer-8:              .5rem;
+$sa-spacer-9:              0.5625rem;
+$sa-spacer-10:             .625rem;
+$sa-spacer-11:             0.6875rem;
+$sa-spacer-12:             .75rem;
+$sa-spacer-13:             0.8125rem;
+$sa-spacer-14:             .875rem;
+$sa-spacer-15:             0.9375rem;
+$sa-spacer-16:             1rem;
+$sa-spacer-17:             1.0625rem;
+$sa-spacer-18:             1.125rem;
+$sa-spacer-19:             1.1875rem;
+$sa-spacer-20:             1.25rem;
 
-$sard-spacer-y:              .25rem; // Top to Bottom // 4px
-$sard-spacer-x:              0.625rem; // Left to Right // 10px
+$sa-spacer-y:              .25rem; // Top to Bottom // 4px
+$sa-spacer-x:              0.625rem; // Left to Right // 10px
 
-$sard-spacer-y-2x:           .5rem; // Top to Bottom
-$sard-spacer-x-2x:           1.25rem; // Left to Right
+$sa-spacer-y-2x:           .5rem; // Top to Bottom
+$sa-spacer-x-2x:           1.25rem; // Left to Right
 
-$sard-spacer-y-3x:           .75rem; // Top to Bottom
-$sard-spacer-x-3x:           3rem; // Left to Right
+$sa-spacer-y-3x:           .75rem; // Top to Bottom
+$sa-spacer-x-3x:           3rem; // Left to Right
 
-$sard-spacer-y-4x:           1rem; // Top to Bottom
-$sard-spacer-x-4x:           1.5rem; // Left to Right
+$sa-spacer-y-4x:           1rem; // Top to Bottom
+$sa-spacer-x-4x:           1.5rem; // Left to Right
 
-$sard-margin:                1rem;
-$sard-margin-sm:             .75rem;
+$sa-margin:                1rem;
+$sa-margin-sm:             .75rem;
 
 // ==================================================================
 
+@mixin sa-transition {
+  transition: all 320ms ease!important;
+}
 
-$sard-bg:                    $sa-grey-02;
-$sard-heading-bg:            $sa-grey-16;
+$sa-bg:                    $sa-grey-02;
+$sa-heading-bg:            $sa-grey-16;
 
-$sard-padding:               $sard-spacer-y;
-$sard-body-padding:          $sard-spacer-x;
-$sard-heading-padding:       $sard-spacer-y $sard-spacer-x;
-$sard-heading-font-size:     1.25rem;
-$sard-heading-font-weight:   300;
-$sard-heading-line-height:   1.575rem;
-$sard-heading-text-color:    white;
+$sa-padding:               $sa-spacer-y;
+$sa-body-padding:          $sa-spacer-x;
+$sa-heading-padding:       $sa-spacer-y $sa-spacer-x;
+$sa-heading-font-size:     1.25rem;
+$sa-heading-font-weight:   300;
+$sa-heading-line-height:   1.575rem;
+$sa-heading-text-color:    white;
 
-$sard-footer-padding:        $sard-heading-padding !default;
-$sard-border-width:          $border-width !default;
-$sard-border-color:          $sard-heading-bg !default;
+$sa-footer-padding:        $sa-heading-padding !default;
+$sa-border-width:          $border-width !default;
+$sa-border-color:          $sa-heading-bg !default;
 
 
-$sard-border-radius:         $border-radius;
-$sard-inner-border-radius:   calc(#{$sard-border-radius} - #{$sard-border-width}) !default;
+// Define common padding and border radius sizes and more.
+$sa-border-radius:               .375rem ;
+$sa-border-radius-lg:            .5rem ;
+$sa-border-radius-sm:            .2rem ;
+
+$sa-border-radius:         $border-radius;
+$sa-inner-border-radius:   calc(#{$sa-border-radius} - #{$sa-border-width}) ;
+
 
 
 
 // //** Border color for elements within panels and cards
-$sard-inner-border:          #ddd !default;
-$sard-footer-bg:             $sard-heading-bg !default;
+$sa-inner-border:          #ddd !default;
+$sa-footer-bg:             $sa-heading-bg !default;
 
 
 // Body adjust to allow for footer ==================================

@@ -1,9 +1,9 @@
 // Forms ========================================
 
 legend{
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 400;
-  line-height: $sard-heading-line-height;
+  line-height: $sa-heading-line-height;
 }
 label {
     margin-bottom: .25rem;
@@ -206,14 +206,14 @@ input[type=range]:focus::-ms-fill-upper {
 
 .input-group>.input-group-prepend>.input-group-text{
   border-radius: 2rem 0 0 2rem;
-  padding: 0 $sard-spacer-8;
+  padding: 0 $sa-spacer-8;
   background-color: $user-primary-colour;
   color: white;
   border-color: $user-primary-colour;
 }
 .input-group>.input-group-append>.input-group-text{
   border-radius: 0 2rem 2rem 0;
-  padding: 0 $sard-spacer-8;
+  padding: 0 $sa-spacer-8;
   background-color: $user-primary-colour;
   color: white;
   border-color: $user-primary-colour;

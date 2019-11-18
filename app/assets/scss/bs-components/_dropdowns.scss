@@ -14,7 +14,7 @@ $default_dropdown_hover_click:  darken($user-primary-colour, 10%);
     @include roboto-bold;
     font-size: 1rem; 
     color: $text;
-    padding: $sard-spacer-4 $sard-spacer-8;
+    padding: $sa-spacer-4 $sa-spacer-8;
   }
   hr{
     margin: 0;
@@ -22,7 +22,7 @@ $default_dropdown_hover_click:  darken($user-primary-colour, 10%);
 }
 .dropdown-item{
   color: $text;
-  padding: $sard-spacer-4 $sard-spacer-8;
+  padding: $sa-spacer-4 $sa-spacer-8;
   &:visited { 
     color: $text;
   }
@@ -215,5 +215,5 @@ $secondary_dropdown_hover_click:  darken($secondary, 10%);
 }
 
 .dropwown-menu-item{
-  padding: 0 $sard-spacer-8;
+  padding: 0 $sa-spacer-8;
 }

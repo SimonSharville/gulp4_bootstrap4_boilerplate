@@ -8,35 +8,35 @@ fieldset{
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   word-wrap: break-word;
-  background-color: $sard-bg;
+  background-color: $sa-bg;
   background-clip: border-box;
   border:1px solid transparent;
-  @include border-radius($sard-border-radius);
+  @include border-radius($sa-border-radius);
 
-  // padding: $sard-body-padding;
-  margin-bottom: $sard-margin;
+  // padding: $sa-body-padding;
+  margin-bottom: $sa-margin;
 
   & legend{
-    // min-width: calc(100% + #{$sard-spacer-x-2x} + 2px ); // Kept for Reference
+    // min-width: calc(100% + #{$sa-spacer-x-2x} + 2px ); // Kept for Reference
     min-width: calc(100% + 2px );
 
     margin: 0 -1px;
     overflow: hidden;
 
-    padding: $sard-heading-padding;
+    padding: $sa-heading-padding;
 
-    background-color: $sard-heading-bg;
-    font-size: $sard-heading-font-size;
+    background-color: $sa-heading-bg;
+    font-size: $sa-heading-font-size;
     font-weight: 300;
-    line-height: $sard-heading-line-height;
-    color: $sard-heading-text-color;
+    line-height: $sa-heading-line-height;
+    color: $sa-heading-text-color;
 
-    border-top-left-radius: $sard-border-radius;
-    border-top-right-radius: $sard-border-radius;
+    border-top-left-radius: $sa-border-radius;
+    border-top-right-radius: $sa-border-radius;
   }
 
   & .form-group{
-    padding: $sard-body-padding;
+    padding: $sa-body-padding;
     margin: -1px;
   }
   
@@ -53,12 +53,12 @@ fieldset{
     margin: -1px;
     margin-top: -3px;
     overflow: hidden;
-    padding: $sard-heading-padding;
-    background-color: $sard-heading-bg;
-    color: $sard-heading-text-color;
-    border-bottom-left-radius: $sard-border-radius;
-    border-bottom-right-radius: $sard-border-radius;
-    font-weight: $sard-heading-font-weight;
+    padding: $sa-heading-padding;
+    background-color: $sa-heading-bg;
+    color: $sa-heading-text-color;
+    border-bottom-left-radius: $sa-border-radius;
+    border-bottom-right-radius: $sa-border-radius;
+    font-weight: $sa-heading-font-weight;
   }
 }
 .form-group p:last-child {
@@ -76,19 +76,19 @@ fieldset{
 // Fieldsets within Cards or Panels -------------
 
 .card fieldset, .panel fieldset{
-  border-color: $sard-border-color;
+  border-color: $sa-border-color;
   @include border-radius($border-radius-sm);
-  margin-bottom: $sard-margin-sm;
+  margin-bottom: $sa-margin-sm;
   & legend{
     border-top-left-radius: $border-radius-sm;
     border-top-right-radius: $border-radius-sm;
   }
   & hr{
-    border-color: $sard-border-color;
+    border-color: $sa-border-color;
     margin: 0 ;
   }
   & .border-bottom, .border-top{
-    border-color: $sard-border-color!important;
+    border-color: $sa-border-color!important;
   }
 }
 .card fieldset:first-child, .panel fieldset:first-child{

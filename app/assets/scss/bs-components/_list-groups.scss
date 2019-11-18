@@ -1,7 +1,7 @@
 // List Groups ==================================
 
 .list-group-item{
-  padding: $sard-spacer-8 $sard-spacer-10;
+  padding: $sa-spacer-8 $sa-spacer-10;
   border:1px solid $sa-grey-04;
 }
 
@@ -22,7 +22,7 @@
 // list-group-flush =========
 .card, .panel, fieldset{
   & .list-group.list-group-flush:first-of-type{
-    margin: -$sard-spacer-10;
+    margin: -$sa-spacer-10;
     & .list-group-item{
       border:1px solid $sa-grey-03;
       // margin: -1px;
@@ -33,8 +33,8 @@
   }
   & .list-group.list-group-flush:last-of-type{
     & .list-group-item:last-child{
-      border-bottom-left-radius: $sard-border-radius;
-      border-bottom-right-radius: $sard-border-radius;
+      border-bottom-left-radius: $sa-border-radius;
+      border-bottom-right-radius: $sa-border-radius;
     }
   }
 }
@@ -59,7 +59,7 @@
 
 .card, .panel, fieldset{
   & .list-group.list-group-flush.list-group-horizontal{
-    margin-top: -$sard-spacer-8;
+    margin-top: -$sa-spacer-8;
     & .list-group-item{
       border:1px solid $sa-grey-04;
       border-top: none;

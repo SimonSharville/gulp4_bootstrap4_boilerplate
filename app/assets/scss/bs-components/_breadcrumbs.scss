@@ -3,7 +3,7 @@
 
 .breadcrumb{
   border-radius: 0%;
-  padding: $sard-spacer-4 $sard-spacer-16;
+  padding: $sa-spacer-4 $sa-spacer-16;
   background-color: white;
   border-bottom: 1px solid $sa-grey-04;
 }
@@ -19,7 +19,7 @@
   // } 
 
   & .breadcrumb{
-    padding: $sard-spacer-4 0;
+    padding: $sa-spacer-4 0;
     border-bottom: none;
     margin-bottom: 0;
   }

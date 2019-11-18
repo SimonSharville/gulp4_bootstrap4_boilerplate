@@ -8716,69 +8716,69 @@ $break-xxl: 1590px;
 // 2rem = 32px
 // 3rem = 48px
 
-$sard-spacer-1:              .0625rem;
-$sard-spacer-2:              .125rem;
-$sard-spacer-3:              .1875rem;
-$sard-spacer-4:              .25rem;
-$sard-spacer-5:              0.3125rem;
-$sard-spacer-6:              .375rem;
-$sard-spacer-7:              0.4375rem;
-$sard-spacer-8:              .5rem;
-$sard-spacer-9:              0.5625rem;
-$sard-spacer-10:             .625rem;
-$sard-spacer-11:             0.6875rem;
-$sard-spacer-12:             .75rem;
-$sard-spacer-13:             0.8125rem;
-$sard-spacer-14:             .875rem;
-$sard-spacer-15:             0.9375rem;
-$sard-spacer-16:             1rem;
-$sard-spacer-17:             1.0625rem;
-$sard-spacer-18:             1.125rem;
-$sard-spacer-19:             1.1875rem;
-$sard-spacer-20:             1.25rem;
+$sa-spacer-1:              .0625rem;
+$sa-spacer-2:              .125rem;
+$sa-spacer-3:              .1875rem;
+$sa-spacer-4:              .25rem;
+$sa-spacer-5:              0.3125rem;
+$sa-spacer-6:              .375rem;
+$sa-spacer-7:              0.4375rem;
+$sa-spacer-8:              .5rem;
+$sa-spacer-9:              0.5625rem;
+$sa-spacer-10:             .625rem;
+$sa-spacer-11:             0.6875rem;
+$sa-spacer-12:             .75rem;
+$sa-spacer-13:             0.8125rem;
+$sa-spacer-14:             .875rem;
+$sa-spacer-15:             0.9375rem;
+$sa-spacer-16:             1rem;
+$sa-spacer-17:             1.0625rem;
+$sa-spacer-18:             1.125rem;
+$sa-spacer-19:             1.1875rem;
+$sa-spacer-20:             1.25rem;
 
-$sard-spacer-y:              .25rem; // Top to Bottom // 4px
-$sard-spacer-x:              0.625rem; // Left to Right // 10px
+$sa-spacer-y:              .25rem; // Top to Bottom // 4px
+$sa-spacer-x:              0.625rem; // Left to Right // 10px
 
-$sard-spacer-y-2x:           .5rem; // Top to Bottom
-$sard-spacer-x-2x:           1.25rem; // Left to Right
+$sa-spacer-y-2x:           .5rem; // Top to Bottom
+$sa-spacer-x-2x:           1.25rem; // Left to Right
 
-$sard-spacer-y-3x:           .75rem; // Top to Bottom
-$sard-spacer-x-3x:           3rem; // Left to Right
+$sa-spacer-y-3x:           .75rem; // Top to Bottom
+$sa-spacer-x-3x:           3rem; // Left to Right
 
-$sard-spacer-y-4x:           1rem; // Top to Bottom
-$sard-spacer-x-4x:           1.5rem; // Left to Right
+$sa-spacer-y-4x:           1rem; // Top to Bottom
+$sa-spacer-x-4x:           1.5rem; // Left to Right
 
-$sard-margin:                1rem;
-$sard-margin-sm:             .75rem;
+$sa-margin:                1rem;
+$sa-margin-sm:             .75rem;
 
 // ==================================================================
 
 
-$sard-bg:                    $sa-grey-02;
-$sard-heading-bg:            $sa-grey-16;
+$sa-bg:                    $sa-grey-02;
+$sa-heading-bg:            $sa-grey-16;
 
-$sard-padding:               $sard-spacer-y;
-$sard-body-padding:          $sard-spacer-x;
-$sard-heading-padding:       $sard-spacer-y $sard-spacer-x;
-$sard-heading-font-size:     1.25rem;
-$sard-heading-font-weight:   300;
-$sard-heading-line-height:   1.575rem;
-$sard-heading-text-color:    white;
+$sa-padding:               $sa-spacer-y;
+$sa-body-padding:          $sa-spacer-x;
+$sa-heading-padding:       $sa-spacer-y $sa-spacer-x;
+$sa-heading-font-size:     1.25rem;
+$sa-heading-font-weight:   300;
+$sa-heading-line-height:   1.575rem;
+$sa-heading-text-color:    white;
 
-$sard-footer-padding:        $sard-heading-padding !default;
-$sard-border-width:          $border-width !default;
-$sard-border-color:          $sard-heading-bg !default;
+$sa-footer-padding:        $sa-heading-padding !default;
+$sa-border-width:          $border-width !default;
+$sa-border-color:          $sa-heading-bg !default;
 
 
-$sard-border-radius:         $border-radius;
-$sard-inner-border-radius:   calc(#{$sard-border-radius} - #{$sard-border-width}) !default;
+$sa-border-radius:         $border-radius;
+$sa-inner-border-radius:   calc(#{$sa-border-radius} - #{$sa-border-width}) !default;
 
 
 
 // //** Border color for elements within panels and cards
-$sard-inner-border:          #ddd !default;
-$sard-footer-bg:             $sard-heading-bg !default;
+$sa-inner-border:          #ddd !default;
+$sa-footer-bg:             $sa-heading-bg !default;
 
 
 // Body adjust to allow for footer ==================================
@@ -9934,8 +9934,8 @@ a.link-external:before
 
 // Variable Overrides
 
-$alert-padding-y:                   $sard-spacer-y-3x;
-$alert-padding-x:                   $sard-spacer-x;
+$alert-padding-y:                   $sa-spacer-y-3x;
+$alert-padding-x:                   $sa-spacer-x;
 
 $alert-bg-level:                    1 ;
 $alert-border-level:                1 ;
@@ -10071,7 +10071,7 @@ a.badge.badge-light
 
 .breadcrumb{
   border-radius: 0%;
-  padding: $sard-spacer-4 $sard-spacer-16;
+  padding: $sa-spacer-4 $sa-spacer-16;
   background-color: white;
   border-bottom: 1px solid $sa-grey-04;
 }
@@ -10087,7 +10087,7 @@ a.badge.badge-light
   // } 
 
   & .breadcrumb{
-    padding: $sard-spacer-4 0;
+    padding: $sa-spacer-4 0;
     border-bottom: none;
     margin-bottom: 0;
   }
@@ -10133,7 +10133,7 @@ a.badge.badge-light
 }
 
 .btn-xs{
-  padding: 0 $sard-spacer-6;
+  padding: 0 $sa-spacer-6;
   font-size: .75rem;
 }
 
@@ -10551,7 +10551,7 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-notext{
-  padding: $sard-spacer-6;
+  padding: $sa-spacer-6;
   &::before{
     left: 0;
     right: 0;
@@ -10561,18 +10561,18 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-forward{
-    padding: $sard-spacer-6 $sard-spacer-8;
+    padding: $sa-spacer-6 $sa-spacer-8;
   }
   &.btn-back{
-    padding: $sard-spacer-6 $sard-spacer-8;
+    padding: $sa-spacer-6 $sa-spacer-8;
   }
   &.btn-refresh{
-    padding: $sard-spacer-6 $sard-spacer-8;
+    padding: $sa-spacer-6 $sa-spacer-8;
   }
 }
 
 .btn-notext.btn-lg{
-  padding:  $sard-spacer-7;
+  padding:  $sa-spacer-7;
   &::before{
     left: 0;
     right: 0;
@@ -10582,15 +10582,15 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-forward{
-   padding:  $sard-spacer-7 $sard-spacer-9;
+   padding:  $sa-spacer-7 $sa-spacer-9;
   }
   &.btn-back{
-    padding:  $sard-spacer-7 $sard-spacer-9;
+    padding:  $sa-spacer-7 $sa-spacer-9;
   }
 }
 
 .btn-notext.btn-sm{
-  padding:  $sard-spacer-4;
+  padding:  $sa-spacer-4;
   &::before{
     left: 0;
     right: 0;
@@ -10600,15 +10600,15 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-forward{
-   padding:  $sard-spacer-4 $sard-spacer-6;
+   padding:  $sa-spacer-4 $sa-spacer-6;
   }
   &.btn-back{
-    padding:  $sard-spacer-4 $sard-spacer-6;
+    padding:  $sa-spacer-4 $sa-spacer-6;
   }
 }
 
 .btn-notext.btn-xs{
-  padding:  0 $sard-spacer-2;
+  padding:  0 $sa-spacer-2;
   &::before{
     left: 0;
     right: 0;
@@ -10618,38 +10618,38 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-cancel{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-forward{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-back{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-refresh{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-upload{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-download{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
 }
 
 .btn-save{
-  padding-left: $sard-spacer-14;
+  padding-left: $sa-spacer-14;
   &.btn-lg{
-    padding-left: $sard-spacer-18;
+    padding-left: $sa-spacer-18;
   }
   &.btn-sm{
-    padding-left: $sard-spacer-12;
+    padding-left: $sa-spacer-12;
   }
   &.btn-xs{
-    padding-left: $sard-spacer-8;
+    padding-left: $sa-spacer-8;
   }
   &.btn-notext{
-    padding-left: $sard-spacer-7;
+    padding-left: $sa-spacer-7;
   }
 }
 
@@ -10742,7 +10742,7 @@ $btn-default-colour: $sa-grey-14;
 // Base class
 .card{
   border:1px solid transparent;
-  margin-bottom: $sard-margin;
+  margin-bottom: $sa-margin;
   
   & .card-header, .card-footer{
     border:none;
@@ -10750,7 +10750,7 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 .card-body {
-  padding: $sard-body-padding;
+  padding: $sa-body-padding;
   margin: -1px;
   @include clearfix;
 }
@@ -10783,16 +10783,16 @@ $btn-default-colour: $sa-grey-14;
 
 // Optional heading
 .card-header {
-  padding: $sard-heading-padding;
+  padding: $sa-heading-padding;
   border-bottom: 1px solid transparent;
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   margin: -1px;
   overflow: hidden;
 
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 300;
-  line-height: $sard-heading-line-height;
-  color: $sard-heading-text-color;
+  line-height: $sa-heading-line-height;
+  color: $sa-heading-text-color;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -10805,21 +10805,21 @@ $btn-default-colour: $sa-grey-14;
 .card-header h3,
 .card-header h4{
   margin: 0;
-  font-size: $sard-heading-font-size;
-  line-height: $sard-heading-line-height;
-  font-weight: $sard-heading-font-weight;
-  color: $sard-heading-text-color;
+  font-size: $sa-heading-font-size;
+  line-height: $sa-heading-line-height;
+  font-weight: $sa-heading-font-weight;
+  color: $sa-heading-text-color;
 }
 
 
 // Optional footer (stays gray in every modifier class)
 .card-footer {
-  padding: $sard-footer-padding;
-  background-color: $sard-footer-bg;
-  color: $sard-heading-text-color;
-  font-weight: $sard-heading-font-weight;
-  border-top: 1px solid $sard-inner-border;
-  @include border-bottom-radius(($sard-border-radius - 1));
+  padding: $sa-footer-padding;
+  background-color: $sa-footer-bg;
+  color: $sa-heading-text-color;
+  font-weight: $sa-heading-font-weight;
+  border-top: 1px solid $sa-inner-border;
+  @include border-bottom-radius(($sa-border-radius - 1));
   margin: -1px;
 
   &:last-child {
@@ -10831,25 +10831,25 @@ $btn-default-colour: $sa-grey-14;
 // SARD Cards ===================================
 
 .card.card-sard, .card.card-default{
-  background-color: $sard-bg;
+  background-color: $sa-bg;
   & .card-header, .card-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
-      color: lighten($sard-heading-bg, 30%) !important;
+      color: lighten($sa-heading-bg, 30%) !important;
     }
   }
 }
 .card.card-sard.outline, .card.card-default.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .card-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body hr{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
 }
 
@@ -11023,7 +11023,7 @@ $btn-default-colour: $sa-grey-14;
 .card.card-dark{
   background-color: $sa-grey-14;
   & .card-header, .card-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
       color: lighten($text, 25%) !important;
     }
@@ -11036,15 +11036,15 @@ $btn-default-colour: $sa-grey-14;
 }
 .card.card-dark.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .card-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body hr{
-    border-color: $sard-heading-bg;
+    border-color: $sa-heading-bg;
   }
   & .card-body{
     & h1, h2, h3, h4, h5, h6, p{
@@ -11125,7 +11125,7 @@ $accordian-bg-open-hover: black;
   margin-bottom: 0;
 }
 .accordion {
-  margin-bottom: $sard-spacer-16;
+  margin-bottom: $sa-spacer-16;
 }
 
 // Make Accordion Headings as a link ============
@@ -11147,7 +11147,7 @@ $accordian-bg-open-hover: black;
 .accordion legend { 
   & .btn,
   & a{
-    padding: $sard-heading-padding;
+    padding: $sa-heading-padding;
     color:white!important;
     text-decoration:none;
     display: block;
@@ -11156,10 +11156,10 @@ $accordian-bg-open-hover: black;
     border-radius: 0;
     border: 1px solid transparent;
   
-    font-size: $sard-heading-font-size;
+    font-size: $sa-heading-font-size;
     font-weight: 300;
-    line-height: $sard-heading-line-height;
-    color: $sard-heading-text-color;
+    line-height: $sa-heading-line-height;
+    color: $sa-heading-text-color;
   }
 }
 
@@ -11208,7 +11208,7 @@ fieldset.collapsable legend {
   display: block;
   padding:0px;
   color:white;
-  border-radius: $sard-border-radius;
+  border-radius: $sa-border-radius;
   overflow: visible;
 }
 // This makes the entire heading a link
@@ -11218,20 +11218,20 @@ fieldset.collapsable legend {
 fieldset.collapsable legend { 
   & .btn,
   & a {
-    padding: $sard-heading-padding;
+    padding: $sa-heading-padding;
     color:white!important;
     text-decoration:none;
     display: block;
     width: 100%;
     text-align: left;
-    border-radius: $sard-border-radius $sard-border-radius 0 0;
+    border-radius: $sa-border-radius $sa-border-radius 0 0;
     box-shadow: none;
     border: 1px solid transparent;
   
-    font-size: $sard-heading-font-size;
+    font-size: $sa-heading-font-size;
     font-weight: 300;
-    line-height: $sard-heading-line-height;
-    color: $sard-heading-text-color;
+    line-height: $sa-heading-line-height;
+    color: $sa-heading-text-color;
   }
 }
 .card.collapsable .card-header,
@@ -11240,7 +11240,7 @@ fieldset.collapsable legend {
 fieldset.collapsable legend{
   & .btn.collapsed,
   & a.collapsed{
-    border-radius: $sard-border-radius;
+    border-radius: $sa-border-radius;
   }
 }
 
@@ -11265,7 +11265,7 @@ fieldset.collapsable legend{
     font-family: "Font Awesome 5 Free"; 
     content: "\f106" ;
     font-weight: 900;
-    padding-right: $sard-spacer-8 ;
+    padding-right: $sa-spacer-8 ;
     color:$user-primary-colour;
     font-size: 1.75rem;
     position: absolute;
@@ -11285,7 +11285,7 @@ fieldset.collapsable legend{
     font-family: "Font Awesome 5 Free"; 
     content: "\f107" ;
     font-weight: 900;
-    padding-right: $sard-spacer-8;
+    padding-right: $sa-spacer-8;
     color:$user-primary-colour;
     font-size: 1.75rem;
     position: absolute;
@@ -11319,8 +11319,8 @@ fieldset.collapsable legend{
 .accordion-mixed>.accordion-mixed-item:last-child  {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: $sard-border-radius;
-  border-bottom-left-radius: $sard-border-radius;
+  border-bottom-right-radius: $sa-border-radius;
+  border-bottom-left-radius: $sa-border-radius;
 }
 
 
@@ -11367,7 +11367,7 @@ $default_dropdown_hover_click:  darken($user-primary-colour, 10%);
     @include roboto-bold;
     font-size: 1rem; 
     color: $text;
-    padding: $sard-spacer-4 $sard-spacer-8;
+    padding: $sa-spacer-4 $sa-spacer-8;
   }
   hr{
     margin: 0;
@@ -11375,7 +11375,7 @@ $default_dropdown_hover_click:  darken($user-primary-colour, 10%);
 }
 .dropdown-item{
   color: $text;
-  padding: $sard-spacer-4 $sard-spacer-8;
+  padding: $sa-spacer-4 $sa-spacer-8;
   &:visited { 
     color: $text;
   }
@@ -11568,7 +11568,7 @@ $secondary_dropdown_hover_click:  darken($secondary, 10%);
 }
 
 .dropwown-menu-item{
-  padding: 0 $sard-spacer-8;
+  padding: 0 $sa-spacer-8;
 }
 // Fieldsets ====================================
 
@@ -11580,35 +11580,35 @@ fieldset{
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   word-wrap: break-word;
-  background-color: $sard-bg;
+  background-color: $sa-bg;
   background-clip: border-box;
   border:1px solid transparent;
-  @include border-radius($sard-border-radius);
+  @include border-radius($sa-border-radius);
 
-  // padding: $sard-body-padding;
-  margin-bottom: $sard-margin;
+  // padding: $sa-body-padding;
+  margin-bottom: $sa-margin;
 
   & legend{
-    // min-width: calc(100% + #{$sard-spacer-x-2x} + 2px ); // Kept for Reference
+    // min-width: calc(100% + #{$sa-spacer-x-2x} + 2px ); // Kept for Reference
     min-width: calc(100% + 2px );
 
     margin: 0 -1px;
     overflow: hidden;
 
-    padding: $sard-heading-padding;
+    padding: $sa-heading-padding;
 
-    background-color: $sard-heading-bg;
-    font-size: $sard-heading-font-size;
+    background-color: $sa-heading-bg;
+    font-size: $sa-heading-font-size;
     font-weight: 300;
-    line-height: $sard-heading-line-height;
-    color: $sard-heading-text-color;
+    line-height: $sa-heading-line-height;
+    color: $sa-heading-text-color;
 
-    border-top-left-radius: $sard-border-radius;
-    border-top-right-radius: $sard-border-radius;
+    border-top-left-radius: $sa-border-radius;
+    border-top-right-radius: $sa-border-radius;
   }
 
   & .form-group{
-    padding: $sard-body-padding;
+    padding: $sa-body-padding;
     margin: -1px;
   }
   
@@ -11625,12 +11625,12 @@ fieldset{
     margin: -1px;
     margin-top: -3px;
     overflow: hidden;
-    padding: $sard-heading-padding;
-    background-color: $sard-heading-bg;
-    color: $sard-heading-text-color;
-    border-bottom-left-radius: $sard-border-radius;
-    border-bottom-right-radius: $sard-border-radius;
-    font-weight: $sard-heading-font-weight;
+    padding: $sa-heading-padding;
+    background-color: $sa-heading-bg;
+    color: $sa-heading-text-color;
+    border-bottom-left-radius: $sa-border-radius;
+    border-bottom-right-radius: $sa-border-radius;
+    font-weight: $sa-heading-font-weight;
   }
 }
 .form-group p:last-child {
@@ -11648,19 +11648,19 @@ fieldset{
 // Fieldsets within Cards or Panels -------------
 
 .card fieldset, .panel fieldset{
-  border-color: $sard-border-color;
+  border-color: $sa-border-color;
   @include border-radius($border-radius-sm);
-  margin-bottom: $sard-margin-sm;
+  margin-bottom: $sa-margin-sm;
   & legend{
     border-top-left-radius: $border-radius-sm;
     border-top-right-radius: $border-radius-sm;
   }
   & hr{
-    border-color: $sard-border-color;
+    border-color: $sa-border-color;
     margin: 0 ;
   }
   & .border-bottom, .border-top{
-    border-color: $sard-border-color!important;
+    border-color: $sa-border-color!important;
   }
 }
 .card fieldset:first-child, .panel fieldset:first-child{
@@ -11674,9 +11674,9 @@ fieldset{
 // Forms ========================================
 
 legend{
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 400;
-  line-height: $sard-heading-line-height;
+  line-height: $sa-heading-line-height;
 }
 label {
     margin-bottom: .25rem;
@@ -11879,14 +11879,14 @@ input[type=range]:focus::-ms-fill-upper {
 
 .input-group>.input-group-prepend>.input-group-text{
   border-radius: 2rem 0 0 2rem;
-  padding: 0 $sard-spacer-8;
+  padding: 0 $sa-spacer-8;
   background-color: $user-primary-colour;
   color: white;
   border-color: $user-primary-colour;
 }
 .input-group>.input-group-append>.input-group-text{
   border-radius: 0 2rem 2rem 0;
-  padding: 0 $sard-spacer-8;
+  padding: 0 $sa-spacer-8;
   background-color: $user-primary-colour;
   color: white;
   border-color: $user-primary-colour;
@@ -12016,7 +12016,7 @@ input.form-control::placeholder {
 // List Groups ==================================
 
 .list-group-item{
-  padding: $sard-spacer-8 $sard-spacer-10;
+  padding: $sa-spacer-8 $sa-spacer-10;
   border:1px solid $sa-grey-04;
 }
 
@@ -12037,7 +12037,7 @@ input.form-control::placeholder {
 // list-group-flush =========
 .card, .panel, fieldset{
   & .list-group.list-group-flush:first-of-type{
-    margin: -$sard-spacer-10;
+    margin: -$sa-spacer-10;
     & .list-group-item{
       border:1px solid $sa-grey-03;
       // margin: -1px;
@@ -12048,8 +12048,8 @@ input.form-control::placeholder {
   }
   & .list-group.list-group-flush:last-of-type{
     & .list-group-item:last-child{
-      border-bottom-left-radius: $sard-border-radius;
-      border-bottom-right-radius: $sard-border-radius;
+      border-bottom-left-radius: $sa-border-radius;
+      border-bottom-right-radius: $sa-border-radius;
     }
   }
 }
@@ -12074,7 +12074,7 @@ input.form-control::placeholder {
 
 .card, .panel, fieldset{
   & .list-group.list-group-flush.list-group-horizontal{
-    margin-top: -$sard-spacer-8;
+    margin-top: -$sa-spacer-8;
     & .list-group-item{
       border:1px solid $sa-grey-04;
       border-top: none;
@@ -12285,7 +12285,7 @@ a.list-group-item-action.active{
 // Models =======================================
 
 @mixin modal-padding{
-  padding: $sard-spacer-8 $sard-spacer-12;
+  padding: $sa-spacer-8 $sa-spacer-12;
 }
 .modal-dialog {
   padding-top: 3.5rem; // Allows for navbar and breadbrumbs
@@ -12329,7 +12329,7 @@ a.list-group-item-action.active{
 }
 
 .modal-header{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
   min-height: 43px;
@@ -12352,20 +12352,20 @@ a.list-group-item-action.active{
 
 .modal-title{
   @include roboto-regular;
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 300;
-  line-height: $sard-heading-line-height;
-  color: $sard-heading-text-color;
+  line-height: $sa-heading-line-height;
+  color: $sa-heading-text-color;
   padding-top: 1px;
 }
 
 .modal-body{
-  padding: 0 $sard-spacer-12;
-  margin: $sard-spacer-8 0;
+  padding: 0 $sa-spacer-12;
+  margin: $sa-spacer-8 0;
 }
 
 .modal-body p:last-of-type{
-  margin-bottom: $sard-spacer-8;
+  margin-bottom: $sa-spacer-8;
 }
 
 .modal-footer {
@@ -12940,7 +12940,7 @@ p > a.modal-info-circle-inline{
 
 /* change the padding for height */
 .navbar .navbar-nav .nav-link {
-  padding: $sard-spacer-15 $sard-spacer-8;
+  padding: $sa-spacer-15 $sa-spacer-8;
 }
 
 /* change the color of active or hovered links */
@@ -12980,7 +12980,7 @@ p > a.modal-info-circle-inline{
   }
   .dropdown-item{
     color: $text;
-    padding: $sard-spacer-4 $sard-spacer-8;
+    padding: $sa-spacer-4 $sa-spacer-8;
     &:visited { 
       color: $text;
     }
@@ -13006,12 +13006,12 @@ p > a.modal-info-circle-inline{
     border-bottom-right-radius: 0px;
   }
   .dropdown-menu li:first-of-type .dropdown-item{
-    border-top-left-radius: $sard-inner-border-radius;
-    border-top-right-radius: $sard-inner-border-radius;
+    border-top-left-radius: $sa-inner-border-radius;
+    border-top-right-radius: $sa-inner-border-radius;
   }
   .dropdown-menu li:last-of-type .dropdown-item{
-    border-bottom-left-radius: $sard-inner-border-radius;
-    border-bottom-right-radius: $sard-inner-border-radius;
+    border-bottom-left-radius: $sa-inner-border-radius;
+    border-bottom-right-radius: $sa-inner-border-radius;
   }
 }
 
@@ -13021,7 +13021,7 @@ p > a.modal-info-circle-inline{
 .navbar .navbar-toggler{
   background-color: $sa-grey-14;
   border:none;
-  padding: 0 $sard-spacer-4;
+  padding: 0 $sa-spacer-4;
   &:hover{
     background-color: $sa-grey-16;
   }
@@ -13080,8 +13080,8 @@ p > a.modal-info-circle-inline{
 }
 
 // .dropdown-submenu a:last-of-type{
-//   // border-bottom-left-radius: $sard-inner-border-radius;
-//   // border-bottom-right-radius: $sard-inner-border-radius;
+//   // border-bottom-left-radius: $sa-inner-border-radius;
+//   // border-bottom-right-radius: $sa-inner-border-radius;
 // }
 
 .navbar-primary .dropdown-submenu .dropdown-menu{
@@ -13150,8 +13150,8 @@ p > a.modal-info-circle-inline{
 
 .navbar-dark .dropdown-submenu .dropdown-menu{
   border:none;
-  border-top-left-radius: $sard-border-radius;
-  border-top-right-radius: $sard-border-radius;
+  border-top-left-radius: $sa-border-radius;
+  border-top-right-radius: $sa-border-radius;
 }
 .navbar-dark .dropdown-menu .dropdown-divider {
     border-color: white;
@@ -13267,8 +13267,8 @@ p > a.modal-info-circle-inline{
 }
 .navbar-primary .dropdown-submenu .dropdown-menu{
   border:none;
-  border-top-left-radius: $sard-border-radius;
-  border-top-right-radius: $sard-border-radius;
+  border-top-left-radius: $sa-border-radius;
+  border-top-right-radius: $sa-border-radius;
 }
 .navbar-primary .dropdown-menu .dropdown-divider {
     border-color: white;
@@ -13390,8 +13390,8 @@ p > a.modal-info-circle-inline{
 
 .navbar-secondary .dropdown-submenu .dropdown-menu{
   border:none;
-  border-top-left-radius: $sard-border-radius;
-  border-top-right-radius: $sard-border-radius;
+  border-top-left-radius: $sa-border-radius;
+  border-top-right-radius: $sa-border-radius;
 }
 .navbar-secondary .dropdown-menu .dropdown-divider {
     border-color: white;
@@ -13424,10 +13424,10 @@ p > a.modal-info-circle-inline{
 // Navbar dropdowns at small screens
 @media (max-width: 991px){
   .navbar .navbar-nav .nav-link {
-    padding: $sard-spacer-4 $sard-spacer-8;
+    padding: $sa-spacer-4 $sa-spacer-8;
   }
   .navbar .searchbar-sard {
-    margin-bottom: $sard-spacer-8;
+    margin-bottom: $sa-spacer-8;
   }
 }
 
@@ -13436,8 +13436,8 @@ p > a.modal-info-circle-inline{
     transform: rotate(0deg);
   }
   .dropdown-submenu .dropdown-menu{
-    margin-left: $sard-spacer-8;
-    margin-right: $sard-spacer-8;
+    margin-left: $sa-spacer-8;
+    margin-right: $sa-spacer-8;
   }
 }
 // Dark
@@ -13628,7 +13628,7 @@ $sa-nav-colour: $sa-grey-14;
 }
 
 .nav.nav-pills .nav-link{
-  border-radius: $sard-spacer-6;
+  border-radius: $sa-spacer-6;
   color: $sa-nav-colour;
   &:visited{
     color: $sa-nav-colour;
@@ -13705,8 +13705,8 @@ $sa-nav-colour: $sa-grey-14;
 .card-header-tabs{
  margin-left: 0;
  margin-right: 0;
- margin-top: $sard-spacer-6;
- margin-bottom: -$sard-spacer-10;
+ margin-top: $sa-spacer-6;
+ margin-bottom: -$sa-spacer-10;
 }
 .nav.nav-tabs.card-header-tabs .nav-item{
   .nav-link{
@@ -13714,8 +13714,8 @@ $sa-nav-colour: $sa-grey-14;
     color: $sa-nav-colour;
     background-color: white;
     margin-right: 1px;
-    padding-top: $sard-spacer-2;
-    // padding-bottom: $sard-spacer-6;
+    padding-top: $sa-spacer-2;
+    // padding-bottom: $sa-spacer-6;
     &:visited{
       color: $sa-nav-colour;
     }
@@ -13740,11 +13740,11 @@ $sa-nav-colour: $sa-grey-14;
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   word-wrap: break-word;
-  background-color: $sard-bg;
+  background-color: $sa-bg;
   background-clip: border-box;
   border:1px solid transparent;
-  @include border-radius($sard-border-radius);
-  margin-bottom: $sard-margin;
+  @include border-radius($sa-border-radius);
+  margin-bottom: $sa-margin;
 
   & .panel-heading, .panel-header, .panel-footer{
     border:none;
@@ -13752,7 +13752,7 @@ $sa-nav-colour: $sa-grey-14;
   }
 }
 .panel-body {
-  padding: $sard-body-padding;
+  padding: $sa-body-padding;
   margin: -1px;
   @include clearfix;
 }
@@ -13785,47 +13785,47 @@ $sa-nav-colour: $sa-grey-14;
 
 // Optional heading
 .panel-heading, .panel-header  {
-  padding: $sard-heading-padding;
+  padding: $sa-heading-padding;
   border-bottom: 1px solid transparent;
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   margin: -1px;
   overflow: hidden;
 
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 300;
-  line-height: $sard-heading-line-height;
-  color: $sard-heading-text-color;
+  line-height: $sa-heading-line-height;
+  color: $sa-heading-text-color;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
   }
   &:first-child {
-    @include border-radius($sard-inner-border-radius $sard-inner-border-radius 0 0);
+    @include border-radius($sa-inner-border-radius $sa-inner-border-radius 0 0);
   }
 }
 
 .panel-heading h3, .panel-header h3,
 .panel-heading h4, .panel-header h4{
   margin: 0;
-  font-size: $sard-heading-font-size;
-  line-height: $sard-heading-line-height;
-  font-weight: $sard-heading-font-weight;
-  color: $sard-heading-text-color;
+  font-size: $sa-heading-font-size;
+  line-height: $sa-heading-line-height;
+  font-weight: $sa-heading-font-weight;
+  color: $sa-heading-text-color;
 }
 
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
-  padding: $sard-footer-padding;
-  background-color: $sard-footer-bg;
-  color: $sard-heading-text-color;
-  font-weight: $sard-heading-font-weight;
-  border-top: 1px solid $sard-inner-border;
-  @include border-bottom-radius(($sard-border-radius - 1));
+  padding: $sa-footer-padding;
+  background-color: $sa-footer-bg;
+  color: $sa-heading-text-color;
+  font-weight: $sa-heading-font-weight;
+  border-top: 1px solid $sa-inner-border;
+  @include border-bottom-radius(($sa-border-radius - 1));
   margin: -1px;
 
   &:last-child {
-    @include border-radius( 0 0 $sard-inner-border-radius $sard-inner-border-radius);
+    @include border-radius( 0 0 $sa-inner-border-radius $sa-inner-border-radius);
   }
 }
 
@@ -13833,25 +13833,25 @@ $sa-nav-colour: $sa-grey-14;
 // SARD panels ===================================
 
 .panel.panel-sard, .panel.panel-default{
-  // background-color: $sard-bg;
+  // background-color: $sa-bg;
   & .panel-heading, .panel-header, .panel-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
-      color: lighten($sard-heading-bg, 30%) !important;
+      color: lighten($sa-heading-bg, 30%) !important;
     }
   }
 }
 .panel.panel-sard.outline, .panel.panel-default.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .panel-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body hr{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
 }
 
@@ -14017,9 +14017,9 @@ $sa-nav-colour: $sa-grey-14;
 
 
 .panel.panel-dark{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   & .panel-heading, .panel-header, .panel-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
       color: lighten($text, 25%) !important;
     }
@@ -14032,15 +14032,15 @@ $sa-nav-colour: $sa-grey-14;
 }
 .panel.panel-dark.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .panel-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body hr{
-    border-color: $sard-heading-bg;
+    border-color: $sa-heading-bg;
   }
   & .panel-body{
     & h1, h2, h3, h4, h5, h6, p{
@@ -14106,13 +14106,13 @@ $sa-nav-colour: $sa-grey-14;
  //BS3 specific
 // Tables =======================================
 
-$sard-table-head-bg:          $sa-grey-14;
-$sard-table-dark-head-bg:     $sa-grey-18;
+$sa-table-head-bg:          $sa-grey-14;
+$sa-table-dark-head-bg:     $sa-grey-18;
 // Base styles
 
 .panel-body .table, .card-body .table, .form-group .table{
-  margin: -$sard-spacer-x;
-  min-width: calc(100% + #{$sard-spacer-x-2x});
+  margin: -$sa-spacer-x;
+  min-width: calc(100% + #{$sa-spacer-x-2x});
   font-size: 0.875rem; // 14px
 }
 
@@ -14177,7 +14177,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard > thead > tr > td,
 .table.table-sard > tbody > tr > td,
 .table.table-sard > tfoot > tr > td {
-  padding: $sard-spacer-6 $sard-spacer-10;
+  padding: $sa-spacer-6 $sa-spacer-10;
 }
 
 .table-sard td, .table-sard th{
@@ -14185,7 +14185,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 }
 
 .table-sard thead th{
-  background-color: $sard-table-head-bg;
+  background-color: $sa-table-head-bg;
   color: white;
   border-bottom: none;
   border-top: none;
@@ -14199,11 +14199,11 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 // ==========================
 // Inverted(dark) table
 .table-sard.table-dark{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   margin-bottom: 0;
 }
 .table-sard.table-dark thead th{
-  background-color: $sard-table-dark-head-bg;
+  background-color: $sa-table-dark-head-bg;
 }
 
 // Hoverable table
@@ -14250,7 +14250,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard.table-sm>tfoot>tr>th, 
 .table.table-sard.table-sm>thead>tr>td, 
 .table.table-sard.table-sm>thead>tr>th{
-  padding: $sard-spacer-3;
+  padding: $sa-spacer-3;
 }
 .table.table-sard.table-sm>tbody>tr>td:first-child, 
 .table.table-sard.table-sm>tbody>tr>th:first-child, 
@@ -14258,7 +14258,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard.table-sm>tfoot>tr>th:first-child, 
 .table.table-sard.table-sm>thead>tr>td:first-child, 
 .table.table-sard.table-sm>thead>tr>th:first-child{
-  padding-left: $sard-spacer-10;
+  padding-left: $sa-spacer-10;
 }
 .table.table-sard.table-sm>tbody>tr>td:last-child, 
 .table.table-sard.table-sm>tbody>tr>th:last-child, 
@@ -14266,7 +14266,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard.table-sm>tfoot>tr>th:last-child, 
 .table.table-sard.table-sm>thead>tr>td:last-child, 
 .table.table-sard.table-sm>thead>tr>th:last-child{
-  padding-right: $sard-spacer-10;
+  padding-right: $sa-spacer-10;
 }
 
 // Table head options
@@ -14303,16 +14303,16 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 .table-sard caption{
   caption-side: top;
   color: $text;
-  padding: $sard-spacer-6 $sard-spacer-10
+  padding: $sa-spacer-6 $sa-spacer-10
 }
 .table-sard caption.caption-bottom{
   caption-side: bottom;
   border-top: 1px solid white;
 }
 .table-sard.table-dark caption{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   color: white;
-  padding: $sard-spacer-6 $sard-spacer-10
+  padding: $sa-spacer-6 $sa-spacer-10
 }
 
 // Popovers =====================================
@@ -14403,7 +14403,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 #navbar-admin.navbar .navbar-toggler{
   background-color: $user-primary-colour;
   border:none;
-  padding: 0 $sard-spacer-6;
+  padding: 0 $sa-spacer-6;
   margin-top: 5px;
   &:hover{
     background-color: darken($user-primary-colour, 5%);
@@ -14496,7 +14496,7 @@ $sard-table-dark-head-bg:     $sa-grey-18;
 
   // Mega Menu ==============
   .megamenu{
-    padding: $sard-spacer-8 $sard-spacer-4 $sard-spacer-8 $sard-spacer-8;
+    padding: $sa-spacer-8 $sa-spacer-4 $sa-spacer-8 $sa-spacer-8;
     background-color:white;
     @include roboto-regular;
     border:1px solid darken($user-primary-colour, 15%);
@@ -16954,7 +16954,7 @@ hr.white{ border-color: white; }
     font-family: "Font Awesome 5 Free"; 
     content: "\f106" ;
     font-weight: 900;
-    padding-left: $sard-spacer-6;
+    padding-left: $sa-spacer-6;
     color:$user-primary-colour;
     font-size: 1.75rem;
     line-height: 0.5rem;

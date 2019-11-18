@@ -1,7 +1,7 @@
 // Models =======================================
 
 @mixin modal-padding{
-  padding: $sard-spacer-8 $sard-spacer-12;
+  padding: $sa-spacer-8 $sa-spacer-12;
 }
 .modal-dialog {
   padding-top: 3.5rem; // Allows for navbar and breadbrumbs
@@ -45,7 +45,7 @@
 }
 
 .modal-header{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
   min-height: 43px;
@@ -68,20 +68,20 @@
 
 .modal-title{
   @include roboto-regular;
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 300;
-  line-height: $sard-heading-line-height;
-  color: $sard-heading-text-color;
+  line-height: $sa-heading-line-height;
+  color: $sa-heading-text-color;
   padding-top: 1px;
 }
 
 .modal-body{
-  padding: 0 $sard-spacer-12;
-  margin: $sard-spacer-8 0;
+  padding: 0 $sa-spacer-12;
+  margin: $sa-spacer-8 0;
 }
 
 .modal-body p:last-of-type{
-  margin-bottom: $sard-spacer-8;
+  margin-bottom: $sa-spacer-8;
 }
 
 .modal-footer {

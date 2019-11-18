@@ -15,7 +15,7 @@ $accordian-bg-open-hover: black;
   margin-bottom: 0;
 }
 .accordion {
-  margin-bottom: $sard-spacer-16;
+  margin-bottom: $sa-spacer-16;
 }
 
 // Make Accordion Headings as a link ============
@@ -37,7 +37,7 @@ $accordian-bg-open-hover: black;
 .accordion legend { 
   & .btn,
   & a{
-    padding: $sard-heading-padding;
+    padding: $sa-heading-padding;
     color:white!important;
     text-decoration:none;
     display: block;
@@ -46,10 +46,10 @@ $accordian-bg-open-hover: black;
     border-radius: 0;
     border: 1px solid transparent;
   
-    font-size: $sard-heading-font-size;
+    font-size: $sa-heading-font-size;
     font-weight: 300;
-    line-height: $sard-heading-line-height;
-    color: $sard-heading-text-color;
+    line-height: $sa-heading-line-height;
+    color: $sa-heading-text-color;
   }
 }
 
@@ -98,7 +98,7 @@ fieldset.collapsable legend {
   display: block;
   padding:0px;
   color:white;
-  border-radius: $sard-border-radius;
+  border-radius: $sa-border-radius;
   overflow: visible;
 }
 // This makes the entire heading a link
@@ -108,20 +108,20 @@ fieldset.collapsable legend {
 fieldset.collapsable legend { 
   & .btn,
   & a {
-    padding: $sard-heading-padding;
+    padding: $sa-heading-padding;
     color:white!important;
     text-decoration:none;
     display: block;
     width: 100%;
     text-align: left;
-    border-radius: $sard-border-radius $sard-border-radius 0 0;
+    border-radius: $sa-border-radius $sa-border-radius 0 0;
     box-shadow: none;
     border: 1px solid transparent;
   
-    font-size: $sard-heading-font-size;
+    font-size: $sa-heading-font-size;
     font-weight: 300;
-    line-height: $sard-heading-line-height;
-    color: $sard-heading-text-color;
+    line-height: $sa-heading-line-height;
+    color: $sa-heading-text-color;
   }
 }
 .card.collapsable .card-header,
@@ -130,7 +130,7 @@ fieldset.collapsable legend {
 fieldset.collapsable legend{
   & .btn.collapsed,
   & a.collapsed{
-    border-radius: $sard-border-radius;
+    border-radius: $sa-border-radius;
   }
 }
 
@@ -155,7 +155,7 @@ fieldset.collapsable legend{
     font-family: "Font Awesome 5 Free"; 
     content: "\f106" ;
     font-weight: 900;
-    padding-right: $sard-spacer-8 ;
+    padding-right: $sa-spacer-8 ;
     color:$user-primary-colour;
     font-size: 1.75rem;
     position: absolute;
@@ -175,7 +175,7 @@ fieldset.collapsable legend{
     font-family: "Font Awesome 5 Free"; 
     content: "\f107" ;
     font-weight: 900;
-    padding-right: $sard-spacer-8;
+    padding-right: $sa-spacer-8;
     color:$user-primary-colour;
     font-size: 1.75rem;
     position: absolute;
@@ -209,8 +209,8 @@ fieldset.collapsable legend{
 .accordion-mixed>.accordion-mixed-item:last-child  {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: $sard-border-radius;
-  border-bottom-left-radius: $sard-border-radius;
+  border-bottom-right-radius: $sa-border-radius;
+  border-bottom-left-radius: $sa-border-radius;
 }
 
 

@@ -7,11 +7,11 @@
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   word-wrap: break-word;
-  background-color: $sard-bg;
+  background-color: $sa-bg;
   background-clip: border-box;
   border:1px solid transparent;
-  @include border-radius($sard-border-radius);
-  margin-bottom: $sard-margin;
+  @include border-radius($sa-border-radius);
+  margin-bottom: $sa-margin;
 
   & .panel-heading, .panel-header, .panel-footer{
     border:none;
@@ -19,7 +19,7 @@
   }
 }
 .panel-body {
-  padding: $sard-body-padding;
+  padding: $sa-body-padding;
   margin: -1px;
   @include clearfix;
 }
@@ -52,47 +52,47 @@
 
 // Optional heading
 .panel-heading, .panel-header  {
-  padding: $sard-heading-padding;
+  padding: $sa-heading-padding;
   border-bottom: 1px solid transparent;
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   margin: -1px;
   overflow: hidden;
 
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 300;
-  line-height: $sard-heading-line-height;
-  color: $sard-heading-text-color;
+  line-height: $sa-heading-line-height;
+  color: $sa-heading-text-color;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
   }
   &:first-child {
-    @include border-radius($sard-inner-border-radius $sard-inner-border-radius 0 0);
+    @include border-radius($sa-inner-border-radius $sa-inner-border-radius 0 0);
   }
 }
 
 .panel-heading h3, .panel-header h3,
 .panel-heading h4, .panel-header h4{
   margin: 0;
-  font-size: $sard-heading-font-size;
-  line-height: $sard-heading-line-height;
-  font-weight: $sard-heading-font-weight;
-  color: $sard-heading-text-color;
+  font-size: $sa-heading-font-size;
+  line-height: $sa-heading-line-height;
+  font-weight: $sa-heading-font-weight;
+  color: $sa-heading-text-color;
 }
 
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
-  padding: $sard-footer-padding;
-  background-color: $sard-footer-bg;
-  color: $sard-heading-text-color;
-  font-weight: $sard-heading-font-weight;
-  border-top: 1px solid $sard-inner-border;
-  @include border-bottom-radius(($sard-border-radius - 1));
+  padding: $sa-footer-padding;
+  background-color: $sa-footer-bg;
+  color: $sa-heading-text-color;
+  font-weight: $sa-heading-font-weight;
+  border-top: 1px solid $sa-inner-border;
+  @include border-bottom-radius(($sa-border-radius - 1));
   margin: -1px;
 
   &:last-child {
-    @include border-radius( 0 0 $sard-inner-border-radius $sard-inner-border-radius);
+    @include border-radius( 0 0 $sa-inner-border-radius $sa-inner-border-radius);
   }
 }
 
@@ -100,25 +100,25 @@
 // SARD panels ===================================
 
 .panel.panel-sard, .panel.panel-default{
-  // background-color: $sard-bg;
+  // background-color: $sa-bg;
   & .panel-heading, .panel-header, .panel-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
-      color: lighten($sard-heading-bg, 30%) !important;
+      color: lighten($sa-heading-bg, 30%) !important;
     }
   }
 }
 .panel.panel-sard.outline, .panel.panel-default.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .panel-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body hr{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
 }
 
@@ -284,9 +284,9 @@
 
 
 .panel.panel-dark{
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   & .panel-heading, .panel-header, .panel-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
       color: lighten($text, 25%) !important;
     }
@@ -299,15 +299,15 @@
 }
 .panel.panel-dark.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .panel-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .panel-body hr{
-    border-color: $sard-heading-bg;
+    border-color: $sa-heading-bg;
   }
   & .panel-body{
     & h1, h2, h3, h4, h5, h6, p{

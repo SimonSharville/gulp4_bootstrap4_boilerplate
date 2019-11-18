@@ -60,7 +60,7 @@
 
   // Mega Menu ==============
   .megamenu{
-    padding: $sard-spacer-8 $sard-spacer-4 $sard-spacer-8 $sard-spacer-8;
+    padding: $sa-spacer-8 $sa-spacer-4 $sa-spacer-8 $sa-spacer-8;
     background-color:white;
     @include roboto-regular;
     border:1px solid darken($user-primary-colour, 15%);

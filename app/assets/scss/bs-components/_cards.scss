@@ -3,7 +3,7 @@
 // Base class
 .card{
   border:1px solid transparent;
-  margin-bottom: $sard-margin;
+  margin-bottom: $sa-margin;
   
   & .card-header, .card-footer{
     border:none;
@@ -11,7 +11,7 @@
   }
 }
 .card-body {
-  padding: $sard-body-padding;
+  padding: $sa-body-padding;
   margin: -1px;
   @include clearfix;
 }
@@ -44,16 +44,16 @@
 
 // Optional heading
 .card-header {
-  padding: $sard-heading-padding;
+  padding: $sa-heading-padding;
   border-bottom: 1px solid transparent;
-  background-color: $sard-heading-bg;
+  background-color: $sa-heading-bg;
   margin: -1px;
   overflow: hidden;
 
-  font-size: $sard-heading-font-size;
+  font-size: $sa-heading-font-size;
   font-weight: 300;
-  line-height: $sard-heading-line-height;
-  color: $sard-heading-text-color;
+  line-height: $sa-heading-line-height;
+  color: $sa-heading-text-color;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -66,21 +66,21 @@
 .card-header h3,
 .card-header h4{
   margin: 0;
-  font-size: $sard-heading-font-size;
-  line-height: $sard-heading-line-height;
-  font-weight: $sard-heading-font-weight;
-  color: $sard-heading-text-color;
+  font-size: $sa-heading-font-size;
+  line-height: $sa-heading-line-height;
+  font-weight: $sa-heading-font-weight;
+  color: $sa-heading-text-color;
 }
 
 
 // Optional footer (stays gray in every modifier class)
 .card-footer {
-  padding: $sard-footer-padding;
-  background-color: $sard-footer-bg;
-  color: $sard-heading-text-color;
-  font-weight: $sard-heading-font-weight;
-  border-top: 1px solid $sard-inner-border;
-  @include border-bottom-radius(($sard-border-radius - 1));
+  padding: $sa-footer-padding;
+  background-color: $sa-footer-bg;
+  color: $sa-heading-text-color;
+  font-weight: $sa-heading-font-weight;
+  border-top: 1px solid $sa-inner-border;
+  @include border-bottom-radius(($sa-border-radius - 1));
   margin: -1px;
 
   &:last-child {
@@ -92,25 +92,25 @@
 // SARD Cards ===================================
 
 .card.card-sard, .card.card-default{
-  background-color: $sard-bg;
+  background-color: $sa-bg;
   & .card-header, .card-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
-      color: lighten($sard-heading-bg, 30%) !important;
+      color: lighten($sa-heading-bg, 30%) !important;
     }
   }
 }
 .card.card-sard.outline, .card.card-default.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .card-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body hr{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
 }
 
@@ -284,7 +284,7 @@
 .card.card-dark{
   background-color: $sa-grey-14;
   & .card-header, .card-footer{
-    background-color: $sard-heading-bg;
+    background-color: $sa-heading-bg;
     & .text-muted { 
       color: lighten($text, 25%) !important;
     }
@@ -297,15 +297,15 @@
 }
 .card.card-dark.outline{
   background-color: white;
-  border-color: $sard-heading-bg;
+  border-color: $sa-heading-bg;
   & .card-body.border-bottom{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body.border-top{
-    border-color: $sard-heading-bg!important;
+    border-color: $sa-heading-bg!important;
   }
   & .card-body hr{
-    border-color: $sard-heading-bg;
+    border-color: $sa-heading-bg;
   }
   & .card-body{
     & h1, h2, h3, h4, h5, h6, p{

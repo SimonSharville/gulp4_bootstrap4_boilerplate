@@ -19,7 +19,7 @@ $sa-nav-colour: $sa-grey-14;
 }
 
 .nav.nav-pills .nav-link{
-  border-radius: $sard-spacer-6;
+  border-radius: $sa-spacer-6;
   color: $sa-nav-colour;
   &:visited{
     color: $sa-nav-colour;
@@ -96,8 +96,8 @@ $sa-nav-colour: $sa-grey-14;
 .card-header-tabs{
  margin-left: 0;
  margin-right: 0;
- margin-top: $sard-spacer-6;
- margin-bottom: -$sard-spacer-10;
+ margin-top: $sa-spacer-6;
+ margin-bottom: -$sa-spacer-10;
 }
 .nav.nav-tabs.card-header-tabs .nav-item{
   .nav-link{
@@ -105,8 +105,8 @@ $sa-nav-colour: $sa-grey-14;
     color: $sa-nav-colour;
     background-color: white;
     margin-right: 1px;
-    padding-top: $sard-spacer-2;
-    // padding-bottom: $sard-spacer-6;
+    padding-top: $sa-spacer-2;
+    // padding-bottom: $sa-spacer-6;
     &:visited{
       color: $sa-nav-colour;
     }

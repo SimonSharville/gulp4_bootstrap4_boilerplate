@@ -11,7 +11,7 @@
 }
 
 .btn-xs{
-  padding: 0 $sard-spacer-6;
+  padding: 0 $sa-spacer-6;
   font-size: .75rem;
 }
 
@@ -429,7 +429,7 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-notext{
-  padding: $sard-spacer-6;
+  padding: $sa-spacer-6;
   &::before{
     left: 0;
     right: 0;
@@ -439,18 +439,18 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-forward{
-    padding: $sard-spacer-6 $sard-spacer-8;
+    padding: $sa-spacer-6 $sa-spacer-8;
   }
   &.btn-back{
-    padding: $sard-spacer-6 $sard-spacer-8;
+    padding: $sa-spacer-6 $sa-spacer-8;
   }
   &.btn-refresh{
-    padding: $sard-spacer-6 $sard-spacer-8;
+    padding: $sa-spacer-6 $sa-spacer-8;
   }
 }
 
 .btn-notext.btn-lg{
-  padding:  $sard-spacer-7;
+  padding:  $sa-spacer-7;
   &::before{
     left: 0;
     right: 0;
@@ -460,15 +460,15 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-forward{
-   padding:  $sard-spacer-7 $sard-spacer-9;
+   padding:  $sa-spacer-7 $sa-spacer-9;
   }
   &.btn-back{
-    padding:  $sard-spacer-7 $sard-spacer-9;
+    padding:  $sa-spacer-7 $sa-spacer-9;
   }
 }
 
 .btn-notext.btn-sm{
-  padding:  $sard-spacer-4;
+  padding:  $sa-spacer-4;
   &::before{
     left: 0;
     right: 0;
@@ -478,15 +478,15 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-forward{
-   padding:  $sard-spacer-4 $sard-spacer-6;
+   padding:  $sa-spacer-4 $sa-spacer-6;
   }
   &.btn-back{
-    padding:  $sard-spacer-4 $sard-spacer-6;
+    padding:  $sa-spacer-4 $sa-spacer-6;
   }
 }
 
 .btn-notext.btn-xs{
-  padding:  0 $sard-spacer-2;
+  padding:  0 $sa-spacer-2;
   &::before{
     left: 0;
     right: 0;
@@ -496,38 +496,38 @@ $btn-default-colour: $sa-grey-14;
     right: 0;
   }
   &.btn-cancel{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-forward{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-back{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-refresh{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-upload{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
   &.btn-download{
-    padding: 0 $sard-spacer-3;
+    padding: 0 $sa-spacer-3;
   }
 }
 
 .btn-save{
-  padding-left: $sard-spacer-14;
+  padding-left: $sa-spacer-14;
   &.btn-lg{
-    padding-left: $sard-spacer-18;
+    padding-left: $sa-spacer-18;
   }
   &.btn-sm{
-    padding-left: $sard-spacer-12;
+    padding-left: $sa-spacer-12;
   }
   &.btn-xs{
-    padding-left: $sard-spacer-8;
+    padding-left: $sa-spacer-8;
   }
   &.btn-notext{
-    padding-left: $sard-spacer-7;
+    padding-left: $sa-spacer-7;
   }
 }
 

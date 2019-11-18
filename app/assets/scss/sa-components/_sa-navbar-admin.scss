@@ -12,7 +12,7 @@
 #navbar-admin.navbar .navbar-toggler{
   background-color: $user-primary-colour;
   border:none;
-  padding: 0 $sard-spacer-6;
+  padding: 0 $sa-spacer-6;
   margin-top: 5px;
   &:hover{
     background-color: darken($user-primary-colour, 5%);
