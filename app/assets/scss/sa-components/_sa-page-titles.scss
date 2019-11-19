@@ -1,0 +1,147 @@
+// Page Titles ==================================
+
+// Default Page titles ------
+
+.page-title{
+  font-size: 1.1rem; // 18px
+  margin-top: 0;
+  margin-bottom: 15px;
+  @media (max-width: 767px){
+    margin-bottom: 10px;
+  }
+}
+
+.page-title a:link,
+.page-title a:visited{
+  color: $user-primary-colour;
+}
+.page-title a:hover,
+.page-title a:focus{
+  color: $user-primary-colour-dark;
+}
+
+.page-title .name{
+  @include roboto-black;
+  font-size: 1.2rem; // 20px
+  line-height: 1.2rem;
+  letter-spacing: $vslight;
+  margin: 0;
+  // margin-bottom:5px;
+  margin-left:0.07em; // Set left align to allow for Roboto indenting at large sizes
+    @media (max-width: 767px){
+      margin-left:0.1em;
+    }
+}
+
+.page-title .page{
+  @include roboto-light;
+  font-size: 2.25rem; // 36px
+  line-height: 2.5rem;
+  margin: 0;
+  margin-left:-0.04em; // Set left align to allow for Roboto indenting at large sizes
+  @media (max-width: 767px) {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-left:0;
+  }
+}
+
+.page-title .subtitle,
+.page-title .description,
+.page-title .page-links{
+  @include roboto-regular;
+  font-size: 1.1rem; // 18px
+}
+
+
+// Page Titles with Photo --- 
+.page-title-with-image{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  @media (max-width: 767px){
+    margin-bottom: 10px;
+  }
+  .page-title-photo{
+    padding-right: 5px;
+  }
+
+  .page-title-photo img{
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 70px;
+    height: 70px;
+    @media (max-width: 767px){
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .page-title{
+    margin-bottom: 0;
+  }
+}
+
+// Page Title with State ----
+.page-title-with-state{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  @media (max-width: 767px){
+    margin-bottom: 10px;
+  }
+  .page-title{
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+}
+
+.page-state{
+  @include roboto-black;
+  font-size: 0.7em;
+  text-align: center;
+  color: white;
+}
+.page-state .current-state{
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  @media (max-width: 767px){
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+  }
+}
+.page-state .current-state .state{ visibility:hidden; }
+
+.page-state .current-state.Draft,
+.page-state .current-state.draft{
+  background-image: url("../../assets/rag-icons/rag-pt-draft@1x.png");
+}
+.page-state .current-state.Submitted,
+.page-state .current-state.submitted{
+  background-image: url("../../assets/rag-icons/rag-pt-submitted@2x.png");
+}
+.page-state .current-state.Complete,
+.page-state .current-state.complete{
+  background-image: url("../../assets/rag-icons/rag-pt-complete@2x.png");
+}
+.page-state .current-state.Approved,
+.page-state .current-state.approved{
+  background-image: url("../../assets/rag-icons/rag-pt-approved@2x.png");
+}
+.page-state .current-state.Recommended,
+.page-state .current-state.recommended{
+  background-image: url("../../assets/rag-icons/rag-pt-recommended@2x.png");
+}
+.page-state .current-state.Abandoned,
+.page-state .current-state.abandoned{
+  background-image: url("../../assets/rag-icons/rag-pt-abandoned@2x.png");
+}
+.page-state .current-state.Due,
+.page-state .current-state.due{
+  background-image: url("../../assets/rag-icons/rag-pt-due@2x.png");
+}
+  

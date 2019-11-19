@@ -1,0 +1,161 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Gulp 4, Bootstrap 4 - Sard Side Menu
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/remote-sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body.theme-trust
+    //=include ../navbars/_navbar-x1.haml
+
+    .container
+      .row
+        .col-sm-12
+          %h1 Page Titles
+          %p.lead
+            Below are some variations on page titles.
+
+      %hr.mb-4
+      .row
+        .col-sm-12
+          .page-title
+            .name Mrs Bella Owen
+            .page Portfolio Jun 2019
+            .subtitle Subtitle
+        .col-sm-12
+          %h6.base Default Page Title
+          %p
+            This is constructed as follows:
+            %br/
+            %code .page-title
+            %br/
+            %code &nbsp; .name
+            %span Name
+            %br/
+            %code &nbsp; .page
+            %span Page
+            %br/
+            %code &nbsp; .subtitle
+            %span Subtitle
+          %p.note 
+            %span.bold Note 
+            If you wish to wrap any part of the page title in a headline tag (h1), it should make no differnece to the styling (see variations below).
+            
+      %hr.mb-4
+      .row
+        .col-sm-12
+          .page-title
+            %h1
+              .page 
+                eDocuments for 
+                %span.bold Mrs Bella Owen
+        .col-sm-12
+          %h6.base Default Page Title in single line
+          %p
+            This is constructed as follows:
+            %br/
+            %code .page-title
+            %br/
+            %code &nbsp; %h1
+            %br/
+            %code &nbsp; &nbsp; .page
+            %br/
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Page
+            %br/
+            %code &nbsp; &nbsp; &nbsp; .bold
+            %span Name
+
+
+      %hr.mb-4
+      .row
+        .col-sm-12
+          .page-title-with-image
+            .page-title-photo
+              %img{:alt => "User icon", :src => "../assets/images/big-bird.jpg"}/
+            .page-title
+              %h3.name
+                Mrs Bella Owen
+              %h1.page
+                Dashboard
+        .col-sm-12
+          %h6.base Page Title with Image
+          %p
+            This is constructed as follows:
+            %br/
+            %code .page-title-with-image
+            %br/
+            %code &nbsp; .page-title-photo
+            %br/
+            %code &nbsp; &nbsp; Image
+            %br/
+            %code &nbsp; .page-title
+            %br/
+            %code &nbsp; &nbsp; %h3.name
+            %span Name
+            %br/
+            %code &nbsp; &nbsp; %h1.page
+            %span Page
+
+      %hr.mb-4
+      .row
+        .col-sm-12
+          .page-title-with-state
+            .page-title
+              .name
+                Mrs Bella Owen
+              .page
+                Job Plan May 2019 - Apr 2020
+            .page-state
+              .current-state.Draft
+                .state Draft
+        .col-sm-12
+          %h6.base Page Title with State
+          %p
+            This is constructed as follows:
+            %br/
+            %code .page-title-with-state
+            %br/
+            %code &nbsp; .page-title
+            %br/
+            %code &nbsp; &nbsp; .name
+            %span Name
+            %br/
+            %code &nbsp; &nbsp; .page
+            %span Page
+            %br/
+            %code &nbsp; .page-state
+            %br/
+            %code &nbsp; &nbsp; .current-state.Draft (or .draft)
+            %br/
+            %code &nbsp; &nbsp; &nbsp; .state 
+            %span Draft
+
+      %hr.mb-4
+      .row
+        .col-sm-12
+          .page-title
+            .page-links
+              %a{:href => "#/"} All MSFs
+              %span.slash /
+              %a{:href => "#/"} Mrs Bella Owen MSFs
+            .page
+              MSF Jun 2019 (complete)
+              for
+              %a{:href => "#/"} Mrs Bella Owen  
+            .description
+              Page Description or Subtitle     
+        .col-sm-12
+          %h6.base Page Titles with Links
+          %p The above shows how links look within Page Titles.
+
+      %hr.mb-4
+      .row
+        .col-sm-12
+          %p That will be all for now.
+
+    //=include ../navbars/_footer.haml
+
+    / Scripts ================================
+
+    %script{:src => "../assets/js/remote-sard-scripts.min.js"}
