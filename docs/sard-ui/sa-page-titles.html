@@ -166,69 +166,183 @@ Megamenu
 <div class='container'>
 <div class='row'>
 <div class='col-sm-12'>
-<h1>Sard Side Menu</h1>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
+<h1>Page Titles</h1>
 <p class='lead'>
-The Sard sidemenu slides out from the left.
+Below are some variations on page titles.
 </p>
 </div>
 </div>
+<hr class='mb-4'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='page-title'>
+<div class='name'>Mrs Bella Owen</div>
+<div class='page'>Portfolio Jun 2019</div>
+<div class='subtitle'>Subtitle</div>
 </div>
-<div class='sa-sidemenu'>
-<div class='menu-top'>
-<div class='open-icon'></div>
-<div class='brand-area'>
-<a href='/#'>Logo</a>
+</div>
+<div class='col-sm-12'>
+<h6 class='base'>Default Page Title</h6>
+<p>
+This is constructed as follows:
+<br>
+<code>.page-title</code>
+<br>
+<code>&nbsp; .name</code>
+<span>Name</span>
+<br>
+<code>&nbsp; .page</code>
+<span>Page</span>
+<br>
+<code>&nbsp; .subtitle</code>
+<span>Subtitle</span>
+</p>
+<p class='note'>
+<span class='bold'>Note</span>
+If you wish to wrap any part of the page title in a headline tag (h1), it should make no differnece to the styling (see variations below).
+</p>
 </div>
 </div>
-<div class='menu-list'>
-<!-- Include your navigation here -->
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
-<span class='link-text'>A very long, I mean really, really, really long link title</span>
-</a>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
-<span class='link-text'>A Link</span>
-</a>
-<hr>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
-<span class='link-text'>A Link</span>
-</a>
-<a class='menu-link' href='/#'>
-<span class='link-text'>link, No Icon</span>
-</a>
-<hr>
-<div class='sub-title'>Sub-title</div>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
-<span class='link-text'>A Link</span>
-</a>
-<hr>
-<div class='sub-title'>Dropdown Menu</div>
-<ul>
-<li class='dropdown'>
-<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-Dropdown
-</a>
-<div aria-labelledby='sardUI' class='dropdown-menu'>
-<a class='dropdown-item' href='#/'>.dropdown-item</a>
-<a class='dropdown-item' href='#/'>.dropdown-item</a>
-<a class='dropdown-item' href='#/'>.dropdown-item</a>
-<a class='dropdown-item active' href='#/'>.dropdown-item.active</a>
+<hr class='mb-4'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='page-title'>
+<h1>
+<div class='page'>
+eDocuments for
+<span class='bold'>Mrs Bella Owen</span>
 </div>
-</li>
-</ul>
-<hr>
-<div class='sub-title'>Sub-title</div>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
-<span class='link-text'>A Link</span>
-</a>
+</h1>
+</div>
+</div>
+<div class='col-sm-12'>
+<h6 class='base'>Default Page Title in single line</h6>
+<p>
+This is constructed as follows:
+<br>
+<code>.page-title</code>
+<br>
+<code>&nbsp; %h1</code>
+<br>
+<code>&nbsp; &nbsp; .page</code>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Page
+<br>
+<code>&nbsp; &nbsp; &nbsp; .bold</code>
+<span>Name</span>
+</p>
+</div>
+</div>
+<hr class='mb-4'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='page-title-with-image'>
+<div class='page-title-photo'>
+<img alt='User icon' src='../assets/images/big-bird.jpg'>
+</div>
+<div class='page-title'>
+<h3 class='name'>
+Mrs Bella Owen
+</h3>
+<h1 class='page'>
+Dashboard
+</h1>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<h6 class='base'>Page Title with Image</h6>
+<p>
+This is constructed as follows:
+<br>
+<code>.page-title-with-image</code>
+<br>
+<code>&nbsp; .page-title-photo</code>
+<br>
+<code>&nbsp; &nbsp; Image</code>
+<br>
+<code>&nbsp; .page-title</code>
+<br>
+<code>&nbsp; &nbsp; %h3.name</code>
+<span>Name</span>
+<br>
+<code>&nbsp; &nbsp; %h1.page</code>
+<span>Page</span>
+</p>
+</div>
+</div>
+<hr class='mb-4'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='page-title-with-state'>
+<div class='page-title'>
+<div class='name'>
+Mrs Bella Owen
+</div>
+<div class='page'>
+Job Plan May 2019 - Apr 2020
+</div>
+</div>
+<div class='page-state'>
+<div class='current-state Draft'>
+<div class='state'>Draft</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<h6 class='base'>Page Title with State</h6>
+<p>
+This is constructed as follows:
+<br>
+<code>.page-title-with-state</code>
+<br>
+<code>&nbsp; .page-title</code>
+<br>
+<code>&nbsp; &nbsp; .name</code>
+<span>Name</span>
+<br>
+<code>&nbsp; &nbsp; .page</code>
+<span>Page</span>
+<br>
+<code>&nbsp; .page-state</code>
+<br>
+<code>&nbsp; &nbsp; .current-state.Draft (or .draft)</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; .state</code>
+<span>Draft</span>
+</p>
+</div>
+</div>
+<hr class='mb-4'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='page-title'>
+<div class='page-links'>
+<a href='#/'>All MSFs</a>
+<span class='slash'>/</span>
+<a href='#/'>Mrs Bella Owen MSFs</a>
+</div>
+<div class='page'>
+MSF Jun 2019 (complete)
+for
+<a href='#/'>Mrs Bella Owen</a>
+</div>
+<div class='description'>
+Page Description or Subtitle
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<h6 class='base'>Page Titles with Links</h6>
+<p>The above shows how links look within Page Titles.</p>
+</div>
+</div>
+<hr class='mb-4'>
+<div class='row'>
+<div class='col-sm-12'>
+<p>That will be all for now.</p>
+</div>
 </div>
 </div>
 <div class='sa-footer'>
