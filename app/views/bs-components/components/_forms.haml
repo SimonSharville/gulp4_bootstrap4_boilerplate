@@ -1,11 +1,11 @@
 .row
-  .col-sm-12
+  .col-sm-44
     %h1#forms-anchor.bs-anchor Forms
     %p
       Forms in SARD always sit within a Card, Panel or Fieldset.
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
     .card.card-sard
       .card-header
@@ -41,7 +41,7 @@
       %code  .form-group.form-buttons
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
     .card.card-sard
       .card-header
@@ -85,7 +85,7 @@
 
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
     %h4 Range Inputs
     .card.card-sard
@@ -103,7 +103,7 @@
 
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
     %h4 Form Groups and Layouts
     %p The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.
@@ -120,7 +120,7 @@
             %input#formGroupExampleInput2.form-control{:placeholder => "Another input", :type => "text"}/
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
 
     .card.card-sard
@@ -144,7 +144,7 @@
                 %input.form-control{:placeholder => "Last name", :type => "text"}/
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
     .card.card-sard
       .card-header
@@ -170,7 +170,7 @@
               %input.form-control{:placeholder => "Last name", :type => "text"}/
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
     .card.card-sard
       .card-header
@@ -180,10 +180,10 @@
         
         %form
           .form-row
-            .form-group.col-md-6
+            .form-group.col-md-22
               %label{:for => "inputEmail4"} Email
               %input#inputEmail4.form-control{:placeholder => "Email", :type => "email"}/
-            .form-group.col-md-6
+            .form-group.col-md-22
               %label{:for => "inputPassword4"} Password
               %input#inputPassword4.form-control{:placeholder => "Password", :type => "password"}/
           .form-group
@@ -193,15 +193,15 @@
             %label{:for => "inputAddress2"} Address 2
             %input#inputAddress2.form-control{:placeholder => "Apartment, studio, or floor", :type => "text"}/
           .form-row
-            .form-group.col-md-6
+            .form-group.col-md-22
               %label{:for => "inputCity"} City
               %input#inputCity.form-control{:type => "text"}/
-            .form-group.col-md-4
+            .form-group.col-md-8
               %label{:for => "inputState"} State
               %select#inputState.form-control
                 %option{:selected => "selected"} Choose...
                 %option ...
-            .form-group.col-md-2
+            .form-group.col-md-4
               %label{:for => "inputZip"} Zip
               %input#inputZip.form-control{:type => "text"}/
           .form-group
@@ -214,7 +214,7 @@
             %button.btn.btn-sign-in{:type => "submit"} Sign in
 
 .row
-  .col-sm-12
+  .col-sm-44
     %hr/
     .card.card-sard
       .card-header
@@ -227,17 +227,17 @@
 
         %form
           .form-group.row
-            %label.col-sm-2.col-form-label{:for => "inputEmail3"} Email
-            .col-sm-10
+            %label.col-sm-4.col-form-label{:for => "inputEmail3"} Email
+            .col-sm-40
               %input#inputEmail3.form-control{:placeholder => "Email", :type => "email"}/
           .form-group.row
-            %label.col-sm-2.col-form-label{:for => "inputPassword3"} Password
-            .col-sm-10
+            %label.col-sm-4.col-form-label{:for => "inputPassword3"} Password
+            .col-sm-40
               %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
           .form-group
             .row
-              .col-form-label.col-sm-2.pt-0 Radios
-              .col-sm-10
+              .col-form-label.col-sm-4.pt-0 Radios
+              .col-sm-40
                 .form-check.sa-radio-buttons
                   %input#gridRadios1.form-check-input{:checked => "checked", :name => "gridRadios", :type => "radio", :value => "option1"}/
                   %label.form-check-label.radio-button{:for => "gridRadios1"}
@@ -251,8 +251,8 @@
                   %label.form-check-label.radio-button{:for => "gridRadios3"}
                     %span Third disabled radio
           .form-group.row
-            .col-sm-2 Checkbox
-            .col-sm-10
+            .col-sm-4 Checkbox
+            .col-sm-40
               .form-check.sa-checkbox
                 %input#gridCheck1.form-check-input{:type => "checkbox"}/
                 %label.form-check-label{:for => "gridCheck1"}
@@ -265,12 +265,12 @@
 
 %hr
 .row
-  .col-sm-12
+  .col-sm-44
     %h3 Mixing Forms within Cards, Panels and Fieldsets
     %p Whether you use Cards, Panels or Fieldsets, they are designed to look identical. However Fieldsets can be placed within either a Card or a Panel.
     %p Below are some examples of mixed layouts.
 .row
-  .col-sm-6
+  .col-sm-22
     %h4 Card
     .card.card-sard
       .card-header Form within Card
@@ -289,7 +289,7 @@
             %button.btn.btn-sign-in{:name => "commit", :type => "submit", :value => "Sign in"} Sign in
             %button.btn.btn-submit{:type => "submit"} Submit
 
-  .col-sm-6
+  .col-sm-22
     %h4 Panel
     .panel.panel-sard
       .panel-heading
@@ -328,9 +328,9 @@
 
 
 
-  .col-sm-12  
+  .col-sm-44  
     %h4 Fieldsets
-  .col-sm-6
+  .col-sm-22
     %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
       %fieldset.fieldset-sard
         %legend Form in Fieldset
@@ -349,7 +349,7 @@
           %button.btn.btn-sign-in{:name => "commit", :type => "submit", :value => "Sign in"} Sign in
           %button.btn.btn-submit{:type => "submit"} Submit
 
-  .col-sm-6
+  .col-sm-22
     %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
       %fieldset.fieldset-sard
         %legend Form in seperate Fieldsets
@@ -368,13 +368,13 @@
           %button.btn.btn-submit{:type => "submit"} Submit
 
 .row
-  .col-sm-12  
+  .col-sm-44  
     %hr/
     %h4 Nesting Fieldsets within Cards or Panels
     %p
       You can nest Fieldstes within a Card or Panel, They will automatically have a border around each friedset.
 
-  .col-sm-6
+  .col-sm-22
     .panel.panel-sard
       .panel-header Form within Card using Fieldsets
       .panel-body
@@ -397,7 +397,7 @@
               %button.btn.btn-sign-in{:name => "commit", :type => "submit", :value => "Sign in"} Sign in
               %button.btn.btn-submit{:type => "submit"} Submit
 
-  .col-sm-6
+  .col-sm-22
     .card.card-sard
       .card-header Form within Card using Fieldsets
       .card-body

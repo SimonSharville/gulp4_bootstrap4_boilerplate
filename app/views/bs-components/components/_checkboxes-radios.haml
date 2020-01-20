@@ -1,5 +1,5 @@
 .row
-  .col-sm-12
+  .col-sm-44
     %h1#checkboxes-anchor.bs-anchor Checkboxes and Radios
     %p Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand out better.
 
@@ -43,7 +43,7 @@
 
 
   -# Standard =====
-  .col-sm-6
+  .col-sm-22
     .card.card-sard
       .card-header Standard Style
       .card-body.border-bottom
@@ -99,7 +99,7 @@
 
 
   -# SARD =========
-  .col-sm-6
+  .col-sm-22
     .card.card-sard
       .card-header SARD style
       .card-body.border-bottom
@@ -202,7 +202,7 @@
 
 
 
-  .col-sm-12
+  .col-sm-44
     %hr/
     %h3 Toggle Switches
     %p
@@ -211,12 +211,12 @@
       .card-header Toggle Switches
       .card-body
         .row  
-          .col-sm-6
+          .col-sm-22
             .sa-toggle-switch
               %input#advanced_when_toggle{type: 'checkbox', name: 'advanced_when', class: 'advanced_when'}
               %label{:for => "advanced_when_toggle"} 
                 %span.slider .sa-toggle-switch
-          .col-sm-6
+          .col-sm-22
             .sa-toggle-switch-right
               %input#advanced_when_toggle_right{type: 'checkbox', name: 'advanced_when', class: 'advanced_when'}
               %label{:for => "advanced_when_toggle_right"} 
@@ -235,7 +235,7 @@
       .card-header Radio Toggles
       .card-body
         .row
-          .col-sm-6
+          .col-sm-22
             .sa-radio-toggle
               %input#sa-radio-toggle-one{:checked => "checked", :name => "user", :type => "radio", :value => "false"}/
               %label{:for => "sa-radio-toggle-one"}
@@ -244,7 +244,7 @@
               %input#sa-radio-toggle-two{:name => "user", :type => "radio", :value => "true"}/
               %label{:for => "sa-radio-toggle-two"}
                 %span.radio Bottom
-          .col-sm-6
+          .col-sm-22
             .sa-radio-toggle-right
               %input#sa-radio-toggle-three{:checked => "checked", :name => "user2", :type => "radio", :value => "false"}/
               %label{:for => "sa-radio-toggle-three"}
@@ -267,12 +267,12 @@
       .card-header Toggle Check
       .card-body
         .row
-          .col-sm-6
+          .col-sm-22
             .sa-toggle-check
               %label
                 %input.toggle-check-input{:type => "checkbox", id: "own_cpd_record", class: "have_own_cpd", name: "own_cpd_record", value: "true", checked: "checked"}/
                 %span.toggle-check-text
-          .col-sm-6
+          .col-sm-22
             .sa-toggle-check-right
               %label
                 %input.toggle-check-input{:type => "checkbox", id: "own_cpd_record", class: "have_own_cpd", name: "own_cpd_record", value: "true", checked: "checked"}/

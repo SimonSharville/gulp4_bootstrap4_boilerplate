@@ -11,16 +11,16 @@
 
     .container{:style => ""}
       .row
-        .col-xs-12
+        .col-xs-44
           #flash_messages{:style => "display: none;"}
             .alert.alert-info.alert-dismissable{:role => "alert"}
               %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
                 %span{"aria-hidden" => "true"} ×
               Signed in successfully.
       .row
-        .col-xs-12
+        .col-xs-44
           .row
-            .col-xs-12
+            .col-xs-44
               .db-page-photo
                 %img{:alt => "Flower md orange", :src => "/system/users/photos/2-3/thumb/flower_md_orange.png?1561371475"}/
               .db-page-title
@@ -31,9 +31,9 @@
                     Dashboard
           .row
             / Right Column
-            .col-xs-12.col-sm-12.col-md-4.col-md-push-8
+            .col-xs-44.col-sm-44.col-md-8.col-md-push-8
               .row
-                .col-xs-12.col-sm-6.col-md-12
+                .col-xs-44.col-sm-22.col-md-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a#db-dates{"data-toggle" => "collapse", :href => "#dashboard-dates"}
@@ -96,7 +96,7 @@
                                 Sat, 06 Jun 2020
                                 %br/
                                 %span.small (in 11 months)
-                .col-xs-12.col-sm-6.col-md-12
+                .col-xs-44.col-sm-22.col-md-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a#db-details{"data-toggle" => "collapse", :href => "#dashboard-details"}
@@ -178,7 +178,7 @@
                       .panel-footer
                         %a.btn.btn-default.btn-xs{:href => "/users/edit"} Edit Details
                         %a.btn.btn-default.btn-xs{:href => "/email_preferences/2-3/edit"} Email Preferences
-                .col-sm-4.col-md-12.hidden-xs.hidden-sm
+                .col-sm-8.col-md-44.hidden-xs.hidden-sm
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a#db-support.collapsed{"data-toggle" => "collapse", :href => "#dashboard-support-docs"}
@@ -191,7 +191,7 @@
                             %a{:href => "http://demo.lvh.me:8080/support_documents/52b46315e3e1f157470003f2"} Appraisal Policy
                           %li.list-group-item.link-arrow
                             %a{:href => "http://demo.lvh.me:8080/support_documents/57e13f4f8025420c86000005"} DBS Declaration
-                .col-sm-4.col-md-12.hidden-xs.hidden-sm
+                .col-sm-8.col-md-44.hidden-xs.hidden-sm
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-guides-side"}
@@ -208,9 +208,9 @@
                           %a{:href => "/user_guides/360"}
                             %img.guide-image{:alt => "360", :src => "/support/images/360.png"}/
             / Main Column
-            .col-xs-12.col-md-8.col-md-pull-4
+            .col-xs-44.col-md-26.col-md-pull-4
               .row
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a{"data-toggle" => "collapse", :href => "#dashboard-wtdn"}
@@ -319,7 +319,7 @@
                           .wtdn-instructions
                             Your appraisal has been signed off and your lead appraiser can now submit it to the RO.
                             You will be notified when they have done this.
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a{"data-toggle" => "collapse", :href => "#dashboard-notifications"}
@@ -371,7 +371,7 @@
                         .perf.perf-white
                         .buttons-right
                           %a.btn.btn-sm.btn-primary{:href => "/notifications"} See All Notifications
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-user-appraisals"}
@@ -630,7 +630,7 @@
                         .perf.perf-white
                         .buttons-right
                           %a.btn.btn-sm.btn-primary{:href => "/users/2-3/appraisals/5b7fc851f2a39f2541000031/edit"} Go to Appraisal
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-user-msfs"}
@@ -705,7 +705,7 @@
                         .buttons-right
                           %a.btn.btn-sm.btn-primary{:href => "/msfs/578fdb39802542632e00000c"} Go to My MSF
                           %a.btn.btn-sm.btn-primary{:href => "/users/2-3/offline_msfs/new"} Upload previous MSF
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-sig-job-plans"}
@@ -813,7 +813,7 @@
                                 %td Job Plan Owner
                                 %td
                                   .complete.sa-state.state-colour Complete
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-user-job-plans"}
@@ -985,7 +985,7 @@
                                 %td
                                   %a{:href => "/online_job_plans/59d26707802542e164000011"} Dr John T Smith's 2017 Job Plan Template
                                 %td Consultant
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-my-eLeave-requests"}
@@ -1141,7 +1141,7 @@
                         .buttons-right
                           %a.btn.btn-sm.btn-primary{:href => "/users/2-3/eleave_calendar"} Go to My eLeave
                 / / Shown at small sizes
-                .col-xs-12.col-sm-6.hidden-lg.hidden-md
+                .col-xs-44.col-sm-22.hidden-lg.hidden-md
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a#db-support.collapsed{"data-toggle" => "collapse", :href => "#dashboard-support-docs-base"}
@@ -1154,7 +1154,7 @@
                             %a{:href => "http://demo.lvh.me:8080/support_documents/52b46315e3e1f157470003f2"} Appraisal Policy
                           %li.list-group-item.link-arrow
                             %a{:href => "http://demo.lvh.me:8080/support_documents/57e13f4f8025420c86000005"} DBS Declaration
-                .col-xs-12.col-sm-6.hidden-lg.hidden-md
+                .col-xs-44.col-sm-22.hidden-lg.hidden-md
                   .panel.panel-default.toggle-panel
                     .panel-heading.toggle-plus
                       %a.collapsed{"data-toggle" => "collapse", :href => "#dashboard-guides-base"}
@@ -1188,7 +1188,7 @@
           / $('#dashboard-details,#dashboard-details-docs').addClass('in');
           / }
           / }).trigger('resize');
-        .col-sm-12
+        .col-sm-44
           #questionnaire.patient-questionnaire
             %form#new_gmc_patient_questionnaire.form-horizontal{"accept-charset" => "UTF-8", :action => "/admin/online_msfs/583c4063f2a39f345e00001a/gmc_patient_questionnaires", :method => "post"}
               %div{:style => "margin:0;padding:0;display:inline"}
@@ -1196,7 +1196,7 @@
                 %input{:name => "authenticity_token", :type => "hidden", :value => "1b1qqZAtWJxpmpy5EYcwmrfnckp9LxBVd5FJ0Jv1TUM="}/
               %input#new_at{:name => "new_at", :type => "hidden", :value => "2019-06-13 10:37:27 +0100"}/
               .row
-                .col-xs-12
+                .col-xs-44
                   %h3 Patient Questionnaire
                   %p Licensed doctors are expected to seek feedback from colleagues and patients and review and act upon that feedback where appropriate.
                   %p The purpose of this exercise is to provide doctors with information about their work through the eyes of those they work with and treat, and is intended to help inform their further development.
@@ -1212,7 +1212,7 @@
                     %li You can click the mouse at any time.
                     %li Give it a try! We hope it speeds up your day!
               .row
-                .col-xs-12
+                .col-xs-44
                   .panel.panel-default
                     .panel-heading
                       %h3 About the Patient...

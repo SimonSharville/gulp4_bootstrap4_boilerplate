@@ -11,18 +11,18 @@
 
     .container
       .row
-        .col-sm-12
+        .col-sm-44
           %h1#links.bs-anchor Sard Nav Tabs - Portfolio
 
       .row
-        .col-sm-12
+        .col-sm-44
           %p.lead
             Sard Nav Tabs are created for use on the Job Planning, Portfolio and Appraisals pages, but have a different look on each. 
 
 
       // sard-nav-tabs Must be part of a row
       .row
-        .col-sm-12
+        .col-sm-44
           .sard-nav-tabs
             / main-nav must be part of col
             .snt-main-nav
@@ -465,19 +465,19 @@
                         %p Please enter a description of the evidence you have for this section. You can either upload a document or just make a note of any paper-based evidence that you may have and click ‘Save Evidence’. Setting an expiry date will ensure that any out of date evidence will no longer be included in following appraisals. N.B. Setting an expiry date will not remove the document after this date.
                         %form#new_evidence.form-horizontal{:method => "post"}
                           .row
-                            %label.col-xs-4.col-sm-3.col-md-2.control-label Description:
-                            .col-xs-8.col-sm-9.col-md-10
+                            %label.col-xs-8.col-sm-6.col-md-4.control-label Description:
+                            .col-xs-26.col-sm-28.col-md-40
                               %textarea#content.form-control{:placeholder => "Type your evidence here...", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;"}
                             .expiry
-                              %label.col-xs-4.col-sm-3.col-md-2.control-label Expiry Date:
-                              .col-xs-8.col-sm-9.col-md-10
+                              %label.col-xs-8.col-sm-6.col-md-4.control-label Expiry Date:
+                              .col-xs-26.col-sm-28.col-md-40
                                 %input#expiry.form-control.hasDatepicker{:autocomplete => "off", :type => "text", :value => ""}/
-                            .col-xs-12
+                            .col-xs-44
                               .attachments
                                 .new-attachment-fragment
                                   .field.right
                                     %button#attach.btn.btn-sm.btn-default{:type => "button"} Attach eDocument
-                            .col-xs-12
+                            .col-xs-44
                               .shelf
                               .add.right
                                 %input#save-new-evidence.btn.btn-sm.btn-success{:name => "commit", :nobind => "true", :type => "submit", :value => "Save Evidence"}/
@@ -585,10 +585,10 @@
                         %form#new_comment.new_comment{"accept-charset" => "UTF-8", :action => "/appraisals/564ddd0bf2a39f172c00007b/appraisal_datasets/5034e01ce3e1f12443000020/portfolio_comments", "data-remote" => "true", :method => "post"}
                           %input{:name => "utf8", :type => "hidden", :value => "✓"}/
                           .row
-                            .col-xs-12
+                            .col-xs-44
                               %textarea#comment_content{:name => "comment[content]", :placeholder => "Type your comment here...", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;"}
                           .row
-                            .col-xs-12
+                            .col-xs-44
                               .shelf
                               .add.right
                                 %input#save-new-comment.btn.btn-sm.btn-success{:name => "commit", :type => "submit", :value => "Save Comments / Reflection"}/
@@ -679,10 +679,10 @@
                           %input{:name => "utf8", :type => "hidden", :value => "✓"}/
                           %input{:name => "authenticity_token", :type => "hidden", :value => "i7WaB5Ds81t1rBJGY65s+tJCKqWh2kXv6ip3M7/NTNKEbJN1AGRTbqOziIBNMwb3gO9gGlVt/deiZq6Sx9IGrw=="}/
                           .row
-                            .col-xs-12
+                            .col-xs-44
                               %textarea#note_content{:name => "note[content]", :placeholder => "Type your note here...", :style => "overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;"}
                           .row
-                            .col-xs-12
+                            .col-xs-44
                               .shelf
                               .add.right
                                 %input.btn.btn-sm.btn-success{:name => "commit", :type => "submit", :value => "Save Note"}/
