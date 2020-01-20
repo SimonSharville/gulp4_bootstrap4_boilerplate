@@ -11,9 +11,11 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import 'bootstrap-overrides/bs-component-overrides';
 
+// Sard Icons
+@import 'global-styles/sard-icons/icon-styles';
+@import 'global-styles/sard-icons/icon-variations';
 
 // Global Styles
-@import 'global-styles/sa-icons';
 @import 'global-styles/sa-scrollbars';
 @import 'global-styles/sa-smoothscroll';
 @import 'global-styles/sa-variables';
@@ -52,6 +54,7 @@
 @import 'bs-components/panels'; //BS3 specific
 @import 'bs-components/tables';
 @import 'bs-components/popovers';
+@import 'bs-components/tooltips';
 @import 'bs-components/progress';
 @import 'bs-components/validation';
 

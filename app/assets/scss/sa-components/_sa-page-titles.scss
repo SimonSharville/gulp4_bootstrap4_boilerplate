@@ -26,7 +26,6 @@
   line-height: 1.2rem;
   letter-spacing: $vslight;
   margin: 0;
-  // margin-bottom:5px;
   margin-left:0.07em; // Set left align to allow for Roboto indenting at large sizes
     @media (max-width: 767px){
       margin-left:0.1em;
@@ -53,6 +52,33 @@
   font-size: 1.1rem; // 18px
 }
 
+.page-title .tenant{
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.page-title .contact{
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.page-title .phone{
+  margin-right: 10px;
+  &:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f879" ;
+    font-weight: 900;
+    margin-right: 5px;
+  }
+}
+.page-title .email{
+  margin-right: 10px;
+  &:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f0e0" ;
+    margin-right: 5px;
+  }
+}
 
 // Page Titles with Photo --- 
 .page-title-with-image{

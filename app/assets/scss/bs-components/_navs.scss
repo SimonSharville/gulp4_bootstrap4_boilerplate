@@ -3,17 +3,31 @@
 $sa-nav-colour: $sa-grey-14;
 
 .nav.nav-tabs .nav-item{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.nav.nav-tabs .nav-item{
   .nav-link{
     color: $sa-nav-colour;
+    background-color: $sa-grey-01;
+    margin-bottom: 1px;
     &:visited{
       color: $sa-nav-colour;
     }
     &:hover{
       background-color: $sa-grey-02;
+      border-color: transparent;
     }
     &:focus,
     &:active{
       background-color: $sa-grey-04;
+    }
+    &.active{
+      background-color: $sa-grey-14;
+      color: white;
+      border-bottom:2px solid $sa-grey-14;
+      margin-bottom: 0px;
     }
   }
 }
@@ -21,15 +35,17 @@ $sa-nav-colour: $sa-grey-14;
 .nav.nav-pills .nav-link{
   border-radius: $sa-spacer-6;
   color: $sa-nav-colour;
+  background-color: $sa-grey-01;
+  margin-right: 4px;
   &:visited{
     color: $sa-nav-colour;
   }
   &:hover{
-    background-color: lighten($sa-nav-colour, 55%);
+    background-color: $sa-grey-03;
   }
   &:focus,
   &:active{
-    background-color: lighten($sa-nav-colour, 45%);
+    background-color: $sa-grey-05;
   }
 }
 
@@ -59,35 +75,46 @@ $sa-nav-colour: $sa-grey-14;
   }
 }
 
-// Colour variations ----------------------------
+// Vertical Pils ------------
+#v-pills-tab.nav.nav-pills .nav-link{
+  margin-right: 0px;
+  margin-bottom: 4px;
+}
 
-.nav-primary.nav.nav-pills .nav-item,
-.nav-primary.nav.nav-pills .nav-link{
-  & a{
-    color: $user-primary-colour;
+// Colour variations ----------------------------
+.nav-primary.nav.nav-tabs .nav-item{
+  .nav-link{
+    &.active{
+      background-color: $user-primary-colour;
+      border-color: $user-primary-colour;
+      border-bottom:2px solid $user-primary-colour;
+    }
   }
 }
+
 .nav-primary.nav.nav-pills .nav-link.active{
   background-color: $user-primary-colour;
-  color: white;
   &:focus,
   &:active{
     background-color: $user-primary-colour;
   }
 }
 
-.nav-secondary.nav.nav-pills .nav-item,
-.nav-secondary.nav.nav-pills .nav-link{
-  & a{
-    color: $secondary;
+.nav-secondary.nav.nav-tabs .nav-item{
+  .nav-link{
+    &.active{
+      background-color: $user-secondary-colour;
+      border-color: $user-secondary-colour;
+      border-bottom:2px solid $user-secondary-colour;
+    }
   }
 }
+
 .nav-secondary.nav.nav-pills .nav-link.active{
-  background-color: $secondary;
-  color: white;
+  background-color: $user-secondary-colour;
   &:focus,
   &:active{
-    background-color: $secondary;
+    background-color: $user-secondary-colour;
   }
 }
 
@@ -101,12 +128,10 @@ $sa-nav-colour: $sa-grey-14;
 }
 .nav.nav-tabs.card-header-tabs .nav-item{
   .nav-link{
-    // border: 1px solid white;
     color: $sa-nav-colour;
     background-color: white;
     margin-right: 1px;
     padding-top: $sa-spacer-2;
-    // padding-bottom: $sa-spacer-6;
     &:visited{
       color: $sa-nav-colour;
     }

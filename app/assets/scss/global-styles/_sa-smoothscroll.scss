@@ -6,15 +6,15 @@
   width:30px; 
   height:30px;
   text-align:center; 
-  position:fixed;
+  position:relative;
   bottom:-3px;
-  left:calc(50% - 15px);
+  // left:calc(50% - 15px);
   display:none;
   color:white;
   z-index: 1000;
 }
 .scrollToTop:before{
-  content: "\70";
+  content: "\e016";
   font-family: "sard-icons";
   color:white;
   font-size: 1.5em;

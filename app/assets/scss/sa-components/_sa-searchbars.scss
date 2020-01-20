@@ -30,6 +30,10 @@
     &:focus{
       border-color: $sa-grey-14;
     }
+    @include respond-to(ie11) {  // ie11
+      line-height: 0.5rem;
+    }
+    
 }
 
 

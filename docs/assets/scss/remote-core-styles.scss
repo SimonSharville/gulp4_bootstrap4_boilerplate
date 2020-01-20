@@ -540,7 +540,7 @@ $breadcrumb-divider: quote("|");
 
 
 /*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -556,7 +556,7 @@ $breadcrumb-divider: quote("|");
   $prev-key: null;
   $prev-num: null;
   @each $key, $num in $map {
-    @if $prev-num == null or unit($num) == "%" {
+    @if $prev-num == null or unit($num) == "%" or unit($prev-num) == "%" {
       // Do nothing
     } @else if not comparable($prev-num, $num) {
       @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
@@ -591,6 +591,17 @@ $breadcrumb-divider: quote("|");
 
   @if $index {
     @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// See https://codepen.io/kevinweber/pen/dXWoRw
+@function escape-svg($string) {
+  @if str-index($string, "data:image/svg+xml") {
+    @each $char, $encoded in $escaped-characters {
+      $string: str-replace($string, $char, $encoded);
+    }
   }
 
   @return $string;
@@ -631,6 +642,43 @@ $breadcrumb-divider: quote("|");
   $level: abs($level);
 
   @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+// Return valid calc
+@function add($value1, $value2, $return-calc: true) {
+  @if $value1 == null {
+    @return $value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 + $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} + #{$value2}), $value1 + unquote(" + ") + $value2);
+}
+
+@function subtract($value1, $value2, $return-calc: true) {
+  @if $value1 == null and $value2 == null {
+    @return null;
+  }
+
+  @if $value1 == null {
+    @return -$value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 - $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} - #{$value2}), $value1 + unquote(" - ") + $value2);
 }
 
 // Variables
@@ -735,6 +783,13 @@ $yiq-contrasted-threshold:  150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $gray-900 !default;
 $yiq-text-light:            $white !default;
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+  ("<","%3c"),
+  (">","%3e"),
+  ("#","%23"),
+) !default;
 
 
 // Options
@@ -855,6 +910,7 @@ $container-max-widths: (
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
+$grid-row-columns:            6 !default;
 
 
 // Components
@@ -1001,7 +1057,6 @@ $table-dark-accent-bg:        rgba($white, .05) !default;
 $table-dark-hover-color:      $table-dark-color !default;
 $table-dark-hover-bg:         rgba($white, .075) !default;
 $table-dark-border-color:     lighten($table-dark-bg, 7.5%) !default;
-$table-dark-color:            $white !default;
 
 $table-striped-order:         odd !default;
 
@@ -1047,6 +1102,7 @@ $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
+$btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
@@ -1123,13 +1179,13 @@ $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
 
-$input-height-inner:                    calc(#{$input-line-height * 1em} + #{$input-padding-y * 2}) !default;
-$input-height-inner-half:               calc(#{$input-line-height * .5em} + #{$input-padding-y}) !default;
-$input-height-inner-quarter:            calc(#{$input-line-height * .25em} + #{$input-padding-y / 2}) !default;
+$input-height-inner:                    add($input-line-height * 1em, $input-padding-y * 2) !default;
+$input-height-inner-half:               add($input-line-height * .5em, $input-padding-y) !default;
+$input-height-inner-quarter:            add($input-line-height * .25em, $input-padding-y / 2) !default;
 
-$input-height:                          calc(#{$input-line-height * 1em} + #{$input-padding-y * 2} + #{$input-height-border}) !default;
-$input-height-sm:                       calc(#{$input-line-height-sm * 1em} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border}) !default;
-$input-height-lg:                       calc(#{$input-line-height-lg * 1em} + #{$input-btn-padding-y-lg * 2} + #{$input-height-border}) !default;
+$input-height:                          add($input-line-height * 1em, add($input-padding-y * 2, $input-height-border, false)) !default;
+$input-height-sm:                       add($input-line-height-sm * 1em, add($input-padding-y-sm * 2, $input-height-border, false)) !default;
+$input-height-lg:                       add($input-line-height-lg * 1em, add($input-padding-y-lg * 2, $input-height-border, false)) !default;
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -1153,6 +1209,7 @@ $custom-forms-transition:               background-color .15s ease-in-out, borde
 
 $custom-control-gutter:                 .5rem !default;
 $custom-control-spacer-x:               1rem !default;
+$custom-control-cursor:                 null !default;
 
 $custom-control-indicator-size:         1rem !default;
 $custom-control-indicator-bg:           $input-bg !default;
@@ -1161,6 +1218,8 @@ $custom-control-indicator-bg-size:      50% 50% !default;
 $custom-control-indicator-box-shadow:   $input-box-shadow !default;
 $custom-control-indicator-border-color: $gray-500 !default;
 $custom-control-indicator-border-width: $input-border-width !default;
+
+$custom-control-label-color:            null !default;
 
 $custom-control-indicator-disabled-bg:          $input-disabled-bg !default;
 $custom-control-label-disabled-color:           $gray-600 !default;
@@ -1180,20 +1239,20 @@ $custom-control-indicator-active-box-shadow:    none !default;
 $custom-control-indicator-active-border-color:  $custom-control-indicator-active-bg !default;
 
 $custom-checkbox-indicator-border-radius:       $border-radius !default;
-$custom-checkbox-indicator-icon-checked:        str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"), "#", "%23") !default;
+$custom-checkbox-indicator-icon-checked:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default;
 
 $custom-checkbox-indicator-indeterminate-bg:           $component-active-bg !default;
 $custom-checkbox-indicator-indeterminate-color:        $custom-control-indicator-checked-color !default;
-$custom-checkbox-indicator-icon-indeterminate:         str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3e%3c/svg%3e"), "#", "%23") !default;
+$custom-checkbox-indicator-icon-indeterminate:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>") !default;
 $custom-checkbox-indicator-indeterminate-box-shadow:   none !default;
 $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default;
 
 $custom-radio-indicator-border-radius:          50% !default;
-$custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3e%3c/svg%3e"), "#", "%23") !default;
+$custom-radio-indicator-icon-checked:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
 
 $custom-switch-width:                           $custom-control-indicator-size * 1.75 !default;
 $custom-switch-indicator-border-radius:         $custom-control-indicator-size / 2 !default;
-$custom-switch-indicator-size:                  calc(#{$custom-control-indicator-size} - #{$custom-control-indicator-border-width * 4}) !default;
+$custom-switch-indicator-size:                  subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4) !default;
 
 $custom-select-padding-y:           $input-padding-y !default;
 $custom-select-padding-x:           $input-padding-x !default;
@@ -1209,10 +1268,10 @@ $custom-select-bg:                  $input-bg !default;
 $custom-select-disabled-bg:         $gray-200 !default;
 $custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator-color:     $gray-800 !default;
-$custom-select-indicator:           str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"), "#", "%23") !default;
-$custom-select-background:          $custom-select-indicator no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+$custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
+$custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
-$custom-select-feedback-icon-padding-right: calc((1em + #{2 * $custom-select-padding-y}) * 3 / 4 + #{$custom-select-padding-x + $custom-select-indicator-padding}) !default;
+$custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-position:      center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default;
 
@@ -1285,9 +1344,9 @@ $form-feedback-valid-color:         theme-color("success") !default;
 $form-feedback-invalid-color:       theme-color("danger") !default;
 
 $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
-$form-feedback-icon-valid:          str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e"), "#", "%23") !default;
+$form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
-$form-feedback-icon-invalid:        str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-feedback-icon-invalid-color}' viewBox='-2 -2 7 7'%3e%3cpath stroke='#{$form-feedback-icon-invalid-color}' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E"), "#", "%23") !default;
+$form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
 
 $form-validation-states: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -1363,14 +1422,14 @@ $navbar-dark-color:                 rgba($white, .5) !default;
 $navbar-dark-hover-color:           rgba($white, .75) !default;
 $navbar-dark-active-color:          $white !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
-$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
 $navbar-light-color:                rgba($black, .5) !default;
 $navbar-light-hover-color:          rgba($black, .7) !default;
 $navbar-light-active-color:         rgba($black, .9) !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
-$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 $navbar-light-brand-color:                $navbar-light-active-color !default;
@@ -1392,7 +1451,7 @@ $dropdown-bg:                       $white !default;
 $dropdown-border-color:             rgba($black, .15) !default;
 $dropdown-border-radius:            $border-radius !default;
 $dropdown-border-width:             $border-width !default;
-$dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default;
+$dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
 $dropdown-divider-bg:               $gray-200 !default;
 $dropdown-divider-margin-y:         $nav-divider-margin-y !default;
 $dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
@@ -1457,9 +1516,10 @@ $card-spacer-x:                     1.25rem !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
 $card-border-color:                 rgba($black, .125) !default;
-$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-bg:                       rgba($black, .03) !default;
 $card-cap-color:                    null !default;
+$card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $white !default;
 
@@ -1506,6 +1566,7 @@ $popover-max-width:                 276px !default;
 $popover-border-width:              $border-width !default;
 $popover-border-color:              rgba($black, .2) !default;
 $popover-border-radius:             $border-radius-lg !default;
+$popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow:                0 .25rem .5rem rgba($black, .2) !default;
 
 $popover-header-bg:                 darken($popover-bg, 3%) !default;
@@ -1564,6 +1625,9 @@ $badge-pill-border-radius:          10rem !default;
 // Padding applied to the modal body
 $modal-inner-padding:               1rem !default;
 
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-footer-margin-between:       .5rem !default;
+
 $modal-dialog-margin:               .5rem !default;
 $modal-dialog-margin-y-sm-up:       1.75rem !default;
 
@@ -1574,6 +1638,7 @@ $modal-content-bg:                  $white !default;
 $modal-content-border-color:        rgba($black, .2) !default;
 $modal-content-border-width:        $border-width !default;
 $modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5) !default;
 $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5) !default;
 
@@ -1595,6 +1660,7 @@ $modal-sm:                          300px !default;
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              none !default;
 $modal-transition:                  transform .3s ease-out !default;
+$modal-scale-transform:             scale(1.02) !default;
 
 
 // Alerts
@@ -1670,6 +1736,8 @@ $figure-caption-color:              $gray-600 !default;
 
 // Breadcrumbs
 
+$breadcrumb-font-size:              null !default;
+
 $breadcrumb-padding-y:              .75rem !default;
 $breadcrumb-padding-x:              1rem !default;
 $breadcrumb-item-padding:           .5rem !default;
@@ -1704,8 +1772,8 @@ $carousel-caption-color:             $white !default;
 
 $carousel-control-icon-width:        20px !default;
 
-$carousel-control-prev-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e"), "#", "%23") !default;
-$carousel-control-next-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e"), "#", "%23") !default;
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='8' height='8' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/></svg>") !default;
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='8' height='8' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>") !default;
 
 $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
@@ -2117,18 +2185,18 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 //
 // Issue: https://github.com/twbs/bootstrap/issues/25195
 
-@mixin hover {
+@mixin hover() {
   &:hover { @content; }
 }
 
-@mixin hover-focus {
+@mixin hover-focus() {
   &:hover,
   &:focus {
     @content;
   }
 }
 
-@mixin plain-hover-focus {
+@mixin plain-hover-focus() {
   &,
   &:hover,
   &:focus {
@@ -2136,7 +2204,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   }
 }
 
-@mixin hover-focus-active {
+@mixin hover-focus-active() {
   &:hover,
   &:focus,
   &:active {
@@ -2153,7 +2221,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 //
 // Keep images from scaling beyond the width of their parents.
 
-@mixin img-fluid {
+@mixin img-fluid() {
   // Part 1: Set a maximum relative to the parent
   max-width: 100%;
   // Part 2: Override the height to auto, otherwise images will be stretched
@@ -2186,7 +2254,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   background-color: $bg;
 
   @at-root a#{&} {
-    @include hover-focus {
+    @include hover-focus() {
       color: color-yiq($bg);
       background-color: darken($bg, 10%);
     }
@@ -2211,11 +2279,12 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 // See: https://a11yproject.com/posts/how-to-hide-content/
 // See: https://hugogiraudel.com/2016/10/13/css-hide-and-seek/
 
-@mixin sr-only {
+@mixin sr-only() {
   position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
+  margin: -1px; // Fix for https://github.com/twbs/bootstrap/issues/25686
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -2228,7 +2297,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 //
 // Credit: HTML5 Boilerplate
 
-@mixin sr-only-focusable {
+@mixin sr-only-focusable() {
   &:active,
   &:focus {
     position: static;
@@ -2248,7 +2317,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   @include deprecate("`size()`", "v4.3.0", "v5");
 }
 
-@mixin reset-text {
+@mixin reset-text() {
   font-family: $font-family-base;
   // We deliberately do NOT reset font-size or word-wrap.
   font-style: normal;
@@ -2270,17 +2339,18 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
 // Typography
 
-@mixin text-emphasis-variant($parent, $color) {
+@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
     color: $color !important;
   }
   @if $emphasized-link-hover-darken-percentage != 0 {
     a#{$parent} {
-      @include hover-focus {
+      @include hover-focus() {
         color: darken($color, $emphasized-link-hover-darken-percentage) !important;
       }
     }
   }
+  @include deprecate("`text-emphasis-variant()`", "v4.4.0", "v5", $ignore-warning);
 }
 
 // CSS image replacement
@@ -2314,7 +2384,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 }
 
 
-// // Components
+// Components
 @mixin alert-variant($background, $border, $color) {
   color: $color;
   @include gradient-bg($background);
@@ -2340,7 +2410,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 
-  @include hover {
+  @include hover() {
     color: color-yiq($hover-background);
     @include gradient-bg($hover-background);
     border-color: $hover-border;
@@ -2348,6 +2418,9 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
   &:focus,
   &.focus {
+    color: color-yiq($hover-background);
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
       box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
@@ -2393,7 +2466,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   color: $color;
   border-color: $color;
 
-  @include hover {
+  @include hover() {
     color: $color-hover;
     background-color: $active-background;
     border-color: $active-border;
@@ -2437,28 +2510,28 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   @include border-radius($border-radius, 0);
 }
 
-@mixin caret-down {
+@mixin caret-down() {
   border-top: $caret-width solid;
   border-right: $caret-width solid transparent;
   border-bottom: 0;
   border-left: $caret-width solid transparent;
 }
 
-@mixin caret-up {
+@mixin caret-up() {
   border-top: 0;
   border-right: $caret-width solid transparent;
   border-bottom: $caret-width solid;
   border-left: $caret-width solid transparent;
 }
 
-@mixin caret-right {
+@mixin caret-right() {
   border-top: $caret-width solid transparent;
   border-right: 0;
   border-bottom: $caret-width solid transparent;
   border-left: $caret-width solid;
 }
 
-@mixin caret-left {
+@mixin caret-left() {
   border-top: $caret-width solid transparent;
   border-right: $caret-width solid;
   border-bottom: $caret-width solid transparent;
@@ -2472,11 +2545,11 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
       vertical-align: $caret-vertical-align;
       content: "";
       @if $direction == down {
-        @include caret-down;
+        @include caret-down();
       } @else if $direction == up {
-        @include caret-up;
+        @include caret-up();
       } @else if $direction == right {
-        @include caret-right;
+        @include caret-right();
       }
     }
 
@@ -2490,7 +2563,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
         margin-right: $caret-spacing;
         vertical-align: $caret-vertical-align;
         content: "";
-        @include caret-left;
+        @include caret-left();
       }
     }
 
@@ -2526,7 +2599,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 // Lists
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
-@mixin list-unstyled {
+@mixin list-unstyled() {
   padding-left: 0;
   list-style: none;
 }
@@ -2539,7 +2612,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
     background-color: $background;
 
     &.list-group-item-action {
-      @include hover-focus {
+      @include hover-focus() {
         color: $color;
         background-color: darken($background, 5%);
       }
@@ -2557,11 +2630,12 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 //
 // Dividers (basically an hr) within dropdowns and nav lists
 
-@mixin nav-divider($color: $nav-divider-color, $margin-y: $nav-divider-margin-y) {
+@mixin nav-divider($color: $nav-divider-color, $margin-y: $nav-divider-margin-y, $ignore-warning: false) {
   height: 0;
   margin: $margin-y 0;
   overflow: hidden;
   border-top: 1px solid $color;
+  @include deprecate("The `nav-divider()` mixin", "v4.4.0", "v5", $ignore-warning);
 }
 
 // Form control focus state
@@ -2576,7 +2650,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 //
 // Example usage: change the default blue border and shadow to white for better
 // contrast against a dark gray background.
-@mixin form-control-focus() {
+@mixin form-control-focus($ignore-warning: false) {
   &:focus {
     color: $input-focus-color;
     background-color: $input-focus-bg;
@@ -2589,8 +2663,23 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
       box-shadow: $input-focus-box-shadow;
     }
   }
+  @include deprecate("The `form-control-focus()` mixin", "v4.4.0", "v5", $ignore-warning);
 }
 
+// This mixin uses an `if()` technique to be compatible with Dart Sass
+// See https://github.com/sass/sass/issues/1873#issuecomment-152293725 for more details
+@mixin form-validation-state-selector($state) {
+  @if ($state == "valid" or $state == "invalid") {
+    .was-validated #{if(&, "&", "")}:#{$state},
+    #{if(&, "&", "")}.is-#{$state} {
+      @content;
+    }
+  } @else {
+    #{if(&, "&", "")}.is-#{$state} {
+      @content;
+    }
+  }
+}
 
 @mixin form-validation-state($state, $color, $icon) {
   .#{$state}-feedback {
@@ -2616,16 +2705,22 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
     @include border-radius($form-feedback-tooltip-border-radius);
   }
 
+  @include form-validation-state-selector($state) {
+    ~ .#{$state}-feedback,
+    ~ .#{$state}-tooltip {
+      display: block;
+    }
+  }
+
   .form-control {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       border-color: $color;
 
       @if $enable-validation-icons {
         padding-right: $input-height-inner;
-        background-image: $icon;
+        background-image: escape-svg($icon);
         background-repeat: no-repeat;
-        background-position: center right $input-height-inner-quarter;
+        background-position: right $input-height-inner-quarter center;
         background-size: $input-height-inner-half $input-height-inner-half;
       }
 
@@ -2633,18 +2728,12 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
         border-color: $color;
         box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
       }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
     }
   }
 
   // stylelint-disable-next-line selector-no-qualifying-type
   textarea.form-control {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       @if $enable-validation-icons {
         padding-right: $input-height-inner;
         background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
@@ -2653,41 +2742,23 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   }
 
   .custom-select {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       border-color: $color;
 
       @if $enable-validation-icons {
         padding-right: $custom-select-feedback-icon-padding-right;
-        background: $custom-select-background, $icon $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+        background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
       }
 
       &:focus {
         border-color: $color;
         box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
       }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
-    }
-  }
-
-
-  .form-control-file {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
     }
   }
 
   .form-check-input {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       ~ .form-check-label {
         color: $color;
       }
@@ -2700,19 +2771,13 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   }
 
   .custom-control-input {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       ~ .custom-control-label {
         color: $color;
 
         &::before {
           border-color: $color;
         }
-      }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
       }
 
       &:checked {
@@ -2736,15 +2801,9 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
   // custom file
   .custom-file-input {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       ~ .custom-file-label {
         border-color: $color;
-      }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
       }
 
       &:focus {
@@ -2785,7 +2844,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
     $hover-background: darken($background, 5%);
 
     .table-#{$state} {
-      @include hover {
+      @include hover() {
         background-color: $hover-background;
 
         > td,
@@ -2798,21 +2857,22 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 }
 
 
-// // Skins
+// Skins
 // stylelint-disable declaration-no-important
 
 // Contextual backgrounds
 
-@mixin bg-variant($parent, $color) {
+@mixin bg-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
     background-color: $color !important;
   }
   a#{$parent},
   button#{$parent} {
-    @include hover-focus {
+    @include hover-focus() {
       background-color: darken($color, 10%) !important;
     }
   }
+  @include deprecate("The `bg-variant` mixin", "v4.4.0", "v5", $ignore-warning);
 }
 
 @mixin bg-gradient-variant($parent, $color) {
@@ -2970,7 +3030,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 }
 
 
-// // Layout
+// Layout
 @mixin clearfix() {
   &::after {
     display: block;
@@ -3014,10 +3074,15 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
         flex-grow: 1;
         max-width: 100%;
       }
+
+      @for $i from 1 through $grid-row-columns {
+        .row-cols#{$infix}-#{$i} {
+          @include row-cols($i);
+        }
+      }
+
       .col#{$infix}-auto {
-        flex: 0 0 auto;
-        width: auto;
-        max-width: 100%; // Reset earlier grid tiers
+        @include make-col-auto();
       }
 
       @for $i from 1 through $columns {
@@ -3093,27 +3158,46 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   max-width: percentage($size / $columns);
 }
 
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%; // Reset earlier grid tiers
+}
+
 @mixin make-col-offset($size, $columns: $grid-columns) {
   $num: $size / $columns;
   margin-left: if($num == 0, 0, percentage($num));
 }
 
+// Row columns
+//
+// Specify on a parent element(e.g., .row) to force immediate children into NN
+// numberof columns. Supports wrapping to new lines, but does not do a Masonry
+// style grid.
+@mixin row-cols($count) {
+  & > * {
+    flex: 0 0 100% / $count;
+    max-width: 100% / $count;
+  }
+}
+
 // stylelint-disable declaration-no-important
 
-@mixin float-left {
+@mixin float-left() {
   float: left !important;
   @include deprecate("The `float-left` mixin", "v4.3.0", "v5");
 }
-@mixin float-right {
+@mixin float-right() {
   float: right !important;
   @include deprecate("The `float-right` mixin", "v4.3.0", "v5");
 }
-@mixin float-none {
+@mixin float-none() {
   float: none !important;
   @include deprecate("The `float-none` mixin", "v4.3.0", "v5");
 }
 
 
+// Do not forget to update getting-started/theming.md!
 :root {
   // Custom variable values only support SassScript inside `#{}`.
   @each $color, $value in $colors {
@@ -3190,12 +3274,16 @@ body {
   background-color: $body-bg; // 2
 }
 
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
+// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
+// on elements that programmatically receive focus but wouldn't normally show a visible
+// focus outline. In general, this would mean that the outline is only applied if the
+// interaction that led to the element receiving programmatic focus was a keyboard interaction,
+// or the browser has somehow determined that the user is primarily a keyboard user and/or
+// wants focus outlines to always be presented.
 //
-// Credit: https://github.com/suitcss/base
-[tabindex="-1"]:focus {
+// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+[tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
@@ -3320,29 +3408,24 @@ a {
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
 
-  @include hover {
+  @include hover() {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
 }
 
-// And undo these styles for placeholder links/named anchors (without href)
-// which have not been made explicitly keyboard-focusable (without tabindex).
+// And undo these styles for placeholder links/named anchors (without href).
 // It would be more straightforward to just use a[href] in previous block, but that
 // causes specificity issues in many other styles that are too complex to fix.
 // See https://github.com/twbs/bootstrap/issues/19402
 
-a:not([href]):not([tabindex]) {
+a:not([href]) {
   color: inherit;
   text-decoration: none;
 
-  @include hover-focus {
+  @include hover() {
     color: inherit;
     text-decoration: none;
-  }
-
-  &:focus {
-    outline: 0;
   }
 }
 
@@ -3702,12 +3785,12 @@ mark,
 //
 
 .list-unstyled {
-  @include list-unstyled;
+  @include list-unstyled();
 }
 
 // Inline turns list items into inline-block
 .list-inline {
-  @include list-unstyled;
+  @include list-unstyled();
 }
 .list-inline-item {
   display: inline-block;
@@ -3752,7 +3835,7 @@ mark,
 // which weren't expecting the images within themselves to be involuntarily resized.
 // See also https://github.com/twbs/bootstrap/issues/18178
 .img-fluid {
-  @include img-fluid;
+  @include img-fluid();
 }
 
 
@@ -3765,7 +3848,7 @@ mark,
   @include box-shadow($thumbnail-box-shadow);
 
   // Keep them at most 100% wide
-  @include img-fluid;
+  @include img-fluid();
 }
 
 //
@@ -3791,7 +3874,7 @@ mark,
 code {
   @include font-size($code-font-size);
   color: $code-color;
-  word-break: break-word;
+  word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
@@ -3841,26 +3924,43 @@ pre {
 // Set the container width, and override it for fixed navbars in media queries.
 
 @if $enable-grid-classes {
+  // Single container class with breakpoint max-widths
   .container {
     @include make-container();
     @include make-container-max-widths();
   }
-}
 
-// Fluid container
-//
-// Utilizes the mixin meant for fixed width containers, but with 100% width for
-// fluid, full width layouts.
-
-@if $enable-grid-classes {
+  // 100% wide container at all breakpoints
   .container-fluid {
     @include make-container();
   }
+
+  // Responsive containers that are 100% wide until a breakpoint
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    .container-#{$breakpoint} {
+      @extend .container-fluid;
+    }
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      %responsive-container-#{$breakpoint} {
+        max-width: $container-max-width;
+      }
+
+      @each $name, $width in $grid-breakpoints {
+        @if ($container-max-width > $width or $breakpoint == $name) {
+          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            @extend %responsive-container-#{$breakpoint};
+          }
+        }
+      }
+    }
+  }
 }
+
 
 // Row
 //
-// Rows contain and clear the floats of your columns.
+// Rows contain your columns.
 
 @if $enable-grid-classes {
   .row {
@@ -3975,7 +4075,7 @@ pre {
 
 .table-hover {
   tbody tr {
-    @include hover {
+    @include hover() {
       color: $table-hover-color;
       background-color: $table-hover-bg;
     }
@@ -4033,14 +4133,14 @@ pre {
   }
 
   &.table-striped {
-    tbody tr:nth-of-type(odd) {
+    tbody tr:nth-of-type(#{$table-striped-order}) {
       background-color: $table-dark-accent-bg;
     }
   }
 
   &.table-hover {
     tbody tr {
-      @include hover {
+      @include hover() {
         color: $table-dark-hover-color;
         background-color: $table-dark-hover-bg;
       }
@@ -4107,8 +4207,14 @@ pre {
     border: 0;
   }
 
+  // Remove select outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $input-color;
+  }
+
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus();
+  @include form-control-focus($ignore-warning: true);
 
   // Placeholder
   &::placeholder {
@@ -4157,23 +4263,23 @@ select.form-control {
 // For use with horizontal and inline forms, when you need the label (or legend)
 // text to align with the form controls.
 .col-form-label {
-  padding-top: calc(#{$input-padding-y} + #{$input-border-width});
-  padding-bottom: calc(#{$input-padding-y} + #{$input-border-width});
+  padding-top: add($input-padding-y, $input-border-width);
+  padding-bottom: add($input-padding-y, $input-border-width);
   margin-bottom: 0; // Override the `<label>/<legend>` default
   @include font-size(inherit); // Override the `<legend>` default
   line-height: $input-line-height;
 }
 
 .col-form-label-lg {
-  padding-top: calc(#{$input-padding-y-lg} + #{$input-border-width});
-  padding-bottom: calc(#{$input-padding-y-lg} + #{$input-border-width});
+  padding-top: add($input-padding-y-lg, $input-border-width);
+  padding-bottom: add($input-padding-y-lg, $input-border-width);
   @include font-size($input-font-size-lg);
   line-height: $input-line-height-lg;
 }
 
 .col-form-label-sm {
-  padding-top: calc(#{$input-padding-y-sm} + #{$input-border-width});
-  padding-bottom: calc(#{$input-padding-y-sm} + #{$input-border-width});
+  padding-top: add($input-padding-y-sm, $input-border-width);
+  padding-bottom: add($input-padding-y-sm, $input-border-width);
   @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
 }
@@ -4187,9 +4293,9 @@ select.form-control {
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding-top: $input-padding-y;
-  padding-bottom: $input-padding-y;
+  padding: $input-padding-y 0;
   margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  @include font-size($input-font-size);
   line-height: $input-line-height;
   color: $input-plaintext-color;
   background-color: transparent;
@@ -4287,6 +4393,8 @@ textarea.form-control {
   margin-top: $form-check-input-margin-y;
   margin-left: -$form-check-input-gutter;
 
+  // Use [disabled] and :disabled for workaround https://github.com/twbs/bootstrap/issues/28247
+  &[disabled] ~ .form-check-label,
   &:disabled ~ .form-check-label {
     color: $text-muted;
   }
@@ -4418,14 +4526,16 @@ textarea.form-control {
   font-weight: $btn-font-weight;
   color: $body-color;
   text-align: center;
+  white-space: $btn-white-space;
   vertical-align: middle;
+  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
-  @include hover {
+  @include hover() {
     color: $body-color;
     text-decoration: none;
   }
@@ -4487,7 +4597,7 @@ fieldset:disabled a.btn {
   color: $link-color;
   text-decoration: $link-decoration;
 
-  @include hover {
+  @include hover() {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
@@ -4577,7 +4687,7 @@ input[type="button"] {
   white-space: nowrap;
 
   // Generate the caret automatically
-  @include caret;
+  @include caret();
 }
 
 // The dropdown menu
@@ -4681,7 +4791,7 @@ input[type="button"] {
 
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
-  @include nav-divider($dropdown-divider-bg, $dropdown-divider-margin-y);
+  @include nav-divider($dropdown-divider-bg, $dropdown-divider-margin-y, true);
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -4711,7 +4821,7 @@ input[type="button"] {
     }
   }
 
-  @include hover-focus {
+  @include hover-focus() {
     color: $dropdown-link-hover-color;
     text-decoration: none;
     @include gradient-bg($dropdown-link-hover-bg);
@@ -4772,7 +4882,7 @@ input[type="button"] {
 
     // Bring the hover, focused, and "active" buttons to the front to overlay
     // the borders properly
-    @include hover {
+    @include hover() {
       z-index: 1;
     }
     &:focus,
@@ -4939,10 +5049,8 @@ input[type="button"] {
   > .custom-select,
   > .custom-file {
     position: relative; // For focus state's z-index
-    flex: 1 1 auto;
-    // Add width 1% and flex-basis auto to ensure that button will not wrap out
-    // the column. Applies to IE Edge+ and Firefox. Chrome does not require this.
-    width: 1%;
+    flex: 1 1 0%;
+    min-width: 0; // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
     margin-bottom: 0;
 
     + .form-control,
@@ -5138,7 +5246,10 @@ input[type="button"] {
 
 .custom-control-input {
   position: absolute;
+  left: 0;
   z-index: -1; // Put the input behind the label so it doesn't overlay text
+  width: $custom-control-indicator-size;
+  height: ($font-size-base * $line-height-base + $custom-control-indicator-size) / 2;
   opacity: 0;
 
   &:checked ~ .custom-control-label::before {
@@ -5168,6 +5279,8 @@ input[type="button"] {
     @include box-shadow($custom-control-indicator-active-box-shadow);
   }
 
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled],
   &:disabled {
     ~ .custom-control-label {
       color: $custom-control-label-disabled-color;
@@ -5186,7 +5299,9 @@ input[type="button"] {
 .custom-control-label {
   position: relative;
   margin-bottom: 0;
+  color: $custom-control-label-color;
   vertical-align: top;
+  cursor: $custom-control-cursor;
 
   // Background-color and (when enabled) gradient
   &::before {
@@ -5228,7 +5343,7 @@ input[type="button"] {
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-checkbox-indicator-icon-checked;
+      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
   }
 
@@ -5239,7 +5354,7 @@ input[type="button"] {
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
     &::after {
-      background-image: $custom-checkbox-indicator-icon-indeterminate;
+      background-image: escape-svg($custom-checkbox-indicator-icon-indeterminate);
     }
   }
 
@@ -5265,7 +5380,7 @@ input[type="button"] {
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-radio-indicator-icon-checked;
+      background-image: escape-svg($custom-radio-indicator-icon-checked);
     }
   }
 
@@ -5294,8 +5409,8 @@ input[type="button"] {
     }
 
     &::after {
-      top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
-      left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
+      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2);
+      left: add(-($custom-switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
       width: $custom-switch-indicator-size;
       height: $custom-switch-indicator-size;
       background-color: $custom-control-indicator-border-color;
@@ -5337,8 +5452,7 @@ input[type="button"] {
   line-height: $custom-select-line-height;
   color: $custom-select-color;
   vertical-align: middle;
-  background: $custom-select-background;
-  background-color: $custom-select-bg;
+  background: $custom-select-bg $custom-select-background;
   border: $custom-select-border-width solid $custom-select-border-color;
   @include border-radius($custom-select-border-radius, 0);
   @include box-shadow($custom-select-box-shadow);
@@ -5379,6 +5493,12 @@ input[type="button"] {
   // Hides the default caret in IE11
   &::-ms-expand {
     display: none;
+  }
+
+  // Remove outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $custom-select-color;
   }
 }
 
@@ -5424,6 +5544,8 @@ input[type="button"] {
     box-shadow: $custom-file-focus-box-shadow;
   }
 
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled] ~ .custom-file-label,
   &:disabled ~ .custom-file-label {
     background-color: $custom-file-disabled-bg;
   }
@@ -5482,7 +5604,7 @@ input[type="button"] {
 
 .custom-range {
   width: 100%;
-  height: calc(#{$custom-range-thumb-height} + #{$custom-range-thumb-focus-box-shadow-width * 2});
+  height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;
@@ -5626,7 +5748,7 @@ input[type="button"] {
 // Base class
 //
 // Kickstart any navigation component with a set of style resets. Works with
-// `<nav>`s or `<ul>`s.
+// `<nav>`s, `<ul>`s or `<ol>`s.
 
 .nav {
   display: flex;
@@ -5640,7 +5762,7 @@ input[type="button"] {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
 
-  @include hover-focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 
@@ -5667,7 +5789,7 @@ input[type="button"] {
     border: $nav-tabs-border-width solid transparent;
     @include border-top-radius($nav-tabs-border-radius);
 
-    @include hover-focus {
+    @include hover-focus() {
       border-color: $nav-tabs-link-hover-border-color;
     }
 
@@ -5771,12 +5893,22 @@ input[type="button"] {
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
-  > .container,
-  > .container-fluid {
+  %container-flex-properties {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .container,
+  .container-fluid {
+    @extend %container-flex-properties;
+  }
+
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+      @extend %container-flex-properties;
+    }
   }
 }
 
@@ -5794,7 +5926,7 @@ input[type="button"] {
   line-height: inherit;
   white-space: nowrap;
 
-  @include hover-focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 }
@@ -5859,7 +5991,7 @@ input[type="button"] {
   border: $border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
 
-  @include hover-focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 }
@@ -5885,10 +6017,20 @@ input[type="button"] {
 
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
-        > .container,
-        > .container-fluid {
+        %container-navbar-expand-#{$breakpoint} {
           padding-right: 0;
           padding-left: 0;
+        }
+
+        > .container,
+        > .container-fluid {
+          @extend %container-navbar-expand-#{$breakpoint};
+        }
+
+        @each $size, $container-max-width in $container-max-widths {
+          > .container#{breakpoint-infix($size, $container-max-widths)} {
+            @extend %container-navbar-expand-#{$breakpoint};
+          }
         }
       }
 
@@ -5910,9 +6052,19 @@ input[type="button"] {
         }
 
         // For nesting containers, have to redeclare for alignment purposes
+        %container-nesting-#{$breakpoint} {
+          flex-wrap: nowrap;
+        }
+
         > .container,
         > .container-fluid {
-          flex-wrap: nowrap;
+          @extend %container-nesting-#{$breakpoint};
+        }
+
+        @each $size, $container-max-width in $container-max-widths {
+          > .container#{breakpoint-infix($size, $container-max-widths)} {
+            @extend %container-nesting-#{$breakpoint};
+          }
         }
 
         .navbar-collapse {
@@ -5940,7 +6092,7 @@ input[type="button"] {
   .navbar-brand {
     color: $navbar-light-brand-color;
 
-    @include hover-focus {
+    @include hover-focus() {
       color: $navbar-light-brand-hover-color;
     }
   }
@@ -5949,7 +6101,7 @@ input[type="button"] {
     .nav-link {
       color: $navbar-light-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-light-hover-color;
       }
 
@@ -5972,7 +6124,7 @@ input[type="button"] {
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-light-toggler-icon-bg;
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
   }
 
   .navbar-text {
@@ -5980,7 +6132,7 @@ input[type="button"] {
     a {
       color: $navbar-light-active-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-light-active-color;
       }
     }
@@ -5992,7 +6144,7 @@ input[type="button"] {
   .navbar-brand {
     color: $navbar-dark-brand-color;
 
-    @include hover-focus {
+    @include hover-focus() {
       color: $navbar-dark-brand-hover-color;
     }
   }
@@ -6001,7 +6153,7 @@ input[type="button"] {
     .nav-link {
       color: $navbar-dark-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-dark-hover-color;
       }
 
@@ -6024,7 +6176,7 @@ input[type="button"] {
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-dark-toggler-icon-bg;
+    background-image: escape-svg($navbar-dark-toggler-icon-bg);
   }
 
   .navbar-text {
@@ -6032,7 +6184,7 @@ input[type="button"] {
     a {
       color: $navbar-dark-active-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-dark-active-color;
       }
     }
@@ -6048,6 +6200,7 @@ input[type="button"] {
   display: flex;
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  height: $card-height;
   word-wrap: break-word;
   background-color: $card-bg;
   background-clip: border-box;
@@ -6076,6 +6229,9 @@ input[type="button"] {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
+  // Workaround for the image size bug in IE
+  // See: https://github.com/twbs/bootstrap/pull/28855
+  min-height: 1px;
   padding: $card-spacer-x;
   color: $card-color;
 }
@@ -6094,7 +6250,7 @@ input[type="button"] {
 }
 
 .card-link {
-  @include hover {
+  @include hover() {
     text-decoration: none;
   }
 
@@ -6162,19 +6318,20 @@ input[type="button"] {
   padding: $card-img-overlay-padding;
 }
 
-.card-img {
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  flex-shrink: 0; // For IE: https://github.com/twbs/bootstrap/issues/29396
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-radius($card-inner-border-radius);
 }
 
-// Card image caps
+.card-img,
 .card-img-top {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
   @include border-top-radius($card-inner-border-radius);
 }
 
+.card-img,
 .card-img-bottom {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
   @include border-bottom-radius($card-inner-border-radius);
 }
 
@@ -6182,23 +6339,19 @@ input[type="button"] {
 // Card deck
 
 .card-deck {
-  display: flex;
-  flex-direction: column;
-
   .card {
     margin-bottom: $card-deck-margin;
   }
 
   @include media-breakpoint-up(sm) {
+    display: flex;
     flex-flow: row wrap;
     margin-right: -$card-deck-margin;
     margin-left: -$card-deck-margin;
 
     .card {
-      display: flex;
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
-      flex-direction: column;
       margin-right: $card-deck-margin;
       margin-bottom: 0; // Override the default
       margin-left: $card-deck-margin;
@@ -6212,9 +6365,6 @@ input[type="button"] {
 //
 
 .card-group {
-  display: flex;
-  flex-direction: column;
-
   // The child selector allows nested `.card` within `.card-group`
   // to display properly.
   > .card {
@@ -6222,6 +6372,7 @@ input[type="button"] {
   }
 
   @include media-breakpoint-up(sm) {
+    display: flex;
     flex-flow: row wrap;
     // The child selector allows nested `.card` within `.card-group`
     // to display properly.
@@ -6303,27 +6454,17 @@ input[type="button"] {
   > .card {
     overflow: hidden;
 
-    &:not(:first-of-type) {
-      .card-header:first-child {
-        @include border-radius(0);
-      }
-
-      &:not(:last-of-type) {
-        border-bottom: 0;
-        @include border-radius(0);
-      }
-    }
-
-    &:first-of-type {
+    &:not(:last-of-type) {
       border-bottom: 0;
       @include border-bottom-radius(0);
     }
 
-    &:last-of-type {
+    &:not(:first-of-type) {
       @include border-top-radius(0);
     }
 
-    .card-header {
+    > .card-header {
+      @include border-radius(0);
       margin-bottom: -$card-border-width;
     }
   }
@@ -6334,6 +6475,7 @@ input[type="button"] {
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: $breadcrumb-margin-bottom;
+  @include font-size($breadcrumb-font-size);
   list-style: none;
   background-color: $breadcrumb-bg;
   @include border-radius($breadcrumb-border-radius);
@@ -6348,7 +6490,7 @@ input[type="button"] {
       display: inline-block; // Suppress underlining of the separator in modern browsers
       padding-right: $breadcrumb-item-padding;
       color: $breadcrumb-divider-color;
-      content: $breadcrumb-divider;
+      content: escape-svg($breadcrumb-divider);
     }
   }
 
@@ -6396,7 +6538,7 @@ input[type="button"] {
   }
 
   &:focus {
-    z-index: 2;
+    z-index: 3;
     outline: $pagination-focus-outline;
     box-shadow: $pagination-focus-box-shadow;
   }
@@ -6416,7 +6558,7 @@ input[type="button"] {
   }
 
   &.active .page-link {
-    z-index: 1;
+    z-index: 3;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
     border-color: $pagination-active-border-color;
@@ -6463,7 +6605,7 @@ input[type="button"] {
   @include transition($badge-transition);
 
   @at-root a#{&} {
-    @include hover-focus {
+    @include hover-focus() {
       text-decoration: none;
     }
   }
@@ -6592,6 +6734,7 @@ input[type="button"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
   color: $progress-bar-color;
   text-align: center;
   white-space: nowrap;
@@ -6608,8 +6751,10 @@ input[type="button"] {
   .progress-bar-animated {
     animation: progress-bar-stripes $progress-bar-animation-timing;
 
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
+    @if $enable-prefers-reduced-motion-media-query {
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
     }
   }
 }
@@ -6648,7 +6793,7 @@ input[type="button"] {
   text-align: inherit; // For `<button>`s (anchors inherit)
 
   // Hover state
-  @include hover-focus {
+  @include hover-focus() {
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: $list-group-action-hover-color;
     text-decoration: none;
@@ -6670,8 +6815,6 @@ input[type="button"] {
   position: relative;
   display: block;
   padding: $list-group-item-padding-y $list-group-item-padding-x;
-  // Place the border on the list items and negative margin up for better styling
-  margin-bottom: -$list-group-border-width;
   color: $list-group-color;
   background-color: $list-group-bg;
   border: $list-group-border-width solid $list-group-border-color;
@@ -6681,7 +6824,6 @@ input[type="button"] {
   }
 
   &:last-child {
-    margin-bottom: 0;
     @include border-bottom-radius($list-group-border-radius);
   }
 
@@ -6699,6 +6841,15 @@ input[type="button"] {
     background-color: $list-group-active-bg;
     border-color: $list-group-active-border-color;
   }
+
+  & + & {
+    border-top-width: 0;
+
+    &.active {
+      margin-top: -$list-group-border-width;
+      border-top-width: $list-group-border-width;
+    }
+  }
 }
 
 
@@ -6714,18 +6865,28 @@ input[type="button"] {
       flex-direction: row;
 
       .list-group-item {
-        margin-right: -$list-group-border-width;
-        margin-bottom: 0;
-
         &:first-child {
-          @include border-left-radius($list-group-border-radius);
+          @include border-bottom-left-radius($list-group-border-radius);
           @include border-top-right-radius(0);
         }
 
         &:last-child {
-          margin-right: 0;
-          @include border-right-radius($list-group-border-radius);
+          @include border-top-right-radius($list-group-border-radius);
           @include border-bottom-left-radius(0);
+        }
+
+        &.active {
+          margin-top: 0;
+        }
+
+        & + .list-group-item {
+          border-top-width: $list-group-border-width;
+          border-left-width: 0;
+
+          &.active {
+            margin-left: -$list-group-border-width;
+            border-left-width: $list-group-border-width;
+          }
         }
       }
     }
@@ -6740,25 +6901,18 @@ input[type="button"] {
 
 .list-group-flush {
   .list-group-item {
-    border-right: 0;
-    border-left: 0;
+    border-right-width: 0;
+    border-left-width: 0;
     @include border-radius(0);
 
-    &:last-child {
-      margin-bottom: -$list-group-border-width;
-    }
-  }
-
-  &:first-child {
-    .list-group-item:first-child {
-      border-top: 0;
+    &:first-child {
+      border-top-width: 0;
     }
   }
 
   &:last-child {
     .list-group-item:last-child {
-      margin-bottom: 0;
-      border-bottom: 0;
+      border-bottom-width: 0;
     }
   }
 }
@@ -6783,13 +6937,13 @@ input[type="button"] {
   opacity: .5;
 
   // Override <a>'s hover style
-  @include hover {
+  @include hover() {
     color: $close-color;
     text-decoration: none;
   }
 
   &:not(:disabled):not(.disabled) {
-    @include hover-focus {
+    @include hover-focus() {
       opacity: .75;
     }
   }
@@ -6910,14 +7064,19 @@ a.close.disabled {
   .modal.show & {
     transform: $modal-show-transform;
   }
+
+  // When trying to close, animate focus to scale
+  .modal.modal-static & {
+    transform: $modal-scale-transform;
+  }
 }
 
 .modal-dialog-scrollable {
   display: flex; // IE10/11
-  max-height: calc(100% - #{$modal-dialog-margin * 2});
+  max-height: subtract(100%, $modal-dialog-margin * 2);
 
   .modal-content {
-    max-height: calc(100vh - #{$modal-dialog-margin * 2}); // IE10/11
+    max-height: subtract(100vh, $modal-dialog-margin * 2); // IE10/11
     overflow: hidden;
   }
 
@@ -6934,12 +7093,12 @@ a.close.disabled {
 .modal-dialog-centered {
   display: flex;
   align-items: center;
-  min-height: calc(100% - #{$modal-dialog-margin * 2});
+  min-height: subtract(100%, $modal-dialog-margin * 2);
 
   // Ensure `modal-dialog-centered` extends the full height of the view (IE10/11)
   &::before {
     display: block; // IE10
-    height: calc(100vh - #{$modal-dialog-margin * 2});
+    height: subtract(100vh, $modal-dialog-margin * 2);
     content: "";
   }
 
@@ -7000,7 +7159,7 @@ a.close.disabled {
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
-  @include border-top-radius($modal-content-border-radius);
+  @include border-top-radius($modal-content-inner-border-radius);
 
   .close {
     padding: $modal-header-padding;
@@ -7020,7 +7179,7 @@ a.close.disabled {
 .modal-body {
   position: relative;
   // Enable `flex-grow: 1` so that the body take up as much space as possible
-  // when should there be a fixed height on `.modal-dialog`.
+  // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
   padding: $modal-inner-padding;
 }
@@ -7028,15 +7187,20 @@ a.close.disabled {
 // Footer (for actions)
 .modal-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding;
+  padding: $modal-inner-padding - $modal-footer-margin-between / 2;
   border-top: $modal-footer-border-width solid $modal-footer-border-color;
-  @include border-bottom-radius($modal-content-border-radius);
+  @include border-bottom-radius($modal-content-inner-border-radius);
 
-  // Easily place margin between footer elements
-  > :not(:first-child) { margin-left: .25rem; }
-  > :not(:last-child) { margin-right: .25rem; }
+  // Place margin between footer elements
+  // This solution is far from ideal because of the universal selector usage,
+  // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
+  // stylelint-disable-next-line selector-max-universal
+  > * {
+    margin: $modal-footer-margin-between / 2;
+  }
 }
 
 // Measure scrollbar width for padding body during modal show/hide
@@ -7057,18 +7221,18 @@ a.close.disabled {
   }
 
   .modal-dialog-scrollable {
-    max-height: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
+    max-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
 
     .modal-content {
-      max-height: calc(100vh - #{$modal-dialog-margin-y-sm-up * 2});
+      max-height: subtract(100vh, $modal-dialog-margin-y-sm-up * 2);
     }
   }
 
   .modal-dialog-centered {
-    min-height: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
+    min-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
 
     &::before {
-      height: calc(100vh - #{$modal-dialog-margin-y-sm-up * 2});
+      height: subtract(100vh, $modal-dialog-margin-y-sm-up * 2);
     }
   }
 
@@ -7230,7 +7394,7 @@ a.close.disabled {
     display: block;
     width: $popover-arrow-width;
     height: $popover-arrow-height;
-    margin: 0 $border-radius-lg;
+    margin: 0 $popover-border-radius;
 
     &::before,
     &::after {
@@ -7247,7 +7411,7 @@ a.close.disabled {
   margin-bottom: $popover-arrow-height;
 
   > .arrow {
-    bottom: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    bottom: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
       bottom: 0;
@@ -7267,10 +7431,10 @@ a.close.disabled {
   margin-left: $popover-arrow-height;
 
   > .arrow {
-    left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    left: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
-    margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
+    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       left: 0;
@@ -7290,7 +7454,7 @@ a.close.disabled {
   margin-top: $popover-arrow-height;
 
   > .arrow {
-    top: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    top: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
       top: 0;
@@ -7322,10 +7486,10 @@ a.close.disabled {
   margin-right: $popover-arrow-height;
 
   > .arrow {
-    right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    right: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
-    margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
+    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       right: 0;
@@ -7365,8 +7529,7 @@ a.close.disabled {
   color: $popover-header-color;
   background-color: $popover-header-bg;
   border-bottom: $popover-border-width solid darken($popover-header-bg, 5%);
-  $offset-border-width: calc(#{$border-radius-lg} - #{$popover-border-width});
-  @include border-top-radius($offset-border-width);
+  @include border-top-radius($popover-inner-border-radius);
 
   &:empty {
     display: none;
@@ -7455,7 +7618,7 @@ a.close.disabled {
   .active.carousel-item-right {
     z-index: 0;
     opacity: 0;
-    @include transition(0s $carousel-transition-duration opacity);
+    @include transition(opacity 0s $carousel-transition-duration);
   }
 }
 
@@ -7481,7 +7644,7 @@ a.close.disabled {
   @include transition($carousel-control-transition);
 
   // Hover/focus state
-  @include hover-focus {
+  @include hover-focus() {
     color: $carousel-control-color;
     text-decoration: none;
     outline: 0;
@@ -7491,13 +7654,13 @@ a.close.disabled {
 .carousel-control-prev {
   left: 0;
   @if $enable-gradients {
-    background: linear-gradient(90deg, rgba($black, .25), rgba($black, .001));
+    background-image: linear-gradient(90deg, rgba($black, .25), rgba($black, .001));
   }
 }
 .carousel-control-next {
   right: 0;
   @if $enable-gradients {
-    background: linear-gradient(270deg, rgba($black, .25), rgba($black, .001));
+    background-image: linear-gradient(270deg, rgba($black, .25), rgba($black, .001));
   }
 }
 
@@ -7510,10 +7673,10 @@ a.close.disabled {
   background: no-repeat 50% / 100% 100%;
 }
 .carousel-control-prev-icon {
-  background-image: $carousel-control-prev-icon-bg;
+  background-image: escape-svg($carousel-control-prev-icon-bg);
 }
 .carousel-control-next-icon {
-  background-image: $carousel-control-next-icon-bg;
+  background-image: escape-svg($carousel-control-next-icon-bg);
 }
 
 
@@ -7644,7 +7807,7 @@ a.close.disabled {
 // stylelint-disable declaration-no-important
 
 @each $color, $value in $theme-colors {
-  @include bg-variant(".bg-#{$color}", $value);
+  @include bg-variant(".bg-#{$color}", $value, true);
 }
 
 @if $enable-gradients {
@@ -8058,7 +8221,7 @@ a.close.disabled {
 .text-justify  { text-align: justify !important; }
 .text-wrap     { white-space: normal !important; }
 .text-nowrap   { white-space: nowrap !important; }
-.text-truncate { @include text-truncate; }
+.text-truncate { @include text-truncate(); }
 
 // Responsive alignment
 
@@ -8092,7 +8255,7 @@ a.close.disabled {
 .text-white { color: $white !important; }
 
 @each $color, $value in $theme-colors {
-  @include text-emphasis-variant(".text-#{$color}", $value);
+  @include text-emphasis-variant(".text-#{$color}", $value, true);
 }
 
 .text-body { color: $body-color !important; }
@@ -8135,7 +8298,7 @@ a.close.disabled {
 
 // stylelint-disable declaration-no-important, selector-no-qualifying-type
 
-// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+// Source: https://github.com/h5bp/main.css/blob/master/src/_print.css
 
 // ==========================================================================
 // Print styles.
@@ -8192,7 +8355,7 @@ a.close.disabled {
 
     //
     // Printing Tables:
-    // http://css-discuss.incutio.com/wiki/Printing_Tables
+    // https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
     //
 
     thead {
@@ -14442,9 +14605,6 @@ $sa-table-dark-head-bg:     $sa-grey-18;
 }
 
 
-// Page Titles ==================================
-
-
 // Megamenu =====================================
 
 // =================================================================
@@ -14601,6 +14761,153 @@ $sa-table-dark-head-bg:     $sa-grey-18;
 
 } // END #megamenu
 
+// Page Titles ==================================
+
+// Default Page titles ------
+
+.page-title{
+  font-size: 1.1rem; // 18px
+  margin-top: 0;
+  margin-bottom: 15px;
+  @media (max-width: 767px){
+    margin-bottom: 10px;
+  }
+}
+
+.page-title a:link,
+.page-title a:visited{
+  color: $user-primary-colour;
+}
+.page-title a:hover,
+.page-title a:focus{
+  color: $user-primary-colour-dark;
+}
+
+.page-title .name{
+  @include roboto-black;
+  font-size: 1.2rem; // 20px
+  line-height: 1.2rem;
+  letter-spacing: $vslight;
+  margin: 0;
+  // margin-bottom:5px;
+  margin-left:0.07em; // Set left align to allow for Roboto indenting at large sizes
+    @media (max-width: 767px){
+      margin-left:0.1em;
+    }
+}
+
+.page-title .page{
+  @include roboto-light;
+  font-size: 2.25rem; // 36px
+  line-height: 2.5rem;
+  margin: 0;
+  margin-left:-0.04em; // Set left align to allow for Roboto indenting at large sizes
+  @media (max-width: 767px) {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-left:0;
+  }
+}
+
+.page-title .subtitle,
+.page-title .description,
+.page-title .page-links{
+  @include roboto-regular;
+  font-size: 1.1rem; // 18px
+}
+
+
+// Page Titles with Photo --- 
+.page-title-with-image{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  @media (max-width: 767px){
+    margin-bottom: 10px;
+  }
+  .page-title-photo{
+    padding-right: 5px;
+  }
+
+  .page-title-photo img{
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 70px;
+    height: 70px;
+    @media (max-width: 767px){
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .page-title{
+    margin-bottom: 0;
+  }
+}
+
+// Page Title with State ----
+.page-title-with-state{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  @media (max-width: 767px){
+    margin-bottom: 10px;
+  }
+  .page-title{
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+}
+
+.page-state{
+  @include roboto-black;
+  font-size: 0.7em;
+  text-align: center;
+  color: white;
+}
+.page-state .current-state{
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  @media (max-width: 767px){
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+  }
+}
+.page-state .current-state .state{ visibility:hidden; }
+
+.page-state .current-state.Draft,
+.page-state .current-state.draft{
+  background-image: url("../../assets/rag-icons/rag-pt-draft@1x.png");
+}
+.page-state .current-state.Submitted,
+.page-state .current-state.submitted{
+  background-image: url("../../assets/rag-icons/rag-pt-submitted@2x.png");
+}
+.page-state .current-state.Complete,
+.page-state .current-state.complete{
+  background-image: url("../../assets/rag-icons/rag-pt-complete@2x.png");
+}
+.page-state .current-state.Approved,
+.page-state .current-state.approved{
+  background-image: url("../../assets/rag-icons/rag-pt-approved@2x.png");
+}
+.page-state .current-state.Recommended,
+.page-state .current-state.recommended{
+  background-image: url("../../assets/rag-icons/rag-pt-recommended@2x.png");
+}
+.page-state .current-state.Abandoned,
+.page-state .current-state.abandoned{
+  background-image: url("../../assets/rag-icons/rag-pt-abandoned@2x.png");
+}
+.page-state .current-state.Due,
+.page-state .current-state.due{
+  background-image: url("../../assets/rag-icons/rag-pt-due@2x.png");
+}
+  
 // Checkboxes ===================================
 
 $checkbox-background:           white;

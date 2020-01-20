@@ -1,18 +1,9 @@
 // Navbar =======================================
 
-// To allow for Side tabs
 
-@media (max-width: 991.98px){
-  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
-      padding-right: 8px;
-      padding-left: 8px;
-  }
-}
-@media (max-width: 575.98px){
-  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
-      padding-right: 14px;
-      padding-left: 14px;
-  }
+.navbar .container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 // Base styles
@@ -22,7 +13,7 @@
 /* change the background color */
 .navbar {
   padding: 0rem 1rem;
-  z-index: 3002;
+  // z-index in _sa-variables.css
 }
 
 /* change the padding for height */
@@ -51,13 +42,30 @@
   background-color: $sa-grey-12; /* add background-color to active links */
 }
 
+.navbar-user-link{
+  padding: $sa-spacer-8 $sa-spacer-8;
+  display: block;
+}
+
 .navbar-brand{
+  display: flex;
+  align-items: center;
   padding: 0 ;
-  @media (max-width: 991.98px){
+  @include media-breakpoint-down(md){
     max-height: 35px;
     height: 35px;
   }
 }
+
+.navbar-brand img{
+  height: 40px;
+  margin-right: 10px;
+  @include media-breakpoint-down(md){
+    height: 30px;
+  }
+}
+
+
 
 // Dropdown Menu
 
@@ -65,6 +73,9 @@
   .dropdown-menu{
     border-color: $sa-grey-08;
   }
+  .dropdown-menu .dropdown-divider {
+    margin: 0;
+}
   .dropdown-item{
     color: $text;
     padding: $sa-spacer-4 $sa-spacer-8;
@@ -83,6 +94,7 @@
       background-color: $sa-grey-08;
     }
   }
+  
   
   .dropdown-item:first-of-type{ // Override Dopdown styles
     border-top-left-radius: 0px;
@@ -109,6 +121,7 @@
   background-color: $sa-grey-14;
   border:none;
   padding: 0 $sa-spacer-4;
+  line-height: 1.75rem;
   &:hover{
     background-color: $sa-grey-16;
   }
@@ -125,7 +138,10 @@
     content: "\f0c9" ;
     color:white;
     font-weight: 900;
-    line-height: 1.75rem;
+    // line-height: 1.75rem;
+    // @include respond-to(ie11){
+    //   line-height: 2rem;
+    // }
   }
 }
 
@@ -314,6 +330,23 @@
   color:         rgba(225, 225, 225, 0.5);
 }
 
+.navbar-user-link{
+  &:link{
+    color: white;
+  }
+  &:visited{
+    color: white;
+  }
+  &:hover{
+    background-color: darken($user-primary-colour, 15%);
+  }
+}
+.navbar-primary .nav-item.active.show {
+  .navbar-user-link{
+    background-color: darken($user-primary-colour, 25%); 
+  }
+}
+
 // Dropdown Menu
 .navbar-primary .dropdown-menu{
   border:none;
@@ -325,6 +358,10 @@
 
 .navbar-primary .nav-item.dropdown.show .nav-link.dropdown-toggle{
   background-color: darken($user-primary-colour, 25%);
+}
+
+.navbar-primary .nav-item.dropdown.show{
+  background-color: darken($user-primary-colour, 15%);
 }
 
 .navbar-primary .dropdown-menu .dropdown-item{
@@ -445,6 +482,10 @@
 
 .navbar-secondary .nav-item.dropdown.show .nav-link.dropdown-toggle{
   background-color: darken($admin-primary-colour, 25%);
+}
+
+.navbar-secondary .nav-item.dropdown.show{
+  background-color: darken($user-secondary-colour, 15%);
 }
 
 .navbar-secondary .dropdown-menu .dropdown-item{
@@ -693,3 +734,8 @@
 
 
 
+    .navbar .user-icon{
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }

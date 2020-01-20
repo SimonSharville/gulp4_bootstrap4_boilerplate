@@ -1,0 +1,425 @@
+// Sard icon styles. 
+// These mimic the font awesome styles with some adjustment tweaks.
+
+.si {
+  font-family: "sard-icons";
+  position: relative;
+  top: .13rem;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1; }
+
+.si-lg {
+  font-size: 1.2rem;
+  line-height: 0.75em;
+  vertical-align: -.0667rem; 
+}
+
+.si-xs {
+  font-size: .70rem; 
+  top: .08rem;
+}
+
+.si-sm {
+  font-size: .82em;
+  top: .08rem;
+ }
+
+.si-1x {
+  font-size: 1em; }
+
+.si-2x {
+  font-size: 1.83rem; 
+  top: .2rem;
+}
+
+.si-3x {
+  font-size: 2.9em;
+  top: .3rem; 
+}
+
+.si-4x {
+  font-size: 3.62rem; 
+  top: .42rem; 
+}
+
+.si-5x {
+  font-size: 4.52rem; 
+  top: .52rem;
+}
+
+.si-6x {
+  font-size: 5.45rem; 
+  top: .62rem;
+}
+
+.si-7x {
+  font-size: 6.4rem; 
+  top: .75rem;
+}
+
+.si-8x {
+  font-size: 7.32rem; 
+  top: .87rem;
+}
+
+.si-9x {
+  font-size: 8.2rem; 
+  top: .97rem;
+}
+
+.si-10x {
+  font-size: 9.1rem; 
+  top: 1.1rem;
+}
+
+.si-fw {
+  text-align: center;
+  width: 1.25em; }
+
+.si-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0; }
+  .si-ul > li {
+    position: relative; }
+
+.si-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit; }
+
+.si-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em; }
+
+.si-pull-left {
+  float: left; }
+
+.si-pull-right {
+  float: right; }
+
+.si.fa-pull-left {
+  margin-right: .3em; }
+
+.si.fa-pull-right {
+  margin-left: .3em; }
+
+.si-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear; 
+}
+
+.si-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8); 
+}
+
+@-webkit-keyframes si-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } 
+}
+
+@keyframes si-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } 
+}
+
+.si-rotate-45 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.si-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.si-rotate-135 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.si-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); 
+}
+
+.si-rotate-225 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.si-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); 
+}
+
+.si-rotate-315 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+.si-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1); 
+}
+
+.si-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1); 
+}
+
+.si-flip-both, .si-flip-horizontal.si-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1); 
+}
+
+:root .si-rotate-90,
+:root .si-rotate-180,
+:root .si-rotate-270,
+:root .si-flip-horizontal,
+:root .si-flip-vertical,
+:root .si-flip-both {
+  -webkit-filter: none;
+          filter: none; }
+
+.si-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em; }
+
+.si-stack-1x,
+.si-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+
+.si-stack-1x {
+  line-height: inherit; }
+
+.si-stack-2x {
+  font-size: 2em; }
+
+.si-inverse {
+  color: #fff; }
+
+// si Status Icons colours ===================
+
+.si-reject,
+.si-reject-circle,
+.si-reject-circle-o,
+.si-status-danger, 
+.si-status-danger-o,
+.si-status-danger-circle,
+.si-status-danger-circle-o {
+  color: $RAG-danger;
+}
+
+.si-status-success, 
+.si-status-success-o,
+.si-status-success-circle, 
+.si-status-success-circle-o {
+  color: $RAG-success;
+}
+.si-status-complete, 
+.si-status-complete-o,
+.si-status-complete-circle, 
+.si-status-complete-circle-o {
+  color: $RAG-success;
+}
+.si-status-warning, 
+.si-status-warning-o,
+.si-status-warning-circle, 
+.si-status-warning-circle-o {
+  color: $RAG-warning;
+}
+.si-status-alert, 
+.si-status-alert-o,
+.si-status-alert-circle, 
+.si-status-alert-circle-o {
+  color: $RAG-warning;
+}
+.si-status-approved, 
+.si-status-approved-o,
+.si-status-approved-circle, 
+.si-status-approved-circle-o {
+  color: $RAG-approved;
+}
+.si-status-recommended, 
+.si-status-recommended-o,
+.si-status-recommended-circle, 
+.si-status-recommended-circle-o {
+  color: $RAG-recommended;
+}
+.si-status-submitted, 
+.si-status-submitted-o,
+.si-status-submitted-circle, 
+.si-status-submitted-circle-o {
+  color: $RAG-submitted;
+}
+.si-status-archived, 
+.si-status-archived-o,
+.si-status-archived-circle, 
+.si-status-archived-circle-o  {
+  color: $RAG-archived;
+}
+.si-status-due, 
+.si-status-due-o,
+.si-status-due-circle, 
+.si-status-due-circle-o {
+  color: $RAG-due;
+}
+.si-status-draft, 
+.si-status-draft-o,
+.si-status-draft-circle, 
+.si-status-draft-circle-o
+ {color: $RAG-draft;
+}
+
+// si Page Icons colours ==================
+
+.si-sard-faqs,
+.si-sard-faqs-circle,
+.si-sard-faqs-circle-o {
+  color: $sa-faqs;
+}
+
+.si-sard-products,
+.si-sard-products-circle,
+.si-sard-products-circle-o {
+  color: $sa-products;
+}
+
+.si-sard-support,
+.si-sard-support-circle,
+.si-sard-support-circle-o,
+.si-sard-support-alt {
+  color: $sa-support;
+}
+
+.si-sard-clients,
+.si-sard-clients-circle,
+.si-sard-clients-circle-o {
+  color: $sa-clients;
+}
+
+.si-sard-company,
+.si-sard-company-circle,
+.si-sard-company-circle-o {
+  color: $sa-company;
+}
+
+.si-sard-staff,
+.si-sard-staff-circle,
+.si-sard-staff-circle-o {
+  color: $sa-company;
+}
+
+.si-sard-charity,
+.si-sard-charity-o,
+.si-sard-charity-circle,
+.si-sard-charity-circle-o {
+  color: $sa-charity;
+}
+
+.si-blog-left,
+.si-blog-left-o,
+.si-blog-right,
+.si-blog-right-o {
+  color: $sa-blog;
+}
+
+// si Product Icons colours ==================
+.si-prod-360, .si-prod-360-o { color: $sa-360;}
+.si-prod-a4a, .si-prod-a4a-o { color: $sa-A4A;}
+.si-prod-ele, .si-prod-ele-o { color: $sa-eLeave;}
+.si-prod-ros, .si-prod-ros-o { color: $sa-eRo;}
+.si-prod-jp, .si-prod-jp-o { color: $sa-JPL;}
+.si-prod-mrv, .si-prod-mrv-o { color: $sa-MRv;}
+.si-prod-nrv, .si-prod-nrv-o { color: $sa-NRv;}
+.si-prod-cap, .si-prod-cap-o { color: $sa-CPL;}
+
+// Page Status Icon Colours ================
+.si-page-approved, .si-page-approved-o { color: $RAG-approved;}
+.si-page-archived, .si-page-archived-o { color: $RAG-archived;}
+.si-page-complete, .si-page-complete-o { color: $RAG-complete;}
+.si-page-draft, .si-page-draft-o { color: $RAG-draft;}
+.si-page-due, .si-page-due-o { color: $RAG-due;}
+.si-page-recommended, .si-page-recommended-o { color: $RAG-recommended;}
+.si-page-submitted, .si-page-submitted-o { color: $RAG-submitted;}
+
+
+
+
+// ==================================================================
+// Font Awesome Icons ===============================================
+
+//https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+// Example of how to include Font Awesome in SCSS when linked from local
+// .alert-close {
+//   // @include fa-icon;
+//   @extend .far;
+
+//   &:before {
+//     content:fa-content($fa-var-times-circle);
+//   }
+// }
+
+
+// https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
+// Example of how to include Font Awesome in SCSS when linked from remote cdn
+.fa-icon{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alert-close::before {
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f057";  // <i class="fas fa-times-circle"></i>
+  font-weight: 400;  // Set the font-weight: 900 (Solid), 400 (Regular or Brands), 300 (Light(pro))
+}

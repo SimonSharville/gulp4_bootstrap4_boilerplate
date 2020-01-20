@@ -10,6 +10,22 @@
 
 /* Theme Colouring */
 
+// Theme Colours ================================
+$theme-primary-colour:                $sa-yellow;
+// $theme-primary-colour:                #999966 ; // Used for Testing - Swap with above
+$theme-primary-colour-light:          lighten($theme-primary-colour, 5%);
+$theme-primary-colour-very-light:     lighten($theme-primary-colour, 10%);
+$theme-primary-colour-dark:           darken($theme-primary-colour, 10%);
+$theme-primary-colour-very-dark:      darken($theme-primary-colour, 20%);
+
+$theme-secondary-colour:              $sa-orange;
+// $theme-secondary-colour:              #996633; // Used for Testing - Swap with above
+$theme-secondary-colour-light:        lighten($theme-secondary-colour, 5%);
+$theme-secondary-colour-very-light:   lighten($theme-secondary-colour, 10%);
+$theme-secondary-colour-dark:         darken($theme-secondary-colour, 10%);
+$theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
+
+
 // ================================================================================================
 // Main Mixin - Theme Includes are added at the base of this file =================================
 @mixin theme($theme-name, $first-colour,  $second-colour, $third-colour,  $forth-colour) {
@@ -1088,48 +1104,39 @@
 
     // Navs -------------------------------------
     
-    .nav-tabs.nav-primary .nav-item.show .nav-link, .nav-tabs.nav-primary .nav-link.active {
-      color: $theme-primary;
-      border-color: $theme-primary $theme-primary #fff;
-    }
-    .nav-tabs.nav-primary {
-      border-bottom-color: $theme-primary
-    }
-
-    .nav-primary.nav.nav-pills .nav-item,
-    .nav-primary.nav.nav-pills .nav-link{
-      & a{
-        color: $theme-primary;
+    .nav-primary.nav.nav-tabs .nav-item{
+      .nav-link{
+        &.active{
+          background-color: $theme-primary;
+          border-color: $theme-primary;
+          border-bottom:2px solid $theme-primary;
+        }
       }
     }
+    
     .nav-primary.nav.nav-pills .nav-link.active{
       background-color: $theme-primary;
-      color: white;
       &:focus,
       &:active{
         background-color: $theme-primary;
       }
     }
-
-    .nav-tabs.nav-secondary .nav-item.show .nav-link, .nav-tabs.nav-secondary .nav-link.active {
-      color: $theme-secondary;
-      border-color: $theme-secondary $theme-secondary #fff;
-    }
-    .nav-tabs.nav-secondary {
-      border-bottom-color: $theme-secondary
-    }
-    .nav-secondary.nav.nav-pills .nav-item,
-    .nav-secondary.nav.nav-pills .nav-link{
-      & a{
-        color: $theme-secondary;
+    
+    .nav-secondary.nav.nav-tabs .nav-item{
+      .nav-link{
+        &.active{
+          background-color:$theme-secondary;
+          border-color:$theme-secondary;
+          border-bottom:2px solid$theme-secondary;
+        }
       }
     }
+    
     .nav-secondary.nav.nav-pills .nav-link.active{
-      background-color: $theme-secondary;
-      color: white;
+      background-color:$theme-secondary;
       &:focus,
       &:active{
-        background-color: $theme-secondary;
+        background-color:$theme-secondary;
       }
     }
 
@@ -1242,7 +1249,7 @@
 @include theme(theme-user,    $user-primary-colour,     $user-primary-colour-dark,      $user-secondary-colour,         $user-secondary-colour-dark  );
 @include theme(theme-admin,   $admin-primary-colour,    $admin-primary-colour-dark,     $admin-secondary-colour,        $admin-secondary-colour-dark   );
 
-@include theme(theme-trust,   $trust-primary-colour,    $trust-primary-colour-dark,     $trust-secondary-colour,         $trust-secondary-colour-dark );
+@include theme(theme-trust,   $theme-primary-colour,    $theme-primary-colour-dark,     $theme-secondary-colour,         $theme-secondary-colour-dark );
 
 
 

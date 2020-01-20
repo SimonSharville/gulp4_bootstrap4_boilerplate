@@ -169,6 +169,16 @@ $checkbox-background-disabled:  transparent;
   }
 }
 
+// Inline Checkboxes
+.sa-inline-checkboxes{
+  .sa-checkbox{
+    display: inline-block;
+  }
+  .sa-checkbox label{
+    padding-right: 10px;
+    padding-left: 25px;
+  }
+}
 
 
 // SARD Radio Buttons ============================================

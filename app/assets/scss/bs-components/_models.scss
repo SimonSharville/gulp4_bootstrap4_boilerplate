@@ -4,7 +4,8 @@
   padding: $sa-spacer-8 $sa-spacer-12;
 }
 .modal-dialog {
-  padding-top: 3.5rem; // Allows for navbar and breadbrumbs
+  padding-top: 100px; // Allows for navbar and breadbrumbs
+  padding-bottom: 60px; // Allows for footer
 }
 
 
@@ -178,6 +179,8 @@
 }
 
 .modal-primary .modal-footer {
+  background-color: white;
+  border-top: 1px solid $sa-grey-08;
   margin-left: 0px;
   width: 100%;
 }
@@ -212,6 +215,8 @@
 }
 
 .modal-secondary .modal-footer {
+  background-color: white;
+  border-top: 1px solid $sa-grey-08;
   margin-left: 0px;
   width: 100%;
 }
@@ -626,4 +631,42 @@ p > a.modal-info-circle-inline{
     top: -2px;
     right: -7.5px;
   }
+}
+
+// Modals with tabs inside ------------
+
+.modal-body .nav.nav-tabs{
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.modal-body .nav.nav-tabs .nav-item{
+  margin-left: 2px;
+  margin-right: 2px;
+  
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link{
+  color: $text;
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link:visited{
+
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link:hover,
+.modal-body .nav.nav-tabs .nav-item .nav-link:focus{
+  color: $text!important;
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link.active{
+  color: white;
+  &:focus,
+  &:active{
+    color: white!important;
+  }
+}
+
+.modal-body .tab-content{
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 8px;
 }

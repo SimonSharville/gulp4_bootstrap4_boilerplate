@@ -51,7 +51,7 @@ a.rag-key-expander .title img{
 }
 
 a.rag-key-expander:after{
-  content: "\71";
+  content: "\e013";
   font-family: "sard-icons";
   color:$text;
   font-size: 1.25em;
@@ -177,40 +177,40 @@ body.rag-key-expanded {
   background-color: transparent;
 }
 .rag-key.icon-danger{
-  background-image: url("../rag-icons/rag-icon-danger-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-danger-sm@2x.png");
 }
 .rag-key.icon-warning{
-  background-image: url("../rag-icons/rag-icon-warning-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-warning-sm@2x.png");
 }
 .rag-key.icon-danger-plus{
-  background-image: url("../rag-icons/rag-icon-danger-plus-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-danger-plus-sm@2x.png");
 }
 .rag-key.icon-warning-plus{
-  background-image: url("../rag-icons/rag-icon-warning-plus-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-warning-plus-sm@2x.png");
 }
 .rag-key.icon-approved{
-  background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-approved-sm@2x.png");
 }
 .rag-key.icon-unavailable{
-  background-image: url("../rag-icons/rag-icon-unavailable-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-unavailable-sm@2x.png");
 }
 .rag-key.icon-success{
-  background-image: url("../rag-icons/rag-icon-success-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-success-sm@2x.png");
 }
 .rag-key.icon-draft{
-  background-image: url("../rag-icons/rag-icon-draft-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-draft-sm@2x.png");
 }
 .rag-key.icon-submitted{
-  background-image: url("../rag-icons/rag-icon-submitted-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-submitted-sm@2x.png");
 }
 .rag-key.icon-recommended{
-  background-image: url("../rag-icons/rag-icon-recommended-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-recommended-sm@2x.png");
 }
 .rag-key.icon-abandoned{
-  background-image: url("../rag-icons/rag-icon-abandoned-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-abandoned-sm@2x.png");
 }
 .rag-key.icon-due{
-  background-image: url("../rag-icons/rag-icon-due-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-due-sm@2x.png");
 }
 .rag-key p{
   padding-top: 6px;

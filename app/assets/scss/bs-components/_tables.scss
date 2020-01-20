@@ -208,3 +208,35 @@ $sa-table-dark-head-bg:     $sa-grey-18;
   color: white;
   padding: $sa-spacer-6 $sa-spacer-10
 }
+
+// Table cells with icon links in them ==================================
+
+.table > thead > tr > th.icons,
+.table > tbody > tr > td.icons{
+  width:1%;
+  white-space:nowrap;
+  a{
+    display: inline-block;
+
+    .fa, .si{
+      padding-right:0;
+      padding-left:2px;
+    }
+  }
+}
+
+// Table cells with buttons in them ==================================
+
+.table > thead > tr > th.action-buttons,
+.table > tbody > tr > td.action-buttons{
+  width:1%;
+  white-space:nowrap;
+  a{
+    display: inline-block;
+
+    .btn{
+      padding-right:0;
+      padding-left:2px;
+    }
+  }
+}

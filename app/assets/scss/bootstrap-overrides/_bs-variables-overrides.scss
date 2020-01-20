@@ -98,11 +98,13 @@ $theme-colors: map-merge(
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
-  md: 768px,
+  md: 769px, // Adjusted from 768 to include iPad V as small
   lg: 992px,
   xl: 1200px,
   xxl: 1590px // Added
 );
+
+
 
 // Originals
 // $container-max-widths: (
@@ -121,6 +123,7 @@ $container-max-widths: (
   xxl: 1518px // Added
 );
 
+
 // Responsive Media Queries ---------------------
 // See sa-variables
 
@@ -132,6 +135,7 @@ $font-size-base:              0.9375rem; //  `15px`
 
 
 // Grid columns
+$grid-columns:                24;
 $grid-gutter-width:           16px;
 
 // Components

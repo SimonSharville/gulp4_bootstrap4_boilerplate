@@ -4,21 +4,24 @@
 // http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
 
 $break-sm: 576px;
-$break-md: 768px;
+$break-md: 769px;  // Adjusted from 768 to include iPad V as small
 $break-lg: 992px;
 $break-xl: 1200px;
 $break-xxl: 1590px;
 
 
 @mixin respond-to($media) {
+  @if $media == xxs-screens {
+    @media only screen and (max-width: 420px) { @content; }
+  }
   @if $media == xs-screens {
-    @media only screen and (max-width: 575px) { @content; }
+    @media only screen and (min-width: 421px) and (max-width: 575px) { @content; }
   }
   @else if $media == sm-screens {
-    @media only screen and (min-width: 576px) and (max-width: 767px) { @content; }
+    @media only screen and (min-width: 576px) and (max-width: 768px) { @content; }
   }
   @else if $media == md-screens {
-    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+    @media only screen and (min-width: 769px) and (max-width: 991px) { @content; }
   }
   @else if $media == lg-screens {
     @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
@@ -32,14 +35,23 @@ $break-xxl: 1590px;
 
   // Up / Down Sizes
 
+  @else if $media == xs-break-down {
+    @media only screen and (max-width: 420px) { @content; }
+  }
+  @else if $media == xs-break-up {
+    @media only screen and (min-width: 421px) { @content; }
+  }
+  @else if $media == sm-break-down {
+    @media only screen and (max-width: 575px) { @content; }
+  }
   @else if $media == sm-break-up {
     @media only screen and (min-width: 576px) { @content; }
   }
   @else if $media == md-break-down {
-    @media only screen and (max-width: 767px) { @content; }
+    @media only screen and (max-width: 768px) { @content; }
   }
   @else if $media == md-break-up {
-    @media only screen and (min-width: 768px) { @content; }
+    @media only screen and (min-width: 769px) { @content; }
   }
   @else if $media == lg-break-down {
     @media only screen and (max-width: 991px ) { @content; }
@@ -56,7 +68,108 @@ $break-xxl: 1590px;
   @else if $media == xxl-break-down {
     @media only screen and (max-width: 1589px ) { @content; }
   }
+
+  // iPad landscape
+  @else if $media == ipad-landscape {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }
+  }
+  @else if $media == ipad-portrait {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { @content; }
+  }
+
+  @else if $media == ipad-p-down {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+
+  @else if $media == mobile-landscape {
+    @media only screen and (max-device-width : 911px) and (orientation : landscape) { @content; }
+  }
+
+  // Phones 
+  // https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
+  
+  // iPhone 4
+  @else if $media == iphone-4-portrait {
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+  }
+  @else if $media == iphone-4-landscape {
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+  }
+
+  // iPhone 5
+  @else if $media == iphone-5-portrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == iphone-5-landscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // iPhone 6, 7, 8
+  @else if $media == iphone-6-portrait {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == iphone-6-landscape {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // iPhone 6+, 7+, 8+
+  @else if $media == iphone-6-plus-portrait {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == iphone-6-plus-landscape {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // iPhone X
+  @else if $media == iphone-x-portrait {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == iphone-x-landscape {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  
+  // iPhone XS Max, XR
+  @else if $media == iphone-xr-portrait {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == iphone-xr-landscape {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+
+  // Samsung Galaxy S3
+  @else if $media == galaxy-S3-portrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == galaxy-S3-landscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // Samsung Galaxy S4
+  @else if $media == galaxy-S4-portrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == galaxy-S4-landscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+
+  // Samsung Galaxy S5
+  @else if $media == galaxy-S5-portrait {
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == galaxy-S5-landscape {
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+
+
+
+  // ie 11 ------------------
+  
+  @else if $media == ie11 {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { @content; }
+  }
 }
+
+
 
 @mixin breakout{
   width: 100vw;
@@ -78,6 +191,15 @@ $break-xxl: 1590px;
   margin-right: -50vw;
   padding-left: 31px;
   padding-right: 31px;
+}
+
+.container-fluid{
+  padding-left: 30px;
+  padding-right: 30px;
+  @include respond-to(xs-screens){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 // ==================================================================
 
@@ -175,8 +297,14 @@ $sa-footer-bg:             $sa-heading-bg !default;
 
 
 // Body adjust to allow for footer ==================================
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  padding-bottom: 70px;
+}
 
-body { margin-bottom: 70px; }
 
 // Remove outer glow from Focus =====================================
 
@@ -199,6 +327,8 @@ button:focus,
 
 $sa-box-shadow:         1px 1px 2px 0px rgba(0,0,0,0.2);
 $sa-box-shadow-lg:      1px 1px 3px 0px rgba(0,0,0,0.4);
+
+$sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 
 
 // ==================================================================
@@ -243,69 +373,134 @@ $sa-box-shadow-lg:      1px 1px 3px 0px rgba(0,0,0,0.4);
 
 // ==============================================
 // Adjust vertical positioning dpending on content
-body{ 
-  padding-top: 20px; 
-  @media (max-width: 991.98px){ padding-top: 10px; }
-}
+// body{ 
+//   padding-top: 20px; 
+//  @include media-breakpoint-down(md){ padding-top: 10px; }
+// }
 
 #navbar + #navbar-admin{
   margin-top: 50px;
-  @media (max-width: 991.98px){ margin-top: 35px; }
+ @include media-breakpoint-down(md){ margin-top: 35px; }
 }
 
 // Breadcrumbs
-#navbar-admin + #breadcrumb-top{
+#navbar-admin + #breadcrumbs{
   margin-top: 35px;
-  @media (max-width: 991.98px){ margin-top: 35px; }
+ @include media-breakpoint-down(md){ margin-top: 35px; }
 }
-#navbar + #breadcrumb-top{
+#navbar + #breadcrumbs{
   margin-top: 50px;
-  @media (max-width: 991.98px){ margin-top: 35px; }
+ @include media-breakpoint-down(md){ margin-top: 35px; }
 }
-#navbar + #navbar-admin + #breadcrumb-top{
+#navbar + #navbar-admin + #breadcrumbs{
   margin-top: 85px;
-  @media (max-width: 991.98px){ margin-top: 70px; }
+ @include media-breakpoint-down(md){ margin-top: 70px; }
 }
 
 // container
 
 #navbar + .container{
   margin-top: 50px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
 #navbar + #navbar-admin + .container{
   margin-top: 75px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
 #navbar-admin + .container{
   margin-top: 35px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#navbar + #breadcrumb-top + .container{
+#navbar + #breadcrumbs + .container{
   margin-top: 75px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#navbar + #navbar-admin + #breadcrumb-top + .container{
+#navbar + #navbar-admin + #breadcrumbs + .container{
   margin-top: 110px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#navbar-admin + #breadcrumb-top + .container{
+#navbar-admin + #breadcrumbs + .container{
   margin-top: 60px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#breadcrumb-top + .container{
+#breadcrumbs + .container{
   margin-top: 35px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
+}
+
+// container-fluid
+
+#navbar + .container-fluid{
+  margin-top: 70px;
+ @include media-breakpoint-down(md){  margin-top: 60px;}
+}
+
+#navbar + #navbar-admin + .container-fluid{
+  margin-top: 105px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
+}
+#navbar + #breadcrumbs + .container-fluid{
+  margin-top: 30px;
+ @include media-breakpoint-down(md){ margin-top: 20px; }
+}
+#navbar-admin + .container-fluid{
+  margin-top: 60px;
+ @include media-breakpoint-down(md){ margin-top: 60px; }
+}
+#navbar-admin + #breadcrumbs + .container-fluid{
+  margin-top: 20px;
+ @include media-breakpoint-down(md){ margin-top: 10px; }
+}
+
+// With sidemenu wrapper
+#navbar + .sidemenu-wrapper .container-fluid{
+  margin-top: 65px;
+ @include media-breakpoint-down(md){  margin-top: 50px;}
+}
+#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 95px;
+ @include media-breakpoint-down(md){ margin-top: 80px; }
+}
+
+// still to fix
+#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
+  margin-top: 105px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
+}
+#navbar-admin + .sidemenu-wrapper .container-fluid{
+  margin-top: 55px;
+ @include media-breakpoint-down(md){ margin-top: 55px; }
+}
+#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 130px;
+ @include media-breakpoint-down(md){ margin-top: 115px; }
+}
+#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 80px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
 }
 
 
-// Navbar Layering ==============================
+// Layering ==============================
 .navbar.fixed-top{
-  z-index: 4002;
+  z-index: 5002;
 }
 #navbar-admin{
-  z-index: 4001;
+  z-index: 5001;
 }
-#breadcrumb-top{
-  z-index: 4000;
+#breadcrumbs{
+  z-index: 5000;
+}
+.sa-sidemenu{
+  z-index: 4999;
+}
+.sa-footer{
+  z-index: 5000;
+}
+.sa-footer #accordion{
+  z-index: 5000;
+}
+
+.modal{
+  z-index: 5050;
 }
