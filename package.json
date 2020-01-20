@@ -23,7 +23,7 @@
     "gulp": "^4.0.2"
   },
   "devDependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp-autoprefixer": "^6.1.0",
@@ -31,7 +31,7 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-haml": "^1.0.1",
-    "gulp-imagemin": "^6.1.1",
+    "gulp-imagemin": "^6.2.0",
     "gulp-include": "^2.4.1",
     "gulp-inject-partials": "^1.0.5",
     "gulp-line-ending-corrector": "^1.0.3",
@@ -44,6 +44,6 @@
     "import-resolve": "^0.4.0",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.16.0"
   }
 }

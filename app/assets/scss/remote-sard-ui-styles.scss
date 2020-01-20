@@ -1,0 +1,30 @@
+// IMPORTANT All Remote Styles MUST be kept in sync.
+
+// Import Order =======================
+
+// Global Core Styles
+@import 'remote-core-styles';
+
+
+
+// SARD System Specific
+// These are the specific SARD Components, used in SARD system only.
+// If something is cross system it should be moved to Global Core Styles.
+@import 'systems/sard/appraisal';
+@import 'systems/sard/job-plan';
+@import 'systems/sard/portfolio';
+
+
+
+// ==============================================
+// These MUST Come at the end
+
+
+// UI Specific Styles for build
+@import 'global-styles/sa-ui-styles';
+
+
+// Theme Colours 
+@import 'global-styles/sa-theme-colours';
+
+

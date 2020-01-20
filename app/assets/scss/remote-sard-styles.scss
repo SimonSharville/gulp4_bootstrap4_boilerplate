@@ -7,7 +7,7 @@
 
 
 
-// SARD System Specific
+// Add local SARD Specific files here
 // These are the specific SARD Components, used in SARD system only.
 // If something is cross system it should be moved to Global Core Styles.
 @import 'systems/sard/appraisal';
@@ -16,14 +16,7 @@
 
 
 
-// ==============================================
-// These MUST Come at the end
-
-// Temp UI Styles for build
-@import 'global-styles/sa-ui-styles';
 
 
-// Theme Colours 
-@import 'global-styles/sa-theme-colours';
 
 

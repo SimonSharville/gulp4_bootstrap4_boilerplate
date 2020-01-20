@@ -3,15 +3,7 @@
 https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/
 
 Created 2019-04-01
-
-
-TO USE
-  In Terminal go to:
-  cd Gits/gulp4_bootstrap4_boilerplate
-
-  and type:
-  gulp
-
+Updated 2020-01-20
   
 HOW TO USE ==========================================================
 Always work within the 'app' folder, this will render into the 'docs' folder. 
@@ -19,8 +11,8 @@ The 'docs' folder will be the live stuff.
 
 
 TO DUPLICATE PROJECT ================================================
-    To Duplicate poject, Copy project, rename it and in terminal type:
-      npm install
+To Duplicate poject, Copy project, rename it and in terminal type:
+  npm install
 
 
 
@@ -109,8 +101,7 @@ Install Process
     npm rm gulp-NAME                                    (To remove a package)
 
     UPDATING PACKAGES
-    https://bytearcher.com/articles/using-npm-update-and-npm-outdated-to-update-dependencies/
-    https://60devs.com/npm-install-specific-version.html
+    npm install
     npm update                                          (Updates any out of date packages)
     npm outdated                                        (Checks for outdated packages)
     npm install PACKAGENAME@latest --save               (Updates specific page to latest) 
