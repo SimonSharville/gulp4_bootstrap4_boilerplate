@@ -8,28 +8,39 @@
 
 
 //  SARD Colours ===============
-$sa-turq:                  #00B2B2;
-$sa-pink:                  #E50073;
-$sa-orange:                #FF6A00;
-$sa-yellow:                #FFB200;
-$sa-lime:                  #A7BF30;
-$sa-green:                 #359E00;
-$sa-teal:                  #004D4D;
-$sa-blue:                  #003CB8;
-$sa-ink:                   #000078;
-$sa-purple:                #52008C;
-$sa-plum:                  #990099;
-$sa-red:                   #BF0000;
-$sa-white:                 #FFFFFF;
+$sa-turq:                   #00B2B2;
+$sa-pink:                   #E50073;
+$sa-orange:                 #FF6A00;
+$sa-yellow:                 #FFB200;
+$sa-lime:                   #A7BF30;
+$sa-green:                  #359E00;
+$sa-teal:                   #004D4D;
+$sa-blue:                   #003CB8;
+$sa-ink:                    #000078;
+$sa-purple:                 #52008C;
+$sa-plum:                   #990099;
+$sa-red:                    #BF0000;
+$sa-white:                  #FFFFFF;
 
-$sa-MRv:                       $sa-turq;
-$sa-NRv:                       $sa-orange;
+// Product Colours =============
+$sa-MRv:                    $sa-turq;
+$sa-NRv:                    $sa-orange;
 $sa-360:                    $sa-yellow;
-$sa-eLeave:                    $sa-lime;
-$sa-A4A:                       $sa-plum;
-$sa-JPL:                       $sa-pink;
-$sa-eRo:                       $sa-teal;
-$sa-CPL:                       $sa-red;
+$sa-eLeave:                 $sa-lime;
+$sa-A4A:                    $sa-plum;
+$sa-JPL:                    $sa-pink;
+$sa-eRo:                    $sa-teal;
+$sa-CPL:                    $sa-red;
+
+// Page colours ================
+
+$sa-faqs:                   $sa-plum;
+$sa-products:               $sa-turq;
+$sa-support:                $sa-plum;
+$sa-clients:                $sa-orange;
+$sa-company:                $sa-lime;
+$sa-charity:                $sa-pink;
+$sa-blog:                   $sa-blue;
 
 
 // RAG Colours =================
@@ -128,24 +139,7 @@ $text:                        $sa-grey-18;
 $bodytext:                    $sa-grey-18;
 
 
-
-
-// Trust Colours ================================
-// $trust-primary-colour:                $sa-yellow;
-$trust-primary-colour:                #999966 ; // Used for Testing - Swap with above
-$trust-primary-colour-light:          lighten($trust-primary-colour, 5%);
-$trust-primary-colour-very-light:     lighten($trust-primary-colour, 10%);
-$trust-primary-colour-dark:           darken($trust-primary-colour, 10%);
-$trust-primary-colour-very-dark:      darken($trust-primary-colour, 20%);
-
-// $trust-secondary-colour:              $sa-orange;
-$trust-secondary-colour:              #996633; // Used for Testing - Swap with above
-$trust-secondary-colour-light:        lighten($trust-secondary-colour, 5%);
-$trust-secondary-colour-very-light:   lighten($trust-secondary-colour, 10%);
-$trust-secondary-colour-dark:         darken($trust-secondary-colour, 10%);
-$trust-secondary-colour-very-dark:    darken($trust-secondary-colour, 20%);
-
-// Trust User Colours ===========================
+// User Colours ===========================
 $user-primary-colour:                 $sa-turq;
 $user-primary-colour-light:           lighten($user-primary-colour, 5%);
 $user-primary-colour-very-light:      lighten($user-primary-colour, 10%);
@@ -158,7 +152,7 @@ $user-secondary-colour-very-light:    lighten($user-secondary-colour, 10%);
 $user-secondary-colour-dark:          darken($user-secondary-colour, 10%);
 $user-secondary-colour-very-dark:     darken($user-secondary-colour, 20%);
 
-// Trust Admin Colours ==========================
+// Admin Colours ==========================
 $admin-primary-colour:               $sa-pink;
 $admin-primary-colour-light:         lighten($admin-primary-colour, 5%);
 $admin-primary-colour-very-light:    lighten($admin-primary-colour, 10%);
@@ -478,11 +472,13 @@ $theme-colors: map-merge(
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
-  md: 768px,
+  md: 769px, // Adjusted from 768 to include iPad V as small
   lg: 992px,
   xl: 1200px,
   xxl: 1590px // Added
 );
+
+
 
 // Originals
 // $container-max-widths: (
@@ -501,6 +497,7 @@ $container-max-widths: (
   xxl: 1518px // Added
 );
 
+
 // Responsive Media Queries ---------------------
 // See sa-variables
 
@@ -512,6 +509,7 @@ $font-size-base:              0.9375rem; //  `15px`
 
 
 // Grid columns
+$grid-columns:                24;
 $grid-gutter-width:           16px;
 
 // Components
@@ -8457,269 +8455,11 @@ a.close.disabled {
 
 
 
+// Sard Icons
+// @import '/Users/simon/Gits/sard_core_gulp_version/app/assets/scss/global-styles/sard-icons/icon-styles';
+// @import '/Users/simon/Gits/sard_core_gulp_version/app/assets/scss/global-styles/sard-icons/icon-variations';
 
 // Global Styles
-// Sard icon styles. 
-// These mimic the font awesome styles with some adjustment tweaks.
-
-.sicon {
-  font-family: "sard-icons";
-  position: relative;
-  top: .13rem;
-
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1; }
-
-.sicon-lg {
-  font-size: 1.2rem;
-  line-height: 0.75em;
-  vertical-align: -.0667rem; 
-}
-
-.sicon-xs {
-  font-size: .70rem; 
-  top: .08rem;
-}
-
-.sicon-sm {
-  font-size: .82em;
-  top: .08rem;
- }
-
-.sicon-1x {
-  font-size: 1em; }
-
-.sicon-2x {
-  font-size: 1.83rem; 
-  top: .2rem;
-}
-
-.sicon-3x {
-  font-size: 2.9em;
-  top: .3rem; 
-}
-
-.sicon-4x {
-  font-size: 3.62rem; 
-  top: .42rem; 
-}
-
-.sicon-5x {
-  font-size: 4.52rem; 
-  top: .52rem;
-}
-
-.sicon-6x {
-  font-size: 5.45rem; 
-  top: .62rem;
-}
-
-.sicon-7x {
-  font-size: 6.4rem; 
-  top: .75rem;
-}
-
-.sicon-8x {
-  font-size: 7.32rem; 
-  top: .87rem;
-}
-
-.sicon-9x {
-  font-size: 8.2rem; 
-  top: .97rem;
-}
-
-.sicon-10x {
-  font-size: 9.1rem; 
-  top: 1.1rem;
-}
-
-.sicon-fw {
-  text-align: center;
-  width: 1.25em; }
-
-.sicon-ul {
-  list-style-type: none;
-  margin-left: 2.5em;
-  padding-left: 0; }
-  .sicon-ul > li {
-    position: relative; }
-
-.sicon-li {
-  left: -2em;
-  position: absolute;
-  text-align: center;
-  width: 2em;
-  line-height: inherit; }
-
-.sicon-border {
-  border: solid 0.08em #eee;
-  border-radius: .1em;
-  padding: .2em .25em .15em; }
-
-.sicon-pull-left {
-  float: left; }
-
-.sicon-pull-right {
-  float: right; }
-
-.sicon.fa-pull-left {
-  margin-right: .3em; }
-
-.sicon.fa-pull-right {
-  margin-left: .3em; }
-
-.sicon-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
-          animation: fa-spin 2s infinite linear; }
-
-.sicon-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
-          animation: fa-spin 1s infinite steps(8); }
-
-@-webkit-keyframes sicon-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-@keyframes sicon-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-.sicon-rotate-90 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg); }
-
-.sicon-rotate-180 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
-
-.sicon-rotate-270 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg); }
-
-.sicon-flip-horizontal {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1); }
-
-.sicon-flip-vertical {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1); }
-
-.sicon-flip-both, .sicon-flip-horizontal.sicon-flip-vertical {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(-1, -1);
-          transform: scale(-1, -1); }
-
-:root .sicon-rotate-90,
-:root .sicon-rotate-180,
-:root .sicon-rotate-270,
-:root .sicon-flip-horizontal,
-:root .sicon-flip-vertical,
-:root .sicon-flip-both {
-  -webkit-filter: none;
-          filter: none; }
-
-.sicon-stack {
-  display: inline-block;
-  height: 2em;
-  line-height: 2em;
-  position: relative;
-  vertical-align: middle;
-  width: 2.5em; }
-
-.sicon-stack-1x,
-.sicon-stack-2x {
-  left: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%; }
-
-.sicon-stack-1x {
-  line-height: inherit; }
-
-.sicon-stack-2x {
-  font-size: 2em; }
-
-.sicon-inverse {
-  color: #fff; }
-
-// sicon Status Icons colours ===================
-
-.sicon.sicon-status-danger, .sicon.sicon-status-danger-o {color: $RAG-danger;}
-.sicon.sicon-status-success, .sicon.sicon-status-success-o {color: $RAG-success;}
-.sicon.sicon-status-warning, .sicon.sicon-status-warning-o {color: $RAG-warning;}
-.sicon.sicon-status-approved, .sicon.sicon-status-approved-o {color: $RAG-approved;}
-.sicon.sicon-status-recommended, .sicon.sicon-status-recommended-o {color: $RAG-recommended;}
-.sicon.sicon-status-submitted, .sicon.sicon-status-submitted-o {color: $RAG-submitted;}
-.sicon.sicon-status-archived, .sicon.sicon-status-archived-o {color: $RAG-archived;}
-.sicon.sicon-status-due, .sicon.sicon-status-due-o {color: $RAG-due;}
-.sicon.sicon-status-draft, .sicon.sicon-status-draft-o {color: $RAG-draft;}
-
-// sicon Product Icons colours ==================
-
-.sicon.sicon-sol-360, .sicon.sicon-sol-360-o { color: $sa-360;}
-.sicon.sicon-sol-a4a, .sicon.sicon-sol-a4a-o { color: $sa-A4A;}
-.sicon.sicon-sol-ele, .sicon.sicon-sol-ele-o { color: $sa-eLeave;}
-.sicon.sicon-sol-eros, .sicon.sicon-sol-eros-o { color: $sa-eRo;}
-.sicon.sicon-sol-jp, .sicon.sicon-sol-jp-o { color: $sa-JPL;}
-.sicon.sicon-sol-mrv, .sicon.sicon-sol-mrv-o { color: $sa-MRv;}
-.sicon.sicon-sol-nrv, .sicon.sicon-sol-nrv-o { color: $sa-NRv;}
-
-// ==================================================================
-// Font Awesome Icons ===============================================
-
-//https://fontawesome.com/how-to-use/on-the-web/using-with/sass
-// Example of how to include Font Awesome in SCSS when linked from local
-// .alert-close {
-//   // @include fa-icon;
-//   @extend .far;
-
-//   &:before {
-//     content:fa-content($fa-var-times-circle);
-//   }
-// }
-
-
-// https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
-// Example of how to include Font Awesome in SCSS when linked from remote cdn
-.fa-icon{
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased; 
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.alert-close::before {
-  font-family: "Font Awesome 5 Free"; 
-  content: "\f057";  // <i class="fas fa-times-circle"></i>
-  font-weight: 400;  // Set the font-weight: 900 (Solid), 400 (Regular or Brands), 300 (Light(pro))
-}
 // Scrollbars
 
 //  Works in Chrome, Safari
@@ -8757,15 +8497,15 @@ body, html {
   width:30px; 
   height:30px;
   text-align:center; 
-  position:fixed;
+  position:relative;
   bottom:-3px;
-  left:calc(50% - 15px);
+  // left:calc(50% - 15px);
   display:none;
   color:white;
   z-index: 1000;
 }
 .scrollToTop:before{
-  content: "\70";
+  content: "\e016";
   font-family: "sard-icons";
   color:white;
   font-size: 1.5em;
@@ -8782,21 +8522,24 @@ body, html {
 // http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
 
 $break-sm: 576px;
-$break-md: 768px;
+$break-md: 769px;  // Adjusted from 768 to include iPad V as small
 $break-lg: 992px;
 $break-xl: 1200px;
 $break-xxl: 1590px;
 
 
 @mixin respond-to($media) {
+  @if $media == xxs-screens {
+    @media only screen and (max-width: 420px) { @content; }
+  }
   @if $media == xs-screens {
-    @media only screen and (max-width: 575px) { @content; }
+    @media only screen and (min-width: 421px) and (max-width: 575px) { @content; }
   }
   @else if $media == sm-screens {
-    @media only screen and (min-width: 576px) and (max-width: 767px) { @content; }
+    @media only screen and (min-width: 576px) and (max-width: 768px) { @content; }
   }
   @else if $media == md-screens {
-    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+    @media only screen and (min-width: 769px) and (max-width: 991px) { @content; }
   }
   @else if $media == lg-screens {
     @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
@@ -8810,14 +8553,23 @@ $break-xxl: 1590px;
 
   // Up / Down Sizes
 
+  @else if $media == xs-break-down {
+    @media only screen and (max-width: 420px) { @content; }
+  }
+  @else if $media == xs-break-up {
+    @media only screen and (min-width: 421px) { @content; }
+  }
+  @else if $media == sm-break-down {
+    @media only screen and (max-width: 575px) { @content; }
+  }
   @else if $media == sm-break-up {
     @media only screen and (min-width: 576px) { @content; }
   }
   @else if $media == md-break-down {
-    @media only screen and (max-width: 767px) { @content; }
+    @media only screen and (max-width: 768px) { @content; }
   }
   @else if $media == md-break-up {
-    @media only screen and (min-width: 768px) { @content; }
+    @media only screen and (min-width: 769px) { @content; }
   }
   @else if $media == lg-break-down {
     @media only screen and (max-width: 991px ) { @content; }
@@ -8834,7 +8586,108 @@ $break-xxl: 1590px;
   @else if $media == xxl-break-down {
     @media only screen and (max-width: 1589px ) { @content; }
   }
+
+  // iPad landscape
+  @else if $media == ipad-landscape {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }
+  }
+  @else if $media == ipad-portrait {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { @content; }
+  }
+
+  @else if $media == ipad-p-down {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+
+  @else if $media == mobile-landscape {
+    @media only screen and (max-device-width : 911px) and (orientation : landscape) { @content; }
+  }
+
+  // Phones 
+  // https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
+  
+  // iPhone 4
+  @else if $media == iphone-4-portrait {
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+  }
+  @else if $media == iphone-4-landscape {
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+  }
+
+  // iPhone 5
+  @else if $media == iphone-5-portrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == iphone-5-landscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // iPhone 6, 7, 8
+  @else if $media == iphone-6-portrait {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == iphone-6-landscape {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // iPhone 6+, 7+, 8+
+  @else if $media == iphone-6-plus-portrait {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == iphone-6-plus-landscape {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // iPhone X
+  @else if $media == iphone-x-portrait {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == iphone-x-landscape {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  
+  // iPhone XS Max, XR
+  @else if $media == iphone-xr-portrait {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == iphone-xr-landscape {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+
+  // Samsung Galaxy S3
+  @else if $media == galaxy-S3-portrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+  @else if $media == galaxy-S3-landscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
+  }
+
+  // Samsung Galaxy S4
+  @else if $media == galaxy-S4-portrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == galaxy-S4-landscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+
+  // Samsung Galaxy S5
+  @else if $media == galaxy-S5-portrait {
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+  @else if $media == galaxy-S5-landscape {
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) { @content; }
+  }
+
+
+
+  // ie 11 ------------------
+  
+  @else if $media == ie11 {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { @content; }
+  }
 }
+
+
 
 @mixin breakout{
   width: 100vw;
@@ -8856,6 +8709,15 @@ $break-xxl: 1590px;
   margin-right: -50vw;
   padding-left: 31px;
   padding-right: 31px;
+}
+
+.container-fluid{
+  padding-left: 30px;
+  padding-right: 30px;
+  @include respond-to(xs-screens){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 // ==================================================================
 
@@ -8953,8 +8815,14 @@ $sa-footer-bg:             $sa-heading-bg !default;
 
 
 // Body adjust to allow for footer ==================================
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  padding-bottom: 70px;
+}
 
-body { margin-bottom: 70px; }
 
 // Remove outer glow from Focus =====================================
 
@@ -8977,6 +8845,8 @@ button:focus,
 
 $sa-box-shadow:         1px 1px 2px 0px rgba(0,0,0,0.2);
 $sa-box-shadow-lg:      1px 1px 3px 0px rgba(0,0,0,0.4);
+
+$sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 
 
 // ==================================================================
@@ -9021,71 +8891,136 @@ $sa-box-shadow-lg:      1px 1px 3px 0px rgba(0,0,0,0.4);
 
 // ==============================================
 // Adjust vertical positioning dpending on content
-body{ 
-  padding-top: 20px; 
-  @media (max-width: 991.98px){ padding-top: 10px; }
-}
+// body{ 
+//   padding-top: 20px; 
+//  @include media-breakpoint-down(md){ padding-top: 10px; }
+// }
 
 #navbar + #navbar-admin{
   margin-top: 50px;
-  @media (max-width: 991.98px){ margin-top: 35px; }
+ @include media-breakpoint-down(md){ margin-top: 35px; }
 }
 
 // Breadcrumbs
-#navbar-admin + #breadcrumb-top{
+#navbar-admin + #breadcrumbs{
   margin-top: 35px;
-  @media (max-width: 991.98px){ margin-top: 35px; }
+ @include media-breakpoint-down(md){ margin-top: 35px; }
 }
-#navbar + #breadcrumb-top{
+#navbar + #breadcrumbs{
   margin-top: 50px;
-  @media (max-width: 991.98px){ margin-top: 35px; }
+ @include media-breakpoint-down(md){ margin-top: 35px; }
 }
-#navbar + #navbar-admin + #breadcrumb-top{
+#navbar + #navbar-admin + #breadcrumbs{
   margin-top: 85px;
-  @media (max-width: 991.98px){ margin-top: 70px; }
+ @include media-breakpoint-down(md){ margin-top: 70px; }
 }
 
 // container
 
 #navbar + .container{
   margin-top: 50px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
 #navbar + #navbar-admin + .container{
   margin-top: 75px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
 #navbar-admin + .container{
   margin-top: 35px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#navbar + #breadcrumb-top + .container{
+#navbar + #breadcrumbs + .container{
   margin-top: 75px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#navbar + #navbar-admin + #breadcrumb-top + .container{
+#navbar + #navbar-admin + #breadcrumbs + .container{
   margin-top: 110px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#navbar-admin + #breadcrumb-top + .container{
+#navbar-admin + #breadcrumbs + .container{
   margin-top: 60px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
 }
-#breadcrumb-top + .container{
+#breadcrumbs + .container{
   margin-top: 35px;
-  @media (max-width: 991.98px){  }
+ @include media-breakpoint-down(md){  }
+}
+
+// container-fluid
+
+#navbar + .container-fluid{
+  margin-top: 70px;
+ @include media-breakpoint-down(md){  margin-top: 60px;}
+}
+
+#navbar + #navbar-admin + .container-fluid{
+  margin-top: 105px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
+}
+#navbar + #breadcrumbs + .container-fluid{
+  margin-top: 30px;
+ @include media-breakpoint-down(md){ margin-top: 20px; }
+}
+#navbar-admin + .container-fluid{
+  margin-top: 60px;
+ @include media-breakpoint-down(md){ margin-top: 60px; }
+}
+#navbar-admin + #breadcrumbs + .container-fluid{
+  margin-top: 20px;
+ @include media-breakpoint-down(md){ margin-top: 10px; }
+}
+
+// With sidemenu wrapper
+#navbar + .sidemenu-wrapper .container-fluid{
+  margin-top: 65px;
+ @include media-breakpoint-down(md){  margin-top: 50px;}
+}
+#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 95px;
+ @include media-breakpoint-down(md){ margin-top: 80px; }
+}
+
+// still to fix
+#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
+  margin-top: 105px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
+}
+#navbar-admin + .sidemenu-wrapper .container-fluid{
+  margin-top: 55px;
+ @include media-breakpoint-down(md){ margin-top: 55px; }
+}
+#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 130px;
+ @include media-breakpoint-down(md){ margin-top: 115px; }
+}
+#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 80px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
 }
 
 
-// Navbar Layering ==============================
+// Layering ==============================
 .navbar.fixed-top{
-  z-index: 4002;
+  z-index: 5002;
 }
 #navbar-admin{
-  z-index: 4001;
+  z-index: 5001;
 }
-#breadcrumb-top{
-  z-index: 4000;
+#breadcrumbs{
+  z-index: 5000;
+}
+.sa-sidemenu{
+  z-index: 4999;
+}
+.sa-footer{
+  z-index: 5000;
+}
+.sa-footer #accordion{
+  z-index: 5000;
+}
+
+.modal{
+  z-index: 5050;
 }
 // Typography
 
@@ -10093,9 +10028,6 @@ a.link-external:before
 // Remote link
 );
 
-// Sard Icons
-
-
 
 // BS bs-Components
 // These are the basic bootstrap components, using SARD styling.
@@ -10239,7 +10171,11 @@ a.badge.badge-light
 }
 // Breadcrumbs ==================================
 
-
+#breadcrumbs{
+  // z-index in _sa-variables.css
+  position: fixed;
+  width: 100%;
+}
 .breadcrumb{
   border-radius: 0%;
   padding: $sa-spacer-4 $sa-spacer-16;
@@ -10249,13 +10185,10 @@ a.badge.badge-light
 
 // Fixed Top Navbar =========
 #breadcrumb-top{
-  z-index: 3000;
   top: 0px;
   border-bottom: 1px solid $sa-grey-04;
   background-color: white;
-  // @media (max-width: 991px) {
-  //   top: 38px;
-  // } 
+
 
   & .breadcrumb{
     padding: $sa-spacer-4 0;
@@ -10528,6 +10461,32 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
+.btn-add{
+  background-color: $user-primary-colour;
+  color: white!important;
+  &:hover { 
+    background-color: darken($user-primary-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-primary-colour, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f067" ;
+    color:white;
+    font-weight: 900;
+    font-size: 1.45rem;
+    line-height: 1rem;
+    position: relative;
+    top: 3.5px;
+    left: -5px;
+  }
+}
+
 .btn-back{
   background-color: $btn-default-colour;
   color: white!important;
@@ -10657,69 +10616,40 @@ $btn-default-colour: $sa-grey-14;
     left: -3px;
   }
 }
-.btn-save,
-.btn-sign-in,
-.btn-sign-out,
-.btn-submit,
-.btn-cancel,
-.btn-back,
-.btn-forward,
-.btn-download,
-.btn-upload,
-.btn-refresh{
-  &.btn-lg::before{
+
+.btn-lg::before{
     font-size: 1.7rem;
     top: 4px;
     left: -8px;
   }
-  &.btn-lg::after{
+  .btn-lg::after{
     font-size: 1.7rem;
     top: 4px;
     right: -10px;
   }
+
+.btn-sm::before{
+  font-size: 1.1rem;
+  top: 2px;
+  left: -3px;
 }
-.btn-save,
-.btn-sign-in,
-.btn-sign-out,
-.btn-submit,
-.btn-cancel,
-.btn-back,
-.btn-forward,
-.btn-download,
-.btn-upload,
-.btn-refresh{
-  &.btn-sm::before{
-    font-size: 1.1rem;
-    top: 2px;
-    left: -3px;
-  }
-  &.btn-sm::after{
-    font-size: 1.1rem;
-    top: 2px;
-    right: -5px;
-  }
+.btn-sm::after{
+  font-size: 1.1rem;
+  top: 2px;
+  right: -5px;
 }
-.btn-save,
-.btn-sign-in,
-.btn-sign-out,
-.btn-submit,
-.btn-cancel,
-.btn-back,
-.btn-forward,
-.btn-download,
-.btn-upload,
-.btn-refresh{
-  &.btn-xs::before{
-    font-size: 0.8rem;
-    top: 1px;
-    left: -2px;
-  }
-  &.btn-xs::after{
-    font-size: 0.8rem;
-    top: 1px;
-    right: -5px;
-  }
+
+.btn-xs::before{
+  font-size: 0.8rem;
+  top: 1px;
+  left: -2px;
 }
+.btn-xs::after{
+  font-size: 0.8rem;
+  top: 1px;
+  right: -5px;
+}
+
 
 .btn-notext{
   padding: $sa-spacer-6;
@@ -10905,9 +10835,32 @@ $btn-default-colour: $sa-grey-14;
   box-shadow:         0px 1px 1px 0px rgba(0,0,0,0.2);
 }
 
+.btn-group.with-divide .btn{
+  margin-right: 2px;
+}
+.btn-group.with-divide .btn:last-of-type{
+  margin-right: 0px;
+}
+
 .buttons-grouped .btn{
   margin:2.5px 0;
 }
+
+.card-header .btn.btn-xs{ 
+  margin-top: 3px; 
+  float: right;
+}
+
+.card-sard .card-body .buttons{
+  border-top: 1px solid white;
+  padding-top: 8px;
+}
+
+.card-sard .card-body .buttons.no-border{
+  border-top: none;
+  padding-top: 0px;
+}
+
 // Cards ========================================
 
 // Base class
@@ -11278,7 +11231,12 @@ $btn-default-colour: $sa-grey-14;
 }
 
 
+// Nested Card Bodies -------
 
+.card-body-white{
+  background-color: white;
+  border-radius: $sa-inner-border-radius;
+}
 // Collapse =====================================
 
 $accordian-bg: $sa-grey-16;
@@ -12459,7 +12417,8 @@ a.list-group-item-action.active{
   padding: $sa-spacer-8 $sa-spacer-12;
 }
 .modal-dialog {
-  padding-top: 3.5rem; // Allows for navbar and breadbrumbs
+  padding-top: 100px; // Allows for navbar and breadbrumbs
+  padding-bottom: 60px; // Allows for footer
 }
 
 
@@ -12633,6 +12592,8 @@ a.list-group-item-action.active{
 }
 
 .modal-primary .modal-footer {
+  background-color: white;
+  border-top: 1px solid $sa-grey-08;
   margin-left: 0px;
   width: 100%;
 }
@@ -12667,6 +12628,8 @@ a.list-group-item-action.active{
 }
 
 .modal-secondary .modal-footer {
+  background-color: white;
+  border-top: 1px solid $sa-grey-08;
   margin-left: 0px;
   width: 100%;
 }
@@ -13082,21 +13045,50 @@ p > a.modal-info-circle-inline{
     right: -7.5px;
   }
 }
-// Navbar =======================================
 
-// To allow for Side tabs
+// Modals with tabs inside ------------
 
-@media (max-width: 991.98px){
-  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
-      padding-right: 8px;
-      padding-left: 8px;
+.modal-body .nav.nav-tabs{
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.modal-body .nav.nav-tabs .nav-item{
+  margin-left: 2px;
+  margin-right: 2px;
+  
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link{
+  color: $text;
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link:visited{
+
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link:hover,
+.modal-body .nav.nav-tabs .nav-item .nav-link:focus{
+  color: $text!important;
+}
+.modal-body .nav.nav-tabs .nav-item .nav-link.active{
+  color: white;
+  &:focus,
+  &:active{
+    color: white!important;
   }
 }
-@media (max-width: 575.98px){
-  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
-      padding-right: 14px;
-      padding-left: 14px;
-  }
+
+.modal-body .tab-content{
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 8px;
+}
+// Navbar =======================================
+
+
+.navbar .container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 // Base styles
@@ -13106,7 +13098,7 @@ p > a.modal-info-circle-inline{
 /* change the background color */
 .navbar {
   padding: 0rem 1rem;
-  z-index: 3002;
+  // z-index in _sa-variables.css
 }
 
 /* change the padding for height */
@@ -13135,13 +13127,30 @@ p > a.modal-info-circle-inline{
   background-color: $sa-grey-12; /* add background-color to active links */
 }
 
+.navbar-user-link{
+  padding: $sa-spacer-8 $sa-spacer-8;
+  display: block;
+}
+
 .navbar-brand{
+  display: flex;
+  align-items: center;
   padding: 0 ;
-  @media (max-width: 991.98px){
+  @include media-breakpoint-down(md){
     max-height: 35px;
     height: 35px;
   }
 }
+
+.navbar-brand img{
+  height: 40px;
+  margin-right: 10px;
+  @include media-breakpoint-down(md){
+    height: 30px;
+  }
+}
+
+
 
 // Dropdown Menu
 
@@ -13149,6 +13158,9 @@ p > a.modal-info-circle-inline{
   .dropdown-menu{
     border-color: $sa-grey-08;
   }
+  .dropdown-menu .dropdown-divider {
+    margin: 0;
+}
   .dropdown-item{
     color: $text;
     padding: $sa-spacer-4 $sa-spacer-8;
@@ -13167,6 +13179,7 @@ p > a.modal-info-circle-inline{
       background-color: $sa-grey-08;
     }
   }
+  
   
   .dropdown-item:first-of-type{ // Override Dopdown styles
     border-top-left-radius: 0px;
@@ -13193,6 +13206,7 @@ p > a.modal-info-circle-inline{
   background-color: $sa-grey-14;
   border:none;
   padding: 0 $sa-spacer-4;
+  line-height: 1.75rem;
   &:hover{
     background-color: $sa-grey-16;
   }
@@ -13209,7 +13223,10 @@ p > a.modal-info-circle-inline{
     content: "\f0c9" ;
     color:white;
     font-weight: 900;
-    line-height: 1.75rem;
+    // line-height: 1.75rem;
+    // @include respond-to(ie11){
+    //   line-height: 2rem;
+    // }
   }
 }
 
@@ -13398,6 +13415,23 @@ p > a.modal-info-circle-inline{
   color:         rgba(225, 225, 225, 0.5);
 }
 
+.navbar-user-link{
+  &:link{
+    color: white;
+  }
+  &:visited{
+    color: white;
+  }
+  &:hover{
+    background-color: darken($user-primary-colour, 15%);
+  }
+}
+.navbar-primary .nav-item.active.show {
+  .navbar-user-link{
+    background-color: darken($user-primary-colour, 25%); 
+  }
+}
+
 // Dropdown Menu
 .navbar-primary .dropdown-menu{
   border:none;
@@ -13409,6 +13443,10 @@ p > a.modal-info-circle-inline{
 
 .navbar-primary .nav-item.dropdown.show .nav-link.dropdown-toggle{
   background-color: darken($user-primary-colour, 25%);
+}
+
+.navbar-primary .nav-item.dropdown.show{
+  background-color: darken($user-primary-colour, 15%);
 }
 
 .navbar-primary .dropdown-menu .dropdown-item{
@@ -13529,6 +13567,10 @@ p > a.modal-info-circle-inline{
 
 .navbar-secondary .nav-item.dropdown.show .nav-link.dropdown-toggle{
   background-color: darken($admin-primary-colour, 25%);
+}
+
+.navbar-secondary .nav-item.dropdown.show{
+  background-color: darken($user-secondary-colour, 15%);
 }
 
 .navbar-secondary .dropdown-menu .dropdown-item{
@@ -13777,23 +13819,41 @@ p > a.modal-info-circle-inline{
 
 
 
-
+    .navbar .user-icon{
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
 // Navs =========================================
 
 $sa-nav-colour: $sa-grey-14;
 
 .nav.nav-tabs .nav-item{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.nav.nav-tabs .nav-item{
   .nav-link{
     color: $sa-nav-colour;
+    background-color: $sa-grey-01;
+    margin-bottom: 1px;
     &:visited{
       color: $sa-nav-colour;
     }
     &:hover{
       background-color: $sa-grey-02;
+      border-color: transparent;
     }
     &:focus,
     &:active{
       background-color: $sa-grey-04;
+    }
+    &.active{
+      background-color: $sa-grey-14;
+      color: white;
+      border-bottom:2px solid $sa-grey-14;
+      margin-bottom: 0px;
     }
   }
 }
@@ -13801,15 +13861,17 @@ $sa-nav-colour: $sa-grey-14;
 .nav.nav-pills .nav-link{
   border-radius: $sa-spacer-6;
   color: $sa-nav-colour;
+  background-color: $sa-grey-01;
+  margin-right: 4px;
   &:visited{
     color: $sa-nav-colour;
   }
   &:hover{
-    background-color: lighten($sa-nav-colour, 55%);
+    background-color: $sa-grey-03;
   }
   &:focus,
   &:active{
-    background-color: lighten($sa-nav-colour, 45%);
+    background-color: $sa-grey-05;
   }
 }
 
@@ -13839,35 +13901,46 @@ $sa-nav-colour: $sa-grey-14;
   }
 }
 
-// Colour variations ----------------------------
+// Vertical Pils ------------
+#v-pills-tab.nav.nav-pills .nav-link{
+  margin-right: 0px;
+  margin-bottom: 4px;
+}
 
-.nav-primary.nav.nav-pills .nav-item,
-.nav-primary.nav.nav-pills .nav-link{
-  & a{
-    color: $user-primary-colour;
+// Colour variations ----------------------------
+.nav-primary.nav.nav-tabs .nav-item{
+  .nav-link{
+    &.active{
+      background-color: $user-primary-colour;
+      border-color: $user-primary-colour;
+      border-bottom:2px solid $user-primary-colour;
+    }
   }
 }
+
 .nav-primary.nav.nav-pills .nav-link.active{
   background-color: $user-primary-colour;
-  color: white;
   &:focus,
   &:active{
     background-color: $user-primary-colour;
   }
 }
 
-.nav-secondary.nav.nav-pills .nav-item,
-.nav-secondary.nav.nav-pills .nav-link{
-  & a{
-    color: $secondary;
+.nav-secondary.nav.nav-tabs .nav-item{
+  .nav-link{
+    &.active{
+      background-color: $user-secondary-colour;
+      border-color: $user-secondary-colour;
+      border-bottom:2px solid $user-secondary-colour;
+    }
   }
 }
+
 .nav-secondary.nav.nav-pills .nav-link.active{
-  background-color: $secondary;
-  color: white;
+  background-color: $user-secondary-colour;
   &:focus,
   &:active{
-    background-color: $secondary;
+    background-color: $user-secondary-colour;
   }
 }
 
@@ -13881,12 +13954,10 @@ $sa-nav-colour: $sa-grey-14;
 }
 .nav.nav-tabs.card-header-tabs .nav-item{
   .nav-link{
-    // border: 1px solid white;
     color: $sa-nav-colour;
     background-color: white;
     margin-right: 1px;
     padding-top: $sa-spacer-2;
-    // padding-bottom: $sa-spacer-6;
     &:visited{
       color: $sa-nav-colour;
     }
@@ -14486,6 +14557,37 @@ $sa-table-dark-head-bg:     $sa-grey-18;
   padding: $sa-spacer-6 $sa-spacer-10
 }
 
+// Table cells with icon links in them ==================================
+
+.table > thead > tr > th.icons,
+.table > tbody > tr > td.icons{
+  width:1%;
+  white-space:nowrap;
+  a{
+    display: inline-block;
+
+    .fa, .si{
+      padding-right:0;
+      padding-left:2px;
+    }
+  }
+}
+
+// Table cells with buttons in them ==================================
+
+.table > thead > tr > th.action-buttons,
+.table > tbody > tr > td.action-buttons{
+  width:1%;
+  white-space:nowrap;
+  a{
+    display: inline-block;
+
+    .btn{
+      padding-right:0;
+      padding-left:2px;
+    }
+  }
+}
 // Popovers =====================================
 
 
@@ -14530,6 +14632,31 @@ $sa-table-dark-head-bg:     $sa-grey-18;
   border:none;
   border-top-left-radius: calc(.5rem - 3px);
   border-top-right-radius: calc(.5rem - 3px);
+}
+
+
+// Tootltips ====================================
+
+
+// Style tooltip colours ----
+
+.tooltip-inner {
+  background-color: $sa-grey-16;
+}
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: $sa-grey-16;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+  border-right-color: $sa-grey-16;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: $sa-grey-16;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+  border-left-color: $sa-grey-16;
 }
 
 
@@ -14789,7 +14916,6 @@ $sa-table-dark-head-bg:     $sa-grey-18;
   line-height: 1.2rem;
   letter-spacing: $vslight;
   margin: 0;
-  // margin-bottom:5px;
   margin-left:0.07em; // Set left align to allow for Roboto indenting at large sizes
     @media (max-width: 767px){
       margin-left:0.1em;
@@ -14816,6 +14942,33 @@ $sa-table-dark-head-bg:     $sa-grey-18;
   font-size: 1.1rem; // 18px
 }
 
+.page-title .tenant{
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.page-title .contact{
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.page-title .phone{
+  margin-right: 10px;
+  &:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f879" ;
+    font-weight: 900;
+    margin-right: 5px;
+  }
+}
+.page-title .email{
+  margin-right: 10px;
+  &:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f0e0" ;
+    margin-right: 5px;
+  }
+}
 
 // Page Titles with Photo --- 
 .page-title-with-image{
@@ -15079,6 +15232,16 @@ $checkbox-background-disabled:  transparent;
   }
 }
 
+// Inline Checkboxes
+.sa-inline-checkboxes{
+  .sa-checkbox{
+    display: inline-block;
+  }
+  .sa-checkbox label{
+    padding-right: 10px;
+    padding-left: 25px;
+  }
+}
 
 
 // SARD Radio Buttons ============================================
@@ -15832,7 +15995,7 @@ a.options-nav-expander .title{
 }
 
 a.options-nav-expander:after{
-  content: "\71";
+  content: "\e013";
   font-family: "sard-icons";
   color:white;
   font-size: 1.25em;
@@ -16262,7 +16425,7 @@ a.rag-key-expander .title img{
 }
 
 a.rag-key-expander:after{
-  content: "\71";
+  content: "\e013";
   font-family: "sard-icons";
   color:$text;
   font-size: 1.25em;
@@ -16388,40 +16551,40 @@ body.rag-key-expanded {
   background-color: transparent;
 }
 .rag-key.icon-danger{
-  background-image: url("../rag-icons/rag-icon-danger-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-danger-sm@2x.png");
 }
 .rag-key.icon-warning{
-  background-image: url("../rag-icons/rag-icon-warning-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-warning-sm@2x.png");
 }
 .rag-key.icon-danger-plus{
-  background-image: url("../rag-icons/rag-icon-danger-plus-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-danger-plus-sm@2x.png");
 }
 .rag-key.icon-warning-plus{
-  background-image: url("../rag-icons/rag-icon-warning-plus-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-warning-plus-sm@2x.png");
 }
 .rag-key.icon-approved{
-  background-image: url("../rag-icons/rag-icon-approved-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-approved-sm@2x.png");
 }
 .rag-key.icon-unavailable{
-  background-image: url("../rag-icons/rag-icon-unavailable-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-unavailable-sm@2x.png");
 }
 .rag-key.icon-success{
-  background-image: url("../rag-icons/rag-icon-success-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-success-sm@2x.png");
 }
 .rag-key.icon-draft{
-  background-image: url("../rag-icons/rag-icon-draft-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-draft-sm@2x.png");
 }
 .rag-key.icon-submitted{
-  background-image: url("../rag-icons/rag-icon-submitted-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-submitted-sm@2x.png");
 }
 .rag-key.icon-recommended{
-  background-image: url("../rag-icons/rag-icon-recommended-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-recommended-sm@2x.png");
 }
 .rag-key.icon-abandoned{
-  background-image: url("../rag-icons/rag-icon-abandoned-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-abandoned-sm@2x.png");
 }
 .rag-key.icon-due{
-  background-image: url("../rag-icons/rag-icon-due-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-due-sm@2x.png");
 }
 .rag-key p{
   padding-top: 6px;
@@ -16443,13 +16606,15 @@ body { -ms-overflow-style: scrollbar; }
 
 // Closed state
 .sa-sidemenu{
+  // z-index in _sa-variables.css
   position: fixed;
   display: block;
-  height: 100%;
+  // height: 100%;
+  height: calc(100% - 80px);
+  padding-bottom: 80px;
   top: 0;
-  width: 30px;
-  z-index: 6000;
-  overflow: hidden;
+  width: 40px;
+  // overflow: hidden;
   @include off-canvas-transmission;
 }
 
@@ -16458,11 +16623,7 @@ body { -ms-overflow-style: scrollbar; }
     position: relative;
     top: 0px;
     left: 0px;
-    height:50px;
-  }
-
-  .brand-area{
-    display: none;
+    height:40px;
   }
 
   .open-icon{
@@ -16470,9 +16631,9 @@ body { -ms-overflow-style: scrollbar; }
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 30px;
-    max-width: 30px;
-    height:50px;
+    width: 40px;
+    max-width: 40px;
+    height:40px;
     z-index: 6001;
   }
   .menu-list{
@@ -16483,19 +16644,15 @@ body { -ms-overflow-style: scrollbar; }
 // Open state
 .sa-sidemenu.open{
   @include off-canvas-transmission;
-  width: 250px;
+  width: 200px;
 }
 
 .sa-sidemenu.open{
   .menu-top{
-    width: 250px;
-    max-width: 250px;
+    width: 200px;
+    max-width: 200px;
   }
-  .brand-area{
-    display: inline-block;
-    max-width: 220px;
-    height: 50px;
-  }
+
   .menu-list{
     position: relative;
     left: 0;
@@ -16504,6 +16661,7 @@ body { -ms-overflow-style: scrollbar; }
     padding: 0 ;
     padding-top: 20px;
     overflow-y: auto;
+    overflow-x: hidden;
     height:100%;
   }
 }
@@ -16521,17 +16679,18 @@ body { -ms-overflow-style: scrollbar; }
 }
 
 .sa-sidemenu .open-icon::before{
-  color:white;
+  color:$user-primary-colour;
   font-family: "Font Awesome 5 Free"; 
-  content: "\f038";
+  content: "\f036";
   font-weight: 700; 
-  font-size: 1.25em;
+  font-size: 1.5em;
   position: absolute;
-  top: 10px;
-  right: 5px;
+  top: 4px;
+  right: 12px;
 }
 .sa-sidemenu.open .open-icon::before{
-  content: "\f036";
+  content: "\f038";
+  right: 10px;
 }
 
 .sa-sidemenu .menu-list a{
@@ -16554,9 +16713,16 @@ body { -ms-overflow-style: scrollbar; }
   background: $sa-grey-18;
 }
 
+.sa-sidemenu .menu-list a.active {
+  background: $sa-grey-17;
+  i {
+    color:$user-primary-colour;
+  }
+}
+
 .sa-sidemenu .menu-list hr{
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .sa-sidemenu .menu-list .sub-title{
   padding: 5px 10px 0px 10px;
@@ -16569,33 +16735,20 @@ body { -ms-overflow-style: scrollbar; }
 .sa-sidemenu .menu-list a{
   i {
     padding-right: 0.5rem ; // 8px
+    color: $sa-grey-06;
+    // color:$user-primary-colour;
   }
 }
 
 // Screen variations --------
 
-@include respond-to(lg-break-down){
-  .sa-sidemenu .menu-top{
-    height:35px;
-  }
-  .sa-sidemenu .brand-area{
-    height:35px;
-  }
-  .sa-sidemenu .open-icon{
-  height:35px;
-  }
-  .sa-sidemenu .open-icon::before{
-    top: 5px;
-  }
-}
-
-@include respond-to(xs-screens){
+@include media-breakpoint-down(xs){
   .sa-sidemenu{
-    width: 20px;
+    width: 30px;
   }
 
   .sa-sidemenu .open-icon{
-    width: 20px;
+    width: 30px;
   }
 
   .sa-sidemenu .open-icon::before{
@@ -16639,6 +16792,128 @@ body { -ms-overflow-style: scrollbar; }
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+
+// ==============================================
+// Sidemenu when used with Container Fluid
+.sidemenu-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.sa-sidemenu {
+  position: fixed;
+  // min-height: 100vh;
+  // height: calc(100% - 80px);
+  // padding-bottom: 80px;
+}
+
+// postioning after navbar and breadcrumbs
+.navbar + .sidemenu-wrapper .sa-sidemenu{
+  top: 50px;
+  @include media-breakpoint-down(md){
+    top: 35px;
+  }
+}
+#navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+  top: 35px;
+  @include media-breakpoint-down(md){
+    top: 35px;
+  }
+}
+
+.navbar + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 79px;
+  @include media-breakpoint-down(md){
+    top: 64px;
+  }
+}
+
+.navbar + #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+  top: 85px;
+  @include media-breakpoint-down(md){
+    top: 70px;
+  }
+}
+
+.navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 114px;
+  @include media-breakpoint-down(md){
+    top: 99px;
+  }
+}
+#navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 64px;
+  @include media-breakpoint-down(md){
+    top: 64px;
+  }
+}
+
+.wrapper-content{
+  width: 100%;
+  padding-left: 40px;
+  margin-bottom: 50px;
+  @include off-canvas-transmission;
+  @include media-breakpoint-down(xs){
+    padding-left: 30px;
+  }
+}
+
+// Push Content on large screens and above
+
+@include media-breakpoint-up(lg){
+  .sa-sidemenu.open + .wrapper-content{
+    padding-left: 200px;
+  }
+}
+
+
+// Sidemenu Light ===============================
+
+
+
+.sa-sidemenu.sidemenu-light.sidemenu-light{
+  background: $sa-grey-02;
+  color: $text;
+  cursor: pointer;
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a{
+  color: $text;
+  @include roboto-regular;
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a{
+  i {
+    color: $sa-grey-10;
+  }
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a:visited{
+  color: $text;
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a:active,
+.sa-sidemenu.sidemenu-light .menu-list a:focus,
+.sa-sidemenu.sidemenu-light .menu-list a:hover {
+  background: $sa-grey-04;
+  i {
+    color:$sa-grey-12;
+  }
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a.active {
+  background: $sa-grey-03;
+  i {
+    color:$user-primary-colour;
+  }
+}
+
+.sa-sidemenu.sidemenu-light .menu-list .sub-title{
+  color: $text;
+}
+
 // sard-nav-tabs ================================
 
 // Elements specific to a page can be found in their relative page css
@@ -16884,6 +17159,10 @@ $tab-number-bg:           $sa-grey-12;
     &:focus{
       border-color: $sa-grey-14;
     }
+    @include respond-to(ie11) {  // ie11
+      line-height: 0.5rem;
+    }
+    
 }
 
 
@@ -17032,7 +17311,7 @@ hr.dotted{ border-style: dotted;}
 
 hr.black{ border-color: $text; }
 hr.grey { background-color: $sa-grey-08; }
-hr.trust{ border-color: $trust-primary-colour; }
+hr.trust{ border-color: $user-primary-colour; }
 hr.admin{ border-color: $admin-primary-colour; }
 hr.primary{ border-color: $primary; }
 hr.secondary{ border-color: $secondary; }
@@ -17079,7 +17358,7 @@ hr.white{ border-color: white; }
 .perf { background-color: $sa-grey-08; }
 .perf.black { background-color: $text; }
 .perf.grey { background-color: $sa-grey-08; }
-.perf.trust { background-color: $trust-primary-colour; }
+.perf.trust { background-color: $user-primary-colour; }
 .perf.admin { background-color: $admin-primary-colour; }
 .perf.primary { background-color: $primary; }
 .perf.secondary { background-color: $secondary; }
@@ -17236,11 +17515,11 @@ hr.white{ border-color: white; }
 .sa-footer{
   
   #accordion {
-    z-index: 5000;
+    // z-index in _sa-variables.css
     position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;  
-    border-top:4px solid white;  
   }
   
   .footer-header {

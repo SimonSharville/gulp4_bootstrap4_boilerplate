@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "sard-icons";
-  src: asset-url("sard-icons/sard-icons.eot");
-  src: asset-url("sard-icons/sard-icons.eot?#iefix") format("embedded-opentype"),
-    asset-url("sard-icons/sard-icons.woff") format("woff"),
-    asset-url("sard-icons/sard-icons.ttf") format("truetype"),
-    asset-url("sard-icons/sard-icons.svg#sard-icons") format("svg");
+  src:url("../fonts/sard-icons/sard-icons.eot");
+  src:url("../fonts/sard-icons/sard-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/sard-icons/sard-icons.woff") format("woff"),
+    url("../fonts/sard-icons/sard-icons.ttf") format("truetype"),
+    url("../fonts/sard-icons/sard-icons.svg#sard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
