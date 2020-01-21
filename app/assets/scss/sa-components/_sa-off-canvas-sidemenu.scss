@@ -47,13 +47,11 @@ body { -ms-overflow-style: scrollbar; }
 
 // Open state
 .sa-sidemenu.open{
-  @include off-canvas-transmission;
   width: 200px;
 }
 
 .sa-sidemenu.open{
   .menu-top{
-    @include off-canvas-transmission;
     width: 200px;
     max-width: 200px;
   }

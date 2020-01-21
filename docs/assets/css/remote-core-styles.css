@@ -22876,14 +22876,10 @@ body {
 }
 
 .sa-sidemenu.open {
-  -webkit-transition: all 320ms ease !important;
-  transition: all 320ms ease !important;
   width: 200px;
 }
 
 .sa-sidemenu.open .menu-top {
-  -webkit-transition: all 320ms ease !important;
-  transition: all 320ms ease !important;
   width: 200px;
   max-width: 200px;
 }
