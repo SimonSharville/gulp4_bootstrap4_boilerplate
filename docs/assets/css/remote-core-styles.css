@@ -22431,7 +22431,7 @@ body.options-nav-expanded {
 }
 
 #options-nav-close:after {
-  content: "\6d";
+  content: "\e015";
   font-family: "sard-icons";
   color: white;
   font-size: 1.5em;
@@ -22818,7 +22818,7 @@ body.rag-key-expanded {
 }
 
 #rag-key-close:after {
-  content: "\6d";
+  content: "\e015";
   font-family: "sard-icons";
   color: #211F0F;
   font-size: 1.5em;
@@ -22844,51 +22844,51 @@ body.rag-key-expanded {
 }
 
 .rag-key.icon-danger {
-  background-image: url("../assets/rag-icons/rag-icon-danger-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
 }
 
 .rag-key.icon-warning {
-  background-image: url("../assets/rag-icons/rag-icon-warning-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-warning-sm@2x.png");
 }
 
 .rag-key.icon-danger-plus {
-  background-image: url("../assets/rag-icons/rag-icon-danger-plus-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
 }
 
 .rag-key.icon-warning-plus {
-  background-image: url("../assets/rag-icons/rag-icon-warning-plus-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-warning-plus-sm@2x.png");
 }
 
 .rag-key.icon-approved {
-  background-image: url("../assets/rag-icons/rag-icon-approved-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-approved-sm@2x.png");
 }
 
 .rag-key.icon-unavailable {
-  background-image: url("../assets/rag-icons/rag-icon-unavailable-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-unavailable-sm@2x.png");
 }
 
 .rag-key.icon-success {
-  background-image: url("../assets/rag-icons/rag-icon-success-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-success-sm@2x.png");
 }
 
 .rag-key.icon-draft {
-  background-image: url("../assets/rag-icons/rag-icon-draft-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-draft-sm@2x.png");
 }
 
 .rag-key.icon-submitted {
-  background-image: url("../assets/rag-icons/rag-icon-submitted-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-submitted-sm@2x.png");
 }
 
 .rag-key.icon-recommended {
-  background-image: url("../assets/rag-icons/rag-icon-recommended-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-recommended-sm@2x.png");
 }
 
 .rag-key.icon-abandoned {
-  background-image: url("../assets/rag-icons/rag-icon-abandoned-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-abandoned-sm@2x.png");
 }
 
 .rag-key.icon-due {
-  background-image: url("../assets/rag-icons/rag-icon-due-sm@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-icon-due-sm@2x.png");
 }
 
 .rag-key p {
