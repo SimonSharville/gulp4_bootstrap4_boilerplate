@@ -17932,42 +17932,44 @@ $(document).ready(function(){
     e.preventDefault();
     $('.sa-sidemenu').toggleClass('open');
   });
-
-  // $('.sa-sidemenu').hover(function(e){
-  //   e.preventDefault();
-  //   $('.sa-sidemenu').toggleClass('open');
-  // });
-
-  //  $('#sa-sidemenu-nav-expander').on('click',function(e){
-  //    e.preventDefault();
-  //    $('body').toggleClass('sa-sidemenu-nav-expanded');
-  //  });
-
-   
-  //  $('#sa-sidemenu-nav-close').on('click',function(e){
-  //    e.preventDefault();
-  //    $('body').removeClass('sa-sidemenu-nav-expanded');
-  //  });
-   
-   // Only needed if we use dropdowns within the menu
-
-   // // Initialize navgoco with default option
-   // $(".main-menu").navgoco({
-   //     caret: '<span class="caret"></span>',
-   //     accordion: false,
-   //     openClass: 'open',
-   //     save: true,
-   //     cookie: {
-   //         name: 'navgoco',
-   //         expires: false,
-   //         path: '/'
-   //     },
-   //     slide: {
-   //         duration: 300,
-   //         easing: 'swing'
-   //     }
-   // });
-
-     
  });
+
+//  This was written for rostering, buts doesn't seem to work here
+
+// $(document).tready(function() {
+//   const saSidemenuToggleEvent = $('sa.sidemenu.toggle');
+
+//   function timeoutDispatchSidemenuEvent() {
+//     $('.sa-sidemenu')[0].dispatchEvent(saSidemenuToggleEvent);
+//   }
+
+//   $('.sa-sidemenu .menu-top').on('click', function(e) {
+//     e.preventDefault();
+//     $('.sa-sidemenu').toggleClass('open');
+//     setTimeout(timeoutDispatchSidemenuEvent, 400);
+//   });
+
+//   // sa-sidemenu Menu Slider
+//   $('.sa-sidemenu').on('click', function(e) {
+//     if (e.target == this) {
+//       e.preventDefault();
+//       $('.sa-sidemenu').toggleClass('open');
+//       setTimeout(timeoutDispatchSidemenuEvent , 400);
+//     }
+//   });
+
+//   var $window = $(window);
+
+//   function resize() {
+//     if ($window.width() > 991) {
+//       $('.sa-sidemenu').addClass('open');
+//     }
+//     else  {
+//       $('.sa-sidemenu').removeClass('open');
+//     }
+//   }
+
+//   $window.resize(resize).trigger('resize');
+// });
+
 //# sourceMappingURL=remote-sard-scripts.js.map
