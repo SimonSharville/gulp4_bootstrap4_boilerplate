@@ -262,4 +262,84 @@
   color: #fff;
 }
 
+.si-reject,
+.si-reject-circle,
+.si-reject-circle-o,
+.si-status-danger,
+.si-status-danger-o,
+.si-status-danger-circle,
+.si-status-danger-circle-o {
+  color: #BF0000;
+}
+
+.si-status-success,
+.si-status-success-o,
+.si-status-success-circle,
+.si-status-success-circle-o {
+  color: #359E00;
+}
+
+.si-status-complete,
+.si-status-complete-o,
+.si-status-complete-circle,
+.si-status-complete-circle-o {
+  color: #359E00;
+}
+
+.si-status-warning,
+.si-status-warning-o,
+.si-status-warning-circle,
+.si-status-warning-circle-o {
+  color: #FFB200;
+}
+
+.si-status-alert,
+.si-status-alert-o,
+.si-status-alert-circle,
+.si-status-alert-circle-o {
+  color: #FFB200;
+}
+
+.si-status-approved,
+.si-status-approved-o,
+.si-status-approved-circle,
+.si-status-approved-circle-o {
+  color: #359E00;
+}
+
+.si-status-recommended,
+.si-status-recommended-o,
+.si-status-recommended-circle,
+.si-status-recommended-circle-o {
+  color: #FF6A00;
+}
+
+.si-status-submitted,
+.si-status-submitted-o,
+.si-status-submitted-circle,
+.si-status-submitted-circle-o {
+  color: #A7BF30;
+}
+
+.si-status-archived,
+.si-status-archived-o,
+.si-status-archived-circle,
+.si-status-archived-circle-o {
+  color: #004D4D;
+}
+
+.si-status-due,
+.si-status-due-o,
+.si-status-due-circle,
+.si-status-due-circle-o {
+  color: #FF6A00;
+}
+
+.si-status-draft,
+.si-status-draft-o,
+.si-status-draft-circle,
+.si-status-draft-circle-o {
+  color: #FFB200;
+}
+
 /*# sourceMappingURL=icon-variations.css.map */

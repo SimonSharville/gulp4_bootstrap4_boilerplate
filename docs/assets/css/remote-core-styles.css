@@ -14481,6 +14481,202 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff;
 }
 
+.si-reject,
+.si-reject-o,
+.si-reject-circle,
+.si-reject-circle-o,
+.si-status-danger,
+.si-status-danger-o,
+.si-status-danger-circle,
+.si-status-danger-circle-o {
+  color: #BF0000;
+}
+
+.si-status-success,
+.si-status-success-o,
+.si-status-success-circle,
+.si-status-success-circle-o {
+  color: #359E00;
+}
+
+.si-status-complete,
+.si-status-complete-o,
+.si-status-complete-circle,
+.si-status-complete-circle-o {
+  color: #359E00;
+}
+
+.si-status-warning,
+.si-status-warning-o,
+.si-status-warning-circle,
+.si-status-warning-circle-o {
+  color: #FFB200;
+}
+
+.si-status-alert,
+.si-status-alert-o,
+.si-status-alert-circle,
+.si-status-alert-circle-o {
+  color: #FFB200;
+}
+
+.si-approve,
+.si-approve-o,
+.si-approve-circle,
+.si-approve-circle-o,
+.si-status-approved,
+.si-status-approved-o,
+.si-status-approved-circle,
+.si-status-approved-circle-o {
+  color: #359E00;
+}
+
+.si-status-recommended,
+.si-status-recommended-o,
+.si-status-recommended-circle,
+.si-status-recommended-circle-o {
+  color: #FF6A00;
+}
+
+.si-status-submitted,
+.si-status-submitted-o,
+.si-status-submitted-circle,
+.si-status-submitted-circle-o {
+  color: #A7BF30;
+}
+
+.si-status-archived,
+.si-status-archived-o,
+.si-status-archived-circle,
+.si-status-archived-circle-o {
+  color: #004D4D;
+}
+
+.si-status-due,
+.si-status-due-o,
+.si-status-due-circle,
+.si-status-due-circle-o {
+  color: #FF6A00;
+}
+
+.si-status-draft,
+.si-status-draft-o,
+.si-status-draft-circle,
+.si-status-draft-circle-o {
+  color: #FFB200;
+}
+
+.si-sard-faqs,
+.si-sard-faqs-circle,
+.si-sard-faqs-circle-o {
+  color: #990099;
+}
+
+.si-sard-products,
+.si-sard-products-circle,
+.si-sard-products-circle-o {
+  color: #00B2B2;
+}
+
+.si-sard-support,
+.si-sard-support-circle,
+.si-sard-support-circle-o,
+.si-sard-support-alt {
+  color: #990099;
+}
+
+.si-sard-clients,
+.si-sard-clients-circle,
+.si-sard-clients-circle-o {
+  color: #FF6A00;
+}
+
+.si-sard-company,
+.si-sard-company-circle,
+.si-sard-company-circle-o {
+  color: #A7BF30;
+}
+
+.si-sard-staff,
+.si-sard-staff-circle,
+.si-sard-staff-circle-o {
+  color: #A7BF30;
+}
+
+.si-sard-charity,
+.si-sard-charity-o,
+.si-sard-charity-circle,
+.si-sard-charity-circle-o {
+  color: #E50073;
+}
+
+.si-blog-left,
+.si-blog-left-o,
+.si-blog-right,
+.si-blog-right-o {
+  color: #003CB8;
+}
+
+.si-prod-360, .si-prod-360-o {
+  color: #FFB200;
+}
+
+.si-prod-a4a, .si-prod-a4a-o {
+  color: #990099;
+}
+
+.si-prod-ele, .si-prod-ele-o {
+  color: #A7BF30;
+}
+
+.si-prod-ros, .si-prod-ros-o {
+  color: #004D4D;
+}
+
+.si-prod-jp, .si-prod-jp-o {
+  color: #E50073;
+}
+
+.si-prod-mrv, .si-prod-mrv-o {
+  color: #00B2B2;
+}
+
+.si-prod-nrv, .si-prod-nrv-o {
+  color: #FF6A00;
+}
+
+.si-prod-cap, .si-prod-cap-o {
+  color: #BF0000;
+}
+
+.si-page-approved, .si-page-approved-o {
+  color: #359E00;
+}
+
+.si-page-archived, .si-page-archived-o {
+  color: #004D4D;
+}
+
+.si-page-complete, .si-page-complete-o {
+  color: #359E00;
+}
+
+.si-page-draft, .si-page-draft-o {
+  color: #FFB200;
+}
+
+.si-page-due, .si-page-due-o {
+  color: #FF6A00;
+}
+
+.si-page-recommended, .si-page-recommended-o {
+  color: #FF6A00;
+}
+
+.si-page-submitted, .si-page-submitted-o {
+  color: #A7BF30;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
