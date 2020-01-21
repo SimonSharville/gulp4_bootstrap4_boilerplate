@@ -13,15 +13,12 @@ body { -ms-overflow-style: scrollbar; }
 
 // Closed state
 .sa-sidemenu{
-  // z-index in _sa-variables.css
   position: fixed;
   display: block;
-  // height: 100%;
-  height: calc(100% - 80px);
+  height: 100%;
   padding-bottom: 80px;
   top: 0;
   width: 40px;
-  // overflow: hidden;
   @include off-canvas-transmission;
 }
 
@@ -56,6 +53,7 @@ body { -ms-overflow-style: scrollbar; }
 
 .sa-sidemenu.open{
   .menu-top{
+    @include off-canvas-transmission;
     width: 200px;
     max-width: 200px;
   }
@@ -73,7 +71,155 @@ body { -ms-overflow-style: scrollbar; }
   }
 }
 
-// Styling ------------------
+
+// Screen variations --------
+
+@include media-breakpoint-down(xs){
+  .sa-sidemenu{
+    width: 30px;
+  }
+
+  .sa-sidemenu .open-icon{
+    width: 30px;
+  }
+
+  .sa-sidemenu .open-icon::before{
+    font-size: 1em;
+    top: 6px;
+  }
+}
+
+
+
+// Positioning ==================================
+// ==============================================
+// Sidemenu when used with Container Fluid
+.sidemenu-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.sa-sidemenu {
+  position: fixed;
+}
+
+// Sidemenu - Slide ---------
+.navbar.fixed-top + .container + .sa-sidemenu,
+.navbar.fixed-top + .sa-sidemenu,
+.navbar.fixed-top + .sidemenu-wrapper .sa-sidemenu{
+  top: 50px;
+  height: calc(100% - 50px);
+  @include media-breakpoint-down(md){ 
+    top: 35px; 
+    height: calc(100% - 35px);
+  }
+}
+
+.navbar.fixed-top + .navbar-admin + .container + .sa-sidemenu,
+.navbar.fixed-top + .navbar-admin + .sa-sidemenu,
+.navbar.fixed-top + .navbar-admin +  + .sidemenu-wrapper .sa-sidemenu{
+  top: 85px;
+  height: calc(100% - 85px);
+  @include media-breakpoint-down(md){ 
+    top: 70px; 
+    height: calc(100% - 70px);
+  }
+}
+
+
+.navbar.fixed-top + .navbar-admin + #breadcrumbs + .container + .sa-sidemenu,
+.navbar.fixed-top + .navbar-admin + #breadcrumbs + .sa-sidemenu,
+.navbar.fixed-top + .navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 115px;
+  height: calc(100% - 115px);
+  @include media-breakpoint-down(md){ 
+    top: 100px; 
+    height: calc(100% - 100px);
+  }
+}
+
+.navbar.fixed-top + .sa-sidemenu + .container-fluid,
+.navbar.fixed-top + .navbar-admin + .sa-sidemenu + .container-fluid,
+.navbar.fixed-top + .navbar-admin + #breadcrumbs + .sa-sidemenu + .container-fluid {
+padding-left: 60px;
+}
+
+
+// Slidemenu - Push ---------
+#navbar + .sidemenu-wrapper .container-fluid{
+  margin-top: 80px;
+ @include media-breakpoint-down(md){ margin-top: 65px; }
+}
+
+#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
+  margin-top: 115px;
+ @include media-breakpoint-down(md){ margin-top: 100px; }
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 150px;
+ @include media-breakpoint-down(md){ margin-top: 135px; }
+}
+
+
+// Push Content on large screens and above
+.sidemenu-wrapper .sa-sidemenu + .wrapper-content{
+  padding-left: 40px;
+  @include media-breakpoint-down(xs){
+    padding-left: 30px;
+  }
+}
+.sidemenu-wrapper .sa-sidemenu.open + .wrapper-content{
+  width: 100%;
+  margin-bottom: 50px;
+  @include media-breakpoint-down(xs){
+    padding-left: 30px;
+  }
+  @include media-breakpoint-up(lg){
+    padding-left: 200px;
+  }
+}
+
+
+// Dropdowns ----------------
+.sa-sidemenu .menu-list li:before{ // Removes Bullets
+  content: none;
+  display:none;
+}
+.sa-sidemenu .menu-list ul li{
+  padding: 5px 0px;
+}
+.sa-sidemenu .menu-list ul li a{
+  padding: 5px 20px;
+}
+.sa-sidemenu .menu-list ul li a::after{
+  margin-left: 0.5em;
+  position: relative;
+  top: 7px;
+}
+
+.sa-sidemenu .dropdown-menu.show{
+  background: $sa-grey-14;
+  border-color: $sa-grey-18;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-left: 5px;
+  width: calc(100% - 20px);
+}
+
+.sa-sidemenu .dropdown-item:first-of-type {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.sa-sidemenu .dropdown-item:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+// Styling --------------------------------------
 
 .sa-sidemenu{
   background: $sa-grey-16;
@@ -143,138 +289,8 @@ body { -ms-overflow-style: scrollbar; }
   i {
     padding-right: 0.5rem ; // 8px
     color: $sa-grey-06;
-    // color:$user-primary-colour;
   }
 }
-
-// Screen variations --------
-
-@include media-breakpoint-down(xs){
-  .sa-sidemenu{
-    width: 30px;
-  }
-
-  .sa-sidemenu .open-icon{
-    width: 30px;
-  }
-
-  .sa-sidemenu .open-icon::before{
-    font-size: 1em;
-    top: 6px;
-  }
-}
-
-// Dropdowns
-.sa-sidemenu .menu-list li:before{ // Removes Bullets
-  content: none;
-  display:none;
-}
-.sa-sidemenu .menu-list ul li{
-  padding: 5px 0px;
-}
-.sa-sidemenu .menu-list ul li a{
-  padding: 5px 20px;
-}
-.sa-sidemenu .menu-list ul li a::after{
-  margin-left: 0.5em;
-  position: relative;
-  top: 7px;
-}
-
-.sa-sidemenu .dropdown-menu.show{
-  background: $sa-grey-14;
-  border-color: $sa-grey-18;
-  border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-left: 5px;
-  width: calc(100% - 20px);
-}
-
-.sa-sidemenu .dropdown-item:first-of-type {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-}
-.sa-sidemenu .dropdown-item:last-of-type {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-
-// ==============================================
-// Sidemenu when used with Container Fluid
-.sidemenu-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-
-.sa-sidemenu {
-  position: fixed;
-  // min-height: 100vh;
-  // height: calc(100% - 80px);
-  // padding-bottom: 80px;
-}
-
-// postioning after navbar and breadcrumbs
-.navbar + .sidemenu-wrapper .sa-sidemenu{
-  top: 50px;
-  @include media-breakpoint-down(md){
-    top: 35px;
-  }
-}
-#navbar-admin + .sidemenu-wrapper .sa-sidemenu{
-  top: 35px;
-  @include media-breakpoint-down(md){
-    top: 35px;
-  }
-}
-
-.navbar + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-  top: 79px;
-  @include media-breakpoint-down(md){
-    top: 64px;
-  }
-}
-
-.navbar + #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
-  top: 85px;
-  @include media-breakpoint-down(md){
-    top: 70px;
-  }
-}
-
-.navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-  top: 114px;
-  @include media-breakpoint-down(md){
-    top: 99px;
-  }
-}
-#navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-  top: 64px;
-  @include media-breakpoint-down(md){
-    top: 64px;
-  }
-}
-
-.wrapper-content{
-  width: 100%;
-  padding-left: 40px;
-  margin-bottom: 50px;
-  @include off-canvas-transmission;
-  @include media-breakpoint-down(xs){
-    padding-left: 30px;
-  }
-}
-
-// Push Content on large screens and above
-
-@include media-breakpoint-up(lg){
-  .sa-sidemenu.open + .wrapper-content{
-    padding-left: 200px;
-  }
-}
-
 
 // Sidemenu Light ===============================
 

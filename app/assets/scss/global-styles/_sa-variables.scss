@@ -301,8 +301,6 @@ html {
   height: 100%;
 }
 body {
-  min-height: 100%;
-  padding-bottom: 70px;
 }
 
 
@@ -371,114 +369,6 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 }
 
 
-// ==============================================
-// Adjust vertical positioning dpending on content
-// body{ 
-//   padding-top: 20px; 
-//  @include media-breakpoint-down(md){ padding-top: 10px; }
-// }
-
-#navbar + #navbar-admin{
-  margin-top: 50px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
-}
-
-// Breadcrumbs
-#navbar-admin + #breadcrumbs{
-  margin-top: 35px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
-}
-#navbar + #breadcrumbs{
-  margin-top: 50px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
-}
-#navbar + #navbar-admin + #breadcrumbs{
-  margin-top: 85px;
- @include media-breakpoint-down(md){ margin-top: 70px; }
-}
-
-// container
-
-#navbar + .container{
-  margin-top: 50px;
- @include media-breakpoint-down(md){  }
-}
-#navbar + #navbar-admin + .container{
-  margin-top: 75px;
- @include media-breakpoint-down(md){  }
-}
-#navbar-admin + .container{
-  margin-top: 35px;
- @include media-breakpoint-down(md){  }
-}
-#navbar + #breadcrumbs + .container{
-  margin-top: 75px;
- @include media-breakpoint-down(md){  }
-}
-#navbar + #navbar-admin + #breadcrumbs + .container{
-  margin-top: 110px;
- @include media-breakpoint-down(md){  }
-}
-#navbar-admin + #breadcrumbs + .container{
-  margin-top: 60px;
- @include media-breakpoint-down(md){  }
-}
-#breadcrumbs + .container{
-  margin-top: 35px;
- @include media-breakpoint-down(md){  }
-}
-
-// container-fluid
-
-#navbar + .container-fluid{
-  margin-top: 70px;
- @include media-breakpoint-down(md){  margin-top: 60px;}
-}
-
-#navbar + #navbar-admin + .container-fluid{
-  margin-top: 105px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
-}
-#navbar + #breadcrumbs + .container-fluid{
-  margin-top: 30px;
- @include media-breakpoint-down(md){ margin-top: 20px; }
-}
-#navbar-admin + .container-fluid{
-  margin-top: 60px;
- @include media-breakpoint-down(md){ margin-top: 60px; }
-}
-#navbar-admin + #breadcrumbs + .container-fluid{
-  margin-top: 20px;
- @include media-breakpoint-down(md){ margin-top: 10px; }
-}
-
-// With sidemenu wrapper
-#navbar + .sidemenu-wrapper .container-fluid{
-  margin-top: 65px;
- @include media-breakpoint-down(md){  margin-top: 50px;}
-}
-#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 95px;
- @include media-breakpoint-down(md){ margin-top: 80px; }
-}
-
-// still to fix
-#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
-  margin-top: 105px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
-}
-#navbar-admin + .sidemenu-wrapper .container-fluid{
-  margin-top: 55px;
- @include media-breakpoint-down(md){ margin-top: 55px; }
-}
-#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 130px;
- @include media-breakpoint-down(md){ margin-top: 115px; }
-}
-#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 80px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
-}
 
 
 // Layering ==============================
@@ -504,3 +394,44 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 .modal{
   z-index: 5050;
 }
+
+// Adjust vertical positioning depending on content
+// Vertical alignments ==========================
+
+body {
+  padding-bottom: 70px; // Allow for footer
+}
+
+// navbars
+.navbar.fixed-top + .navbar-admin{
+  margin-top: 50px;
+ @include media-breakpoint-down(md){ margin-top: 35px; }
+}
+
+.navbar.fixed-top + .navbar-admin + #breadcrumbs{
+  margin-top: 85px;
+ @include media-breakpoint-down(md){ margin-top: 70px; }
+}
+
+
+// container / container-fluid
+.navbar.fixed-top + .container,
+.navbar.fixed-top + .container-fluid,
+.navbar.fixed-top + .sa-sidemenu + .container-fluid{
+  margin-top: 80px;
+  @include media-breakpoint-down(md){ margin-top: 65px; }
+}
+.navbar.fixed-top + .navbar-admin + .container,
+.navbar.fixed-top + .navbar-admin + .container-fluid,
+.navbar.fixed-top + .navbar-admin + .sa-sidemenu + .container-fluid{
+  margin-top: 115px;
+  @include media-breakpoint-down(md){ margin-top: 100px; }
+}
+
+.navbar.fixed-top + .navbar-admin + #breadcrumbs + .container,
+.navbar.fixed-top + .navbar-admin + #breadcrumbs + .container-fluid,
+.navbar.fixed-top + .navbar-admin + #breadcrumbs + .sa-sidemenu + .container-fluid{
+  margin-top: 150px;
+  @include media-breakpoint-down(md){ margin-top: 135px; }
+}
+
