@@ -1,5 +1,5 @@
 .row
-  .col-sm-12
+  .col-sm-24
     %h1#navs-anchor.bs-anchor Navs
 
     %h4 Basic Nav
@@ -39,7 +39,7 @@
 
 %hr
 .row
-  .col-sm-12
+  .col-sm-24
     %h4 Tabs
     %p 
       Takes the basic nav from above and adds the 
@@ -75,7 +75,7 @@
 %hr
 
 .row
-  .col-sm-12
+  .col-sm-24
     %h4 Nav Pils
     %p 
       Take that same HTML, but use 
@@ -107,19 +107,19 @@
 
 %hr
 .row
-  .col-sm-12
+  .col-sm-24
     %h4 Vertical Pils
     %p
       You can make Vertical Pils by using: 
       %code #v-pills-tab.nav.flex-column.nav-pills
     .row
-      .col-3
+      .col-6
         #v-pills-tab.nav.flex-column.nav-pills{"aria-orientation" => "vertical", :role => "tablist"}
           %a#v-pills-home-tab.nav-link.active{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-home", :role => "tab"} Home
           %a#v-pills-profile-tab.nav-link{"aria-controls" => "v-pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-profile", :role => "tab"} Profile
           %a#v-pills-messages-tab.nav-link{"aria-controls" => "v-pills-messages", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-messages", :role => "tab"} Messages
           %a#v-pills-settings-tab.nav-link{"aria-controls" => "v-pills-settings", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-settings", :role => "tab"} Settings
-      .col-9
+      .col-18
         #v-pills-tabContent.tab-content
           #v-pills-home.tab-pane.fade.show.active{"aria-labelledby" => "v-pills-home-tab", :role => "tabpanel"} 
             %h6.base Vertical Pil Home
@@ -143,7 +143,7 @@
 
 %hr
 .row
-  .col-sm-12
+  .col-sm-24
     %h3 Nav alignment variations 
     %p
       Information about the various alignment styles can be be found at:
@@ -152,7 +152,7 @@
       But here are some justified versions:
 
 .row
-  .col-sm-12
+  .col-sm-24
     %h4 Justified Tabs
     %p 
       Add 
@@ -189,7 +189,7 @@
 
 %hr
 .row
-  .col-sm-12
+  .col-sm-24
     %h4 Justified Nav Pils
     %ul#pills-tab.nav.nav-pills.nav-justified.mb-3{:role => "tablist"}
       %li.nav-item
@@ -217,7 +217,7 @@
 
 %hr
 .row
-  .col-sm-12
+  .col-sm-24
     %h4 Flexible and Justified Nav Pils
     %p 
       If you need responsive nav variations, consider using a series of flexbox utilities. While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
@@ -247,10 +247,10 @@
 
 %hr
 .row
-  .col-sm-12
+  .col-sm-24
     %h3 SARD Nav Colouring 
     %p The default navs, nav pills and vertical nav pills are set to the Default SARD Grey but to change their colouring dependent on the trust theme, then use one of the following.
-  .col-sm-12
+  .col-sm-24
     %h4 Nav Pils Primary
     %p 
       Add 
@@ -274,15 +274,15 @@
       %li.nav-item
         %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact", :role => "tab"} Contact
     
-  .col-sm-12.mt-3
+  .col-sm-24.mt-3
     .row
-      .col-3
+      .col-6
         #v-pills-tab.nav.flex-column.nav-pills.nav-primary{"aria-orientation" => "vertical", :role => "tablist"}
           %a#v-pills-home-tab.nav-link.active{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-home-primary", :role => "tab"} Home
           %a#v-pills-profile-tab.nav-link{"aria-controls" => "v-pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-profile-primary", :role => "tab"} Profile
           %a#v-pills-messages-tab.nav-link{"aria-controls" => "v-pills-messages", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-messages-primary", :role => "tab"} Messages
           %a#v-pills-settings-tab.nav-link{"aria-controls" => "v-pills-settings", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-settings-primary", :role => "tab"} Settings
-      .col-9
+      .col-18
         #v-pills-tabContent.tab-content
           #v-pills-home-primary.tab-pane.fade.show.active{"aria-labelledby" => "v-pills-home-tab", :role => "tabpanel"} 
             %h6.base Vertical Pil Home
@@ -305,7 +305,7 @@
               Fusce porta semper tortor, non luctus lorem porttitor vitae. Donec sollicitudin turpis ut sem egestas auctor eu sed leo. Cras lacinia elit ut nibh rhoncus vestibulum vel id leo. Aliquam porta, massa quis viverra fringilla, est eros sodales sem, quis laoreet risus purus in arcu. Ut quis est vestibulum, ultrices nisl ut, hendrerit mi. Ut hendrerit ac elit molestie cursus. Vivamus vel metus sed lacus dictum maximus ac et lacus. Morbi libero erat, porttitor non nibh sit amet, faucibus sodales justo. Vestibulum ut risus pellentesque, semper lorem id, sagittis sem. Cras aliquet risus at ex euismod facilisis. Vestibulum vulputate, orci quis blandit pellentesque, tortor turpis finibus risus, in lobortis risus dolor vel dui. Phasellus finibus et urna vitae tincidunt. Vivamus euismod augue urna.
 
     
-    .col-sm-12
+    .col-sm-24
     %hr/
     %h4 Nav Pils Secondary
     %p 
@@ -330,15 +330,15 @@
       %li.nav-item
         %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact", :role => "tab"} Contact
 
-  .col-sm-12.mt-3
+  .col-sm-24.mt-3
     .row
-      .col-3
+      .col-6
         #v-pills-tab.nav.flex-column.nav-pills.nav-secondary{"aria-orientation" => "vertical", :role => "tablist"}
           %a#v-pills-home-tab.nav-link.active{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-home-secondary", :role => "tab"} Home
           %a#v-pills-profile-tab.nav-link{"aria-controls" => "v-pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-profile-secondary", :role => "tab"} Profile
           %a#v-pills-messages-tab.nav-link{"aria-controls" => "v-pills-messages", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-messages-secondary", :role => "tab"} Messages
           %a#v-pills-settings-tab.nav-link{"aria-controls" => "v-pills-settings", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-settings-secondary", :role => "tab"} Settings
-      .col-9
+      .col-18
         #v-pills-tabContent.tab-content
           #v-pills-home-secondary.tab-pane.fade.show.active{"aria-labelledby" => "v-pills-home-tab", :role => "tabpanel"} 
             %h6.base Vertical Pil Home

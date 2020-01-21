@@ -1,5 +1,5 @@
 .row
-  .col-sm-12
+  .col-sm-24
     %h1#buttons-anchor.bs-anchor Buttons
     %p Primary and Secondary buttons will change colour depending on the theme class added to the body tag.
 
@@ -159,8 +159,8 @@
         .input-group-prepend
           #btnGroupAddon.input-group-text @
         %input.form-control{"aria-describedby" => "btnGroupAddon", "aria-label" => "Input group example", :placeholder => "Input group example", :type => "text"}/
-    .btn-toolbar.justify-content-between{"aria-label" => "Toolbar with button groups", :role => "toolbar"}
-      .btn-group{"aria-label" => "First group", :role => "group"}
+    .btn-toolbar{"aria-label" => "Toolbar with button groups", :role => "toolbar"}
+      .btn-group.mr-2{"aria-label" => "First group", :role => "group"}
         %button.btn.btn-primary{:type => "button"} 1
         %button.btn.btn-primary{:type => "button"} 2
         %button.btn.btn-primary{:type => "button"} 3

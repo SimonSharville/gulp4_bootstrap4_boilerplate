@@ -1,5 +1,5 @@
 .row
-  .col-sm-12
+  .col-sm-24
     %h1#modal-anchor.bs-anchor Modals
 
     %h4 Basic Modal
@@ -191,7 +191,7 @@
 
 %hr/
 .row
-  .col-sm-12
+  .col-sm-24
     %h3 Modal colours
     %p This is a selction of SARD specific modals.
 
@@ -420,8 +420,8 @@
                 %legend
                   Legend (if needed)
                 .form-group.row.border-bottom
-                  %label.col-sm-3.control-label{:for => "leave_allowance_name"} Allowance
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "leave_allowance_name"} Allowance
+                  .col-sm-28
                     %select#leave_allowance_name.form-control
                       %option{:value => ""} Choose one...
                       %option{:value => "Annual Leave"} Annual Leave
@@ -429,37 +429,37 @@
                       %option{:value => "Test"} Test
                     #leave_allowance_name_errors
                 .form-group.row.border-bottom
-                  %label.col-sm-3.control-label{:for => "type"} Take/Accrue
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "type"} Take/Accrue
+                  .col-sm-28
                     %select#type.form-control
                       %option{:value => ""} Choose one...
                       %option{:value => "Take"} Take
                       %option{:value => "Accrue"} Accrue
                     #type_errors
                 .form-group.row.border-bottom
-                  %label.col-sm-3.control-label{:for => "from_date"} From Date
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "from_date"} From Date
+                  .col-sm-28
                     %input#from_date.form-control.hasDatepicker{:placeholder => "DD/MM/YYYY", :type => "text"}/
                     #from_date_warning
                     #from_date_errors
                 .form-group.row.border-bottom
-                  %label.col-sm-3.control-label{:for => "start_time"} Start Time
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "start_time"} Start Time
+                  .col-sm-28
                     %input#start_time.form-control{:placeholder => "HH:MM", :type => "text"}/
                     #start_time_errors
                 .form-group.row.border-bottom
-                  %label.col-sm-3.control-label{:for => "until_date"} Until Date
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "until_date"} Until Date
+                  .col-sm-28
                     %input#until_date.form-control.hasDatepicker{:placeholder => "DD/MM/YYYY", :type => "text"}/
                     #until_date_errors
                 .form-group.row.border-bottom
-                  %label.col-sm-3.control-label{:for => "end_time"} End Time
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "end_time"} End Time
+                  .col-sm-28
                     %input#end_time.form-control{:placeholder => "HH:MM", :type => "text"}/
                     #end_time_errors
                 .form-group.row.border-bottom
-                  %label.col-sm-3.control-label{:for => "days_taken"} Allowance
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "days_taken"} Allowance
+                  .col-sm-28
                     %input#days_taken.form-control{:placeholder => "0.0", :type => "text"}/
                     #days_taken_errors
                     #days_taken_explanation
@@ -467,15 +467,15 @@
                       %span.days_taken_label Allowance Taken
                       according to your contract.
                 .form-group.row
-                  %label.col-sm-3.control-label{:for => "notes"} Notes
-                  .col-sm-9
+                  %label.col-sm-6.control-label{:for => "notes"} Notes
+                  .col-sm-28
                     %input#notes.form-control{:type => "text"}/
                     #notes_errors
                     #notes_errors
               %fieldset
                 .form-group.row.requested_by
-                  %label.col-sm-3{:for => "current_user"} Requested By
-                  .col-sm-9
+                  %label.col-sm-6{:for => "current_user"} Requested By
+                  .col-sm-28
                     %span#current_user Mrs Bella Owen
 
           .modal-footer
@@ -539,10 +539,10 @@
   
 %hr/
 .row
-  .col-sm-12
+  .col-sm-24
     %h3 Modals in Cards, Panels and Fieldsets
   
-  .col-sm-4
+  .col-sm-8
     .card.card-sard
       .card-header
         Card
@@ -607,7 +607,7 @@
         \.card-footer
         %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
 
-  .col-sm-4
+  .col-sm-8
     .panel.panel-sard
       .panel-header
         Panel
@@ -628,7 +628,7 @@
         \.panel-footer
         %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
 
-  .col-sm-4
+  .col-sm-8
     %fieldset
       %legend
         Fieldset

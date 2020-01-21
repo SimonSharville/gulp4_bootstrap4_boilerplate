@@ -78,7 +78,8 @@ Sard Components
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-job-planning.html'>Sard Nav Tabs - Job Planning</a>
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-portfolio.html'>Sard Nav Tabs - Portfolio</a>
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-appraisals.html'>Sard Nav Tabs - Appraisal</a>
-<a class='dropdown-item' href='../sard-components/sa-sidemenu.html'>Sard Side Menu</a>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu-slide.html'>Sard Side Menu - Slide</a>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu-push.html'>Sard Side Menu - Push</a>
 </div>
 </li>
 <!-- / Megamenu -->
@@ -147,7 +148,8 @@ Megamenu
 <a href='../sard-components/sa-nav-tabs-job-planning.html'>Sard Nav Tabs - Job Planning</a>
 <a href='../sard-components/sa-nav-tabs-portfolio.html'>Sard Nav Tabs - Portfolio</a>
 <a href='../sard-components/sa-nav-tabs-appraisals.html'>Sard Nav Tabs - Appraisals</a>
-<a href='../sard-components/sa-sidemenu.html'>Sard Side Menu</a>
+<a href='../sard-components/sa-sidemenu-slide.html'>Sard Side Menu - Slide</a>
+<a href='../sard-components/sa-sidemenu-push.html'>Sard Side Menu - Push</a>
 </div>
 </div>
 </div>
@@ -165,12 +167,12 @@ Megamenu
 </nav>
 <div class='container'>
 <div class='row'>
-<div class='col-sm-12'>
+<div class='col-sm-24'>
 <h1 class='bs-anchor' id='links'>Sard Nav Tabs - Portfolio</h1>
 </div>
 </div>
 <div class='row'>
-<div class='col-sm-12'>
+<div class='col-sm-24'>
 <p class='lead'>
 Sard Nav Tabs are created for use on the Job Planning, Portfolio and Appraisals pages, but have a different look on each.
 </p>
@@ -178,7 +180,7 @@ Sard Nav Tabs are created for use on the Job Planning, Portfolio and Appraisals 
 </div>
 <!-- / sard-nav-tabs Must be part of a row -->
 <div class='row'>
-<div class='col-sm-12'>
+<div class='col-sm-24'>
 <div class='sard-nav-tabs'>
 <!-- main-nav must be part of col -->
 <div class='snt-main-nav'>
@@ -803,17 +805,17 @@ Click on the buttons below to change the status.
 <p>Please enter a description of the evidence you have for this section. You can either upload a document or just make a note of any paper-based evidence that you may have and click ‘Save Evidence’. Setting an expiry date will ensure that any out of date evidence will no longer be included in following appraisals. N.B. Setting an expiry date will not remove the document after this date.</p>
 <form class='form-horizontal' id='new_evidence' method='post'>
 <div class='row'>
-<label class='col-xs-4 col-sm-3 col-md-2 control-label'>Description:</label>
-<div class='col-xs-8 col-sm-9 col-md-10'>
+<label class='col-xs-8 col-sm-6 col-md-4 control-label'>Description:</label>
+<div class='col-xs-26 col-sm-28 col-md-40'>
 <textarea class='form-control' id='content' placeholder='Type your evidence here...' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;'></textarea>
 </div>
 <div class='expiry'>
-<label class='col-xs-4 col-sm-3 col-md-2 control-label'>Expiry Date:</label>
-<div class='col-xs-8 col-sm-9 col-md-10'>
+<label class='col-xs-8 col-sm-6 col-md-4 control-label'>Expiry Date:</label>
+<div class='col-xs-26 col-sm-28 col-md-40'>
 <input autocomplete='off' class='form-control hasDatepicker' id='expiry' type='text' value=''>
 </div>
 </div>
-<div class='col-xs-12'>
+<div class='col-xs-24'>
 <div class='attachments'>
 <div class='new-attachment-fragment'>
 <div class='field right'>
@@ -822,7 +824,7 @@ Click on the buttons below to change the status.
 </div>
 </div>
 </div>
-<div class='col-xs-12'>
+<div class='col-xs-24'>
 <div class='shelf'></div>
 <div class='add right'>
 <input class='btn btn-sm btn-success' id='save-new-evidence' name='commit' nobind='true' type='submit' value='Save Evidence'>
@@ -999,12 +1001,12 @@ Expires: 19/09/2019
 <form accept-charset='UTF-8' action='/appraisals/564ddd0bf2a39f172c00007b/appraisal_datasets/5034e01ce3e1f12443000020/portfolio_comments' class='new_comment' data-remote='true' id='new_comment' method='post'>
 <input name='utf8' type='hidden' value='✓'>
 <div class='row'>
-<div class='col-xs-12'>
+<div class='col-xs-24'>
 <textarea id='comment_content' name='comment[content]' placeholder='Type your comment here...' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;'></textarea>
 </div>
 </div>
 <div class='row'>
-<div class='col-xs-12'>
+<div class='col-xs-24'>
 <div class='shelf'></div>
 <div class='add right'>
 <input class='btn btn-sm btn-success' id='save-new-comment' name='commit' type='submit' value='Save Comments / Reflection'>
@@ -1145,12 +1147,12 @@ By: Dr John T Smith
 <input name='utf8' type='hidden' value='✓'>
 <input name='authenticity_token' type='hidden' value='i7WaB5Ds81t1rBJGY65s+tJCKqWh2kXv6ip3M7/NTNKEbJN1AGRTbqOziIBNMwb3gO9gGlVt/deiZq6Sx9IGrw=='>
 <div class='row'>
-<div class='col-xs-12'>
+<div class='col-xs-24'>
 <textarea id='note_content' name='note[content]' placeholder='Type your note here...' style='overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 32px;'></textarea>
 </div>
 </div>
 <div class='row'>
-<div class='col-xs-12'>
+<div class='col-xs-24'>
 <div class='shelf'></div>
 <div class='add right'>
 <input class='btn btn-sm btn-success' name='commit' type='submit' value='Save Note'>
@@ -1203,17 +1205,17 @@ Written by you
 <div class='footer-header collapsable'>
 <div class='container'>
 <div class='row'>
-<div class='col-5'>
+<div class='col-10'>
 <p class='logo'>
 <a href='http://www.sardjv.co.uk/' target='balnk'>&copy; SARD JV</a>
 <span class='slash'>&#47;</span>
 <span class='inline-block'>020 8771 4153</span>
 </p>
 </div>
-<div class='col-2 center'>
+<div class='col-4 center'>
 <a class='scrollToTop'></a>
 </div>
-<div class='col-5 right'>
+<div class='col-10 right'>
 <a class='expand-button' data-parent='#accordion' data-toggle='collapse' href='#collapseFooter'></a>
 </div>
 </div>
@@ -1222,13 +1224,13 @@ Written by you
 <div class='collapse footer-body' id='collapseFooter'>
 <div class='container'>
 <div class='row'>
-<div class='col-sm-3'>
+<div class='col-sm-6'>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 </div>
-<div class='col-sm-3'>
+<div class='col-sm-6'>
 Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi.
 </div>
-<div class='col-sm-3'>
+<div class='col-sm-6'>
 Magnam et fugiat labore eum at adipisci ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex.
 </div>
 </div>

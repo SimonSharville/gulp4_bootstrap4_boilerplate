@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+<head>
+<title>Gulp 4, Bootstrap 4 - Sard Side Menu</title>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='../assets/css/remote-sard-ui-styles.min.css' rel='stylesheet'>
+</head>
+<body class='theme-trust'>
+<nav class='navbar fixed-top navbar-expand-lg navbar-primary' id='navbar'>
+<div class='container'>
+<a class='navbar-brand' href='../index.html'>Logo</a>
+<button aria-controls='navbarTop' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarTop' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarTop'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item'>
+<a class='nav-link' href='../index.html'>
+Home
+<span class='sr-only'>(current)</span>
+</a>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='sardUI' role='button'>
+Sard UI
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='../sard-ui/sa-typography.html'>Typography</a>
+<a class='dropdown-item' href='../sard-ui/sa-icons.html'>Icons</a>
+<a class='dropdown-item' href='../sard-ui/sa-colours.html'>Colours</a>
+<a class='dropdown-item' href='../sard-ui/sa-links.html'>Links</a>
+<a class='dropdown-item' href='../sard-ui/sa-lists.html'>Lists</a>
+<a class='dropdown-item' href='../sard-ui/sa-page-titles.html'>Page Titles</a>
+<a class='dropdown-item' href='../sard-ui/sa-perforations.html'>Perforations and Dividers</a>
+</div>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='bsComponents' role='button'>
+BS Components
+</a>
+<div aria-labelledby='bsComponents' class='dropdown-menu'>
+<a class='dropdown-item' href='../bs-components/components.html#alerts-anchor'>Alerts</a>
+<a class='dropdown-item' href='../bs-components/components.html#badges-anchor'>Badges</a>
+<a class='dropdown-item' href='../bs-components/components.html#breadcrumbs-anchor'>Breadcrumbs</a>
+<a class='dropdown-item' href='../bs-components/components.html#buttons-anchor'>Buttons</a>
+<a class='dropdown-item' href='../bs-components/components.html#cards-anchor'>Cards</a>
+<a class='dropdown-item' href='../bs-components/components.html#collapse-anchor'>Collapse</a>
+<a class='dropdown-item' href='../bs-components/components.html#dropdowns-anchor'>Dropdowns</a>
+<div class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#'>Form Components</a>
+<ul class='dropdown-menu'>
+<a class='dropdown-item' href='../bs-components/components.html#forms-anchor'>Forms</a>
+<a class='dropdown-item' href='../bs-components/components.html#checkboxes-anchor'>Checkboxes and Radios</a>
+<a class='dropdown-item' href='../bs-components/components.html#file-imports-anchor'>File Imports</a>
+<a class='dropdown-item' href='../bs-components/components.html#input-group-anchor'>Input Groups</a>
+<a class='dropdown-item' href='../bs-components/components.html#validation-anchor'>Validation</a>
+</ul>
+</div>
+<a class='dropdown-item' href='../bs-components/components.html#list-group-anchor'>List Groups</a>
+<a class='dropdown-item' href='../bs-components/components.html#modal-anchor'>Modals</a>
+<a class='dropdown-item' href='../bs-components/components.html#navbar-anchor'>Navbar</a>
+<a class='dropdown-item' href='../bs-components/components.html#navs-anchor'>Navs</a>
+<a class='dropdown-item' href='../bs-components/components.html#pagination-anchor'>Pagination</a>
+<a class='dropdown-item' href='../bs-components/components.html#panels-anchor'>Panels</a>
+<a class='dropdown-item' href='../bs-components/components.html#popovers-anchor'>Popovers</a>
+<a class='dropdown-item' href='../bs-components/components.html#progress-anchor'>Progress Bars</a>
+<a class='dropdown-item' href='../bs-components/components.html#searchbars-anchor'>Searchbars</a>
+<a class='dropdown-item' href='../bs-components/components.html#tables-anchor'>Tables</a>
+<a class='dropdown-item' href='../bs-components/components.html#tooltips-anchor'>Tooltips</a>
+</div>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='sardUI' role='button'>
+Sard Components
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='../sard-components/sa-nav-tabs-job-planning.html'>Sard Nav Tabs - Job Planning</a>
+<a class='dropdown-item' href='../sard-components/sa-nav-tabs-portfolio.html'>Sard Nav Tabs - Portfolio</a>
+<a class='dropdown-item' href='../sard-components/sa-nav-tabs-appraisals.html'>Sard Nav Tabs - Appraisal</a>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu-slide.html'>Sard Side Menu - Slide</a>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu-push.html'>Sard Side Menu - Push</a>
+</div>
+</li>
+<!-- / Megamenu -->
+<!-- / Megamenu -->
+<div id='megamenu'>
+<li class='dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='bsComponents' role='button'>
+Megamenu
+</a>
+<div class='dropdown-menu'>
+<div class='megamenu'>
+<div class='mega-column'>
+<p class='mega-list-title'>Sard UI</p>
+<div class='mega-item'>
+<a href='../sard-ui/sa-typography.html'>Typography</a>
+</div>
+<div class='mega-item'>
+<a href='../sard-ui/sa-icons.html'>Icons</a>
+</div>
+<div class='mega-item'>
+<a href='../sard-ui/sa-colours.html'>Colours</a>
+</div>
+<div class='mega-item'>
+<a href='../sard-ui/sa-links.html'>Links</a>
+</div>
+<div class='mega-item'>
+<a href='../sard-ui/sa-lists.html'>Lists</a>
+</div>
+<div class='mega-item'>
+<a href='../sard-u/sa-page-titles.html'>Page Titles</a>
+</div>
+<div class='mega-item'>
+<a href='../sard-ui/sa-perforations.html'>Perforations and Dividers</a>
+</div>
+</div>
+<div class='mega-column'>
+<p class='mega-list-title'>BS Components</p>
+<div class='mega-item'>
+<a href='../bs-components/components.html#alerts-anchor'>Alerts</a>
+<a href='../bs-components/components.html#badges-anchor'>Badges</a>
+<a href='../bs-components/components.html#breadcrumbs-anchor'>Breadcrumbs</a>
+<a href='../bs-components/components.html#buttons-anchor'>Buttons</a>
+<a href='../bs-components/components.html#cards-anchor'>Cards</a>
+<a href='../bs-components/components.html#collapse-anchor'>Collapse</a>
+<a href='../bs-components/components.html#forms-anchor'>Forms</a>
+<a class='mega-sub-item' href='../bs-components/components.html#checkboxes-anchor'>Checkboxes and Radios</a>
+<a class='mega-sub-item' href='../bs-components/components.html#file-imports-anchor'>File Imports</a>
+<a class='mega-sub-item' href='../bs-components/components.html#input-group-anchor'>Input Groups</a>
+<a class='mega-sub-item' href='../bs-components/components.html#validation-anchor'>Validation</a>
+<a href='../bs-components/components.html#list-group-anchor'>List Groups</a>
+<a href='../bs-components/components.html#modal-anchor'>Modals</a>
+<a href='../bs-components/components.html#navbar-anchor'>Navbar</a>
+<a href='../bs-components/components.html#navs-anchor'>Navs</a>
+<a href='../bs-components/components.html#pagination-anchor'>Pagination</a>
+<a href='../bs-components/components.html#panels-anchor'>Panels</a>
+<a href='../bs-components/components.html#popovers-anchor'>Popovers</a>
+<a href='../bs-components/components.html#progress-anchor'>Progress Bars</a>
+<a href='../bs-components/components.html#searchbars-anchor'>Searchbars</a>
+<a href='../bs-components/components.html#tables-anchor'>Tables</a>
+<a href='../bs-components/components.html#tooltips-anchor'>Tooltips</a>
+</div>
+</div>
+<div class='mega-column'>
+<p class='mega-list-title'>Sard Components</p>
+<div class='mega-item'>
+<a href='../sard-components/sa-nav-tabs-job-planning.html'>Sard Nav Tabs - Job Planning</a>
+<a href='../sard-components/sa-nav-tabs-portfolio.html'>Sard Nav Tabs - Portfolio</a>
+<a href='../sard-components/sa-nav-tabs-appraisals.html'>Sard Nav Tabs - Appraisals</a>
+<a href='../sard-components/sa-sidemenu-slide.html'>Sard Side Menu - Slide</a>
+<a href='../sard-components/sa-sidemenu-push.html'>Sard Side Menu - Push</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+</div>
+<!-- / End Megamenu -->
+</ul>
+<form class='form-inline searchbar-sard'>
+<input aria-label='Search' class='form-control' placeholder='Search' type='search'>
+<button class='btn btn-search' type='submit'></button>
+</form>
+</div>
+</div>
+</nav>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-24'>
+<h1>Sard Side Menu - Slide</h1>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-24'>
+<p class='lead'>
+The Sard sidemenu slides out from the left.
+</p>
+</div>
+</div>
+</div>
+<div class='sa-sidemenu'>
+<div class='menu-top'>
+<div class='open-icon'></div>
+</div>
+<div class='menu-list'>
+<!-- Include your navigation here -->
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A very long, I mean really, really, really long link title</span>
+</a>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+<hr>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+<a class='menu-link' href='#/'>
+<span class='link-text'>link, No Icon</span>
+</a>
+<hr>
+<div class='sub-title'>Sub-title</div>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+<hr>
+<div class='sub-title'>Dropdown Menu</div>
+<ul>
+<li class='dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+Dropdown
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item active' href='#/'>.dropdown-item.active</a>
+</div>
+</li>
+</ul>
+<hr>
+<div class='sub-title'>Sub-title</div>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+</div>
+</div>
+<div class='sa-footer'>
+<div id='accordion'>
+<div class='footer-header collapsable'>
+<div class='container'>
+<div class='row'>
+<div class='col-10'>
+<p class='logo'>
+<a href='http://www.sardjv.co.uk/' target='balnk'>&copy; SARD JV</a>
+<span class='slash'>&#47;</span>
+<span class='inline-block'>020 8771 4153</span>
+</p>
+</div>
+<div class='col-4 center'>
+<a class='scrollToTop'></a>
+</div>
+<div class='col-10 right'>
+<a class='expand-button' data-parent='#accordion' data-toggle='collapse' href='#collapseFooter'></a>
+</div>
+</div>
+</div>
+</div>
+<div class='collapse footer-body' id='collapseFooter'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-6'>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</div>
+<div class='col-sm-6'>
+Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi.
+</div>
+<div class='col-sm-6'>
+Magnam et fugiat labore eum at adipisci ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts ================================ -->
+<script src='../assets/js/remote-sard-scripts.min.js'></script>
+</body>
+</html>

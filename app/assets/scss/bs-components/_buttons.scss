@@ -235,6 +235,32 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
+.btn-add{
+  background-color: $user-primary-colour;
+  color: white!important;
+  &:hover { 
+    background-color: darken($user-primary-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-primary-colour, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f067" ;
+    color:white;
+    font-weight: 900;
+    font-size: 1.45rem;
+    line-height: 1rem;
+    position: relative;
+    top: 3.5px;
+    left: -5px;
+  }
+}
+
 .btn-back{
   background-color: $btn-default-colour;
   color: white!important;
@@ -364,69 +390,40 @@ $btn-default-colour: $sa-grey-14;
     left: -3px;
   }
 }
-.btn-save,
-.btn-sign-in,
-.btn-sign-out,
-.btn-submit,
-.btn-cancel,
-.btn-back,
-.btn-forward,
-.btn-download,
-.btn-upload,
-.btn-refresh{
-  &.btn-lg::before{
+
+.btn-lg::before{
     font-size: 1.7rem;
     top: 4px;
     left: -8px;
   }
-  &.btn-lg::after{
+  .btn-lg::after{
     font-size: 1.7rem;
     top: 4px;
     right: -10px;
   }
+
+.btn-sm::before{
+  font-size: 1.1rem;
+  top: 2px;
+  left: -3px;
 }
-.btn-save,
-.btn-sign-in,
-.btn-sign-out,
-.btn-submit,
-.btn-cancel,
-.btn-back,
-.btn-forward,
-.btn-download,
-.btn-upload,
-.btn-refresh{
-  &.btn-sm::before{
-    font-size: 1.1rem;
-    top: 2px;
-    left: -3px;
-  }
-  &.btn-sm::after{
-    font-size: 1.1rem;
-    top: 2px;
-    right: -5px;
-  }
+.btn-sm::after{
+  font-size: 1.1rem;
+  top: 2px;
+  right: -5px;
 }
-.btn-save,
-.btn-sign-in,
-.btn-sign-out,
-.btn-submit,
-.btn-cancel,
-.btn-back,
-.btn-forward,
-.btn-download,
-.btn-upload,
-.btn-refresh{
-  &.btn-xs::before{
-    font-size: 0.8rem;
-    top: 1px;
-    left: -2px;
-  }
-  &.btn-xs::after{
-    font-size: 0.8rem;
-    top: 1px;
-    right: -5px;
-  }
+
+.btn-xs::before{
+  font-size: 0.8rem;
+  top: 1px;
+  left: -2px;
 }
+.btn-xs::after{
+  font-size: 0.8rem;
+  top: 1px;
+  right: -5px;
+}
+
 
 .btn-notext{
   padding: $sa-spacer-6;
@@ -612,6 +609,28 @@ $btn-default-colour: $sa-grey-14;
   box-shadow:         0px 1px 1px 0px rgba(0,0,0,0.2);
 }
 
+.btn-group.with-divide .btn{
+  margin-right: 2px;
+}
+.btn-group.with-divide .btn:last-of-type{
+  margin-right: 0px;
+}
+
 .buttons-grouped .btn{
   margin:2.5px 0;
+}
+
+.card-header .btn.btn-xs{ 
+  margin-top: 3px; 
+  float: right;
+}
+
+.card-sard .card-body .buttons{
+  border-top: 1px solid white;
+  padding-top: 8px;
+}
+
+.card-sard .card-body .buttons.no-border{
+  border-top: none;
+  padding-top: 0px;
 }

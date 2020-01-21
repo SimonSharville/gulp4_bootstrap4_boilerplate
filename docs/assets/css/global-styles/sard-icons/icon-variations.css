@@ -1,0 +1,345 @@
+.si {
+  font-family: "sard-icons";
+  position: relative;
+  top: .13rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.si-lg {
+  font-size: 1.2rem;
+  line-height: 0.75em;
+  vertical-align: -.0667rem;
+}
+
+.si-xs {
+  font-size: .70rem;
+  top: .08rem;
+}
+
+.si-sm {
+  font-size: .82em;
+  top: .08rem;
+}
+
+.si-1x {
+  font-size: 1em;
+}
+
+.si-2x {
+  font-size: 1.83rem;
+  top: .2rem;
+}
+
+.si-3x {
+  font-size: 2.9em;
+  top: .3rem;
+}
+
+.si-4x {
+  font-size: 3.62rem;
+  top: .42rem;
+}
+
+.si-5x {
+  font-size: 4.52rem;
+  top: .52rem;
+}
+
+.si-6x {
+  font-size: 5.45rem;
+  top: .62rem;
+}
+
+.si-7x {
+  font-size: 6.4rem;
+  top: .75rem;
+}
+
+.si-8x {
+  font-size: 7.32rem;
+  top: .87rem;
+}
+
+.si-9x {
+  font-size: 8.2rem;
+  top: .97rem;
+}
+
+.si-10x {
+  font-size: 9.1rem;
+  top: 1.1rem;
+}
+
+.si-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.si-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.si-ul > li {
+  position: relative;
+}
+
+.si-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.si-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em;
+}
+
+.si-pull-left {
+  float: left;
+}
+
+.si-pull-right {
+  float: right;
+}
+
+.si.fa-pull-left {
+  margin-right: .3em;
+}
+
+.si.fa-pull-right {
+  margin-left: .3em;
+}
+
+.si-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+.si-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes si-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes si-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.si-rotate-45 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.si-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.si-rotate-135 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.si-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.si-rotate-225 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.si-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.si-rotate-315 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+.si-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.si-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.si-flip-both, .si-flip-horizontal.si-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+}
+
+:root .si-rotate-90,
+:root .si-rotate-180,
+:root .si-rotate-270,
+:root .si-flip-horizontal,
+:root .si-flip-vertical,
+:root .si-flip-both {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.si-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.si-stack-1x,
+.si-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.si-stack-1x {
+  line-height: inherit;
+}
+
+.si-stack-2x {
+  font-size: 2em;
+}
+
+.si-inverse {
+  color: #fff;
+}
+
+.si-reject,
+.si-reject-circle,
+.si-reject-circle-o,
+.si-status-danger,
+.si-status-danger-o,
+.si-status-danger-circle,
+.si-status-danger-circle-o {
+  color: #BF0000;
+}
+
+.si-status-success,
+.si-status-success-o,
+.si-status-success-circle,
+.si-status-success-circle-o {
+  color: #359E00;
+}
+
+.si-status-complete,
+.si-status-complete-o,
+.si-status-complete-circle,
+.si-status-complete-circle-o {
+  color: #359E00;
+}
+
+.si-status-warning,
+.si-status-warning-o,
+.si-status-warning-circle,
+.si-status-warning-circle-o {
+  color: #FFB200;
+}
+
+.si-status-alert,
+.si-status-alert-o,
+.si-status-alert-circle,
+.si-status-alert-circle-o {
+  color: #FFB200;
+}
+
+.si-status-approved,
+.si-status-approved-o,
+.si-status-approved-circle,
+.si-status-approved-circle-o {
+  color: #359E00;
+}
+
+.si-status-recommended,
+.si-status-recommended-o,
+.si-status-recommended-circle,
+.si-status-recommended-circle-o {
+  color: #FF6A00;
+}
+
+.si-status-submitted,
+.si-status-submitted-o,
+.si-status-submitted-circle,
+.si-status-submitted-circle-o {
+  color: #A7BF30;
+}
+
+.si-status-archived,
+.si-status-archived-o,
+.si-status-archived-circle,
+.si-status-archived-circle-o {
+  color: #004D4D;
+}
+
+.si-status-due,
+.si-status-due-o,
+.si-status-due-circle,
+.si-status-due-circle-o {
+  color: #FF6A00;
+}
+
+.si-status-draft,
+.si-status-draft-o,
+.si-status-draft-circle,
+.si-status-draft-circle-o {
+  color: #FFB200;
+}
+
+/*# sourceMappingURL=icon-variations.css.map */

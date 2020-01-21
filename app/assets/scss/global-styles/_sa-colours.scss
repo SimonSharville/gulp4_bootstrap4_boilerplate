@@ -3,42 +3,53 @@
 
 
 //  SARD Colours ===============
-$sa-turq:                  #00B2B2;
-$sa-pink:                  #E50073;
-$sa-orange:                #FF6A00;
-$sa-yellow:                #FFB200;
-$sa-lime:                  #A7BF30;
-$sa-green:                 #359E00;
-$sa-teal:                  #004D4D;
-$sa-blue:                  #003CB8;
-$sa-ink:                   #000078;
-$sa-purple:                #52008C;
-$sa-plum:                  #990099;
-$sa-red:                   #BF0000;
-$sa-white:                 #FFFFFF;
+$sa-turq:                   #00B2B2;
+$sa-pink:                   #E50073;
+$sa-orange:                 #FF6A00;
+$sa-yellow:                 #FFB200;
+$sa-lime:                   #A7BF30;
+$sa-green:                  #359E00;
+$sa-teal:                   #004D4D;
+$sa-blue:                   #003CB8;
+$sa-ink:                    #000078;
+$sa-purple:                 #52008C;
+$sa-plum:                   #990099;
+$sa-red:                    #BF0000;
+$sa-white:                  #FFFFFF;
 
-$sa-MRv:                       $sa-turq;
-$sa-NRv:                       $sa-orange;
+// Product Colours =============
+$sa-MRv:                    $sa-turq;
+$sa-NRv:                    $sa-orange;
 $sa-360:                    $sa-yellow;
-$sa-eLeave:                    $sa-lime;
-$sa-A4A:                       $sa-plum;
-$sa-JPL:                       $sa-pink;
-$sa-eRo:                       $sa-teal;
-$sa-CPL:                       $sa-red;
+$sa-eLeave:                 $sa-lime;
+$sa-A4A:                    $sa-plum;
+$sa-JPL:                    $sa-pink;
+$sa-eRo:                    $sa-teal;
+$sa-CPL:                    $sa-red;
+
+// Page colours ================
+
+$sa-faqs:                   $sa-plum;
+$sa-products:               $sa-turq;
+$sa-support:                $sa-plum;
+$sa-clients:                $sa-orange;
+$sa-company:                $sa-lime;
+$sa-charity:                $sa-pink;
+$sa-blog:                   $sa-blue;
 
 
 // RAG Colours =================
-$RAG-danger:                $sa-red;
-$RAG-warning:               $sa-yellow;
-$RAG-success:               $sa-green;
-$RAG-approved:              $sa-green;
-$RAG-complete:              $sa-green;
-$RAG-recommended:           $sa-orange;
-$RAG-archived:              $sa-teal;
-$RAG-draft:                 $sa-yellow;
-$RAG-submitted:             $sa-lime;
-$RAG-due:                   $sa-orange;
-$RAG-abandoned:             $sa-red;
+$sa-RAG-danger:                $sa-red;
+$sa-RAG-warning:               $sa-yellow;
+$sa-RAG-success:               $sa-green;
+$sa-RAG-approved:              $sa-green;
+$sa-RAG-complete:              $sa-green;
+$sa-RAG-recommended:           $sa-orange;
+$sa-RAG-archived:              $sa-teal;
+$sa-RAG-draft:                 $sa-yellow;
+$sa-RAG-submitted:             $sa-lime;
+$sa-RAG-due:                   $sa-orange;
+$sa-RAG-abandoned:             $sa-red;
 
 // Dark Colours ================
 $sa-turq-dark:              #007C7C;
@@ -123,24 +134,7 @@ $text:                        $sa-grey-18;
 $bodytext:                    $sa-grey-18;
 
 
-
-
-// Trust Colours ================================
-// $trust-primary-colour:                $sa-yellow;
-$trust-primary-colour:                #999966 ; // Used for Testing - Swap with above
-$trust-primary-colour-light:          lighten($trust-primary-colour, 5%);
-$trust-primary-colour-very-light:     lighten($trust-primary-colour, 10%);
-$trust-primary-colour-dark:           darken($trust-primary-colour, 10%);
-$trust-primary-colour-very-dark:      darken($trust-primary-colour, 20%);
-
-// $trust-secondary-colour:              $sa-orange;
-$trust-secondary-colour:              #996633; // Used for Testing - Swap with above
-$trust-secondary-colour-light:        lighten($trust-secondary-colour, 5%);
-$trust-secondary-colour-very-light:   lighten($trust-secondary-colour, 10%);
-$trust-secondary-colour-dark:         darken($trust-secondary-colour, 10%);
-$trust-secondary-colour-very-dark:    darken($trust-secondary-colour, 20%);
-
-// Trust User Colours ===========================
+// User Colours ===========================
 $user-primary-colour:                 $sa-turq;
 $user-primary-colour-light:           lighten($user-primary-colour, 5%);
 $user-primary-colour-very-light:      lighten($user-primary-colour, 10%);
@@ -153,7 +147,7 @@ $user-secondary-colour-very-light:    lighten($user-secondary-colour, 10%);
 $user-secondary-colour-dark:          darken($user-secondary-colour, 10%);
 $user-secondary-colour-very-dark:     darken($user-secondary-colour, 20%);
 
-// Trust Admin Colours ==========================
+// Admin Colours ==========================
 $admin-primary-colour:               $sa-pink;
 $admin-primary-colour-light:         lighten($admin-primary-colour, 5%);
 $admin-primary-colour-very-light:    lighten($admin-primary-colour, 10%);

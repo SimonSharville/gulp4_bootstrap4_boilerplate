@@ -3,11 +3,11 @@
 .sa-footer{
   
   #accordion {
-    z-index: 5000;
+    // z-index in _sa-variables.css
     position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;  
-    border-top:4px solid white;  
   }
   
   .footer-header {

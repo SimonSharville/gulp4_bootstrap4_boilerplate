@@ -6,11 +6,11 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:href => "../assets/css/remote-sard-ui-styles.min.css", :rel => "stylesheet"}/
  
-  %body.theme-trust
+  %body#ui-bs-components-page.theme-trust
     //=include ../navbars/_navbar-x1.haml
     //=include ../navbars/_navbar-admin.haml
 
-    #breadcrumb-top.fixed-top
+    #breadcrumbs.fixed-top
       .container
         %nav{"aria-label" => "breadcrumb"}
           %ol.breadcrumb
@@ -23,7 +23,7 @@
 
     .container
       .row
-        .col-12
+        .col-24
           %h1.display-4 Components
           %p.lead These are default Bootstrap Components styled for SARD.
     .container
