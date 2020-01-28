@@ -171,8 +171,16 @@
 .modal-primary .modal-body a:link {color: white;}
 .modal-primary .modal-body a:visited {color: white;}
 .modal-primary .modal-body a:hover {color: darken($user-primary-colour, 20%);}
-.modal-primary .modal-body a:focus {color: darken($user-primary-colour, 25%)!important;}
-.modal-primary .modal-body a:active {color: darken($user-primary-colour, 25%)!important;}
+.modal-primary .modal-body a:focus {color: darken($user-primary-colour, 25%);}
+.modal-primary .modal-body a:active {color: darken($user-primary-colour, 25%);}
+
+
+.modal-primary a.btn {color: white;}
+.modal-primary a.btn:visited {color: white;}
+.modal-primary a.btn:hover {color: white;}
+.modal-primary a.btn:focus {color: white;}
+.modal-primary a.btn:active {color: white;}
+
 
 .modal-primary .modal-body hr{
   border-color: $user-primary-colour;
