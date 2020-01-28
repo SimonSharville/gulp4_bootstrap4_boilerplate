@@ -18740,11 +18740,31 @@ a.list-group-item-action.active:active {
 }
 
 .modal-primary .modal-body a:focus {
-  color: #003333 !important;
+  color: #003333;
 }
 
 .modal-primary .modal-body a:active {
-  color: #003333 !important;
+  color: #003333;
+}
+
+.modal-primary a.btn {
+  color: white;
+}
+
+.modal-primary a.btn:visited {
+  color: white;
+}
+
+.modal-primary a.btn:hover {
+  color: white;
+}
+
+.modal-primary a.btn:focus {
+  color: white;
+}
+
+.modal-primary a.btn:active {
+  color: white;
 }
 
 .modal-primary .modal-body hr {
