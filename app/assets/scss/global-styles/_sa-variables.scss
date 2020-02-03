@@ -395,6 +395,34 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
   z-index: 5050;
 }
 
+// Display / Hide for various screen sizes
+
+@include media-breakpoint-down(xs){
+  .hide-mobile-down { display: none ;}
+}
+
+@include media-breakpoint-up(sm){
+  .hide-mobile-up { display: none ;}
+}
+
+@include media-breakpoint-down(sm){
+  .hide-ipad-down { display: none ;}
+}
+
+@include media-breakpoint-up(md){
+  .hide-ipad-up { display: none ;}
+}
+
+@include media-breakpoint-down(md){
+  .hide-laptop-down { display: none ;}
+}
+
+@include media-breakpoint-up(lg){
+  .hide-laptop-up { display: none ;}
+}
+
+
+
 // Adjust vertical positioning depending on content
 // Vertical alignments ==========================
 

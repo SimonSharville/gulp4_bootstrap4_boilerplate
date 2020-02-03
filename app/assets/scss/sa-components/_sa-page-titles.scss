@@ -6,7 +6,7 @@
   font-size: 1.1rem; // 18px
   margin-top: 0;
   margin-bottom: 15px;
-  @media (max-width: 767px){
+  @include respond-to(ipad-p-down){
     margin-bottom: 10px;
   }
 }
@@ -27,21 +27,30 @@
   letter-spacing: $vslight;
   margin: 0;
   margin-left:0.07em; // Set left align to allow for Roboto indenting at large sizes
-    @media (max-width: 767px){
+    @include respond-to(ipad-p-down){
       margin-left:0.1em;
+      font-size: 18px; 
+    }
+    @include media-breakpoint-down(xs){
+      font-size: 16px;
     }
 }
 
-.page-title .page{
+.page-title .page,
+.page-title h1{
   @include roboto-light;
   font-size: 2.25rem; // 36px
   line-height: 2.5rem;
   margin: 0;
   margin-left:-0.04em; // Set left align to allow for Roboto indenting at large sizes
-  @media (max-width: 767px) {
+  @include respond-to(ipad-p-down) {
     font-size: 2rem;
     line-height: 2.2rem;
     margin-left:0;
+  }
+  @include media-breakpoint-down(xs){
+    font-size: 26px;
+    line-height: 28px;
   }
 }
 
@@ -86,7 +95,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 15px;
-  @media (max-width: 767px){
+  @include respond-to(ipad-p-down){
     margin-bottom: 10px;
   }
   .page-title-photo{
@@ -98,9 +107,13 @@
     margin-right: 5px;
     width: 70px;
     height: 70px;
-    @media (max-width: 767px){
+    @include respond-to(ipad-p-down){
       width: 60px;
       height: 60px;
+    }
+    @include media-breakpoint-down(xs){
+      width: 50px;
+      height: 50px;
     }
   }
   .page-title{
@@ -114,7 +127,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 15px;
-  @media (max-width: 767px){
+  @include respond-to(ipad-p-down){
     margin-bottom: 10px;
   }
   .page-title{
@@ -134,7 +147,7 @@
   height: 70px;
   background-repeat: no-repeat;
   background-size: 70px 70px;
-  @media (max-width: 767px){
+  @include respond-to(ipad-p-down){
     width: 60px;
     height: 60px;
     background-size: 60px 60px;

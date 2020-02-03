@@ -14839,6 +14839,42 @@ button:focus,
   z-index: 5050;
 }
 
+@media (max-width: 575.98px) {
+  .hide-mobile-down {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .hide-mobile-up {
+    display: none;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .hide-ipad-down {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-ipad-up {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hide-laptop-down {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .hide-laptop-up {
+    display: none;
+  }
+}
+
 body {
   padding-bottom: 70px;
 }
@@ -14986,7 +15022,7 @@ h1, .h1 {
 
 @media (max-width: 767px) {
   h1, .h1 {
-    font-size: 2.2em;
+    font-size: 32px;
   }
 }
 
@@ -21159,7 +21195,7 @@ p > a.modal-info-circle-inline::before {
   margin-bottom: 15px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .page-title {
     margin-bottom: 10px;
   }
@@ -21185,13 +21221,21 @@ p > a.modal-info-circle-inline::before {
   margin-left: 0.07em;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .page-title .name {
     margin-left: 0.1em;
+    font-size: 18px;
   }
 }
 
-.page-title .page {
+@media (max-width: 575.98px) {
+  .page-title .name {
+    font-size: 16px;
+  }
+}
+
+.page-title .page,
+.page-title h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 2.25rem;
@@ -21200,11 +21244,20 @@ p > a.modal-info-circle-inline::before {
   margin-left: -0.04em;
 }
 
-@media (max-width: 767px) {
-  .page-title .page {
+@media only screen and (max-width: 767px) {
+  .page-title .page,
+  .page-title h1 {
     font-size: 2rem;
     line-height: 2.2rem;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-title .page,
+  .page-title h1 {
+    font-size: 26px;
+    line-height: 28px;
   }
 }
 
@@ -21260,7 +21313,7 @@ p > a.modal-info-circle-inline::before {
   margin-bottom: 15px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .page-title-with-image {
     margin-bottom: 10px;
   }
@@ -21277,10 +21330,17 @@ p > a.modal-info-circle-inline::before {
   height: 70px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .page-title-with-image .page-title-photo img {
     width: 60px;
     height: 60px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-title-with-image .page-title-photo img {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -21301,7 +21361,7 @@ p > a.modal-info-circle-inline::before {
   margin-bottom: 15px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .page-title-with-state {
     margin-bottom: 10px;
   }
@@ -21329,7 +21389,7 @@ p > a.modal-info-circle-inline::before {
   background-size: 70px 70px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .page-state .current-state {
     width: 60px;
     height: 60px;
@@ -23908,6 +23968,7 @@ hr.white {
   border-radius: none;
   padding: 8px 0px;
   color: white;
+  font-size: 14px;
 }
 
 .sa-footer .footer-header em, .sa-footer .footer-header h1, .sa-footer .footer-header h2, .sa-footer .footer-header h3, .sa-footer .footer-header h4, .sa-footer .footer-header h5, .sa-footer .footer-header h6, .sa-footer .footer-header p, .sa-footer .footer-header a {
@@ -23916,6 +23977,7 @@ hr.white {
   padding: 0;
   display: inline;
   font-size: 0.9375rem;
+  font-size: 14px;
   line-height: 1rem;
 }
 
