@@ -23289,6 +23289,126 @@ body {
   color: #211F0F;
 }
 
+.sa-nav-tabs {
+  border-bottom: none;
+  padding: 0 8px;
+  margin-bottom: -1px;
+}
+
+.sa-nav-tabs .nav-item .nav-link {
+  border-bottom: 1px solid #615E5C;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.sa-nav-tabs .nav-item .nav-link:hover {
+  border-bottom: 1px solid #615E5C !important;
+}
+
+.sa-nav-tabs .nav-item .nav-link.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.sa-nav-tabs .nav-link.disabled {
+  color: #C7C4C2 !important;
+}
+
+.sa-nav-tabs + .tab-content {
+  border: 2px solid #827D7D;
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+
+.sa-nav-tabs + .tab-content .card:last-of-type {
+  margin-bottom: 0;
+}
+
+.sa-nav-tabs + .tab-content .pagination {
+  margin-bottom: 0;
+}
+
+.sa-nav-tabs + .tab-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.sa-nav-tabs-grey {
+  border-bottom: none;
+  padding: 0 8px;
+  margin-bottom: -1px;
+}
+
+.sa-nav-tabs-grey .nav-item .nav-link {
+  border-bottom: 1px solid #615E5C;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.sa-nav-tabs-grey .nav-item .nav-link:hover {
+  border-bottom: 1px solid #615E5C !important;
+}
+
+.sa-nav-tabs-grey .nav-item .nav-link.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.sa-nav-tabs-grey .nav-link.disabled {
+  color: #C7C4C2 !important;
+}
+
+.sa-nav-tabs-grey + .tab-content {
+  border: 2px solid #827D7D;
+  background-color: #EDEBEB;
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+
+.sa-nav-tabs-grey + .tab-content .card {
+  background-color: white;
+}
+
+.sa-nav-tabs-grey + .tab-content .card:last-of-type {
+  margin-bottom: 0;
+}
+
+.sa-nav-tabs-grey + .tab-content .pagination {
+  margin-bottom: 0;
+}
+
+.sa-nav-tabs-grey + .tab-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.sa-nav-tabs-grey + .tab-content .alert-light {
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.nav-primary .nav-item .nav-link {
+  border-bottom-color: #00B2B2;
+}
+
+.nav-primary .nav-item .nav-link:hover {
+  border-bottom-color: #00B2B2 !important;
+}
+
+.nav-primary + .tab-content {
+  border-color: #00B2B2;
+}
+
+.nav-secondary .nav-item .nav-link {
+  border-bottom-color: #004D4D;
+}
+
+.nav-secondary .nav-item .nav-link:hover {
+  border-bottom-color: #004D4D !important;
+}
+
+.nav-secondary + .tab-content {
+  border-color: #004D4D;
+}
+
 @media only screen and (max-width: 768px) {
   .sard-nav-tabs {
     display: block;

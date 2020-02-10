@@ -1105,13 +1105,31 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
     // Navs -------------------------------------
     
     .nav-primary.nav.nav-tabs .nav-item{
-      .nav-link{
+      .nav-link{border-bottom-color: $theme-primary!important;
+        &:focus, &:hover{ border-bottom-color: $theme-primary!important;}
         &.active{
           background-color: $theme-primary;
           border-color: $theme-primary;
-          border-bottom:2px solid $theme-primary;
+          border-bottom-color: $theme-primary;
         }
       }
+    }
+    .nav-primary + .tab-content{
+      border-color: $theme-primary;
+    }
+   
+    .nav-secondary.nav.nav-tabs .nav-item{
+      .nav-link{border-bottom-color: $theme-secondary!important;
+        &:focus, &:hover{ border-bottom-color: $theme-secondary!important;}
+        &.active{
+          background-color: $theme-secondary;
+          border-color: $theme-secondary;
+          border-bottom-color: $theme-secondary;
+        }
+      }
+    }
+    .nav-secondary + .tab-content{
+      border-color: $theme-secondary;
     }
     
     .nav-primary.nav.nav-pills .nav-link.active{
@@ -1121,17 +1139,6 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
         background-color: $theme-primary;
       }
     }
-    
-    .nav-secondary.nav.nav-tabs .nav-item{
-      .nav-link{
-        &.active{
-          background-color:$theme-secondary;
-          border-color:$theme-secondary;
-          border-bottom:2px solid$theme-secondary;
-        }
-      }
-    }
-    
     .nav-secondary.nav.nav-pills .nav-link.active{
       background-color:$theme-secondary;
       &:focus,

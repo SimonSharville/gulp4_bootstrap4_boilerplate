@@ -40,16 +40,16 @@
 %hr
 .row
   .col-sm-24
-    %h4 Tabs
+    %h4 Nav Tabs .sa-nav-tabs
     %p 
-      Takes the basic nav from above and adds the 
-      %code .nav-tabs 
-      class to generate a tabbed interface. Use them to create tabbable regions with our tab JavaScript plugin.
-    %ul#nav-tab.nav.nav-tabs.mb-3{:role => "tablist"}
+      This is the basic bootstrap nav-tabs with the class of  
+      %code .sa-nav-tabs 
+      class added to generate a tabbed interface.
+    %ul#nav-tab.nav.nav-tabs.sa-nav-tabs{:role => "tablist"}
       %li.nav-item
         %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home", :role => "tab"} Home
       %li.nav-item
-        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-profile", :role => "tab"} Profile
+        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-cards", :role => "tab"} With Cards
       %li.nav-item
         %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact", :role => "tab"} Contact
       %li.nav-item
@@ -58,15 +58,54 @@
       #nav-tabs-home.tab-pane.fade.show.active{"aria-labelledby" => "tabs-home-tab", :role => "tabpanel"} 
         %h6.base Nav Tab Home
         %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. 
+        %p  
+          Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
 
 
-      #nav-tabs-profile.tab-pane.fade{"aria-labelledby" => "tabs-profile-tab", :role => "tabpanel"} 
-        %h6.base Nav Tab Profile
-        %p
-          Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+      #nav-tabs-cards.tab-pane.fade{"aria-labelledby" => "tabs-card-tab", :role => "tabpanel"} 
+        .card.card-sard
+          .card-header
+            Card Sard 
+          .card-body
+            Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
 
       #nav-tabs-contact.tab-pane.fade{"aria-labelledby" => "tabs-contact-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+    %h4.mt-3 Nav Tabs Grey .sa-nav-tabs-grey
+    %p 
+      This is the basic bootstrap nav-tabs with the class of  
+      %code .sa-nav-tabs-grey 
+      class added to generate a tabbed interface. This makes the background of the tab-content grey and any card bodies inside it white.
+    %ul#nav-tab.nav.nav-tabs.sa-nav-tabs-grey{:role => "tablist"}
+      %li.nav-item
+        %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home-grey", :role => "tab"} Home
+      %li.nav-item
+        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-cards-grey", :role => "tab"} With Cards
+      %li.nav-item
+        %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact-grey", :role => "tab"} Contact
+      %li.nav-item
+        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+    #nav-tabs-tabContent.tab-content
+      #nav-tabs-home-grey.tab-pane.fade.show.active{"aria-labelledby" => "tabs-home-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. 
+        %p  
+          Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #nav-tabs-cards-grey.tab-pane.fade{"aria-labelledby" => "tabs-card-tab", :role => "tabpanel"} 
+        .card.card-sard
+          .card-header
+            Card Sard 
+          .card-body
+            Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+      #nav-tabs-contact-grey.tab-pane.fade{"aria-labelledby" => "tabs-contact-tab", :role => "tabpanel"} 
         %h6.base Nav Tab Contact
         %p
           Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
@@ -115,7 +154,7 @@
     .row
       .col-6
         #v-pills-tab.nav.flex-column.nav-pills{"aria-orientation" => "vertical", :role => "tablist"}
-          %a#v-pills-home-tab.nav-link.active{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-home", :role => "tab"} Home
+          %a#v-pills-home-tab.nav-link{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-home", :role => "tab"} Home
           %a#v-pills-profile-tab.nav-link{"aria-controls" => "v-pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-profile", :role => "tab"} Profile
           %a#v-pills-messages-tab.nav-link{"aria-controls" => "v-pills-messages", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-messages", :role => "tab"} Messages
           %a#v-pills-settings-tab.nav-link{"aria-controls" => "v-pills-settings", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-settings", :role => "tab"} Settings
@@ -160,7 +199,7 @@
       to justify the tabs evenly, or 
       %code .nav-fill 
       to justify the tabs unevenly.
-    %ul#nav-tab.nav.nav-tabs.nav-justified.mb-3{:role => "tablist"}
+    %ul#nav-tab.nav.nav-tabs.nav-justified.sa-nav-tabs{:role => "tablist"}
       %li.nav-item
         %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home-justify", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home-justify", :role => "tab"} Home
       %li.nav-item
@@ -251,20 +290,42 @@
     %h3 SARD Nav Colouring 
     %p The default navs, nav pills and vertical nav pills are set to the Default SARD Grey but to change their colouring dependent on the trust theme, then use one of the following.
   .col-sm-24
-    %h4 Nav Pils Primary
+    %h4 Nav Primary
     %p 
       Add 
       %code .nav-primary 
       \.
-    %ul#nav-tab.nav.nav-tabs.nav-primary.mb-3{:role => "tablist"}
+    %ul#nav-tab.nav.nav-tabs.sa-nav-tabs.nav-primary{:role => "tablist"}
       %li.nav-item
-        %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home", :role => "tab"} Home
+        %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home-primary", :role => "tab"} Home
       %li.nav-item
-        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-profile", :role => "tab"} Profile
+        %a#nav-tabs-card-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-card-primary", :role => "tab"} Card
       %li.nav-item
-        %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact", :role => "tab"} Contact
+        %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact-primary", :role => "tab"} Contact
       %li.nav-item
         %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+    #nav-tabs-tabContent.tab-content
+      #nav-tabs-home-primary.tab-pane.fade.show.active{"aria-labelledby" => "tabs-home-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. 
+        %p  
+          Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #nav-tabs-card-primary.tab-pane.fade{"aria-labelledby" => "tabs-card-tab", :role => "tabpanel"} 
+        .card.card-sard
+          .card-header
+            Card Sard 
+          .card-body
+            Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+      #nav-tabs-contact-primary.tab-pane.fade{"aria-labelledby" => "tabs-contact-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+
     %br/
     %ul#pills-tab.nav.nav-pills.nav-primary.mb-3{:role => "tablist"}
       %li.nav-item
@@ -273,7 +334,9 @@
         %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile", :role => "tab"} Profile
       %li.nav-item
         %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact", :role => "tab"} Contact
-    
+
+
+
   .col-sm-24.mt-3
     .row
       .col-6
@@ -307,20 +370,41 @@
     
     .col-sm-24
     %hr/
-    %h4 Nav Pils Secondary
+    %h4 Nav Secondary
     %p 
       Add 
       %code .nav-secondary 
       \.
-    %ul#nav-tab.nav.nav-tabs.nav-secondary.mb-3{:role => "tablist"}
+    %ul#nav-tab.nav.nav-tabs.sa-nav-tabs.nav-secondary{:role => "tablist"}
       %li.nav-item
-        %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home", :role => "tab"} Home
+        %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home-secondary", :role => "tab"} Home
       %li.nav-item
-        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-profile", :role => "tab"} Profile
+        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-card-secondary", :role => "tab"} Card
       %li.nav-item
-        %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact", :role => "tab"} Contact
+        %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact-secondary", :role => "tab"} Contact
       %li.nav-item
         %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+    #nav-tabs-tabContent.tab-content
+      #nav-tabs-home-secondary.tab-pane.fade.show.active{"aria-labelledby" => "tabs-home-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. 
+        %p  
+          Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #nav-tabs-card-secondary.tab-pane.fade{"aria-labelledby" => "tabs-card-tab", :role => "tabpanel"} 
+        .card.card-sard
+          .card-header
+            Card Sard 
+          .card-body
+            Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+      #nav-tabs-contact-secondary.tab-pane.fade{"aria-labelledby" => "tabs-contact-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
     %br/
     %ul#pills-tab.nav.nav-pills.nav-secondary.mb-3{:role => "tablist"}
       %li.nav-item

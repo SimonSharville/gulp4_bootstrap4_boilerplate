@@ -2,13 +2,97 @@
 
 // Elements specific to a page can be found in their relative page css
 
+$sa-tab-bg:               $sa-grey-12;
+
 $tab-colour:              $sa-grey-03;
 $tab-colour-hover:        $sa-grey-05;
 $tab-shadow:              $sa-grey-07;
 $tab-colour-active:       $sa-grey-14;
 $tab-number-bg:           $sa-grey-12;
 
+// SA-Nav-Tabs ==================================
+// Don't confuse this with SARD Nav Tabs below
 
+// sa-nav-tabs ----------------------------------
+.sa-nav-tabs{
+  border-bottom: none;
+  padding: 0 8px;
+  margin-bottom: -1px;
+}
+
+.sa-nav-tabs .nav-item .nav-link{
+  border-bottom: 1px solid $tab-colour-active;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  &:hover{border-bottom: 1px solid $tab-colour-active!important;}
+  &.active {box-shadow: none;}
+}
+.sa-nav-tabs .nav-link.disabled{ color: $sa-grey-06!important;}
+
+.sa-nav-tabs + .tab-content{
+  border: 2px solid $sa-tab-bg;
+  border-radius: 8px;
+  padding: 10px 8px;
+
+  .card:last-of-type{ margin-bottom: 0; }
+
+  .pagination { margin-bottom: 0; }
+  
+  p:last-of-type{ margin-bottom: 0; }
+}
+
+// sa-nav-tabs-grey -----------------------------
+.sa-nav-tabs-grey{
+  border-bottom: none;
+  padding: 0 8px;
+  margin-bottom: -1px;
+}
+
+.sa-nav-tabs-grey .nav-item .nav-link{
+  border-bottom: 1px solid $tab-colour-active;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  &:hover{border-bottom: 1px solid $tab-colour-active!important;}
+  &.active {box-shadow: none;}
+}
+
+.sa-nav-tabs-grey .nav-link.disabled{ color: $sa-grey-06!important;}
+
+.sa-nav-tabs-grey + .tab-content{
+  border: 2px solid $sa-tab-bg;
+  background-color: $sa-bg;
+  border-radius: 8px;
+  padding: 10px 8px;
+  
+  .card{
+    background-color: white;
+  }
+
+  .card:last-of-type{ margin-bottom: 0; }
+
+  .pagination { margin-bottom: 0; }
+
+  p:last-of-type{ margin-bottom: 0; }
+
+  .alert-light{ 
+    background-color: white; 
+    margin-bottom: 0;
+  }
+}
+
+// Colourings
+.nav-primary .nav-item .nav-link{ border-bottom-color: $user-primary-colour;}
+.nav-primary .nav-item .nav-link:hover{ border-bottom-color: $user-primary-colour!important;}
+.nav-primary + .tab-content{ border-color: $user-primary-colour;}
+
+.nav-secondary .nav-item .nav-link{ border-bottom-color: $user-secondary-colour;}
+.nav-secondary .nav-item .nav-link:hover{ border-bottom-color: $user-secondary-colour!important;}
+.nav-secondary + .tab-content{ border-color: $user-secondary-colour;}
+
+
+// SARD NAV TABS ================================
 // Structure ------------------------------------
 .sard-nav-tabs{
   @include respond-to(md-break-down){
