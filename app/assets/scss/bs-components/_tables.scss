@@ -12,50 +12,52 @@ $sa-table-dark-head-bg:     $sa-grey-18;
 
 
 // Table Responsive ---------
-.table-responsive{
-  margin: -8px -10px -10px -10px;
-  width: calc(100% + 20px);
-  .table-sard{
-    margin: 0;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .table-responsive-sm{
+.container{
+  .table-responsive{
     margin: -8px -10px -10px -10px;
     width: calc(100% + 20px);
     .table-sard{
       margin: 0;
     }
   }
-}
 
-@media (max-width: 767.98px) {
-  .table-responsive-md{
-    margin: -8px -10px -10px -10px;
-    width: calc(100% + 20px);
-    .table-sard{
-      margin: 0;
+  @media (max-width: 575.98px) {
+    .table-responsive-sm{
+      margin: -8px -10px -10px -10px;
+      width: calc(100% + 20px);
+      .table-sard{
+        margin: 0;
+      }
     }
   }
-}
 
-@media (max-width: 991.98px) {
-  .table-responsive-lg{
-    margin: -8px -10px -10px -10px;
-    width: calc(100% + 20px);
-    .table-sard{
-      margin: 0;
+  @media (max-width: 767.98px) {
+    .table-responsive-md{
+      margin: -8px -10px -10px -10px;
+      width: calc(100% + 20px);
+      .table-sard{
+        margin: 0;
+      }
     }
   }
-}
 
-@media (max-width: 1199.98px) {
-  .table-responsive-xl{
-    margin: -8px -10px -10px -10px;
-    width: calc(100% + 20px);
-    .table-sard{
-      margin: 0;
+  @media (max-width: 991.98px) {
+    .table-responsive-lg{
+      margin: -8px -10px -10px -10px;
+      width: calc(100% + 20px);
+      .table-sard{
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    .table-responsive-xl{
+      margin: -8px -10px -10px -10px;
+      width: calc(100% + 20px);
+      .table-sard{
+        margin: 0;
+      }
     }
   }
 }

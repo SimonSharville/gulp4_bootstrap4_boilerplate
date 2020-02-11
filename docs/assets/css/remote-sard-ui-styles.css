@@ -20635,51 +20635,51 @@ p > a.modal-info-circle-inline::before {
   font-size: 0.875rem;
 }
 
-.table-responsive {
+.container .table-responsive {
   margin: -8px -10px -10px -10px;
   width: calc(100% + 20px);
 }
 
-.table-responsive .table-sard {
+.container .table-responsive .table-sard {
   margin: 0;
 }
 
 @media (max-width: 575.98px) {
-  .table-responsive-sm {
+  .container .table-responsive-sm {
     margin: -8px -10px -10px -10px;
     width: calc(100% + 20px);
   }
-  .table-responsive-sm .table-sard {
+  .container .table-responsive-sm .table-sard {
     margin: 0;
   }
 }
 
 @media (max-width: 767.98px) {
-  .table-responsive-md {
+  .container .table-responsive-md {
     margin: -8px -10px -10px -10px;
     width: calc(100% + 20px);
   }
-  .table-responsive-md .table-sard {
+  .container .table-responsive-md .table-sard {
     margin: 0;
   }
 }
 
 @media (max-width: 991.98px) {
-  .table-responsive-lg {
+  .container .table-responsive-lg {
     margin: -8px -10px -10px -10px;
     width: calc(100% + 20px);
   }
-  .table-responsive-lg .table-sard {
+  .container .table-responsive-lg .table-sard {
     margin: 0;
   }
 }
 
 @media (max-width: 1199.98px) {
-  .table-responsive-xl {
+  .container .table-responsive-xl {
     margin: -8px -10px -10px -10px;
     width: calc(100% + 20px);
   }
-  .table-responsive-xl .table-sard {
+  .container .table-responsive-xl .table-sard {
     margin: 0;
   }
 }
