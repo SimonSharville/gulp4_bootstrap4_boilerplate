@@ -316,6 +316,7 @@
 
 .card.card-white{
   background-color: white;
+  border-color: $sa-grey-04;
   & .card-header, .card-footer{
     background-color: white;
     color: $text;
@@ -324,11 +325,11 @@
     }
   }
   & .card-header{
-    border-bottom: 1px solid $sa-grey-04;
+    border: 1px solid $sa-grey-04;
     margin-bottom: -2px;
   }
   & .card-footer{
-    border-top: 1px solid $sa-grey-04;
+    border: 1px solid $sa-grey-04;
     margin-top: -2px;
   }
   & .card-body.border-bottom{
@@ -349,11 +350,11 @@
     color: $text;
   }
   & .card-header{
-    border-bottom: 1px solid white;
+    border: 1px solid white;
     margin-bottom: -2px;
   }
   & .card-footer{
-    border-top: 1px solid white;
+    border: 1px solid white;
     margin-top: -2px;
   }
   & .card-body.border-bottom{

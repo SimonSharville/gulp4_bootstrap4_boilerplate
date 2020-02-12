@@ -17292,6 +17292,7 @@ a.badge.badge-light {
 
 .card.card-white {
   background-color: white;
+  border-color: #D9D6D6;
 }
 
 .card.card-white .card-header, .card.card-white .card-footer {
@@ -17304,12 +17305,12 @@ a.badge.badge-light {
 }
 
 .card.card-white .card-header {
-  border-bottom: 1px solid #D9D6D6;
+  border: 1px solid #D9D6D6;
   margin-bottom: -2px;
 }
 
 .card.card-white .card-footer {
-  border-top: 1px solid #D9D6D6;
+  border: 1px solid #D9D6D6;
   margin-top: -2px;
 }
 
@@ -17336,12 +17337,12 @@ a.badge.badge-light {
 }
 
 .card.card-white.outline .card-header {
-  border-bottom: 1px solid white;
+  border: 1px solid white;
   margin-bottom: -2px;
 }
 
 .card.card-white.outline .card-footer {
-  border-top: 1px solid white;
+  border: 1px solid white;
   margin-top: -2px;
 }
 
