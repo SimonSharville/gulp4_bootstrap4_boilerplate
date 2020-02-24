@@ -13613,10 +13613,6 @@ a.text-dark:hover, a.text-dark:focus {
   content: "\e033";
 }
 
-.si-circle-dot:before {
-  content: "\e034";
-}
-
 .si-comment-left:before {
   content: "\e035";
 }
@@ -14141,11 +14137,11 @@ a.text-dark:hover, a.text-dark:focus {
   content: "\e0b7";
 }
 
-.si-status-submitted-circle-136:before {
+.si-status-submitted-circle:before {
   content: "\e0b8";
 }
 
-.si-status-submitted-circle-140:before {
+.si-status-success-circle:before {
   content: "\e0b9";
 }
 
@@ -14185,11 +14181,11 @@ a.text-dark:hover, a.text-dark:focus {
   content: "\e0c2";
 }
 
-.si-suoer-admin-circle:before {
+.si-super-admin-circle:before {
   content: "\e0c3";
 }
 
-.si-suoer-admin-circle-o:before {
+.si-super-admin-circle-o:before {
   content: "\e0c4";
 }
 
@@ -14215,6 +14211,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .si-video-play-circle-o:before {
   content: "\e0ca";
+}
+
+.si-dot-circle:before {
+  content: "\e034";
 }
 
 .si {
@@ -14597,9 +14597,9 @@ a.text-dark:hover, a.text-dark:focus {
   color: #A7BF30;
 }
 
-.si-sard-staff,
-.si-sard-staff-circle,
-.si-sard-staff-circle-o {
+.si-sard-team-member,
+.si-sard-team-member-circle,
+.si-sard-team-member-circle-o {
   color: #A7BF30;
 }
 

@@ -356,9 +356,9 @@
   color: $sa-company;
 }
 
-.si-sard-staff,
-.si-sard-staff-circle,
-.si-sard-staff-circle-o {
+.si-sard-team-member,
+.si-sard-team-member-circle,
+.si-sard-team-member-circle-o {
   color: $sa-company;
 }
 
@@ -428,4 +428,13 @@
 //   font-family: "Font Awesome 5 Free"; 
 //   content: "\f057";  // <i class="fas fa-times-circle"></i>
 //   font-weight: 400;  // Set the font-weight: 900 (Solid), 400 (Regular or Brands), 300 (Light(pro))
+// }
+
+// Example
+// .scrollToTop:before{
+//   content: "\e016";
+//   font-family: "sard-icons";
+//   color:white;
+//   font-size: 1.5em;
+//   border-radius: 50%;
 // }
