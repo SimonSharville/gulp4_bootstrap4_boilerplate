@@ -37,6 +37,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+// Update from here -----------------------------
+
 .si-align-center:before {
   content: "\e000";
 }
@@ -72,18 +75,6 @@
 }
 .si-align-right-circle-o:before {
   content: "\e00b";
-}
-.si-approve:before {
-  content: "\e00c";
-}
-.si-approve-circle:before {
-  content: "\e00d";
-}
-.si-approve-circle-o:before {
-  content: "\e00e";
-}
-.si-approve-o:before {
-  content: "\e00f";
 }
 .si-arrow-down-circle:before {
   content: "\e010";
@@ -226,9 +217,6 @@
 .si-feedback:before {
   content: "\e03f";
 }
-.si-feedback-o:before {
-  content: "\e040";
-}
 .si-flower-4:before {
   content: "\e041";
 }
@@ -264,9 +252,6 @@
 }
 .si-nav-icon-admin:before {
   content: "\e04c";
-}
-.si-nav-icon-admin-o:before {
-  content: "\e04d";
 }
 .si-nav-icon-site:before {
   content: "\e04e";
@@ -391,18 +376,6 @@
 .si-quote-o:before {
   content: "\e076";
 }
-.si-reject:before {
-  content: "\e077";
-}
-.si-reject-circle:before {
-  content: "\e078";
-}
-.si-reject-circle-o:before {
-  content: "\e079";
-}
-.si-reject-o:before {
-  content: "\e07a";
-}
 .si-sard-charity:before {
   content: "\e07b";
 }
@@ -474,12 +447,6 @@
 }
 .si-sort-asc:before {
   content: "\e092";
-}
-.si-sort-both:before {
-  content: "\e093";
-}
-.si-sort-desc:before {
-  content: "\e094";
 }
 .si-speech-bubble-left:before {
   content: "\e095";
@@ -571,18 +538,6 @@
 .si-status-na-o:before {
   content: "\e0b2";
 }
-.si-status-recommended:before {
-  content: "\e0b3";
-}
-.si-status-recommended-circle:before {
-  content: "\e0b4";
-}
-.si-status-recommended-circle-o:before {
-  content: "\e0b5";
-}
-.si-status-recommended-o:before {
-  content: "\e0b6";
-}
 .si-status-submitted:before {
   content: "\e0b7";
 }
@@ -631,12 +586,6 @@
 .si-super-admin-o:before {
   content: "\e0c6";
 }
-.si-user-circle:before {
-  content: "\e0c7";
-}
-.si-user-circle-o:before {
-  content: "\e0c8";
-}
 .si-video-play-circle:before {
   content: "\e0c9";
 }
@@ -645,4 +594,148 @@
 }
 .si-dot-circle:before {
   content: "\e034";
+}
+.si-nav-icon-admin-o:before {
+  content: "\e040";
+}
+.si-feedback-o:before {
+  content: "\e04d";
+}
+.si-sort-desc:before {
+  content: "\e094";
+}
+.si-sort-both:before {
+  content: "\e093";
+}
+.si-approve:before {
+  content: "\e00c";
+}
+.si-approve-circle:before {
+  content: "\e00d";
+}
+.si-approve-circle-o:before {
+  content: "\e00e";
+}
+.si-reject:before {
+  content: "\e077";
+}
+.si-reject-circle:before {
+  content: "\e078";
+}
+.si-reject-circle-o:before {
+  content: "\e079";
+}
+.si-status-recommended:before {
+  content: "\e0b3";
+}
+.si-status-recommended-circle:before {
+  content: "\e0b4";
+}
+.si-status-recommended-circle-o:before {
+  content: "\e0b5";
+}
+.si-chevron-down-x1:before {
+  content: "\e00f";
+}
+.si-chevron-down-x2:before {
+  content: "\e07a";
+}
+.si-chevron-down-x3:before {
+  content: "\e0b6";
+}
+.si-chevron-left-x1:before {
+  content: "\e0cb";
+}
+.si-chevron-left-x2:before {
+  content: "\e0cc";
+}
+.si-chevron-left-x3:before {
+  content: "\e0cd";
+}
+.si-chevron-right-x1:before {
+  content: "\e0ce";
+}
+.si-chevron-right-x2:before {
+  content: "\e0cf";
+}
+.si-chevron-right-x3:before {
+  content: "\e0d0";
+}
+.si-chevron-up-x1:before {
+  content: "\e0d1";
+}
+.si-chevron-up-x2:before {
+  content: "\e0d2";
+}
+.si-chevron-up-x3:before {
+  content: "\e0d3";
+}
+.si-ros-shift-swap:before {
+  content: "\e0d4";
+}
+.si-ros-shift-swap-agreed-circle:before {
+  content: "\e0d5";
+}
+.si-ros-shift-swap-agreed-circle-o:before {
+  content: "\e0d6";
+}
+.si-ros-shift-swap-cancelled-circle:before {
+  content: "\e0d7";
+}
+.si-ros-shift-swap-cancelled-circle-o:before {
+  content: "\e0d8";
+}
+.si-ros-shift-swap-circle:before {
+  content: "\e0d9";
+}
+.si-ros-shift-swap-circle-o:before {
+  content: "\e0da";
+}
+.si-ros-shift-swap-pending-circle:before {
+  content: "\e0db";
+}
+.si-ros-shift-swap-pending-circle-o:before {
+  content: "\e0dc";
+}
+.si-ros-shift-swap-processed-circle:before {
+  content: "\e0dd";
+}
+.si-ros-shift-swap-processed-circle-o:before {
+  content: "\e0de";
+}
+.si-ros-shift-swap-rejected-circle:before {
+  content: "\e0df";
+}
+.si-ros-shift-swap-rejected-circle-o:before {
+  content: "\e0e0";
+}
+.si-ros-shift-swap-reverted-circle:before {
+  content: "\e0e1";
+}
+.si-ros-shift-swap-reverted-circle-o:before {
+  content: "\e0e2";
+}
+.si-user:before {
+  content: "\e0c7";
+}
+.si-user-circle:before {
+  content: "\e0c8";
+}
+.si-user-circle-o:before {
+  content: "\e0e3";
+}
+.si-users:before {
+  content: "\e0e4";
+}
+.si-users-circle:before {
+  content: "\e0e5";
+}
+.si-users-circle-o:before {
+  content: "\e0e6";
+}
+.si-prod-foundry:before {
+  content: "\e0e7";
+}
+.si-prod-foundry-o:before {
+  content: "\e0e8";
 }
