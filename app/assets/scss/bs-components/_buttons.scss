@@ -626,11 +626,13 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .card-sard .card-body .buttons{
-  border-top: 1px solid white;
-  padding-top: 8px;
+  padding: 8px 0 0 0;
 }
 
-.card-sard .card-body .buttons.no-border{
-  border-top: none;
+.card-sard .card-body .buttons.border{
+  border-top: 1px solid white;
   padding-top: 0px;
+}
+.card-body.buttons{
+  margin-top: -8px;
 }

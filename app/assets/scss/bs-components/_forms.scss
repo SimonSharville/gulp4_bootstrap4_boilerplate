@@ -29,9 +29,8 @@ label {
 }
 
 // Form Group adjustments =======================
-.form-group:last-of-type{
-  margin-bottom: 0;
-}
+.form-group{ margin-bottom: 8px;}
+.form-group:last-of-type{margin-bottom: 0;}
 
 .form-group .form-check:last-of-type,
 .form-group .sa-checkbox:last-of-type{

@@ -17080,13 +17080,16 @@ a.badge.badge-light {
 }
 
 .card-sard .card-body .buttons {
-  border-top: 1px solid white;
-  padding-top: 8px;
+  padding: 8px 0 0 0;
 }
 
-.card-sard .card-body .buttons.no-border {
-  border-top: none;
+.card-sard .card-body .buttons.border {
+  border-top: 1px solid white;
   padding-top: 0px;
+}
+
+.card-body.buttons {
+  margin-top: -8px;
 }
 
 .card {
@@ -18171,6 +18174,10 @@ label {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.1rem #00B2B2;
   box-shadow: 0 0 0 0.1rem #00B2B2;
+}
+
+.form-group {
+  margin-bottom: 8px;
 }
 
 .form-group:last-of-type {
