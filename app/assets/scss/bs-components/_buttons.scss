@@ -607,6 +607,7 @@ $btn-default-colour: $sa-grey-14;
 .btn-group{
   border-radius: 2rem;
   box-shadow:         0px 1px 1px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
 .btn-group.with-divide .btn{
