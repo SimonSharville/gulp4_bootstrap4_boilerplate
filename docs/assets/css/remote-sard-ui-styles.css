@@ -16658,6 +16658,36 @@ a.badge.badge-light {
   left: -5px;
 }
 
+.btn-add-cal {
+  background-color: #00B2B2;
+  color: white !important;
+}
+
+.btn-add-cal:hover {
+  background-color: #009999;
+}
+
+.btn-add-cal:active {
+  background-color: #007f7f;
+}
+
+.btn-add-cal:focus, .btn-add-cal.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 178, 178, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 178, 178, 0.25);
+}
+
+.btn-add-cal::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f271";
+  color: white;
+  font-weight: 400;
+  font-size: 1.45rem;
+  line-height: 1rem;
+  position: relative;
+  top: 3px;
+  left: -3px;
+}
+
 .btn-back {
   background-color: #615E5C;
   color: white !important;
@@ -16778,6 +16808,36 @@ a.badge.badge-light {
   left: -3px;
 }
 
+.btn-print {
+  background-color: #00B2B2;
+  color: white !important;
+}
+
+.btn-print:hover {
+  background-color: #008ec7;
+}
+
+.btn-print:active {
+  background-color: #007cad;
+}
+
+.btn-print:focus, .btn-print.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 160, 224, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 160, 224, 0.25);
+}
+
+.btn-print::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f02f";
+  color: white;
+  font-weight: 900;
+  font-size: 1.45rem;
+  line-height: 1rem;
+  position: relative;
+  top: 3px;
+  left: -3px;
+}
+
 .btn-refresh {
   background-color: #359E00;
   color: white !important;
@@ -16829,7 +16889,7 @@ a.badge.badge-light {
 .btn-sm::after, .btn-group-sm > .btn::after {
   font-size: 1.1rem;
   top: 2px;
-  right: -5px;
+  right: -2px;
 }
 
 .btn-xs::before {
