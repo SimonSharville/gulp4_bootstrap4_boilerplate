@@ -14409,6 +14409,34 @@ a.text-dark:hover, a.text-dark:focus {
   content: "\e0fa";
 }
 
+.si-download:before {
+  content: "\e0fb";
+}
+
+.si-print:before {
+  content: "\e0fc";
+}
+
+.si-refresh:before {
+  content: "\e0fd";
+}
+
+.si-sign-in:before {
+  content: "\e0fe";
+}
+
+.si-sign-out:before {
+  content: "\e0ff";
+}
+
+.si-sync:before {
+  content: "\e100";
+}
+
+.si-upload:before {
+  content: "\e101";
+}
+
 .si {
   font-family: "sard-icons";
   position: relative;
