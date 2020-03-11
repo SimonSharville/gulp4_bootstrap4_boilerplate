@@ -16583,7 +16583,43 @@ a.badge.badge-light {
   line-height: 0;
   position: relative;
   top: 3.5px;
+  left: -4px;
+}
+
+.btn-save.btn-lg::before, .btn-group-lg > .btn-save.btn::before {
   left: -5px;
+}
+
+.btn-save.btn-sm::before, .btn-group-sm > .btn-save.btn::before {
+  left: -3px;
+}
+
+.btn-save.btn-xs::before {
+  left: -2px;
+}
+
+.btn-save.btn-notext.btn-lg, .btn-group-lg > .btn-save.btn-notext.btn {
+  padding: .575rem 0.65rem;
+}
+
+.btn-save.btn-notext.btn-lg::before, .btn-group-lg > .btn-save.btn-notext.btn::before {
+  left: 0px;
+}
+
+.btn-save.btn-notext.btn-sm, .btn-group-sm > .btn-save.btn-notext.btn {
+  padding: .25rem 0.25rem;
+}
+
+.btn-save.btn-notext.btn-sm::before, .btn-group-sm > .btn-save.btn-notext.btn::before {
+  left: 0px;
+}
+
+.btn-save.btn-notext.btn-xs {
+  padding: .2rem 0.2rem;
+}
+
+.btn-save.btn-notext.btn-xs::before {
+  left: 0px;
 }
 
 .btn-submit {
@@ -16634,15 +16670,45 @@ a.badge.badge-light {
 }
 
 .btn-sign-in::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f2f6";
+  font-family: "sard-icons";
+  content: "\e0fe";
   color: white;
-  font-size: 1.45rem;
-  font-weight: 900;
+  font-size: 1.7rem;
   line-height: 0;
   position: relative;
-  top: 3.5px;
-  left: -5px;
+  top: 8px;
+  left: -6px;
+}
+
+.btn-sign-in.btn-lg::before, .btn-group-lg > .btn-sign-in.btn::before {
+  font-size: 2.2rem;
+  top: 11px;
+}
+
+.btn-sign-in.btn-sm::before, .btn-group-sm > .btn-sign-in.btn::before {
+  font-size: 1.4rem;
+  top: 6px;
+}
+
+.btn-sign-in.btn-xs::before {
+  font-size: 1rem;
+  top: 4px;
+}
+
+.btn-sign-in.btn-notext {
+  padding: .375rem 0.25rem;
+}
+
+.btn-sign-in.btn-notext.btn-lg, .btn-group-lg > .btn-sign-in.btn-notext.btn {
+  padding: .575rem .3rem;
+}
+
+.btn-sign-in.btn-notext.btn-sm, .btn-group-sm > .btn-sign-in.btn-notext.btn {
+  padding: .25rem .15rem;
+}
+
+.btn-sign-in.btn-notext.btn-xs {
+  padding: .2rem .05rem;
 }
 
 .btn-sign-out {
@@ -16664,15 +16730,45 @@ a.badge.badge-light {
 }
 
 .btn-sign-out::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f2f5";
+  font-family: "sard-icons";
+  content: "\e0ff";
   color: white;
-  font-size: 1.45rem;
-  font-weight: 900;
+  font-size: 1.7rem;
   line-height: 0;
   position: relative;
-  top: 3.5px;
+  top: 8px;
   right: -6px;
+}
+
+.btn-sign-out.btn-lg::after, .btn-group-lg > .btn-sign-out.btn::after {
+  font-size: 2.2rem;
+  top: 11px;
+}
+
+.btn-sign-out.btn-sm::after, .btn-group-sm > .btn-sign-out.btn::after {
+  font-size: 1.4rem;
+  top: 6px;
+}
+
+.btn-sign-out.btn-xs::after {
+  font-size: 1rem;
+  top: 4px;
+}
+
+.btn-sign-out.btn-notext {
+  padding: .375rem 0.25rem;
+}
+
+.btn-sign-out.btn-notext.btn-lg, .btn-group-lg > .btn-sign-out.btn-notext.btn {
+  padding: .575rem .3rem;
+}
+
+.btn-sign-out.btn-notext.btn-sm, .btn-group-sm > .btn-sign-out.btn-notext.btn {
+  padding: .25rem .15rem;
+}
+
+.btn-sign-out.btn-notext.btn-xs {
+  padding: .2rem .05rem;
 }
 
 .btn-cancel {
@@ -16808,6 +16904,22 @@ a.badge.badge-light {
   left: -3px;
 }
 
+.btn-back.btn-notext {
+  padding: .375rem 0.55rem;
+}
+
+.btn-back.btn-notext.btn-lg, .btn-group-lg > .btn-back.btn-notext.btn {
+  padding: .575rem 0.75rem;
+}
+
+.btn-back.btn-notext.btn-sm, .btn-group-sm > .btn-back.btn-notext.btn {
+  padding: .25rem 0.35rem;
+}
+
+.btn-back.btn-notext.btn-xs {
+  padding: .2rem 0.2rem;
+}
+
 .btn-forward {
   background-color: #615E5C;
   color: white !important;
@@ -16838,6 +16950,22 @@ a.badge.badge-light {
   right: -6px;
 }
 
+.btn-forward.btn-notext {
+  padding: .375rem 0.55rem;
+}
+
+.btn-forward.btn-notext.btn-lg, .btn-group-lg > .btn-forward.btn-notext.btn {
+  padding: .575rem 0.75rem;
+}
+
+.btn-forward.btn-notext.btn-sm, .btn-group-sm > .btn-forward.btn-notext.btn {
+  padding: .25rem 0.35rem;
+}
+
+.btn-forward.btn-notext.btn-xs {
+  padding: .2rem 0.2rem;
+}
+
 .btn-download {
   background-color: #00a0e0;
   color: white !important;
@@ -16857,15 +16985,45 @@ a.badge.badge-light {
 }
 
 .btn-download::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f381";
+  font-family: "sard-icons";
+  content: "\e0fb";
   color: white;
-  font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   line-height: 0;
   position: relative;
-  top: 2px;
+  top: 8px;
   left: -3px;
+}
+
+.btn-download.btn-lg::before, .btn-group-lg > .btn-download.btn::before {
+  font-size: 2rem;
+  top: 10px;
+}
+
+.btn-download.btn-sm::before, .btn-group-sm > .btn-download.btn::before {
+  font-size: 1.4rem;
+  top: 7px;
+}
+
+.btn-download.btn-xs::before {
+  font-size: 1.1rem;
+  top: 5px;
+}
+
+.btn-download.btn-notext {
+  padding: .375rem 0.25rem;
+}
+
+.btn-download.btn-notext.btn-lg, .btn-group-lg > .btn-download.btn-notext.btn {
+  padding: .575rem 0.45rem;
+}
+
+.btn-download.btn-notext.btn-sm, .btn-group-sm > .btn-download.btn-notext.btn {
+  padding: .25rem 0.15rem;
+}
+
+.btn-download.btn-notext.btn-xs {
+  padding: .2rem 0.1rem;
 }
 
 .btn-upload {
@@ -16887,15 +17045,45 @@ a.badge.badge-light {
 }
 
 .btn-upload::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f382";
+  font-family: "sard-icons";
+  content: "\e101";
   color: white;
-  font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   line-height: 0;
   position: relative;
-  top: 2px;
+  top: 8px;
   left: -3px;
+}
+
+.btn-upload.btn-lg::before, .btn-group-lg > .btn-upload.btn::before {
+  font-size: 2rem;
+  top: 10px;
+}
+
+.btn-upload.btn-sm::before, .btn-group-sm > .btn-upload.btn::before {
+  font-size: 1.4rem;
+  top: 7px;
+}
+
+.btn-upload.btn-xs::before {
+  font-size: 1.1rem;
+  top: 5px;
+}
+
+.btn-upload.btn-notext {
+  padding: .375rem 0.25rem;
+}
+
+.btn-upload.btn-notext.btn-lg, .btn-group-lg > .btn-upload.btn-notext.btn {
+  padding: .575rem 0.45rem;
+}
+
+.btn-upload.btn-notext.btn-sm, .btn-group-sm > .btn-upload.btn-notext.btn {
+  padding: .25rem 0.15rem;
+}
+
+.btn-upload.btn-notext.btn-xs {
+  padding: .2rem 0.1rem;
 }
 
 .btn-print {
@@ -16917,15 +17105,38 @@ a.badge.badge-light {
 }
 
 .btn-print::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f02f";
+  font-family: "sard-icons";
+  content: "\e0fc";
   color: white;
-  font-weight: 900;
   font-size: 1.45rem;
   line-height: 0;
   position: relative;
-  top: 3px;
+  top: 7px;
   left: -3px;
+}
+
+.btn-print.btn-lg::before, .btn-group-lg > .btn-print.btn::before {
+  top: 7px;
+}
+
+.btn-print.btn-sm::before, .btn-group-sm > .btn-print.btn::before {
+  top: 4px;
+}
+
+.btn-print.btn-xs::before {
+  top: 2px;
+}
+
+.btn-print.btn-notext.btn-lg, .btn-group-lg > .btn-print.btn-notext.btn {
+  padding: .575rem 0.6rem;
+}
+
+.btn-print.btn-notext.btn-sm, .btn-group-sm > .btn-print.btn-notext.btn {
+  padding: .25rem 0.3rem;
+}
+
+.btn-print.btn-notext.btn-xs {
+  padding: .2rem 0.15rem;
 }
 
 .btn-refresh {
@@ -16947,15 +17158,101 @@ a.badge.badge-light {
 }
 
 .btn-refresh::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f2f1";
+  font-family: "sard-icons";
+  content: "\e0fd";
   color: white;
-  font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 0;
   position: relative;
+  top: 7px;
+  left: -6px;
+}
+
+.btn-refresh.btn-lg::before, .btn-group-lg > .btn-refresh.btn::before {
+  font-size: 2rem;
+  top: 10px;
+}
+
+.btn-refresh.btn-sm::before, .btn-group-sm > .btn-refresh.btn::before {
+  top: 4px;
+}
+
+.btn-refresh.btn-xs::before {
   top: 2px;
-  left: -3px;
+}
+
+.btn-refresh.btn-notext {
+  padding: 0.375rem 0.375rem;
+}
+
+.btn-refresh.btn-notext.btn-lg, .btn-group-lg > .btn-refresh.btn-notext.btn {
+  padding: .575rem 0.45rem;
+}
+
+.btn-refresh.btn-notext.btn-sm, .btn-group-sm > .btn-refresh.btn-notext.btn {
+  padding: .25rem 0.15rem;
+}
+
+.btn-refresh.btn-notext.btn-xs {
+  padding: .2rem 0.15rem;
+}
+
+.btn-sync {
+  background-color: #359E00;
+  color: white !important;
+}
+
+.btn-sync:hover {
+  background-color: #2c8500;
+}
+
+.btn-sync:active {
+  background-color: #246b00;
+}
+
+.btn-sync:focus, .btn-sync.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(53, 158, 0, 0.25);
+}
+
+.btn-sync::before {
+  font-family: "sard-icons";
+  content: "\e100";
+  color: white;
+  font-size: 1.5rem;
+  line-height: 0;
+  position: relative;
+  top: 7px;
+  left: -6px;
+}
+
+.btn-sync.btn-lg::before, .btn-group-lg > .btn-sync.btn::before {
+  font-size: 2rem;
+  top: 10px;
+}
+
+.btn-sync.btn-sm::before, .btn-group-sm > .btn-sync.btn::before {
+  top: 4px;
+}
+
+.btn-sync.btn-xs::before {
+  top: 2px;
+}
+
+.btn-sync.btn-notext {
+  padding: 0.375rem 0.375rem;
+}
+
+.btn-sync.btn-notext.btn-lg, .btn-group-lg > .btn-sync.btn-notext.btn {
+  padding: .575rem 0.45rem;
+}
+
+.btn-sync.btn-notext.btn-sm, .btn-group-sm > .btn-sync.btn-notext.btn {
+  padding: .25rem 0.15rem;
+}
+
+.btn-sync.btn-notext.btn-xs {
+  padding: .2rem 0.15rem;
 }
 
 .btn-lg::before, .btn-group-lg > .btn::before {
@@ -17008,118 +17305,17 @@ a.badge.badge-light {
   right: 0;
 }
 
-.btn-notext.btn-forward {
-  padding: 0.375rem 0.5rem;
+.btn-lg.btn-notext, .btn-group-lg > .btn-notext.btn {
+  padding: 0.575rem;
 }
 
-.btn-notext.btn-back {
-  padding: 0.375rem 0.5rem;
-}
-
-.btn-notext.btn-refresh {
-  padding: 0.375rem 0.5rem;
-}
-
-.btn-notext.btn-lg, .btn-group-lg > .btn-notext.btn {
-  padding: 0.4375rem;
-}
-
-.btn-notext.btn-lg::before, .btn-group-lg > .btn-notext.btn::before {
-  left: 0;
-  right: 0;
-}
-
-.btn-notext.btn-lg::after, .btn-group-lg > .btn-notext.btn::after {
-  left: 0;
-  right: 0;
-}
-
-.btn-notext.btn-lg.btn-forward, .btn-group-lg > .btn-notext.btn-forward.btn {
-  padding: 0.4375rem 0.5625rem;
-}
-
-.btn-notext.btn-lg.btn-back, .btn-group-lg > .btn-notext.btn-back.btn {
-  padding: 0.4375rem 0.5625rem;
-}
-
-.btn-notext.btn-sm, .btn-group-sm > .btn-notext.btn {
+.btn-sm.btn-notext, .btn-group-sm > .btn-notext.btn {
   padding: 0.25rem;
 }
 
-.btn-notext.btn-sm::before, .btn-group-sm > .btn-notext.btn::before {
-  left: 0;
-  right: 0;
-}
-
-.btn-notext.btn-sm::after, .btn-group-sm > .btn-notext.btn::after {
-  left: 0;
-  right: 0;
-}
-
-.btn-notext.btn-sm.btn-forward, .btn-group-sm > .btn-notext.btn-forward.btn {
-  padding: 0.25rem 0.375rem;
-}
-
-.btn-notext.btn-sm.btn-back, .btn-group-sm > .btn-notext.btn-back.btn {
-  padding: 0.25rem 0.375rem;
-}
-
-.btn-notext.btn-xs {
-  padding: 0 0.125rem;
-}
-
-.btn-notext.btn-xs::before {
-  left: 0;
-  right: 0;
-}
-
-.btn-notext.btn-xs::after {
-  left: 0;
-  right: 0;
-}
-
-.btn-notext.btn-xs.btn-cancel {
-  padding: 0 0.1875rem;
-}
-
-.btn-notext.btn-xs.btn-forward {
-  padding: 0 0.1875rem;
-}
-
-.btn-notext.btn-xs.btn-back {
-  padding: 0 0.1875rem;
-}
-
-.btn-notext.btn-xs.btn-refresh {
-  padding: 0 0.1875rem;
-}
-
-.btn-notext.btn-xs.btn-upload {
-  padding: 0 0.1875rem;
-}
-
-.btn-notext.btn-xs.btn-download {
-  padding: 0 0.1875rem;
-}
-
-.btn-save {
-  padding-left: 0.875rem;
-}
-
-.btn-save.btn-lg, .btn-group-lg > .btn-save.btn {
-  padding-left: 1.125rem;
-}
-
-.btn-save.btn-sm, .btn-group-sm > .btn-save.btn {
-  padding-left: 0.75rem;
-}
-
-.btn-save.btn-xs {
-  padding-left: 0.5rem;
-}
-
-.btn-save.btn-notext {
-  padding-left: 0.4375rem;
+.btn-xs.btn-notext {
+  padding: 0.2rem;
+  line-height: 1;
 }
 
 .btn.btn-outline-primary {

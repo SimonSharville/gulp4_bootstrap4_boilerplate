@@ -130,7 +130,34 @@ $btn-default-colour: $sa-grey-14;
     line-height: 0;
     position: relative;
     top: 3.5px;
+    left: -4px;
+  }
+  &.btn-lg::before{
     left: -5px;
+  }
+  &.btn-sm::before{
+    left: -3px;
+  }
+  &.btn-xs::before{
+    left: -2px;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.65rem;
+    &::before{
+      left: 0px;
+    }
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.25rem;
+    &::before{
+      left: 0px;
+    }
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.2rem;
+    &::before{
+      left: 0px;
+    }
   }
 }
 
@@ -172,15 +199,38 @@ $btn-default-colour: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($success, .25);
   }
   &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f2f6" ;
+    font-family: "sard-icons";  
+    content: "\e0fe" ;
     color:white;
-    font-size: 1.45rem;
-    font-weight: 900;
+    font-size: 1.7rem;
     line-height: 0;
     position: relative;
-    top: 3.5px;
-    left: -5px;
+    top: 8px;
+    left: -6px;
+  }
+  &.btn-lg::before{
+    font-size: 2.2rem;
+    top: 11px;
+  }
+  &.btn-sm::before{
+    font-size: 1.4rem;
+    top: 6px;
+  }
+  &.btn-xs::before{
+    font-size: 1rem;
+    top: 4px;
+  }
+  &.btn-notext{
+    padding: .375rem 0.25rem;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem .3rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem .15rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem .05rem;
   }
 }
 
@@ -198,15 +248,38 @@ $btn-default-colour: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($success, .25);
   }
   &::after{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f2f5" ;
+    font-family: "sard-icons";  
+    content: "\e0ff" ;
     color:white;
-    font-size: 1.45rem;
-    font-weight: 900;
+    font-size: 1.7rem;
     line-height: 0;
     position: relative;
-    top: 3.5px;
+    top: 8px;
     right: -6px;
+  }
+  &.btn-lg::after{
+    font-size: 2.2rem;
+    top: 11px;
+  }
+  &.btn-sm::after{
+    font-size: 1.4rem;
+    top: 6px;
+  }
+  &.btn-xs::after{
+    font-size: 1rem;
+    top: 4px;
+  }
+  &.btn-notext{
+    padding: .375rem 0.25rem;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem .3rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem .15rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem .05rem;
   }
 }
 
@@ -322,6 +395,18 @@ $btn-default-colour: $sa-grey-14;
     top: 2px;
     left: -3px;
   }
+  &.btn-notext{
+    padding: .375rem 0.55rem;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.75rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.35rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.2rem;
+  }
 }
 
 .btn-forward{
@@ -348,6 +433,18 @@ $btn-default-colour: $sa-grey-14;
     top: 2px;
     right: -6px;
   }
+  &.btn-notext{
+    padding: .375rem 0.55rem;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.75rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.35rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.2rem;
+  }
 }
 
 .btn-download{
@@ -364,15 +461,39 @@ $btn-default-colour: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($sa-info, .25);
   }
   &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f381" ;
+    font-family: "sard-icons"; 
+    content: "\e0fb" ;
     color:white;
-    font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     line-height: 0;
     position: relative;
-    top: 2px;
+    top: 8px;
     left: -3px;
+  }
+  &.btn-lg::before{
+    font-size: 2rem;
+    top: 10px;
+  }
+  &.btn-sm::before{
+    font-size: 1.4rem;
+    top: 7px;
+  }
+  &.btn-xs::before{
+    font-size: 1.1rem;
+    top: 5px;
+  }
+  &.btn-notext{
+    padding: .375rem 0.25rem;
+  }
+
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.45rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.15rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.1rem;
   }
 }
 
@@ -390,15 +511,38 @@ $btn-default-colour: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($sa-info, .25);
   }
   &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f382" ;
+    font-family: "sard-icons"; 
+    content: "\e101" ;
     color:white;
-    font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     line-height: 0;
     position: relative;
-    top: 2px;
+    top: 8px;
     left: -3px;
+  }
+  &.btn-lg::before{
+    font-size: 2rem;
+    top: 10px;
+  }
+  &.btn-sm::before{
+    font-size: 1.4rem;
+    top: 7px;
+  }
+  &.btn-xs::before{
+    font-size: 1.1rem;
+    top: 5px;
+  }
+  &.btn-notext{
+    padding: .375rem 0.25rem;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.45rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.15rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.1rem;
   }
 }
 
@@ -416,15 +560,32 @@ $btn-default-colour: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($sa-info, .25);
   }
   &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f02f" ;
+    font-family: "sard-icons";  
+    content: "\e0fc" ;
     color:white;
-    font-weight: 900;
     font-size: 1.45rem;
     line-height: 0;
     position: relative;
-    top: 3px;
+    top: 7px;
     left: -3px;
+  }
+  &.btn-lg::before{
+    top: 7px;
+  }
+  &.btn-sm::before{
+    top: 4px;
+  }
+  &.btn-xs::before{
+    top: 2px;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.6rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.3rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.15rem;
   }
 }
 
@@ -442,18 +603,87 @@ $btn-default-colour: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($sa-success, .25);
   }
   &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f2f1" ;
+    font-family: "sard-icons"; 
+    content: "\e0fd" ;
     color:white;
-    font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 0;
     position: relative;
+    top: 7px;
+    left: -6px;
+  }
+  &.btn-lg::before{
+    font-size: 2rem;
+    top: 10px;
+  }
+  &.btn-sm::before{
+    top: 4px;
+  }
+  &.btn-xs::before{
     top: 2px;
-    left: -3px;
+  }
+  &.btn-notext{
+    padding: $sa-spacer-6 $sa-spacer-6
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.45rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.15rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.15rem;
   }
 }
 
+.btn-sync{
+  background-color: $sa-success;
+  color: white!important;
+  &:hover { 
+    background-color: darken($sa-success, 5%); 
+  }
+  &:active {
+    background-color: darken($sa-success, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($sa-success, .25);
+  }
+  &::before{
+    font-family: "sard-icons"; 
+    content: "\e100" ;
+    color:white;
+    font-size: 1.5rem;
+    line-height: 0;
+    position: relative;
+    top: 7px;
+    left: -6px;
+  }
+  &.btn-lg::before{
+    font-size: 2rem;
+    top: 10px;
+  }
+  &.btn-sm::before{
+    top: 4px;
+  }
+  &.btn-xs::before{
+    top: 2px;
+  }
+  &.btn-notext{
+    padding: $sa-spacer-6 $sa-spacer-6
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.45rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.15rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.15rem;
+  }
+}
+
+// Sizes
 .btn-lg::before{
   font-size: 1.7rem;
   top: 4px;
@@ -498,98 +728,19 @@ $btn-default-colour: $sa-grey-14;
     left: 0;
     right: 0;
   }
-  &.btn-forward{
-    padding: $sa-spacer-6 $sa-spacer-8;
-  }
-  &.btn-back{
-    padding: $sa-spacer-6 $sa-spacer-8;
-  }
-  &.btn-refresh{
-    padding: $sa-spacer-6 $sa-spacer-8;
-  }
+}
+.btn-lg.btn-notext{
+  padding: 0.575rem;
+}
+.btn-sm.btn-notext{
+  padding: 0.25rem;
+}
+.btn-xs.btn-notext{
+  padding: 0.2rem;
+  line-height: 1;
 }
 
-.btn-notext.btn-lg{
-  padding:  $sa-spacer-7;
-  &::before{
-    left: 0;
-    right: 0;
-  }
-  &::after{
-    left: 0;
-    right: 0;
-  }
-  &.btn-forward{
-   padding:  $sa-spacer-7 $sa-spacer-9;
-  }
-  &.btn-back{
-    padding:  $sa-spacer-7 $sa-spacer-9;
-  }
-}
 
-.btn-notext.btn-sm{
-  padding:  $sa-spacer-4;
-  &::before{
-    left: 0;
-    right: 0;
-  }
-  &::after{
-    left: 0;
-    right: 0;
-  }
-  &.btn-forward{
-   padding:  $sa-spacer-4 $sa-spacer-6;
-  }
-  &.btn-back{
-    padding:  $sa-spacer-4 $sa-spacer-6;
-  }
-}
-
-.btn-notext.btn-xs{
-  padding:  0 $sa-spacer-2;
-  &::before{
-    left: 0;
-    right: 0;
-  }
-  &::after{
-    left: 0;
-    right: 0;
-  }
-  &.btn-cancel{
-    padding: 0 $sa-spacer-3;
-  }
-  &.btn-forward{
-    padding: 0 $sa-spacer-3;
-  }
-  &.btn-back{
-    padding: 0 $sa-spacer-3;
-  }
-  &.btn-refresh{
-    padding: 0 $sa-spacer-3;
-  }
-  &.btn-upload{
-    padding: 0 $sa-spacer-3;
-  }
-  &.btn-download{
-    padding: 0 $sa-spacer-3;
-  }
-}
-
-.btn-save{
-  padding-left: $sa-spacer-14;
-  &.btn-lg{
-    padding-left: $sa-spacer-18;
-  }
-  &.btn-sm{
-    padding-left: $sa-spacer-12;
-  }
-  &.btn-xs{
-    padding-left: $sa-spacer-8;
-  }
-  &.btn-notext{
-    padding-left: $sa-spacer-7;
-  }
-}
 
 // Sard Icons ===================================
 // .sicon.btn-lg::before{
