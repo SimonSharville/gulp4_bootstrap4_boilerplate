@@ -127,7 +127,7 @@ $btn-default-colour: $sa-grey-14;
     content: "\f0c7" ;
     color:white;
     font-size: 1.45rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 3.5px;
     left: -5px;
@@ -152,7 +152,7 @@ $btn-default-colour: $sa-grey-14;
     content: "\f058" ;
     color:white;
     font-size: 1.45rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 3.5px;
     left: -5px;
@@ -177,7 +177,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-size: 1.45rem;
     font-weight: 900;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 3.5px;
     left: -5px;
@@ -203,7 +203,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-size: 1.45rem;
     font-weight: 900;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 3.5px;
     right: -6px;
@@ -228,7 +228,7 @@ $btn-default-colour: $sa-grey-14;
     content: "\f057" ;
     color:white;
     font-size: 1.45rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 3.5px;
     left: -5px;
@@ -254,7 +254,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-weight: 900;
     font-size: 1.45rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 3.5px;
     left: -5px;
@@ -275,15 +275,26 @@ $btn-default-colour: $sa-grey-14;
     box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f271" ;
+    font-family: "sard-icons"; 
+    content: "\e0f2" ;
     color:white;
-    font-weight: 400;
-    font-size: 1.45rem;
-    line-height: 1rem;
+    font-size: 1.5rem;
+    line-height: 0;
     position: relative;
-    top: 3px;
+    top: 6px;
     left: -3px;
+  }
+  &.btn-lg::before{
+    font-size: 1.8rem;
+    top: 8px;
+  }
+  &.btn-sm::before{
+    font-size: 1.2rem;
+    top: 4px;
+  }
+  &.btn-xs::before{
+    font-size: 0.8rem;
+    top: 2px;
   }
 }
 
@@ -306,7 +317,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 2px;
     left: -3px;
@@ -332,7 +343,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 2px;
     right: -6px;
@@ -358,7 +369,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 2px;
     left: -3px;
@@ -384,7 +395,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 2px;
     left: -3px;
@@ -410,7 +421,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-weight: 900;
     font-size: 1.45rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 3px;
     left: -3px;
@@ -436,7 +447,7 @@ $btn-default-colour: $sa-grey-14;
     color:white;
     font-weight: 900;
     font-size: 1.2rem;
-    line-height: 1rem;
+    line-height: 0;
     position: relative;
     top: 2px;
     left: -3px;
@@ -444,15 +455,15 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-lg::before{
-    font-size: 1.7rem;
-    top: 4px;
-    left: -8px;
-  }
-  .btn-lg::after{
-    font-size: 1.7rem;
-    top: 4px;
-    right: -10px;
-  }
+  font-size: 1.7rem;
+  top: 4px;
+  left: -8px;
+}
+.btn-lg::after{
+  font-size: 1.7rem;
+  top: 4px;
+  right: -10px;
+}
 
 .btn-sm::before{
   font-size: 1.1rem;
@@ -579,6 +590,19 @@ $btn-default-colour: $sa-grey-14;
     padding-left: $sa-spacer-7;
   }
 }
+
+// Sard Icons ===================================
+// .sicon.btn-lg::before{
+//   font-size: 1.8rem;
+//   top: 7px;
+//   left: -8px;
+// }
+// .sicon.btn-lg::after{
+//   font-size: 1.8rem;
+//   top: 7px;
+//   right: -10px;
+// }
+
 
 // Button Outlines ==============================
 .btn.btn-outline-primary{
