@@ -13613,22 +13613,6 @@ a.text-dark:hover, a.text-dark:focus {
   content: "\e038";
 }
 
-.si-dot:before {
-  content: "\e039";
-}
-
-.si-email:before {
-  content: "\e03a";
-}
-
-.si-email-circle:before {
-  content: "\e03b";
-}
-
-.si-email-circle-o:before {
-  content: "\e03c";
-}
-
 .si-evidence:before {
   content: "\e03d";
 }
@@ -13659,22 +13643,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .si-lock:before {
   content: "\e045";
-}
-
-.si-lock-circle:before {
-  content: "\e046";
-}
-
-.si-lock-circle-o:before {
-  content: "\e047";
-}
-
-.si-logo-nhs:before {
-  content: "\e048";
-}
-
-.si-logo-nhs-oxleas:before {
-  content: "\e049";
 }
 
 .si-logo-nhs-oxleas-joint:before {
@@ -13855,10 +13823,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .si-sard-charity:before {
   content: "\e07b";
-}
-
-.si-sard-charity-circle:before {
-  content: "\e07c";
 }
 
 .si-sard-charity-circle-o:before {
@@ -14409,16 +14373,8 @@ a.text-dark:hover, a.text-dark:focus {
   content: "\e0fa";
 }
 
-.si-download:before {
-  content: "\e0fb";
-}
-
 .si-print:before {
   content: "\e0fc";
-}
-
-.si-refresh:before {
-  content: "\e0fd";
 }
 
 .si-sign-in:before {
@@ -14429,12 +14385,68 @@ a.text-dark:hover, a.text-dark:focus {
   content: "\e0ff";
 }
 
+.si-sard-charity-circle:before {
+  content: "\e07c";
+}
+
+.si-refresh:before {
+  content: "\e0fd";
+}
+
 .si-sync:before {
   content: "\e100";
 }
 
+.si-dot:before {
+  content: "\e039";
+}
+
+.si-email:before {
+  content: "\e03a";
+}
+
+.si-email-circle:before {
+  content: "\e03b";
+}
+
+.si-email-circle-o:before {
+  content: "\e03c";
+}
+
+.si-lock-circle:before {
+  content: "\e046";
+}
+
+.si-lock-circle-o:before {
+  content: "\e047";
+}
+
+.si-logo-nhs:before {
+  content: "\e048";
+}
+
+.si-logo-nhs-oxleas:before {
+  content: "\e049";
+}
+
 .si-upload:before {
   content: "\e101";
+}
+
+.si-download:before {
+  content: "\e0fb";
+}
+
+.si-location:before {
+  content: "\e102";
+}
+
+.si-location-circle:before {
+  content: "\e103";
+}
+
+.si-location-circle-o:before {
+  content: "\e104";
 }
 
 .si {
