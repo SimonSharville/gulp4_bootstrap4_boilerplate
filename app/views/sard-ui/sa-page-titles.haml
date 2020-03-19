@@ -100,7 +100,7 @@
       %hr.mb-4
       .row
         .col-sm-24
-          .page-title-with-state
+          .page-title-wrapper
             .page-title
               .name
                 Mrs Bella Owen
@@ -114,7 +114,7 @@
           %p
             This is constructed as follows:
             %br/
-            %code .page-title-with-state
+            %code .page-title-wrapper
             %br/
             %code &nbsp; .page-title
             %br/
@@ -130,6 +130,9 @@
             %br/
             %code &nbsp; &nbsp; &nbsp; .state 
             %span Draft
+
+          %p.note 
+            The .page-title-wrapper uses display flex with justify-content: space-between to sperate the two halves. 
 
       %hr.mb-4
       .row

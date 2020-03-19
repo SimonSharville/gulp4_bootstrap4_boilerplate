@@ -2,6 +2,11 @@
 
 // Default Page titles ------
 
+.page-title-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-title{
   font-size: 1.1rem; // 18px
   margin-top: 0;
@@ -157,30 +162,30 @@
 
 .page-state .current-state.Draft,
 .page-state .current-state.draft{
-  background-image: url("../../assets/rag-icons/rag-pt-draft@1x.png");
+  background-image: url("../../assets/images/rag-icons/rag-pt-draft@1x.png");
 }
 .page-state .current-state.Submitted,
 .page-state .current-state.submitted{
-  background-image: url("../../assets/rag-icons/rag-pt-submitted@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-pt-submitted@2x.png");
 }
 .page-state .current-state.Complete,
 .page-state .current-state.complete{
-  background-image: url("../../assets/rag-icons/rag-pt-complete@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-pt-complete@2x.png");
 }
 .page-state .current-state.Approved,
 .page-state .current-state.approved{
-  background-image: url("../../assets/rag-icons/rag-pt-approved@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-pt-approved@2x.png");
 }
 .page-state .current-state.Recommended,
 .page-state .current-state.recommended{
-  background-image: url("../../assets/rag-icons/rag-pt-recommended@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-pt-recommended@2x.png");
 }
 .page-state .current-state.Abandoned,
 .page-state .current-state.abandoned{
-  background-image: url("../../assets/rag-icons/rag-pt-abandoned@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-pt-abandoned@2x.png");
 }
 .page-state .current-state.Due,
 .page-state .current-state.due{
-  background-image: url("../../assets/rag-icons/rag-pt-due@2x.png");
+  background-image: url("../../assets/images/rag-icons/rag-pt-due@2x.png");
 }
   
