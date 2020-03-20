@@ -186,17 +186,17 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 .btn-sign-in{
-  background-color: $success;
+  background-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($success, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($success, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($success, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::before{
     font-family: "sard-icons";  
@@ -235,17 +235,17 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-sign-out{
-  background-color: $success;
+  background-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($success, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($success, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($success, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::after{
     font-family: "sard-icons";  
@@ -448,17 +448,17 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-download{
-  background-color: $sa-info;
+  background-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($sa-info, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($sa-info, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($sa-info, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::before{
     font-family: "sard-icons"; 
@@ -498,17 +498,17 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-upload{
-  background-color: $sa-info;
+  background-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($sa-info, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($sa-info, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($sa-info, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::before{
     font-family: "sard-icons"; 
@@ -550,14 +550,14 @@ $btn-default-colour: $sa-grey-14;
   background-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($sa-info, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($sa-info, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($sa-info, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::before{
     font-family: "sard-icons";  
@@ -590,17 +590,17 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-refresh{
-  background-color: $sa-success;
+  background-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($sa-success, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($sa-success, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($sa-success, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::before{
     font-family: "sard-icons"; 
@@ -637,17 +637,17 @@ $btn-default-colour: $sa-grey-14;
 }
 
 .btn-sync{
-  background-color: $sa-success;
+  background-color: $user-primary-colour;
   color: white!important;
   &:hover { 
-    background-color: darken($sa-success, 5%); 
+    background-color: darken($user-primary-colour, 5%); 
   }
   &:active {
-    background-color: darken($sa-success, 10%);
+    background-color: darken($user-primary-colour, 10%);
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($sa-success, .25);
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
   }
   &::before{
     font-family: "sard-icons"; 
@@ -683,7 +683,60 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
-// Sizes
+.btn-search{
+  background-color: $user-primary-colour;
+  color: white!important;
+  &:hover { 
+    background-color: darken($user-primary-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-primary-colour, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
+  }
+  &::after{
+    font-family: "sard-icons";  
+    content: "\e0f5" ;
+    color:white;
+    font-size: 1.5rem;
+    line-height: 0;
+    position: relative;
+    top: 6px;
+    right: -6px;
+  }
+  &.btn-lg::after{
+    font-size: 2rem;
+    top: 8px;
+    right: -6px;
+  }
+  &.btn-sm::after{
+    font-size: 1.2rem;
+    top: 4px;
+    right: -4px;
+  }
+  &.btn-xs::after{
+    font-size: 0.8rem;
+    top: 2px;
+    right: -3px;
+  }
+  &.btn-notext{
+    padding: .375rem 0.3rem;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem .45rem;
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem .25rem;
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem .15rem;
+  }
+}
+
+
+// Sizes --------------------
 .btn-lg::before{
   font-size: 1.7rem;
   top: 4px;
