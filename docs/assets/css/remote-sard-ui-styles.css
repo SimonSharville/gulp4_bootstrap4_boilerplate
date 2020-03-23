@@ -24278,7 +24278,8 @@ body {
 }
 
 .searchbar-sard .btn-search {
-  float: right;
+  position: relative;
+  right: -2px;
   width: 36px;
   height: 36px;
   border-radius: 0 20px 20px 0;
@@ -24288,16 +24289,8 @@ body {
   box-shadow: none;
 }
 
-.searchbar-sard .btn-search::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f002";
-  padding-right: 0.25rem;
-  color: #615E5C;
-  font-weight: 900;
-  font-size: 1.2rem;
-  position: relative;
-  top: -2px;
-  right: 4px;
+.searchbar-sard .btn-search::after {
+  right: 6px;
 }
 
 .searchbar-sard .btn-search:hover::before {

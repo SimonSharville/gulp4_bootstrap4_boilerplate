@@ -38,23 +38,16 @@
 
 
 .searchbar-sard .btn-search{
-  float:right;
+  position: relative;
+  right: -2px;
   width:36px;
   height:36px;
   border-radius: 0 20px 20px 0;
   border:none;
   border-left: none;
   box-shadow: none;
-  &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: "\f002" ;
-    padding-right: $link-icon-padding ;
-    color:$sa-grey-14;
-    font-weight: 900;
-    font-size: 1.2rem;
-    position: relative;
-    top: -2px;
-    right: 4px;
+  &::after{ // overrides generic .btn-search position
+    right: 6px;
   }
 }
 
