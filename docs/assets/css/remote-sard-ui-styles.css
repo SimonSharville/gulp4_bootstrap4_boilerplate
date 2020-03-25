@@ -20002,6 +20002,7 @@ p > a.modal-info-circle-inline::before {
 /* change the background color */
 .navbar {
   padding: 0rem 1rem;
+  height: 50px;
 }
 
 /* change the padding for height */

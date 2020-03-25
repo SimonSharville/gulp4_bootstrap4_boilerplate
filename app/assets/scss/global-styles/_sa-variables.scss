@@ -85,6 +85,14 @@ $break-xxl: 1590px;
     @media only screen and (max-device-width : 911px) and (orientation : landscape) { @content; }
   }
 
+    // iPad Pro
+    @else if $media == ipad-pro-landscape {
+      @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : landscape) { @content; }
+    }
+    @else if $media == ipad-pro-portrait {
+      @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : portrait) { @content; }
+    }
+  
   // Phones 
   // https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
   
