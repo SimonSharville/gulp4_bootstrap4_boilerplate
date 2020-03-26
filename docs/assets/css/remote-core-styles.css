@@ -21548,6 +21548,10 @@ p > a.modal-info-circle-inline::before {
   border-top-right-radius: calc(.5rem - 3px);
 }
 
+.tooltip {
+  pointer-events: none;
+}
+
 .tooltip-inner {
   background-color: #403D3D;
 }
