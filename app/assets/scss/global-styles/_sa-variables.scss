@@ -87,10 +87,10 @@ $break-xxl: 1590px;
 
     // iPad Pro
     @else if $media == ipad-pro-landscape {
-      @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : landscape) { @content; }
+      @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2) { @content; }
     }
     @else if $media == ipad-pro-portrait {
-      @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : portrait) { @content; }
+      @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2) { @content; }
     }
   
   // Phones 
