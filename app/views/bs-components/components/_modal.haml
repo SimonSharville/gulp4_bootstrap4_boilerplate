@@ -189,6 +189,42 @@
             %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
             %button.btn.btn-sm.btn-save{:type => "button"} Save changes
 
+    %hr
+
+    %h4 Optional sizes
+    %p 
+      Modals have two optional sizes, available via modifier classes to be placed on a 
+      %code .modal-dialog 
+      \. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
+    / Large modal
+    %button.btn.btn-primary{"data-target" => ".bd-example-modal-lg", "data-toggle" => "modal", :type => "button"} Large modal
+    .modal.fade.bd-example-modal-lg{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header
+            %h5#exampleModalLabel.modal-title Large modal
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            This is the basic Modal.
+          .modal-footer
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-sm.btn-save{:type => "button"} Save changes
+    / Small modal
+    %button.btn.btn-primary{"data-target" => ".bd-example-modal-sm", "data-toggle" => "modal", :type => "button"} Small modal
+    .modal.fade.bd-example-modal-sm{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            %h5#exampleModalLabel.modal-title Small modal
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            This is the basic Modal.
+          .modal-footer
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-sm.btn-save{:type => "button"} Save changes
+
 %hr/
 .row
   .col-sm-24
@@ -648,3 +684,4 @@
       .form-footer
         \.form-footer
         %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+
