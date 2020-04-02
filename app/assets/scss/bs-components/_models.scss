@@ -77,12 +77,8 @@
 }
 
 .modal-body{
-  padding: 0 $sa-spacer-12;
-  margin: $sa-spacer-8 0;
-}
-
-.modal-body p:last-of-type{
-  margin-bottom: $sa-spacer-8;
+  padding: $sa-spacer-8 $sa-spacer-12;
+  margin:  0;
 }
 
 .modal-footer {
@@ -260,6 +256,7 @@ $modal-default: $sa-grey-14;
 }
 
 .modal-default .modal-footer {
+  background-color: white;
   margin-left: 0px;
   width: 100%;
 }
@@ -401,144 +398,128 @@ $modal-default: $sa-grey-14;
 // Modal Button colours -------------------------
 
 .modal-info .btn-info,
-.modal-primary .modal-footer .btn-info,
-.modal-secondary .modal-footer .btn-info,
+
+
 .modal-roles .btn-info { 
   background-color: darken($sa-info, 20%); 
   border-color: darken($sa-info, 20%);
 }
 .modal-info .btn-info:visited,
-.modal-primary .modal-footer .btn-info:visited,
-.modal-secondary .modal-footer .btn-info:visited,
+
+
 .modal-roles .btn-info:visited { 
   background-color: darken($sa-info, 20%); 
   border-color: darken($sa-info, 20%);
 }
 .modal-info .btn-info:hover,
 .modal-primary .modal-footer .btn-info:hover,
-.modal-secondary .modal-footer .btn-info:hover,
+
 .modal-roles .btn-info:hover { 
   background-color: darken($sa-info, 25%); 
   border-color: darken($sa-info, 25%); 
 }
 .modal-info .btn-info:focus,
-.modal-primary .modal-footer .btn-info:focus,
-.modal-secondary .modal-footer .btn-info:focus,
+
+
 .modal-roles .btn-info:focus { 
   background-color: darken($sa-info, 27%)!important; 
   border-color: darken($sa-info, 27%)!important;
 }
 .modal-info .btn-info:active,
-.modal-primary .modal-footer .btn-info:active,
-.modal-secondary .modal-footer .btn-info:active,
+
 .modal-roles .btn-info:active  { 
   background-color: darken($sa-info, 28%)!important; 
   border-color: darken($sa-info, 28%)!important;
 }
 
 .modal-info .btn-danger,
-.modal-primary .modal-footer .btn-danger,
-.modal-secondary .modal-footer .btn-danger,
+
 .modal-roles .btn-danger { 
   background-color: darken($sa-danger, 10%);
   border-color: darken($sa-danger, 10%); 
 }
 .modal-info .btn-danger:visited,
-.modal-primary .modal-footer .btn-danger:visited,
-.modal-secondary .modal-footer .btn-danger:visited,
+
 .modal-roles .btn-danger:visited { 
   background-color: darken($sa-danger, 10%); 
   border-color: darken($sa-danger, 10%); 
 }
 .modal-info .btn-danger:hover,
-.modal-primary .modal-footer .btn-danger:hover,
-.modal-secondary .modal-footer .btn-danger:hover,
+
 .modal-roles .btn-danger:hover { 
   background-color: darken($sa-danger, 15%); 
   border-color: darken($sa-danger, 15%); 
 }
 .modal-info .btn-danger:focus,
-.modal-primary .modal-footer .btn-danger:focus,
-.modal-secondary .modal-footer .btn-danger:focus,
+
 .modal-roles .btn-danger:focus { 
   background-color: darken($sa-danger, 17%)!important; 
   border-color: darken($sa-danger, 17%)!important; 
 }
 .modal-info .btn-danger:active,
-.modal-primary .modal-footer .btn-danger:active,
-.modal-secondary .modal-footer .btn-danger:active,
+
 .modal-roles .btn-danger:active  { 
   background-color: darken($sa-danger, 18%)!important; 
   border-color: darken($sa-danger, 18%)!important; 
 }
 
 .modal-info .btn-success,
-.modal-primary .modal-footer .btn-success,
-.modal-secondary .modal-footer .btn-success,
+
 .modal-roles .btn-success { 
   background-color: darken($sa-success, 10%);
   border-color: darken($sa-success, 10%);
 }
 .modal-info .btn-success:visited,
-.modal-primary .modal-footer .btn-success:visited,
-.modal-secondary .modal-footer .btn-success:visited,
+
 .modal-roles .btn-success:visited { 
   background-color: darken($sa-success, 10%);
   border-color: darken($sa-success, 10%);
 }
 .modal-info .btn-success:hover,
-.modal-primary .modal-footer .btn-success:hover,
-.modal-secondary .modal-footer .btn-success:hover,
+
 .modal-roles .btn-success:hover { 
   background-color: darken($sa-success, 15%);
   border-color: darken($sa-success, 15%);
 }
 .modal-info .btn-success:focus,
-.modal-primary .modal-footer .btn-success:focus,
-.modal-secondary .modal-footer .btn-success:focus,
+
 .modal-roles .btn-success:focus { 
   background-color: darken($sa-success, 17%)!important;
   border-color: darken($sa-success, 17%)!important;
 }
 .modal-info .btn-success:active,
-.modal-primary .modal-footer .btn-success:active,
-.modal-secondary .modal-footer .btn-success:active,
+
 .modal-roles .btn-success:active  { 
   background-color: darken($sa-success, 18%)!important;
   border-color: darken($sa-success, 18%)!important;
 }
 
 .modal-info .btn-save,
-.modal-primary .modal-footer .btn-save,
-.modal-secondary .modal-footer .btn-save,
+
 .modal-roles .btn-save { 
   background-color: darken($sa-success, 10%);
   border-color: darken($sa-success, 10%);
 }
 .modal-info .btn-save:visited,
-.modal-primary .modal-footer .btn-save:visited,
-.modal-secondary .modal-footer .btn-save:visited,
+
 .modal-roles .btn-save:visited { 
   background-color: darken($sa-success, 10%);
   border-color: darken($sa-success, 10%);
 }
 .modal-info .btn-save:hover,
-.modal-primary .modal-footer .btn-save:hover,
-.modal-secondary .modal-footer .btn-save:hover,
+
 .modal-roles .btn-save:hover { 
   background-color: darken($sa-success, 15%);
   border-color: darken($sa-success, 15%);
 }
 .modal-info .btn-save:focus,
-.modal-primary .modal-footer .btn-save:focus,
-.modal-secondary .modal-footer .btn-save:focus,
+
 .modal-roles .btn-save:focus { 
   background-color: darken($sa-success, 17%)!important;
   border-color: darken($sa-success, 17%)!important;
 }
 .modal-info .btn-save:active,
-.modal-primary .modal-footer .btn-save:active,
-.modal-secondary .modal-footer .btn-save:active,
+
 .modal-roles .btn-save:active  { 
   background-color: darken($sa-success, 18%)!important;
   border-color: darken($sa-success, 18%)!important;
@@ -677,4 +658,10 @@ p > a.modal-info-circle-inline{
   margin-left: -12px;
   margin-right: -12px;
   padding: 8px;
+}
+
+// SARD Mega Modal ==============================
+
+.sa-mega-modal{
+
 }

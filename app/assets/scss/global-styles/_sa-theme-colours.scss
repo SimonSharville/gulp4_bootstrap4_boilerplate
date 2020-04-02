@@ -1064,10 +1064,6 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
       background-color: $theme-primary;
     }
 
-    .modal-primary .modal-footer {
-      background-color: $theme-primary;
-    }
-
     .modal-primary .modal-body a:hover {color: darken($theme-primary, 20%);}
     .modal-primary .modal-body a:focus {color: darken($theme-primary, 25%)!important;}
     .modal-primary .modal-body a:active {color: darken($theme-primary, 25%)!important;}
@@ -1082,10 +1078,6 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
 
 
     .modal-secondary .modal-header {
-      background-color: $theme-secondary;
-    }
-
-    .modal-secondary .modal-footer {
       background-color: $theme-secondary;
     }
 

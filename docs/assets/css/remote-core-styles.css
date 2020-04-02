@@ -19298,12 +19298,8 @@ a.list-group-item-action.active:active {
 }
 
 .modal-body {
-  padding: 0 0.75rem;
-  margin: 0.5rem 0;
-}
-
-.modal-body p:last-of-type {
-  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0;
 }
 
 .modal-footer {
@@ -19535,6 +19531,7 @@ a.list-group-item-action.active:active {
 }
 
 .modal-default .modal-footer {
+  background-color: white;
   margin-left: 0px;
   width: 100%;
 }
@@ -19690,16 +19687,12 @@ a.list-group-item-action.active:active {
 }
 
 .modal-info .btn-info,
-.modal-primary .modal-footer .btn-info,
-.modal-secondary .modal-footer .btn-info,
 .modal-roles .btn-info {
   background-color: #00577a;
   border-color: #00577a;
 }
 
 .modal-info .btn-info:visited,
-.modal-primary .modal-footer .btn-info:visited,
-.modal-secondary .modal-footer .btn-info:visited,
 .modal-roles .btn-info:visited {
   background-color: #00577a;
   border-color: #00577a;
@@ -19707,143 +19700,108 @@ a.list-group-item-action.active:active {
 
 .modal-info .btn-info:hover,
 .modal-primary .modal-footer .btn-info:hover,
-.modal-secondary .modal-footer .btn-info:hover,
 .modal-roles .btn-info:hover {
   background-color: #004561;
   border-color: #004561;
 }
 
 .modal-info .btn-info:focus,
-.modal-primary .modal-footer .btn-info:focus,
-.modal-secondary .modal-footer .btn-info:focus,
 .modal-roles .btn-info:focus {
   background-color: #003e56 !important;
   border-color: #003e56 !important;
 }
 
 .modal-info .btn-info:active,
-.modal-primary .modal-footer .btn-info:active,
-.modal-secondary .modal-footer .btn-info:active,
 .modal-roles .btn-info:active {
   background-color: #003a51 !important;
   border-color: #003a51 !important;
 }
 
 .modal-info .btn-danger,
-.modal-primary .modal-footer .btn-danger,
-.modal-secondary .modal-footer .btn-danger,
 .modal-roles .btn-danger {
   background-color: #8c0000;
   border-color: #8c0000;
 }
 
 .modal-info .btn-danger:visited,
-.modal-primary .modal-footer .btn-danger:visited,
-.modal-secondary .modal-footer .btn-danger:visited,
 .modal-roles .btn-danger:visited {
   background-color: #8c0000;
   border-color: #8c0000;
 }
 
 .modal-info .btn-danger:hover,
-.modal-primary .modal-footer .btn-danger:hover,
-.modal-secondary .modal-footer .btn-danger:hover,
 .modal-roles .btn-danger:hover {
   background-color: #730000;
   border-color: #730000;
 }
 
 .modal-info .btn-danger:focus,
-.modal-primary .modal-footer .btn-danger:focus,
-.modal-secondary .modal-footer .btn-danger:focus,
 .modal-roles .btn-danger:focus {
   background-color: #680000 !important;
   border-color: #680000 !important;
 }
 
 .modal-info .btn-danger:active,
-.modal-primary .modal-footer .btn-danger:active,
-.modal-secondary .modal-footer .btn-danger:active,
 .modal-roles .btn-danger:active {
   background-color: #630000 !important;
   border-color: #630000 !important;
 }
 
 .modal-info .btn-success,
-.modal-primary .modal-footer .btn-success,
-.modal-secondary .modal-footer .btn-success,
 .modal-roles .btn-success {
   background-color: #246b00;
   border-color: #246b00;
 }
 
 .modal-info .btn-success:visited,
-.modal-primary .modal-footer .btn-success:visited,
-.modal-secondary .modal-footer .btn-success:visited,
 .modal-roles .btn-success:visited {
   background-color: #246b00;
   border-color: #246b00;
 }
 
 .modal-info .btn-success:hover,
-.modal-primary .modal-footer .btn-success:hover,
-.modal-secondary .modal-footer .btn-success:hover,
 .modal-roles .btn-success:hover {
   background-color: #1b5200;
   border-color: #1b5200;
 }
 
 .modal-info .btn-success:focus,
-.modal-primary .modal-footer .btn-success:focus,
-.modal-secondary .modal-footer .btn-success:focus,
 .modal-roles .btn-success:focus {
   background-color: #184700 !important;
   border-color: #184700 !important;
 }
 
 .modal-info .btn-success:active,
-.modal-primary .modal-footer .btn-success:active,
-.modal-secondary .modal-footer .btn-success:active,
 .modal-roles .btn-success:active {
   background-color: #164200 !important;
   border-color: #164200 !important;
 }
 
 .modal-info .btn-save,
-.modal-primary .modal-footer .btn-save,
-.modal-secondary .modal-footer .btn-save,
 .modal-roles .btn-save {
   background-color: #246b00;
   border-color: #246b00;
 }
 
 .modal-info .btn-save:visited,
-.modal-primary .modal-footer .btn-save:visited,
-.modal-secondary .modal-footer .btn-save:visited,
 .modal-roles .btn-save:visited {
   background-color: #246b00;
   border-color: #246b00;
 }
 
 .modal-info .btn-save:hover,
-.modal-primary .modal-footer .btn-save:hover,
-.modal-secondary .modal-footer .btn-save:hover,
 .modal-roles .btn-save:hover {
   background-color: #1b5200;
   border-color: #1b5200;
 }
 
 .modal-info .btn-save:focus,
-.modal-primary .modal-footer .btn-save:focus,
-.modal-secondary .modal-footer .btn-save:focus,
 .modal-roles .btn-save:focus {
   background-color: #184700 !important;
   border-color: #184700 !important;
 }
 
 .modal-info .btn-save:active,
-.modal-primary .modal-footer .btn-save:active,
-.modal-secondary .modal-footer .btn-save:active,
 .modal-roles .btn-save:active {
   background-color: #164200 !important;
   border-color: #164200 !important;
