@@ -20099,6 +20099,10 @@ a.list-group-item-action.active:active {
   border-radius: 50%;
 }
 
+.user-navbar-dropdown:hover {
+  cursor: pointer;
+}
+
 .panel {
   position: relative;
   display: -webkit-box;

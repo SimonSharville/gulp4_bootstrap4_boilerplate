@@ -740,3 +740,9 @@
       height: 35px;
       border-radius: 50%;
     }
+
+    .user-navbar-dropdown{
+      &:hover{
+        cursor: pointer;
+      }
+    }
