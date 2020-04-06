@@ -24941,6 +24941,12 @@ hr.white {
   z-index: 4998;
 }
 
+#sa-page-loader-spinner.small-spinner {
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+}
+
 #sa-page-loader-spinner::before {
   content: "";
   position: absolute;
