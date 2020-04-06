@@ -1099,6 +1099,10 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
     .nav-primary.nav.nav-tabs .nav-item{
       .nav-link{border-bottom-color: $theme-primary!important;
         &:focus, &:hover{ border-bottom-color: $theme-primary!important;}
+        &:focus,
+        &:active{
+          background-color: darken($theme-primary, 5%);
+        }
         &.active{
           background-color: $theme-primary;
           border-color: $theme-primary;
@@ -1113,6 +1117,10 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
     .nav-secondary.nav.nav-tabs .nav-item{
       .nav-link{border-bottom-color: $theme-secondary!important;
         &:focus, &:hover{ border-bottom-color: $theme-secondary!important;}
+        &:focus,
+        &:active{
+          background-color: darken($theme-secondary, 5%);
+        }
         &.active{
           background-color: $theme-secondary;
           border-color: $theme-secondary;
@@ -1124,11 +1132,23 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
       border-color: $theme-secondary;
     }
     
+    .nav-secondary.nav.nav-pills .nav-link{
+      &:focus,
+      &:active{
+        background-color: darken($theme-secondary, 5%);
+      }
+    }
     .nav-primary.nav.nav-pills .nav-link.active{
       background-color: $theme-primary;
       &:focus,
       &:active{
         background-color: $theme-primary;
+      }
+    }
+    .nav-primary.nav.nav-pills .nav-link{
+      &:focus,
+      &:active{
+        background-color: darken($theme-primary, 5%);
       }
     }
     .nav-secondary.nav.nav-pills .nav-link.active{

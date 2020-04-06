@@ -1,6 +1,13 @@
 // Navs =========================================
 
-$sa-nav-colour: $sa-grey-14;
+$sa-nav-colour:           $sa-grey-14;
+$sa-tab-bg:               $sa-grey-12;
+
+$tab-colour:              $sa-grey-03;
+$tab-colour-hover:        $sa-grey-05;
+$tab-shadow:              $sa-grey-07;
+$tab-colour-active:       $sa-grey-14;
+$tab-number-bg:           $sa-grey-12;
 
 .nav.nav-tabs .nav-item{
   margin-left: 2px;
@@ -10,22 +17,24 @@ $sa-nav-colour: $sa-grey-14;
 .nav.nav-tabs .nav-item{
   .nav-link{
     color: $sa-nav-colour;
-    background-color: $sa-grey-01;
+    background-color: $tab-colour;
     margin-bottom: 1px;
     &:visited{
       color: $sa-nav-colour;
     }
     &:hover{
-      background-color: $sa-grey-02;
+      background-color: $tab-colour-hover;
       border-color: transparent;
     }
     &:focus,
     &:active{
-      background-color: $sa-grey-04;
+      background-color: $tab-colour-active;
+      color: white;
     }
     &.active{
       background-color: $sa-grey-14;
       color: white;
+      border-color: $tab-colour-active;
       border-bottom:2px solid $sa-grey-14;
       margin-bottom: 0px;
     }
@@ -35,17 +44,26 @@ $sa-nav-colour: $sa-grey-14;
 .nav.nav-pills .nav-link{
   border-radius: $sa-spacer-6;
   color: $sa-nav-colour;
-  background-color: $sa-grey-01;
+  background-color: $tab-colour;
   margin-right: 4px;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
   &:visited{
     color: $sa-nav-colour;
   }
   &:hover{
-    background-color: $sa-grey-03;
+    background-color: $tab-colour-hover;
   }
   &:focus,
   &:active{
-    background-color: $sa-grey-05;
+    background-color: $tab-colour-active;
+    color: white;
+  }
+  &.active {
+    -webkit-box-shadow: inset 0px 4px 0px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0px 4px 0px 0px rgba(0,0,0,0.25);
+    box-shadow: inset 0px 4px 0px 0px rgba(0,0,0,0.25);
   }
 }
 
@@ -84,11 +102,22 @@ $sa-nav-colour: $sa-grey-14;
 // Colour variations ----------------------------
 .nav-primary.nav.nav-tabs .nav-item{
   .nav-link{
+    &:focus,
+    &:active{
+      background-color: darken($user-primary-colour, 5%);
+    }
     &.active{
       background-color: $user-primary-colour;
       border-color: $user-primary-colour;
       border-bottom:2px solid $user-primary-colour;
     }
+  }
+}
+
+.nav-primary.nav.nav-pills .nav-link{
+  &:focus,
+  &:active{
+    background-color: darken($user-primary-colour, 5%);
   }
 }
 
@@ -102,6 +131,10 @@ $sa-nav-colour: $sa-grey-14;
 
 .nav-secondary.nav.nav-tabs .nav-item{
   .nav-link{
+    &:focus,
+    &:active{
+      background-color: darken($user-secondary-colour, 5%);
+    }
     &.active{
       background-color: $user-secondary-colour;
       border-color: $user-secondary-colour;
@@ -110,6 +143,12 @@ $sa-nav-colour: $sa-grey-14;
   }
 }
 
+.nav-secondary.nav.nav-pills .nav-link{
+  &:focus,
+  &:active{
+    background-color: darken($user-secondary-colour, 5%);
+  }
+}
 .nav-secondary.nav.nav-pills .nav-link.active{
   background-color: $user-secondary-colour;
   &:focus,
