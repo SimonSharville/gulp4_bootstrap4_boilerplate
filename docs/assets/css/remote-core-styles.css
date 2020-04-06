@@ -24921,10 +24921,6 @@ hr.white {
   z-index: 4997;
 }
 
-#navbar + #sa-page-loader {
-  height: calc(100% - 50px);
-}
-
 #sa-page-loader-spinner {
   display: block;
   position: relative;

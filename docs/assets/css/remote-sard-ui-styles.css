@@ -24921,10 +24921,6 @@ hr.white {
   z-index: 4997;
 }
 
-#navbar + #sa-page-loader {
-  height: calc(100% - 50px);
-}
-
 #sa-page-loader-spinner {
   display: block;
   position: relative;
@@ -26515,6 +26511,22 @@ header {
   color: #00B2B2;
 }
 
+.theme-user #sa-page-loader-spinner {
+  border-top-color: #004D4D;
+}
+
+.theme-user #sa-page-loader-spinner::before {
+  border-top-color: #00B2B2;
+}
+
+.theme-user #sa-page-loader-spinner::after {
+  border-top-color: #004D4D;
+}
+
+.theme-user #sa-page-loader .loader-section {
+  background-color: #004D4D;
+}
+
 .theme-admin {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -27797,6 +27809,22 @@ header {
   color: #E50073;
 }
 
+.theme-admin #sa-page-loader-spinner {
+  border-top-color: #990099;
+}
+
+.theme-admin #sa-page-loader-spinner::before {
+  border-top-color: #E50073;
+}
+
+.theme-admin #sa-page-loader-spinner::after {
+  border-top-color: #990099;
+}
+
+.theme-admin #sa-page-loader .loader-section {
+  background-color: #990099;
+}
+
 .theme-trust {
   /* change the color of active or hovered links */
   /* change the color of active or hovered links */
@@ -29077,6 +29105,22 @@ header {
 
 .theme-trust .scrollToTop:hover:before {
   color: #FFB200;
+}
+
+.theme-trust #sa-page-loader-spinner {
+  border-top-color: #FF6A00;
+}
+
+.theme-trust #sa-page-loader-spinner::before {
+  border-top-color: #FFB200;
+}
+
+.theme-trust #sa-page-loader-spinner::after {
+  border-top-color: #FF6A00;
+}
+
+.theme-trust #sa-page-loader .loader-section {
+  background-color: #FF6A00;
 }
 
 /*# sourceMappingURL=remote-sard-ui-styles.css.map */
