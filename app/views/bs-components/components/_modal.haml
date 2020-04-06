@@ -685,3 +685,267 @@
         \.form-footer
         %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
 
+%hr/
+.row
+  .col-sm-24
+    %h3 SARD Mega Modal
+    %p The SARD Mega Modal uses default bootstrap elements, including rows and columns, these have been tightened a little, reducing the margins to save space.
+
+    / SARD Mega modal
+    %button.btn.btn-primary{"data-target" => ".sa-mega-modal", "data-toggle" => "modal", :type => "button"} SARD Mega modal
+    .modal.fade.sa-mega-modal.modal-primary{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %h5#exampleModalLabel.modal-title SARD Mega modal
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            .alert.alert-danger.alert-dismissible.fade.show Alert
+            .row
+              .col-sm-12
+                .modal-box
+                  .modal-box-body
+                    \.modal-box-body
+              .col-sm-12
+                .modal-box
+                  .modal-box-header
+                    \.modal-box-header
+                  .modal-box-body
+                    \.modal-box-body
+                  .modal-box-footer
+                    \.modal-box-footer
+            .row
+              .col-sm-24
+                .modal-box
+                  .modal-box-body
+                    A Modal Box must have a .modal-box-body inside, but .modal-box-header and .modal-box-footer are optional.
+
+          .modal-footer
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+
+    / Example with .nav-tabs
+    %button.btn.btn-primary{"data-target" => ".example-sa-mega-modal-navs", "data-toggle" => "modal", :type => "button"} Example with .nav-tabs
+    .modal.fade.sa-mega-modal.example-sa-mega-modal-navs.modal-primary{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %h5#exampleModalLabel.modal-title 15 April 09:00 – 17:00
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %ul#myTab.nav.nav-tabs.nav-justified{:role => "tablist"}
+              %li.nav-item
+                %a#home-tab.nav-link.active{"aria-controls" => "summary_pane", "aria-selected" => "true", "data-toggle" => "tab", :href => "#summary_pane", :role => "tab"} Summary
+              %li.nav-item
+                %a#admin-tab.nav-link{"aria-controls" => "admin_pane", "aria-selected" => "false", "data-toggle" => "tab", :href => "#admin_pane", :role => "tab"} Admin
+
+            #shift-info-tabs-content.tab-content
+              #summary_pane.tab-pane.fade.show.active{"aria-labelledby" => "summary_pane", :role => "tabpanel"}
+                .row
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        Shift Info
+                      .modal-box-body
+                        %p
+                          %label Info 
+                          %br
+                          %span.sub-label Duty:
+                          9-5 Croydon ST
+                      .modal-box-footer.right
+                        .btn.btn-xs.btn-primary New Shift Swap
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        User Info
+                      .modal-box-body
+                        .user-details
+                          .user-icon
+                            .si.si-user-circle-o
+                          .user-name
+                            %p
+                              %label Name 
+                              %br
+                              Aaron Philip
+                        %hr/
+                        %p
+                          %label Hours worked 
+                          %br
+                          %span.sub-label.x2 20 Apr - 26 Apr:
+                          16 hours
+                          %br
+                          %span.sub-label.x2 01 Apr - 30 Apr:
+                          160 hours
+                      .modal-box-footer.right
+                        .btn.btn-xs.btn-danger Unassign
+                .row
+                  .col-sm-24
+                    .modal-confirm
+                      .confirm-header
+                        Confirm Unassign
+                      .confirm-body
+                        Are you sure you want to unassign Helen Allis from this shift?
+                      .confirm-footer.right
+                        .btn.btn-sm.btn-success Yes
+                        .btn.btn-sm.btn-danger No
+              #admin_pane.tab-pane.fade{"aria-labelledby" => "admin_pane", :role => "tabpanel"}
+                .row
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        Sickness
+                      .modal-box-body
+                        .alert.alert-danger.alert-dismissible.fade.show Locum User is unable to work this shift.
+                        %p.small
+                          Select shift cover from users or locums list.
+                        .form-group.mb-1
+                          %label{:for => "exampleFormControlSelect1"} Employee
+                          %select#exampleFormControlSelect1.form-control
+                            %option 1
+                            %option 2
+                            %option 3
+                            %option 4
+                            %option 5
+                      .modal-box-footer.right
+                        .btn.btn-xs.btn-success Assign Cover
+                        
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        Info
+                      .modal-box-body
+                        %p
+                          %span.sub-label ID:
+                          74574
+                          %br
+                          %span.sub-label Duty:
+                          27
+                          %br
+                          %span.sub-label hr-duty:
+                          20348193
+                          %br
+                          %span.sub-label User:
+                          325
+                          %br
+                          %span.sub-label hr-da:
+                          Not assigned
+                          
+                      .modal-box-footer.right
+                        .btn.btn-xs.btn-danger Unassign
+                .row
+                  .col-sm-24
+                    %label{:for => "exampleFormControlTextarea1"}
+                      %span.strong Notes
+                      %span.small Visible only for other admins.
+                    %textarea#exampleFormControlTextarea1.form-control{:rows => "3", placeholder: 'Notes'} You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.
+
+          .modal-footer
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+
+
+    / Example with .sa-nav-tabs
+    %button.btn.btn-primary{"data-target" => ".example-sa-mega-modal-sa-navs", "data-toggle" => "modal", :type => "button"} Example with .sa-nav-tabs, large modal
+    .modal.fade.sa-mega-modal.example-sa-mega-modal-sa-navs.modal-primary{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header
+            %h5#exampleModalLabel.modal-title 15 April 09:00 – 17:00
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %ul#myTab.nav.nav-tabs.nav-justified.sa-nav-tabs{:role => "tablist"}
+              %li.nav-item
+                %a#summary-tab.nav-link.active{"aria-controls" => "summary_pane_sa_navs", "aria-selected" => "true", "data-toggle" => "tab", :href => "#summary_pane_sa_navs", :role => "tab"} Summary
+              %li.nav-item
+                %a#admin-tab.nav-link{"aria-controls" => "admin_pane_sa_tabs", "aria-selected" => "false", "data-toggle" => "tab", :href => "#admin_pane_sa_tabs", :role => "tab"} Admin
+
+            #shift-info-tabs-content.tab-content
+              #summary_pane_sa_navs.tab-pane.fade.show.active{"aria-labelledby" => "summary_pane_sa_navs", :role => "tabpanel"}
+                .row
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        Shift Info
+                      .modal-box-body
+                        %p
+                          %label Info 
+                          %br
+                          %span.sub-label Duty:
+                          9-5 Croydon ST
+                      .modal-box-footer.right
+                        .btn.btn-xs.btn-primary New Shift Swap
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        User Info
+                      .modal-box-body
+                        .user-details
+                          .user-icon
+                            .si.si-user-circle-o
+                          .user-name
+                            %p
+                              %label Name 
+                              %br
+                              Aaron Philip
+                        %hr/
+                        %p
+                          %label Hours worked 
+                          %br
+                          %span.sub-label.x2 20 Apr - 26 Apr:
+                          16 hours
+                          %br
+                          %span.sub-label.x2 01 Apr - 30 Apr:
+                          160 hours
+                      .modal-box-footer.right
+                        .btn.btn-xs.btn-danger Unassign
+                .row
+                  .col-sm-24
+                    .modal-confirm
+                      .confirm-header
+                        Confirm Unassign
+                      .confirm-body
+                        Are you sure you want to unassign Helen Allis from this shift?
+                      .confirm-footer.right
+                        .btn.btn-sm.btn-success Yes
+                        .btn.btn-sm.btn-danger No
+              #admin_pane_sa_tabs.tab-pane.fade{"aria-labelledby" => "admin_pane_sa_tabs", :role => "tabpanel"}
+                .row
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        Sickness
+                      .modal-box-body
+                        .btn.btn-primary.mt-1 Create Sickness
+                  .col-sm-12
+                    .modal-box
+                      .modal-box-header
+                        Info
+                      .modal-box-body
+                        %p
+                          %span.sub-label ID:
+                          74574
+                          %br
+                          %span.sub-label Duty:
+                          27
+                          %br
+                          %span.sub-label hr-duty:
+                          20348193
+                          %br
+                          %span.sub-label User:
+                          325
+                          %br
+                          %span.sub-label hr-da:
+                          Not assigned
+                          
+                      .modal-box-footer.right
+                        .btn.btn-xs.btn-danger Unassign
+                .row
+                  .col-sm-24
+                    %label{:for => "exampleFormControlTextarea1"}
+                      %span.strong Notes
+                      %span.small Visible only for other admins.
+                    %textarea#exampleFormControlTextarea1.form-control{:rows => "3", placeholder: 'Notes'} You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.
+
+          .modal-footer
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close

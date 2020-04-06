@@ -625,10 +625,11 @@ p > a.modal-info-circle-inline{
 // Modals with tabs inside ------------
 
 .modal-body .nav.nav-tabs{
-  margin-left: -12px;
-  margin-right: -12px;
-  padding-left: 6px;
-  padding-right: 6px;
+  margin-left: -14px;
+  margin-right: -14px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-bottom: 1px solid $tab-colour-active;
 }
 
 .modal-body .nav.nav-tabs .nav-item{
@@ -638,16 +639,28 @@ p > a.modal-info-circle-inline{
 }
 .modal-body .nav.nav-tabs .nav-item .nav-link{
   color: $text;
+  border-bottom: 1px solid $tab-colour-hover;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  // &:hover{border-bottom: 1px solid $tab-colour-active!important;}
+  &.active {box-shadow: none;}
+  &:focus,
+  &:active{
+    color: white!important;
+    border-bottom: 1px solid $tab-colour-active;
+  }
 }
-.modal-body .nav.nav-tabs .nav-item .nav-link:visited{
+// .modal-body .nav.nav-tabs .nav-item .nav-link:visited{
 
-}
-.modal-body .nav.nav-tabs .nav-item .nav-link:hover,
-.modal-body .nav.nav-tabs .nav-item .nav-link:focus{
-  color: $text!important;
-}
+// }
+// .modal-body .nav.nav-tabs .nav-item .nav-link:hover,
+// .modal-body .nav.nav-tabs .nav-item .nav-link:focus{
+//   // color: $text!important;
+// }
 .modal-body .nav.nav-tabs .nav-item .nav-link.active{
   color: white;
+  border-color: $sa-nav-colour;
   &:focus,
   &:active{
     color: white!important;
@@ -660,8 +673,142 @@ p > a.modal-info-circle-inline{
   padding: 8px;
 }
 
+// with sard-tabs ---------------------
+.modal-body .nav.nav-tabs.sa-nav-tabs {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  + .tab-content {
+    background-color: $sa-grey-02;
+    margin-left: -4px;
+    margin-right: -4px;
+    padding: 12px 10px;
+    .modal-box{
+      background-color: white;
+      border: 1px solid $sa-grey-03;
+    }
+    .modal-box-header{
+      margin: 0;
+      background-color: $sa-grey-14;
+      color: white;
+    }
+  }
+}
+
 // SARD Mega Modal ==============================
 
 .sa-mega-modal{
+
+  .row{
+    margin-right: -4px;
+    margin-left: -4px;
+    margin-bottom: 8px;
+  }
+  .row:last-of-type{ margin-bottom: 0px; }
+
+  [class*='col-']{
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .alert{ 
+    margin-bottom: 8px; 
+    padding: 4px 8px;
+    line-height: 120%;
+  }
+
+  .modal-box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $sa-grey-06;
+    min-height: 100%;
+    border-radius: $sa-border-radius-sm;
+    // overflow: hidden;
+  }
+  .modal-box-header{
+    padding: 4px 6px;
+    margin: -1px -1px 0 -1px;
+    background-color: $sa-grey-14;
+    border-top-left-radius: $sa-border-radius-sm;
+    border-top-right-radius: $sa-border-radius-sm;
+    color: white;
+    @include roboto-bold;
+  }
+  .modal-box-body{
+    padding: 4px 6px;
+    flex: 2 2 auto;
+  }
+  .modal-box-footer{
+    border-top: 1px solid $sa-grey-06;
+    padding: 4px 6px;
+  }
+
+  // user-details -----------
+  .user-details{
+    display: flex;
+    padding-top: 4px;
+    .user-icon .si{
+      font-size: 2.4rem;
+      margin-right: 4px;      
+    }
+    .user-icon img{
+      height: 60px;
+      margin-right: 4px;      
+    }
+    p{ margin: 0; }
+  }
+  // text etc ---------------
+  .modal-box{
+    p{ margin-bottom: 4px; }
+    p:last-of-type{ margin-bottom: 0px; }
+
+    hr{ 
+      margin: 4px 0; 
+      border-color: $sa-grey-06!important;
+    }
+    
+    label{ 
+      @include roboto-black; 
+      margin-bottom: 0px;
+    }
+
+    .sub-label{ 
+      @include roboto-medium; 
+      width: 60px;
+      display: inline-block;
+      &.x2{
+        width: 120px;
+      }
+    }
+  }
+
+  .modal-confirm{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $sa-success;
+    min-height: 100%;
+    border-radius: $sa-border-radius-sm;
+    background-color: white;
+  }
+  .confirm-header{
+    padding: 4px 6px;
+    margin: -1px -1px 0 -1px;
+    background-color: $sa-success;
+    border-top-left-radius: $sa-border-radius-sm;
+    border-top-right-radius: $sa-border-radius-sm;
+    color: white;
+    @include roboto-bold;
+  }
+  .confirm-body{
+    padding: 4px 6px;
+    flex: 2 2 auto;
+  }
+  .confirm-footer{
+    border-top: 1px solid $sa-success;
+    padding: 4px 6px;
+  }
+
+
 
 }

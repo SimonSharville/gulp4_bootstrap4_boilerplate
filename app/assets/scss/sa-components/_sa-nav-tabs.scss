@@ -214,7 +214,7 @@
     }
   }
 
-  .nav-row.active a,{
+  .nav-row.active a{
     background-color: $tab-colour-active;
     color: white;
     @include respond-to(md-break-up){

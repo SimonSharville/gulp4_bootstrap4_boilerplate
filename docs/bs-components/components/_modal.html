@@ -841,3 +841,381 @@ and it will be placed inline. The code for this is:
 </fieldset>
 </div>
 </div>
+<hr>
+<div class='row'>
+<div class='col-sm-24'>
+<h3>SARD Mega Modal</h3>
+<p>The SARD Mega Modal uses default bootstrap elements, including rows and columns, these have been tightened a little, reducing the margins to save space.</p>
+<!-- SARD Mega modal -->
+<button class='btn btn-primary' data-target='.sa-mega-modal' data-toggle='modal' type='button'>SARD Mega modal</button>
+<div aria-hidden='true' aria-labelledby='mySmallModalLabel' class='modal fade sa-mega-modal modal-primary' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='exampleModalLabel'>SARD Mega modal</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='alert alert-danger alert-dismissible fade show'>Alert</div>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-body'>
+.modal-box-body
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+.modal-box-header
+</div>
+<div class='modal-box-body'>
+.modal-box-body
+</div>
+<div class='modal-box-footer'>
+.modal-box-footer
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-24'>
+<div class='modal-box'>
+<div class='modal-box-body'>
+A Modal Box must have a .modal-box-body inside, but .modal-box-header and .modal-box-footer are optional.
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Example with .nav-tabs -->
+<button class='btn btn-primary' data-target='.example-sa-mega-modal-navs' data-toggle='modal' type='button'>Example with .nav-tabs</button>
+<div aria-hidden='true' aria-labelledby='mySmallModalLabel' class='modal fade sa-mega-modal example-sa-mega-modal-navs modal-primary' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='exampleModalLabel'>15 April 09:00 – 17:00</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<ul class='nav nav-tabs nav-justified' id='myTab' role='tablist'>
+<li class='nav-item'>
+<a aria-controls='summary_pane' aria-selected='true' class='nav-link active' data-toggle='tab' href='#summary_pane' id='home-tab' role='tab'>Summary</a>
+</li>
+<li class='nav-item'>
+<a aria-controls='admin_pane' aria-selected='false' class='nav-link' data-toggle='tab' href='#admin_pane' id='admin-tab' role='tab'>Admin</a>
+</li>
+</ul>
+<div class='tab-content' id='shift-info-tabs-content'>
+<div aria-labelledby='summary_pane' class='tab-pane fade show active' id='summary_pane' role='tabpanel'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+Shift Info
+</div>
+<div class='modal-box-body'>
+<p>
+<label>Info</label>
+<br>
+<span class='sub-label'>Duty:</span>
+9-5 Croydon ST
+</p>
+</div>
+<div class='modal-box-footer right'>
+<div class='btn btn-xs btn-primary'>New Shift Swap</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+User Info
+</div>
+<div class='modal-box-body'>
+<div class='user-details'>
+<div class='user-icon'>
+<div class='si si-user-circle-o'></div>
+</div>
+<div class='user-name'>
+<p>
+<label>Name</label>
+<br>
+Aaron Philip
+</p>
+</div>
+</div>
+<hr>
+<p>
+<label>Hours worked</label>
+<br>
+<span class='sub-label x2'>20 Apr - 26 Apr:</span>
+16 hours
+<br>
+<span class='sub-label x2'>01 Apr - 30 Apr:</span>
+160 hours
+</p>
+</div>
+<div class='modal-box-footer right'>
+<div class='btn btn-xs btn-danger'>Unassign</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-24'>
+<div class='modal-confirm'>
+<div class='confirm-header'>
+Confirm Unassign
+</div>
+<div class='confirm-body'>
+Are you sure you want to unassign Helen Allis from this shift?
+</div>
+<div class='confirm-footer right'>
+<div class='btn btn-sm btn-success'>Yes</div>
+<div class='btn btn-sm btn-danger'>No</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby='admin_pane' class='tab-pane fade' id='admin_pane' role='tabpanel'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+Sickness
+</div>
+<div class='modal-box-body'>
+<div class='alert alert-danger alert-dismissible fade show'>Locum User is unable to work this shift.</div>
+<p class='small'>
+Select shift cover from users or locums list.
+</p>
+<div class='form-group mb-1'>
+<label for='exampleFormControlSelect1'>Employee</label>
+<select class='form-control' id='exampleFormControlSelect1'>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+</div>
+<div class='modal-box-footer right'>
+<div class='btn btn-xs btn-success'>Assign Cover</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+Info
+</div>
+<div class='modal-box-body'>
+<p>
+<span class='sub-label'>ID:</span>
+74574
+<br>
+<span class='sub-label'>Duty:</span>
+27
+<br>
+<span class='sub-label'>hr-duty:</span>
+20348193
+<br>
+<span class='sub-label'>User:</span>
+325
+<br>
+<span class='sub-label'>hr-da:</span>
+Not assigned
+</p>
+</div>
+<div class='modal-box-footer right'>
+<div class='btn btn-xs btn-danger'>Unassign</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-24'>
+<label for='exampleFormControlTextarea1'>
+<span class='strong'>Notes</span>
+<span class='small'>Visible only for other admins.</span>
+</label>
+<textarea class='form-control' id='exampleFormControlTextarea1' placeholder='Notes' rows='3'>You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Example with .sa-nav-tabs -->
+<button class='btn btn-primary' data-target='.example-sa-mega-modal-sa-navs' data-toggle='modal' type='button'>Example with .sa-nav-tabs, large modal</button>
+<div aria-hidden='true' aria-labelledby='mySmallModalLabel' class='modal fade sa-mega-modal example-sa-mega-modal-sa-navs modal-primary' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-lg'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='exampleModalLabel'>15 April 09:00 – 17:00</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<ul class='nav nav-tabs nav-justified sa-nav-tabs' id='myTab' role='tablist'>
+<li class='nav-item'>
+<a aria-controls='summary_pane_sa_navs' aria-selected='true' class='nav-link active' data-toggle='tab' href='#summary_pane_sa_navs' id='summary-tab' role='tab'>Summary</a>
+</li>
+<li class='nav-item'>
+<a aria-controls='admin_pane_sa_tabs' aria-selected='false' class='nav-link' data-toggle='tab' href='#admin_pane_sa_tabs' id='admin-tab' role='tab'>Admin</a>
+</li>
+</ul>
+<div class='tab-content' id='shift-info-tabs-content'>
+<div aria-labelledby='summary_pane_sa_navs' class='tab-pane fade show active' id='summary_pane_sa_navs' role='tabpanel'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+Shift Info
+</div>
+<div class='modal-box-body'>
+<p>
+<label>Info</label>
+<br>
+<span class='sub-label'>Duty:</span>
+9-5 Croydon ST
+</p>
+</div>
+<div class='modal-box-footer right'>
+<div class='btn btn-xs btn-primary'>New Shift Swap</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+User Info
+</div>
+<div class='modal-box-body'>
+<div class='user-details'>
+<div class='user-icon'>
+<div class='si si-user-circle-o'></div>
+</div>
+<div class='user-name'>
+<p>
+<label>Name</label>
+<br>
+Aaron Philip
+</p>
+</div>
+</div>
+<hr>
+<p>
+<label>Hours worked</label>
+<br>
+<span class='sub-label x2'>20 Apr - 26 Apr:</span>
+16 hours
+<br>
+<span class='sub-label x2'>01 Apr - 30 Apr:</span>
+160 hours
+</p>
+</div>
+<div class='modal-box-footer right'>
+<div class='btn btn-xs btn-danger'>Unassign</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-24'>
+<div class='modal-confirm'>
+<div class='confirm-header'>
+Confirm Unassign
+</div>
+<div class='confirm-body'>
+Are you sure you want to unassign Helen Allis from this shift?
+</div>
+<div class='confirm-footer right'>
+<div class='btn btn-sm btn-success'>Yes</div>
+<div class='btn btn-sm btn-danger'>No</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby='admin_pane_sa_tabs' class='tab-pane fade' id='admin_pane_sa_tabs' role='tabpanel'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+Sickness
+</div>
+<div class='modal-box-body'>
+<div class='btn btn-primary mt-1'>Create Sickness</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<div class='modal-box'>
+<div class='modal-box-header'>
+Info
+</div>
+<div class='modal-box-body'>
+<p>
+<span class='sub-label'>ID:</span>
+74574
+<br>
+<span class='sub-label'>Duty:</span>
+27
+<br>
+<span class='sub-label'>hr-duty:</span>
+20348193
+<br>
+<span class='sub-label'>User:</span>
+325
+<br>
+<span class='sub-label'>hr-da:</span>
+Not assigned
+</p>
+</div>
+<div class='modal-box-footer right'>
+<div class='btn btn-xs btn-danger'>Unassign</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-24'>
+<label for='exampleFormControlTextarea1'>
+<span class='strong'>Notes</span>
+<span class='small'>Visible only for other admins.</span>
+</label>
+<textarea class='form-control' id='exampleFormControlTextarea1' placeholder='Notes' rows='3'>You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

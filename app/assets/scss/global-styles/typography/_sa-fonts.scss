@@ -133,6 +133,9 @@ p{
   font-size: 0.9375rem; // 15px
   line-height: 1.25rem;
 }
+p.small{
+  line-height: 120%;
+}
 
 // base headings (this have sit right on the item below)
 h1.base, .h1.base {
