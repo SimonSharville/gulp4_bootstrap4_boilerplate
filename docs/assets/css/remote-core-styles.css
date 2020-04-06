@@ -25067,4 +25067,8 @@ body.loaded #sa-page-loader {
   transition: all 0.3s 1s ease-out;
 }
 
+a#sa-page-loader-spinner {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=remote-core-styles.css.map */

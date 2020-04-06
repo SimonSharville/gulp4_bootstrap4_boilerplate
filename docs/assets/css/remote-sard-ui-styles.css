@@ -25067,6 +25067,10 @@ body.loaded #sa-page-loader {
   transition: all 0.3s 1s ease-out;
 }
 
+a#sa-page-loader-spinner {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
   #appraisal .sard-nav-tabs .nav-row .number {
     border-top: 1px solid white;
