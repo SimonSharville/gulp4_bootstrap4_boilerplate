@@ -1,0 +1,54 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title SARD Core UI - Lists
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/remote-sard-ui-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body.theme-trust
+    //=include ../navbars/_navbar-x1.haml
+
+    .container
+      .row
+        .col-sm-24
+          %h1#links.bs-anchor SA Loader
+
+      .row
+        .col
+          #sa-page-loader
+            %a#sa-page-loader-spinner
+            .loader-section.section-left
+            .loader-section.section-right
+
+      .row
+        .col
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mauris rutrum velit ultrices iaculis ac quis magna. Nam dui mauris, mattis ac maximus eget, ornare id enim. Fusce mattis ullamcorper ultrices. Praesent dapibus ac dolor at fermentum. Praesent eu laoreet justo, non laoreet ligula. Phasellus blandit quam mi, pretium malesuada nibh faucibus in. Phasellus fringilla libero laoreet libero pharetra elementum. Donec vehicula quam ac felis volutpat, cursus elementum leo condimentum. Integer a feugiat sem. Ut at nisl nec tellus fermentum fermentum. Mauris nunc velit, volutpat ac nunc at, ultricies rutrum est. Vivamus maximus imperdiet nibh, malesuada porttitor risus pretium et. Mauris a eros sed augue tincidunt scelerisque eget in metus. Aliquam tempor purus mauris, ac commodo nulla bibendum quis. Donec mauris justo, tempor sit amet ornare et, viverra et nunc. Aenean ex diam, dapibus eget enim in, pretium maximus nisl.
+          %p
+            This is a page preloader SA loader. It shoudn't matter where it sits on the page as it is designed the cover the entire screen, but appear behind the navbar, sidemenu and footer. 
+          %p
+            %code #loader-wrapper
+            %br/
+            %code &nbsp;&nbsp;#loader
+            %br/
+            %code &nbsp;&nbsp;&nbsp;&nbsp;.loader-section.section-left
+            %br/
+            %code &nbsp;&nbsp;&nbsp;&nbsp;.loader-section.section-right
+
+          %p
+            To see it work in this demo
+            %br/
+            Click on the loader spinner to replicate the page having loaded.
+
+
+              
+
+
+
+                
+    //=include ../navbars/_footer.haml
+
+    / Scripts ================================
+
+    %script{:src => "../assets/js/remote-sard-scripts.min.js"}
