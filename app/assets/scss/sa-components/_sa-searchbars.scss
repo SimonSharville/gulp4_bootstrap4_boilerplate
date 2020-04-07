@@ -183,3 +183,24 @@
     }
   }
 }
+
+.navbar-secondary{
+  .searchbar-sard input{
+    border-color: $user-primary-colour;
+    &:hover { 
+      border-color: darken($user-primary-colour, 5%); 
+    }
+    &:active {
+      border-color: darken($user-primary-colour, 10%);
+    }
+  }
+  .searchbar-sard .btn-search{
+    background-color: $user-primary-colour;
+    &:hover { 
+      background-color: darken($user-primary-colour, 5%); 
+    }
+  &:active {
+      background-color: darken($user-primary-colour, 10%);
+    }
+  }
+}

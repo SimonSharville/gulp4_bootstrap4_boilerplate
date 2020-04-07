@@ -19823,7 +19823,7 @@ a.list-group-item-action.active:active {
 }
 
 .navbar-secondary {
-  background-color: #E50073;
+  background-color: #004D4D;
 }
 
 .navbar-secondary .navbar-brand,
@@ -19837,27 +19837,27 @@ a.list-group-item-action.active:active {
 
 /* change the color of active or hovered links */
 .navbar-secondary .nav-item:hover .nav-link {
-  background-color: #99004d;
+  background-color: #000101;
 }
 
 .navbar-secondary .nav-item:focus .nav-link {
-  background-color: #b20059;
+  background-color: #001a1a;
 }
 
 .navbar-secondary .nav-item:active .nav-link {
-  background-color: #7f0040;
+  background-color: black;
 }
 
 .navbar-secondary .nav-item.active .nav-link {
-  background-color: #7f0040;
+  background-color: black;
 }
 
 .navbar-secondary .nav-item.active .nav-link:hover {
-  background-color: #660033;
+  background-color: black;
 }
 
 .navbar-secondary .nav-item.active .nav-link:focus {
-  background-color: #4c0026;
+  background-color: black;
 }
 
 .navbar-secondary .nav-item:focus .nav-link.disabled,
@@ -19869,12 +19869,12 @@ a.list-group-item-action.active:active {
   border: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: #b20059;
+  background-color: #001a1a;
   color: white;
 }
 
 .navbar-secondary .nav-item.dropdown.show .nav-link.dropdown-toggle {
-  background-color: #660033;
+  background-color: black;
 }
 
 .navbar-secondary .nav-item.dropdown.show {
@@ -19883,19 +19883,19 @@ a.list-group-item-action.active:active {
 
 .navbar-secondary .dropdown-menu .dropdown-item {
   color: white;
-  border-color: #E50073;
+  border-color: #004D4D;
 }
 
 .navbar-secondary .dropdown-menu .dropdown-item:focus {
-  background-color: #660033;
+  background-color: black;
 }
 
 .navbar-secondary .dropdown-menu .dropdown-item:hover {
-  background-color: #660033;
+  background-color: black;
 }
 
 .navbar-secondary .dropdown-menu .dropdown-item:active {
-  background-color: #4c0026;
+  background-color: black;
 }
 
 .navbar-secondary .dropdown-menu .dropdown-item.dropdown-toggle:active,
@@ -24631,6 +24631,30 @@ body {
 
 .navbar-primary .searchbar-sard .btn-search:active {
   background-color: #001a1a;
+}
+
+.navbar-secondary .searchbar-sard input {
+  border-color: #00B2B2;
+}
+
+.navbar-secondary .searchbar-sard input:hover {
+  border-color: #009999;
+}
+
+.navbar-secondary .searchbar-sard input:active {
+  border-color: #007f7f;
+}
+
+.navbar-secondary .searchbar-sard .btn-search {
+  background-color: #00B2B2;
+}
+
+.navbar-secondary .searchbar-sard .btn-search:hover {
+  background-color: #009999;
+}
+
+.navbar-secondary .searchbar-sard .btn-search:active {
+  background-color: #007f7f;
 }
 
 hr {

@@ -434,7 +434,7 @@
 // Navbar SECONDARY =============================
 
 .navbar-secondary {
-  background-color: $admin-primary-colour;
+  background-color: $user-secondary-colour;
 }
 
 .navbar-secondary .navbar-brand,
@@ -448,23 +448,23 @@
 
 /* change the color of active or hovered links */
 .navbar-secondary .nav-item:hover .nav-link {
-  background-color: darken($admin-primary-colour, 15%); 
+  background-color: darken($user-secondary-colour, 15%); 
 }
 .navbar-secondary .nav-item:focus .nav-link {
-  background-color: darken($admin-primary-colour, 10%); 
+  background-color: darken($user-secondary-colour, 10%); 
 }
 .navbar-secondary .nav-item:active .nav-link {
-  background-color: darken($admin-primary-colour, 20%); 
+  background-color: darken($user-secondary-colour, 20%); 
 }
 // add background-color to active links
 .navbar-secondary .nav-item.active .nav-link{ 
-  background-color: darken($admin-primary-colour, 20%); 
+  background-color: darken($user-secondary-colour, 20%); 
 }
 .navbar-secondary .nav-item.active .nav-link:hover{
-  background-color: darken($admin-primary-colour, 25%); 
+  background-color: darken($user-secondary-colour, 25%); 
 }
 .navbar-secondary .nav-item.active .nav-link:focus{
-  background-color: darken($admin-primary-colour, 30%); 
+  background-color: darken($user-secondary-colour, 30%); 
 }
 
 .navbar-secondary .nav-item:focus .nav-link.disabled,
@@ -477,12 +477,12 @@
   border:none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: darken($admin-primary-colour, 10%);
+  background-color: darken($user-secondary-colour, 10%);
   color: white;
 }
 
 .navbar-secondary .nav-item.dropdown.show .nav-link.dropdown-toggle{
-  background-color: darken($admin-primary-colour, 25%);
+  background-color: darken($user-secondary-colour, 25%);
 }
 
 .navbar-secondary .nav-item.dropdown.show{
@@ -491,15 +491,15 @@
 
 .navbar-secondary .dropdown-menu .dropdown-item{
   color: white;
-  border-color: $admin-primary-colour;
+  border-color: $user-secondary-colour;
   &:focus{
-    background-color: darken($admin-primary-colour, 25%);
+    background-color: darken($user-secondary-colour, 25%);
   }
   &:hover{
-    background-color: darken($admin-primary-colour, 25%);
+    background-color: darken($user-secondary-colour, 25%);
   }
   &:active{
-    background-color: darken($admin-primary-colour, 30%);
+    background-color: darken($user-secondary-colour, 30%);
   }
 }
 

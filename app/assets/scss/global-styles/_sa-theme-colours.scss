@@ -250,43 +250,27 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
     }
 
     // Searchbar
-    .navbar-secondary .searchbar-sard input{
-      border:2px solid darken($theme-secondary, 10%);
-      &:hover{
-        border-color: darken($theme-secondary, 15%);
+    .navbar-secondary{
+      .searchbar-sard input{
+        border-color: $theme-primary;
+        &:hover { 
+          border-color: darken($theme-primary, 5%); 
+        }
+        &:active {
+          border-color: darken($theme-primary, 10%);
+        }
       }
-      &:focus{
-        border-color: darken($theme-secondary, 25%);
-      }
-    }
-    
-    .navbar-secondary .searchbar-sard .btn-search{
-      &::before{
-        color:darken($theme-secondary, 15%);
-      }
-    }
-    
-    .navbar-secondary .searchbar-sard .btn-search:hover{
-      &::before{
-        color: darken($theme-secondary, 20%);
-      }
-    }
-    .navbar-secondary .searchbar-sard .btn-search:focus{
-      &::before{
-        color: darken($theme-secondary, 25%);
+      .searchbar-sard .btn-search{
+        background-color: $theme-primary;
+        &:hover { 
+          background-color: darken($theme-primary, 5%); 
+        }
+      &:active {
+          background-color: darken($theme-primary, 10%);
+        }
       }
     }
-    
-    .navbar-secondary .searchbar-sard input:hover + .btn-search{
-      &::before{
-        color: darken($theme-secondary, 20%);
-      }
-    }
-    .navbar-secondary .searchbar-sard input:focus + .btn-search{
-      &::before{
-        color: darken($theme-secondary, 25%);
-      }
-    }
+
     // Navbar Toggler
     .navbar-secondary .navbar-toggler{
       background-color: darken($theme-secondary, 20%);
