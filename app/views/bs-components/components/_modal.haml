@@ -692,7 +692,7 @@
     %p The SARD Mega Modal uses default bootstrap elements, including rows and columns, these have been tightened a little, reducing the margins to save space.
 
     / SARD Mega modal
-    %button.btn.btn-primary{"data-target" => ".sa-mega-modal", "data-toggle" => "modal", :type => "button"} SARD Mega modal
+    %button.btn.btn-primary{"data-target" => ".sa-mega-modal", "data-toggle" => "modal", :type => "button"} SARD Mega modal Build Example
     .modal.fade.sa-mega-modal.modal-primary{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
       .modal-dialog
         .modal-content
@@ -701,28 +701,57 @@
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
-            .alert.alert-danger.alert-dismissible.fade.show Alert
+            .alert.alert-danger.alert-dismissible.fade.show Alerts appear at the top of the modal-body
             .row
               .col-sm-12
                 .modal-box
                   .modal-box-body
-                    \.modal-box-body
+                    %code .modal-box-body
+                    %br/
+                    %br/
+                    %h6 Definition List
+                    %label label 
+                    %dl 
+                      %dt dt
+                      %dd dd
+                      %dt dt
+                      %dd dd
+                    %p 
+                      You can add 
+                      %code .x2
+                      or 
+                      %code .x3
+                      to the dl to extend the width of the dts. 
               .col-sm-12
                 .modal-box
                   .modal-box-header
                     \.modal-box-header
                   .modal-box-body
-                    \.modal-box-body
+                    %code .modal-box-body
+                    %br/
+                    A Modal Box must have a .modal-box-body inside, but .modal-box-header and .modal-box-footer are optional.
                   .modal-box-footer
-                    \.modal-box-footer
+                    %code .modal-box-footer
+            %hr/
             .row
               .col-sm-24
-                .modal-box
-                  .modal-box-body
-                    A Modal Box must have a .modal-box-body inside, but .modal-box-header and .modal-box-footer are optional.
-
+                %textarea#exampleFormControlTextarea1.form-control{:rows => "3", placeholder: 'Notes'} You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.
+            .row
+              .col-sm-24
+                .modal-confirm
+                  .confirm-header
+                    \.modal-confirm
+                  .confirm-body
+                    The modal-confirm should appear athe the base of the modal-body, and NOT be another modal on top of this one.
+                  .confirm-footer.right
+                    .btn.btn-sm.btn-success Yes
+                    .btn.btn-sm.btn-danger No
           .modal-footer
-            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+            %p 
+              The
+              %code .modal-footer
+              is optional and is a place to add any actions or messages that are needed for the entire modal, can be useful if the modal contains tabbed sections.
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Action
 
     / Example with .nav-tabs
     %button.btn.btn-primary{"data-target" => ".example-sa-mega-modal-navs", "data-toggle" => "modal", :type => "button"} Example with .nav-tabs
@@ -748,11 +777,10 @@
                       .modal-box-header
                         Shift Info
                       .modal-box-body
-                        %p
-                          %label Info 
-                          %br
-                          %span.sub-label Duty:
-                          9-5 Croydon ST
+                        %label Info 
+                        %dl
+                          %dt Duty
+                          %dd 9-5 Croydon ST
                       .modal-box-footer.right
                         .btn.btn-xs.btn-primary New Shift Swap
                   .col-sm-12
@@ -769,14 +797,11 @@
                               %br
                               Aaron Philip
                         %hr/
-                        %p
-                          %label Hours worked 
-                          %br
-                          %span.sub-label.x2 20 Apr - 26 Apr:
-                          16 hours
-                          %br
-                          %span.sub-label.x2 01 Apr - 30 Apr:
-                          160 hours
+                        %dl.x2
+                          %dt 20 Apr - 26 Apr
+                          %dd 16 hours
+                          %dt 01 Apr - 30 Apr
+                          %dd 160 hours
                       .modal-box-footer.right
                         .btn.btn-xs.btn-danger Unassign
                 .row
@@ -815,21 +840,17 @@
                       .modal-box-header
                         Info
                       .modal-box-body
-                        %p
-                          %span.sub-label ID:
-                          74574
-                          %br
-                          %span.sub-label Duty:
-                          27
-                          %br
-                          %span.sub-label hr-duty:
-                          20348193
-                          %br
-                          %span.sub-label User:
-                          325
-                          %br
-                          %span.sub-label hr-da:
-                          Not assigned
+                        %dl
+                          %dt ID
+                          %dd 74574
+                          %dt Duty
+                          %dd 27
+                          %dt hr-duty
+                          %dd 20348193
+                          %dt User
+                          %dd 325
+                          %dt hr-da
+                          %dd Not assigned
                           
                       .modal-box-footer.right
                         .btn.btn-xs.btn-danger Unassign
@@ -840,8 +861,6 @@
                       %span.small Visible only for other admins.
                     %textarea#exampleFormControlTextarea1.form-control{:rows => "3", placeholder: 'Notes'} You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.
 
-          .modal-footer
-            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
 
 
     / Example with .sa-nav-tabs
@@ -868,11 +887,10 @@
                       .modal-box-header
                         Shift Info
                       .modal-box-body
-                        %p
-                          %label Info 
-                          %br
-                          %span.sub-label Duty:
-                          9-5 Croydon ST
+                        %label Info 
+                        %dl
+                          %dt Duty
+                          %dd 9-5 Croydon ST
                       .modal-box-footer.right
                         .btn.btn-xs.btn-primary New Shift Swap
                   .col-sm-12
@@ -889,14 +907,12 @@
                               %br
                               Aaron Philip
                         %hr/
-                        %p
-                          %label Hours worked 
-                          %br
-                          %span.sub-label.x2 20 Apr - 26 Apr:
-                          16 hours
-                          %br
-                          %span.sub-label.x2 01 Apr - 30 Apr:
-                          160 hours
+                        %label Hours worked 
+                        %dl.x2
+                          %dt 20 Apr - 26 Apr
+                          %dd 16 hours
+                          %dt 01 Apr - 30 Apr
+                          %dd 160 hours
                       .modal-box-footer.right
                         .btn.btn-xs.btn-danger Unassign
                 .row
@@ -922,21 +938,17 @@
                       .modal-box-header
                         Info
                       .modal-box-body
-                        %p
-                          %span.sub-label ID:
-                          74574
-                          %br
-                          %span.sub-label Duty:
-                          27
-                          %br
-                          %span.sub-label hr-duty:
-                          20348193
-                          %br
-                          %span.sub-label User:
-                          325
-                          %br
-                          %span.sub-label hr-da:
-                          Not assigned
+                        %dl
+                          %dt ID
+                          %dd 74574
+                          %dt Duty
+                          %dd 27
+                          %dt hr-duty
+                          %dd 20348193
+                          %dt User
+                          %dd 325
+                          %dt hr-da
+                          %dd Not assigned
                           
                       .modal-box-footer.right
                         .btn.btn-xs.btn-danger Unassign
@@ -947,5 +959,3 @@
                       %span.small Visible only for other admins.
                     %textarea#exampleFormControlTextarea1.form-control{:rows => "3", placeholder: 'Notes'} You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.
 
-          .modal-footer
-            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close

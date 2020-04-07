@@ -184,7 +184,7 @@
 
 .modal-primary .modal-footer {
   background-color: white;
-  border-top: 1px solid $sa-grey-08;
+  border-top: 1px solid $user-primary-colour;
   margin-left: 0px;
   width: 100%;
 }
@@ -220,7 +220,7 @@
 
 .modal-secondary .modal-footer {
   background-color: white;
-  border-top: 1px solid $sa-grey-08;
+  border-top: 1px solid $user-secondary-colour;
   margin-left: 0px;
   width: 100%;
 }
@@ -699,7 +699,7 @@ p > a.modal-info-circle-inline{
 // SARD Mega Modal ==============================
 
 .sa-mega-modal{
-
+  // Structure --------------
   .row{
     margin-right: -4px;
     margin-left: -4px;
@@ -712,6 +712,14 @@ p > a.modal-info-circle-inline{
     padding-left: 4px;
   }
 
+  .modal-footer {
+    background-color: #fff;
+    margin-left: -2px;
+    margin-right: -2px;
+    width: calc(100% + 4px);
+  }
+
+  // Components -------------
   .alert{ 
     margin-bottom: 8px; 
     padding: 4px 8px;
@@ -727,7 +735,7 @@ p > a.modal-info-circle-inline{
     // overflow: hidden;
   }
   .modal-box-header{
-    padding: 4px 6px;
+    padding: 4px 8px;
     margin: -1px -1px 0 -1px;
     background-color: $sa-grey-14;
     border-top-left-radius: $sa-border-radius-sm;
@@ -736,12 +744,12 @@ p > a.modal-info-circle-inline{
     @include roboto-bold;
   }
   .modal-box-body{
-    padding: 4px 6px;
+    padding: 4px 8px;
     flex: 2 2 auto;
   }
   .modal-box-footer{
     border-top: 1px solid $sa-grey-06;
-    padding: 4px 6px;
+    padding: 4px 8px;
   }
 
   // user-details -----------
@@ -758,6 +766,7 @@ p > a.modal-info-circle-inline{
     }
     p{ margin: 0; }
   }
+  
   // text etc ---------------
   .modal-box{
     p{ margin-bottom: 4px; }
@@ -781,8 +790,30 @@ p > a.modal-info-circle-inline{
         width: 120px;
       }
     }
+
+    // description lists ----
+    dt {
+      float: left;
+      clear: left;
+      width: 60px;
+      text-align: left;
+      font-weight: bold;
+    }
+    dt::after { content: ":"; }
+    dd { margin: 0 0 0 68px; }
+
+    dl.x2{
+      dt { width: 120px; }
+      dt + dd { margin: 0 0 0 128px; }
+    }
+    
+    dl.x3{
+      dt { width: 180px; }
+      dt + dd {  margin: 0 0 0 188px; }
+    }
   }
 
+  // Modal Confirm ----------
   .modal-confirm{
     display: flex;
     flex-direction: column;
@@ -808,7 +839,4 @@ p > a.modal-info-circle-inline{
     border-top: 1px solid $sa-success;
     padding: 4px 6px;
   }
-
-
-
 }

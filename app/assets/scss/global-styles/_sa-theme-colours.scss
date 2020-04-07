@@ -1092,9 +1092,13 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
       border-color: $theme-primary;
     }
 
-    // .modal-primary ::-webkit-scrollbar-thumb {
-    //   background-color: darken($theme-primary, 20%)!important;
-    // }
+    .modal-primary .modal-footer{
+      border-top-color: $theme-primary;
+    }
+
+    .modal-primary ::-webkit-scrollbar-thumb {
+      background-color: darken($theme-primary, 20%)!important;
+    }
 
 
     .modal-secondary .modal-header {
@@ -1107,6 +1111,10 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
 
     .modal-secondary .modal-body hr{
       border-color: $theme-secondary;
+    }
+
+    .modal-secondary .modal-footer{
+      border-top-color: $theme-secondary;
     }
 
     .modal-secondary ::-webkit-scrollbar-thumb {

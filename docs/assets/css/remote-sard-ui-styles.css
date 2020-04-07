@@ -20746,7 +20746,7 @@ a.list-group-item-action.active:active {
 
 .modal-primary .modal-footer {
   background-color: white;
-  border-top: 1px solid #B5B0B0;
+  border-top: 1px solid #00B2B2;
   margin-left: 0px;
   width: 100%;
 }
@@ -20793,7 +20793,7 @@ a.list-group-item-action.active:active {
 
 .modal-secondary .modal-footer {
   background-color: white;
-  border-top: 1px solid #B5B0B0;
+  border-top: 1px solid #004D4D;
   margin-left: 0px;
   width: 100%;
 }
@@ -21305,6 +21305,13 @@ p > a.modal-info-circle-inline::before {
   padding-left: 4px;
 }
 
+.sa-mega-modal .modal-footer {
+  background-color: #fff;
+  margin-left: -2px;
+  margin-right: -2px;
+  width: calc(100% + 4px);
+}
+
 .sa-mega-modal .alert {
   margin-bottom: 8px;
   padding: 4px 8px;
@@ -21325,7 +21332,7 @@ p > a.modal-info-circle-inline::before {
 }
 
 .sa-mega-modal .modal-box-header {
-  padding: 4px 6px;
+  padding: 4px 8px;
   margin: -1px -1px 0 -1px;
   background-color: #615E5C;
   border-top-left-radius: 0.2rem;
@@ -21336,7 +21343,7 @@ p > a.modal-info-circle-inline::before {
 }
 
 .sa-mega-modal .modal-box-body {
-  padding: 4px 6px;
+  padding: 4px 8px;
   -webkit-box-flex: 2;
   -ms-flex: 2 2 auto;
   flex: 2 2 auto;
@@ -21344,7 +21351,7 @@ p > a.modal-info-circle-inline::before {
 
 .sa-mega-modal .modal-box-footer {
   border-top: 1px solid #C7C4C2;
-  padding: 4px 6px;
+  padding: 4px 8px;
 }
 
 .sa-mega-modal .user-details {
@@ -21396,6 +21403,38 @@ p > a.modal-info-circle-inline::before {
 
 .sa-mega-modal .modal-box .sub-label.x2 {
   width: 120px;
+}
+
+.sa-mega-modal .modal-box dt {
+  float: left;
+  clear: left;
+  width: 60px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.sa-mega-modal .modal-box dt::after {
+  content: ":";
+}
+
+.sa-mega-modal .modal-box dd {
+  margin: 0 0 0 68px;
+}
+
+.sa-mega-modal .modal-box dl.x2 dt {
+  width: 120px;
+}
+
+.sa-mega-modal .modal-box dl.x2 dt + dd {
+  margin: 0 0 0 128px;
+}
+
+.sa-mega-modal .modal-box dl.x3 dt {
+  width: 180px;
+}
+
+.sa-mega-modal .modal-box dl.x3 dt + dd {
+  margin: 0 0 0 188px;
 }
 
 .sa-mega-modal .modal-confirm {

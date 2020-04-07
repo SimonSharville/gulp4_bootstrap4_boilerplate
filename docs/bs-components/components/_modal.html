@@ -847,7 +847,7 @@ and it will be placed inline. The code for this is:
 <h3>SARD Mega Modal</h3>
 <p>The SARD Mega Modal uses default bootstrap elements, including rows and columns, these have been tightened a little, reducing the margins to save space.</p>
 <!-- SARD Mega modal -->
-<button class='btn btn-primary' data-target='.sa-mega-modal' data-toggle='modal' type='button'>SARD Mega modal</button>
+<button class='btn btn-primary' data-target='.sa-mega-modal' data-toggle='modal' type='button'>SARD Mega modal Build Example</button>
 <div aria-hidden='true' aria-labelledby='mySmallModalLabel' class='modal fade sa-mega-modal modal-primary' role='dialog' tabindex='-1'>
 <div class='modal-dialog'>
 <div class='modal-content'>
@@ -858,12 +858,29 @@ and it will be placed inline. The code for this is:
 </button>
 </div>
 <div class='modal-body'>
-<div class='alert alert-danger alert-dismissible fade show'>Alert</div>
+<div class='alert alert-danger alert-dismissible fade show'>Alerts appear at the top of the modal-body</div>
 <div class='row'>
 <div class='col-sm-12'>
 <div class='modal-box'>
 <div class='modal-box-body'>
-.modal-box-body
+<code>.modal-box-body</code>
+<br>
+<br>
+<h6>Definition List</h6>
+<label>label</label>
+<dl>
+<dt>dt</dt>
+<dd>dd</dd>
+<dt>dt</dt>
+<dd>dd</dd>
+</dl>
+<p>
+You can add
+<code>.x2</code>
+or
+<code>.x3</code>
+to the dl to extend the width of the dts.
+</p>
 </div>
 </div>
 </div>
@@ -873,26 +890,46 @@ and it will be placed inline. The code for this is:
 .modal-box-header
 </div>
 <div class='modal-box-body'>
-.modal-box-body
+<code>.modal-box-body</code>
+<br>
+A Modal Box must have a .modal-box-body inside, but .modal-box-header and .modal-box-footer are optional.
 </div>
 <div class='modal-box-footer'>
-.modal-box-footer
+<code>.modal-box-footer</code>
 </div>
 </div>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-24'>
+<textarea class='form-control' id='exampleFormControlTextarea1' placeholder='Notes' rows='3'>You don't need to put elements within a modal-box, as long as they are in bootstrap rows and columns.</textarea>
 </div>
 </div>
 <div class='row'>
 <div class='col-sm-24'>
-<div class='modal-box'>
-<div class='modal-box-body'>
-A Modal Box must have a .modal-box-body inside, but .modal-box-header and .modal-box-footer are optional.
+<div class='modal-confirm'>
+<div class='confirm-header'>
+.modal-confirm
+</div>
+<div class='confirm-body'>
+The modal-confirm should appear athe the base of the modal-body, and NOT be another modal on top of this one.
+</div>
+<div class='confirm-footer right'>
+<div class='btn btn-sm btn-success'>Yes</div>
+<div class='btn btn-sm btn-danger'>No</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class='modal-footer'>
-<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+<p>
+The
+<code>.modal-footer</code>
+is optional and is a place to add any actions or messages that are needed for the entire modal, can be useful if the modal contains tabbed sections.
+</p>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Action</button>
 </div>
 </div>
 </div>
@@ -926,12 +963,11 @@ A Modal Box must have a .modal-box-body inside, but .modal-box-header and .modal
 Shift Info
 </div>
 <div class='modal-box-body'>
-<p>
 <label>Info</label>
-<br>
-<span class='sub-label'>Duty:</span>
-9-5 Croydon ST
-</p>
+<dl>
+<dt>Duty</dt>
+<dd>9-5 Croydon ST</dd>
+</dl>
 </div>
 <div class='modal-box-footer right'>
 <div class='btn btn-xs btn-primary'>New Shift Swap</div>
@@ -957,15 +993,12 @@ Aaron Philip
 </div>
 </div>
 <hr>
-<p>
-<label>Hours worked</label>
-<br>
-<span class='sub-label x2'>20 Apr - 26 Apr:</span>
-16 hours
-<br>
-<span class='sub-label x2'>01 Apr - 30 Apr:</span>
-160 hours
-</p>
+<dl class='x2'>
+<dt>20 Apr - 26 Apr</dt>
+<dd>16 hours</dd>
+<dt>01 Apr - 30 Apr</dt>
+<dd>160 hours</dd>
+</dl>
 </div>
 <div class='modal-box-footer right'>
 <div class='btn btn-xs btn-danger'>Unassign</div>
@@ -1024,22 +1057,18 @@ Select shift cover from users or locums list.
 Info
 </div>
 <div class='modal-box-body'>
-<p>
-<span class='sub-label'>ID:</span>
-74574
-<br>
-<span class='sub-label'>Duty:</span>
-27
-<br>
-<span class='sub-label'>hr-duty:</span>
-20348193
-<br>
-<span class='sub-label'>User:</span>
-325
-<br>
-<span class='sub-label'>hr-da:</span>
-Not assigned
-</p>
+<dl>
+<dt>ID</dt>
+<dd>74574</dd>
+<dt>Duty</dt>
+<dd>27</dd>
+<dt>hr-duty</dt>
+<dd>20348193</dd>
+<dt>User</dt>
+<dd>325</dd>
+<dt>hr-da</dt>
+<dd>Not assigned</dd>
+</dl>
 </div>
 <div class='modal-box-footer right'>
 <div class='btn btn-xs btn-danger'>Unassign</div>
@@ -1058,9 +1087,6 @@ Not assigned
 </div>
 </div>
 </div>
-</div>
-<div class='modal-footer'>
-<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
 </div>
 </div>
 </div>
@@ -1094,12 +1120,11 @@ Not assigned
 Shift Info
 </div>
 <div class='modal-box-body'>
-<p>
 <label>Info</label>
-<br>
-<span class='sub-label'>Duty:</span>
-9-5 Croydon ST
-</p>
+<dl>
+<dt>Duty</dt>
+<dd>9-5 Croydon ST</dd>
+</dl>
 </div>
 <div class='modal-box-footer right'>
 <div class='btn btn-xs btn-primary'>New Shift Swap</div>
@@ -1125,15 +1150,13 @@ Aaron Philip
 </div>
 </div>
 <hr>
-<p>
 <label>Hours worked</label>
-<br>
-<span class='sub-label x2'>20 Apr - 26 Apr:</span>
-16 hours
-<br>
-<span class='sub-label x2'>01 Apr - 30 Apr:</span>
-160 hours
-</p>
+<dl class='x2'>
+<dt>20 Apr - 26 Apr</dt>
+<dd>16 hours</dd>
+<dt>01 Apr - 30 Apr</dt>
+<dd>160 hours</dd>
+</dl>
 </div>
 <div class='modal-box-footer right'>
 <div class='btn btn-xs btn-danger'>Unassign</div>
@@ -1176,22 +1199,18 @@ Sickness
 Info
 </div>
 <div class='modal-box-body'>
-<p>
-<span class='sub-label'>ID:</span>
-74574
-<br>
-<span class='sub-label'>Duty:</span>
-27
-<br>
-<span class='sub-label'>hr-duty:</span>
-20348193
-<br>
-<span class='sub-label'>User:</span>
-325
-<br>
-<span class='sub-label'>hr-da:</span>
-Not assigned
-</p>
+<dl>
+<dt>ID</dt>
+<dd>74574</dd>
+<dt>Duty</dt>
+<dd>27</dd>
+<dt>hr-duty</dt>
+<dd>20348193</dd>
+<dt>User</dt>
+<dd>325</dd>
+<dt>hr-da</dt>
+<dd>Not assigned</dd>
+</dl>
 </div>
 <div class='modal-box-footer right'>
 <div class='btn btn-xs btn-danger'>Unassign</div>
@@ -1210,9 +1229,6 @@ Not assigned
 </div>
 </div>
 </div>
-</div>
-<div class='modal-footer'>
-<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
 </div>
 </div>
 </div>
