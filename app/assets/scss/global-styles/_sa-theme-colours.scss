@@ -57,86 +57,6 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
     }
 
 
-    // Searchbar Primary ------------------------
-
-    .searchbar-sard.searchbar-primary input{
-      border:2px solid darken($theme-primary, 0%);
-      &:hover{
-        border-color: darken($theme-primary, 5%);
-      }
-      &:focus{
-        border-color: darken($theme-primary, 15%);
-      }
-    }
-
-    .searchbar-sard.searchbar-primary .btn-search{
-      &::before{
-        color:darken($theme-primary, 5%);
-      }
-    }
-
-    .searchbar-sard.searchbar-primary .btn-search:hover{
-      &::before{
-        color: darken($theme-primary, 10%);
-      }
-    }
-    .searchbar-sard.searchbar-primary .btn-search:focus{
-      &::before{
-        color: darken($theme-primary, 15%);
-      }
-    }
-
-    .searchbar-sard.searchbar-primary input:hover + .btn-search{
-      &::before{
-        color: darken($theme-primary, 10%);
-      }
-    }
-    .searchbar-sard.searchbar-primary input:focus + .btn-search{
-      &::before{
-        color: darken($theme-primary, 15%);
-      }
-    }
-
-    // Searchbar Secondary ----------------------
-
-    .searchbar-sard.searchbar-secondary input{
-      border:2px solid darken($theme-secondary, 0%);
-      &:hover{
-        border-color: darken($theme-secondary, 5%);
-      }
-      &:focus{
-        border-color: darken($theme-secondary, 15%);
-      }
-    }
-
-    .searchbar-sard.searchbar-secondary .btn-search{
-      &::before{
-        color:darken($theme-secondary, 5%);
-      }
-    }
-
-    .searchbar-sard.searchbar-secondary .btn-search:hover{
-      &::before{
-        color: darken($theme-secondary, 10%);
-      }
-    }
-    .searchbar-sard.searchbar-secondary .btn-search:focus{
-      &::before{
-        color: darken($theme-secondary, 15%);
-      }
-    }
-
-    .searchbar-sard.searchbar-secondary input:hover + .btn-search{
-      &::before{
-        color: darken($theme-secondary, 10%);
-      }
-    }
-    .searchbar-sard.searchbar-secondary input:focus + .btn-search{
-      &::before{
-        color: darken($theme-secondary, 15%);
-      }
-    }
-
 
     // Navbar PRIMARY ---------------------------
 
@@ -536,7 +456,107 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
       }
     }
 
+    // Searchbar Primary ------------------------
 
+    .searchbar-sard.searchbar-primary input{
+      border:2px solid darken($theme-primary, 0%);
+      &:hover{
+        border-color: darken($theme-primary, 5%);
+      }
+      &:focus{
+        border-color: darken($theme-primary, 15%);
+      }
+    }
+
+    .searchbar-sard.searchbar-primary .btn-search{
+      &::before{
+        color:darken($theme-primary, 5%);
+      }
+    }
+
+    .searchbar-sard.searchbar-primary .btn-search:hover{
+      &::before{
+        color: darken($theme-primary, 10%);
+      }
+    }
+    .searchbar-sard.searchbar-primary .btn-search:focus{
+      &::before{
+        color: darken($theme-primary, 15%);
+      }
+    }
+
+    .searchbar-sard.searchbar-primary input:hover + .btn-search{
+      &::before{
+        color: darken($theme-primary, 10%);
+      }
+    }
+    .searchbar-sard.searchbar-primary input:focus + .btn-search{
+      &::before{
+        color: darken($theme-primary, 15%);
+      }
+    }
+
+    // Searchbar Secondary ----------------------
+
+    .searchbar-sard.searchbar-secondary input{
+      border:2px solid darken($theme-secondary, 0%);
+      &:hover{
+        border-color: darken($theme-secondary, 5%);
+      }
+      &:focus{
+        border-color: darken($theme-secondary, 15%);
+      }
+    }
+
+    .searchbar-sard.searchbar-secondary .btn-search{
+      &::before{
+        color:darken($theme-secondary, 5%);
+      }
+    }
+
+    .searchbar-sard.searchbar-secondary .btn-search:hover{
+      &::before{
+        color: darken($theme-secondary, 10%);
+      }
+    }
+    .searchbar-sard.searchbar-secondary .btn-search:focus{
+      &::before{
+        color: darken($theme-secondary, 15%);
+      }
+    }
+
+    .searchbar-sard.searchbar-secondary input:hover + .btn-search{
+      &::before{
+        color: darken($theme-secondary, 10%);
+      }
+    }
+    .searchbar-sard.searchbar-secondary input:focus + .btn-search{
+      &::before{
+        color: darken($theme-secondary, 15%);
+      }
+    }
+
+    // in navbar
+    .navbar-primary{
+      .searchbar-sard input{
+        border-color: $theme-secondary;
+        &:hover { 
+          border-color: darken($theme-secondary, 5%); 
+        }
+        &:active {
+          border-color: darken($theme-secondary, 10%);
+        }
+      }
+      .searchbar-sard .btn-search{
+        background-color: $theme-secondary;
+        &:hover { 
+          background-color: darken($theme-secondary, 5%); 
+        }
+        &:active {
+          background-color: darken($theme-secondary, 10%);
+        }
+      }
+    }
     // Perforations -----------------------------
     hr.primary{ border-color: $theme-primary; }
     hr.secondary{ border-color: $theme-secondary; }

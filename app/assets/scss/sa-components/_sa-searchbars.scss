@@ -46,6 +46,13 @@
   border:none;
   border-left: none;
   box-shadow: none;
+  background-color: $user-primary-colour;
+  &:hover { 
+    background-color: darken($user-primary-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-primary-colour, 10%);
+  }
   &::after{ // overrides generic .btn-search position
     right: 6px;
   }
@@ -155,3 +162,24 @@
   }
 }
 
+// in navbar -----------------
+.navbar-primary{
+  .searchbar-sard input{
+    border-color: $user-secondary-colour;
+    &:hover { 
+      border-color: darken($user-secondary-colour, 5%); 
+    }
+    &:active {
+      border-color: darken($user-secondary-colour, 10%);
+    }
+  }
+  .searchbar-sard .btn-search{
+    background-color: $user-secondary-colour;
+    &:hover { 
+      background-color: darken($user-secondary-colour, 5%); 
+    }
+  &:active {
+      background-color: darken($user-secondary-colour, 10%);
+    }
+  }
+}

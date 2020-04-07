@@ -24475,6 +24475,15 @@ body {
   border-left: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-color: #00B2B2;
+}
+
+.searchbar-sard .btn-search:hover {
+  background-color: #009999;
+}
+
+.searchbar-sard .btn-search:active {
+  background-color: #007f7f;
 }
 
 .searchbar-sard .btn-search::after {
@@ -24559,6 +24568,30 @@ body {
 
 .searchbar-sard.searchbar-secondary input:focus + .btn-search::before {
   color: #000101;
+}
+
+.navbar-primary .searchbar-sard input {
+  border-color: #004D4D;
+}
+
+.navbar-primary .searchbar-sard input:hover {
+  border-color: #003434;
+}
+
+.navbar-primary .searchbar-sard input:active {
+  border-color: #001a1a;
+}
+
+.navbar-primary .searchbar-sard .btn-search {
+  background-color: #004D4D;
+}
+
+.navbar-primary .searchbar-sard .btn-search:hover {
+  background-color: #003434;
+}
+
+.navbar-primary .searchbar-sard .btn-search:active {
+  background-color: #001a1a;
 }
 
 hr {
