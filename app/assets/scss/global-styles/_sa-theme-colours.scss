@@ -1266,7 +1266,8 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
     }
 
     // sa page loader ---------------------------
-    #sa-page-loader-spinner{
+    .sa-page-loader-spinner,
+    .sa-element-loader-spinner{
       border-top-color: $theme-secondary;
       &::before{
         border-top-color: $theme-primary;
@@ -1275,7 +1276,8 @@ $theme-secondary-colour-very-dark:    darken($theme-secondary-colour, 20%);
         border-top-color: $theme-secondary;
       }
     }
-    #sa-page-loader{
+    .sa-page-loader,
+    .sa-element-loader{
       .loader-section{
         background-color: $theme-secondary ;
       }
