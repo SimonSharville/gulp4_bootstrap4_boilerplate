@@ -16,8 +16,8 @@
 
       .row
         .col
-          #sa-page-loader
-            %a#sa-page-loader-spinner
+          .sa-page-loader
+            %a.sa-page-loader-spinner
             .loader-section.section-left
             .loader-section.section-right
 
@@ -28,9 +28,9 @@
           %p
             This is a page preloader SA loader. It shoudn't matter where it sits on the page as it is designed the cover the entire screen, but appear behind the navbar, sidemenu and footer. 
           %p
-            %code #sa-page-loader
+            %code .sa-page-loader
             %br/
-            %code &nbsp;&nbsp;#sa-page-loader-spinner
+            %code &nbsp;&nbsp;.sa-page-loader-spinner
             %br/
             %code &nbsp;&nbsp;&nbsp;&nbsp;.loader-section.section-left
             %br/
@@ -40,11 +40,15 @@
             %br/
             %code .small-spinner
             to 
-            %code #sa-page-loader-spinner
+            %code .sa-page-loader-spinner
+          
+          %h4 Demo
           %p
-            To see it work in this demo
+            To see it work 
+            .btn.btn-primary.activate-loader Click Here
             %br/
-            Click on the loader spinner to replicate the page having loaded.
+            %br/
+            To close it, click on the loader spinner to replicate the page having loaded.
 
 
               

@@ -3,7 +3,7 @@
 // https://ihatetomatoes.net/create-custom-preloading-screen/
 // https://css3please.com/
 
-#sa-page-loader{
+.sa-page-loader{
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   z-index: 4997;
 }
 
-#sa-page-loader-spinner{
+.sa-page-loader-spinner{
   display: block;
   position: relative;
   top: 50%;
@@ -85,7 +85,7 @@
 }
 
 // Loader background screen ---------------------
-#sa-page-loader{
+.sa-page-loader{
   .loader-section{
     position: fixed;
     top: 0;
@@ -104,8 +104,8 @@
 
 // Loaded styles --------------------------------
 
-body.loaded {
-  #sa-page-loader{
+body:not(.loading) {
+  .sa-page-loader{
     .loader-section.section-left{
       -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
       -ms-transform: translateX(-100%);  /* IE 9 */
@@ -124,13 +124,13 @@ body.loaded {
     }
   }
 
-  #sa-page-loader-spinner{
+  .sa-page-loader-spinner{
     opacity: 0;
     -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
       transition: all 0.3s ease-out; 
 
   }
-  #sa-page-loader{
+  .sa-page-loader{
     visibility: hidden;
     -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
       -ms-transform: translateY(-100%);  /* IE 9 */
@@ -142,7 +142,7 @@ body.loaded {
 }
 
 // Demo Only ------------------------------------
-a#sa-page-loader-spinner{
+a.sa-page-loader-spinner{
   cursor: pointer;
 
 }

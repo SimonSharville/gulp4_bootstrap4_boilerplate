@@ -3,9 +3,16 @@
 
 $(document).ready(function(){                       
    
-  $('#sa-page-loader-spinner').on('click',function(e){
+  $('.activate-loader').on('click',function(e){
     e.preventDefault();
-    $('body').addClass('loaded');
+    $('body').addClass('loading');
   });
- });
+
+  $('.sa-page-loader-spinner').on('click',function(e){
+    e.preventDefault();
+    $('body').removeClass('loading');
+  });
+
+
+});
 

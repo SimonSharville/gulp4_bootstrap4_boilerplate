@@ -25008,7 +25008,7 @@ hr.white {
   padding: 8px 0px;
 }
 
-#sa-page-loader {
+.sa-page-loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -25017,7 +25017,7 @@ hr.white {
   z-index: 4997;
 }
 
-#sa-page-loader-spinner {
+.sa-page-loader-spinner {
   display: block;
   position: relative;
   top: 50%;
@@ -25033,13 +25033,13 @@ hr.white {
   z-index: 4998;
 }
 
-#sa-page-loader-spinner.small-spinner {
+.sa-page-loader-spinner.small-spinner {
   width: 100px;
   height: 100px;
   margin: -50px 0 0 -50px;
 }
 
-#sa-page-loader-spinner::before {
+.sa-page-loader-spinner::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -25053,7 +25053,7 @@ hr.white {
   animation: spin 3s linear infinite;
 }
 
-#sa-page-loader-spinner::after {
+.sa-page-loader-spinner::after {
   content: "";
   position: absolute;
   top: 15px;
@@ -25101,7 +25101,7 @@ hr.white {
   }
 }
 
-#sa-page-loader .loader-section {
+.sa-page-loader .loader-section {
   position: fixed;
   top: 0;
   width: 50%;
@@ -25110,15 +25110,15 @@ hr.white {
   opacity: 0.2;
 }
 
-#sa-page-loader .loader-section.section-left {
+.sa-page-loader .loader-section.section-left {
   left: 0;
 }
 
-#sa-page-loader .loader-section.section-right {
+.sa-page-loader .loader-section.section-right {
   right: 0;
 }
 
-body.loaded #sa-page-loader .loader-section.section-left {
+body:not(.loading) .sa-page-loader .loader-section.section-left {
   -webkit-transform: translateX(-100%);
   /* Chrome, Opera 15+, Safari 3.1+ */
   /* IE 9 */
@@ -25129,7 +25129,7 @@ body.loaded #sa-page-loader .loader-section.section-left {
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-body.loaded #sa-page-loader .loader-section.section-right {
+body:not(.loading) .sa-page-loader .loader-section.section-right {
   -webkit-transform: translateX(100%);
   /* Chrome, Opera 15+, Safari 3.1+ */
   /* IE 9 */
@@ -25140,14 +25140,14 @@ body.loaded #sa-page-loader .loader-section.section-right {
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-body.loaded #sa-page-loader-spinner {
+body:not(.loading) .sa-page-loader-spinner {
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
   /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
   transition: all 0.3s ease-out;
 }
 
-body.loaded #sa-page-loader {
+body:not(.loading) .sa-page-loader {
   visibility: hidden;
   -webkit-transform: translateY(-100%);
   /* Chrome, Opera 15+, Safari 3.1+ */
@@ -25159,7 +25159,7 @@ body.loaded #sa-page-loader {
   transition: all 0.3s 1s ease-out;
 }
 
-a#sa-page-loader-spinner {
+a.sa-page-loader-spinner {
   cursor: pointer;
 }
 
