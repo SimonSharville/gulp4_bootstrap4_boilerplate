@@ -21529,6 +21529,35 @@ p > a.modal-info-circle-inline::before {
   }
 }
 
+.card-body .table-responsive,
+.panel-body .table-responsive,
+.form-group .table-responsive {
+  margin: -10px;
+  min-width: calc(100% + 20px);
+  width: calc(100% + 20px);
+}
+
+.card-body .table-responsive table,
+.panel-body .table-responsive table,
+.form-group .table-responsive table {
+  margin: 0px;
+  min-width: 100%;
+  width: 100%;
+}
+
+.table-responsive.sm-up .table {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+  .table-responsive.sm-up {
+    overflow-x: hidden;
+  }
+  .table-responsive.sm-up textarea {
+    margin-top: 5px;
+  }
+}
+
 .table.table-sard > thead > tr > th,
 .table.table-sard > tbody > tr > th,
 .table.table-sard > tfoot > tr > th,
@@ -21536,6 +21565,7 @@ p > a.modal-info-circle-inline::before {
 .table.table-sard > tbody > tr > td,
 .table.table-sard > tfoot > tr > td {
   padding: 0.375rem 0.625rem;
+  line-height: 18px;
 }
 
 .table-sard td, .table-sard th {
@@ -21565,6 +21595,7 @@ p > a.modal-info-circle-inline::before {
 
 .table-sard.table-hover tbody tr:hover {
   background-color: #D9D6D6;
+  cursor: pointer;
 }
 
 .table-sard.table-striped {
@@ -21710,6 +21741,207 @@ p > a.modal-info-circle-inline::before {
 .table > tbody > tr > td.action-buttons a .btn {
   padding-right: 0;
   padding-left: 2px;
+}
+
+table.sortable thead th {
+  border-right: 1px solid #EDEBEB !important;
+  padding-bottom: 3px !important;
+}
+
+table.sortable thead th:last-child {
+  border-right: none !important;
+}
+
+table.sortable thead th.sortable {
+  vertical-align: bottom;
+}
+
+table.sortable thead th.sortable {
+  position: relative;
+  padding: 0;
+  line-height: 16px;
+}
+
+table.sortable thead th.sortable a {
+  color: white;
+  display: block;
+  padding: 4px 8px 2px 8px;
+  padding-right: 23px;
+}
+
+table.sortable thead th.sortable a:hover {
+  color: #00B2B2;
+}
+
+table.sortable thead th.sortable a.asc,
+table.sortable thead th.sortable a.desc {
+  color: #00B2B2;
+}
+
+table.sortable thead th.sortable a:after {
+  font-family: "sard-icons";
+  position: absolute;
+  right: 4px;
+}
+
+table.sortable thead th.sortable a.asc:after {
+  content: "\e092";
+  color: #00B2B2;
+}
+
+table.sortable thead th.sortable a.desc:after {
+  content: "\e094";
+  color: #00B2B2;
+}
+
+table.sortable thead th.sortable a:not(.asc):not(.desc):after {
+  content: "\e093";
+  color: #C7C4C2;
+}
+
+.tcol-75 {
+  width: 75%;
+}
+
+.tcol-66 {
+  width: 66%;
+}
+
+.tcol-60 {
+  width: 60%;
+}
+
+.tcol-50 {
+  width: 50%;
+}
+
+.tcol-45 {
+  width: 45%;
+}
+
+.tcol-41 {
+  width: 41%;
+}
+
+.tcol-40 {
+  width: 40%;
+}
+
+.tcol-39 {
+  width: 39%;
+}
+
+.tcol-33 {
+  width: 33%;
+}
+
+.tcol-30 {
+  width: 30%;
+}
+
+.tcol-25 {
+  width: 25%;
+}
+
+.tcol-20 {
+  width: 20%;
+}
+
+.tcol-15 {
+  width: 15%;
+}
+
+.tcol-14 {
+  width: 14%;
+}
+
+.tcol-12 {
+  width: 12%;
+}
+
+.tcol-12-5 {
+  width: 12.5%;
+}
+
+.tcol-11 {
+  width: 11%;
+}
+
+.tcol-10 {
+  width: 10%;
+}
+
+.tcol-5 {
+  width: 5%;
+}
+
+.tcol-fixed-300, .tcol-300px {
+  max-width: 300px !important;
+  min-width: 300px !important;
+}
+
+.tcol-fixed-250, .tcol-250px {
+  max-width: 250px !important;
+  min-width: 250px !important;
+}
+
+.tcol-fixed-200, .tcol-200px {
+  max-width: 200px !important;
+  min-width: 200px !important;
+}
+
+.tcol-fixed-150, .tcol-150px {
+  max-width: 150px !important;
+  min-width: 150px !important;
+}
+
+.tcol-fixed-140, .tcol-140px {
+  max-width: 140px !important;
+  min-width: 140px !important;
+}
+
+.tcol-fixed-130, .tcol-130px {
+  max-width: 130px !important;
+  min-width: 130px !important;
+}
+
+.tcol-fixed-120, .tcol-120px {
+  max-width: 120px !important;
+  min-width: 120px !important;
+}
+
+.tcol-fixed-100, .tcol-100px {
+  max-width: 100px !important;
+  min-width: 100px !important;
+}
+
+.tcol-fixed-80, .tcol-80px {
+  max-width: 80px !important;
+  min-width: 80px !important;
+}
+
+.tcol-fixed-70, .tcol-70px {
+  max-width: 70px !important;
+  min-width: 70px !important;
+}
+
+.tcol-fixed-60, .tcol-60px {
+  max-width: 60px !important;
+  min-width: 60px !important;
+}
+
+.tcol-fixed-50, .tcol-50px {
+  max-width: 50px !important;
+  min-width: 50px !important;
+}
+
+.tcol-fixed-5, .tcol-5px {
+  max-width: 5px !important;
+  min-width: 5px !important;
+}
+
+.no-wrap {
+  white-space: normal !important;
 }
 
 .popover {
