@@ -16,7 +16,7 @@ hr.dashed{ border-style: dashed;}
 hr.dotted{ border-style: dotted;}
 
 hr.black{ border-color: $text; }
-hr.grey { background-color: $sa-grey-08; }
+hr.grey { border-color: $sa-grey-08; }
 hr.trust{ border-color: $user-primary-colour; }
 hr.admin{ border-color: $admin-primary-colour; }
 hr.primary{ border-color: $primary; }
