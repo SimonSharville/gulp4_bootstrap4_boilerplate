@@ -38,7 +38,15 @@ label {
 }
 .form-group.form-buttons{
   text-align: right;
+  @include media-breakpoint-down(xs){
+    .btn{
+      margin-bottom: 4px;
+      display: block;
+      width: 100%;
+    }
+  }
 }
+
 
 .form-group.row, .form-group .row{
   margin-right: -4px;
@@ -59,6 +67,11 @@ label {
 .form-row>.col, .form-row>[class*=col-] {
   padding-right: 4px;
   padding-left: 4px;
+}
+
+.form-group-selection{
+  border-bottom: 1px solid $user-primary-colour;
+  padding-bottom: 8px;
 }
 
 // Range Inputs =================================

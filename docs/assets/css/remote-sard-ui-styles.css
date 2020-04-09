@@ -18674,6 +18674,14 @@ label {
   text-align: right;
 }
 
+@media (max-width: 575.98px) {
+  .form-group.form-buttons .btn {
+    margin-bottom: 4px;
+    display: block;
+    width: 100%;
+  }
+}
+
 .form-group.row, .form-group .row {
   margin-right: -4px;
   margin-left: -4px;
@@ -18697,6 +18705,11 @@ label {
 .form-row > [class*="col-"] {
   padding-right: 4px;
   padding-left: 4px;
+}
+
+.form-group-selection {
+  border-bottom: 1px solid #00B2B2;
+  padding-bottom: 8px;
 }
 
 input[type=range] {
