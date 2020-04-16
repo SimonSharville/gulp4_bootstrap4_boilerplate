@@ -21377,17 +21377,20 @@ p > a.modal-info-circle-inline::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 4px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.sa-mega-modal .user-details .user-icon {
+  height: 35px;
+  width: 35px;
+  margin-right: 4px;
 }
 
 .sa-mega-modal .user-details .user-icon .si {
-  font-size: 2.4rem;
-  margin-right: 4px;
-}
-
-.sa-mega-modal .user-details .user-icon img {
-  height: 60px;
-  margin-right: 4px;
+  font-size: 2.1rem;
 }
 
 .sa-mega-modal .user-details p {

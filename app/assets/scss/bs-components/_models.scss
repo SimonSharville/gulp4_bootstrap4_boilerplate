@@ -755,14 +755,16 @@ p > a.modal-info-circle-inline{
   // user-details -----------
   .user-details{
     display: flex;
-    padding-top: 4px;
-    .user-icon .si{
-      font-size: 2.4rem;
-      margin-right: 4px;      
+    align-items: center;
+    padding: 2px 0;
+    .user-icon{
+      height: 35px;
+      width: 35px;
+      margin-right: 4px;  
     }
-    .user-icon img{
-      height: 60px;
-      margin-right: 4px;      
+    .user-icon .si{
+      font-size: 2.1rem;
+      // margin-right: 4px;      
     }
     p{ margin: 0; }
   }
