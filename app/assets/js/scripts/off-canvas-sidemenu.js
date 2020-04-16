@@ -9,6 +9,19 @@ $(document).ready(function(){
     e.preventDefault();
     $('.sa-sidemenu').toggleClass('open');
   });
+
+  var $window = $(window);
+
+  function resize() {
+    if ($window.width() > 1200) {
+      $('.sa-sidemenu').addClass('open');
+    } else {
+      $('.sa-sidemenu').removeClass('open');
+    }
+  }
+
+  $window.resize(resize).trigger('resize');
+  
  });
 
 //  This was written for rostering, buts doesn't seem to work here
