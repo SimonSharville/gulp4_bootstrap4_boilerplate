@@ -19415,6 +19415,12 @@ a.list-group-item-action.active:active {
   height: 50px;
 }
 
+@media (max-width: 991.98px) {
+  .navbar {
+    height: 35px;
+  }
+}
+
 /* change the padding for height */
 .navbar .navbar-nav .nav-link {
   padding: 0.9375rem 0.5rem;
