@@ -201,79 +201,79 @@ body { -ms-overflow-style: scrollbar; }
 }
 
 
-// // ==============================================
-// // Sidemenu when used with Container Fluid
-// .sidemenu-wrapper {
-//   display: flex;
-//   width: 100%;
-//   align-items: stretch;
-// }
+// ==============================================
+// Sidemenu when used with Container Fluid
+.sidemenu-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
 
-// .sa-sidemenu {
-//   position: fixed;
-//   // min-height: 100vh;
-//   // height: calc(100% - 80px);
-//   // padding-bottom: 80px;
-// }
+.sa-sidemenu {
+  position: fixed;
+  // min-height: 100vh;
+  // height: calc(100% - 80px);
+  // padding-bottom: 80px;
+}
 
-// // postioning after navbar and breadcrumbs
-// .navbar + .sidemenu-wrapper .sa-sidemenu{
-//   top: 50px;
-//   @include media-breakpoint-down(md){
-//     top: 35px;
-//   }
-// }
-// #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
-//   top: 35px;
-//   @include media-breakpoint-down(md){
-//     top: 35px;
-//   }
-// }
+// postioning after navbar and breadcrumbs
+.navbar + .sidemenu-wrapper .sa-sidemenu{
+  top: 50px;
+  @include media-breakpoint-down(md){
+    top: 35px;
+  }
+}
+#navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+  top: 35px;
+  @include media-breakpoint-down(md){
+    top: 35px;
+  }
+}
 
-// .navbar + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-//   top: 79px;
-//   @include media-breakpoint-down(md){
-//     top: 64px;
-//   }
-// }
+.navbar + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 79px;
+  @include media-breakpoint-down(md){
+    top: 64px;
+  }
+}
 
-// .navbar + #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
-//   top: 85px;
-//   @include media-breakpoint-down(md){
-//     top: 70px;
-//   }
-// }
+.navbar + #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+  top: 85px;
+  @include media-breakpoint-down(md){
+    top: 70px;
+  }
+}
 
-// .navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-//   top: 114px;
-//   @include media-breakpoint-down(md){
-//     top: 99px;
-//   }
-// }
-// #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-//   top: 64px;
-//   @include media-breakpoint-down(md){
-//     top: 64px;
-//   }
-// }
+.navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 114px;
+  @include media-breakpoint-down(md){
+    top: 99px;
+  }
+}
+#navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 64px;
+  @include media-breakpoint-down(md){
+    top: 64px;
+  }
+}
 
-// .wrapper-content{
-//   width: 100%;
-//   padding-left: 40px;
-//   margin-bottom: 50px;
-//   @include off-canvas-transmission;
-//   @include media-breakpoint-down(xs){
-//     padding-left: 30px;
-//   }
-// }
+.wrapper-content{
+  width: 100%;
+  padding-left: 40px;
+  margin-bottom: 50px;
+  @include off-canvas-transmission;
+  @include media-breakpoint-down(xs){
+    padding-left: 30px;
+  }
+}
 
-// // Push Content on large screens and above
+// Push Content on large screens and above
 
-// @include media-breakpoint-up(xl){
-//   .sa-sidemenu.open + .wrapper-content{
-//     padding-left: 200px;
-//   }
-// }
+@include media-breakpoint-up(xl){
+  .sa-sidemenu.open + .wrapper-content{
+    padding-left: 200px;
+  }
+}
 
 
 // Sidemenu Light ===============================

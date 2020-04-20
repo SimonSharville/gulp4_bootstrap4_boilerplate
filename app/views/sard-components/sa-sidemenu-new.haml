@@ -8,17 +8,27 @@
  
   %body.theme-trust
     //=include ../navbars/_navbar-x1.haml
+    -# //=include ../navbars/_navbar-admin.haml
+    -# #breadcrumbs.fixed-top
+    -#   .container-fluid
+    -#     %nav{"aria-label" => "breadcrumb"}
+    -#       %ol.breadcrumb
+    -#         %li.breadcrumb-item
+    -#           %a{:href => "#/"} Home
+    -#         %li.breadcrumb-item
+    -#           %a{:href => "#/"} Library
+    -#         %li.breadcrumb-item.active{"aria-current" => "page"} Data
 
-    .sidemenu-wrapper
-      //=include ../navbars/_sidemenu-new.haml
-      .wrapper-content
-        .container-fluid
-          .row
-            .col-sm-24.border
-              %h1 Sard Side Menu - New
+    -# .sidemenu-wrapper
+    //=include ../navbars/_sidemenu-new.haml
+    -# .wrapper-content
+    .container-fluid
+      .row
+        .col-sm-24.border
+          %h1 Sard Side Menu - New
 
-              %p.lead
-                The Sard sidemenu pushes out from the left. 
+          %p.lead
+            The Sard sidemenu pushes out from the left. 
 
 
 
