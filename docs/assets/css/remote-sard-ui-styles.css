@@ -24098,11 +24098,6 @@ body {
   width: 200px;
 }
 
-.sa-sidemenu.open .menu-top {
-  width: 200px;
-  max-width: 200px;
-}
-
 .sa-sidemenu.open .menu-list {
   position: relative;
   left: 0;
