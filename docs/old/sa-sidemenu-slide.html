@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 <head>
-<title>SARD Core UI - Lists</title>
+<title>SARD Core UI - Sard Side Menu - Slide</title>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/remote-sard-ui-styles.min.css' rel='stylesheet'>
@@ -170,270 +170,66 @@ Megamenu
 <div class='container'>
 <div class='row'>
 <div class='col-sm-24'>
-<h1 class='bs-anchor' id='links'>Lists</h1>
+<h1>Sard Side Menu - Slide</h1>
 </div>
 </div>
 <div class='row'>
 <div class='col-sm-24'>
 <p class='lead'>
-All
-<span class='strong'>ul</span>
-list styles have a bullet point added, To remove the bullet, add
-<code>.no-bullet</code>
-to the
-<code>ul</code>
+The Sard sidemenu slides out from the left.
 </p>
 </div>
 </div>
-<div class='row'>
-<div class='col-sm-12'>
-<h4>A Standard UL List</h4>
-<ul>
-<li>Cras justo odio</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Morbi leo risus</li>
-<li>Porta ac consectetur ac</li>
-<li>Vestibulum at eros</li>
-</ul>
 </div>
-<div class='col-sm-12'>
-<h4>A Standard UL List Group</h4>
-<ul class='list-group'>
-<li class='list-group-item'>Cras justo odio</li>
-<li class='list-group-item'>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li class='list-group-item'>Morbi leo risus</li>
-<li class='list-group-item'>Porta ac consectetur ac</li>
-<li class='list-group-item'>Vestibulum at eros</li>
-</ul>
+<div class='sa-sidemenu'>
+<div class='menu-top'>
+<div class='open-icon'></div>
 </div>
-<div class='col-sm-24'>
+<div class='menu-list'>
+<!-- Include your navigation here -->
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A very long, I mean really, really, really long link title</span>
+</a>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
 <hr>
-<p>
-By adding
-<code>.no-bullet</code>
-to
-<code>ul</code>
-, you can remove the bullet.
-</p>
-</div>
-<div class='col-sm-12'>
-<h4>A Standard UL.no-bullet List</h4>
-<ul class='no-bullet'>
-<li>Cras justo odio</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Morbi leo risus</li>
-<li>Porta ac consectetur ac</li>
-<li>Vestibulum at eros</li>
-</ul>
-</div>
-<div class='col-sm-12'>
-<h4>A Standard UL.no-bullet List Group</h4>
-<ul class='no-bullet list-group'>
-<li class='list-group-item'>Cras justo odio</li>
-<li class='list-group-item'>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li class='list-group-item'>Morbi leo risus</li>
-<li class='list-group-item'>Porta ac consectetur ac</li>
-<li class='list-group-item'>Vestibulum at eros</li>
-</ul>
-</div>
-<div class='col-sm-24'>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+<a class='menu-link' href='#/'>
+<span class='link-text'>link, No Icon</span>
+</a>
 <hr>
-<p>
-Alternatively, you can just remove the bullet from individual list items by adding
-<code>.no-bullet</code>
-to the
-<code>li</code>
-instead.
-</p>
-</div>
-<div class='col-sm-12'>
-<h4>A Standard UL.no-bullet List</h4>
-<ul>
-<li>Cras justo odio</li>
-<li class='no-bullet'>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li class='no-bullet'>Morbi leo risus</li>
-<li>Porta ac consectetur ac</li>
-<li>Vestibulum at eros</li>
-</ul>
-</div>
-<div class='col-sm-12'>
-<h4>A Standard UL.no-bullet List Group</h4>
-<ul class='list-group'>
-<li class='list-group-item'>Cras justo odio</li>
-<li class='no-bullet list-group-item'>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li class='no-bullet list-group-item'>Morbi leo risus</li>
-<li class='list-group-item'>Porta ac consectetur ac</li>
-<li class='list-group-item'>Vestibulum at eros</li>
-</ul>
-</div>
-</div>
+<div class='sub-title'>Sub-title</div>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
 <hr>
-<div class='row'>
-<div class='col-sm-24'>
-<h3>Colour variations</h3>
-<p>
-Add
-<code>.list-primary</code>
-or
-<code>.list-secondary</code>
-to the
-<code>ul</code>
-or
-<code>li</code>
-</p>
+<div class='sub-title'>Dropdown Menu</div>
+<ul>
+<li class='dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+Dropdown
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item active' href='#/'>.dropdown-item.active</a>
 </div>
-<div class='col-sm-8'>
-<h4>List Primary</h4>
-<ul class='list-primary'>
-<li>Cras justo odio</li>
-<li>
-A List Item,
-<br>
-with a line break in it
 </li>
-<li>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Vestibulum at eros</li>
 </ul>
-</div>
-<div class='col-sm-8'>
-<h4>List Secondary</h4>
-<ul class='list-secondary'>
-<li>Cras justo odio</li>
-<li>
-A List Item,
-<br>
-with a line break in it
-</li>
-<li>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Vestibulum at eros</li>
-</ul>
-</div>
-</div>
 <hr>
-<div class='row'>
-<div class='col-sm-24'>
-<h3>Open Bullets</h3>
-<p>
-Add
-<code>.open-bullet</code>
-to either the
-<code>ul</code>
-or
-<code>li</code>
-to create an open bullet.
-</p>
-</div>
-<div class='col-sm-8'>
-<h4>List Primary</h4>
-<ul class='open-bullet'>
-<li>Cras justo odio</li>
-<li class='list-primary'>
-A List Item,
-<br>
-with a line break in it
-</li>
-<li class='list-primary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Vestibulum at eros</li>
-</ul>
-</div>
-<div class='col-sm-8'>
-<h4>List Secondary</h4>
-<ul>
-<li>Cras justo odio</li>
-<li class='open-bullet list-secondary'>
-A List Item,
-<br>
-with a line break in it
-</li>
-<li class='open-bullet list-secondary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Vestibulum at eros</li>
-</ul>
-</div>
-</div>
-<hr>
-<div class='row'>
-<div class='col-sm-24'>
-<h3>Nested Bullets</h3>
-</div>
-<div class='col-sm-8'>
-<h4>No Bullets</h4>
-<ul class='no-bullet'>
-<li>Cras justo odio</li>
-<li class='list-primary'>
-A List Item,
-<br>
-with a line break in it
-</li>
-<li class='list-primary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Nested bullets below</li>
-<ul>
-<li>Cras justo odio</li>
-<li class='list-primary'>
-A List Item,
-<br>
-with a line break in it
-</li>
-<li class='list-primary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Vestibulum at eros</li>
-</ul>
-</ul>
-</div>
-<div class='col-sm-8'>
-<h4>List Primary</h4>
-<ul>
-<li>Cras justo odio</li>
-<li class='list-primary'>
-A List Item,
-<br class='line-break'>
-with a line break in it
-</li>
-<li class='list-primary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Nested bullets below</li>
-<ul>
-<li>Cras justo odio</li>
-<li class='list-primary'>
-A List Item,
-<br class='line-break'>
-with a line break in it
-</li>
-<li class='list-primary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Vestibulum at eros</li>
-</ul>
-</ul>
-</div>
-<div class='col-sm-8'>
-<h4>List Secondary</h4>
-<ul>
-<li>Cras justo odio</li>
-<li class='list-secondary'>
-A List Item,
-<br>
-with a line break in it
-</li>
-<li class='list-secondary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Nested bullets below</li>
-<ul>
-<li>Cras justo odio</li>
-<li class='list-secondary'>
-A List Item,
-<br>
-with a line break in it
-</li>
-<li class='list-secondary'>Morbi leo risus</li>
-<li>A Really. Really, Really long text, I mean really long. Dooby Dooby Do, Yad Yada Yada, All looking good? Maybe it is, maybe it isn't, who's to say.</li>
-<li>Vestibulum at eros</li>
-</ul>
-</ul>
-</div>
+<div class='sub-title'>Sub-title</div>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
 </div>
 </div>
 <div class='sa-footer'>
