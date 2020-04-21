@@ -1,0 +1,249 @@
+// Off Canvas sa-sidemenu ===========================
+// http://blog.themearmada.com/off-canvas-slide-menu-for-bootstrap/
+
+//#160757827 scroll bar covers sa-sidemenu menu on IE
+body { -ms-overflow-style: scrollbar; }
+
+
+@mixin off-canvas-transmission {
+  transition: all 320ms ease!important;
+}
+
+// Posistioning -------------
+
+// Closed state
+.sa-sidemenu{
+  // z-index in _sa-variables.css
+  position: fixed;
+  display: block;
+  // height: 100%;
+  height: calc(100% - 80px);
+  padding-bottom: 80px;
+  top: 0;
+  width: 40px;
+  // overflow: hidden;
+  @include off-canvas-transmission;
+}
+
+.sa-sidemenu{ 
+  .menu-top{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height:40px;
+  }
+
+  .open-icon{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    max-width: 40px;
+    height:40px;
+    z-index: 6001;
+  }
+  .menu-list{
+    display: none;
+  }
+}
+
+// Open state
+.sa-sidemenu.open{
+  @include off-canvas-transmission;
+  width: 200px;
+}
+
+.sa-sidemenu.open{
+
+  .menu-list{
+    position: relative;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 0 ;
+    padding-top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height:100%;
+  }
+}
+
+// Styling ------------------
+
+.sa-sidemenu{
+  background: $sa-grey-16;
+  color: white;
+  cursor: pointer;
+}
+
+.sa-sidemenu .menu-top{
+  background: $sa-grey-18;
+}
+
+.sa-sidemenu .open-icon::before{
+  color:$user-primary-colour;
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f036";
+  font-weight: 700; 
+  font-size: 1.5em;
+  position: absolute;
+  top: 4px;
+  right: 12px;
+}
+.sa-sidemenu.open .open-icon::before{
+  content: "\f038";
+  right: 10px;
+}
+
+.sa-sidemenu .menu-list a{
+  display: flex;
+  margin: 0px;
+  padding: 5px 10px;
+  @include roboto-light;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.sa-sidemenu .menu-list a:visited{
+  color: white;
+}
+
+.sa-sidemenu .menu-list a:active,
+.sa-sidemenu .menu-list a:focus,
+.sa-sidemenu .menu-list a:hover {
+  background: $sa-grey-18;
+}
+
+.sa-sidemenu .menu-list a.active {
+  background: $sa-grey-17;
+  i {
+    color:$user-primary-colour;
+  }
+}
+
+.sa-sidemenu .menu-list hr{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.sa-sidemenu .menu-list .sub-title{
+  padding: 5px 10px 0px 10px;
+  text-indent: 0;
+  @include roboto-bold;
+  font-size: 16px;
+  color: white;
+}
+
+.sa-sidemenu .menu-list a{
+  i {
+    padding-right: 0.5rem ; // 8px
+    color: $sa-grey-06;
+    // color:$user-primary-colour;
+  }
+}
+
+// Screen variations --------
+
+@include media-breakpoint-down(xs){
+  .sa-sidemenu{
+    width: 30px;
+  }
+
+  .sa-sidemenu .open-icon{
+    width: 30px;
+  }
+
+  .sa-sidemenu .open-icon::before{
+    font-size: 1em;
+    top: 6px;
+  }
+}
+
+// Dropdowns
+.sa-sidemenu .menu-list li:before{ // Removes Bullets
+  content: none;
+  display:none;
+}
+.sa-sidemenu .menu-list ul li{
+  padding: 5px 0px;
+}
+.sa-sidemenu .menu-list ul li a{
+  padding: 5px 20px;
+}
+.sa-sidemenu .menu-list ul li a::after{
+  margin-left: 0.5em;
+  position: relative;
+  top: 7px;
+}
+
+.sa-sidemenu .dropdown-menu.show{
+  background: $sa-grey-14;
+  border-color: $sa-grey-18;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-left: 5px;
+  width: calc(100% - 20px);
+}
+
+.sa-sidemenu .dropdown-item:first-of-type {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.sa-sidemenu .dropdown-item:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+
+
+
+// Sidemenu Light ===============================
+
+
+
+.sa-sidemenu.sidemenu-light.sidemenu-light{
+  background: $sa-grey-02;
+  color: $text;
+  cursor: pointer;
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a{
+  color: $text;
+  @include roboto-regular;
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a{
+  i {
+    color: $sa-grey-10;
+  }
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a:visited{
+  color: $text;
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a:active,
+.sa-sidemenu.sidemenu-light .menu-list a:focus,
+.sa-sidemenu.sidemenu-light .menu-list a:hover {
+  background: $sa-grey-04;
+  i {
+    color:$sa-grey-12;
+  }
+}
+
+.sa-sidemenu.sidemenu-light .menu-list a.active {
+  background: $sa-grey-03;
+  i {
+    color:$user-primary-colour;
+  }
+}
+
+.sa-sidemenu.sidemenu-light .menu-list .sub-title{
+  color: $text;
+}
+
+
+

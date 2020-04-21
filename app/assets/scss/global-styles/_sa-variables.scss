@@ -419,88 +419,82 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
  @include media-breakpoint-down(md){ margin-top: 70px; }
 }
 
-// container
 
+
+// Containers
+
+#navbar + .container-fluid,
 #navbar + .container{
-  margin-top: 50px;
- @include media-breakpoint-down(md){  }
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
 }
-#navbar + #navbar-admin + .container{
-  margin-top: 75px;
- @include media-breakpoint-down(md){  }
-}
-#navbar-admin + .container{
-  margin-top: 35px;
- @include media-breakpoint-down(md){  }
-}
+
+#navbar + #breadcrumbs + .container-fluid,
 #navbar + #breadcrumbs + .container{
-  margin-top: 75px;
- @include media-breakpoint-down(md){  }
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
 }
+
+#navbar + #navbar-admin + .container-fluid,
+#navbar + #navbar-admin + .container{
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .container-fluid,
 #navbar + #navbar-admin + #breadcrumbs + .container{
-  margin-top: 110px;
- @include media-breakpoint-down(md){  }
-}
-#navbar-admin + #breadcrumbs + .container{
-  margin-top: 60px;
- @include media-breakpoint-down(md){  }
-}
-#breadcrumbs + .container{
-  margin-top: 35px;
- @include media-breakpoint-down(md){  }
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
 }
 
-// container-fluid
+// New sidemenu
 
-#navbar + .container-fluid{
-  margin-top: 70px;
- @include media-breakpoint-down(md){  margin-top: 60px;}
-}
-
-#navbar + #navbar-admin + .container-fluid{
-  margin-top: 105px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
-}
-#navbar + #breadcrumbs + .container-fluid{
-  margin-top: 30px;
- @include media-breakpoint-down(md){ margin-top: 20px; }
-}
-#navbar-admin + .container-fluid{
-  margin-top: 60px;
- @include media-breakpoint-down(md){ margin-top: 60px; }
-}
-#navbar-admin + #breadcrumbs + .container-fluid{
-  margin-top: 20px;
- @include media-breakpoint-down(md){ margin-top: 10px; }
+#navbar + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 50px;}
+  @include media-breakpoint-down(md){  margin-top: 35px;}
 }
 
-// With sidemenu wrapper
-#navbar + .sidemenu-wrapper .container-fluid{
-  margin-top: 65px;
- @include media-breakpoint-down(md){  margin-top: 50px;}
-}
-#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 95px;
- @include media-breakpoint-down(md){ margin-top: 80px; }
+#navbar + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 80px;}
+  @include media-breakpoint-down(md){  margin-top: 65px;}
 }
 
-// still to fix
-#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
-  margin-top: 105px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
+#navbar + #navbar-admin + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 85px;}
+  @include media-breakpoint-down(md){  margin-top: 70px;}
 }
-#navbar-admin + .sidemenu-wrapper .container-fluid{
-  margin-top: 55px;
- @include media-breakpoint-down(md){ margin-top: 55px; }
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 115px;}
+  @include media-breakpoint-down(md){  margin-top: 100px;}
 }
-#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 130px;
- @include media-breakpoint-down(md){ margin-top: 115px; }
+
+// New sidemenu Plus Containers
+
+#navbar + .sa-sidemenu + .container-fluid,
+#navbar + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
 }
-#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 80px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
+
+#navbar + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
 }
+
+#navbar + #navbar-admin + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
+}
+
 
 
 // Layering ==============================

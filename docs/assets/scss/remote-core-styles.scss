@@ -10106,8 +10106,8 @@ html {
   height: 100%;
 }
 body {
-  min-height: 100%;
-  // padding-bottom: 70px;
+  // min-height: 100%;
+  padding-bottom: 70px;
 }
 
 
@@ -10202,88 +10202,83 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
  @include media-breakpoint-down(md){ margin-top: 70px; }
 }
 
-// container
 
+
+// Containers
+
+#navbar + .container-fluid,
 #navbar + .container{
-  margin-top: 50px;
- @include media-breakpoint-down(md){  }
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
 }
-#navbar + #navbar-admin + .container{
-  margin-top: 75px;
- @include media-breakpoint-down(md){  }
-}
-#navbar-admin + .container{
-  margin-top: 35px;
- @include media-breakpoint-down(md){  }
-}
+
+#navbar + #breadcrumbs + .container-fluid,
 #navbar + #breadcrumbs + .container{
-  margin-top: 75px;
- @include media-breakpoint-down(md){  }
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
 }
+
+#navbar + #navbar-admin + .container-fluid,
+#navbar + #navbar-admin + .container{
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .container-fluid,
 #navbar + #navbar-admin + #breadcrumbs + .container{
-  margin-top: 110px;
- @include media-breakpoint-down(md){  }
-}
-#navbar-admin + #breadcrumbs + .container{
-  margin-top: 60px;
- @include media-breakpoint-down(md){  }
-}
-#breadcrumbs + .container{
-  margin-top: 35px;
- @include media-breakpoint-down(md){  }
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
 }
 
-// container-fluid
+// New sidemenu
 
-#navbar + .container-fluid{
-  margin-top: 70px;
- @include media-breakpoint-down(md){  margin-top: 60px;}
-}
-
-#navbar + #navbar-admin + .container-fluid{
-  margin-top: 105px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
-}
-#navbar + #breadcrumbs + .container-fluid{
-  margin-top: 30px;
- @include media-breakpoint-down(md){ margin-top: 20px; }
-}
-#navbar-admin + .container-fluid{
-  margin-top: 60px;
- @include media-breakpoint-down(md){ margin-top: 60px; }
-}
-#navbar-admin + #breadcrumbs + .container-fluid{
-  margin-top: 20px;
- @include media-breakpoint-down(md){ margin-top: 10px; }
+#navbar + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 50px;}
+  @include media-breakpoint-down(md){  margin-top: 35px;}
 }
 
-// With sidemenu wrapper
-#navbar + .sidemenu-wrapper .container-fluid{
-  margin-top: 65px;
- @include media-breakpoint-down(md){  margin-top: 50px;}
-}
-#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 95px;
- @include media-breakpoint-down(md){ margin-top: 80px; }
+#navbar + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 80px;}
+  @include media-breakpoint-down(md){  margin-top: 65px;}
 }
 
-// still to fix
-#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
-  margin-top: 105px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
+#navbar + #navbar-admin + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 85px;}
+  @include media-breakpoint-down(md){  margin-top: 70px;}
 }
-#navbar-admin + .sidemenu-wrapper .container-fluid{
-  margin-top: 55px;
- @include media-breakpoint-down(md){ margin-top: 55px; }
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 115px;}
+  @include media-breakpoint-down(md){  margin-top: 100px;}
 }
-#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 130px;
- @include media-breakpoint-down(md){ margin-top: 115px; }
+
+// New sidemenu Plus Containers
+
+#navbar + .sa-sidemenu + .container-fluid,
+#navbar + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
 }
-#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
-  margin-top: 80px;
- @include media-breakpoint-down(md){ margin-top: 85px; }
+
+#navbar + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
 }
+
+#navbar + #navbar-admin + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
+}
+
+
 
 
 // Layering ==============================
@@ -10514,6 +10509,9 @@ p{
   @include roboto-regular;
   font-size: 0.9375rem; // 15px
   line-height: 1.25rem;
+}
+p.small{
+  line-height: 120%;
 }
 
 // base headings (this have sit right on the item below)
@@ -13480,7 +13478,15 @@ label {
 }
 .form-group.form-buttons{
   text-align: right;
+  @include media-breakpoint-down(xs){
+    .btn{
+      margin-bottom: 4px;
+      display: block;
+      width: 100%;
+    }
+  }
 }
+
 
 .form-group.row, .form-group .row{
   margin-right: -4px;
@@ -13501,6 +13507,11 @@ label {
 .form-row>.col, .form-row>[class*=col-] {
   padding-right: 4px;
   padding-left: 4px;
+}
+
+.form-group-selection{
+  border-bottom: 1px solid $user-primary-colour;
+  padding-bottom: 8px;
 }
 
 // Range Inputs =================================
@@ -14050,6 +14061,194 @@ a.list-group-item-action.active{
 }
 
 
+// Navs =========================================
+
+$sa-nav-colour:           $sa-grey-14;
+$sa-tab-bg:               $sa-grey-12;
+
+$tab-colour:              $sa-grey-03;
+$tab-colour-hover:        $sa-grey-05;
+$tab-shadow:              $sa-grey-07;
+$tab-colour-active:       $sa-grey-14;
+$tab-number-bg:           $sa-grey-12;
+
+.nav.nav-tabs .nav-item{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.nav.nav-tabs .nav-item{
+  .nav-link{
+    color: $sa-nav-colour;
+    background-color: $tab-colour;
+    margin-bottom: 1px;
+    &:visited{
+      color: $sa-nav-colour;
+    }
+    &:hover{
+      background-color: $tab-colour-hover;
+      border-color: transparent;
+    }
+    &:focus,
+    &:active{
+      background-color: $tab-colour-active;
+      color: white;
+    }
+    &.active{
+      background-color: $sa-grey-14;
+      color: white;
+      border-color: $tab-colour-active;
+      border-bottom:2px solid $sa-grey-14;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.nav.nav-pills .nav-link{
+  border-radius: $sa-spacer-6;
+  color: $sa-nav-colour;
+  background-color: $tab-colour;
+  margin-right: 4px;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  &:visited{
+    color: $sa-nav-colour;
+  }
+  &:hover{
+    background-color: $tab-colour-hover;
+  }
+  &:focus,
+  &:active{
+    background-color: $tab-colour-active;
+    color: white;
+  }
+  &.active {
+    -webkit-box-shadow: inset 0px 4px 0px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0px 4px 0px 0px rgba(0,0,0,0.25);
+    box-shadow: inset 0px 4px 0px 0px rgba(0,0,0,0.25);
+  }
+}
+
+.nav.nav-pills .nav-link.active{
+  &:focus,
+  &:active{
+    background-color: $sa-nav-colour;
+  }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: $sa-nav-colour;
+}
+
+.nav.nav-pills .nav-item,
+.nav.nav-pills .nav-link{
+  & a{
+    color: $sa-nav-colour;
+  }
+}
+.nav.nav-pills .nav-link.active{
+  background-color: $sa-nav-colour;
+  color: white;
+  &:focus,
+  &:active{
+    background-color: $sa-nav-colour;
+  }
+}
+
+// Vertical Pils ------------
+#v-pills-tab.nav.nav-pills .nav-link{
+  margin-right: 0px;
+  margin-bottom: 4px;
+}
+
+// Colour variations ----------------------------
+.nav-primary.nav.nav-tabs .nav-item{
+  .nav-link{
+    &:focus,
+    &:active{
+      background-color: darken($user-primary-colour, 5%);
+    }
+    &.active{
+      background-color: $user-primary-colour;
+      border-color: $user-primary-colour;
+      border-bottom:2px solid $user-primary-colour;
+    }
+  }
+}
+
+.nav-primary.nav.nav-pills .nav-link{
+  &:focus,
+  &:active{
+    background-color: darken($user-primary-colour, 5%);
+  }
+}
+
+.nav-primary.nav.nav-pills .nav-link.active{
+  background-color: $user-primary-colour;
+  &:focus,
+  &:active{
+    background-color: $user-primary-colour;
+  }
+}
+
+.nav-secondary.nav.nav-tabs .nav-item{
+  .nav-link{
+    &:focus,
+    &:active{
+      background-color: darken($user-secondary-colour, 5%);
+    }
+    &.active{
+      background-color: $user-secondary-colour;
+      border-color: $user-secondary-colour;
+      border-bottom:2px solid $user-secondary-colour;
+    }
+  }
+}
+
+.nav-secondary.nav.nav-pills .nav-link{
+  &:focus,
+  &:active{
+    background-color: darken($user-secondary-colour, 5%);
+  }
+}
+.nav-secondary.nav.nav-pills .nav-link.active{
+  background-color: $user-secondary-colour;
+  &:focus,
+  &:active{
+    background-color: $user-secondary-colour;
+  }
+}
+
+// Navs in Cards --------------------------------
+
+.card-header-tabs{
+ margin-left: 0;
+ margin-right: 0;
+ margin-top: $sa-spacer-6;
+ margin-bottom: -$sa-spacer-10;
+}
+.nav.nav-tabs.card-header-tabs .nav-item{
+  .nav-link{
+    color: $sa-nav-colour;
+    background-color: white;
+    margin-right: 1px;
+    padding-top: $sa-spacer-2;
+    &:visited{
+      color: $sa-nav-colour;
+    }
+    &:hover{
+      background-color: $sa-grey-02;
+    }
+    &:focus,
+    &:active{
+      background-color: $sa-grey-04;
+    }
+    &.active{
+      background-color: $sa-grey-02;
+    }
+  }
+}
 // Navbar =======================================
 
 
@@ -14066,6 +14265,7 @@ a.list-group-item-action.active{
 .navbar {
   padding: 0rem 1rem;
   height: 50px;
+  @include media-breakpoint-down(md){ height: 35px; }
   // z-index in _sa-variables.css
 }
 
@@ -14486,7 +14686,7 @@ a.list-group-item-action.active{
 // Navbar SECONDARY =============================
 
 .navbar-secondary {
-  background-color: $admin-primary-colour;
+  background-color: $user-secondary-colour;
 }
 
 .navbar-secondary .navbar-brand,
@@ -14500,23 +14700,23 @@ a.list-group-item-action.active{
 
 /* change the color of active or hovered links */
 .navbar-secondary .nav-item:hover .nav-link {
-  background-color: darken($admin-primary-colour, 15%); 
+  background-color: darken($user-secondary-colour, 15%); 
 }
 .navbar-secondary .nav-item:focus .nav-link {
-  background-color: darken($admin-primary-colour, 10%); 
+  background-color: darken($user-secondary-colour, 10%); 
 }
 .navbar-secondary .nav-item:active .nav-link {
-  background-color: darken($admin-primary-colour, 20%); 
+  background-color: darken($user-secondary-colour, 20%); 
 }
 // add background-color to active links
 .navbar-secondary .nav-item.active .nav-link{ 
-  background-color: darken($admin-primary-colour, 20%); 
+  background-color: darken($user-secondary-colour, 20%); 
 }
 .navbar-secondary .nav-item.active .nav-link:hover{
-  background-color: darken($admin-primary-colour, 25%); 
+  background-color: darken($user-secondary-colour, 25%); 
 }
 .navbar-secondary .nav-item.active .nav-link:focus{
-  background-color: darken($admin-primary-colour, 30%); 
+  background-color: darken($user-secondary-colour, 30%); 
 }
 
 .navbar-secondary .nav-item:focus .nav-link.disabled,
@@ -14529,12 +14729,12 @@ a.list-group-item-action.active{
   border:none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: darken($admin-primary-colour, 10%);
+  background-color: darken($user-secondary-colour, 10%);
   color: white;
 }
 
 .navbar-secondary .nav-item.dropdown.show .nav-link.dropdown-toggle{
-  background-color: darken($admin-primary-colour, 25%);
+  background-color: darken($user-secondary-colour, 25%);
 }
 
 .navbar-secondary .nav-item.dropdown.show{
@@ -14543,15 +14743,15 @@ a.list-group-item-action.active{
 
 .navbar-secondary .dropdown-menu .dropdown-item{
   color: white;
-  border-color: $admin-primary-colour;
+  border-color: $user-secondary-colour;
   &:focus{
-    background-color: darken($admin-primary-colour, 25%);
+    background-color: darken($user-secondary-colour, 25%);
   }
   &:hover{
-    background-color: darken($admin-primary-colour, 25%);
+    background-color: darken($user-secondary-colour, 25%);
   }
   &:active{
-    background-color: darken($admin-primary-colour, 30%);
+    background-color: darken($user-secondary-colour, 30%);
   }
 }
 
@@ -14792,155 +14992,12 @@ a.list-group-item-action.active{
       height: 35px;
       border-radius: 50%;
     }
-// Navs =========================================
 
-$sa-nav-colour: $sa-grey-14;
-
-.nav.nav-tabs .nav-item{
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.nav.nav-tabs .nav-item{
-  .nav-link{
-    color: $sa-nav-colour;
-    background-color: $sa-grey-01;
-    margin-bottom: 1px;
-    &:visited{
-      color: $sa-nav-colour;
+    .user-navbar-dropdown{
+      &:hover{
+        cursor: pointer;
+      }
     }
-    &:hover{
-      background-color: $sa-grey-02;
-      border-color: transparent;
-    }
-    &:focus,
-    &:active{
-      background-color: $sa-grey-04;
-    }
-    &.active{
-      background-color: $sa-grey-14;
-      color: white;
-      border-bottom:2px solid $sa-grey-14;
-      margin-bottom: 0px;
-    }
-  }
-}
-
-.nav.nav-pills .nav-link{
-  border-radius: $sa-spacer-6;
-  color: $sa-nav-colour;
-  background-color: $sa-grey-01;
-  margin-right: 4px;
-  &:visited{
-    color: $sa-nav-colour;
-  }
-  &:hover{
-    background-color: $sa-grey-03;
-  }
-  &:focus,
-  &:active{
-    background-color: $sa-grey-05;
-  }
-}
-
-.nav.nav-pills .nav-link.active{
-  &:focus,
-  &:active{
-    background-color: $sa-nav-colour;
-  }
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: $sa-nav-colour;
-}
-
-.nav.nav-pills .nav-item,
-.nav.nav-pills .nav-link{
-  & a{
-    color: $sa-nav-colour;
-  }
-}
-.nav.nav-pills .nav-link.active{
-  background-color: $sa-nav-colour;
-  color: white;
-  &:focus,
-  &:active{
-    background-color: $sa-nav-colour;
-  }
-}
-
-// Vertical Pils ------------
-#v-pills-tab.nav.nav-pills .nav-link{
-  margin-right: 0px;
-  margin-bottom: 4px;
-}
-
-// Colour variations ----------------------------
-.nav-primary.nav.nav-tabs .nav-item{
-  .nav-link{
-    &.active{
-      background-color: $user-primary-colour;
-      border-color: $user-primary-colour;
-      border-bottom:2px solid $user-primary-colour;
-    }
-  }
-}
-
-.nav-primary.nav.nav-pills .nav-link.active{
-  background-color: $user-primary-colour;
-  &:focus,
-  &:active{
-    background-color: $user-primary-colour;
-  }
-}
-
-.nav-secondary.nav.nav-tabs .nav-item{
-  .nav-link{
-    &.active{
-      background-color: $user-secondary-colour;
-      border-color: $user-secondary-colour;
-      border-bottom:2px solid $user-secondary-colour;
-    }
-  }
-}
-
-.nav-secondary.nav.nav-pills .nav-link.active{
-  background-color: $user-secondary-colour;
-  &:focus,
-  &:active{
-    background-color: $user-secondary-colour;
-  }
-}
-
-// Navs in Cards --------------------------------
-
-.card-header-tabs{
- margin-left: 0;
- margin-right: 0;
- margin-top: $sa-spacer-6;
- margin-bottom: -$sa-spacer-10;
-}
-.nav.nav-tabs.card-header-tabs .nav-item{
-  .nav-link{
-    color: $sa-nav-colour;
-    background-color: white;
-    margin-right: 1px;
-    padding-top: $sa-spacer-2;
-    &:visited{
-      color: $sa-nav-colour;
-    }
-    &:hover{
-      background-color: $sa-grey-02;
-    }
-    &:focus,
-    &:active{
-      background-color: $sa-grey-04;
-    }
-    &.active{
-      background-color: $sa-grey-02;
-    }
-  }
-}
 // Panels =======================================
 
 // Base class
@@ -15500,7 +15557,7 @@ $sa-nav-colour: $sa-grey-14;
 
 .modal-primary .modal-footer {
   background-color: white;
-  border-top: 1px solid $sa-grey-08;
+  border-top: 1px solid $user-primary-colour;
   margin-left: 0px;
   width: 100%;
 }
@@ -15536,7 +15593,7 @@ $sa-nav-colour: $sa-grey-14;
 
 .modal-secondary .modal-footer {
   background-color: white;
-  border-top: 1px solid $sa-grey-08;
+  border-top: 1px solid $user-secondary-colour;
   margin-left: 0px;
   width: 100%;
 }
@@ -15941,10 +15998,11 @@ p > a.modal-info-circle-inline{
 // Modals with tabs inside ------------
 
 .modal-body .nav.nav-tabs{
-  margin-left: -12px;
-  margin-right: -12px;
-  padding-left: 6px;
-  padding-right: 6px;
+  margin-left: -14px;
+  margin-right: -14px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-bottom: 1px solid $tab-colour-active;
 }
 
 .modal-body .nav.nav-tabs .nav-item{
@@ -15954,14 +16012,25 @@ p > a.modal-info-circle-inline{
 }
 .modal-body .nav.nav-tabs .nav-item .nav-link{
   color: $text;
+  border-bottom: 1px solid $tab-colour-hover;
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  // &:hover{border-bottom: 1px solid $tab-colour-active!important;}
+  &.active {box-shadow: none;}
+  &:focus,
+  &:active{
+    color: white!important;
+    border-bottom: 1px solid $tab-colour-active;
+  }
 }
-.modal-body .nav.nav-tabs .nav-item .nav-link:visited{
+// .modal-body .nav.nav-tabs .nav-item .nav-link:visited{
 
-}
-.modal-body .nav.nav-tabs .nav-item .nav-link:hover,
-.modal-body .nav.nav-tabs .nav-item .nav-link:focus{
-  // color: $text!important;
-}
+// }
+// .modal-body .nav.nav-tabs .nav-item .nav-link:hover,
+// .modal-body .nav.nav-tabs .nav-item .nav-link:focus{
+//   // color: $text!important;
+// }
 .modal-body .nav.nav-tabs .nav-item .nav-link.active{
   color: white;
   border-color: $sa-nav-colour;
@@ -15977,10 +16046,33 @@ p > a.modal-info-circle-inline{
   padding: 8px;
 }
 
+// with sard-tabs ---------------------
+.modal-body .nav.nav-tabs.sa-nav-tabs {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  + .tab-content {
+    background-color: $sa-grey-02;
+    margin-left: -4px;
+    margin-right: -4px;
+    padding: 12px 10px;
+    .modal-box{
+      background-color: white;
+      border: 1px solid $sa-grey-03;
+    }
+    .modal-box-header{
+      margin: 0;
+      background-color: $sa-grey-14;
+      color: white;
+    }
+  }
+}
+
 // SARD Mega Modal ==============================
 
 .sa-mega-modal{
-
+  // Structure --------------
   .row{
     margin-right: -4px;
     margin-left: -4px;
@@ -15991,38 +16083,137 @@ p > a.modal-info-circle-inline{
   [class*='col-']{
     padding-right: 4px;
     padding-left: 4px;
-    // align-items: stretch;
   }
 
-  .alert{ margin-bottom: 8px; }
+  .modal-footer {
+    background-color: #fff;
+    margin-left: -2px;
+    margin-right: -2px;
+    width: calc(100% + 4px);
+  }
+
+  // Components -------------
+  .alert{ 
+    margin-bottom: 8px; 
+    padding: 4px 8px;
+    line-height: 120%;
+  }
 
   .modal-box{
+    display: flex;
+    flex-direction: column;
     border: 1px solid $sa-grey-06;
     min-height: 100%;
+    border-radius: $sa-border-radius-sm;
+    // overflow: hidden;
   }
   .modal-box-header{
-    background-color: $sa-grey-06;
-    padding: 4px 6px;
+    padding: 4px 8px;
+    margin: -1px -1px 0 -1px;
+    background-color: $sa-grey-14;
+    border-top-left-radius: $sa-border-radius-sm;
+    border-top-right-radius: $sa-border-radius-sm;
+    color: white;
+    @include roboto-bold;
   }
   .modal-box-body{
-    padding: 4px 6px;
+    padding: 4px 8px;
     flex: 2 2 auto;
   }
   .modal-box-footer{
     border-top: 1px solid $sa-grey-06;
+    padding: 4px 8px;
+  }
+
+  // user-details -----------
+  .user-details{
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+    .user-icon{
+      height: 35px;
+      width: 35px;
+      margin-right: 4px;  
+    }
+    .user-icon .si{
+      font-size: 2.1rem;
+      // margin-right: 4px;      
+    }
+    p{ margin: 0; }
+  }
+  
+  // text etc ---------------
+  .modal-box{
+    p{ margin-bottom: 4px; }
+    p:last-of-type{ margin-bottom: 0px; }
+
+    hr{ 
+      margin: 4px 0; 
+      border-color: $sa-grey-06!important;
+    }
+    
+    label{ 
+      @include roboto-black; 
+      margin-bottom: 0px;
+    }
+
+    .sub-label{ 
+      @include roboto-medium; 
+      width: 60px;
+      display: inline-block;
+      &.x2{
+        width: 120px;
+      }
+    }
+
+    // description lists ----
+    dt {
+      float: left;
+      clear: left;
+      width: 60px;
+      text-align: left;
+      font-weight: bold;
+    }
+    dt::after { content: ":"; }
+    dd { margin: 0 0 0 68px; }
+
+    dl.x2{
+      dt { width: 120px; }
+      dt + dd { margin: 0 0 0 128px; }
+    }
+    
+    dl.x3{
+      dt { width: 180px; }
+      dt + dd {  margin: 0 0 0 188px; }
+    }
+  }
+
+  // Modal Confirm ----------
+  .modal-confirm{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $sa-success;
+    min-height: 100%;
+    border-radius: $sa-border-radius-sm;
+    background-color: white;
+  }
+  .confirm-header{
+    padding: 4px 6px;
+    margin: -1px -1px 0 -1px;
+    background-color: $sa-success;
+    border-top-left-radius: $sa-border-radius-sm;
+    border-top-right-radius: $sa-border-radius-sm;
+    color: white;
+    @include roboto-bold;
+  }
+  .confirm-body{
+    padding: 4px 6px;
+    flex: 2 2 auto;
+  }
+  .confirm-footer{
+    border-top: 1px solid $sa-success;
     padding: 4px 6px;
   }
-
-  // with tabs
-  .modal-body .nav.nav-tabs {
-    margin-left: -4px;
-    margin-right: -4px;
-  }
-  .modal-body .tab-content {
-    margin-left: -4px;
-    margin-right: -4px;
-  }
-
 }
 // Tables =======================================
 
@@ -16088,6 +16279,30 @@ $sa-table-dark-head-bg:     $sa-grey-18;
   }
 }
 
+// Table Responsive in Cards etc
+
+.card-body .table-responsive,
+.panel-body .table-responsive,
+.form-group .table-responsive{
+  margin:-10px;
+  min-width: calc(100% + 20px);
+  width: calc(100% + 20px);
+}
+
+.card-body .table-responsive table,
+.panel-body .table-responsive table,
+.form-group .table-responsive table{
+  margin: 0px;
+  min-width: 100%;
+  width: 100%;
+}
+.table-responsive.sm-up .table{margin-bottom: 0px;}
+@media (max-width: 767px){
+  .table-responsive.sm-up{
+    overflow-x: hidden;
+    textarea{margin-top:5px;}
+  }
+}
 
 
 // ==========================
@@ -16100,6 +16315,7 @@ $sa-table-dark-head-bg:     $sa-grey-18;
 .table.table-sard > tbody > tr > td,
 .table.table-sard > tfoot > tr > td {
   padding: $sa-spacer-6 $sa-spacer-10;
+  line-height: 18px;
 }
 
 .table-sard td, .table-sard th{
@@ -16131,6 +16347,7 @@ $sa-table-dark-head-bg:     $sa-grey-18;
 // Hoverable table
 .table-sard.table-hover tbody tr:hover{
   background-color: $sa-grey-04;
+  cursor: pointer;
 }
 
 // Striped table
@@ -16268,6 +16485,106 @@ $sa-table-dark-head-bg:     $sa-grey-18;
     }
   }
 }
+
+
+// Sortable tables ==============================================
+
+table.sortable thead th {
+  border-right: 1px solid $sa-grey-02!important;
+  padding-bottom: 3px!important;
+}
+
+table.sortable thead th:last-child {
+  border-right: none!important;
+}
+
+table.sortable thead th.sortable{
+  vertical-align: bottom;
+}
+
+table.sortable thead th.sortable{
+  position: relative;
+  padding: 0;
+  line-height: 16px;
+}
+
+table.sortable thead th.sortable a{
+  color: white;
+  display: block;
+  padding: 4px 8px 2px 8px;
+  padding-right: 23px;
+  &:hover{ color: $user-primary-colour;}
+}
+
+table.sortable thead th.sortable a.asc,
+table.sortable thead th.sortable a.desc{
+  color: $user-primary-colour;
+}
+
+table.sortable thead th.sortable a:after{
+  font-family: "sard-icons";
+  position: absolute;
+  right: 4px;
+}
+table.sortable thead th.sortable a.asc:after {
+  // background-image: url("ui2017/sort-asc.png");
+  content: "\e092";
+  color: $user-primary-colour;
+}
+
+table.sortable thead th.sortable a.desc:after {
+  // background-image: url("ui2017/sort-desc.png");
+  content: "\e094";
+  color: $user-primary-colour;
+}
+
+table.sortable thead th.sortable a:not(.asc):not(.desc):after {
+  // background-image: url("ui2017/sort-both.png");
+  content: "\e093";
+  color: $sa-grey-06;
+}
+
+
+
+// Table column variations - Use these within the td to adjust it's width.
+// Table column widths must add up to 100% in total, or leave columns empty and it will fill to fit.
+// You should only need to apply this to the top table head or table cell in a column.
+.tcol-75 { width:75%; }
+.tcol-66 { width:66%; }
+.tcol-60 { width:60%; }
+.tcol-50 { width:50%; }
+.tcol-45 { width:45%; }
+.tcol-41 { width:41%; }
+.tcol-40 { width:40%; }
+.tcol-39 { width:39%; }
+.tcol-33 { width:33%; }
+.tcol-30 { width:30%; }
+.tcol-25 { width:25%; }
+.tcol-20 { width:20%; }
+.tcol-15 { width:15%; }
+.tcol-14 { width:14%; }
+.tcol-12 { width:12%; }
+.tcol-12-5 { width:12.5%; }
+.tcol-11 { width:11%; }
+.tcol-10 { width:10%; }
+.tcol-5 { width:5%; }
+
+// These are fixed variations on the above
+.tcol-fixed-300, .tcol-300px  { max-width:300px!important; min-width:300px!important; }
+.tcol-fixed-250, .tcol-250px  { max-width:250px!important; min-width:250px!important; }
+.tcol-fixed-200, .tcol-200px  { max-width:200px!important; min-width:200px!important; }
+.tcol-fixed-150, .tcol-150px  { max-width:150px!important; min-width:150px!important; }
+.tcol-fixed-140, .tcol-140px  { max-width:140px!important; min-width:140px!important; }
+.tcol-fixed-130, .tcol-130px  { max-width:130px!important; min-width:130px!important; }
+.tcol-fixed-120, .tcol-120px  { max-width:120px!important; min-width:120px!important; }
+.tcol-fixed-100, .tcol-100px  { max-width:100px!important; min-width:100px!important; }
+.tcol-fixed-80, .tcol-80px    { max-width:80px!important; min-width:80px!important; }
+.tcol-fixed-70, .tcol-70px    { max-width:70px!important; min-width:70px!important; }
+.tcol-fixed-60, .tcol-60px    { max-width:60px!important; min-width:60px!important; }
+.tcol-fixed-50, .tcol-50px    { max-width:50px!important; min-width:50px!important; }
+.tcol-fixed-5, .tcol-5px      { max-width:5px!important; min-width:5px!important; }
+
+.no-wrap { white-space: normal!important; }
 // Popovers =====================================
 
 
@@ -18348,10 +18665,6 @@ body { -ms-overflow-style: scrollbar; }
 }
 
 .sa-sidemenu.open{
-  .menu-top{
-    width: 200px;
-    max-width: 200px;
-  }
 
   .menu-list{
     position: relative;
@@ -18494,79 +18807,79 @@ body { -ms-overflow-style: scrollbar; }
 }
 
 
-// ==============================================
-// Sidemenu when used with Container Fluid
-.sidemenu-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
+// // ==============================================
+// // Sidemenu when used with Container Fluid
+// .sidemenu-wrapper {
+//   display: flex;
+//   width: 100%;
+//   align-items: stretch;
+// }
 
-.sa-sidemenu {
-  position: fixed;
-  // min-height: 100vh;
-  // height: calc(100% - 80px);
-  // padding-bottom: 80px;
-}
+// .sa-sidemenu {
+//   position: fixed;
+//   // min-height: 100vh;
+//   // height: calc(100% - 80px);
+//   // padding-bottom: 80px;
+// }
 
-// postioning after navbar and breadcrumbs
-.navbar + .sidemenu-wrapper .sa-sidemenu{
-  top: 50px;
-  @include media-breakpoint-down(md){
-    top: 35px;
-  }
-}
-#navbar-admin + .sidemenu-wrapper .sa-sidemenu{
-  top: 35px;
-  @include media-breakpoint-down(md){
-    top: 35px;
-  }
-}
+// // postioning after navbar and breadcrumbs
+// .navbar + .sidemenu-wrapper .sa-sidemenu{
+//   top: 50px;
+//   @include media-breakpoint-down(md){
+//     top: 35px;
+//   }
+// }
+// #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+//   top: 35px;
+//   @include media-breakpoint-down(md){
+//     top: 35px;
+//   }
+// }
 
-.navbar + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-  top: 79px;
-  @include media-breakpoint-down(md){
-    top: 64px;
-  }
-}
+// .navbar + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+//   top: 79px;
+//   @include media-breakpoint-down(md){
+//     top: 64px;
+//   }
+// }
 
-.navbar + #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
-  top: 85px;
-  @include media-breakpoint-down(md){
-    top: 70px;
-  }
-}
+// .navbar + #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+//   top: 85px;
+//   @include media-breakpoint-down(md){
+//     top: 70px;
+//   }
+// }
 
-.navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-  top: 114px;
-  @include media-breakpoint-down(md){
-    top: 99px;
-  }
-}
-#navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
-  top: 64px;
-  @include media-breakpoint-down(md){
-    top: 64px;
-  }
-}
+// .navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+//   top: 114px;
+//   @include media-breakpoint-down(md){
+//     top: 99px;
+//   }
+// }
+// #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+//   top: 64px;
+//   @include media-breakpoint-down(md){
+//     top: 64px;
+//   }
+// }
 
-.wrapper-content{
-  width: 100%;
-  padding-left: 40px;
-  margin-bottom: 50px;
-  @include off-canvas-transmission;
-  @include media-breakpoint-down(xs){
-    padding-left: 30px;
-  }
-}
+// .wrapper-content{
+//   width: 100%;
+//   padding-left: 40px;
+//   margin-bottom: 50px;
+//   @include off-canvas-transmission;
+//   @include media-breakpoint-down(xs){
+//     padding-left: 30px;
+//   }
+// }
 
-// Push Content on large screens and above
+// // Push Content on large screens and above
 
-@include media-breakpoint-up(xl){
-  .sa-sidemenu.open + .wrapper-content{
-    padding-left: 200px;
-  }
-}
+// @include media-breakpoint-up(xl){
+//   .sa-sidemenu.open + .wrapper-content{
+//     padding-left: 200px;
+//   }
+// }
 
 
 // Sidemenu Light ===============================
@@ -18618,13 +18931,8 @@ body { -ms-overflow-style: scrollbar; }
 
 // Elements specific to a page can be found in their relative page css
 
-$sa-tab-bg:               $sa-grey-12;
 
-$tab-colour:              $sa-grey-03;
-$tab-colour-hover:        $sa-grey-05;
-$tab-shadow:              $sa-grey-07;
-$tab-colour-active:       $sa-grey-14;
-$tab-number-bg:           $sa-grey-12;
+
 
 // SA-Nav-Tabs ==================================
 // Don't confuse this with SARD Nav Tabs below
@@ -18835,7 +19143,7 @@ $tab-number-bg:           $sa-grey-12;
     }
   }
 
-  .nav-row.active a,{
+  .nav-row.active a{
     background-color: $tab-colour-active;
     color: white;
     @include respond-to(md-break-up){
@@ -18959,6 +19267,13 @@ $tab-number-bg:           $sa-grey-12;
   border:none;
   border-left: none;
   box-shadow: none;
+  background-color: $user-primary-colour;
+  &:hover { 
+    background-color: darken($user-primary-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-primary-colour, 10%);
+  }
   &::after{ // overrides generic .btn-search position
     right: 6px;
   }
@@ -19068,7 +19383,48 @@ $tab-number-bg:           $sa-grey-12;
   }
 }
 
+// in navbar -----------------
+.navbar-primary{
+  .searchbar-sard input{
+    border-color: $user-secondary-colour;
+    &:hover { 
+      border-color: darken($user-secondary-colour, 5%); 
+    }
+    &:active {
+      border-color: darken($user-secondary-colour, 10%);
+    }
+  }
+  .searchbar-sard .btn-search{
+    background-color: $user-secondary-colour;
+    &:hover { 
+      background-color: darken($user-secondary-colour, 5%); 
+    }
+  &:active {
+      background-color: darken($user-secondary-colour, 10%);
+    }
+  }
+}
 
+.navbar-secondary{
+  .searchbar-sard input{
+    border-color: $user-primary-colour;
+    &:hover { 
+      border-color: darken($user-primary-colour, 5%); 
+    }
+    &:active {
+      border-color: darken($user-primary-colour, 10%);
+    }
+  }
+  .searchbar-sard .btn-search{
+    background-color: $user-primary-colour;
+    &:hover { 
+      background-color: darken($user-primary-colour, 5%); 
+    }
+  &:active {
+      background-color: darken($user-primary-colour, 10%);
+    }
+  }
+}
 // Perforations =================================
 
 // Horizontal Rules =========
@@ -19087,7 +19443,7 @@ hr.dashed{ border-style: dashed;}
 hr.dotted{ border-style: dotted;}
 
 hr.black{ border-color: $text; }
-hr.grey { background-color: $sa-grey-08; }
+hr.grey { border-color: $sa-grey-08; }
 hr.trust{ border-color: $user-primary-colour; }
 hr.admin{ border-color: $admin-primary-colour; }
 hr.primary{ border-color: $primary; }
@@ -19353,6 +19709,313 @@ hr.white{ border-color: white; }
   }
 
 } // End Footer
+
+// SARD Loader ==================================
+// https://ihatetomatoes.net/create-css3-spinning-preloader/
+// https://ihatetomatoes.net/create-custom-preloading-screen/
+// https://css3please.com/
+
+.sa-page-loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4997;
+}
+
+.sa-page-loader-spinner{
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 3px solid transparent;
+  border-top-color: $user-secondary-colour;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 4998;
+  &.small-spinner{
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid transparent;
+    border-top-color: $user-primary-colour;
+    border-radius: 50%;
+    -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 3px solid transparent;
+    border-top-color: $user-secondary-colour;
+    border-radius: 50%;
+    -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+  }
+  @-webkit-keyframes spin{
+    0% {
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+  }
+  @keyframes spin{
+    0% {
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+  }
+}
+  
+// Loader background screen ---------------------
+.sa-page-loader{
+  .loader-section{
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $user-secondary-colour ;
+    opacity: 0.2;
+  }
+  .loader-section.section-left{
+    left: 0;
+  }
+  .loader-section.section-right{
+    right: 0;
+  }
+}
+
+// Activating Loader ----------------------------
+// See app/assets/js/scripts/sa-page-loader-demo.js
+
+body:not(.loading) {
+  .sa-page-loader{
+    .loader-section.section-left{
+      -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(-100%);  /* IE 9 */
+      transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    .loader-section.section-right{
+      -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(100%);  /* IE 9 */
+      transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+  }
+
+  .sa-page-loader-spinner{
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.3s ease-out; 
+
+  }
+  .sa-page-loader{
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateY(-100%);  /* IE 9 */
+      transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.3s 1s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.3s 1s ease-out; 
+  }
+}
+
+// Demo Only ------------------------------------
+a.sa-page-loader-spinner{
+  cursor: pointer;
+
+}
+
+
+
+// ==================================================================
+// Element Loader ===================================================
+.with-element-loader{
+  position: relative;
+  overflow: hidden;
+}
+.loader-demo-element{ // for UI purposes only
+  border: 2px solid $user-primary-colour;
+  border-radius: $sa-border-radius-lg;
+  padding: 8px;
+}
+
+.sa-element-loader{
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4997;
+  // background-color: red;
+  // opacity: 0.5;
+}
+
+.sa-element-loader-spinner{
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  border: 2px solid transparent;
+  border-top-color: $user-secondary-colour;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 4998;
+  &.small-spinner{
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 2px solid transparent;
+    border-top-color: $user-primary-colour;
+    border-radius: 50%;
+    -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid transparent;
+    border-top-color: $user-secondary-colour;
+    border-radius: 50%;
+    -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+  }
+  @-webkit-keyframes spin{
+    0% {
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+  }
+  @keyframes spin{
+    0% {
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+  }
+}
+
+// Loader background screen ---------------------
+.sa-element-loader{
+  .loader-section{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $user-secondary-colour ;
+    opacity: 0.2;
+  }
+  .loader-section.section-left{
+    left: 0;
+  }
+  .loader-section.section-right{
+    right: 0;
+  }
+}
+
+
+// Activating Element Loader --------------------
+// See app/assets/js/scripts/sa-page-loader-demo.js
+
+.with-element-loader:not(.loading) {
+  .sa-element-loader{
+    .loader-section.section-left{
+      -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(-100%);  /* IE 9 */
+      transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    .loader-section.section-right{
+      -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(100%);  /* IE 9 */
+      transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+  }
+
+  .sa-element-loader-spinner{
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.3s ease-out; 
+
+  }
+  .sa-element-loader{
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateY(-100%);  /* IE 9 */
+      transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.3s 1s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+      transition: all 0.3s 1s ease-out; 
+  }
+}
 
 
 

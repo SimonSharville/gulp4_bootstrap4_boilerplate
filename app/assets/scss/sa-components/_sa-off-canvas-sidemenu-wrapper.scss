@@ -1,0 +1,101 @@
+// With sidemenu wrapper
+#navbar + .sidemenu-wrapper .container-fluid{
+  margin-top: 65px;
+ @include media-breakpoint-down(md){  margin-top: 50px;}
+}
+#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 95px;
+ @include media-breakpoint-down(md){ margin-top: 80px; }
+}
+
+// still to fix
+#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
+  margin-top: 105px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
+}
+#navbar-admin + .sidemenu-wrapper .container-fluid{
+  margin-top: 55px;
+ @include media-breakpoint-down(md){ margin-top: 55px; }
+}
+#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 130px;
+ @include media-breakpoint-down(md){ margin-top: 115px; }
+}
+#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+  margin-top: 80px;
+ @include media-breakpoint-down(md){ margin-top: 85px; }
+}
+
+
+
+
+// Wrapper
+
+.sidemenu-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.sa-sidemenu {
+  position: fixed;
+}
+
+// postioning after navbar and breadcrumbs
+.navbar + .sidemenu-wrapper .sa-sidemenu{
+  top: 50px;
+  @include media-breakpoint-down(md){
+    top: 35px;
+  }
+}
+#navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+  top: 35px;
+  @include media-breakpoint-down(md){
+    top: 35px;
+  }
+}
+
+.navbar + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 79px;
+  @include media-breakpoint-down(md){
+    top: 64px;
+  }
+}
+
+.navbar + #navbar-admin + .sidemenu-wrapper .sa-sidemenu{
+  top: 85px;
+  @include media-breakpoint-down(md){
+    top: 70px;
+  }
+}
+
+.navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 114px;
+  @include media-breakpoint-down(md){
+    top: 99px;
+  }
+}
+#navbar-admin + #breadcrumbs + .sidemenu-wrapper .sa-sidemenu{
+  top: 64px;
+  @include media-breakpoint-down(md){
+    top: 64px;
+  }
+}
+
+.wrapper-content{
+  width: 100%;
+  padding-left: 40px;
+  margin-bottom: 50px;
+  @include off-canvas-transmission;
+  @include media-breakpoint-down(xs){
+    padding-left: 30px;
+  }
+}
+
+// Push Content on large screens and above
+
+@include media-breakpoint-up(xl){
+  .sa-sidemenu.open + .wrapper-content{
+    padding-left: 200px;
+  }
+}
