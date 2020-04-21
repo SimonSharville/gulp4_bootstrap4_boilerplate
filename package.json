@@ -28,7 +28,7 @@
     "del": "^5.1.0",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-changed": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-haml": "^1.0.1",
     "gulp-imagemin": "^6.2.0",
@@ -42,8 +42,8 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^1.0.4",
     "import-resolve": "^0.4.0",
-    "jquery": "^3.5.0",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.15",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.0"
   }
 }
