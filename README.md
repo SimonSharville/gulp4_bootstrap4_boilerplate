@@ -105,5 +105,6 @@ Install Process
     npm update                                          (Updates any out of date packages)
     npm outdated                                        (Checks for outdated packages)
     npm install PACKAGENAME@latest --save               (Updates specific page to latest) 
+    npm uninstall <name> --save-dev                     (Uninstalls Package)
 
 
