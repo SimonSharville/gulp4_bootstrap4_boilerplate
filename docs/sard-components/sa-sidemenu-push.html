@@ -227,9 +227,34 @@ Dropdown
 <div class='container-fluid'>
 <div class='row'>
 <div class='col-sm-24 border'>
-<h1>Sard Side Menu - Push</h1>
+<h1>Sard Side Menu - Wrapper</h1>
 <p class='lead'>
-The Sard sidemenu pushes out from the left.
+This layout is built using a sidemenu wrapper.
+</p>
+<p>
+To build this layout, items need to be in this order:
+</p>
+<p>
+<code>.sidemenu-wrapper</code>
+<br>
+<code>&nbsp; .sidemenu</code>
+<br>
+<code>&nbsp; &nbsp; .wrapper-content</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; .container-fluid</code>
+</p>
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+<p>
+You cannnot use
+<code>.container</code>
+with this layout, but you can have multiple
+<code>.container-fluids</code>
+within it.
 </p>
 </div>
 </div>

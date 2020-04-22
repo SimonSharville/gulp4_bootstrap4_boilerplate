@@ -1,30 +1,41 @@
 // With sidemenu wrapper
-#navbar + .sidemenu-wrapper .container-fluid{
+#navbar + .sidemenu-wrapper .container-fluid:first-of-type{
   margin-top: 65px;
  @include media-breakpoint-down(md){  margin-top: 50px;}
 }
-#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+#navbar + #breadcrumbs + .sidemenu-wrapper .container-fluid:first-of-type{
   margin-top: 95px;
  @include media-breakpoint-down(md){ margin-top: 80px; }
 }
 
 // still to fix
-#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid{
+#navbar + #navbar-admin + .sidemenu-wrapper .container-fluid:first-of-type{
   margin-top: 105px;
  @include media-breakpoint-down(md){ margin-top: 85px; }
 }
-#navbar-admin + .sidemenu-wrapper .container-fluid{
+#navbar-admin + .sidemenu-wrapper .container-fluid:first-of-type{
   margin-top: 55px;
  @include media-breakpoint-down(md){ margin-top: 55px; }
 }
-#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+#navbar + #navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid:first-of-type{
   margin-top: 130px;
  @include media-breakpoint-down(md){ margin-top: 115px; }
 }
-#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid{
+#navbar-admin + #breadcrumbs + .sidemenu-wrapper .container-fluid:first-of-type{
   margin-top: 80px;
  @include media-breakpoint-down(md){ margin-top: 85px; }
 }
+
+// #navbar + .sidemenu-wrapper .container-fluid{
+//   width: calc(100% - 70px);
+//   // padding-right: 70px;
+//   @include media-breakpoint-down(md){
+//     // padding-right: 60px;
+//   }
+//   @include media-breakpoint-down(sm){
+//     // padding-right: 50px;
+//   }
+// }
 
 
 
@@ -87,7 +98,7 @@
   padding-left: 40px;
   margin-bottom: 50px;
   @include off-canvas-transmission;
-  @include media-breakpoint-down(xs){
+  @include media-breakpoint-down(md){
     padding-left: 30px;
   }
 }

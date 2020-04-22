@@ -80,7 +80,7 @@ Sard Components
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-portfolio.html'>Sard Nav Tabs - Portfolio</a>
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-appraisals.html'>Sard Nav Tabs - Appraisal</a>
 <hr>
-<a class='dropdown-item' href='../sard-components/sa-sidemenu-push.html'>Sard Side Menu - Push</a>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu-wrapper.html'>Sard Side Menu - Wrapper</a>
 <a class='dropdown-item' href='../sard-components/sa-sidemenu-new.html'>Sard Side Menu - New</a>
 </div>
 </li>
@@ -225,10 +225,36 @@ Dropdown
 <div class='container-fluid'>
 <div class='row'>
 <div class='col-sm-24 border'>
-<h1>Sard Side Menu - New (Sync Test)</h1>
+<h1>Sard Side Menu - New</h1>
 <p class='lead'>
-The Sard sidemenu pushes out from the left.
+On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left.
 </p>
+<p class='lead'>
+On screen sizes less than 1200px, the sidemenu slides over the content.
+</p>
+<p>
+To build this correctly, the
+<code>.sa-sidemenu</code>
+must be followed directly by either a
+<code>.container-fluid</code>
+or a
+<code>.container</code>
+. that contains the main contents of the site.
+</p>
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+You can have multiple containers on after the other...
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+...if you wish
 </div>
 </div>
 </div>

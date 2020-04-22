@@ -6,6 +6,19 @@
   padding-left: 0px;
 }
 
+.navbar .container {
+  @include media-breakpoint-down(md){
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  @include media-breakpoint-down(sm){
+    max-width: 100%;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
 // Base styles
 .navbar.fixed-top{
   box-shadow: $sa-box-shadow;

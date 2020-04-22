@@ -4,6 +4,24 @@
 //#160757827 scroll bar covers options menu on IE
 body { -ms-overflow-style: scrollbar; }
 
+body.plus-option-tab{
+  .container-fluid{
+    // padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #navbar + .sa-sidemenu ~ .container{
+    @include media-breakpoint-down(lg){
+      padding-left: 16px;
+    }
+    @include media-breakpoint-down(sm){
+      padding-left: 27px;
+      max-width: calc(100% - 65px);
+    }
+  }
+
+}
+
 
 @mixin off-canvas-transmission {
   transition: all 320ms ease!important;

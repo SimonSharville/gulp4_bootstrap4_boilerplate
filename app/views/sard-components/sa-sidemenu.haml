@@ -6,7 +6,7 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:href => "../assets/css/remote-sard-ui-styles.min.css", :rel => "stylesheet"}/
  
-  %body.theme-trust
+  %body.theme-trust.plus-option-tab
     //=include ../navbars/_navbar-x1.haml
     -# //=include ../navbars/_navbar-admin.haml
     -# #breadcrumbs.fixed-top
@@ -19,17 +19,39 @@
     -#           %a{:href => "#/"} Library
     -#         %li.breadcrumb-item.active{"aria-current" => "page"} Data
 
-    //=include ../navbars/_sidemenu-new.haml
+    //=include ../navbars/_sidemenu.haml
     .container-fluid
       .row
         .col-sm-24.border
-          %h1 Sard Side Menu - New (Sync Test)
+          %h1 Sard Side Menu - New
 
           %p.lead
-            The Sard sidemenu pushes out from the left. 
+            On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left. 
+          %p.lead
+            On screen sizes less than 1200px, the sidemenu slides over the content.
+          %p
+            To build this correctly, the 
+            %code .sa-sidemenu
+            must be followed directly by either a 
+            %code .container-fluid 
+            or a 
+            %code .container
+            \. that contains the main contents of the site.
+      
+    .container-fluid
+      .row
+        .col-sm-24.border
+          You can have multiple containers one after the other...
+    .container-fluid
+      .row
+        .col-sm-24.border
+          \...if you wish
 
 
 
+
+    //=include ../navbars/_options-tab.haml
+    //=include ../navbars/_rag-tab-x1.haml
     //=include ../navbars/_footer.haml
 
     / Scripts ================================

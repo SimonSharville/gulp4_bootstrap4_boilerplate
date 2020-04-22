@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 <head>
-<title>SARD Core UI - Lists</title>
+<title>SARD Core UI - Sard Side Menu - New</title>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/remote-sard-ui-styles.min.css' rel='stylesheet'>
 </head>
-<body class='theme-trust'>
+<body class='theme-trust plus-option-tab'>
 <nav class='navbar fixed-top navbar-expand-lg navbar-primary' id='navbar'>
 <div class='container'>
 <a class='navbar-brand' href='../index.html'>Logo</a>
@@ -173,98 +173,258 @@ Megamenu
 </div>
 </div>
 </nav>
-<div class='container'>
+<div class='sa-sidemenu sidemenu-light'>
+<div class='menu-top'>
+<div class='open-icon'></div>
+</div>
+<div class='menu-list'>
+<!-- Include your navigation here -->
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A very long, I mean really, really, really long link title</span>
+</a>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+<hr>
+<a class='menu-link active' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+<a class='menu-link' href='#/'>
+<span class='link-text'>link, No Icon</span>
+</a>
+<hr>
+<div class='sub-title'>Sub-title</div>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+<hr>
+<div class='sub-title'>Dropdown Menu</div>
+<ul>
+<li class='dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+Dropdown
+</a>
+<div aria-labelledby='sardUI' class='dropdown-menu'>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item' href='#/'>.dropdown-item</a>
+<a class='dropdown-item active' href='#/'>.dropdown-item.active</a>
+</div>
+</li>
+</ul>
+<hr>
+<div class='sub-title'>Sub-title</div>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
+<span class='link-text'>A Link</span>
+</a>
+</div>
+</div>
+<div class='container-fluid'>
 <div class='row'>
-<div class='col-sm-24'>
-<h1 class='bs-anchor' id='links'>SA Loader</h1>
-</div>
-</div>
-<div class='row'>
-<div class='col'>
-<div class='sa-page-loader'>
-<a class='sa-page-loader-spinner'></a>
-<div class='loader-section section-left'></div>
-<div class='loader-section section-right'></div>
-</div>
-</div>
-</div>
-<div class='row'>
-<div class='col-md-12'>
-<h3>.sa-page-loader</h3>
+<div class='col-sm-24 border'>
+<h1>Sard Side Menu - Light</h1>
+<h4>This is identical to the default sidemenu but with a light colouring</h4>
 <p>
-This is a page preloader. It shoudn't matter where it sits on the page as it is designed the cover the entire screen, but appear behind the navbar, sidemenu and footer.
-</p>
-<h5>Code</h5>
-<p>
-<code>.sa-page-loader</code>
-<br>
-<code>&nbsp;&nbsp;.sa-page-loader-spinner</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;.loader-section.section-left</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;.loader-section.section-right</code>
-</p>
-<p>
-You can also reduce the size of the spinner by adding
-<br>
-<code>.small-spinner</code>
+Simply add
+<code>.sidemenu-light</code>
 to
-<code>.sa-page-loader-spinner</code>
+<code>.sa-sidemenu</code>
 </p>
-<h5>Demo</h5>
-<p>
-To see it work
-<div class='btn btn-primary activate-loader'>Click Here</div>
-<br>
-<br>
-To close it, click on the loader spinner to replicate the page having loaded.
+<hr>
+<p class='lead'>
+On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left.
 </p>
-</div>
-<div class='col-md-12'>
-<h3>.sa-element-loader</h3>
-<p>
-This is a preloader for an individual element.
-</p>
-<div class='loader-demo-element mb-2 with-element-loader'>
-<div class='sa-element-loader'>
-<a class='sa-element-loader-spinner'></a>
-<div class='loader-section section-left'></div>
-<div class='loader-section section-right'></div>
-</div>
-<p>
-The containing element will need to have the class of
-<code>.with-element-loader</code>
-added to it, this gives this element a position of relative, so that the loader itself can be positioned absolute to it.
-<br>
-The .sa-element-loader MUST sit within this containing element.
-</p>
-<h5>Code</h5>
-<p>
-<code>DIV.with-element-loader</code>
-<br>
-<code>&nbsp;&nbsp;.sa-element-loader</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;.sa-element-loader-spinner</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.loader-section.section-left</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.loader-section.section-right</code>
+<p class='lead'>
+On screen sizes less than 1200px, the sidemenu slides over the content.
 </p>
 <p>
-You can also reduce the size of the spinner by adding
-<br>
-<code>.small-spinner</code>
-to
-<code>.sa-element-loader-spinner</code>
-</p>
-</div>
-<h5>Demo</h5>
-<p>
-To toggle the loader on and off
-<div class='btn btn-primary element-loader-btn'>Click Here</div>
+To build this correctly, the
+<code>.sa-sidemenu.sidemenu-light</code>
+must be followed directly by either a
+<code>.container-fluid</code>
+or a
+<code>.container</code>
+. that contains the main contents of the site.
 </p>
 </div>
 </div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+You can have multiple containers one after the other...
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+...if you wish
+</div>
+</div>
+</div>
+<div id='off_canvas'>
+<a class='options-nav-expander fixed' id='options-nav-expander'>
+<div class='title'> Options</div>
+<!-- %i.fa.fa-bars.fa-lg.white -->
+</a>
+<nav class='options-menu'>
+<ul class='list-unstyled main-menu'>
+<!-- Include your navigation here -->
+<div id='options-nav-close'>
+<a href='/#'></a>
+</div>
+<li class='sub-title'>
+Below is a list of the range of links with their icons.
+</li>
+<hr>
+<li class='icon new add'>
+<a href='/#'>New / Add</a>
+</li>
+<li class='icon new-set'>
+<a href='/#'>New Set</a>
+</li>
+<li class='icon edit'>
+<a href='/#'>Edit</a>
+</li>
+<li class='icon export'>
+<a href='/#'>Export</a>
+</li>
+<li class='icon download import'>
+<a href='/#'>Download / Import</a>
+</li>
+<li class='icon action-needed warning'>
+<a href='/#'>Action Needed / Warning</a>
+</li>
+<li class='icon view'>
+<a href='/#'>View</a>
+</li>
+<li class='icon back'>
+<a href='/#'>Back</a>
+</li>
+<li class='icon questionnaire'>
+<a href='/#'>Questionnaire</a>
+</li>
+<li class='icon pdf'>
+<a href='/#'>PDF</a>
+</li>
+<li class='icon zip'>
+<a href='/#'>Zip</a>
+</li>
+<li class='icon email'>
+<a href='/#'>Email</a>
+</li>
+<li class='icon cancel'>
+<a href='/#'>Cancel</a>
+</li>
+<li class='icon info'>
+<a href='/#'>Info</a>
+</li>
+<li class='icon video'>
+<a href='/#'>Video</a>
+</li>
+<li class='icon apply'>
+<a href='/#'>Apply</a>
+</li>
+<li class='icon refresh'>
+<a href='/#'>Refresh</a>
+</li>
+<li class='icon user'>
+<a href='/#'>User</a>
+</li>
+<li class='icon user-md'>
+<a href='/#'>User-md</a>
+</li>
+<li class='icon all-users'>
+<a href='/#'>All Users</a>
+</li>
+<li class='icon new-user'>
+<a href='/#'>New User</a>
+</li>
+<li class='icon destroy delete'>
+<a href='/#'>Destroy / Delete</a>
+</li>
+<li class='icon new super-admin'>
+<a href='/#'>Super Admin</a>
+</li>
+</ul>
+</nav>
+</div>
+<div id='off_canvas_rag_key'>
+<a class='rag-key-expander fixed' id='rag-key-expander'>
+<div class='title'>
+<!-- RAG -->
+<img alt='Rag icon danger plus sm@2x' src='../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png'>
+<br>
+<img alt='Rag icon warning plus sm@2x' src='../assets/images/rag-icons/rag-icon-warning-plus-sm@2x.png'>
+<br>
+<img alt='Rag icon approved sm@2x' src='../assets/images/rag-icons/rag-icon-approved-sm@2x.png'>
+</div>
+</a>
+<nav class='rag-key-menu'>
+<ul class='list-unstyled rag-menu'>
+<!-- Include your navigation here -->
+<div id='rag-key-close'>
+<a href='#'></a>
+</div>
+</ul>
+<h3>Key to status icons</h3>
+<div class='rag-key icon-danger-plus'>
+<p>
+Incomplete
+<br>
+Non compliant
+</p>
+</div>
+<div class='rag-key icon-warning-plus'>
+<p>
+In Progress
+<br>
+Compliant with upcoming renewal
+</p>
+</div>
+<div class='rag-key icon-approved'>
+<p>
+Complete
+<br>
+Compliant
+</p>
+</div>
+<div class='rag-key icon-unavailable'>
+<p>
+Not applicable
+<br>
+Compliance unknown
+</p>
+</div>
+<hr>
+<h3>Key to state icons</h3>
+<div class='rag-key icon-draft'>
+<p>
+Draft
+</p>
+</div>
+<div class='rag-key icon-submitted'>
+<p>
+Submitted
+</p>
+</div>
+<div class='rag-key icon-approved'>
+<p>
+Complete
+</p>
+</div>
+<div class='rag-key icon-abandoned'>
+<p>
+Archived
+</p>
+</div>
+</nav>
 </div>
 <div class='sa-footer'>
 <div id='accordion'>

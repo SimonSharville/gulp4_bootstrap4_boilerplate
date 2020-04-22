@@ -1,0 +1,49 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title SARD Core UI - Sard Side Menu - Push
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/remote-sard-ui-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body.theme-trust.plus-option-tab
+    //=include ../navbars/_navbar-x1.haml
+
+    .sidemenu-wrapper
+      //=include ../navbars/_sidemenu.haml
+      .wrapper-content
+        .container-fluid
+          .row
+            .col-sm-24.border
+              %h1 Sard Side Menu - Wrapper
+
+              %p.lead
+                This layout is built using a sidemenu wrapper. 
+              %p
+                To build this layout, items need to be in this order: 
+              %p
+                %code .sidemenu-wrapper
+                %br/
+                %code &nbsp; .sidemenu
+                %br/
+                %code &nbsp; &nbsp; .wrapper-content
+                %br/
+                %code &nbsp; &nbsp; &nbsp; &nbsp; .container-fluid
+        .container-fluid
+          .row
+            .col-sm-24.border
+              %p
+                You cannot use 
+                %code .container
+                with this layout, but you can have multiple 
+                %code .container-fluids
+                within it.
+
+
+    //=include ../navbars/_options-tab.haml
+    //=include ../navbars/_rag-tab-x1.haml
+    //=include ../navbars/_footer.haml
+
+    / Scripts ================================
+
+    %script{:src => "../assets/js/remote-sard-scripts.min.js"}

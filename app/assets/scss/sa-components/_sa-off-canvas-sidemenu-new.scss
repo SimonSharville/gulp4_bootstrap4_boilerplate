@@ -4,25 +4,107 @@
 //#160757827 scroll bar covers sa-sidemenu menu on IE
 body { -ms-overflow-style: scrollbar; }
 
-
 @mixin off-canvas-transmission {
   transition: all 320ms ease!important;
 }
 
-// Posistioning -------------
+// Posistioning =================================
+#navbar + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 50px;}
+  @include media-breakpoint-down(md){  margin-top: 35px;}
+}
 
-// Closed state
+#navbar + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 80px;}
+  @include media-breakpoint-down(md){  margin-top: 65px;}
+}
+
+#navbar + #navbar-admin + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 85px;}
+  @include media-breakpoint-down(md){  margin-top: 70px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 115px;}
+  @include media-breakpoint-down(md){  margin-top: 100px;}
+}
+
+// New sidemenu Plus Containers
+
+#navbar + .sa-sidemenu + .container-fluid,
+#navbar + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
+}
+
+#navbar + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
+}
+
+#navbar + #navbar-admin + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
+}
+
+// Position & Width of containers when pushed ---
+
+#navbar + .sa-sidemenu ~ .container-fluid,
+#navbar + .sa-sidemenu ~ .container{
+  @include off-canvas-transmission;
+}
+
+#navbar + .sa-sidemenu ~ .container-fluid{
+  padding-left: 70px;
+  @include media-breakpoint-down(md){
+    padding-left: 60px;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  #navbar + .sa-sidemenu.open ~ .container-fluid{
+    padding-left: 230px;
+  }
+
+  #navbar + .sa-sidemenu.open ~ .container{
+    padding-left: 150px;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  #navbar + .sa-sidemenu ~ .container{
+    padding-left: 36px;
+  }
+}
+
+
+
+
+
+
+// States =======================================
+// Closed state -------------
 .sa-sidemenu{
   // z-index in _sa-variables.css
   position: fixed;
   display: block;
-  // height: 100%;
   height: calc(100% - 80px);
   padding-bottom: 80px;
   top: 0;
   width: 40px;
-  // overflow: hidden;
   @include off-canvas-transmission;
+  @include media-breakpoint-down(md){
+    height: calc(100% - 75px);
+    width: 30px;
+  }
 }
 
 .sa-sidemenu{ 
@@ -31,6 +113,9 @@ body { -ms-overflow-style: scrollbar; }
     top: 0px;
     left: 0px;
     height:40px;
+    @include media-breakpoint-down(md){
+      height: 30px;
+    }
   }
 
   .open-icon{
@@ -40,22 +125,23 @@ body { -ms-overflow-style: scrollbar; }
     right: 0px;
     width: 40px;
     max-width: 40px;
-    height:40px;
     z-index: 6001;
+    @include media-breakpoint-down(md){
+      width: 30px;
+    }
   }
   .menu-list{
     display: none;
   }
 }
 
-// Open state
+// Open state ---------------
 .sa-sidemenu.open{
   @include off-canvas-transmission;
   width: 200px;
 }
 
 .sa-sidemenu.open{
-
   .menu-list{
     position: relative;
     left: 0;
@@ -69,7 +155,9 @@ body { -ms-overflow-style: scrollbar; }
   }
 }
 
-// Styling ------------------
+
+
+// Styling ======================================
 
 .sa-sidemenu{
   background: $sa-grey-16;
@@ -90,6 +178,11 @@ body { -ms-overflow-style: scrollbar; }
   position: absolute;
   top: 4px;
   right: 12px;
+  @include media-breakpoint-down(md){
+    font-size: 1.3em;
+    top: 1px;
+    left: 5px;
+  }
 }
 .sa-sidemenu.open .open-icon::before{
   content: "\f038";
@@ -139,26 +232,13 @@ body { -ms-overflow-style: scrollbar; }
   i {
     padding-right: 0.5rem ; // 8px
     color: $sa-grey-06;
-    // color:$user-primary-colour;
   }
 }
 
-// Screen variations --------
 
-@include media-breakpoint-down(xs){
-  .sa-sidemenu{
-    width: 30px;
-  }
 
-  .sa-sidemenu .open-icon{
-    width: 30px;
-  }
 
-  .sa-sidemenu .open-icon::before{
-    font-size: 1em;
-    top: 6px;
-  }
-}
+// Sidemenu contents ============================ 
 
 // Dropdowns
 .sa-sidemenu .menu-list li:before{ // Removes Bullets

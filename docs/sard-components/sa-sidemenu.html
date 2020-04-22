@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 <head>
-<title>Gulp 4, Bootstrap 4 - Sard Side Menu</title>
+<title>SARD Core UI - Sard Side Menu - New</title>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/remote-sard-ui-styles.min.css' rel='stylesheet'>
 </head>
-<body class='theme-trust'>
+<body class='theme-trust plus-option-tab'>
 <nav class='navbar fixed-top navbar-expand-lg navbar-primary' id='navbar'>
 <div class='container'>
 <a class='navbar-brand' href='../index.html'>Logo</a>
@@ -33,6 +33,7 @@ Sard UI
 <a class='dropdown-item' href='../sard-ui/sa-lists.html'>Lists</a>
 <a class='dropdown-item' href='../sard-ui/sa-page-titles.html'>Page Titles</a>
 <a class='dropdown-item' href='../sard-ui/sa-perforations.html'>Perforations and Dividers</a>
+<a class='dropdown-item' href='../sard-ui/sa-loader.html'>Loader</a>
 </div>
 </li>
 <li class='nav-item dropdown'>
@@ -78,8 +79,10 @@ Sard Components
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-job-planning.html'>Sard Nav Tabs - Job Planning</a>
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-portfolio.html'>Sard Nav Tabs - Portfolio</a>
 <a class='dropdown-item' href='../sard-components/sa-nav-tabs-appraisals.html'>Sard Nav Tabs - Appraisal</a>
-<a class='dropdown-item' href='../sard-components/sa-sidemenu-slide.html'>Sard Side Menu - Slide</a>
-<a class='dropdown-item' href='../sard-components/sa-sidemenu-push.html'>Sard Side Menu - Push</a>
+<hr>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu.html'>Sard Side Menu</a>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu-wrapper.html'>Sard Side Menu - Wrapper</a>
+<a class='dropdown-item' href='../sard-components/sa-sidemenu-light.html'>Sard Side Menu - Light</a>
 </div>
 </li>
 <!-- / Megamenu -->
@@ -113,6 +116,9 @@ Megamenu
 </div>
 <div class='mega-item'>
 <a href='../sard-ui/sa-perforations.html'>Perforations and Dividers</a>
+</div>
+<div class='mega-item'>
+<a href='../sard-ui/sa-loader.html'>Loader</a>
 </div>
 </div>
 <div class='mega-column'>
@@ -148,8 +154,10 @@ Megamenu
 <a href='../sard-components/sa-nav-tabs-job-planning.html'>Sard Nav Tabs - Job Planning</a>
 <a href='../sard-components/sa-nav-tabs-portfolio.html'>Sard Nav Tabs - Portfolio</a>
 <a href='../sard-components/sa-nav-tabs-appraisals.html'>Sard Nav Tabs - Appraisals</a>
-<a href='../sard-components/sa-sidemenu-slide.html'>Sard Side Menu - Slide</a>
-<a href='../sard-components/sa-sidemenu-push.html'>Sard Side Menu - Push</a>
+<hr>
+<a href='../sard-components/sa-sidemenu.html'>Sard Side Menu</a>
+<a href='../sard-components/sa-sidemenu-wrapper.html'>Sard Side Menu - Wrapper</a>
+<a href='../sard-components/sa-sidemenu-light.html'>Sard Side Menu - Light</a>
 </div>
 </div>
 </div>
@@ -165,49 +173,32 @@ Megamenu
 </div>
 </div>
 </nav>
-<div class='container'>
-<div class='row'>
-<div class='col-sm-12'>
-<h1>Sard Side Menu</h1>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<p class='lead'>
-The Sard sidemenu slides out from the left.
-</p>
-</div>
-</div>
-</div>
 <div class='sa-sidemenu'>
 <div class='menu-top'>
 <div class='open-icon'></div>
-<div class='brand-area'>
-<a href='/#'>Logo</a>
-</div>
 </div>
 <div class='menu-list'>
 <!-- Include your navigation here -->
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
 <span class='link-text'>A very long, I mean really, really, really long link title</span>
 </a>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
 <span class='link-text'>A Link</span>
 </a>
 <hr>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
 <span class='link-text'>A Link</span>
 </a>
-<a class='menu-link' href='/#'>
+<a class='menu-link' href='#/'>
 <span class='link-text'>link, No Icon</span>
 </a>
 <hr>
 <div class='sub-title'>Sub-title</div>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
 <span class='link-text'>A Link</span>
 </a>
 <hr>
@@ -227,11 +218,205 @@ Dropdown
 </ul>
 <hr>
 <div class='sub-title'>Sub-title</div>
-<a class='menu-link' href='/#'>
-<i class='sicon sicon-approve'></i>
+<a class='menu-link' href='#/'>
+<i class='si si-arrow-right-circle'></i>
 <span class='link-text'>A Link</span>
 </a>
 </div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+<h1>Sard Side Menu - New</h1>
+<p class='lead'>
+On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left.
+</p>
+<p class='lead'>
+On screen sizes less than 1200px, the sidemenu slides over the content.
+</p>
+<p>
+To build this correctly, the
+<code>.sa-sidemenu</code>
+must be followed directly by either a
+<code>.container-fluid</code>
+or a
+<code>.container</code>
+. that contains the main contents of the site.
+</p>
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+You can have multiple containers one after the other...
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24 border'>
+...if you wish
+</div>
+</div>
+</div>
+<div id='off_canvas'>
+<a class='options-nav-expander fixed' id='options-nav-expander'>
+<div class='title'> Options</div>
+<!-- %i.fa.fa-bars.fa-lg.white -->
+</a>
+<nav class='options-menu'>
+<ul class='list-unstyled main-menu'>
+<!-- Include your navigation here -->
+<div id='options-nav-close'>
+<a href='/#'></a>
+</div>
+<li class='sub-title'>
+Below is a list of the range of links with their icons.
+</li>
+<hr>
+<li class='icon new add'>
+<a href='/#'>New / Add</a>
+</li>
+<li class='icon new-set'>
+<a href='/#'>New Set</a>
+</li>
+<li class='icon edit'>
+<a href='/#'>Edit</a>
+</li>
+<li class='icon export'>
+<a href='/#'>Export</a>
+</li>
+<li class='icon download import'>
+<a href='/#'>Download / Import</a>
+</li>
+<li class='icon action-needed warning'>
+<a href='/#'>Action Needed / Warning</a>
+</li>
+<li class='icon view'>
+<a href='/#'>View</a>
+</li>
+<li class='icon back'>
+<a href='/#'>Back</a>
+</li>
+<li class='icon questionnaire'>
+<a href='/#'>Questionnaire</a>
+</li>
+<li class='icon pdf'>
+<a href='/#'>PDF</a>
+</li>
+<li class='icon zip'>
+<a href='/#'>Zip</a>
+</li>
+<li class='icon email'>
+<a href='/#'>Email</a>
+</li>
+<li class='icon cancel'>
+<a href='/#'>Cancel</a>
+</li>
+<li class='icon info'>
+<a href='/#'>Info</a>
+</li>
+<li class='icon video'>
+<a href='/#'>Video</a>
+</li>
+<li class='icon apply'>
+<a href='/#'>Apply</a>
+</li>
+<li class='icon refresh'>
+<a href='/#'>Refresh</a>
+</li>
+<li class='icon user'>
+<a href='/#'>User</a>
+</li>
+<li class='icon user-md'>
+<a href='/#'>User-md</a>
+</li>
+<li class='icon all-users'>
+<a href='/#'>All Users</a>
+</li>
+<li class='icon new-user'>
+<a href='/#'>New User</a>
+</li>
+<li class='icon destroy delete'>
+<a href='/#'>Destroy / Delete</a>
+</li>
+<li class='icon new super-admin'>
+<a href='/#'>Super Admin</a>
+</li>
+</ul>
+</nav>
+</div>
+<div id='off_canvas_rag_key'>
+<a class='rag-key-expander fixed' id='rag-key-expander'>
+<div class='title'>
+<!-- RAG -->
+<img alt='Rag icon danger plus sm@2x' src='../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png'>
+<br>
+<img alt='Rag icon warning plus sm@2x' src='../assets/images/rag-icons/rag-icon-warning-plus-sm@2x.png'>
+<br>
+<img alt='Rag icon approved sm@2x' src='../assets/images/rag-icons/rag-icon-approved-sm@2x.png'>
+</div>
+</a>
+<nav class='rag-key-menu'>
+<ul class='list-unstyled rag-menu'>
+<!-- Include your navigation here -->
+<div id='rag-key-close'>
+<a href='#'></a>
+</div>
+</ul>
+<h3>Key to status icons</h3>
+<div class='rag-key icon-danger-plus'>
+<p>
+Incomplete
+<br>
+Non compliant
+</p>
+</div>
+<div class='rag-key icon-warning-plus'>
+<p>
+In Progress
+<br>
+Compliant with upcoming renewal
+</p>
+</div>
+<div class='rag-key icon-approved'>
+<p>
+Complete
+<br>
+Compliant
+</p>
+</div>
+<div class='rag-key icon-unavailable'>
+<p>
+Not applicable
+<br>
+Compliance unknown
+</p>
+</div>
+<hr>
+<h3>Key to state icons</h3>
+<div class='rag-key icon-draft'>
+<p>
+Draft
+</p>
+</div>
+<div class='rag-key icon-submitted'>
+<p>
+Submitted
+</p>
+</div>
+<div class='rag-key icon-approved'>
+<p>
+Complete
+</p>
+</div>
+<div class='rag-key icon-abandoned'>
+<p>
+Archived
+</p>
+</div>
+</nav>
 </div>
 <div class='sa-footer'>
 <div id='accordion'>
