@@ -2,51 +2,79 @@
   .menu-top
     .open-icon
   .menu-list
+    .menu-section.section-01
+      .menu-section-heading
+        %i.si.si-lg.si-user-circle-o
+        .item Section Heading 
+      %ul.sub-menu
+        %li.sub-menu--item 
+          %a.sard-products{:href => "#/"}
+            .item Without Icon
+        %li.sub-menu--item 
+          %a.sard-products{:href => "#/"}
+            %i.si.si-lg.si-sard-products-circle-o
+            .item With Icon
+    %hr/
+    .menu-section.section-02
+      .menu-section-heading
+        %i.si.si-lg.si-user-circle-o
+        .item Section Heading 
+      %ul.sub-menu
+        %li.sub-menu--item 
+          %a.sard-products{:href => "#/"}
+            .item Without Icon
+        %li.sub-menu--item 
+          %a.sard-products{:href => "#/"}
+            %i.si.si-lg.si-sard-products-circle-o
+            .item With Icon
+
+
+    
     / Include your navigation here
 
-    %a.menu-link{:href => "#/"} 
-      %i.si.si-arrow-right-circle
-      %span.link-text A very long, I mean really, really, really long link title 
+    -# %a.menu-link{:href => "#/"} 
+    -#   %i.si.si-arrow-right-circle
+    -#   %span.link-text A very long, I mean really, really, really long link title 
       
-    %a.menu-link{:href => "#/"} 
-      %i.si.si-arrow-right-circle
-      %span.link-text A Link  
+    -# %a.menu-link{:href => "#/"} 
+    -#   %i.si.si-arrow-right-circle
+    -#   %span.link-text A Link  
     
-    %hr/  
+    -# %hr/  
 
-    %a.menu-link{:href => "#/"} 
-      %i.si.si-arrow-right-circle
-      %span.link-text A Link
+    -# %a.menu-link{:href => "#/"} 
+    -#   %i.si.si-arrow-right-circle
+    -#   %span.link-text A Link
 
-    %a.menu-link{:href => "#/"} 
-      %span.link-text link, No Icon 
+    -# %a.menu-link{:href => "#/"} 
+    -#   %span.link-text link, No Icon 
 
-    %hr/
+    -# %hr/
 
-    .sub-title Sub-title
+    -# .sub-title Sub-title
 
-    %a.menu-link{:href => "#/"} 
-      %i.si.si-arrow-right-circle
-      %span.link-text A Link
+    -# %a.menu-link{:href => "#/"} 
+    -#   %i.si.si-arrow-right-circle
+    -#   %span.link-text A Link
 
-    %hr/
+    -# %hr/
 
-    .sub-title Dropdown Menu
+    -# .sub-title Dropdown Menu
     
-    %ul
-      %li.dropdown
-        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-          Dropdown
-        .dropdown-menu{"aria-labelledby" => "sardUI"}
-          %a.dropdown-item{:href => "#/"} .dropdown-item
-          %a.dropdown-item{:href => "#/"} .dropdown-item
-          %a.dropdown-item{:href => "#/"} .dropdown-item
-          %a.dropdown-item.active{:href => "#/"} .dropdown-item.active
+    -# %ul
+    -#   %li.dropdown
+    -#     %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+    -#       Dropdown
+    -#     .dropdown-menu{"aria-labelledby" => "sardUI"}
+    -#       %a.dropdown-item{:href => "#/"} .dropdown-item
+    -#       %a.dropdown-item{:href => "#/"} .dropdown-item
+    -#       %a.dropdown-item{:href => "#/"} .dropdown-item
+    -#       %a.dropdown-item.active{:href => "#/"} .dropdown-item.active
 
-    %hr/
+    -# %hr/
 
-    .sub-title Sub-title
+    -# .sub-title Sub-title
 
-    %a.menu-link{:href => "#/"} 
-      %i.si.si-arrow-right-circle
-      %span.link-text A Link
+    -# %a.menu-link{:href => "#/"} 
+    -#   %i.si.si-arrow-right-circle
+    -#   %span.link-text A Link
