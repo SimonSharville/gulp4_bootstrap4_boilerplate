@@ -8,15 +8,28 @@ $(document).ready(function(){
   $('.sa-sidemenu').on('click',function(e){
     e.preventDefault();
     $('.sa-sidemenu').toggleClass('open');
+    $('.sa-sidemenu').toggleClass('closed');
   });
 
   var $window = $(window);
 
   function resize() {
+    if ($window.width() < 1200) {
+      $('.sa-sidemenu').addClass('closed');
+      $('.sa-sidemenu').removeClass('open');
+    } else {
+      $('.sa-sidemenu').removeClass('closed');
+      $('.sa-sidemenu').addClass('open');
+    }
+  }
+
+  function resize() {
     if ($window.width() > 1200) {
       $('.sa-sidemenu').addClass('open');
+      $('.sa-sidemenu').removeClass('closed');
     } else {
       $('.sa-sidemenu').removeClass('open');
+      $('.sa-sidemenu').addClass('closed');
     }
   }
 
