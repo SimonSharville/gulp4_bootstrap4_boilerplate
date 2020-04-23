@@ -218,6 +218,10 @@ $break-xxl: 1590px;
 .container-fluid{
   padding-left: 30px;
   padding-right: 30px;
+  @include media-breakpoint-down(sm){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .container{
@@ -398,22 +402,22 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 // ==============================================
 
 #navbar + #navbar-admin{
-  margin-top: 50px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
+  top: 50px;
+ @include media-breakpoint-down(md){ top: 35px; }
 }
 
 // Breadcrumbs
 #navbar-admin + #breadcrumbs{
-  margin-top: 35px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
+  top: 35px;
+ @include media-breakpoint-down(md){ top: 35px; }
 }
 #navbar + #breadcrumbs{
-  margin-top: 50px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
+  top: 50px;
+ @include media-breakpoint-down(md){ top: 35px; }
 }
 #navbar + #navbar-admin + #breadcrumbs{
-  margin-top: 85px;
- @include media-breakpoint-down(md){ margin-top: 70px; }
+  top: 85px;
+ @include media-breakpoint-down(md){ top: 70px; }
 }
 
 
@@ -422,26 +426,26 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 
 #navbar + .container-fluid,
 #navbar + .container{
-  @include media-breakpoint-up(md){  margin-top: 70px;}
-  @include media-breakpoint-down(md){  margin-top: 50px;}
+  @include media-breakpoint-up(md){  top: 70px;}
+  @include media-breakpoint-down(md){  top: 50px;}
 }
 
 #navbar + #breadcrumbs + .container-fluid,
 #navbar + #breadcrumbs + .container{
-  @include media-breakpoint-up(md){  margin-top: 100px;}
-  @include media-breakpoint-down(md){  margin-top: 80px;}
+  @include media-breakpoint-up(md){  top: 100px;}
+  @include media-breakpoint-down(md){  top: 80px;}
 }
 
 #navbar + #navbar-admin + .container-fluid,
 #navbar + #navbar-admin + .container{
-  @include media-breakpoint-up(md){  margin-top: 105px;}
-  @include media-breakpoint-down(md){  margin-top: 85px;}
+  @include media-breakpoint-up(md){  top: 105px;}
+  @include media-breakpoint-down(md){  top: 85px;}
 }
 
 #navbar + #navbar-admin + #breadcrumbs + .container-fluid,
 #navbar + #navbar-admin + #breadcrumbs + .container{
-  @include media-breakpoint-up(md){  margin-top: 135px;}
-  @include media-breakpoint-down(md){  margin-top: 115px;}
+  @include media-breakpoint-up(md){  top: 135px;}
+  @include media-breakpoint-down(md){  top: 115px;}
 }
 
 

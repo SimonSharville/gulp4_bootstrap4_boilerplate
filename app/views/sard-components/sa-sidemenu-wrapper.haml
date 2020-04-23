@@ -14,31 +14,46 @@
       .wrapper-content
         .container-fluid
           .row
-            .col-sm-24.border
+            .col-sm-24
               %h1 Sard Side Menu - Wrapper
-
-              %p.lead
-                This layout is built using a sidemenu wrapper. 
-              %p
-                To build this layout, items need to be in this order: 
-              %p
-                %code .sidemenu-wrapper
-                %br/
-                %code &nbsp; .sidemenu
-                %br/
-                %code &nbsp; &nbsp; .wrapper-content
-                %br/
-                %code &nbsp; &nbsp; &nbsp; &nbsp; .container-fluid
+              .card.card-sard
+                .card-body
+                  %p.lead
+                    This layout is built using a sidemenu wrapper. 
+                  %p
+                    To build this layout, items need to be in this order: 
+                  %p
+                    %code .sidemenu-wrapper
+                    %br/
+                    %code &nbsp; .sidemenu
+                    %br/
+                    %code &nbsp; .wrapper-content
+                    %br/
+                    %code &nbsp; &nbsp; .container-fluid
         .container-fluid
           .row
-            .col-sm-24.border
-              %p
-                You cannot use 
-                %code .container
-                with this layout, but you can have multiple 
-                %code .container-fluids
-                within it.
-
+            .col-sm-24
+              .card.card-sard
+                .card-body
+                  %p
+                    You cannot use 
+                    %code .container
+                    with this layout, but you can have multiple 
+                    %code .container-fluids
+                    within it.
+        .container-fluid
+          .row
+            .col-sm-24
+              .card.card-sard
+                .card-header
+                  Options Tabs
+                .card-body
+                  %p
+                    If you wish to add any of the 
+                    %strong Options Tabs 
+                    that you see on the right hand side, you should add the class 
+                    %code .plus-option-tab
+                    to the body tag. This will add a little extra padding to the right of the container, so that the tabs don't overlap the content.
 
     //=include ../navbars/_options-tab.haml
     //=include ../navbars/_rag-tab-x1.haml

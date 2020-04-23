@@ -10,23 +10,23 @@ body { -ms-overflow-style: scrollbar; }
 
 // Posistioning =================================
 #navbar + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 50px;}
-  @include media-breakpoint-down(md){  margin-top: 35px;}
+  @include media-breakpoint-up(md){  top: 50px;}
+  @include media-breakpoint-down(md){  top: 35px;}
 }
 
 #navbar + #breadcrumbs + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 80px;}
-  @include media-breakpoint-down(md){  margin-top: 65px;}
+  @include media-breakpoint-up(md){  top: 79px;}
+  @include media-breakpoint-down(md){  top: 64px;}
 }
 
 #navbar + #navbar-admin + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 85px;}
-  @include media-breakpoint-down(md){  margin-top: 70px;}
+  @include media-breakpoint-up(md){  top: 85px;}
+  @include media-breakpoint-down(md){  top: 70px;}
 }
 
 #navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 115px;}
-  @include media-breakpoint-down(md){  margin-top: 100px;}
+  @include media-breakpoint-up(md){  top: 114px;}
+  @include media-breakpoint-down(md){  top: 99px;}
 }
 
 // New sidemenu Plus Containers
@@ -57,30 +57,33 @@ body { -ms-overflow-style: scrollbar; }
 
 // Position & Width of containers when pushed ---
 
-#navbar + .sa-sidemenu ~ .container-fluid,
-#navbar + .sa-sidemenu ~ .container{
+.sa-sidemenu ~ .container-fluid,
+.sa-sidemenu ~ .container{
   @include off-canvas-transmission;
 }
 
-#navbar + .sa-sidemenu ~ .container-fluid{
+.sa-sidemenu ~ .container-fluid{
   padding-left: 70px;
   @include media-breakpoint-down(md){
     padding-left: 60px;
   }
+  @include media-breakpoint-down(sm){
+    padding-left: 50px;
+  }
 }
 
 @media only screen and (min-width: 1200px){
-  #navbar + .sa-sidemenu.open ~ .container-fluid{
+  .sa-sidemenu.open ~ .container-fluid{
     padding-left: 230px;
   }
 
-  #navbar + .sa-sidemenu.open ~ .container{
+  .sa-sidemenu.open ~ .container{
     padding-left: 150px;
   }
 }
 
 @include media-breakpoint-down(sm){
-  #navbar + .sa-sidemenu ~ .container{
+  .sa-sidemenu ~ .container{
     padding-left: 36px;
   }
 }

@@ -8,8 +8,8 @@
  
   %body.theme-trust.plus-option-tab
     //=include ../navbars/_navbar-x1.haml
-    -# //=include ../navbars/_navbar-admin.haml
-    -# #breadcrumbs.fixed-top
+    //=include ../navbars/_navbar-admin.haml
+    -# #breadcrumbs
     -#   .container-fluid
     -#     %nav{"aria-label" => "breadcrumb"}
     -#       %ol.breadcrumb
@@ -22,30 +22,49 @@
     //=include ../navbars/_sidemenu.haml
     .container-fluid
       .row
-        .col-sm-24.border
-          %h1 Sard Side Menu - New
-
-          %p.lead
-            On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left. 
-          %p.lead
-            On screen sizes less than 1200px, the sidemenu slides over the content.
-          %p
-            To build this correctly, the 
-            %code .sa-sidemenu
-            must be followed directly by either a 
-            %code .container-fluid 
-            or a 
-            %code .container
-            \. that contains the main contents of the site.
+        .col-sm-24
+          %h1 Sard Side Menu
+          .card.card-sard
+            .card-body
+              %p.lead
+                On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left. 
+              %p.lead
+                On screen sizes less than 1200px, the sidemenu slides over the content.
+              %p
+                To build this correctly, the 
+                %code .sa-sidemenu
+                must be followed directly by either a 
+                %code .container-fluid 
+                or a 
+                %code .container
+                \. that contains the main contents of the site.
       
     .container-fluid
       .row
-        .col-sm-24.border
-          You can have multiple containers one after the other...
+        .col-sm-24
+          .card.card-sard
+            .card-body
+              You can have multiple containers one after the other...
     .container-fluid
       .row
-        .col-sm-24.border
-          \...if you wish
+        .col-sm-24
+          .card.card-sard
+            .card-body
+              \...if you wish
+            
+    .container-fluid
+      .row
+        .col-sm-24
+          .card.card-sard
+            .card-header
+              Options Tabs
+            .card-body
+              %p
+                If you wish to add any of the 
+                %strong Options Tabs 
+                that you see on the right hand side, you should add the class 
+                %code .plus-option-tab
+                to the body tag. This will add a little extra padding to the right of the container, so that the tabs don't overlap the content.
 
 
 

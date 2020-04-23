@@ -22,38 +22,44 @@
     //=include ../navbars/_sidemenu-light.haml
     .container-fluid
       .row
-        .col-sm-24.border
-          %h1 Sard Side Menu - Light
-          %h4 This is identical to the default sidemenu but with a light colouring
-          %p
-            Simply add 
-            %code .sidemenu-light
-            to
-            %code .sa-sidemenu
+        %h1 Sard Side Menu - Light
+        .col-sm-24
+          .card.card-sard
+            .card-body
+              %h4 This is identical to the default sidemenu but with a light colouring
+              %p
+                Simply add 
+                %code .sidemenu-light
+                to
+                %code .sa-sidemenu
 
-          %hr/
-          
-          %p.lead
-            On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left. 
-          %p.lead
-            On screen sizes less than 1200px, the sidemenu slides over the content.
-          %p
-            To build this correctly, the 
-            %code .sa-sidemenu.sidemenu-light
-            must be followed directly by either a 
-            %code .container-fluid 
-            or a 
-            %code .container
-            \. that contains the main contents of the site.
+              %hr/
+              
+              %p.lead
+                On screen sizes larger than 1200px, the Sard sidemenu pushes out from the left. 
+              %p.lead
+                On screen sizes less than 1200px, the sidemenu slides over the content.
+              %p
+                To build this correctly, the 
+                %code .sa-sidemenu.sidemenu-light
+                must be followed directly by either a 
+                %code .container-fluid 
+                or a 
+                %code .container
+                \. that contains the main contents of the site.
       
     .container-fluid
       .row
-        .col-sm-24.border
-          You can have multiple containers one after the other...
+        .col-sm-24
+          .card.card-sard
+            .card-body
+              You can have multiple containers one after the other...
     .container-fluid
       .row
-        .col-sm-24.border
-          \...if you wish
+        .col-sm-24
+          .card.card-sard
+            .card-body
+              \...if you wish
 
 
 
