@@ -426,12 +426,18 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 
 #navbar + .container-fluid,
 #navbar + .container{
+<<<<<<< HEAD
   @include media-breakpoint-up(md){  top: 70px;}
   @include media-breakpoint-down(md){  top: 50px;}
+=======
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
+>>>>>>> 83b37e43c0ced72dc37f5730354e385543973c01
 }
 
 #navbar + #breadcrumbs + .container-fluid,
 #navbar + #breadcrumbs + .container{
+<<<<<<< HEAD
   @include media-breakpoint-up(md){  top: 100px;}
   @include media-breakpoint-down(md){  top: 80px;}
 }
@@ -447,6 +453,73 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
   @include media-breakpoint-up(md){  top: 135px;}
   @include media-breakpoint-down(md){  top: 115px;}
 }
+
+
+=======
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
+}
+
+#navbar + #navbar-admin + .container-fluid,
+#navbar + #navbar-admin + .container{
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .container-fluid,
+#navbar + #navbar-admin + #breadcrumbs + .container{
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
+}
+
+// New sidemenu
+
+#navbar + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 50px;}
+  @include media-breakpoint-down(md){  margin-top: 35px;}
+}
+
+#navbar + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 80px;}
+  @include media-breakpoint-down(md){  margin-top: 65px;}
+}
+
+#navbar + #navbar-admin + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 85px;}
+  @include media-breakpoint-down(md){  margin-top: 70px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu{
+  @include media-breakpoint-up(md){  margin-top: 115px;}
+  @include media-breakpoint-down(md){  margin-top: 100px;}
+}
+
+// New sidemenu Plus Containers
+
+#navbar + .sa-sidemenu + .container-fluid,
+#navbar + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
+}
+
+#navbar + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
+}
+
+#navbar + #navbar-admin + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container-fluid,
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu + .container{
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
+}
+>>>>>>> 83b37e43c0ced72dc37f5730354e385543973c01
 
 
 

@@ -1,0 +1,53 @@
+.sa-sidemenu.sidemenu-light
+  .menu-top
+    .open-icon
+    -# .brand-area
+    -#   = image_tag asset_path('logos/SARD_logo_col_wht.png'), class: 'img-fluid', alt: 'Logo'
+  .menu-list
+    / Include your navigation here
+    %a.menu-link{:href => "#/"} 
+      %i.si.si-arrow-right-circle
+      %span.link-text A very long, I mean really, really, really long link title 
+      
+    %a.menu-link{:href => "#/"} 
+      %i.si.si-arrow-right-circle
+      %span.link-text A Link  
+    
+    %hr/  
+
+    %a.menu-link.active{:href => "#/"} 
+      %i.si.si-arrow-right-circle
+      %span.link-text A Link
+
+    %a.menu-link{:href => "#/"} 
+      %span.link-text link, No Icon 
+
+    %hr/
+
+    .sub-title Sub-title
+
+    %a.menu-link{:href => "#/"} 
+      %i.si.si-arrow-right-circle
+      %span.link-text A Link
+
+    %hr/
+
+    .sub-title Dropdown Menu
+    
+    %ul
+      %li.dropdown
+        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          Dropdown
+        .dropdown-menu{"aria-labelledby" => "sardUI"}
+          %a.dropdown-item{:href => "#/"} .dropdown-item
+          %a.dropdown-item{:href => "#/"} .dropdown-item
+          %a.dropdown-item{:href => "#/"} .dropdown-item
+          %a.dropdown-item.active{:href => "#/"} .dropdown-item.active
+
+    %hr/
+
+    .sub-title Sub-title
+
+    %a.menu-link{:href => "#/"} 
+      %i.si.si-arrow-right-circle
+      %span.link-text A Link
