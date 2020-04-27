@@ -51,7 +51,54 @@
           .card.card-sard
             .card-body
               \...if you wish
-            
+
+    .container-fluid
+      .row
+        .col-sm-24
+          .card.card-sard
+            .card-header
+              How to build a toggle section
+            .card-body
+              %p
+                Organise the code like this. CAPS are changable.
+              %p
+                %code .menu-section.section-UNIQUE-SECTION-TITLE
+                %br/
+                %code &nbsp; %a.menu-section-heading{"aria-controls" => "UNIQUE-SECTION-TITLE", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#UNIQUE-SECTION-TITLE", :role => "button"}
+                %br/
+                %code &nbsp; &nbsp; %i.si.si-NAME
+                %br/
+                %code &nbsp; &nbsp; .item SECTION-TITLE
+                %br/
+                %code &nbsp; %ul#UNIQUE-SECTION-TITLE.sub-menu.collapse
+                %br/
+                %code &nbsp; &nbsp; %li.sub-menu--item
+                %br/
+                %code &nbsp; &nbsp; &nbsp; %a.PAGE-TITLE{:href => "/#"}
+                %br/
+                %code &nbsp; &nbsp; &nbsp; &nbsp; %i.si.si-chevron-right-x1
+                %br/
+                %code &nbsp; &nbsp; &nbsp; &nbsp; .item PAGE-TITLE
+                %br/
+                %code &nbsp; &nbsp; %li.sub-menu--item
+                %br/
+                %code &nbsp; &nbsp; &nbsp; %a.PAGE-TITLE{:href => "/#"}
+                %br/
+                %code &nbsp; &nbsp; &nbsp; &nbsp; %i.si.si-chevron-right-x1
+                %br/
+                %code &nbsp; &nbsp; &nbsp; &nbsp; .item PAGE-TITLE
+
+              %p
+                %strong To have the section open 
+                %br/
+                Add 
+                %code .show 
+                to the UL .sub-menu, and change "aria-expanded" => "false" to 
+                %code true
+                in the %a.menu-section-heading
+
+
+
     .container-fluid
       .row
         .col-sm-24
