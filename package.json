@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/SimonSharville/bootstrap4_boilerplate#readme",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "minimist": "^1.2.5",
+    "npm-check-updates": "^4.1.2"
   },
   "devDependencies": {
     "bootstrap": "^4.4.1",

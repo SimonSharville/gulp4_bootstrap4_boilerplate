@@ -1,51 +1,138 @@
-<div class='sa-sidemenu'>
+<div class='sa-sidemenu open'>
 <div class='menu-top'>
 <div class='open-icon'></div>
 </div>
 <div class='menu-list'>
 <!-- Include your navigation here -->
-<a class='menu-link' href='#/'>
-<i class='si si-arrow-right-circle'></i>
-<span class='link-text'>A very long, I mean really, really, really long link title</span>
-</a>
-<a class='menu-link' href='#/'>
-<i class='si si-arrow-right-circle'></i>
-<span class='link-text'>A Link</span>
-</a>
-<hr>
-<a class='menu-link' href='#/'>
-<i class='si si-arrow-right-circle'></i>
-<span class='link-text'>A Link</span>
-</a>
-<a class='menu-link' href='#/'>
-<span class='link-text'>link, No Icon</span>
-</a>
-<hr>
-<div class='sub-title'>Sub-title</div>
-<a class='menu-link' href='#/'>
-<i class='si si-arrow-right-circle'></i>
-<span class='link-text'>A Link</span>
-</a>
-<hr>
-<div class='sub-title'>Dropdown Menu</div>
-<ul>
-<li class='dropdown'>
-<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-Dropdown
-</a>
-<div aria-labelledby='sardUI' class='dropdown-menu'>
-<a class='dropdown-item' href='#/'>.dropdown-item</a>
-<a class='dropdown-item' href='#/'>.dropdown-item</a>
-<a class='dropdown-item' href='#/'>.dropdown-item</a>
-<a class='dropdown-item active' href='#/'>.dropdown-item.active</a>
+<div class='menu-section section-01'>
+<div class='menu-section-heading'>
+<div class='item'>Section Heading</div>
 </div>
+<ul class='sub-menu'>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<div class='item'>Link Without Icon</div>
+</a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<div class='item'>Link Without Icon</div>
+</a>
 </li>
 </ul>
-<hr>
-<div class='sub-title'>Sub-title</div>
-<a class='menu-link' href='#/'>
-<i class='si si-arrow-right-circle'></i>
-<span class='link-text'>A Link</span>
+</div>
+<div class='menu-section section-02'>
+<div class='menu-section-heading'>
+<i class='si si-user-circle-o'></i>
+<div class='item'>Section Heading + Icon</div>
+</div>
+<ul class='sub-menu'>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
 </a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>
+You can add a
+<code>%hr</code>
+between links if you wish
+</div>
+</a>
+</li>
+<hr>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<div class='spacer'></div>
+<div class='item'>
+You can also add a
+<code>.spacer</code>
+instead of an icon to align the text
+</div>
+</a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<div class='spacer'></div>
+<div class='item'>Link With spacer</div>
+</a>
+</li>
+</ul>
+</div>
+<div class='menu-section section-03'>
+<a aria-controls='collapse-section-03' aria-expanded='false' class='menu-section-heading' data-toggle='collapse' href='#collapse-section-03' role='button'>
+<i class='si si-user-circle-o'></i>
+<div class='item'>Toggle Section</div>
+</a>
+<ul class='sub-menu collapse' id='collapse-section-03'>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
+</a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
+</a>
+</li>
+</ul>
+</div>
+<div class='menu-section section-04'>
+<a aria-controls='collapse-section-04' aria-expanded='true' class='menu-section-heading' data-toggle='collapse' href='#collapse-section-04' role='button'>
+<i class='si si-user-circle-o'></i>
+<div class='item'>Toggle Section Show</div>
+</a>
+<ul class='sub-menu collapse show' id='collapse-section-04'>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
+</a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
+</a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products active' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Active page</div>
+</a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
+</a>
+</li>
+</ul>
+</div>
+<div class='menu-section section-05'>
+<a aria-controls='collapse-section-05' aria-expanded='false' class='menu-section-heading' data-toggle='collapse' href='#collapse-section-05' role='button'>
+<i class='si si-user-circle-o'></i>
+<div class='item'>Toggle Section</div>
+</a>
+<ul class='sub-menu collapse' id='collapse-section-05'>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
+</a>
+</li>
+<li class='sub-menu--item'>
+<a class='sard-products' href='/#'>
+<i class='si si-chevron-right-x1'></i>
+<div class='item'>Link With Icon</div>
+</a>
+</li>
+</ul>
+</div>
 </div>
 </div>
