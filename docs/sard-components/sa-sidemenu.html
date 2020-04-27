@@ -910,6 +910,58 @@ You can have multiple containers one after the other...
 <div class='col-sm-24'>
 <div class='card card-sard'>
 <div class='card-header'>
+How to build a toggle section
+</div>
+<div class='card-body'>
+<p>
+Organise the code like this. CAPS are changable.
+</p>
+<p>
+<code>.menu-section.section-UNIQUE-SECTION-TITLE</code>
+<br>
+<code>&nbsp; %a.menu-section-heading{"aria-controls" => "UNIQUE-SECTION-TITLE", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#UNIQUE-SECTION-TITLE", :role => "button"}</code>
+<br>
+<code>&nbsp; &nbsp; %i.si.si-NAME</code>
+<br>
+<code>&nbsp; &nbsp; .item SECTION-TITLE</code>
+<br>
+<code>&nbsp; %ul#UNIQUE-SECTION-TITLE.sub-menu.collapse</code>
+<br>
+<code>&nbsp; &nbsp; %li.sub-menu--item</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; %a.PAGE-TITLE{:href => "/#"}</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; %i.si.si-chevron-right-x1</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; .item PAGE-TITLE</code>
+<br>
+<code>&nbsp; &nbsp; %li.sub-menu--item</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; %a.PAGE-TITLE{:href => "/#"}</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; %i.si.si-chevron-right-x1</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; .item PAGE-TITLE</code>
+</p>
+<p>
+<strong>To have the section open</strong>
+<br>
+Add
+<code>.show</code>
+to the UL .sub-menu, and change "aria-expanded" => "false" to
+<code>true</code>
+in the %a.menu-section-heading
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-24'>
+<div class='card card-sard'>
+<div class='card-header'>
 Options Tabs
 </div>
 <div class='card-body'>
