@@ -19345,13 +19345,6 @@ a.list-group-item-action.active:active {
 /* change the background color */
 .navbar {
   padding: 0rem 1rem;
-  height: 50px;
-}
-
-@media (max-width: 991.98px) {
-  .navbar {
-    height: 35px;
-  }
 }
 
 /* change the padding for height */
