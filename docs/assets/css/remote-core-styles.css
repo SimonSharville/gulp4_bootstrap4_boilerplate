@@ -21984,7 +21984,6 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
   height: 35px;
   display: table;
   width: 100%;
-  z-index: 3001;
 }
 
 #navbar-admin.navbar .navbar-toggler {
