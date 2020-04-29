@@ -4,9 +4,33 @@
 //#160757827 scroll bar covers sa-sidemenu menu on IE
 body { -ms-overflow-style: scrollbar; }
 
+
+$transition-time:   320ms;  
+
 @mixin off-canvas-transmission {
-  transition: all 320ms ease!important;
+  transition: all $transition-time ease!important;
 }
+
+@mixin off-canvas-visible {
+  opacity: 1;
+  visibility: visible;
+  @include transition(
+      opacity $transition-time linear,
+      visibility $transition-time linear 
+    )
+}
+
+@mixin off-canvas-invisible {
+  opacity: 0;
+  visibility: hidden;
+  @include transition(
+      opacity $transition-time linear,
+      visibility $transition-time linear 
+    )
+}
+
+
+
 
 // Posistioning =================================
 #navbar + .sa-sidemenu{
@@ -55,41 +79,6 @@ body { -ms-overflow-style: scrollbar; }
   @include media-breakpoint-down(md){  margin-top: 115px;}
 }
 
-// Position & Width of containers when pushed ---
-
-.sa-sidemenu ~ .container-fluid,
-.sa-sidemenu ~ .container{
-  @include off-canvas-transmission;
-}
-
-.sa-sidemenu ~ .container-fluid{
-  padding-left: 70px;
-  @include media-breakpoint-down(md){
-    padding-left: 60px;
-  }
-  @include media-breakpoint-down(sm){
-    padding-left: 50px;
-  }
-}
-
-@media only screen and (min-width: 1200px){
-  .sa-sidemenu.open ~ .container-fluid{
-    padding-left: 230px;
-  }
-
-  .sa-sidemenu.open ~ .container{
-    padding-left: 150px;
-  }
-}
-
-@include media-breakpoint-down(sm){
-  .sa-sidemenu ~ .container{
-    padding-left: 36px;
-  }
-}
-
-
-
 
 
 
@@ -102,16 +91,14 @@ body { -ms-overflow-style: scrollbar; }
   height: calc(100% - 80px);
   padding-bottom: 50px;
   top: 0;
-  width: 40px;
-  @include off-canvas-transmission;
+  // @include off-canvas-transmission;
   @include media-breakpoint-down(md){
     height: calc(100% - 65px);
-    width: 30px;
     padding-bottom: 40px;
   }
 }
 
-.sa-sidemenu{ 
+.sa-sidemenu{
   .menu-top{
     position: relative;
     top: 0px;
@@ -143,14 +130,93 @@ body { -ms-overflow-style: scrollbar; }
     margin-top: 5px;
     overflow-y: auto;
     overflow-x: hidden;
-    height:calc(100% - 10px);
+  }
+}
+
+// Height of Menu-List depending on Navbars & Breadcrumbs etc.
+#navbar + .sa-sidemenu .menu-list{
+  height:calc(100% - 10px);
+}
+
+#navbar + #breadcrumbs + .sa-sidemenu .menu-list{
+  height:calc(100% - 40px);
+}
+
+#navbar + #navbar-admin + .sa-sidemenu .menu-list{
+  height:calc(100% - 45px);
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu .menu-list{
+  height:calc(100% - 70px);
+}
+
+// ==============================================
+// Widths and container positions at various states
+// Closed state --------------
+.sa-sidemenu.closed, .sa-sidemenu:not(.open){
+  @include off-canvas-transmission;
+  width: 40px;
+  @include media-breakpoint-down(md){
+    width: 30px;
   }
 }
 
 // Open state ---------------
-.sa-sidemenu.open{
+.sa-sidemenu.open, .sa-sidemenu:not(.closed){
   @include off-canvas-transmission;
   width: 200px;
+}
+
+
+// Position & Width of containers when pushed ---
+
+.sa-sidemenu ~ .container-fluid,
+.sa-sidemenu ~ .container{
+  // @include off-canvas-transmission;
+}
+// Closed
+.sa-sidemenu.closed ~ .container-fluid,
+.sa-sidemenu:not(.open) ~ .container-fluid{
+  @include off-canvas-transmission;
+  padding-left: 70px;
+  @include media-breakpoint-down(md){
+    padding-left: 60px;
+  }
+  @include media-breakpoint-down(sm){
+    padding-left: 50px;
+  }
+}
+
+// Open
+.sa-sidemenu.open ~ .container-fluid,
+.sa-sidemenu:not(.closed) ~ .container-fluid{
+  @media only screen and (min-width: 1200px){
+    @include off-canvas-transmission;
+    padding-left: 230px;
+  }
+  @include media-breakpoint-down(lg){
+    padding-left: 70px;
+  }
+  @include media-breakpoint-down(md){
+    padding-left: 60px;
+  }
+  @include media-breakpoint-down(sm){
+    padding-left: 50px;
+  }
+}
+
+.sa-sidemenu.open ~ .container,
+.sa-sidemenu:not(.closed) ~ .container{
+    @media only screen and (min-width: 1200px){
+    padding-left: 150px;
+  }
+}
+
+.sa-sidemenu ~ .container,
+.sa-sidemenu:not(.open) ~ .container{
+    @include media-breakpoint-down(sm){
+    padding-left: 36px;
+  }
 }
 
 
@@ -160,6 +226,9 @@ $sidemenu-bg:   $sa-grey-16;
 .sa-sidemenu{
   background: $sidemenu-bg;
   color: white;
+  -webkit-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
+  box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
 }
 
 .sa-sidemenu .menu-top{
@@ -168,7 +237,7 @@ $sidemenu-bg:   $sa-grey-16;
 
 .sa-sidemenu .open-icon::before{
   color:$user-primary-colour;
-  font-family: "sard-icons"; 
+  font-family: "sard-icons";
   content: "\e015";
   font-size: 1.5em;
   position: absolute;
@@ -179,16 +248,19 @@ $sidemenu-bg:   $sa-grey-16;
     font-size: 1.3em;
     top: 1px;
     left: 5px;
+    @include respond-to(ie11) {  // ie11
+      font-size: 20px;
+    }
   }
 }
 .sa-sidemenu.open .open-icon::before{
-  -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+ 
-  -ms-transform: rotate(180deg);  // IE 9 
+  -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+
+  -ms-transform: rotate(180deg);  // IE 9
   transform: rotate(180deg);
 }
 
 
-// Sidemenu contents ============================ 
+// Sidemenu contents ============================
 
 .sa-sidemenu .menu-list li:before{ // Removes Bullets
   content: none;
@@ -208,13 +280,14 @@ $sidemenu-bg:   $sa-grey-16;
       @include roboto-bold;
       padding: 10px 8px 6px 8px;
       display: flex;
+      min-width: 200px; // Stops the jiggling of the text during the opening
       color: white;
       i{
         top: -3px;
         margin-right: 6px;
         font-size: 1.5rem;
-      }  
-        
+      }
+
       i:before{
         @include media-breakpoint-down(md){
           font-size: 1.3rem;
@@ -235,6 +308,7 @@ $sidemenu-bg:   $sa-grey-16;
 
       li.sub-menu--item a{
         display: flex;
+        min-width: 200px; // Stops the jiggling of the text during the opening
         font-size: 1rem;
         line-height: 1.2rem;
         padding: 6px 20px 6px 8px;
@@ -242,7 +316,7 @@ $sidemenu-bg:   $sa-grey-16;
         &:visited{
           background: $sidemenu-bg;
         }
-        &:active, 
+        &:active,
         &:focus,
         &:hover{
           background: darken($sidemenu-bg, 10%);
@@ -260,7 +334,7 @@ $sidemenu-bg:   $sa-grey-16;
       li.sub-menu--item a.selected{
         position: relative;
         background: $user-primary-colour;
-        i { 
+        i {
           color: white;
         }
         &:after{
@@ -271,13 +345,12 @@ $sidemenu-bg:   $sa-grey-16;
           border-color:transparent transparent transparent white;
           top: calc(50% - 16px);
           right: 0px;
-          -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+ 
-          -ms-transform: rotate(180deg);  // IE 9 
+          -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+
+          -ms-transform: rotate(180deg);  // IE 9
           transform: rotate(180deg);
         }
       }
     }
-
 
     li.sub-menu--item a i{
       min-width: 1.2em;
@@ -297,35 +370,20 @@ $sidemenu-bg:   $sa-grey-16;
       border-color: $sa-grey-12;
     }
 
-    .spacer{ 
+    .spacer{
       min-width: 1.2em;
-      margin-right: 10px; 
-    }
-
-  }
-}
-
-// Closed -------------------
-.sa-sidemenu.closed{
-  .menu-section-heading .item{ display: none; }
-  
-  .menu-list{
-    li.sub-menu--item a .item{ display: none; }
-  }
-
-  ul.sub-menu li.sub-menu--item a.active,
-  ul.sub-menu li.sub-menu--item a.selected{
-    i { 
-      color: transparent;
+      margin-right: 10px;
     }
   }
 }
+
+
 
 // --------------------------
 // Toggle Sections ----------
 .sa-sidemenu{
-  .menu-section{ 
-    a.menu-section-heading{ 
+  .menu-section{
+    a.menu-section-heading{
       position: relative;
       padding-right: 32px;
     }
@@ -333,9 +391,8 @@ $sidemenu-bg:   $sa-grey-16;
     a.menu-section-heading[aria-expanded="true"] {
       background: lighten($sidemenu-bg, 10%);
       &:after{
-        @include off-canvas-transmission;
         color:$user-primary-colour;
-        font-family: "sard-icons"; 
+        font-family: "sard-icons";
         content: "\e0d1";
         font-size: 1.5em;
         position: absolute;
@@ -343,14 +400,13 @@ $sidemenu-bg:   $sa-grey-16;
         right: 8px;
       }
     }
-    a.menu-section-heading[aria-expanded="false"] {  
+    a.menu-section-heading[aria-expanded="false"] {
       &:after{
-        @include off-canvas-transmission;
-        -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+ 
-        -ms-transform: rotate(180deg);  // IE 9 
+        -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+
+        -ms-transform: rotate(180deg);  // IE 9
         transform: rotate(180deg);
         color:$user-primary-colour;
-        font-family: "sard-icons"; 
+        font-family: "sard-icons";
         content: "\e0d1";
         font-size: 1.5em;
         position: absolute;
@@ -366,11 +422,39 @@ $sidemenu-bg:   $sa-grey-16;
   }
 }
 
-.sa-sidemenu.closed{ // Hide the toggle arrow when closed
-  a.menu-section-heading:after{ display: none; }
+
+
+// ==============================================
+// Visibility ===================================
+// Closed -------------------
+.sa-sidemenu.closed{
+  .menu-section-heading .item{
+    @include off-canvas-invisible;
+  }
+  .menu-section-heading:after{ 
+    @include off-canvas-invisible;
+  }
+
+  li.sub-menu--item a {
+  }
+  li.sub-menu--item a .item{
+    @include off-canvas-invisible;
+  }
 }
-
-
+// Open ---------------------
+.sa-sidemenu.open{
+  .menu-section-heading .item{
+    @include off-canvas-visible;
+  }
+  .menu-section-heading:after{ 
+    @include off-canvas-visible;
+  }
+  li.sub-menu--item a {
+  }
+  li.sub-menu--item a .item{
+    @include off-canvas-visible;
+  }
+}
 
 
 // ==============================================
@@ -392,7 +476,7 @@ $sidemenu-light-bg:   $sa-grey-02;
     .menu-section-heading{
       color: $text;
     }
-  
+
     ul.sub-menu{
       @include roboto-regular;  // Differs from default version
 
@@ -401,7 +485,7 @@ $sidemenu-light-bg:   $sa-grey-02;
         &:visited{
           background: $sidemenu-light-bg;
         }
-        &:active, 
+        &:active,
         &:focus,
         &:hover{
           background: darken($sidemenu-light-bg, 10%);
@@ -423,11 +507,10 @@ $sidemenu-light-bg:   $sa-grey-02;
 
 // Toggle Sections ----------
 .sa-sidemenu.sidemenu-light{
-  .menu-section{ 
+  .menu-section{
     a.menu-section-heading[aria-expanded="true"] {
       background: darken($sidemenu-light-bg, 10%);
       &:after{
-        @include off-canvas-transmission;
         color:$user-primary-colour;
       }
     }
@@ -450,7 +533,7 @@ $sidemenu-light-bg:   $sa-grey-02;
         &:visited{
           background: darken($sidemenu-light-bg, 10%);
         }
-        &:active, 
+        &:active,
         &:focus,
         &:hover{
           background: darken($sidemenu-light-bg, 20%);
@@ -466,5 +549,3 @@ $sidemenu-light-bg:   $sa-grey-02;
     }
   }
 }
-
-
