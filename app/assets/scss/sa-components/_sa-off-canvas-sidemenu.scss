@@ -428,6 +428,10 @@ $sidemenu-bg:   $sa-grey-16;
 // Visibility ===================================
 // Closed -------------------
 .sa-sidemenu.closed{
+  .menu-list{  overflow-y: hidden; }
+
+  ul.sub-menu{ display: none; }
+  
   .menu-section-heading .item{
     @include off-canvas-invisible;
   }
