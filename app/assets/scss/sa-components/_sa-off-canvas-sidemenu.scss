@@ -229,10 +229,12 @@ $sidemenu-bg:   $sa-grey-16;
   -webkit-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
   -moz-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
   box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
+  cursor: pointer ;
 }
 
 .sa-sidemenu .menu-top{
   background: $sa-grey-18;
+  cursor: pointer ;
 }
 
 .sa-sidemenu .open-icon::before{
@@ -428,6 +430,12 @@ $sidemenu-bg:   $sa-grey-16;
 // Visibility ===================================
 // Closed -------------------
 .sa-sidemenu.closed{
+  .menu-list{  overflow-y: hidden; }
+
+  ul.sub-menu{ display: none; }
+
+  .menu-section-heading{ cursor: default; }
+  
   .menu-section-heading .item{
     @include off-canvas-invisible;
   }
