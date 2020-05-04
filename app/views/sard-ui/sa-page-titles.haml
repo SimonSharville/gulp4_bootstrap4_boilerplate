@@ -13,91 +13,74 @@
       .row
         .col-sm-24
           %h1 Page Titles
+          %p
+            Build structure 
+            %br/
+            %code .page-title-wrapper
+            %span.text-client (Important)
+            %br/
+            %code &nbsp;.page-title-photo
+            %br/
+            %code &nbsp;.page-title
+            %span.text-client (Important)
+            %br/
+            %code &nbsp;&nbsp;.page-links
+            %br/
+            %code &nbsp;&nbsp;.name
+            %br/
+            %code &nbsp;&nbsp;.page
+            %br/
+            %code &nbsp;&nbsp;.description
+            or 
+            %code .subtitle
+            %br/
+            %code &nbsp;.page-title-actions
+            %span.text-client (Add if you want Actions like buttons or form elements)
+            %span (Can be added below .page-title-wrapper)
+            %br/
+            &nbsp;&nbsp;&nbsp;&nbsp; Add actions like 
+            %code .btn-pt-new
+            or search and filters
+            %br/
+            %code &nbsp;.page-state
+            %span.text-client (Add if you want Page State)
+            %br/
+            %code &nbsp;&nbsp;.current-state.state
+            %br/
+            %code &nbsp;&nbsp;&nbsp;.state
+            Draft
+            %span.text-client (or whatever)
+
           %p.lead
             Below are some variations on page titles.
 
-      %hr.mb-4
-      .row
-        .col-sm-24
-          .page-title
-            .name Mrs Bella Owen
-            .page Portfolio Jun 2019
-            .subtitle Subtitle
-        .col-sm-24
-          %h6.base Default Page Title
-          %p
-            This is constructed as follows:
-            %br/
-            %code .page-title
-            %br/
-            %code &nbsp; .name
-            %span Name
-            %br/
-            %code &nbsp; .page
-            %span Page
-            %br/
-            %code &nbsp; .subtitle
-            %span Subtitle
-          %p.note 
-            %span.bold Note 
-            If you wish to wrap any part of the page title in a headline tag (h1), it should make no differnece to the styling (see variations below).
-            
-      %hr.mb-4
-      .row
-        .col-sm-24
-          .page-title
-            %h1
-              .page 
-                eDocuments for 
-                %span.bold Mrs Bella Owen
-        .col-sm-24
-          %h6.base Default Page Title in single line
-          %p
-            This is constructed as follows:
-            %br/
-            %code .page-title
-            %br/
-            %code &nbsp; %h1
-            %br/
-            %code &nbsp; &nbsp; .page
-            %br/
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Page
-            %br/
-            %code &nbsp; &nbsp; &nbsp; .bold
-            %span Name
+      %hr.mb-4.mt-4.mt-4
 
-
-      %hr.mb-4
       .row
         .col-sm-24
-          .page-title-with-image
-            .page-title-photo
-              %img{:alt => "User icon", :src => "../assets/images/big-bird.jpg"}/
+          .page-title-wrapper
             .page-title
-              %h3.name
-                Mrs Bella Owen
-              %h1.page
-                Dashboard
-        .col-sm-24
-          %h6.base Page Title with Image
-          %p
-            This is constructed as follows:
-            %br/
-            %code .page-title-with-image
-            %br/
-            %code &nbsp; .page-title-photo
-            %br/
-            %code &nbsp; &nbsp; Image
-            %br/
-            %code &nbsp; .page-title
-            %br/
-            %code &nbsp; &nbsp; %h3.name
-            %span Name
-            %br/
-            %code &nbsp; &nbsp; %h1.page
-            %span Page
+              %h1.page Page
 
-      %hr.mb-4
+      %hr.mb-4.mt-4
+
+      .row
+        .col-sm-24
+          .page-title-wrapper
+            .page-title
+              .page-links
+                %a{:href => "#/"} Page Links
+                %span.slash /
+                %a{:href => "#/"} Mrs Bella Owen MSFs
+              .name
+                Name
+              .page
+                Page
+              .description
+                Page Description or Subtitle
+
+      %hr.mb-4.mt-4
+
       .row
         .col-sm-24
           .page-title-wrapper
@@ -109,53 +92,233 @@
             .page-state
               .current-state.Draft
                 .state Draft
-        .col-sm-24
-          %h6.base Page Title with State
-          %p
-            This is constructed as follows:
-            %br/
-            %code .page-title-wrapper
-            %br/
-            %code &nbsp; .page-title
-            %br/
-            %code &nbsp; &nbsp; .name
-            %span Name
-            %br/
-            %code &nbsp; &nbsp; .page
-            %span Page
-            %br/
-            %code &nbsp; .page-state
-            %br/
-            %code &nbsp; &nbsp; .current-state.Draft (or .draft)
-            %br/
-            %code &nbsp; &nbsp; &nbsp; .state 
-            %span Draft
 
-          %p.note 
-            The .page-title-wrapper uses display flex with justify-content: space-between to sperate the two halves. 
-
-      %hr.mb-4
+      %hr.mb-4.mt-4
       .row
         .col-sm-24
-          .page-title
-            .page-links
-              %a{:href => "#/"} All MSFs
-              %span.slash /
-              %a{:href => "#/"} Mrs Bella Owen MSFs
-            .page
-              MSF Jun 2019 (complete)
-              for
-              %a{:href => "#/"} Mrs Bella Owen  
-            .description
-              Page Description or Subtitle     
-        .col-sm-24
-          %h6.base Page Titles with Links
-          %p The above shows how links look within Page Titles.
+          .page-title-wrapper
+            .page-title-photo
+              %img{:alt => "User icon", :src => "https://pbs.twimg.com/profile_images/1092454153585082368/QNM6C86g_400x400.jpg"}/
+              -# .si.si-user-circle
+            .page-title
+              %h3.name
+                Mrs Bella Owen
+              %h1.page
+                Dashboard
 
-      %hr.mb-4
+      %hr.mb-4.mt-4
       .row
         .col-sm-24
-          %p That will be all for now.
+          .page-title-wrapper
+            .page-title
+              %h1 Shift Swap Shop
+            .page-title-actions
+              %form.simple_form.form-inline{"accept-charset" => "UTF-8", :action => "/shifts/swap_shop", "data-autosubmit" => "true", :method => "get", :novalidate => "novalidate"}
+                .input-group.plus-append
+                  .form-group.select.required._location
+                    %select#location.form-control.select.required{:name => "location"}
+                      %option{:value => "0"} All Sites
+                      %option{:value => "1"} Bethlem
+                      %option{:value => "2"} Croydon
+                      %option{:value => "3"} Southwark
+                      %option{:value => "4"} Lambeth
+                      %option{:value => "5"} Lewisham
+                      %option{:value => "7"} CAMHS
+                  .input-group-append
+                    %a.input-group-text.active{:href => ""} Clear
+                %a.btn.btn-pt-new.new-swap-post{:href => ""}
+
+      %hr.mb-4.mt-4
+      .row
+        .col-sm-24
+          .page-title-wrapper
+            .page-title-photo
+              .si.si-user-circle
+            .page-title
+              %h3.name Name
+              %h1 with Page Title Actions inside
+            .page-title-actions
+              %form.simple_form.form-inline{"accept-charset" => "UTF-8", :action => "/shifts/swap_shop", "data-autosubmit" => "true", :method => "get", :novalidate => "novalidate"}
+                .input-group.plus-append
+                  .form-group.select.required._location
+                    %select#location.form-control.select.required{:name => "location"}
+                      %option{:value => "0"} All Sites
+                      %option{:value => "1"} Bethlem
+                      %option{:value => "2"} Croydon
+                      %option{:value => "3"} Southwark
+                      %option{:value => "4"} Lambeth
+                      %option{:value => "5"} Lewisham
+                      %option{:value => "7"} CAMHS
+                  .input-group-append
+                    %a.input-group-text.active{:href => "/shifts/swap_shop"} Clear
+                .input-group.plus-append
+                  .form-group.string.required._q
+                    %input#q.form-control.string.required{:name => "q", :placeholder => "Search", :type => "text"}/
+                  .input-group-append
+                    %input.btn.btn-search{"data-disable-with" => "Search", :name => "commit", :type => "submit", :value => "Search"}/
+                %a.btn.btn-pt-new.new-item{:href => "/shifts/swap_shop/new"}
+
+      %hr.mb-4.mt-4
+      .row
+        .col-sm-24
+          .page-title-wrapper
+            .page-title
+              %h3.name Name
+              %h1 with Page Title Actions below
+          .page-title-actions
+            %form.simple_form.form-inline{"accept-charset" => "UTF-8", :action => "/super/logs", "data-autosubmit" => "true", :method => "get", :novalidate => "novalidate"}
+              %span.date_range_picker.required._starts_at
+                %script#js-react-on-rails-context{:type => "application/json"}
+                  :cdata
+                    {"railsEnv":"development","inMailer":false,"i18nLocale":"en","i18nDefaultLocale":"en","rorVersion":"11.3.0","rorPro":false,"href":"https://erostering.sardjv.test/super/logs","location":"/super/logs","scheme":"https","host":"erostering.sardjv.test","port":null,"pathname":"/super/logs","search":null,"httpAcceptLanguage":"en-US,en;q=0.9,it;q=0.8,la;q=0.7,de;q=0.6","serverSide":false}
+                %span#DateRangePicker-react-component-2e0089a0-6a73-4378-b705-c4106ff15296.date-range-picker-react
+                  %span
+                    %input.form-control.string.date_range_picker.required.date-range-input{:placeholder => "Select dates", :value => ""}/
+                    %input#starts_at.form-control.string.date_range_picker.required{:name => "starts_at", :readonly => "readonly", :type => "hidden", :value => ""}/
+                    %input#ends_at.form-control.string.date_range_picker.required{:name => "ends_at", :readonly => "readonly", :type => "hidden", :value => ""}/
+                %script.js-react-on-rails-component{"data-component-name" => "DateRangePicker", "data-dom-id" => "DateRangePicker-react-component-2e0089a0-6a73-4378-b705-c4106ff15296", "data-trace" => "true", :type => "application/json"}
+                  :cdata
+                    {"properties":{"classes":"form-control string date_range_picker required","aria_label":null,"placeholder":null},"start_date":{"id":"starts_at","name":"starts_at","value":null},"end_date":{"id":"ends_at","name":"ends_at","value":null}}
+              %span.string.required._q_user_name
+                %input#q_user_name.form-control.string.required{:name => "q_user_name", :placeholder => "User name", :type => "text"}/
+              %span.select.required._item_type
+                %select#item_type.form-control.select.required{:name => "item_type"}
+                  %option{:value => ""} Item type
+                  %option{:value => "Agency"} Agency
+                  %option{:value => "Duty"} Duty
+                  %option{:value => "LeavePeriod"} LeavePeriod
+                  %option{:value => "RosterShift"} RosterShift
+                  %option{:value => "RosterShiftSwap"} RosterShiftSwap
+                  %option{:value => "User"} User
+              %span.string.required._request_id
+                %input#request_id.form-control.string.required{:name => "request_id", :placeholder => "Request ID", :size => "40", :type => "text"}/
+              -# .ml-2
+              %input.btn.btn-primary{"data-disable-with" => "Search", :name => "commit", :type => "submit", :value => "Search"}/
+              -# .ml-2
+              %a.btn.btn-danger.active{:href => "/super/logs"} Clear
+
+
+      %hr.mb-4.mt-4
+      .row
+        .col-sm-24
+          .page-title-wrapper
+            .page-title
+              %h3.name Name
+              %h1 With Filters below
+          .calendar-filters-toggle
+            %form(action="")
+              .toggle-header{"aria-expanded" => "true"} Calendar Filters
+              #filters-toggle.collapse.show
+                .calendar-filters
+                  .filters
+                    %span.select.required._grade
+                      %select#grade.form-control.select.required{:name => "grade"}
+                        %option{:value => ""} All grades
+                        %option{:value => "CT"} CT
+                        %option{:value => "ST"} ST
+                        %option{:value => "GP"} GP
+                    %span.select.required._roster_id
+                      %select#roster_id.form-control.select.required{:name => "roster_id"}
+                        %option{:value => ""} All rosters
+                        %option{:value => "1"} CT - old
+                        %option{:value => "2"} ST
+                        %option{:value => "3"} CT
+                        %option{:value => "4"} ST - CAHMS
+                        %option{:value => "5"} GP Import
+                    %span.select._location_id
+                      %select#location_id.form-control.select.select2-hidden-accessible{"aria-hidden" => "true", "data-select2-id" => "location_id", :name => "location_id", :tabindex => "-1"}
+                        %option{"data-select2-id" => "2", :value => ""} All locations
+                        %option.location-level-0{:value => "1"} Southwark
+                        %option.location-level-1{:value => "2"} Maudsley Hospital
+                        %option.location-level-1{:value => "3"} King's College Hospital
+                        %option.location-level-0{:value => "4"} Croydon
+                        %option.location-level-0{:value => "5"} Bethlem
+                        %option.location-level-0{:value => "6"} Lewisham
+                        %option.location-level-1{:value => "7"} Lewisham Hospital
+                        %option.location-level-0{:value => "8"} Lambeth
+                        %option.location-level-1{:value => "9"} Lambeth Hospital
+                        %option.location-level-1{:value => "10"} St Thomas' Hospital
+                        %option.location-level-0{:value => "11"} CAMHS
+                      %span.select2.select2-container.select2-container--bootstrap{"data-select2-id" => "1", :dir => "ltr", :style => "width: 250px;"}
+                        %span.selection
+                          %span.select2-selection.select2-selection--single{"aria-disabled" => "false", "aria-expanded" => "false", "aria-haspopup" => "true", "aria-labelledby" => "select2-location_id-container", :role => "combobox", :tabindex => "0"}
+                            -# %span#select2-location_id-container.select2-selection__rendered{"aria-readonly" => "true", :role => "textbox", :title => "All locations"} All locations
+                            %span.select2-selection__arrow{:role => "presentation"}
+                              %b{:role => "presentation"}
+                        %span.dropdown-wrapper{"aria-hidden" => "true"}
+                    %span.select.required._duty_id
+                      %select#duty_id.form-control.select.select2-hidden-accessible{"aria-hidden" => "true", "data-select2-id" => "duty_id", :name => "duty_id", :tabindex => "-1"}
+                        %option{"data-select2-id" => "4", :value => ""} All duties
+                        %option.dc-long-night{:value => "1"} Night Bethlem 21:00 - 09:15
+                        %option.dc-day{:value => "3"} 9-5
+                        %option.dc-long-day{:value => "4"} Long Day Bethlem 09:00 - 21:15
+                        %option.dc-long-day{:value => "5"} Long Day POS 09:00-21:15
+                        %option.dc-long-night{:value => "6"} Night Croydon 21:00 - 09:15
+                        %option.dc-long-day{:value => "7"} Long Day Croydon 09:00 - 21:15
+                        %option.dc-long-night{:value => "8"} Night POS 21:00-09:15
+                        %option.dc-long-day{:value => "9"} Long Day King's College Hospital 09:00 - 21:15
+                        %option.dc-long-day{:value => "10"} Long Day Maudsley Hospital 09:00 - 21:15
+                        %option.dc-long-night{:value => "11"} Night King's College Hospital 21:00 - 09:15
+                        %option.dc-long-day{:value => "12"} Long Day Lambeth Hospital 09:00 - 21:15
+                        %option.dc-long-day{:value => "13"} Long Day St Thomas' Hospital 09:00 - 21:15
+                        %option.dc-long-night{:value => "14"} Night Maudsley Hospital 21:00 - 09:15
+                        %option.dc-long-day{:value => "15"} Long Day Lewisham Hospital 09:00 - 21:15
+                        %option.dc-long-night{:value => "16"} Night St Thomas' Hospital 21:00 - 09:15
+                        %option.dc-long-night{:value => "17"} Night Lambeth Hospital 21:00 - 09:15
+                        %option.dc-long-night{:value => "18"} POS Night 21:00-09:15
+                        %option.dc-long-day{:value => "19"} POS Long Day 09:00-21:15
+                        %option.dc-long-night{:value => "20"} Night Lewisham Hospital 21:00 - 09:15
+                        %option.dc-weekend{:value => "21"} Weekend Mid Shift 12:00-18:00
+                        %option.dc-day{:value => "23"} 9am - 5pm
+                        %option.dc-long-day{:value => "25"} Long Day Lambeth Hospital 09:00 - 21:00
+                        %option.dc-long-night{:value => "26"} Night Lambeth Hospital 21:00 - 09:00
+                        %option.dc-long-night{:value => "27"} Night POS 21:00-09:00
+                        %option.dc-day{:value => "28"} 9am-5pm
+                        %option.dc-long-day{:value => "29"} CAMHS Long Day
+                        %option.dc-long-night{:value => "30"} CAMHS Night shift
+                        %option.dc-long-night{:value => "31"} Night Southwark 21:00 - 09:00
+                        %option.dc-long-day{:value => "32"} Long Day Southwark 09:00 - 21:00
+                        %option.dc-long-day{:value => "33"} Long Day POS 09:00-21:00
+                        %option.dc-long-day{:value => "34"} Long Day Lewisham Hospital 09:00 - 21:00
+                        %option.dc-long-night{:value => "35"} Night Lewisham Hospital 21:00 - 09:00
+                        %option.dc-long-day{:value => "36"} Long Day Croydon 09:00 - 21:00
+                        %option.dc-long-night{:value => "37"} Night Croydon 21:00 - 09:00
+                        %option.dc-long-day{:value => "75"} POS Long Day 09:15-21:15
+                        %option.dc-day{:value => "77"} 9 - 5 Bethlem 09:00 - 17:00
+                        %option.dc-day{:value => "78"} 9 - 5 Croydon 09:00 - 17:00
+                        %option.dc-day{:value => "79"} 9 - 5 Southwark 09:00 - 17:00
+                        %option.dc-day{:value => "80"} 9 - 5 Lambeth 09:00 - 17:00
+                        %option.dc-day{:value => "81"} 9 - 5 Lewisham 09:00 - 17:00
+                        %option.dc-day{:value => "82"} 9 - 5 CAMHS 09:00 - 17:00
+                      %span.select2.select2-container.select2-container--bootstrap{"data-select2-id" => "3", :dir => "ltr", :style => "width: 340px;"}
+                        %span.selection
+                          %span.select2-selection.select2-selection--single{"aria-disabled" => "false", "aria-expanded" => "false", "aria-haspopup" => "true", "aria-labelledby" => "select2-duty_id-container", :role => "combobox", :tabindex => "0"}
+                            -# %span#select2-duty_id-container.select2-selection__rendered{"aria-readonly" => "true", :role => "textbox", :title => "All duties"} All duties
+                            %span.select2-selection__arrow{:role => "presentation"}
+                              %b{:role => "presentation"}
+                        %span.dropdown-wrapper{"aria-hidden" => "true"}
+                    .sa-checkboxes-inline
+                      %span.form-check.sa-checkbox.boolean.optional._duty_oncall
+                        %input#duty_oncall.form-check-input.boolean.optional{:name => "duty_oncall", :type => "checkbox", :value => "true"}/
+                        %label.form-check-label.boolean.optional{:for => "duty_oncall", :inline_boolean => "true"}
+                          %span.checkbox On call
+                      %span.form-check.sa-checkbox.boolean.optional._duty_pos
+                        %input#duty_pos.form-check-input.boolean.optional{:name => "duty_pos", :type => "checkbox", :value => "true"}/
+                        %label.form-check-label.boolean.optional{:for => "duty_pos", :inline_boolean => "true"}
+                          %span.checkbox POS
+                    .calender-filters-user-name
+                      %span.string.required._q_user_name
+                        %label.sr-only.string.required{:for => "q_user_name"}
+                          %abbr{:title => "required"} *
+                        %input#q_user_name.form-control.string.required{:name => "q_user_name", :placeholder => "Employee name", :type => "text", :value => ""}/
+                  .filter-buttons
+                    .calendar-filters-submit
+                      %input.btn.btn-success.btn-sm{"data-disable-with-todo" => "Filter", :name => "commit", :type => "submit", :value => "Filter"}/
+                    .calendar-clear-filters
+                      %a.btn.btn-default.btn-sm{:href => "#", :title => "Clear all filters"} Clear
+
+
+
 
     //=include ../navbars/_footer.haml
 

@@ -426,26 +426,30 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 
 #navbar + .container-fluid,
 #navbar + .container{
-  @include media-breakpoint-up(md){  top: 70px;}
-  @include media-breakpoint-down(md){  top: 50px;}
+  position: relative;
+  @include media-breakpoint-up(md){  margin-top: 70px;}
+  @include media-breakpoint-down(md){  margin-top: 50px;}
 }
 
 #navbar + #breadcrumbs + .container-fluid,
 #navbar + #breadcrumbs + .container{
-  @include media-breakpoint-up(md){  top: 100px;}
-  @include media-breakpoint-down(md){  top: 80px;}
+  position: relative;
+  @include media-breakpoint-up(md){  margin-top: 100px;}
+  @include media-breakpoint-down(md){  margin-top: 80px;}
 }
 
 #navbar + #navbar-admin + .container-fluid,
 #navbar + #navbar-admin + .container{
-  @include media-breakpoint-up(md){  top: 105px;}
-  @include media-breakpoint-down(md){  top: 85px;}
+  position: relative;
+  @include media-breakpoint-up(md){  margin-top: 105px;}
+  @include media-breakpoint-down(md){  margin-top: 85px;}
 }
 
 #navbar + #navbar-admin + #breadcrumbs + .container-fluid,
 #navbar + #navbar-admin + #breadcrumbs + .container{
-  @include media-breakpoint-up(md){  top: 135px;}
-  @include media-breakpoint-down(md){  top: 115px;}
+  position: relative;
+  @include media-breakpoint-up(md){  margin-top: 135px;}
+  @include media-breakpoint-down(md){  margin-top: 115px;}
 }
 
 

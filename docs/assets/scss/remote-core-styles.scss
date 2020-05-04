@@ -10001,23 +10001,16 @@ $break-xxl: 1590px;
 .container-fluid{
   padding-left: 30px;
   padding-right: 30px;
-}
-
-body.plus-option-tab{
-  .container-fluid{
-    padding-left: 40px;
-    padding-right: 40px;
+  @include media-breakpoint-down(sm){
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 .container{
-  // background-color: pink;
   @include media-breakpoint-down(sm){
     max-width: calc(100% - 45px);
   }
-  // @include media-breakpoint-down(xs){
-  //   max-width: calc(100% - 0px);
-  // }
 }
 // ==================================================================
 
@@ -10192,22 +10185,22 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 // ==============================================
 
 #navbar + #navbar-admin{
-  margin-top: 50px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
+  top: 50px;
+ @include media-breakpoint-down(md){ top: 35px; }
 }
 
 // Breadcrumbs
 #navbar-admin + #breadcrumbs{
-  margin-top: 35px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
+  top: 35px;
+ @include media-breakpoint-down(md){ top: 35px; }
 }
 #navbar + #breadcrumbs{
-  margin-top: 50px;
- @include media-breakpoint-down(md){ margin-top: 35px; }
+  top: 50px;
+ @include media-breakpoint-down(md){ top: 35px; }
 }
 #navbar + #navbar-admin + #breadcrumbs{
-  margin-top: 85px;
- @include media-breakpoint-down(md){ margin-top: 70px; }
+  top: 85px;
+ @include media-breakpoint-down(md){ top: 70px; }
 }
 
 
@@ -10216,24 +10209,28 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 
 #navbar + .container-fluid,
 #navbar + .container{
+  position: relative;
   @include media-breakpoint-up(md){  margin-top: 70px;}
   @include media-breakpoint-down(md){  margin-top: 50px;}
 }
 
 #navbar + #breadcrumbs + .container-fluid,
 #navbar + #breadcrumbs + .container{
+  position: relative;
   @include media-breakpoint-up(md){  margin-top: 100px;}
   @include media-breakpoint-down(md){  margin-top: 80px;}
 }
 
 #navbar + #navbar-admin + .container-fluid,
 #navbar + #navbar-admin + .container{
+  position: relative;
   @include media-breakpoint-up(md){  margin-top: 105px;}
   @include media-breakpoint-down(md){  margin-top: 85px;}
 }
 
 #navbar + #navbar-admin + #breadcrumbs + .container-fluid,
 #navbar + #navbar-admin + #breadcrumbs + .container{
+  position: relative;
   @include media-breakpoint-up(md){  margin-top: 135px;}
   @include media-breakpoint-down(md){  margin-top: 115px;}
 }
@@ -12236,7 +12233,7 @@ $btn-default-colour: $sa-grey-14;
 }
 
 
-// Sizes --------------------
+// Sizes
 .btn-lg::before{
   font-size: 1.7rem;
   top: 4px;
@@ -13407,7 +13404,6 @@ label {
   }
 }
 
-
 .form-group.row, .form-group .row{
   margin-right: -4px;
   margin-left: -4px;
@@ -13578,17 +13574,19 @@ input[type=range]:focus::-ms-fill-upper {
 
 .input-group>.input-group-prepend>.input-group-text{
   border-radius: 2rem 0 0 2rem;
-  padding: 0 $sa-spacer-8;
+  padding: 0 $sa-spacer-6;
   background-color: $user-primary-colour;
   color: white;
   border-color: $user-primary-colour;
+      height: 2.3rem;
 }
 .input-group>.input-group-append>.input-group-text{
   border-radius: 0 2rem 2rem 0;
-  padding: 0 $sa-spacer-8;
+  padding: 0 $sa-spacer-6;
   background-color: $user-primary-colour;
   color: white;
   border-color: $user-primary-colour;
+      height: 2.3rem;
 }
 
 .input-group>.input-group-prepend,
@@ -13711,6 +13709,20 @@ input.form-control::placeholder {
 .custom-file-label{
   color: $sa-grey-10;
 }
+
+// Input Groups Plus Append ---------------------
+
+.input-group.plus-append{
+  .form-group{
+    background-color: $user-primary-colour;
+    border-top-left-radius: .375rem;
+    border-bottom-left-radius: .375rem;
+  }
+  .form-control, .select{ 
+    border-color: $user-primary-colour;
+  }
+}
+
 
 // List Groups ==================================
 
@@ -14197,8 +14209,7 @@ $tab-number-bg:           $sa-grey-12;
 /* change the background color */
 .navbar {
   padding: 0rem 1rem;
-  height: 50px;
-  @include media-breakpoint-down(md){ height: 35px; }
+
   // z-index in _sa-variables.css
 }
 
@@ -16625,7 +16636,6 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
   height: 35px;
   display: table;
   width: 100%;
-  z-index: 3001;
 }
 
 // Navbar Toggler -----------
@@ -16819,23 +16829,129 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 
 } // END #megamenu
 
-// Page Titles ==================================
+// Page Titles REBUILD ==================================
 
-// Default Page titles ------
+// TEMP
+.page-title-with-image{
+  background: lightpink;
+  border: 1px dashed pink;
+}
+
+.page-title-wrapper{
+  background: lightgoldenrodyellow;
+  border: 1px dashed orange;
+}
+
+.page-title-area{
+  background: lightgrey;
+  border: 1px dashed lightslategrey;
+}
+
+
+.page-title{
+  background: lightgreen;
+  border: 1px dashed green;
+}
+
+
+.page-state{
+  background: lightblue;
+  border: 1px dashed blue;
+}
+
+.page-title-photo{
+  background: lightblue;
+  border: 1px dashed blue;
+}
+.page-title-actions{
+  background: lightblue;
+  border: 1px dashed blue;
+}
+
+// Structure ------------------------------------
 
 .page-title-wrapper{
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 8px;
 }
+.page-title{
+  flex: 1 0 ; /* Let it fill the available space horizontally */
+  // flex-grow: 1 0;
+  @-moz-document url-prefix() {
+    #flexible-content{
+      flex: 1;
+    }
+  }
+}
+
+// .page-state{
+//   float: right;
+// }
+
+.page-title-actions{
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  padding: 2px 0;
+  justify-content: flex-end;
+}
+.page-title-wrapper .page-title-actions div,
+.page-title-wrapper .page-title-actions span,
+.page-title-wrapper .page-title-actions .btn{
+  margin-left: 8px;
+}
+
+.page-title-wrapper .page-title-actions .input-group div,
+.page-title-wrapper .page-title-actions .input-group span,
+.page-title-wrapper .page-title-actions .input-group .btn{
+  margin-left: 0px;
+}
+
+.page-title-actions .input-group{
+  flex-wrap: nowrap;
+}
+.page-title-actions .input-group,
+.page-title-actions input,
+.page-title-actions .btn{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.page-title-actions .input-group.plus-append .btn,
+.page-title-actions .input-group input{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 36px;
+}
+
+.page-title-actions form{ justify-content: flex-end;}
+
+
+.page-title-wrapper + .page-title-actions{ margin-top: 8px;}
+
+.page-title-wrapper + .page-title-actions div,
+.page-title-wrapper + .page-title-actions span,
+.page-title-wrapper + .page-title-actions .btn{
+  margin-right: 8px;
+}
+
+.page-title-wrapper + .page-title-actions div div,
+.page-title-wrapper + .page-title-actions span span{
+  margin-right: 0px;
+}
+
+.page-title-wrapper + .calendar-filters-toggle{ margin-top: 8px;}
+
+.page-title-wrapper + .page-title-actions{
+  max-width: 100%;
+  justify-content: flex-start;
+  form{ justify-content: flex-start;}
+}
+
+// Styles ---------------------------------------
 
 .page-title{
   font-size: 1.1rem; // 18px
-  margin-top: 0;
-  margin-bottom: 15px;
-  @include respond-to(ipad-p-down){
-    margin-bottom: 10px;
-  }
 }
 
 .page-title a:link,
@@ -16854,12 +16970,12 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
   letter-spacing: $vslight;
   margin: 0;
   margin-left:0.07em; // Set left align to allow for Roboto indenting at large sizes
-    @include respond-to(ipad-p-down){
+    @include media-breakpoint-down(sm){
       margin-left:0.1em;
-      font-size: 18px; 
+      font-size: 18px;
     }
     @include media-breakpoint-down(xs){
-      font-size: 16px;
+      font-size: 14px;
     }
 }
 
@@ -16870,14 +16986,14 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
   line-height: 2.5rem;
   margin: 0;
   margin-left:-0.04em; // Set left align to allow for Roboto indenting at large sizes
-  @include respond-to(ipad-p-down) {
+  @include media-breakpoint-down(sm) {
     font-size: 2rem;
     line-height: 2.2rem;
     margin-left:0;
   }
   @include media-breakpoint-down(xs){
-    font-size: 26px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 
@@ -16901,7 +17017,7 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 .page-title .phone{
   margin-right: 10px;
   &:before{
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Free";
     content: "\f879" ;
     font-weight: 900;
     margin-right: 5px;
@@ -16910,59 +17026,46 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 .page-title .email{
   margin-right: 10px;
   &:before{
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Free";
     content: "\f0e0" ;
     margin-right: 5px;
   }
 }
 
-// Page Titles with Photo --- 
-.page-title-with-image{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 15px;
-  @include respond-to(ipad-p-down){
-    margin-bottom: 10px;
+// Photos ---------------------------------------
+.page-title-photo img,
+.page-title-photo .si{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 5px;
+  margin-top: -4px;
+  @include media-breakpoint-down(sm){
+    width: 50px;
+    height: 50px;
+    margin-right: 3px;
+    margin-top: -1px;
   }
-  .page-title-photo{
-    padding-right: 5px;
-  }
-
-  .page-title-photo img{
-    border-radius: 50%;
-    margin-right: 5px;
-    width: 70px;
-    height: 70px;
-    @include respond-to(ipad-p-down){
-      width: 60px;
-      height: 60px;
-    }
-    @include media-breakpoint-down(xs){
-      width: 50px;
-      height: 50px;
-    }
-  }
-  .page-title{
-    margin-bottom: 0;
+  @include media-breakpoint-down(xs){
+    width: 40px;
+    height: 40px;
+    margin-top: 1px;
   }
 }
 
-// Page Title with State ----
-.page-title-with-state{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 15px;
-  @include respond-to(ipad-p-down){
-    margin-bottom: 10px;
+.page-title-photo .si{
+  font-size: 3.6rem;
+  @include media-breakpoint-down(sm){
+    font-size: 3.1rem;
   }
-  .page-title{
-    flex-grow: 1;
-    margin-bottom: 0;
+  @include media-breakpoint-down(xs){
+    font-size: 2.5rem;
   }
 }
 
+
+//  Page State ----------------------------------
 .page-state{
   @include roboto-black;
   font-size: 0.7em;
@@ -16974,7 +17077,7 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
   height: 70px;
   background-repeat: no-repeat;
   background-size: 70px 70px;
-  @include respond-to(ipad-p-down){
+  @include media-breakpoint-down(sm){
     width: 60px;
     height: 60px;
     background-size: 60px 60px;
@@ -16984,33 +17087,101 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 
 .page-state .current-state.Draft,
 .page-state .current-state.draft{
-  background-image: url("../../assets/images/rag-icons/rag-pt-draft@1x.png");
+  background-image: url("../../assets/rag-icons/rag-pt-draft@1x.png");
 }
 .page-state .current-state.Submitted,
 .page-state .current-state.submitted{
-  background-image: url("../../assets/images/rag-icons/rag-pt-submitted@2x.png");
+  background-image: url("../../assets/rag-icons/rag-pt-submitted@2x.png");
 }
 .page-state .current-state.Complete,
 .page-state .current-state.complete{
-  background-image: url("../../assets/images/rag-icons/rag-pt-complete@2x.png");
+  background-image: url("../../assets/rag-icons/rag-pt-complete@2x.png");
 }
 .page-state .current-state.Approved,
 .page-state .current-state.approved{
-  background-image: url("../../assets/images/rag-icons/rag-pt-approved@2x.png");
+  background-image: url("../../assets/rag-icons/rag-pt-approved@2x.png");
 }
 .page-state .current-state.Recommended,
 .page-state .current-state.recommended{
-  background-image: url("../../assets/images/rag-icons/rag-pt-recommended@2x.png");
+  background-image: url("../../assets/rag-icons/rag-pt-recommended@2x.png");
 }
 .page-state .current-state.Abandoned,
 .page-state .current-state.abandoned{
-  background-image: url("../../assets/images/rag-icons/rag-pt-abandoned@2x.png");
+  background-image: url("../../assets/rag-icons/rag-pt-abandoned@2x.png");
 }
 .page-state .current-state.Due,
 .page-state .current-state.due{
-  background-image: url("../../assets/images/rag-icons/rag-pt-due@2x.png");
+  background-image: url("../../assets/rag-icons/rag-pt-due@2x.png");
 }
-  
+
+// New Item Buttons -----------------------------
+
+.page-title-wrapper .btn-pt-new{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $user-primary-colour;
+  color: white!important;
+  height: 36px;
+  padding: 0 6px;
+  margin: 4px 0 4px 8px;
+
+  &:hover { 
+    background-color: darken($user-primary-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-primary-colour, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f067" ;
+    color:white;
+    font-weight: 900;
+    font-size: 1.45rem;
+    position: relative;
+  }
+  @include media-breakpoint-down(sm){
+    content: 'New';
+  }
+  @include media-breakpoint-down(xs){
+    padding: 0;
+    width: 36px;
+    
+  }
+  @include media-breakpoint-up(sm){
+    order: 5;
+  }
+}
+
+// New Item Button
+.page-title-wrapper .btn-pt-new:after{
+  content: 'New Item';
+  padding-left: 4px;
+  @include media-breakpoint-down(sm){
+    content: 'New';
+    padding-left: 4px;
+  }
+  @include media-breakpoint-down(xs){
+    display: none;
+  }
+}
+// New Swap Post Button
+.page-title-wrapper .btn-pt-new.new-swap-post:after{
+  content: 'New Swap Post';
+  padding-left: 4px;
+  @include media-breakpoint-down(sm){
+    content: 'New';
+    padding-left: 4px;
+  }
+  @include media-breakpoint-down(xs){
+    display: none;
+  }
+}
 // Checkboxes ===================================
 
 $checkbox-background:           white;
@@ -17906,29 +18077,53 @@ $rag-white:        $white;
 //#160757827 scroll bar covers sa-sidemenu menu on IE
 body { -ms-overflow-style: scrollbar; }
 
+
+$transition-time:   320ms;  
+
 @mixin off-canvas-transmission {
-  transition: all 320ms ease!important;
+  transition: all $transition-time ease!important;
 }
+
+@mixin off-canvas-visible {
+  opacity: 1;
+  visibility: visible;
+  @include transition(
+      opacity $transition-time linear,
+      visibility $transition-time linear 
+    )
+}
+
+@mixin off-canvas-invisible {
+  opacity: 0;
+  visibility: hidden;
+  @include transition(
+      opacity $transition-time linear,
+      visibility $transition-time linear 
+    )
+}
+
+
+
 
 // Posistioning =================================
 #navbar + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 50px;}
-  @include media-breakpoint-down(md){  margin-top: 35px;}
+  @include media-breakpoint-up(md){  top: 50px;}
+  @include media-breakpoint-down(md){  top: 35px;}
 }
 
 #navbar + #breadcrumbs + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 80px;}
-  @include media-breakpoint-down(md){  margin-top: 65px;}
+  @include media-breakpoint-up(md){  top: 79px;}
+  @include media-breakpoint-down(md){  top: 64px;}
 }
 
 #navbar + #navbar-admin + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 85px;}
-  @include media-breakpoint-down(md){  margin-top: 70px;}
+  @include media-breakpoint-up(md){  top: 85px;}
+  @include media-breakpoint-down(md){  top: 70px;}
 }
 
 #navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu{
-  @include media-breakpoint-up(md){  margin-top: 115px;}
-  @include media-breakpoint-down(md){  margin-top: 100px;}
+  @include media-breakpoint-up(md){  top: 114px;}
+  @include media-breakpoint-down(md){  top: 99px;}
 }
 
 // New sidemenu Plus Containers
@@ -17957,42 +18152,6 @@ body { -ms-overflow-style: scrollbar; }
   @include media-breakpoint-down(md){  margin-top: 115px;}
 }
 
-// Position & Width of containers when pushed ---
-
-#navbar + .sa-sidemenu ~ .container-fluid,
-#navbar + .sa-sidemenu ~ .container{
-  @include off-canvas-transmission;
-}
-
-#navbar + .sa-sidemenu ~ .container-fluid{
-  padding-left: 80px;
-  @include media-breakpoint-down(md){
-    padding-left: 50px;
-  }
-}
-
-@media only screen and (min-width: 1200px){
-  #navbar + .sa-sidemenu.open ~ .container-fluid{
-    padding-left: 240px;
-  }
-
-  #navbar + .sa-sidemenu.open ~ .container{
-    padding-left: 180px;
-  }
-}
-
-#navbar + .sa-sidemenu ~ .container{
-  @include media-breakpoint-down(lg){
-    padding-left: 8px;
-  }
-  @include media-breakpoint-down(sm){
-    padding-left: 16px;
-    max-width: calc(100% - 65px);
-  }
-}
-
-
-
 
 
 
@@ -18003,17 +18162,16 @@ body { -ms-overflow-style: scrollbar; }
   position: fixed;
   display: block;
   height: calc(100% - 80px);
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   top: 0;
-  width: 40px;
-  @include off-canvas-transmission;
+  // @include off-canvas-transmission;
   @include media-breakpoint-down(md){
-    height: calc(100% - 75px);
-    width: 30px;
+    height: calc(100% - 65px);
+    padding-bottom: 40px;
   }
 }
 
-.sa-sidemenu{ 
+.sa-sidemenu{
   .menu-top{
     position: relative;
     top: 0px;
@@ -18037,38 +18195,113 @@ body { -ms-overflow-style: scrollbar; }
     }
   }
   .menu-list{
-    display: none;
-  }
-}
-
-// Open state ---------------
-.sa-sidemenu.open{
-  @include off-canvas-transmission;
-  width: 200px;
-}
-
-.sa-sidemenu.open{
-  .menu-list{
     position: relative;
     left: 0;
     display: block;
     width: 100%;
     padding: 0 ;
-    padding-top: 20px;
+    margin-top: 5px;
     overflow-y: auto;
     overflow-x: hidden;
-    height:100%;
+  }
+}
+
+// Height of Menu-List depending on Navbars & Breadcrumbs etc.
+#navbar + .sa-sidemenu .menu-list{
+  height:calc(100% - 10px);
+}
+
+#navbar + #breadcrumbs + .sa-sidemenu .menu-list{
+  height:calc(100% - 40px);
+}
+
+#navbar + #navbar-admin + .sa-sidemenu .menu-list{
+  height:calc(100% - 45px);
+}
+
+#navbar + #navbar-admin + #breadcrumbs + .sa-sidemenu .menu-list{
+  height:calc(100% - 70px);
+}
+
+// ==============================================
+// Widths and container positions at various states
+// Closed state --------------
+.sa-sidemenu.closed, .sa-sidemenu:not(.open){
+  @include off-canvas-transmission;
+  width: 40px;
+  @include media-breakpoint-down(md){
+    width: 30px;
+  }
+}
+
+// Open state ---------------
+.sa-sidemenu.open, .sa-sidemenu:not(.closed){
+  @include off-canvas-transmission;
+  width: 200px;
+}
+
+
+// Position & Width of containers when pushed ---
+
+.sa-sidemenu ~ .container-fluid,
+.sa-sidemenu ~ .container{
+  // @include off-canvas-transmission;
+}
+// Closed
+.sa-sidemenu.closed ~ .container-fluid,
+.sa-sidemenu:not(.open) ~ .container-fluid{
+  @include off-canvas-transmission;
+  padding-left: 70px;
+  @include media-breakpoint-down(md){
+    padding-left: 60px;
+  }
+  @include media-breakpoint-down(sm){
+    padding-left: 50px;
+  }
+}
+
+// Open
+.sa-sidemenu.open ~ .container-fluid,
+.sa-sidemenu:not(.closed) ~ .container-fluid{
+  @media only screen and (min-width: 1200px){
+    @include off-canvas-transmission;
+    padding-left: 230px;
+  }
+  @include media-breakpoint-down(lg){
+    padding-left: 70px;
+  }
+  @include media-breakpoint-down(md){
+    padding-left: 60px;
+  }
+  @include media-breakpoint-down(sm){
+    padding-left: 50px;
+  }
+}
+
+.sa-sidemenu.open ~ .container,
+.sa-sidemenu:not(.closed) ~ .container{
+    @media only screen and (min-width: 1200px){
+    padding-left: 150px;
+  }
+}
+
+.sa-sidemenu ~ .container,
+.sa-sidemenu:not(.open) ~ .container{
+    @include media-breakpoint-down(sm){
+    padding-left: 36px;
   }
 }
 
 
-
 // Styling ======================================
+$sidemenu-bg:   $sa-grey-16;
 
 .sa-sidemenu{
-  background: $sa-grey-16;
+  background: $sidemenu-bg;
   color: white;
-  cursor: pointer;
+  -webkit-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
+  box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
 }
 
 .sa-sidemenu .menu-top{
@@ -18077,162 +18310,318 @@ body { -ms-overflow-style: scrollbar; }
 
 .sa-sidemenu .open-icon::before{
   color:$user-primary-colour;
-  font-family: "Font Awesome 5 Free"; 
-  content: "\f036";
-  font-weight: 700; 
+  font-family: "sard-icons";
+  content: "\e015";
   font-size: 1.5em;
   position: absolute;
   top: 4px;
-  right: 12px;
+  right: 10px;
+  @include off-canvas-transmission;
   @include media-breakpoint-down(md){
     font-size: 1.3em;
     top: 1px;
     left: 5px;
+    @include respond-to(ie11) {  // ie11
+      font-size: 20px;
+    }
   }
 }
 .sa-sidemenu.open .open-icon::before{
-  content: "\f038";
-  right: 10px;
-}
-
-.sa-sidemenu .menu-list a{
-  display: flex;
-  margin: 0px;
-  padding: 5px 10px;
-  @include roboto-light;
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-}
-
-.sa-sidemenu .menu-list a:visited{
-  color: white;
-}
-
-.sa-sidemenu .menu-list a:active,
-.sa-sidemenu .menu-list a:focus,
-.sa-sidemenu .menu-list a:hover {
-  background: $sa-grey-18;
-}
-
-.sa-sidemenu .menu-list a.active {
-  background: $sa-grey-17;
-  i {
-    color:$user-primary-colour;
-  }
-}
-
-.sa-sidemenu .menu-list hr{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.sa-sidemenu .menu-list .sub-title{
-  padding: 5px 10px 0px 10px;
-  text-indent: 0;
-  @include roboto-bold;
-  font-size: 16px;
-  color: white;
-}
-
-.sa-sidemenu .menu-list a{
-  i {
-    padding-right: 0.5rem ; // 8px
-    color: $sa-grey-06;
-  }
+  -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+
+  -ms-transform: rotate(180deg);  // IE 9
+  transform: rotate(180deg);
 }
 
 
+// Sidemenu contents ============================
 
-
-// Sidemenu contents ============================ 
-
-// Dropdowns
 .sa-sidemenu .menu-list li:before{ // Removes Bullets
   content: none;
   display:none;
 }
-.sa-sidemenu .menu-list ul li{
-  padding: 5px 0px;
+
+.sa-sidemenu{
+  .menu-list{
+    .menu-section{
+      font-size: 1rem;
+      line-height: 1.2rem;
+      color: white;
+      border-bottom: 1px solid $sa-grey-12;
+    }
+
+    .menu-section-heading{
+      @include roboto-bold;
+      padding: 10px 8px 6px 8px;
+      display: flex;
+      min-width: 200px; // Stops the jiggling of the text during the opening
+      color: white;
+      i{
+        top: -3px;
+        margin-right: 6px;
+        font-size: 1.5rem;
+      }
+
+      i:before{
+        @include media-breakpoint-down(md){
+          font-size: 1.3rem;
+          position: relative;
+          left: -3px;
+        }
+      }
+    }
+
+
+    ul.sub-menu{
+      margin: 0;
+      @include roboto-light;
+      li.sub-menu--item{
+        padding: 0;
+        text-indent: 0;
+      }
+
+      li.sub-menu--item a{
+        display: flex;
+        min-width: 200px; // Stops the jiggling of the text during the opening
+        font-size: 1rem;
+        line-height: 1.2rem;
+        padding: 6px 20px 6px 8px;
+        color: white;
+        &:visited{
+          background: $sidemenu-bg;
+        }
+        &:active,
+        &:focus,
+        &:hover{
+          background: darken($sidemenu-bg, 10%);
+        }
+        i:before{
+          @include media-breakpoint-down(md){
+            font-size: 1.3rem;
+            position: relative;
+            left: -3px;
+          }
+        }
+      }
+
+      li.sub-menu--item a.active,
+      li.sub-menu--item a.selected{
+        position: relative;
+        background: $user-primary-colour;
+        i {
+          color: white;
+        }
+        &:after{
+          content:"";
+          display:inline-block;
+          position:absolute;
+          border:16px solid white;
+          border-color:transparent transparent transparent white;
+          top: calc(50% - 16px);
+          right: 0px;
+          -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+
+          -ms-transform: rotate(180deg);  // IE 9
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    li.sub-menu--item a i{
+      min-width: 1.2em;
+      top: 0px;
+      right: -1px;
+      margin-right: 6px;
+      font-size: 1.25rem;
+      color: $sa-grey-08;
+    }
+
+    li.sub-menu--item a .item{ padding-top: 1px; }
+
+    li.sub-menu--item a p{ margin: 0; }
+
+    hr{
+      margin: 0;
+      border-color: $sa-grey-12;
+    }
+
+    .spacer{
+      min-width: 1.2em;
+      margin-right: 10px;
+    }
+  }
 }
-.sa-sidemenu .menu-list ul li a{
-  padding: 5px 20px;
+
+
+
+// --------------------------
+// Toggle Sections ----------
+.sa-sidemenu{
+  .menu-section{
+    a.menu-section-heading{
+      position: relative;
+      padding-right: 32px;
+    }
+
+    a.menu-section-heading[aria-expanded="true"] {
+      background: lighten($sidemenu-bg, 10%);
+      &:after{
+        color:$user-primary-colour;
+        font-family: "sard-icons";
+        content: "\e0d1";
+        font-size: 1.5em;
+        position: absolute;
+        top: 10px;
+        right: 8px;
+      }
+    }
+    a.menu-section-heading[aria-expanded="false"] {
+      &:after{
+        -webkit-transform: rotate(180deg);  // Chrome, Opera 15+, Safari 3.1+
+        -ms-transform: rotate(180deg);  // IE 9
+        transform: rotate(180deg);
+        color:$user-primary-colour;
+        font-family: "sard-icons";
+        content: "\e0d1";
+        font-size: 1.5em;
+        position: absolute;
+        top: 10px;
+        right: 8px;
+      }
+    }
+
+    ul.sub-menu.collapse,
+    ul.sub-menu.collapsing{
+      background: lighten($sidemenu-bg, 10%);
+    }
+  }
 }
-.sa-sidemenu .menu-list ul li a::after{
-  margin-left: 0.5em;
-  position: relative;
-  top: 7px;
+
+
+
+// ==============================================
+// Visibility ===================================
+// Closed -------------------
+.sa-sidemenu.closed{
+  .menu-section-heading .item{
+    @include off-canvas-invisible;
+  }
+  .menu-section-heading:after{ 
+    @include off-canvas-invisible;
+  }
+
+  li.sub-menu--item a {
+  }
+  li.sub-menu--item a .item{
+    @include off-canvas-invisible;
+  }
+}
+// Open ---------------------
+.sa-sidemenu.open{
+  .menu-section-heading .item{
+    @include off-canvas-visible;
+  }
+  .menu-section-heading:after{ 
+    @include off-canvas-visible;
+  }
+  li.sub-menu--item a {
+  }
+  li.sub-menu--item a .item{
+    @include off-canvas-visible;
+  }
 }
 
-.sa-sidemenu .dropdown-menu.show{
-  background: $sa-grey-14;
-  border-color: $sa-grey-18;
-  border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-left: 5px;
-  width: calc(100% - 20px);
-}
 
-.sa-sidemenu .dropdown-item:first-of-type {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-}
-.sa-sidemenu .dropdown-item:last-of-type {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-
-
-
-
+// ==============================================
 // Sidemenu Light ===============================
 
+$sidemenu-light-bg:   $sa-grey-02;
 
-
-.sa-sidemenu.sidemenu-light.sidemenu-light{
-  background: $sa-grey-02;
-  color: $text;
-  cursor: pointer;
+.sa-sidemenu.sidemenu-light{
+  background: $sidemenu-light-bg;
 }
 
-.sa-sidemenu.sidemenu-light .menu-list a{
-  color: $text;
-  @include roboto-regular;
-}
+.sa-sidemenu.sidemenu-light{
+  .menu-list{
+    .menu-section{
+      color: $text;
+      border-bottom-color: $sa-grey-10;
+    }
 
-.sa-sidemenu.sidemenu-light .menu-list a{
-  i {
-    color: $sa-grey-10;
+    .menu-section-heading{
+      color: $text;
+    }
+
+    ul.sub-menu{
+      @include roboto-regular;  // Differs from default version
+
+      li.sub-menu--item a{
+        color: $text;
+        &:visited{
+          background: $sidemenu-light-bg;
+        }
+        &:active,
+        &:focus,
+        &:hover{
+          background: darken($sidemenu-light-bg, 10%);
+        }
+      }
+
+      li.sub-menu--item a.active,
+      li.sub-menu--item a.selected{
+        color: white;
+        i { color: white;}
+      }
+    }
+
+    li.sub-menu--item a i{ color: $text; }
+
+    hr{ border-color: $sa-grey-10; }
   }
 }
 
-.sa-sidemenu.sidemenu-light .menu-list a:visited{
-  color: $text;
-}
+// Toggle Sections ----------
+.sa-sidemenu.sidemenu-light{
+  .menu-section{
+    a.menu-section-heading[aria-expanded="true"] {
+      background: darken($sidemenu-light-bg, 10%);
+      &:after{
+        color:$user-primary-colour;
+      }
+    }
 
-.sa-sidemenu.sidemenu-light .menu-list a:active,
-.sa-sidemenu.sidemenu-light .menu-list a:focus,
-.sa-sidemenu.sidemenu-light .menu-list a:hover {
-  background: $sa-grey-04;
-  i {
-    color:$sa-grey-12;
+    ul.sub-menu.collapse,
+    ul.sub-menu.collapsing{
+      background: darken($sidemenu-light-bg, 10%);
+      li.sub-menu--item a.active,
+      li.sub-menu--item a.selected{
+        background: $user-primary-colour;
+        color: white;
+        i { color: white;}
+      }
+    }
+
+    ul.sub-menu.show {
+
+      li.sub-menu--item a{
+        background: darken($sidemenu-light-bg, 10%);
+        &:visited{
+          background: darken($sidemenu-light-bg, 10%);
+        }
+        &:active,
+        &:focus,
+        &:hover{
+          background: darken($sidemenu-light-bg, 20%);
+        }
+      }
+
+      li.sub-menu--item a.active,
+      li.sub-menu--item a.selected{
+        background: $user-primary-colour;
+        color: white;
+        i { color: white;}
+      }
+    }
   }
 }
-
-.sa-sidemenu.sidemenu-light .menu-list a.active {
-  background: $sa-grey-03;
-  i {
-    color:$user-primary-colour;
-  }
-}
-
-.sa-sidemenu.sidemenu-light .menu-list .sub-title{
-  color: $text;
-}
-
-
-
 
 // With sidemenu wrapper
 #navbar + .sidemenu-wrapper .container-fluid:first-of-type{
@@ -18346,230 +18735,29 @@ body { -ms-overflow-style: scrollbar; }
     padding-left: 200px;
   }
 }
-// Off Canvas Rag Key ===========================
-// http://blog.themearmada.com/off-canvas-slide-menu-for-bootstrap/
-
-//#160757827 scroll bar covers options menu on IE
-
-$rag-tab:             $sa-grey-04;
-$rag-tab-open:        $sa-grey-16;
-// $user-primary-colour:        $client;
-// $user-primary-colour-admin:  $admin;
-
-body { -ms-overflow-style: scrollbar; }
-
-
-@mixin off-canvas-rag-transmission {
-  transition: all 320ms ease!important;
-}
-
-// navigation button ----------------------------
-
-a.rag-key-expander {
-  background-color: $rag-tab;
-  color: $text;
-  display: block;
-
-  margin-right: 0;
-  position: absolute;
-  bottom: 80px;
-  right: 0px;
-  text-decoration: none;
-
-  width: 30px;
-  height: 110px;
-  z-index: 12;
-
-  border-radius: 6px 0px 0px 6px;
-  border: 2px solid white;
-  border-right: none;
-
-  @include off-canvas-rag-transmission;
-}
-
-a.rag-key-expander .title{
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  @include roboto-regular;
-}
-a.rag-key-expander .title img{
-  width: 20px;
-  padding-top: 3px;
-}
-
-a.rag-key-expander:after{
-  content: "\e013";
-  font-family: "sard-icons";
-  color:$text;
-  font-size: 1.25em;
-  position: absolute;
-  top: 3px;
-  right: 3px;
-
-  @include off-canvas-rag-transmission;
-}
-
-
-a.rag-key-expander.fixed {
-  position: fixed;
-}
-
-.rag-key-expanded a.rag-key-expander.fixed {
-    right: 300px;
-    background-color: $rag-tab-open;
-}
-
-.rag-key-expanded a.rag-key-expander:after{
-  transform: rotate(180deg);
-  color: white;
-}
-
-a.rag-key-expander:hover {
-  cursor: pointer;
-  background-color: $rag-tab-open;
-}
-a.rag-key-expander:hover:after{
-  color: white;
-}
-
-@media (max-width: 767px) { // Small Screens
-    a.rag-key-expander{
-      width: 30px;
-      height: 35px;
-    }
-
-    a.rag-key-expander .title{
-      display: none;
-    }
-
-    a.rag-key-expander:after{
-      top: 1px;
-    }
-}
-
-// canvas menu & menu container -----------------
-
-nav.rag-key-menu {
-  background: $sa-grey-02;
-  display: block;
-  height: 100%;
-  overflow: auto;
-  position: fixed;
-  right: -300px;
-  top: 0;
-  width: 300px;
-  z-index: 6000;
-  border-left: 4px solid $rag-tab-open;
-
-  @include off-canvas-rag-transmission;
-}
-
-nav.rag-key-menu hr{
-    border-top: 1px solid white;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.rag-key-expanded nav.rag-key-menu {
-  right: 0;
-}
-
-body.rag-key-expanded {
-  margin-left: 0em;
-  @include off-canvas-rag-transmission;
-}
-
-#rag-key-close {
-  min-height:70px;
-  height:70px;
-}
-#rag-key-close:hover{
-  background-color: darken($sa-grey-02, 3%);
-  cursor: pointer;
-}
-#rag-key-close:hover:before{
-  content: 'Close';
-  color:$text;
-  position: relative;
-  top: 35%;
-  left: 45%;
-}
-
-#rag-key-close:after {
-  content: "\e015";
-  font-family: "sard-icons";
-  color:$text;
-  font-size: 1.5em;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-//  menu and icons ------------------------------
-
-.rag-key-menu h3{
-  font-size: 20px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-.rag-key{
-  min-height: 30px;
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  overflow: visible;
-  margin-left: 5px;
-  padding-left: 35px;
-  background-color: transparent;
-}
-.rag-key.icon-danger{
-  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
-}
-.rag-key.icon-warning{
-  background-image: url("../../assets/images/rag-icons/rag-icon-warning-sm@2x.png");
-}
-.rag-key.icon-danger-plus{
-  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
-}
-.rag-key.icon-warning-plus{
-  background-image: url("../../assets/images/rag-icons/rag-icon-warning-plus-sm@2x.png");
-}
-.rag-key.icon-approved{
-  background-image: url("../../assets/images/rag-icons/rag-icon-approved-sm@2x.png");
-}
-.rag-key.icon-unavailable{
-  background-image: url("../../assets/images/rag-icons/rag-icon-unavailable-sm@2x.png");
-}
-.rag-key.icon-success{
-  background-image: url("../../assets/images/rag-icons/rag-icon-success-sm@2x.png");
-}
-.rag-key.icon-draft{
-  background-image: url("../../assets/images/rag-icons/rag-icon-draft-sm@2x.png");
-}
-.rag-key.icon-submitted{
-  background-image: url("../../assets/images/rag-icons/rag-icon-submitted-sm@2x.png");
-}
-.rag-key.icon-recommended{
-  background-image: url("../../assets/images/rag-icons/rag-icon-recommended-sm@2x.png");
-}
-.rag-key.icon-abandoned{
-  background-image: url("../../assets/images/rag-icons/rag-icon-abandoned-sm@2x.png");
-}
-.rag-key.icon-due{
-  background-image: url("../../assets/images/rag-icons/rag-icon-due-sm@2x.png");
-}
-.rag-key p{
-  padding-top: 6px;
-}
-
-
 // Off Canvas Options ===========================
 // http://blog.themearmada.com/off-canvas-slide-menu-for-bootstrap/
 
 //#160757827 scroll bar covers options menu on IE
 body { -ms-overflow-style: scrollbar; }
+
+body.plus-option-tab{
+  .container-fluid{
+    // padding-left: 40px;
+    padding-right: 34px;
+  }
+
+  #navbar + .sa-sidemenu ~ .container{
+    @include media-breakpoint-down(lg){
+      padding-left: 16px;
+    }
+    @include media-breakpoint-down(sm){
+      padding-left: 27px;
+      max-width: calc(100% - 65px);
+    }
+  }
+
+}
 
 
 @mixin off-canvas-transmission {
@@ -18985,6 +19173,225 @@ body.options-nav-expanded {
 //   border-bottom: 0px;
 //   padding: 4px;
 // }
+
+
+// Off Canvas Rag Key ===========================
+// http://blog.themearmada.com/off-canvas-slide-menu-for-bootstrap/
+
+//#160757827 scroll bar covers options menu on IE
+
+$rag-tab:             $sa-grey-04;
+$rag-tab-open:        $sa-grey-16;
+// $user-primary-colour:        $client;
+// $user-primary-colour-admin:  $admin;
+
+body { -ms-overflow-style: scrollbar; }
+
+
+@mixin off-canvas-rag-transmission {
+  transition: all 320ms ease!important;
+}
+
+// navigation button ----------------------------
+
+a.rag-key-expander {
+  background-color: $rag-tab;
+  color: $text;
+  display: block;
+
+  margin-right: 0;
+  position: absolute;
+  bottom: 80px;
+  right: 0px;
+  text-decoration: none;
+
+  width: 30px;
+  height: 110px;
+  z-index: 12;
+
+  border-radius: 6px 0px 0px 6px;
+  border: 2px solid white;
+  border-right: none;
+
+  @include off-canvas-rag-transmission;
+}
+
+a.rag-key-expander .title{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  @include roboto-regular;
+}
+a.rag-key-expander .title img{
+  width: 20px;
+  padding-top: 3px;
+}
+
+a.rag-key-expander:after{
+  content: "\e013";
+  font-family: "sard-icons";
+  color:$text;
+  font-size: 1.25em;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+
+  @include off-canvas-rag-transmission;
+}
+
+
+a.rag-key-expander.fixed {
+  position: fixed;
+}
+
+.rag-key-expanded a.rag-key-expander.fixed {
+    right: 300px;
+    background-color: $rag-tab-open;
+}
+
+.rag-key-expanded a.rag-key-expander:after{
+  transform: rotate(180deg);
+  color: white;
+}
+
+a.rag-key-expander:hover {
+  cursor: pointer;
+  background-color: $rag-tab-open;
+}
+a.rag-key-expander:hover:after{
+  color: white;
+}
+
+@media (max-width: 767px) { // Small Screens
+    a.rag-key-expander{
+      width: 30px;
+      height: 35px;
+    }
+
+    a.rag-key-expander .title{
+      display: none;
+    }
+
+    a.rag-key-expander:after{
+      top: 1px;
+    }
+}
+
+// canvas menu & menu container -----------------
+
+nav.rag-key-menu {
+  background: $sa-grey-02;
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  z-index: 6000;
+  border-left: 4px solid $rag-tab-open;
+
+  @include off-canvas-rag-transmission;
+}
+
+nav.rag-key-menu hr{
+    border-top: 1px solid white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rag-key-expanded nav.rag-key-menu {
+  right: 0;
+}
+
+body.rag-key-expanded {
+  margin-left: 0em;
+  @include off-canvas-rag-transmission;
+}
+
+#rag-key-close {
+  min-height:70px;
+  height:70px;
+}
+#rag-key-close:hover{
+  background-color: darken($sa-grey-02, 3%);
+  cursor: pointer;
+}
+#rag-key-close:hover:before{
+  content: 'Close';
+  color:$text;
+  position: relative;
+  top: 35%;
+  left: 45%;
+}
+
+#rag-key-close:after {
+  content: "\e015";
+  font-family: "sard-icons";
+  color:$text;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+//  menu and icons ------------------------------
+
+.rag-key-menu h3{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.rag-key{
+  min-height: 30px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  overflow: visible;
+  margin-left: 5px;
+  padding-left: 35px;
+  background-color: transparent;
+}
+.rag-key.icon-danger{
+  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
+}
+.rag-key.icon-warning{
+  background-image: url("../../assets/images/rag-icons/rag-icon-warning-sm@2x.png");
+}
+.rag-key.icon-danger-plus{
+  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
+}
+.rag-key.icon-warning-plus{
+  background-image: url("../../assets/images/rag-icons/rag-icon-warning-plus-sm@2x.png");
+}
+.rag-key.icon-approved{
+  background-image: url("../../assets/images/rag-icons/rag-icon-approved-sm@2x.png");
+}
+.rag-key.icon-unavailable{
+  background-image: url("../../assets/images/rag-icons/rag-icon-unavailable-sm@2x.png");
+}
+.rag-key.icon-success{
+  background-image: url("../../assets/images/rag-icons/rag-icon-success-sm@2x.png");
+}
+.rag-key.icon-draft{
+  background-image: url("../../assets/images/rag-icons/rag-icon-draft-sm@2x.png");
+}
+.rag-key.icon-submitted{
+  background-image: url("../../assets/images/rag-icons/rag-icon-submitted-sm@2x.png");
+}
+.rag-key.icon-recommended{
+  background-image: url("../../assets/images/rag-icons/rag-icon-recommended-sm@2x.png");
+}
+.rag-key.icon-abandoned{
+  background-image: url("../../assets/images/rag-icons/rag-icon-abandoned-sm@2x.png");
+}
+.rag-key.icon-due{
+  background-image: url("../../assets/images/rag-icons/rag-icon-due-sm@2x.png");
+}
+.rag-key p{
+  padding-top: 6px;
+}
 
 
 // sard-nav-tabs ================================
@@ -20078,6 +20485,9 @@ a.sa-page-loader-spinner{
 }
 
 
+
+// // Calendars CURRENTLY IN REMOTE UI STYLES SCSS
+// @import '/Users/simon/Gits/sard_core_gulp_version/app/assets/scss/sa-calendars/calendar-filters';
 
 
 // DON'T ADD SYSTEM OR LOCAL STYLES HERE

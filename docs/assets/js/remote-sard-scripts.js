@@ -17928,22 +17928,28 @@ $(document).ready(function(){
 $(document).ready(function(){                       
    
   // sa-sidemenu Menu Slider
-  $('.sa-sidemenu .menu-top').on('click',function(e){
+  $('.sa-sidemenu').on('click',function(e){
     e.preventDefault();
-    $('.sa-sidemenu').toggleClass('open');
-    $('.sa-sidemenu').toggleClass('closed');
+    $('.sa-sidemenu').toggleClass('open').toggleClass('closed');
   });
+
+  $('.sa-sidemenu .menu-section').click(function(e) {
+    e.stopPropagation()
+  })
+
+  $('.sa-sidemenu [data-toggle="collapse"]').click(function(e){
+    e.stopPropagation()
+    $($(this).attr('href')).collapse('toggle')
+  })
 
   // State at various screen sizes
   var $window = $(window);
 
   function resize() {
     if ($window.width() > 1200) {
-      $('.sa-sidemenu').addClass('open');
-      $('.sa-sidemenu').removeClass('closed');
+      $('.sa-sidemenu').addClass('open').removeClass('closed');
     } else {
-      $('.sa-sidemenu').removeClass('open');
-      $('.sa-sidemenu').addClass('closed');
+      $('.sa-sidemenu').removeClass('open').addClass('closed');
     }
   }
 
