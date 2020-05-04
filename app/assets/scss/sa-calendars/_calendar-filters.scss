@@ -1,0 +1,131 @@
+// calendar-filters --------------------------------
+.calendar-filters-toggle{
+  position: relative;
+  margin-bottom: 8px;
+  text-align: left;
+
+  .toggle-header{
+    cursor: pointer;
+    background-color: $sa-grey-04;
+    border-top-left-radius: $sa-border-radius;
+    border-top-right-radius: $sa-border-radius;
+    padding: 2px 8px;
+    font-size: 16px;
+    &:focus,
+    &:hover{ background-color: $sa-grey-06;}
+    &:active{ background-color: $sa-grey-08;}
+
+    &.collapsed{
+      background-color: $sa-grey-03;
+      border-bottom-left-radius: $sa-border-radius;
+      border-bottom-right-radius: $sa-border-radius;
+      &:focus,
+      &:hover{ background-color: $sa-grey-04;}
+      &:active{ background-color: $sa-grey-06;}
+    }
+
+  }
+  .toggle-header:after {
+    position: absolute;
+    right: 8px;
+    font-family: "Font Awesome 5 Free";
+    content: "\f106"; // Close
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 24px;
+  }
+
+  .toggle-header.collapsed:after {
+    content: "\f107"; // Open
+  }
+
+  #filters-toggle{
+    border: 2px solid $sa-grey-04;
+    border-top: none;
+    border-bottom-left-radius: $sa-border-radius-lg;
+    border-bottom-right-radius: $sa-border-radius-lg;
+    padding: 6px 4px 4px 4px;
+  }
+}
+
+
+
+// Calendar Filters -----------------------------
+
+.calendar-filters{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+
+
+  // layout filters and buttons
+  .filters{
+    display: flex;
+    flex-wrap: wrap;
+    @include respond-to(ie11){
+      width: calc(100% - 105px);
+      @include media-breakpoint-down(sm){
+        width: calc(100% - 55px);
+      }
+    }
+  }
+
+  .filter-buttons{
+    display: flex;
+    padding: 1.5px 0;
+    @include media-breakpoint-down(sm){
+      flex-direction: column;
+    }
+    .btn{
+      margin-left: 4px;
+      margin-bottom: 4px;
+    }
+  }
+
+  // Reduce the height of all the selects
+  .select .form-control,
+  .select2-container .select2-selection--single,
+  .calender-filters-user-name .form-control {
+    padding: 0px 5px!important;
+    height: 32px!important;
+    line-height: 1.7;
+  }
+
+  select#duty_id, select.duty_id{min-width: 200px;}
+
+  ._location_id{min-width: 250px;}
+
+  .sa-checkboxes-inline{
+    display: flex;
+    align-items: center;
+    border: 2px solid $sa-grey-08;
+    border-radius: $sa-border-radius;
+    padding: 0px 5px;
+    height: 32px!important;
+  }
+
+  .select,
+  .sa-checkboxes-inline,
+  .calender-filters-user-name{
+    margin-right: 4px;
+    margin-bottom: 2px;
+    @include media-breakpoint-down(xs){
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(xs){
+    .filters { width: 80%; }
+    .select, .sa-checkboxes-inline, .calender-filters-user-name { margin-right: 0; }
+    .select2 { width: 100%!important; }
+    .sa-checkbox label { padding-right: 16px; }
+    .select2 { margin-bottom: 2px; }
+    .sa-checkboxes-inline { margin-bottom: 4px; }
+  }
+
+  @include respond-to(iphone-5-portrait){
+    .select2 { width: calc(100% - 3px)!important; }
+  }
+}
