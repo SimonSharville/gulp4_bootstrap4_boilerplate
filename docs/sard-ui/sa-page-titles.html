@@ -177,111 +177,83 @@ Megamenu
 <div class='row'>
 <div class='col-sm-24'>
 <h1>Page Titles</h1>
+<p>
+Build structure
+<br>
+<code>.page-title-wrapper</code>
+<span class='text-client'>(Important)</span>
+<br>
+<code>&nbsp;.page-title-photo</code>
+<br>
+<code>&nbsp;.page-title</code>
+<span class='text-client'>(Important)</span>
+<br>
+<code>&nbsp;&nbsp;.page-links</code>
+<br>
+<code>&nbsp;&nbsp;.name</code>
+<br>
+<code>&nbsp;&nbsp;.page</code>
+<br>
+<code>&nbsp;&nbsp;.description</code>
+or
+<code>.subtitle</code>
+<br>
+<code>&nbsp;.page-title-actions</code>
+<span class='text-client'>(Add if you want Actions like buttons or form elements)</span>
+<span>(Can be added below .page-title-wrapper)</span>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Add actions like
+<code>.btn-pt-new</code>
+or search and filters
+<br>
+<code>&nbsp;.page-state</code>
+<span class='text-client'>(Add if you want Page State)</span>
+<br>
+<code>&nbsp;&nbsp;.current-state.state</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;.state</code>
+Draft
+<span class='text-client'>(or whatever)</span>
+</p>
 <p class='lead'>
 Below are some variations on page titles.
 </p>
 </div>
 </div>
-<hr class='mb-4'>
+<hr class='mb-4 mt-4 mt-4'>
 <div class='row'>
 <div class='col-sm-24'>
+<div class='page-title-wrapper'>
 <div class='page-title'>
-<div class='name'>Mrs Bella Owen</div>
-<div class='page'>Portfolio Jun 2019</div>
-<div class='subtitle'>Subtitle</div>
+<h1 class='page'>Page</h1>
 </div>
 </div>
-<div class='col-sm-24'>
-<h6 class='base'>Default Page Title</h6>
-<p>
-This is constructed as follows:
-<br>
-<code>.page-title</code>
-<br>
-<code>&nbsp; .name</code>
-<span>Name</span>
-<br>
-<code>&nbsp; .page</code>
-<span>Page</span>
-<br>
-<code>&nbsp; .subtitle</code>
-<span>Subtitle</span>
-</p>
-<p class='note'>
-<span class='bold'>Note</span>
-If you wish to wrap any part of the page title in a headline tag (h1), it should make no differnece to the styling (see variations below).
-</p>
 </div>
 </div>
-<hr class='mb-4'>
+<hr class='mb-4 mt-4'>
 <div class='row'>
 <div class='col-sm-24'>
+<div class='page-title-wrapper'>
 <div class='page-title'>
-<h1>
+<div class='page-links'>
+<a href='#/'>Page Links</a>
+<span class='slash'>/</span>
+<a href='#/'>Mrs Bella Owen MSFs</a>
+</div>
+<div class='name'>
+Name
+</div>
 <div class='page'>
-eDocuments for
-<span class='bold'>Mrs Bella Owen</span>
+Page
 </div>
-</h1>
-</div>
-</div>
-<div class='col-sm-24'>
-<h6 class='base'>Default Page Title in single line</h6>
-<p>
-This is constructed as follows:
-<br>
-<code>.page-title</code>
-<br>
-<code>&nbsp; %h1</code>
-<br>
-<code>&nbsp; &nbsp; .page</code>
-<br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Page
-<br>
-<code>&nbsp; &nbsp; &nbsp; .bold</code>
-<span>Name</span>
-</p>
-</div>
-</div>
-<hr class='mb-4'>
-<div class='row'>
-<div class='col-sm-24'>
-<div class='page-title-with-image'>
-<div class='page-title-photo'>
-<img alt='User icon' src='../assets/images/big-bird.jpg'>
-</div>
-<div class='page-title'>
-<h3 class='name'>
-Mrs Bella Owen
-</h3>
-<h1 class='page'>
-Dashboard
-</h1>
+<div class='description'>
+Page Description or Subtitle
 </div>
 </div>
 </div>
-<div class='col-sm-24'>
-<h6 class='base'>Page Title with Image</h6>
-<p>
-This is constructed as follows:
-<br>
-<code>.page-title-with-image</code>
-<br>
-<code>&nbsp; .page-title-photo</code>
-<br>
-<code>&nbsp; &nbsp; Image</code>
-<br>
-<code>&nbsp; .page-title</code>
-<br>
-<code>&nbsp; &nbsp; %h3.name</code>
-<span>Name</span>
-<br>
-<code>&nbsp; &nbsp; %h1.page</code>
-<span>Page</span>
-</p>
 </div>
 </div>
-<hr class='mb-4'>
+<hr class='mb-4 mt-4'>
 <div class='row'>
 <div class='col-sm-24'>
 <div class='page-title-wrapper'>
@@ -300,61 +272,302 @@ Job Plan May 2019 - Apr 2020
 </div>
 </div>
 </div>
-<div class='col-sm-24'>
-<h6 class='base'>Page Title with State</h6>
-<p>
-This is constructed as follows:
-<br>
-<code>.page-title-wrapper</code>
-<br>
-<code>&nbsp; .page-title</code>
-<br>
-<code>&nbsp; &nbsp; .name</code>
-<span>Name</span>
-<br>
-<code>&nbsp; &nbsp; .page</code>
-<span>Page</span>
-<br>
-<code>&nbsp; .page-state</code>
-<br>
-<code>&nbsp; &nbsp; .current-state.Draft (or .draft)</code>
-<br>
-<code>&nbsp; &nbsp; &nbsp; .state</code>
-<span>Draft</span>
-</p>
-<p class='note'>
-The .page-title-wrapper uses display flex with justify-content: space-between to sperate the two halves.
-</p>
 </div>
-</div>
-<hr class='mb-4'>
+<hr class='mb-4 mt-4'>
 <div class='row'>
 <div class='col-sm-24'>
+<div class='page-title-wrapper'>
+<div class='page-title-photo'>
+<img alt='User icon' src='https://pbs.twimg.com/profile_images/1092454153585082368/QNM6C86g_400x400.jpg'>
+</div>
 <div class='page-title'>
-<div class='page-links'>
-<a href='#/'>All MSFs</a>
-<span class='slash'>/</span>
-<a href='#/'>Mrs Bella Owen MSFs</a>
-</div>
-<div class='page'>
-MSF Jun 2019 (complete)
-for
-<a href='#/'>Mrs Bella Owen</a>
-</div>
-<div class='description'>
-Page Description or Subtitle
+<h3 class='name'>
+Mrs Bella Owen
+</h3>
+<h1 class='page'>
+Dashboard
+</h1>
 </div>
 </div>
 </div>
-<div class='col-sm-24'>
-<h6 class='base'>Page Titles with Links</h6>
-<p>The above shows how links look within Page Titles.</p>
 </div>
-</div>
-<hr class='mb-4'>
+<hr class='mb-4 mt-4'>
 <div class='row'>
 <div class='col-sm-24'>
-<p>That will be all for now.</p>
+<div class='page-title-wrapper'>
+<div class='page-title'>
+<h1>Shift Swap Shop</h1>
+</div>
+<div class='page-title-actions'>
+<form accept-charset='UTF-8' action='/shifts/swap_shop' class='simple_form form-inline' data-autosubmit='true' method='get' novalidate='novalidate'>
+<div class='input-group plus-append'>
+<div class='form-group select required _location'>
+<select class='form-control select required' id='location' name='location'>
+<option value='0'>All Sites</option>
+<option value='1'>Bethlem</option>
+<option value='2'>Croydon</option>
+<option value='3'>Southwark</option>
+<option value='4'>Lambeth</option>
+<option value='5'>Lewisham</option>
+<option value='7'>CAMHS</option>
+</select>
+</div>
+<div class='input-group-append'>
+<a class='input-group-text active' href=''>Clear</a>
+</div>
+</div>
+<a class='btn btn-pt-new new-swap-post' href=''></a>
+</form>
+</div>
+</div>
+</div>
+</div>
+<hr class='mb-4 mt-4'>
+<div class='row'>
+<div class='col-sm-24'>
+<div class='page-title-wrapper'>
+<div class='page-title-photo'>
+<div class='si si-user-circle'></div>
+</div>
+<div class='page-title'>
+<h3 class='name'>Name</h3>
+<h1>with Page Title Actions inside</h1>
+</div>
+<div class='page-title-actions'>
+<form accept-charset='UTF-8' action='/shifts/swap_shop' class='simple_form form-inline' data-autosubmit='true' method='get' novalidate='novalidate'>
+<div class='input-group plus-append'>
+<div class='form-group select required _location'>
+<select class='form-control select required' id='location' name='location'>
+<option value='0'>All Sites</option>
+<option value='1'>Bethlem</option>
+<option value='2'>Croydon</option>
+<option value='3'>Southwark</option>
+<option value='4'>Lambeth</option>
+<option value='5'>Lewisham</option>
+<option value='7'>CAMHS</option>
+</select>
+</div>
+<div class='input-group-append'>
+<a class='input-group-text active' href='/shifts/swap_shop'>Clear</a>
+</div>
+</div>
+<div class='input-group plus-append'>
+<div class='form-group string required _q'>
+<input class='form-control string required' id='q' name='q' placeholder='Search' type='text'>
+</div>
+<div class='input-group-append'>
+<input class='btn btn-search' data-disable-with='Search' name='commit' type='submit' value='Search'>
+</div>
+</div>
+<a class='btn btn-pt-new new-item' href='/shifts/swap_shop/new'></a>
+</form>
+</div>
+</div>
+</div>
+</div>
+<hr class='mb-4 mt-4'>
+<div class='row'>
+<div class='col-sm-24'>
+<div class='page-title-wrapper'>
+<div class='page-title'>
+<h3 class='name'>Name</h3>
+<h1>with Page Title Actions below</h1>
+</div>
+</div>
+<div class='page-title-actions'>
+<form accept-charset='UTF-8' action='/super/logs' class='simple_form form-inline' data-autosubmit='true' method='get' novalidate='novalidate'>
+<span class='date_range_picker required _starts_at'>
+<script id='js-react-on-rails-context' type='application/json'>
+<![CDATA[
+    {"railsEnv":"development","inMailer":false,"i18nLocale":"en","i18nDefaultLocale":"en","rorVersion":"11.3.0","rorPro":false,"href":"https://erostering.sardjv.test/super/logs","location":"/super/logs","scheme":"https","host":"erostering.sardjv.test","port":null,"pathname":"/super/logs","search":null,"httpAcceptLanguage":"en-US,en;q=0.9,it;q=0.8,la;q=0.7,de;q=0.6","serverSide":false}
+]]>
+</script>
+<span class='date-range-picker-react' id='DateRangePicker-react-component-2e0089a0-6a73-4378-b705-c4106ff15296'>
+<span>
+<input class='form-control string date_range_picker required date-range-input' placeholder='Select dates' value=''>
+<input class='form-control string date_range_picker required' id='starts_at' name='starts_at' readonly='readonly' type='hidden' value=''>
+<input class='form-control string date_range_picker required' id='ends_at' name='ends_at' readonly='readonly' type='hidden' value=''>
+</span>
+</span>
+<script class='js-react-on-rails-component' data-component-name='DateRangePicker' data-dom-id='DateRangePicker-react-component-2e0089a0-6a73-4378-b705-c4106ff15296' data-trace='true' type='application/json'>
+<![CDATA[
+    {"properties":{"classes":"form-control string date_range_picker required","aria_label":null,"placeholder":null},"start_date":{"id":"starts_at","name":"starts_at","value":null},"end_date":{"id":"ends_at","name":"ends_at","value":null}}
+]]>
+</script>
+</span>
+<span class='string required _q_user_name'>
+<input class='form-control string required' id='q_user_name' name='q_user_name' placeholder='User name' type='text'>
+</span>
+<span class='select required _item_type'>
+<select class='form-control select required' id='item_type' name='item_type'>
+<option value=''>Item type</option>
+<option value='Agency'>Agency</option>
+<option value='Duty'>Duty</option>
+<option value='LeavePeriod'>LeavePeriod</option>
+<option value='RosterShift'>RosterShift</option>
+<option value='RosterShiftSwap'>RosterShiftSwap</option>
+<option value='User'>User</option>
+</select>
+</span>
+<span class='string required _request_id'>
+<input class='form-control string required' id='request_id' name='request_id' placeholder='Request ID' size='40' type='text'>
+</span>
+<input class='btn btn-primary' data-disable-with='Search' name='commit' type='submit' value='Search'>
+<a class='btn btn-danger active' href='/super/logs'>Clear</a>
+</form>
+</div>
+</div>
+</div>
+<hr class='mb-4 mt-4'>
+<div class='row'>
+<div class='col-sm-24'>
+<div class='page-title-wrapper'>
+<div class='page-title'>
+<h3 class='name'>Name</h3>
+<h1>With Filters below</h1>
+</div>
+</div>
+<div class='calendar-filters-toggle'>
+<form action=''>
+<div aria-expanded='true' class='toggle-header'>Calendar Filters</div>
+<div class='collapse show' id='filters-toggle'>
+<div class='calendar-filters'>
+<div class='filters'>
+<span class='select required _grade'>
+<select class='form-control select required' id='grade' name='grade'>
+<option value=''>All grades</option>
+<option value='CT'>CT</option>
+<option value='ST'>ST</option>
+<option value='GP'>GP</option>
+</select>
+</span>
+<span class='select required _roster_id'>
+<select class='form-control select required' id='roster_id' name='roster_id'>
+<option value=''>All rosters</option>
+<option value='1'>CT - old</option>
+<option value='2'>ST</option>
+<option value='3'>CT</option>
+<option value='4'>ST - CAHMS</option>
+<option value='5'>GP Import</option>
+</select>
+</span>
+<span class='select _location_id'>
+<select aria-hidden='true' class='form-control select select2-hidden-accessible' data-select2-id='location_id' id='location_id' name='location_id' tabindex='-1'>
+<option data-select2-id='2' value=''>All locations</option>
+<option class='location-level-0' value='1'>Southwark</option>
+<option class='location-level-1' value='2'>Maudsley Hospital</option>
+<option class='location-level-1' value='3'>King's College Hospital</option>
+<option class='location-level-0' value='4'>Croydon</option>
+<option class='location-level-0' value='5'>Bethlem</option>
+<option class='location-level-0' value='6'>Lewisham</option>
+<option class='location-level-1' value='7'>Lewisham Hospital</option>
+<option class='location-level-0' value='8'>Lambeth</option>
+<option class='location-level-1' value='9'>Lambeth Hospital</option>
+<option class='location-level-1' value='10'>St Thomas' Hospital</option>
+<option class='location-level-0' value='11'>CAMHS</option>
+</select>
+<span class='select2 select2-container select2-container--bootstrap' data-select2-id='1' dir='ltr' style='width: 250px;'>
+<span class='selection'>
+<span aria-disabled='false' aria-expanded='false' aria-haspopup='true' aria-labelledby='select2-location_id-container' class='select2-selection select2-selection--single' role='combobox' tabindex='0'>
+<span class='select2-selection__arrow' role='presentation'>
+<b role='presentation'></b>
+</span>
+</span>
+</span>
+<span aria-hidden='true' class='dropdown-wrapper'></span>
+</span>
+</span>
+<span class='select required _duty_id'>
+<select aria-hidden='true' class='form-control select select2-hidden-accessible' data-select2-id='duty_id' id='duty_id' name='duty_id' tabindex='-1'>
+<option data-select2-id='4' value=''>All duties</option>
+<option class='dc-long-night' value='1'>Night Bethlem 21:00 - 09:15</option>
+<option class='dc-day' value='3'>9-5</option>
+<option class='dc-long-day' value='4'>Long Day Bethlem 09:00 - 21:15</option>
+<option class='dc-long-day' value='5'>Long Day POS 09:00-21:15</option>
+<option class='dc-long-night' value='6'>Night Croydon 21:00 - 09:15</option>
+<option class='dc-long-day' value='7'>Long Day Croydon 09:00 - 21:15</option>
+<option class='dc-long-night' value='8'>Night POS 21:00-09:15</option>
+<option class='dc-long-day' value='9'>Long Day King's College Hospital 09:00 - 21:15</option>
+<option class='dc-long-day' value='10'>Long Day Maudsley Hospital 09:00 - 21:15</option>
+<option class='dc-long-night' value='11'>Night King's College Hospital 21:00 - 09:15</option>
+<option class='dc-long-day' value='12'>Long Day Lambeth Hospital 09:00 - 21:15</option>
+<option class='dc-long-day' value='13'>Long Day St Thomas' Hospital 09:00 - 21:15</option>
+<option class='dc-long-night' value='14'>Night Maudsley Hospital 21:00 - 09:15</option>
+<option class='dc-long-day' value='15'>Long Day Lewisham Hospital 09:00 - 21:15</option>
+<option class='dc-long-night' value='16'>Night St Thomas' Hospital 21:00 - 09:15</option>
+<option class='dc-long-night' value='17'>Night Lambeth Hospital 21:00 - 09:15</option>
+<option class='dc-long-night' value='18'>POS Night 21:00-09:15</option>
+<option class='dc-long-day' value='19'>POS Long Day 09:00-21:15</option>
+<option class='dc-long-night' value='20'>Night Lewisham Hospital 21:00 - 09:15</option>
+<option class='dc-weekend' value='21'>Weekend Mid Shift 12:00-18:00</option>
+<option class='dc-day' value='23'>9am - 5pm</option>
+<option class='dc-long-day' value='25'>Long Day Lambeth Hospital 09:00 - 21:00</option>
+<option class='dc-long-night' value='26'>Night Lambeth Hospital 21:00 - 09:00</option>
+<option class='dc-long-night' value='27'>Night POS 21:00-09:00</option>
+<option class='dc-day' value='28'>9am-5pm</option>
+<option class='dc-long-day' value='29'>CAMHS Long Day</option>
+<option class='dc-long-night' value='30'>CAMHS Night shift</option>
+<option class='dc-long-night' value='31'>Night Southwark 21:00 - 09:00</option>
+<option class='dc-long-day' value='32'>Long Day Southwark 09:00 - 21:00</option>
+<option class='dc-long-day' value='33'>Long Day POS 09:00-21:00</option>
+<option class='dc-long-day' value='34'>Long Day Lewisham Hospital 09:00 - 21:00</option>
+<option class='dc-long-night' value='35'>Night Lewisham Hospital 21:00 - 09:00</option>
+<option class='dc-long-day' value='36'>Long Day Croydon 09:00 - 21:00</option>
+<option class='dc-long-night' value='37'>Night Croydon 21:00 - 09:00</option>
+<option class='dc-long-day' value='75'>POS Long Day 09:15-21:15</option>
+<option class='dc-day' value='77'>9 - 5 Bethlem 09:00 - 17:00</option>
+<option class='dc-day' value='78'>9 - 5 Croydon 09:00 - 17:00</option>
+<option class='dc-day' value='79'>9 - 5 Southwark 09:00 - 17:00</option>
+<option class='dc-day' value='80'>9 - 5 Lambeth 09:00 - 17:00</option>
+<option class='dc-day' value='81'>9 - 5 Lewisham 09:00 - 17:00</option>
+<option class='dc-day' value='82'>9 - 5 CAMHS 09:00 - 17:00</option>
+</select>
+<span class='select2 select2-container select2-container--bootstrap' data-select2-id='3' dir='ltr' style='width: 340px;'>
+<span class='selection'>
+<span aria-disabled='false' aria-expanded='false' aria-haspopup='true' aria-labelledby='select2-duty_id-container' class='select2-selection select2-selection--single' role='combobox' tabindex='0'>
+<span class='select2-selection__arrow' role='presentation'>
+<b role='presentation'></b>
+</span>
+</span>
+</span>
+<span aria-hidden='true' class='dropdown-wrapper'></span>
+</span>
+</span>
+<div class='sa-checkboxes-inline'>
+<span class='form-check sa-checkbox boolean optional _duty_oncall'>
+<input class='form-check-input boolean optional' id='duty_oncall' name='duty_oncall' type='checkbox' value='true'>
+<label class='form-check-label boolean optional' for='duty_oncall' inline_boolean='true'>
+<span class='checkbox'>On call</span>
+</label>
+</span>
+<span class='form-check sa-checkbox boolean optional _duty_pos'>
+<input class='form-check-input boolean optional' id='duty_pos' name='duty_pos' type='checkbox' value='true'>
+<label class='form-check-label boolean optional' for='duty_pos' inline_boolean='true'>
+<span class='checkbox'>POS</span>
+</label>
+</span>
+</div>
+<div class='calender-filters-user-name'>
+<span class='string required _q_user_name'>
+<label class='sr-only string required' for='q_user_name'>
+<abbr title='required'>*</abbr>
+</label>
+<input class='form-control string required' id='q_user_name' name='q_user_name' placeholder='Employee name' type='text' value=''>
+</span>
+</div>
+</div>
+<div class='filter-buttons'>
+<div class='calendar-filters-submit'>
+<input class='btn btn-success btn-sm' data-disable-with-todo='Filter' name='commit' type='submit' value='Filter'>
+</div>
+<div class='calendar-clear-filters'>
+<a class='btn btn-default btn-sm' href='#' title='Clear all filters'>Clear</a>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
 </div>
 </div>
 </div>

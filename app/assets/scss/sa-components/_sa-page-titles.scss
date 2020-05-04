@@ -1,20 +1,126 @@
-// Page Titles ==================================
+// Page Titles REBUILD ==================================
 
-// Default Page titles ------
+// TEMP
+// .page-title-with-image{
+//   background: lightpink;
+//   border: 1px dashed pink;
+// }
+
+// .page-title-wrapper{
+//   background: lightgoldenrodyellow;
+//   border: 1px dashed orange;
+// }
+
+// .page-title-area{
+//   background: lightgrey;
+//   border: 1px dashed lightslategrey;
+// }
+
+
+// .page-title{
+//   background: lightgreen;
+//   border: 1px dashed green;
+// }
+
+
+// .page-state{
+//   background: lightblue;
+//   border: 1px dashed blue;
+// }
+
+// .page-title-photo{
+//   background: lightblue;
+//   border: 1px dashed blue;
+// }
+// .page-title-actions{
+//   background: lightblue;
+//   border: 1px dashed blue;
+// }
+
+// Structure ------------------------------------
 
 .page-title-wrapper{
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 8px;
 }
+.page-title{
+  flex: 1 0 ; /* Let it fill the available space horizontally */
+  // flex-grow: 1 0;
+  @-moz-document url-prefix() {
+    #flexible-content{
+      flex: 1;
+    }
+  }
+}
+
+// .page-state{
+//   float: right;
+// }
+
+.page-title-actions{
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  padding: 2px 0;
+  justify-content: flex-end;
+}
+.page-title-wrapper .page-title-actions div,
+.page-title-wrapper .page-title-actions span,
+.page-title-wrapper .page-title-actions .btn{
+  margin-left: 8px;
+}
+
+.page-title-wrapper .page-title-actions .input-group div,
+.page-title-wrapper .page-title-actions .input-group span,
+.page-title-wrapper .page-title-actions .input-group .btn{
+  margin-left: 0px;
+}
+
+.page-title-actions .input-group{
+  flex-wrap: nowrap;
+}
+.page-title-actions .input-group,
+.page-title-actions input,
+.page-title-actions .btn{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.page-title-actions .input-group.plus-append .btn,
+.page-title-actions .input-group input{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 36px;
+}
+
+.page-title-actions form{ justify-content: flex-end;}
+
+
+.page-title-wrapper + .page-title-actions{ margin-top: 8px;}
+
+.page-title-wrapper + .page-title-actions div,
+.page-title-wrapper + .page-title-actions span,
+.page-title-wrapper + .page-title-actions .btn{
+  margin-right: 8px;
+}
+
+.page-title-wrapper + .page-title-actions div div,
+.page-title-wrapper + .page-title-actions span span{
+  margin-right: 0px;
+}
+
+.page-title-wrapper + .calendar-filters-toggle{ margin-top: 8px;}
+
+.page-title-wrapper + .page-title-actions{
+  max-width: 100%;
+  justify-content: flex-start;
+  form{ justify-content: flex-start;}
+}
+
+// Styles ---------------------------------------
 
 .page-title{
   font-size: 1.1rem; // 18px
-  margin-top: 0;
-  margin-bottom: 15px;
-  @include respond-to(ipad-p-down){
-    margin-bottom: 10px;
-  }
 }
 
 .page-title a:link,
@@ -33,12 +139,12 @@
   letter-spacing: $vslight;
   margin: 0;
   margin-left:0.07em; // Set left align to allow for Roboto indenting at large sizes
-    @include respond-to(ipad-p-down){
+    @include media-breakpoint-down(sm){
       margin-left:0.1em;
-      font-size: 18px; 
+      font-size: 18px;
     }
     @include media-breakpoint-down(xs){
-      font-size: 16px;
+      font-size: 14px;
     }
 }
 
@@ -49,14 +155,14 @@
   line-height: 2.5rem;
   margin: 0;
   margin-left:-0.04em; // Set left align to allow for Roboto indenting at large sizes
-  @include respond-to(ipad-p-down) {
+  @include media-breakpoint-down(sm) {
     font-size: 2rem;
     line-height: 2.2rem;
     margin-left:0;
   }
   @include media-breakpoint-down(xs){
-    font-size: 26px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 
@@ -80,7 +186,7 @@
 .page-title .phone{
   margin-right: 10px;
   &:before{
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Free";
     content: "\f879" ;
     font-weight: 900;
     margin-right: 5px;
@@ -89,59 +195,46 @@
 .page-title .email{
   margin-right: 10px;
   &:before{
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Free";
     content: "\f0e0" ;
     margin-right: 5px;
   }
 }
 
-// Page Titles with Photo --- 
-.page-title-with-image{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 15px;
-  @include respond-to(ipad-p-down){
-    margin-bottom: 10px;
+// Photos ---------------------------------------
+.page-title-photo img,
+.page-title-photo .si{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 5px;
+  margin-top: -4px;
+  @include media-breakpoint-down(sm){
+    width: 50px;
+    height: 50px;
+    margin-right: 3px;
+    margin-top: -1px;
   }
-  .page-title-photo{
-    padding-right: 5px;
-  }
-
-  .page-title-photo img{
-    border-radius: 50%;
-    margin-right: 5px;
-    width: 70px;
-    height: 70px;
-    @include respond-to(ipad-p-down){
-      width: 60px;
-      height: 60px;
-    }
-    @include media-breakpoint-down(xs){
-      width: 50px;
-      height: 50px;
-    }
-  }
-  .page-title{
-    margin-bottom: 0;
+  @include media-breakpoint-down(xs){
+    width: 40px;
+    height: 40px;
+    margin-top: 1px;
   }
 }
 
-// Page Title with State ----
-.page-title-with-state{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 15px;
-  @include respond-to(ipad-p-down){
-    margin-bottom: 10px;
+.page-title-photo .si{
+  font-size: 3.6rem;
+  @include media-breakpoint-down(sm){
+    font-size: 3.1rem;
   }
-  .page-title{
-    flex-grow: 1;
-    margin-bottom: 0;
+  @include media-breakpoint-down(xs){
+    font-size: 2.5rem;
   }
 }
 
+
+//  Page State ----------------------------------
 .page-state{
   @include roboto-black;
   font-size: 0.7em;
@@ -153,7 +246,7 @@
   height: 70px;
   background-repeat: no-repeat;
   background-size: 70px 70px;
-  @include respond-to(ipad-p-down){
+  @include media-breakpoint-down(sm){
     width: 60px;
     height: 60px;
     background-size: 60px 60px;
@@ -189,4 +282,72 @@
 .page-state .current-state.due{
   background-image: url("../../assets/images/rag-icons/rag-pt-due@2x.png");
 }
-  
+
+// New Item Buttons -----------------------------
+
+.page-title-wrapper .btn-pt-new{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $user-primary-colour;
+  color: white!important;
+  height: 36px;
+  padding: 0 6px;
+  margin: 4px 0 4px 8px;
+
+  &:hover { 
+    background-color: darken($user-primary-colour, 5%); 
+  }
+  &:active {
+    background-color: darken($user-primary-colour, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f067" ;
+    color:white;
+    font-weight: 900;
+    font-size: 1.45rem;
+    position: relative;
+  }
+  @include media-breakpoint-down(sm){
+    content: 'New';
+  }
+  @include media-breakpoint-down(xs){
+    padding: 0;
+    width: 36px;
+    
+  }
+  @include media-breakpoint-up(sm){
+    order: 5;
+  }
+}
+
+// New Item Button
+.page-title-wrapper .btn-pt-new:after{
+  content: 'New Item';
+  padding-left: 4px;
+  @include media-breakpoint-down(sm){
+    content: 'New';
+    padding-left: 4px;
+  }
+  @include media-breakpoint-down(xs){
+    display: none;
+  }
+}
+// New Swap Post Button
+.page-title-wrapper .btn-pt-new.new-swap-post:after{
+  content: 'New Swap Post';
+  padding-left: 4px;
+  @include media-breakpoint-down(sm){
+    content: 'New';
+    padding-left: 4px;
+  }
+  @include media-breakpoint-down(xs){
+    display: none;
+  }
+}
