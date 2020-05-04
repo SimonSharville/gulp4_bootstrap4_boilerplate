@@ -24059,6 +24059,14 @@ body {
   background: #5a5656;
 }
 
+.sa-sidemenu.closed .menu-list {
+  overflow-y: hidden;
+}
+
+.sa-sidemenu.closed ul.sub-menu {
+  display: none;
+}
+
 .sa-sidemenu.closed .menu-section-heading .item {
   opacity: 0;
   visibility: hidden;
