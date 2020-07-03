@@ -1,0 +1,33 @@
+// UI Styles
+// Used only for the UI Build
+
+header{
+  height: 100px;
+}
+
+.bs-anchor{
+  padding-top: 120px;
+}
+
+.icon-bg{
+  background-color: lightgrey;
+  padding: 0.5rem
+}
+
+.icon-wrap{
+  border: 1px solid $sa-grey-04;
+  border-radius: 6px;
+  padding: 5px 8px;
+  margin-bottom: 16px;
+  .icon-name{
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+// TEMP BG colours for alignment
+// .row {background: rgba( pink, .5 ) }
+
+// .col, [class*="col-"] {
+//   background: rgba( lightblue, .5 )
+// }

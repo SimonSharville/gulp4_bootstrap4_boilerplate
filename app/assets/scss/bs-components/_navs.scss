@@ -19,6 +19,9 @@ $tab-number-bg:           $sa-grey-12;
     color: $sa-nav-colour;
     background-color: $tab-colour;
     margin-bottom: 1px;
+    max-height: 39px;
+    height: auto;
+    padding: 0.5rem 0.5rem;
     &:visited{
       color: $sa-nav-colour;
     }
@@ -90,6 +93,23 @@ $tab-number-bg:           $sa-grey-12;
   &:focus,
   &:active{
     background-color: $sa-nav-colour;
+  }
+}
+
+// Justified Nav Pills ------ 
+.nav.nav-pills.nav-justified{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 -2px 8px -2px;
+
+  .nav-item{ margin-bottom: 4px;}
+  .nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 2px;
   }
 }
 

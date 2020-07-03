@@ -54,14 +54,11 @@
   }
 }
 
-// .page-state{
-//   float: right;
-// }
 
 .page-title-actions{
   display: flex;
   align-items: center;
-  max-width: 50%;
+  // max-width: 50%;
   padding: 2px 0;
   justify-content: flex-end;
 }
@@ -72,10 +69,35 @@
 }
 
 .page-title-wrapper .page-title-actions .input-group div,
-.page-title-wrapper .page-title-actions .input-group span,
-.page-title-wrapper .page-title-actions .input-group .btn{
+.page-title-wrapper .page-title-actions .input-group span{
   margin-left: 0px;
 }
+.page-title-wrapper .page-title-actions .input-group .select2-selection.select2-selection--single{
+  margin-left: -3px;
+}
+
+
+// Small Screens ============
+@include media-breakpoint-down(xs){
+  .page-title-wrapper{
+    flex-wrap: wrap;
+  }
+  .page-title{
+    max-width: calc(100% - 42px);
+  }
+
+  .page-title-actions{
+    // min-width: 100%;
+    // width: 100%;
+  }
+  
+  .page-title-actions.pt-btn-only{
+    min-width: 42px;
+    width: 42px;
+  }
+}
+
+
 
 .page-title-actions .input-group{
   flex-wrap: nowrap;
@@ -93,7 +115,18 @@
   height: 36px;
 }
 
+.page-title-actions .input-group.plus-append .select2-container--bootstrap .select2-selection--single {
+  border: 1px solid $user-primary-colour !important;
+}
+
+
 .page-title-actions form{ justify-content: flex-end;}
+
+.page-title-actions .searchbar-sard .form-control { 
+  @include media-breakpoint-down(md){
+    max-width: 120px; 
+  }
+}
 
 
 .page-title-wrapper + .page-title-actions{ margin-top: 8px;}
@@ -258,6 +291,7 @@
 .page-state .current-state.draft{
   background-image: url("../../assets/rag-icons/rag-pt-draft@1x.png");
 }
+
 .page-state .current-state.Submitted,
 .page-state .current-state.submitted{
   background-image: url("../../assets/rag-icons/rag-pt-submitted@2x.png");
@@ -285,27 +319,57 @@
 
 // New Item Buttons -----------------------------
 
-.btn-pt-new{
+.btn-pt{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   background-color: $user-primary-colour;
   color: white!important;
   height: 36px;
   padding: 0 6px;
   margin: 4px 0 4px 8px;
+  
+  &:hover { background-color: darken($user-primary-colour, 5%); }
+  &:active { background-color: darken($user-primary-colour, 10%); }
+  &:focus, &.focus { box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25); }
 
-  &:hover { 
-    background-color: darken($user-primary-colour, 5%); 
+  @include media-breakpoint-down(xs){
+    padding: 0;
+    width: 36px;
   }
-  &:active {
-    background-color: darken($user-primary-colour, 10%);
+    
+  @include media-breakpoint-up(sm){
+    order: 5;
   }
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
+}
+
+.btn-pt.btn-success{ background-color: $sa-success; }
+.btn-pt.btn-info{ background-color: $sa-info; }
+.btn-pt.btn-warning{ background-color: $sa-warning; }
+.btn-pt.btn-danger{ background-color: $sa-danger; }
+.btn-pt.btn-alert{ background-color: $sa-alert; }
+
+
+// elements inside the .btn-pt
+.btn-pt{
+  i {
+    font-size: 1.4rem;
+    top: 0;
+    margin-left: 2px;
+    &.fa-pencil-alt{ font-size: 1.3rem;}
   }
+  span.btn-pt-text{ margin-left: 6px;}
+  
+  @include media-breakpoint-down(xs){
+    span.btn-pt-text{ display: none; }
+  }
+}
+
+
+
+.btn-pt-new{
+  min-width: 36px;
   &::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f067" ;
@@ -314,25 +378,21 @@
     font-size: 1.45rem;
     position: relative;
   }
-  @include media-breakpoint-down(sm){
-    content: 'New';
-  }
-  @include media-breakpoint-down(xs){
-    padding: 0;
-    width: 36px;
-    
-  }
-  @include media-breakpoint-up(sm){
-    order: 5;
-  }
-}
 
-.btn-pt-new{
-  span.new{ 
-    margin: 0 4px 0 0; 
+  .btn-pt-new-text{ 
+    // display: block;
+    span.new{ 
+      margin-left: 0; 
+      // display: inline-block;
+    } 
+    span.item{ 
+      margin-left: 4px;  
+      // display: inline-block;
+    }
   }
-  span.item{ margin: 0; }
+
   @include media-breakpoint-down(sm){
+    span.new{content: 'New'; } 
     span.item{ display: none; }
   }
   @include media-breakpoint-down(xs){
@@ -340,29 +400,93 @@
   }
 }
 
+// Page Status - Puts Icon directly after the page title
 
-// UI ONLY --------------------------------------
-// New Item Button
-.page-title-wrapper .btn-pt-new:after{
-  content: 'New Item';
-  padding-left: 4px;
-  @include media-breakpoint-down(sm){
-    content: 'New';
-    padding-left: 4px;
+.page-status .page-title .page:after{
+  font-family: ("sard-icons", "Font Awesome 5 Free");
+  line-height: initial;
+  position: relative;
+}
+
+
+.page-status.live .page-title .page:after{
+  content: "\e105" ;
+  font-weight: 900;
+  color: $sa-warning;
+  top: 4px;
+}
+
+.page-status.published .page-title .page:after{
+  content: "\e0bc";
+  color: $sa-success;
+  top: 4px;
+}
+
+.page-status.draft .page-title .page:after{
+  content: "\e0ab";
+  color: $RAG-draft;
+}
+
+.page-status.approved .page-title .page:after{
+  content: "\e09e";
+  color: $sa-success;
+  top: 4px;
+}
+
+.page-status.rejected .page-title .page:after{
+  content: "\e0a8";
+  color: $sa-danger;
+  top: 4px;
+}
+
+.page-status.pending .page-title .page:after{
+  content: "\e109";
+  color: $RAG-draft;
+  top: 4px;
+}
+
+.page-status.review .page-title .page:after{
+  content: "\e0bb";
+  color: $RAG-draft;
+  top: 4px;
+}
+
+
+
+
+// Page Title Search ============================
+// This is diferent from the .searchbar-sard but look similar
+// Used on Admin Users, Admin User Stats
+
+.page-title-search{
+  display: flex;
+  flex-flow: row nowrap;
+  .form-control{
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: $user-primary-colour;
+    width: 100%;
+    width: auto;
   }
-  @include media-breakpoint-down(xs){
-    display: none;
+  .btn.btn-search{
+    margin-left: -5px;
+  }
+  .form-group{
+    display: inline-block;
+    padding-left: 4px;
+    margin-bottom: 0;
+  }
+  .searchbar-sard{
+    .form-control{
+      max-width: auto;
+      margin-right: -30px;
+      padding-right: 8px;
+    }
+  }
+
+  .select2-container--bootstrap .select2-selection--single{
+    border-color: $user-primary-colour!important;
   }
 }
-// New Swap Post Button
-.page-title-wrapper .btn-pt-new.new-swap-post:after{
-  content: 'New Swap Post';
-  padding-left: 4px;
-  @include media-breakpoint-down(sm){
-    content: 'New';
-    padding-left: 4px;
-  }
-  @include media-breakpoint-down(xs){
-    display: none;
-  }
-}
+

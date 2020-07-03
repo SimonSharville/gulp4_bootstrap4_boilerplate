@@ -88,6 +88,11 @@
   }
 }
 
+.card > div:not(.card-header) + .card-body{
+  border-top-left-radius: $sa-border-radius;
+  border-top-right-radius: $sa-border-radius;
+  overflow: hidden;
+}
 
 // SARD Cards ===================================
 
@@ -113,6 +118,7 @@
     border-color: $sa-heading-bg!important;
   }
 }
+
 
 
 .card.card-primary{
@@ -319,6 +325,7 @@
   border-color: $sa-grey-04;
   & .card-header, .card-footer{
     background-color: white;
+    @include roboto-regular;
     color: $text;
     & .text-muted { 
       color: lighten($text, 25%) !important;
@@ -341,7 +348,12 @@
   & .card-body hr{
     border-color: $sa-grey-04;
   }
+
+  .table-sard td, .table-sard th {
+    border-color: $sa-grey-04;
+  }
 }
+
 .card.card-white.outline{
   background-color: transparent;
   border-color: white;
@@ -374,4 +386,19 @@
 .card-body-white{
   background-color: white;
   border-radius: $sa-inner-border-radius;
+}
+
+// Various ------------------
+.card-deck{
+  margin-bottom: 16px;
+}
+
+.card-full-height{
+  height: calc(100% - 16px);
+}
+
+.card-buttons{
+  // text-align: right;
+  border-top: 1px solid white;
+  padding: 8px 0 0 0;
 }

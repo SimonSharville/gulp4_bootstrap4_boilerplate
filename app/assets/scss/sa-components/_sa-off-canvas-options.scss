@@ -6,7 +6,6 @@ body { -ms-overflow-style: scrollbar; }
 
 body.plus-option-tab{
   .container-fluid{
-    // padding-left: 40px;
     padding-right: 34px;
   }
 
@@ -263,7 +262,7 @@ body.options-nav-expanded {
 }
 
 .options-menu .main-menu li.edit a:before{
-  content: '\f303';
+  content: '\f044';
   font-weight: 900;
   padding-right: 12px;
 }

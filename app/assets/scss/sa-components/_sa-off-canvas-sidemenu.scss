@@ -184,6 +184,7 @@ $transition-time:   320ms;
   }
   @include media-breakpoint-down(sm){
     padding-left: 50px;
+    padding-right: 20px;
   }
 }
 

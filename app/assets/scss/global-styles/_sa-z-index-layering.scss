@@ -1,0 +1,23 @@
+// z-index layering =============================
+// This is for ordering the layers of key items.
+// Try to keep them in order of height and place file last in styles list
+
+.rc-time-picker-panel { z-index: 5200; }
+
+.date-picker-react { z-index: 5100; }
+
+.react-calendar-wrapper { z-index: 5100; }
+
+.modal{ z-index: 5050; }
+
+.navbar.fixed-top{ z-index: 5002; }
+
+#navbar-admin{ z-index: 5001; }
+
+#breadcrumbs{ z-index: 5000; }
+
+.sa-sidemenu{ z-index: 4999; }
+
+.sa-footer{ z-index: 5000; }
+
+.sa-footer #accordion{ z-index: 5000; }

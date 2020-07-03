@@ -47,6 +47,12 @@ label {
   }
 }
 
+.form-group .form-buttons[class*='col-sm-']{
+  @include media-breakpoint-down(xs){
+    margin-top: 8px;
+  }
+}
+
 .form-group.row, .form-group .row{
   margin-right: -4px;
   margin-left: -4px;

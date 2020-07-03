@@ -40,17 +40,17 @@ $sa-blog:                   $sa-blue;
 
 
 // RAG Colours =================
-$sa-RAG-danger:                $sa-red;
-$sa-RAG-warning:               $sa-yellow;
-$sa-RAG-success:               $sa-green;
-$sa-RAG-approved:              $sa-green;
-$sa-RAG-complete:              $sa-green;
-$sa-RAG-recommended:           $sa-orange;
-$sa-RAG-archived:              $sa-teal;
-$sa-RAG-draft:                 $sa-yellow;
-$sa-RAG-submitted:             $sa-lime;
-$sa-RAG-due:                   $sa-orange;
-$sa-RAG-abandoned:             $sa-red;
+$RAG-danger:                $sa-red;
+$RAG-warning:               $sa-yellow;
+$RAG-success:               $sa-green;
+$RAG-approved:              $sa-green;
+$RAG-complete:              $sa-green;
+$RAG-recommended:           $sa-orange;
+$RAG-archived:              $sa-teal;
+$RAG-draft:                 $sa-lime;
+$RAG-submitted:             $sa-lime;
+$RAG-due:                   $sa-orange;
+$RAG-abandoned:             $sa-red;
 
 // Dark Colours ================
 $sa-turq-dark:              #007C7C;
@@ -105,12 +105,26 @@ $sa-grey-18:                #211F0F;
 $sa-grey-19:                #0e0e0e;
 
 //  Other Colours ==============
-$sa-active:                $sa-grey-04; // Used in Bootstrap Overrides Table Hover line 1030.
-$sa-success:               $sa-green;
-$sa-info:                  #00a0e0;
-$sa-warning:               $sa-yellow;
-$sa-danger:                $sa-red;
-$sa-alert:                 $sa-pink;
+$sa-active:                 $sa-grey-04; // Used in Bootstrap Overrides Table Hover line 1030.
+$sa-success:                $sa-green;
+$sa-info:                   #00a0e0;
+$sa-warning:                $sa-yellow;
+$sa-danger:                 $sa-red;
+$sa-alert:                  $sa-pink;
+$sa-edit:                   $sa-grey-14;
+
+$sa-success-dark:           darken($sa-success, 10%);
+$sa-success-very-dark:      darken($sa-success, 20%);
+$sa-info-dark:              darken($sa-info, 10%);
+$sa-info-very-dark:         darken($sa-info, 20%);
+$sa-warning-dark:           darken($sa-warning, 10%);
+$sa-warning-very-dark:      darken($sa-warning, 20%);
+$sa-danger-dark:            darken($sa-danger, 10%);
+$sa-danger-very-dark:       darken($sa-danger, 20%);
+$sa-alert-dark:             darken($sa-alert, 10%);
+$sa-alert-very-dark:        darken($sa-alert, 20%);
+$sa-edit-dark:              darken($sa-edit, 10%);
+$sa-edit-very-dark:         darken($sa-edit, 20%);
 
 //colours used for admin Options Menu buttons
 $index_colour: #BF14AE;

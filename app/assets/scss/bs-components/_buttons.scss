@@ -161,6 +161,58 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
+.btn-show, .btn-view{
+  background-color: $success;
+  color: white!important;
+  &:hover { 
+    background-color: darken($success, 5%); 
+  }
+  &:active {
+    background-color: darken($success, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($success, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f06e" ;
+    color:white;
+    font-size: 1.45rem;
+    line-height: 0;
+    position: relative;
+    top: 3.5px;
+    left: -4px;
+  }
+  &.btn-lg::before{
+    left: -5px;
+  }
+  &.btn-sm::before{
+    left: -3px;
+  }
+  &.btn-xs::before{
+    left: -2px;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.65rem;
+    &::before{
+      left: 0px;
+    }
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.25rem;
+    &::before{
+      left: 0px;
+    }
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.2rem;
+    &::before{
+      left: 0px;
+    }
+  }
+}
+
 .btn-submit{
   background-color: $success;
   color: white!important;
@@ -300,6 +352,32 @@ $btn-default-colour: $sa-grey-14;
     font-family: "Font Awesome 5 Free"; 
     content: "\f057" ;
     color:white;
+    font-size: 1.45rem;
+    line-height: 0;
+    position: relative;
+    top: 3.5px;
+    left: -5px;
+  }
+}
+
+.btn-suspend{
+  background-color: $sa-warning;
+  color: black!important;
+  &:hover { 
+    background-color: darken($sa-warning, 5%); 
+  }
+  &:active {
+    background-color: darken($sa-warning, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($sa-warning, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f05e" ;
+    font-weight: 900;
+    color:black;
     font-size: 1.45rem;
     line-height: 0;
     position: relative;
@@ -589,6 +667,7 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
+.btn-update,
 .btn-refresh{
   background-color: $user-primary-colour;
   color: white!important;
@@ -917,3 +996,5 @@ $btn-default-colour: $sa-grey-14;
 .card-body.buttons{
   margin-top: -8px;
 }
+
+

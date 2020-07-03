@@ -12,55 +12,54 @@ $sa-table-dark-head-bg:     $sa-grey-18;
 
 
 // Table Responsive ---------
-.container{
-  .table-responsive{
-    margin: -8px -10px -10px -10px;
+.table-responsive{
+  margin: -10px -10px -10px -10px;
+  width: calc(100% + 20px);
+  .table-sard{
+    margin: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm{
+    margin: -10px -10px -10px -10px;
     width: calc(100% + 20px);
     .table-sard{
       margin: 0;
     }
   }
+}
 
-  @media (max-width: 575.98px) {
-    .table-responsive-sm{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
-    }
-  }
-
-  @media (max-width: 767.98px) {
-    .table-responsive-md{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
-    }
-  }
-
-  @media (max-width: 991.98px) {
-    .table-responsive-lg{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
-    }
-  }
-
-  @media (max-width: 1199.98px) {
-    .table-responsive-xl{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
+@media (max-width: 767.98px) {
+  .table-responsive-md{
+    margin: -10px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
     }
   }
 }
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg{
+    margin: -10px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl{
+    margin: -10px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
+  }
+}
+
 
 // Table Responsive in Cards etc
 
@@ -368,3 +367,104 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 .tcol-fixed-5, .tcol-5px      { max-width:5px!important; min-width:5px!important; }
 
 .no-wrap { white-space: normal!important; }
+
+
+
+// table cell states ----------------------------
+
+td.state{
+  &::before{
+    font-family: "sard-icons";
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+  }
+}
+td.state.rejected::before{
+  content: "\e0a8";
+  color: $sa-danger;
+}
+
+td.state.danger::before{
+  content: "\e0a7";
+  color: $sa-danger;
+}
+
+td.state.draft::before{
+  content: "\e0ab";
+  color: $RAG-draft;
+}
+
+td.state.alert::before{
+  content: "\e099";
+  color: $sa-warning;
+}
+
+td.state.warning::before{
+  content: "\e0bf";
+  color: $sa-warning;
+}
+
+td.state.archived::before{
+  content: "\e0a0";
+  color: $sa-teal;
+}
+
+td.state.approved::before{
+  content: "\e09e";
+  color: $sa-success;
+}
+
+td.state.complete::before{
+  content: "\e0a3";
+  color: $sa-success;
+}
+
+td.state.due::before{
+  content: "\e0af";
+  color: $sa-orange;
+}
+
+td.state.na::before{
+  content: "\e0b1";
+  color: $sa-grey-16;
+}
+
+td.state.recommended::before{
+  content: "\e0b3";
+  color: $sa-orange;
+}
+
+td.state.live::before{
+  content: "\e105" ;
+  font-size: 1.0rem;
+  color: $sa-warning;
+  margin: 0px 2px 0px -2px;
+  top: 4px;
+  left: -1px;
+}
+
+td.state.submitted::before{
+  content: "\e0b7";
+  color: $sa-lime;
+}
+
+td.state.pending::before{
+  content: "\e109";
+  color: $sa-lime;
+}
+
+td.state.success::before{
+  content: "\e0bc";
+  color: $sa-success;
+}
+
+td.state.published::before{
+  content: "\e0bc";
+  color: $sa-success;
+}
+
+td.state.review::before{
+  content: "\e0bb";
+  color: $RAG-draft;
+}

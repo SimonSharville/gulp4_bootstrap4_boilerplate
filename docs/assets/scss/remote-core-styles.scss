@@ -45,17 +45,17 @@ $sa-blog:                   $sa-blue;
 
 
 // RAG Colours =================
-$sa-RAG-danger:                $sa-red;
-$sa-RAG-warning:               $sa-yellow;
-$sa-RAG-success:               $sa-green;
-$sa-RAG-approved:              $sa-green;
-$sa-RAG-complete:              $sa-green;
-$sa-RAG-recommended:           $sa-orange;
-$sa-RAG-archived:              $sa-teal;
-$sa-RAG-draft:                 $sa-yellow;
-$sa-RAG-submitted:             $sa-lime;
-$sa-RAG-due:                   $sa-orange;
-$sa-RAG-abandoned:             $sa-red;
+$RAG-danger:                $sa-red;
+$RAG-warning:               $sa-yellow;
+$RAG-success:               $sa-green;
+$RAG-approved:              $sa-green;
+$RAG-complete:              $sa-green;
+$RAG-recommended:           $sa-orange;
+$RAG-archived:              $sa-teal;
+$RAG-draft:                 $sa-lime;
+$RAG-submitted:             $sa-lime;
+$RAG-due:                   $sa-orange;
+$RAG-abandoned:             $sa-red;
 
 // Dark Colours ================
 $sa-turq-dark:              #007C7C;
@@ -110,12 +110,26 @@ $sa-grey-18:                #211F0F;
 $sa-grey-19:                #0e0e0e;
 
 //  Other Colours ==============
-$sa-active:                $sa-grey-04; // Used in Bootstrap Overrides Table Hover line 1030.
-$sa-success:               $sa-green;
-$sa-info:                  #00a0e0;
-$sa-warning:               $sa-yellow;
-$sa-danger:                $sa-red;
-$sa-alert:                 $sa-pink;
+$sa-active:                 $sa-grey-04; // Used in Bootstrap Overrides Table Hover line 1030.
+$sa-success:                $sa-green;
+$sa-info:                   #00a0e0;
+$sa-warning:                $sa-yellow;
+$sa-danger:                 $sa-red;
+$sa-alert:                  $sa-pink;
+$sa-edit:                   $sa-grey-14;
+
+$sa-success-dark:           darken($sa-success, 10%);
+$sa-success-very-dark:      darken($sa-success, 20%);
+$sa-info-dark:              darken($sa-info, 10%);
+$sa-info-very-dark:         darken($sa-info, 20%);
+$sa-warning-dark:           darken($sa-warning, 10%);
+$sa-warning-very-dark:      darken($sa-warning, 20%);
+$sa-danger-dark:            darken($sa-danger, 10%);
+$sa-danger-very-dark:       darken($sa-danger, 20%);
+$sa-alert-dark:             darken($sa-alert, 10%);
+$sa-alert-very-dark:        darken($sa-alert, 20%);
+$sa-edit-dark:              darken($sa-edit, 10%);
+$sa-edit-very-dark:         darken($sa-edit, 20%);
 
 //colours used for admin Options Menu buttons
 $index_colour: #BF14AE;
@@ -8461,11 +8475,11 @@ a.close.disabled {
 
 @font-face {
   font-family: "sard-icons";
-  src:url("../fonts/sard-icons/sard-icons.eot");
-  src:url("../fonts/sard-icons/sard-icons.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/sard-icons/sard-icons.woff") format("woff"),
-    url("../fonts/sard-icons/sard-icons.ttf") format("truetype"),
-    url("../fonts/sard-icons/sard-icons.svg#sard-icons") format("svg");
+  src: asset-url("sard-icons/sard-icons.eot");
+  src: asset-url("sard-icons/sard-icons.eot?#iefix") format("embedded-opentype"),
+    asset-url("sard-icons/sard-icons.woff") format("woff"),
+    asset-url("sard-icons/sard-icons.ttf") format("truetype"),
+    asset-url("sard-icons/sard-icons.svg#sard-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -9282,6 +9296,22 @@ a.close.disabled {
 .si-location-circle-o:before {
   content: "\e104";
 }
+.si-status-live:before {
+  content: "\e105";
+}
+.si-status-live-circle:before {
+  content: "\e106";
+}
+.si-status-live-circle-o:before {
+  content: "\e107";
+}
+.si-status-pending-circle:before {
+  content: "\e108";
+}
+.si-status-pending:before {
+  content: "\e109";
+}
+
 // Sard icon styles. 
 // These mimic the font awesome styles with some adjustment tweaks.
 
@@ -9502,8 +9532,7 @@ a.close.disabled {
 :root .si-flip-vertical,
 :root .si-flip-both {
   -webkit-filter: none;
-          filter: none; 
-}
+          filter: none; }
 
 .si-stack {
   display: inline-block;
@@ -9511,103 +9540,109 @@ a.close.disabled {
   line-height: 2em;
   position: relative;
   vertical-align: middle;
-  width: 2.5em; 
-}
+  width: 2.5em; }
 
 .si-stack-1x,
 .si-stack-2x {
   left: 0;
   position: absolute;
   text-align: center;
-  width: 100%; 
-}
+  width: 100%; }
 
 .si-stack-1x {
-  line-height: inherit; 
-}
+  line-height: inherit; }
 
-.si-stack-2x { font-size: 2em; }
+.si-stack-2x {
+  font-size: 2em; }
 
-.si-inverse { color: #fff; }
+.si-inverse {
+  color: #fff; }
 
 // si Status Icons colours ===================
 
 .si-reject,
-.si-reject-o,
 .si-reject-circle,
 .si-reject-circle-o,
 .si-status-danger, 
 .si-status-danger-o,
 .si-status-danger-circle,
 .si-status-danger-circle-o {
-  color: $sa-RAG-danger; 
+  color: $RAG-danger;
 }
+
 .si-status-success, 
 .si-status-success-o,
 .si-status-success-circle, 
 .si-status-success-circle-o {
-  color: $sa-RAG-success; 
+  color: $RAG-success;
 }
 .si-status-complete, 
 .si-status-complete-o,
 .si-status-complete-circle, 
 .si-status-complete-circle-o {
-  color: $sa-RAG-success; 
+  color: $RAG-success;
 }
 .si-status-warning, 
 .si-status-warning-o,
 .si-status-warning-circle, 
 .si-status-warning-circle-o {
-  color: $sa-RAG-warning; 
+  color: $RAG-warning;
 }
 .si-status-alert, 
 .si-status-alert-o,
 .si-status-alert-circle, 
 .si-status-alert-circle-o {
-  color: $sa-RAG-warning; 
+  color: $RAG-warning;
 }
-.si-approve, 
-.si-approve-o,
-.si-approve-circle,
-.si-approve-circle-o,
 .si-status-approved, 
 .si-status-approved-o,
 .si-status-approved-circle, 
 .si-status-approved-circle-o {
-  color: $sa-RAG-approved; 
+  color: $RAG-approved;
 }
 .si-status-recommended, 
 .si-status-recommended-o,
 .si-status-recommended-circle, 
 .si-status-recommended-circle-o {
-  color: $sa-RAG-recommended; 
+  color: $RAG-recommended;
 }
 .si-status-submitted, 
 .si-status-submitted-o,
 .si-status-submitted-circle, 
 .si-status-submitted-circle-o {
-  color: $sa-RAG-submitted; 
+  color: $RAG-submitted;
 }
 .si-status-archived, 
 .si-status-archived-o,
 .si-status-archived-circle, 
 .si-status-archived-circle-o  {
-  color: $sa-RAG-archived; 
+  color: $RAG-archived;
 }
 .si-status-due, 
 .si-status-due-o,
 .si-status-due-circle, 
 .si-status-due-circle-o {
-  color: $sa-RAG-due; 
+  color: $RAG-due;
 }
 .si-status-draft, 
 .si-status-draft-o,
 .si-status-draft-circle, 
 .si-status-draft-circle-o
- {color: $sa-RAG-draft; 
+ {color: $RAG-draft;
 }
 
-// // si Page Icons colours ==================
+.si-status-pending, 
+.si-status-pending-circle {
+  color: $RAG-submitted;
+}
+
+.si-status-live, 
+.si-status-live-circle, 
+.si-status-live-circle-o {
+  color: $RAG-warning;
+}
+
+// si Page Icons colours ==================
 
 .si-sard-faqs,
 .si-sard-faqs-circle,
@@ -9672,21 +9707,29 @@ a.close.disabled {
 .si-prod-foundry, .si-prod-foundry-o { color: $sa-foundry;}
 
 // Page Status Icon Colours ================
-.si-page-approved, .si-page-approved-o { color: $sa-RAG-approved;}
-.si-page-archived, .si-page-archived-o { color: $sa-RAG-archived;}
-.si-page-complete, .si-page-complete-o { color: $sa-RAG-complete;}
-.si-page-draft, .si-page-draft-o { color: $sa-RAG-draft;}
-.si-page-due, .si-page-due-o { color: $sa-RAG-due;}
-.si-page-recommended, .si-page-recommended-o { color: $sa-RAG-recommended;}
-.si-page-submitted, .si-page-submitted-o { color: $sa-RAG-submitted;}
+.si-page-approved, .si-page-approved-o { color: $RAG-approved;}
+.si-page-archived, .si-page-archived-o { color: $RAG-archived;}
+.si-page-complete, .si-page-complete-o { color: $RAG-complete;}
+.si-page-draft, .si-page-draft-o { color: $RAG-draft;}
+.si-page-due, .si-page-due-o { color: $RAG-due;}
+.si-page-recommended, .si-page-recommended-o { color: $RAG-recommended;}
+.si-page-submitted, .si-page-submitted-o { color: $RAG-submitted;}
 
+// Example
+// .scrollToTop:before{
+//   content: "\e016";
+//   font-family: "sard-icons";
+//   color:white;
+//   font-size: 1.5em;
+//   border-radius: 50%;
+// }
 
 
 
 // ==================================================================
 // Font Awesome Icons ===============================================
 
-// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+//https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 // Example of how to include Font Awesome in SCSS when linked from local
 // .alert-close {
 //   // @include fa-icon;
@@ -9700,90 +9743,75 @@ a.close.disabled {
 
 // https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
 // Example of how to include Font Awesome in SCSS when linked from remote cdn
-// .fa-icon{
-//   display: inline-block;
-//   font-style: normal;
-//   font-variant: normal;
-//   text-rendering: auto;
-//   -webkit-font-smoothing: antialiased; 
-//   -moz-osx-font-smoothing: grayscale;
-// }
+.fa-icon{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
 
-// .alert-close::before {
-//   font-family: "Font Awesome 5 Free"; 
-//   content: "\f057";  // <i class="fas fa-times-circle"></i>
-//   font-weight: 400;  // Set the font-weight: 900 (Solid), 400 (Regular or Brands), 300 (Light(pro))
-// }
+.alert-close::before {
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f057";  // <i class="fas fa-times-circle"></i>
+  font-weight: 400;  // Set the font-weight: 900 (Solid), 400 (Regular or Brands), 300 (Light(pro))
+}
 
-// Example
-// .scrollToTop:before{
-//   content: "\e016";
-//   font-family: "sard-icons";
-//   color:white;
-//   font-size: 1.5em;
-//   border-radius: 50%;
-// }
+// Action Icon Colours ==========================
+
+.fa-trash, .fa-trash-alt { 
+  color: $sa-danger;
+  &:focus, &:hover{
+    color: $sa-danger-dark;
+  }
+  &:active{
+    color: $sa-danger-very-dark
+  }
+}
+
+.fa-edit, .fa-pencil-alt { 
+  color: $sa-edit;
+  &:focus, &:hover{
+    color: $sa-edit-dark;
+  }
+  &:active{
+    color: $sa-edit-very-dark
+  }
+}
+
+.si-calendar { 
+  color: $sa-edit;
+  &:focus, &:hover{
+    color: $sa-edit-dark;
+  }
+  &:active{
+    color: $sa-edit-very-dark
+  }
+}
+
+.fa-eye { 
+  color: $sa-edit;
+  &:focus, &:hover{
+    color: $sa-edit-dark;
+  }
+  &:active{
+    color: $sa-edit-very-dark
+  }
+}
+
+.fa-chart-bar { 
+  color: $sa-edit;
+  &:focus, &:hover{
+    color: $sa-edit-dark;
+  }
+  &:active{
+    color: $sa-edit-very-dark
+  }
+}
 
 // Global Styles
-// Scrollbars
-
-//  Works in Chrome, Safari
-  ::-webkit-scrollbar {
-      width: 12px;
-  }
-   
-  ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-      border-radius: 10px;
-      background-color: white;
-  }
-   
-  ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: $sa-grey-12;
-      box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-  }
-
-// IE 11
-body, html {
-  scrollbar-face-color: $sa-grey-12 !important;
-  scrollbar-shadow-color: darken($sa-grey-12, 10%) !important;
-  // scrollbar-highlight-color: red !important;
-  // scrollbar-3dlight-color: red !important;
-  // scrollbar-darkshadow-color: red !important;
-  scrollbar-track-color: $sa-grey-04 !important;
-  scrollbar-arrow-color: $sa-grey-12 !important;
-}
-/* ===================================================================================================== */
-/* Smooth Scroll ======================================================================================= */
-// http://www.paulund.co.uk/how-to-create-an-animated-scroll-to-top-with-jquery
-
-.scrollToTop{
-  width:30px; 
-  height:30px;
-  text-align:center; 
-  position:relative;
-  bottom:-3px;
-  // left:calc(50% - 15px);
-  display:none;
-  color:white;
-  z-index: 1000;
-}
-.scrollToTop:before{
-  font-family: "sard-icons";
-  content: "\e016";
-  color:white;
-  font-size: 1.5em;
-  border-radius: 50%;
-}
-
-.scrollToTop:hover:before{
-  color:$user-primary-colour;
-}
-
-// SARD Variables
-
-// Responsive Media Queries ---------------------
+// Media Queries ================================
 // http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
 
 $break-sm: 576px;
@@ -10012,7 +10040,63 @@ $break-xxl: 1590px;
     max-width: calc(100% - 45px);
   }
 }
-// ==================================================================
+// Scrollbars
+
+//  Works in Chrome, Safari
+  ::-webkit-scrollbar {
+      width: 12px;
+  }
+   
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+      border-radius: 10px;
+      background-color: white;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $sa-grey-12;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
+
+// IE 11
+body, html {
+  scrollbar-face-color: $sa-grey-12 !important;
+  scrollbar-shadow-color: darken($sa-grey-12, 10%) !important;
+  // scrollbar-highlight-color: red !important;
+  // scrollbar-3dlight-color: red !important;
+  // scrollbar-darkshadow-color: red !important;
+  scrollbar-track-color: $sa-grey-04 !important;
+  scrollbar-arrow-color: $sa-grey-12 !important;
+}
+/* ===================================================================================================== */
+/* Smooth Scroll ======================================================================================= */
+// http://www.paulund.co.uk/how-to-create-an-animated-scroll-to-top-with-jquery
+
+.scrollToTop{
+  width:30px; 
+  height:30px;
+  text-align:center; 
+  position:relative;
+  bottom:-3px;
+  // left:calc(50% - 15px);
+  display:none;
+  color:white;
+  z-index: 1000;
+}
+.scrollToTop:before{
+  content: "\e016";
+  font-family: "sard-icons";
+  color:white;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.scrollToTop:hover:before{
+  color:$user-primary-colour;
+}
+
+// SARD Variables ===============================
 
 // Spacing
 // Based on 16px to 1 rem
@@ -10238,29 +10322,7 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
 
 
 
-// Layering ==============================
-.navbar.fixed-top{
-  z-index: 5002;
-}
-#navbar-admin{
-  z-index: 5001;
-}
-#breadcrumbs{
-  z-index: 5000;
-}
-.sa-sidemenu{
-  z-index: 4999;
-}
-.sa-footer{
-  z-index: 5000;
-}
-.sa-footer #accordion{
-  z-index: 5000;
-}
 
-.modal{
-  z-index: 5050;
-}
 
 
 // Display / Hide for various screen sizes
@@ -10289,7 +10351,9 @@ $sa-box-shadow-inset:   inset 1px 1px 2px 0px rgba(0,0,0,0.2);
   .hide-laptop-up { display: none !important;}
 }
 
+// Various ------------------
 
+.no-border { border: none !important;}
 // Typography
 
 // Roboto =================================================================
@@ -11658,6 +11722,58 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
+.btn-show, .btn-view{
+  background-color: $success;
+  color: white!important;
+  &:hover { 
+    background-color: darken($success, 5%); 
+  }
+  &:active {
+    background-color: darken($success, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($success, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f06e" ;
+    color:white;
+    font-size: 1.45rem;
+    line-height: 0;
+    position: relative;
+    top: 3.5px;
+    left: -4px;
+  }
+  &.btn-lg::before{
+    left: -5px;
+  }
+  &.btn-sm::before{
+    left: -3px;
+  }
+  &.btn-xs::before{
+    left: -2px;
+  }
+  &.btn-notext.btn-lg{
+    padding: .575rem 0.65rem;
+    &::before{
+      left: 0px;
+    }
+  }
+  &.btn-notext.btn-sm{
+    padding: .25rem 0.25rem;
+    &::before{
+      left: 0px;
+    }
+  }
+  &.btn-notext.btn-xs{
+    padding: .2rem 0.2rem;
+    &::before{
+      left: 0px;
+    }
+  }
+}
+
 .btn-submit{
   background-color: $success;
   color: white!important;
@@ -11797,6 +11913,32 @@ $btn-default-colour: $sa-grey-14;
     font-family: "Font Awesome 5 Free"; 
     content: "\f057" ;
     color:white;
+    font-size: 1.45rem;
+    line-height: 0;
+    position: relative;
+    top: 3.5px;
+    left: -5px;
+  }
+}
+
+.btn-suspend{
+  background-color: $sa-warning;
+  color: black!important;
+  &:hover { 
+    background-color: darken($sa-warning, 5%); 
+  }
+  &:active {
+    background-color: darken($sa-warning, 10%);
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($sa-warning, .25);
+  }
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f05e" ;
+    font-weight: 900;
+    color:black;
     font-size: 1.45rem;
     line-height: 0;
     position: relative;
@@ -12086,6 +12228,7 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
+.btn-update,
 .btn-refresh{
   background-color: $user-primary-colour;
   color: white!important;
@@ -12415,6 +12558,8 @@ $btn-default-colour: $sa-grey-14;
   margin-top: -8px;
 }
 
+
+
 // Cards ========================================
 
 // Base class
@@ -12505,6 +12650,11 @@ $btn-default-colour: $sa-grey-14;
   }
 }
 
+.card > div:not(.card-header) + .card-body{
+  border-top-left-radius: $sa-border-radius;
+  border-top-right-radius: $sa-border-radius;
+  overflow: hidden;
+}
 
 // SARD Cards ===================================
 
@@ -12530,6 +12680,7 @@ $btn-default-colour: $sa-grey-14;
     border-color: $sa-heading-bg!important;
   }
 }
+
 
 
 .card.card-primary{
@@ -12736,6 +12887,7 @@ $btn-default-colour: $sa-grey-14;
   border-color: $sa-grey-04;
   & .card-header, .card-footer{
     background-color: white;
+    @include roboto-regular;
     color: $text;
     & .text-muted { 
       color: lighten($text, 25%) !important;
@@ -12758,7 +12910,12 @@ $btn-default-colour: $sa-grey-14;
   & .card-body hr{
     border-color: $sa-grey-04;
   }
+
+  .table-sard td, .table-sard th {
+    border-color: $sa-grey-04;
+  }
 }
+
 .card.card-white.outline{
   background-color: transparent;
   border-color: white;
@@ -12791,6 +12948,21 @@ $btn-default-colour: $sa-grey-14;
 .card-body-white{
   background-color: white;
   border-radius: $sa-inner-border-radius;
+}
+
+// Various ------------------
+.card-deck{
+  margin-bottom: 16px;
+}
+
+.card-full-height{
+  height: calc(100% - 16px);
+}
+
+.card-buttons{
+  // text-align: right;
+  border-top: 1px solid white;
+  padding: 8px 0 0 0;
 }
 // Collapse =====================================
 
@@ -13404,6 +13576,12 @@ label {
   }
 }
 
+.form-group .form-buttons[class*='col-sm-']{
+  @include media-breakpoint-down(xs){
+    margin-top: 8px;
+  }
+}
+
 .form-group.row, .form-group .row{
   margin-right: -4px;
   margin-left: -4px;
@@ -14014,6 +14192,9 @@ $tab-number-bg:           $sa-grey-12;
     color: $sa-nav-colour;
     background-color: $tab-colour;
     margin-bottom: 1px;
+    max-height: 39px;
+    height: auto;
+    padding: 0.5rem 0.5rem;
     &:visited{
       color: $sa-nav-colour;
     }
@@ -14085,6 +14266,23 @@ $tab-number-bg:           $sa-grey-12;
   &:focus,
   &:active{
     background-color: $sa-nav-colour;
+  }
+}
+
+// Justified Nav Pills ------ 
+.nav.nav-pills.nav-justified{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 -2px 8px -2px;
+
+  .nav-item{ margin-bottom: 4px;}
+  .nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 2px;
   }
 }
 
@@ -14308,6 +14506,15 @@ $tab-number-bg:           $sa-grey-12;
   .dropdown-menu li:last-of-type .dropdown-item{
     border-bottom-left-radius: $sa-inner-border-radius;
     border-bottom-right-radius: $sa-inner-border-radius;
+  }
+
+  .dropdown-item.signout::after{
+    font-family: "sard-icons";
+    content: "\e0ff";
+    position: absolute;
+    right: 4px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -14625,6 +14832,52 @@ $tab-number-bg:           $sa-grey-12;
     color:white;
   }
 }
+
+
+
+
+// user-navbar-dropdown -------------------------
+.navbar {
+  .user-navbar-dropdown{
+    .dropdown{
+      padding: 8px 8px;
+      color: white;
+    }
+    .dropdown:hover{ background-color: darken($user-primary-colour, 5%); }
+    .dropdown.show{ background-color: darken($user-primary-colour, 10%); }
+    .dropdown-menu{ background-color: darken($user-primary-colour, 10%); }
+    .dropdown-item:hover{ background-color: darken($user-primary-colour, 15%); }
+    .dropdown-item.active{ background-color: darken($user-primary-colour, 20%); }
+    .dropdown-item.active:hover{ background-color: darken($user-primary-colour, 25%); }
+
+    .dropdown-item.log-out::after{
+      font-family: "sard-icons";
+      content: "\e0ff";
+      float: right;
+    }
+  }
+  #dropdownMenuButton:after { display: none; }
+
+  @include media-breakpoint-down(md){
+    .user-navbar-dropdown{
+      .dropdown{
+        padding: 2px 4px;
+      }
+      .user-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+    .user-name { display: none; }
+  } 
+  @include media-breakpoint-down(sm){
+    .navbar-brand{
+      font-size: 16px;
+    }
+  }
+} // End user-navbar-dropdown
+
 
 
 // Navbar SECONDARY =============================
@@ -16077,11 +16330,10 @@ p > a.modal-info-circle-inline{
     .user-icon{
       height: 35px;
       width: 35px;
-      margin-right: 4px;  
+      margin-right: 4px;      
     }
     .user-icon .si{
       font-size: 2.1rem;
-      // margin-right: 4px;      
     }
     p{ margin: 0; }
   }
@@ -16173,55 +16425,54 @@ $sa-table-dark-head-bg:     $sa-grey-18;
 
 
 // Table Responsive ---------
-.container{
-  .table-responsive{
-    margin: -8px -10px -10px -10px;
+.table-responsive{
+  margin: -10px -10px -10px -10px;
+  width: calc(100% + 20px);
+  .table-sard{
+    margin: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm{
+    margin: -10px -10px -10px -10px;
     width: calc(100% + 20px);
     .table-sard{
       margin: 0;
     }
   }
+}
 
-  @media (max-width: 575.98px) {
-    .table-responsive-sm{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
-    }
-  }
-
-  @media (max-width: 767.98px) {
-    .table-responsive-md{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
-    }
-  }
-
-  @media (max-width: 991.98px) {
-    .table-responsive-lg{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
-    }
-  }
-
-  @media (max-width: 1199.98px) {
-    .table-responsive-xl{
-      margin: -8px -10px -10px -10px;
-      width: calc(100% + 20px);
-      .table-sard{
-        margin: 0;
-      }
+@media (max-width: 767.98px) {
+  .table-responsive-md{
+    margin: -10px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
     }
   }
 }
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg{
+    margin: -10px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl{
+    margin: -10px -10px -10px -10px;
+    width: calc(100% + 20px);
+    .table-sard{
+      margin: 0;
+    }
+  }
+}
+
 
 // Table Responsive in Cards etc
 
@@ -16529,6 +16780,108 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 .tcol-fixed-5, .tcol-5px      { max-width:5px!important; min-width:5px!important; }
 
 .no-wrap { white-space: normal!important; }
+
+
+
+// table cell states ----------------------------
+
+td.state{
+  &::before{
+    font-family: "sard-icons";
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+  }
+}
+td.state.rejected::before{
+  content: "\e0a8";
+  color: $sa-danger;
+}
+
+td.state.danger::before{
+  content: "\e0a7";
+  color: $sa-danger;
+}
+
+td.state.draft::before{
+  content: "\e0ab";
+  color: $RAG-draft;
+}
+
+td.state.alert::before{
+  content: "\e099";
+  color: $sa-warning;
+}
+
+td.state.warning::before{
+  content: "\e0bf";
+  color: $sa-warning;
+}
+
+td.state.archived::before{
+  content: "\e0a0";
+  color: $sa-teal;
+}
+
+td.state.approved::before{
+  content: "\e09e";
+  color: $sa-success;
+}
+
+td.state.complete::before{
+  content: "\e0a3";
+  color: $sa-success;
+}
+
+td.state.due::before{
+  content: "\e0af";
+  color: $sa-orange;
+}
+
+td.state.na::before{
+  content: "\e0b1";
+  color: $sa-grey-16;
+}
+
+td.state.recommended::before{
+  content: "\e0b3";
+  color: $sa-orange;
+}
+
+td.state.live::before{
+  content: "\e105" ;
+  font-size: 1.0rem;
+  color: $sa-warning;
+  margin: 0px 2px 0px -2px;
+  top: 4px;
+  left: -1px;
+}
+
+td.state.submitted::before{
+  content: "\e0b7";
+  color: $sa-lime;
+}
+
+td.state.pending::before{
+  content: "\e109";
+  color: $sa-lime;
+}
+
+td.state.success::before{
+  content: "\e0bc";
+  color: $sa-success;
+}
+
+td.state.published::before{
+  content: "\e0bc";
+  color: $sa-success;
+}
+
+td.state.review::before{
+  content: "\e0bb";
+  color: $RAG-draft;
+}
+
 // Popovers =====================================
 
 
@@ -16832,41 +17185,41 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 // Page Titles REBUILD ==================================
 
 // TEMP
-.page-title-with-image{
-  background: lightpink;
-  border: 1px dashed pink;
-}
+// .page-title-with-image{
+//   background: lightpink;
+//   border: 1px dashed pink;
+// }
 
-.page-title-wrapper{
-  background: lightgoldenrodyellow;
-  border: 1px dashed orange;
-}
+// .page-title-wrapper{
+//   background: lightgoldenrodyellow;
+//   border: 1px dashed orange;
+// }
 
-.page-title-area{
-  background: lightgrey;
-  border: 1px dashed lightslategrey;
-}
-
-
-.page-title{
-  background: lightgreen;
-  border: 1px dashed green;
-}
+// .page-title-area{
+//   background: lightgrey;
+//   border: 1px dashed lightslategrey;
+// }
 
 
-.page-state{
-  background: lightblue;
-  border: 1px dashed blue;
-}
+// .page-title{
+//   background: lightgreen;
+//   border: 1px dashed green;
+// }
 
-.page-title-photo{
-  background: lightblue;
-  border: 1px dashed blue;
-}
-.page-title-actions{
-  background: lightblue;
-  border: 1px dashed blue;
-}
+
+// .page-state{
+//   background: lightblue;
+//   border: 1px dashed blue;
+// }
+
+// .page-title-photo{
+//   background: lightblue;
+//   border: 1px dashed blue;
+// }
+// .page-title-actions{
+//   background: lightblue;
+//   border: 1px dashed blue;
+// }
 
 // Structure ------------------------------------
 
@@ -16885,14 +17238,11 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
   }
 }
 
-// .page-state{
-//   float: right;
-// }
 
 .page-title-actions{
   display: flex;
   align-items: center;
-  max-width: 50%;
+  // max-width: 50%;
   padding: 2px 0;
   justify-content: flex-end;
 }
@@ -16903,10 +17253,35 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 }
 
 .page-title-wrapper .page-title-actions .input-group div,
-.page-title-wrapper .page-title-actions .input-group span,
-.page-title-wrapper .page-title-actions .input-group .btn{
+.page-title-wrapper .page-title-actions .input-group span{
   margin-left: 0px;
 }
+.page-title-wrapper .page-title-actions .input-group .select2-selection.select2-selection--single{
+  margin-left: -3px;
+}
+
+
+// Small Screens ============
+@include media-breakpoint-down(xs){
+  .page-title-wrapper{
+    flex-wrap: wrap;
+  }
+  .page-title{
+    max-width: calc(100% - 42px);
+  }
+
+  .page-title-actions{
+    // min-width: 100%;
+    // width: 100%;
+  }
+  
+  .page-title-actions.pt-btn-only{
+    min-width: 42px;
+    width: 42px;
+  }
+}
+
+
 
 .page-title-actions .input-group{
   flex-wrap: nowrap;
@@ -16924,7 +17299,18 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
   height: 36px;
 }
 
+.page-title-actions .input-group.plus-append .select2-container--bootstrap .select2-selection--single {
+  border: 1px solid $user-primary-colour !important;
+}
+
+
 .page-title-actions form{ justify-content: flex-end;}
+
+.page-title-actions .searchbar-sard .form-control { 
+  @include media-breakpoint-down(md){
+    max-width: 120px; 
+  }
+}
 
 
 .page-title-wrapper + .page-title-actions{ margin-top: 8px;}
@@ -17089,6 +17475,7 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 .page-state .current-state.draft{
   background-image: url("../../assets/rag-icons/rag-pt-draft@1x.png");
 }
+
 .page-state .current-state.Submitted,
 .page-state .current-state.submitted{
   background-image: url("../../assets/rag-icons/rag-pt-submitted@2x.png");
@@ -17116,27 +17503,57 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
 
 // New Item Buttons -----------------------------
 
-.page-title-wrapper .btn-pt-new{
+.btn-pt{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   background-color: $user-primary-colour;
   color: white!important;
   height: 36px;
   padding: 0 6px;
   margin: 4px 0 4px 8px;
+  
+  &:hover { background-color: darken($user-primary-colour, 5%); }
+  &:active { background-color: darken($user-primary-colour, 10%); }
+  &:focus, &.focus { box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25); }
 
-  &:hover { 
-    background-color: darken($user-primary-colour, 5%); 
+  @include media-breakpoint-down(xs){
+    padding: 0;
+    width: 36px;
   }
-  &:active {
-    background-color: darken($user-primary-colour, 10%);
+    
+  @include media-breakpoint-up(sm){
+    order: 5;
   }
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 0.2rem rgba($user-primary-colour, .25);
+}
+
+.btn-pt.btn-success{ background-color: $sa-success; }
+.btn-pt.btn-info{ background-color: $sa-info; }
+.btn-pt.btn-warning{ background-color: $sa-warning; }
+.btn-pt.btn-danger{ background-color: $sa-danger; }
+.btn-pt.btn-alert{ background-color: $sa-alert; }
+
+
+// elements inside the .btn-pt
+.btn-pt{
+  i {
+    font-size: 1.4rem;
+    top: 0;
+    margin-left: 2px;
+    &.fa-pencil-alt{ font-size: 1.3rem;}
   }
+  span.btn-pt-text{ margin-left: 6px;}
+  
+  @include media-breakpoint-down(xs){
+    span.btn-pt-text{ display: none; }
+  }
+}
+
+
+
+.btn-pt-new{
+  min-width: 36px;
   &::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f067" ;
@@ -17145,43 +17562,119 @@ table.sortable thead th.sortable a:not(.asc):not(.desc):after {
     font-size: 1.45rem;
     position: relative;
   }
+
+  .btn-pt-new-text{ 
+    // display: block;
+    span.new{ 
+      margin-left: 0; 
+      // display: inline-block;
+    } 
+    span.item{ 
+      margin-left: 4px;  
+      // display: inline-block;
+    }
+  }
+
   @include media-breakpoint-down(sm){
-    content: 'New';
+    span.new{content: 'New'; } 
+    span.item{ display: none; }
   }
   @include media-breakpoint-down(xs){
-    padding: 0;
-    width: 36px;
-    
-  }
-  @include media-breakpoint-up(sm){
-    order: 5;
+    span.btn-pt-new-text{ display: none; }
   }
 }
 
-// New Item Button
-.page-title-wrapper .btn-pt-new:after{
-  content: 'New Item';
-  padding-left: 4px;
-  @include media-breakpoint-down(sm){
-    content: 'New';
-    padding-left: 4px;
+// Page Status - Puts Icon directly after the page title
+
+.page-status .page-title .page:after{
+  font-family: ("sard-icons", "Font Awesome 5 Free");
+  line-height: initial;
+  position: relative;
+}
+
+
+.page-status.live .page-title .page:after{
+  content: "\e105" ;
+  font-weight: 900;
+  color: $sa-warning;
+  top: 4px;
+}
+
+.page-status.published .page-title .page:after{
+  content: "\e0bc";
+  color: $sa-success;
+  top: 4px;
+}
+
+.page-status.draft .page-title .page:after{
+  content: "\e0ab";
+  color: $RAG-draft;
+}
+
+.page-status.approved .page-title .page:after{
+  content: "\e09e";
+  color: $sa-success;
+  top: 4px;
+}
+
+.page-status.rejected .page-title .page:after{
+  content: "\e0a8";
+  color: $sa-danger;
+  top: 4px;
+}
+
+.page-status.pending .page-title .page:after{
+  content: "\e109";
+  color: $RAG-draft;
+  top: 4px;
+}
+
+.page-status.review .page-title .page:after{
+  content: "\e0bb";
+  color: $RAG-draft;
+  top: 4px;
+}
+
+
+
+
+// Page Title Search ============================
+// This is diferent from the .searchbar-sard but look similar
+// Used on Admin Users, Admin User Stats
+
+.page-title-search{
+  display: flex;
+  flex-flow: row nowrap;
+  .form-control{
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: $user-primary-colour;
+    width: 100%;
+    width: auto;
   }
-  @include media-breakpoint-down(xs){
-    display: none;
+  .btn.btn-search{
+    margin-left: -5px;
+  }
+  .form-group{
+    display: inline-block;
+    padding-left: 4px;
+    margin-bottom: 0;
+  }
+  .searchbar-sard{
+    .form-control{
+      max-width: auto;
+      margin-right: -30px;
+      padding-right: 8px;
+    }
+  }
+
+  .select2-container--bootstrap .select2-selection--single{
+    border-color: $user-primary-colour!important;
   }
 }
-// New Swap Post Button
-.page-title-wrapper .btn-pt-new.new-swap-post:after{
-  content: 'New Swap Post';
-  padding-left: 4px;
-  @include media-breakpoint-down(sm){
-    content: 'New';
-    padding-left: 4px;
-  }
-  @include media-breakpoint-down(xs){
-    display: none;
-  }
-}
+
+
 // Checkboxes ===================================
 
 $checkbox-background:           white;
@@ -17364,6 +17857,11 @@ $checkbox-background-disabled:  transparent;
   }
 }
 
+// In table cells
+td .sa-checkbox span.checkbox::before,
+td .sa-checkbox span.checkbox::after {
+  top: -2px;
+}
 
 // SARD Radio Buttons ============================================
 
@@ -18257,6 +18755,7 @@ $transition-time:   320ms;
   }
   @include media-breakpoint-down(sm){
     padding-left: 50px;
+    padding-right: 20px;
   }
 }
 
@@ -18302,10 +18801,12 @@ $sidemenu-bg:   $sa-grey-16;
   -webkit-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
   -moz-box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
   box-shadow: 4px 0px 0px 0px rgba(255,255,255,1);
+  cursor: pointer ;
 }
 
 .sa-sidemenu .menu-top{
   background: $sa-grey-18;
+  cursor: pointer ;
 }
 
 .sa-sidemenu .open-icon::before{
@@ -18501,6 +19002,12 @@ $sidemenu-bg:   $sa-grey-16;
 // Visibility ===================================
 // Closed -------------------
 .sa-sidemenu.closed{
+  .menu-list{  overflow-y: hidden; }
+
+  ul.sub-menu{ display: none; }
+
+  .menu-section-heading{ cursor: default; }
+  
   .menu-section-heading .item{
     @include off-canvas-invisible;
   }
@@ -18743,7 +19250,6 @@ body { -ms-overflow-style: scrollbar; }
 
 body.plus-option-tab{
   .container-fluid{
-    // padding-left: 40px;
     padding-right: 34px;
   }
 
@@ -19000,7 +19506,7 @@ body.options-nav-expanded {
 }
 
 .options-menu .main-menu li.edit a:before{
-  content: '\f303';
+  content: '\f044';
   font-weight: 900;
   padding-right: 12px;
 }
@@ -19328,7 +19834,7 @@ body.rag-key-expanded {
 }
 
 #rag-key-close:after {
-  content: "\e015";
+  content: "\6d";
   font-family: "sard-icons";
   color:$text;
   font-size: 1.5em;
@@ -19354,40 +19860,40 @@ body.rag-key-expanded {
   background-color: transparent;
 }
 .rag-key.icon-danger{
-  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-danger-sm@2x.png");
 }
 .rag-key.icon-warning{
-  background-image: url("../../assets/images/rag-icons/rag-icon-warning-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-warning-sm@2x.png");
 }
 .rag-key.icon-danger-plus{
-  background-image: url("../../assets/images/rag-icons/rag-icon-danger-plus-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-danger-plus-sm@2x.png");
 }
 .rag-key.icon-warning-plus{
-  background-image: url("../../assets/images/rag-icons/rag-icon-warning-plus-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-warning-plus-sm@2x.png");
 }
 .rag-key.icon-approved{
-  background-image: url("../../assets/images/rag-icons/rag-icon-approved-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-approved-sm@2x.png");
 }
 .rag-key.icon-unavailable{
-  background-image: url("../../assets/images/rag-icons/rag-icon-unavailable-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-unavailable-sm@2x.png");
 }
 .rag-key.icon-success{
-  background-image: url("../../assets/images/rag-icons/rag-icon-success-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-success-sm@2x.png");
 }
 .rag-key.icon-draft{
-  background-image: url("../../assets/images/rag-icons/rag-icon-draft-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-draft-sm@2x.png");
 }
 .rag-key.icon-submitted{
-  background-image: url("../../assets/images/rag-icons/rag-icon-submitted-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-submitted-sm@2x.png");
 }
 .rag-key.icon-recommended{
-  background-image: url("../../assets/images/rag-icons/rag-icon-recommended-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-recommended-sm@2x.png");
 }
 .rag-key.icon-abandoned{
-  background-image: url("../../assets/images/rag-icons/rag-icon-abandoned-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-abandoned-sm@2x.png");
 }
 .rag-key.icon-due{
-  background-image: url("../../assets/images/rag-icons/rag-icon-due-sm@2x.png");
+  background-image: url("../assets/rag-icons/rag-icon-due-sm@2x.png");
 }
 .rag-key p{
   padding-top: 6px;
@@ -19686,6 +20192,70 @@ body.rag-key-expanded {
 } // End .sard-nav-tabs
 
 
+
+// SA Sub Navs ==================================
+// Designed to split the page with a solid bar
+
+.sa-sub-nav{
+  display: flex;
+  border-bottom: 10px solid $tab-colour-active;
+  margin-bottom: 24px;
+
+  .nav-item{
+    margin-bottom: -2px;
+  }
+  .nav-link{
+    margin-bottom: -1px;
+    border-bottom: transparent;
+    -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.15);
+  }
+
+  .nav-link.active{ box-shadow: none; }
+
+  @include respond-to(md-break-up){ 
+    margin-left: -26px;
+    width: calc(100% + 56px);
+    padding: 0 28px 0 24px;
+  }
+  @include respond-to(md-break-down){ 
+    margin-left: -26px;
+    width: calc(100% + 46px);
+    padding: 0 18px 0 24px;
+  }
+  @include respond-to(sm-break-down){ 
+    margin-left: -16px;
+    width: calc(100% + 36px);
+    padding: 0 18px 0 14px;
+  }
+
+  @include respond-to(xs-break-down){
+    margin-left: -16px;
+    width: calc(100% + 36px);
+    padding: 0 18px 0 12px;
+
+    flex-direction: column;
+    .nav-item{
+      margin-bottom: -4px;
+    }
+    .nav-item:last-child{
+      margin-bottom: -1px;
+    }
+    .nav-link,
+    .nav-link.active{
+      -webkit-box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
+      -moz-box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
+    }
+    .nav-item:first-child .nav-link{
+      box-shadow: none;
+    }
+  }
+}
+
+
+
 // Searchbars ===================================
 
 // Look at: https://mdbootstrap.com/docs/jquery/forms/search/?
@@ -19693,11 +20263,15 @@ body.rag-key-expanded {
 // Base styles
 .searchbar-sard{
   border-radius:8px;
-  margin: 0 -2px; // Visual overhang
+  // margin: 0 -2px; // Visual overhang
+}
+
+.searchbar-sard .form-inline{
+  flex-flow: row nowrap;
 }
 
 .searchbar-sard .form-control{
-
+  min-width: 100px;
   width: 100%;
   box-shadow: none;
 }
@@ -19711,13 +20285,8 @@ body.rag-key-expanded {
     box-shadow: none;
     border-radius: 20px;
     height:36px;
-    border:2px solid $sa-grey-06;
-    &:hover{
-      border-color: $sa-grey-10;
-    }
-    &:focus{
-      border-color: $sa-grey-14;
-    }
+    border:2px solid $user-primary-colour;
+    
     @include respond-to(ie11) {  // ie11
       line-height: 0.5rem;
     }
@@ -19728,6 +20297,7 @@ body.rag-key-expanded {
 .searchbar-sard .btn-search{
   position: relative;
   right: -2px;
+  min-width:36px; // ie fix
   width:36px;
   height:36px;
   border-radius: 0 20px 20px 0;
@@ -19767,6 +20337,36 @@ body.rag-key-expanded {
     color: $sa-grey-18;
   }
 }
+
+// Added clear button -------
+
+.searchbar-sard.plus-clear-button{
+  .btn-search{
+    border-radius: 0;
+  }
+  .btn-clear{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+    margin-left: 2px!important;
+    padding-left: 8px;
+  }
+}
+
+.btn-clear{
+  background-color: $user-secondary-colour-light;
+}
+
+.btn-clear::before{
+  content: 'Clear';
+  @include media-breakpoint-down(sm){
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f00d" ;
+    color:white;
+    font-weight: 900;
+  }
+}
+
 
 // Colour variations ============================
 
@@ -20113,6 +20713,30 @@ hr.white{ border-color: white; }
 // Footer =======================================
 
 .sa-footer{
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-right{ 
+    text-align: center;
+  }
+
+  .footer-left, .footer-right{
+    flex: 1 1 auto;
+    width: -moz-min-content;
+    width: -webkit-min-content;
+    width: min-content;
+    max-width: 50%;
+    @include media-breakpoint-down(xs){
+      max-width: 100%;
+    }
+    @include respond-to(ie11){
+      width:100%;
+      display: inline-block;
+    }
+  }
   
   #accordion {
     // z-index in _sa-variables.css
@@ -20133,7 +20757,6 @@ hr.white{ border-color: white; }
       margin: 0 ;
       padding: 0 ;
       display: inline;
-      font-size: 0.9375rem; // 15px
       font-size: 14px; 
       line-height: 1rem;
     }

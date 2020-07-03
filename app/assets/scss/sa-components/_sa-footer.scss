@@ -1,6 +1,30 @@
 // Footer =======================================
 
 .sa-footer{
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-right{ 
+    text-align: center;
+  }
+
+  .footer-left, .footer-right{
+    flex: 1 1 auto;
+    width: -moz-min-content;
+    width: -webkit-min-content;
+    width: min-content;
+    max-width: 50%;
+    @include media-breakpoint-down(xs){
+      max-width: 100%;
+    }
+    @include respond-to(ie11){
+      width:100%;
+      display: inline-block;
+    }
+  }
   
   #accordion {
     // z-index in _sa-variables.css
@@ -21,7 +45,6 @@
       margin: 0 ;
       padding: 0 ;
       display: inline;
-      font-size: 0.9375rem; // 15px
       font-size: 14px; 
       line-height: 1rem;
     }

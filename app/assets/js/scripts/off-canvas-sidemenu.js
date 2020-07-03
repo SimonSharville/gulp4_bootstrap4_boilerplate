@@ -1,13 +1,15 @@
-// Add Local Scripts here
-
 // http://blog.themearmada.com/off-canvas-slide-menu-for-bootstrap/
 
-$(document).ready(function(){                       
-   
-  // sa-sidemenu Menu Slider
-  $('.sa-sidemenu').on('click',function(e){
+$(document).tready(function() {
+  function timeoutDispatchSidemenuEvent() {
+    $('.sa-sidemenu').trigger('sa.sidemenu.toggle');
+  }
+
+  $('.sa-sidemenu').on('click', function(e) {
     e.preventDefault();
+
     $('.sa-sidemenu').toggleClass('open').toggleClass('closed');
+    setTimeout(timeoutDispatchSidemenuEvent, 400);
   });
 
   $('.sa-sidemenu .menu-section').click(function(e) {
@@ -19,7 +21,6 @@ $(document).ready(function(){
     $($(this).attr('href')).collapse('toggle')
   })
 
-  // State at various screen sizes
   var $window = $(window);
 
   function resize() {
@@ -31,7 +32,4 @@ $(document).ready(function(){
   }
 
   $window.resize(resize).trigger('resize');
-  
- });
-
- 
+});

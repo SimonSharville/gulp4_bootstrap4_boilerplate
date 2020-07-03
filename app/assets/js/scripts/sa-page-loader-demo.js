@@ -1,6 +1,5 @@
 // Add Local Scripts here
 
-
 $(document).ready(function(){                       
    
   $('.activate-loader').on('click',function(e){
@@ -29,4 +28,3 @@ $(document).ready(function(){
   });
 
 });
-

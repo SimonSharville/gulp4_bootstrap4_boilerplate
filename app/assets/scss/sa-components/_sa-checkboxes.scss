@@ -180,6 +180,11 @@ $checkbox-background-disabled:  transparent;
   }
 }
 
+// In table cells
+td .sa-checkbox span.checkbox::before,
+td .sa-checkbox span.checkbox::after {
+  top: -2px;
+}
 
 // SARD Radio Buttons ============================================
 

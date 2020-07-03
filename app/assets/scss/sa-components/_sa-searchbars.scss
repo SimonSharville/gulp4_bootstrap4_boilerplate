@@ -5,11 +5,15 @@
 // Base styles
 .searchbar-sard{
   border-radius:8px;
-  margin: 0 -2px; // Visual overhang
+  // margin: 0 -2px; // Visual overhang
+}
+
+.searchbar-sard .form-inline{
+  flex-flow: row nowrap;
 }
 
 .searchbar-sard .form-control{
-
+  min-width: 100px;
   width: 100%;
   box-shadow: none;
 }
@@ -23,13 +27,8 @@
     box-shadow: none;
     border-radius: 20px;
     height:36px;
-    border:2px solid $sa-grey-06;
-    &:hover{
-      border-color: $sa-grey-10;
-    }
-    &:focus{
-      border-color: $sa-grey-14;
-    }
+    border:2px solid $user-primary-colour;
+    
     @include respond-to(ie11) {  // ie11
       line-height: 0.5rem;
     }
@@ -40,6 +39,7 @@
 .searchbar-sard .btn-search{
   position: relative;
   right: -2px;
+  min-width:36px; // ie fix
   width:36px;
   height:36px;
   border-radius: 0 20px 20px 0;
@@ -79,6 +79,36 @@
     color: $sa-grey-18;
   }
 }
+
+// Added clear button -------
+
+.searchbar-sard.plus-clear-button{
+  .btn-search{
+    border-radius: 0;
+  }
+  .btn-clear{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+    margin-left: 2px!important;
+    padding-left: 8px;
+  }
+}
+
+.btn-clear{
+  background-color: $user-secondary-colour-light;
+}
+
+.btn-clear::before{
+  content: 'Clear';
+  @include media-breakpoint-down(sm){
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f00d" ;
+    color:white;
+    font-weight: 900;
+  }
+}
+
 
 // Colour variations ============================
 

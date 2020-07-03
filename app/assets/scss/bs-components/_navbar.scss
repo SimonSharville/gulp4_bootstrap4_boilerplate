@@ -126,6 +126,15 @@
     border-bottom-left-radius: $sa-inner-border-radius;
     border-bottom-right-radius: $sa-inner-border-radius;
   }
+
+  .dropdown-item.signout::after{
+    font-family: "sard-icons";
+    content: "\e0ff";
+    position: absolute;
+    right: 4px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
 }
 
 
@@ -442,6 +451,52 @@
     color:white;
   }
 }
+
+
+
+
+// user-navbar-dropdown -------------------------
+.navbar {
+  .user-navbar-dropdown{
+    .dropdown{
+      padding: 8px 8px;
+      color: white;
+    }
+    .dropdown:hover{ background-color: darken($user-primary-colour, 5%); }
+    .dropdown.show{ background-color: darken($user-primary-colour, 10%); }
+    .dropdown-menu{ background-color: darken($user-primary-colour, 10%); }
+    .dropdown-item:hover{ background-color: darken($user-primary-colour, 15%); }
+    .dropdown-item.active{ background-color: darken($user-primary-colour, 20%); }
+    .dropdown-item.active:hover{ background-color: darken($user-primary-colour, 25%); }
+
+    .dropdown-item.log-out::after{
+      font-family: "sard-icons";
+      content: "\e0ff";
+      float: right;
+    }
+  }
+  #dropdownMenuButton:after { display: none; }
+
+  @include media-breakpoint-down(md){
+    .user-navbar-dropdown{
+      .dropdown{
+        padding: 2px 4px;
+      }
+      .user-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+    .user-name { display: none; }
+  } 
+  @include media-breakpoint-down(sm){
+    .navbar-brand{
+      font-size: 16px;
+    }
+  }
+} // End user-navbar-dropdown
+
 
 
 // Navbar SECONDARY =============================
